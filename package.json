@@ -7,18 +7,26 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scully": "scully",
+    "scully:serve": "scully serve"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.3",
+    "@angular/cdk": "^9.2.1",
     "@angular/common": "~9.1.3",
     "@angular/compiler": "~9.1.3",
     "@angular/core": "~9.1.3",
+    "@angular/flex-layout": "^9.0.0-beta.29",
     "@angular/forms": "~9.1.3",
+    "@angular/material": "^9.2.1",
     "@angular/platform-browser": "~9.1.3",
     "@angular/platform-browser-dynamic": "~9.1.3",
     "@angular/router": "~9.1.3",
+    "@scullyio/init": "0.0.26",
+    "@scullyio/ng-lib": "latest",
+    "@scullyio/scully": "latest",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
