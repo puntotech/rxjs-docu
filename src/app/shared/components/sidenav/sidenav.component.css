@@ -1,0 +1,39 @@
+mat-sidenav-container {
+  -webkit-box-shadow: 10px 0px 5px -2px rgba(224, 224, 224, 0.83);
+  -moz-box-shadow: 10px 0px 5px -2px rgba(224, 224, 224, 0.83);
+  box-shadow: 10px 0px 5px -2px rgba(224, 224, 224, 0.83);
+}
+
+mat-tree {
+  background-color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.section-tree-invisible {
+  display: none;
+}
+
+.section-tree ul,
+.section-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.mat-icon-rtl-mirror {
+  color: #d81b60;
+}
+
+a {
+  margin-left: 15px;
+  width: 100%;
+}
+
+a.nested {
+  margin-left: 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
