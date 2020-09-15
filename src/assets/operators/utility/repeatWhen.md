@@ -1,0 +1,81 @@
+# repeatWhen
+
+###
+
+### Firma
+
+`repeatWhen<T>(notifier: (notifications: Observable<any>) => Observable<any>): MonoTypeOperatorFunction<T>`
+
+### Parámetros
+
+<table>
+<tr><td>notifier</td><td>Recibe un Observable de notificaciones con las que el usuario puede completar el flujo o provocar un error, abortando la repetición.</td></tr>
+</table>
+
+### Retorna
+
+`MonoTypeOperatorFunction<T>`: El Observable fuente modificado con lógica de repetición.
+
+### Descripción
+
+<img src="assets/images/marble-diagrams/utility/repeatWhen.png" alt="Diagrama de canicas del operador repeatWhen">
+
+Retorna un Observable que refleja el Observable fuente con la excepción de un evento `complete`. Si el Observable fuente hace una llamada `complete`, este método emitirá al Observable retornado por el notificador. Si ese Observable hace una llamada `complete` o `error`, entonces este método hará una llamada `complete` o `error` en la suscripción hija. Si no, este método volverá a suscribirse al Observable fuente.
+
+Returns an Observable that mirrors the source Observable with the exception of a complete. If the source Observable calls complete, this method will emit to the Observable returned from notifier. If that Observable calls complete or error, then this method will call complete or error on the child subscription. Otherwise this method will resubscribe to the source Observable.
+
+## Ejemplos
+
+```javascript
+
+```
+
+Suscribirse al Observable fuente con cada click, desencadenando una nueva petición AJAX con un id aleatorio
+
+[StackBlitz](https://stackblitz.com/edit/rxjs-repeatwhen-2?file=index.ts)
+
+```typescript
+import { repeatWhen, map } from "rxjs/operators";
+import { ajax } from "rxjs/ajax";
+import { fromEvent, defer } from "rxjs";
+
+const ids = [
+  "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+  "2baf70d1-42bb-4437-b551-e5fed5a87abe",
+];
+
+function getRandomId() {
+  return ids[Math.floor(Math.random() * ids.length)];
+}
+
+const click$ = fromEvent<MouseEvent>(document, "click");
+
+defer(() =>
+  ajax.getJSON(`https://ghibliapi.herokuapp.com/films/${getRandomId()}`)
+)
+  .pipe(
+    map(({ title }) => title),
+    repeatWhen(() => click$)
+  )
+  .subscribe(console.log);
+// Salida: (click) Castle in the Sky (click) My Neighbor Totoro (click) My Neighbor Totoro...
+```
+
+#### Ejemplo de la documentación oficial
+
+Repetir un flujo de mensajes con cada click
+
+```javascript
+import { of, fromEvent } from "rxjs";
+import { repeatWhen } from "rxjs/operators";
+
+const source = of("Repeat message");
+const documentClick$ = fromEvent(document, "click");
+
+source
+  .pipe(repeatWhen(() => documentClick$))
+  .subscribe((data) => console.log(data));
+```
+
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/repeatWhen)
+- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeatWhen.ts)
