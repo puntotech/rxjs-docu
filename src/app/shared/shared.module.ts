@@ -1,6 +1,5 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,17 +18,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatTreeModule } from '@angular/material/tree';
 import { NgModule } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { RouterModule } from '@angular/router';
 
-const CORE_MODULES = [
-  BrowserAnimationsModule,
-  CommonModule,
-  FormsModule,
-  ReactiveFormsModule
-];
+const CORE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
-const COMPONENTS = [FooterComponent, HeaderComponent];
+const COMPONENTS = [FooterComponent, HeaderComponent, SidenavComponent];
 
 const MATERIAL_MODULES = [
   MatInputModule,
@@ -46,12 +43,14 @@ const MATERIAL_MODULES = [
   MatSidenavModule,
   MatAutocompleteModule,
   MatDividerModule,
-  ScrollingModule
+  MatTreeModule,
+  ScrollingModule,
+  RouterModule,
 ];
 
 @NgModule({
   declarations: COMPONENTS,
   imports: [MATERIAL_MODULES, CORE_MODULES, FlexLayoutModule],
-  exports: [COMPONENTS, MATERIAL_MODULES, CORE_MODULES, FlexLayoutModule]
+  exports: [COMPONENTS, MATERIAL_MODULES, CORE_MODULES, FlexLayoutModule],
 })
 export class SharedModule {}
