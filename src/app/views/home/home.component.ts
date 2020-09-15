@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 
 @Component({
-  selector: 'app-home',
+  selector: 'rxjs-docs-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   link$ = this.scully.available$;
@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private scully: ScullyRoutesService) {}
 
   ngOnInit(): void {
-    this.link$.subscribe(links => {
+    this.link$.subscribe((links) => {
       console.log(links);
     });
   }
