@@ -1,4 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+    Arial, "Lucida Grande", sans-serif;
+  color: #333;
+}
+
+code {
+  background-color: #f1f1f1;
+  border-radius: 2px;
+  padding: 4px 6px;
+}
+
+pre.language-javascript.line-numbers {
+  margin: 20px 0;
+}
+
+.marble-diagram {
+  margin: 20px 0;
+}
+
+.mat-typography h1 {
+  font-weight: 500;
+}
+
+.mat-typography h3 {
+  font-size: 18px;
+  font-weight: 401;
+}
+
+table {
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+  margin: 25px 0;
+  width: 100%;
+}
+
+table td {
+  padding: 16px 24px;
+}
+
+a {
+  color: #d81b60;
+  text-decoration: none;
+}
+
+blockquote {
+  padding-left: 1.3em;
+  border-left: 5px solid #dfdfdf;
+  font-style: italic;
+}
+
+markdown {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  line-height: 24px;
+}
+
+.md-container {
+  padding: 40px;
+}
+
+.fading-line {
+  height: 2px;
+  background-color: #e6e6e6;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    right bottom,
+    color-stop(0.5, #d81b60),
+    color-stop(0.98, #fff)
+  );
+  margin: 40px 0;
+}
+
+.mat-typography h1 {
+  font-size: 30px;
+}
