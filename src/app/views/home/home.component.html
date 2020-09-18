@@ -6,8 +6,11 @@
 </div> -->
 
 <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened
-    ><rxjs-docs-sidenav></rxjs-docs-sidenav
-  ></mat-sidenav>
-  <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+  <mat-sidenav mode="side" opened>
+    <rxjs-docs-sidenav></rxjs-docs-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <scully-content></scully-content> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
