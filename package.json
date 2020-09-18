@@ -29,7 +29,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@scullyio/init": "0.0.26",
-    "@scullyio/ng-lib": "latest",
+    "@scullyio/ng-lib": "^1.0.0-beta.1",
     "@scullyio/scully": "latest",
     "emoji-toolkit": "^6.0.1",
     "ngx-markdown": "^9.0.0",
