@@ -29,7 +29,7 @@ export class ContentComponent implements OnInit {
       .pipe(map((url) => url.map(({ path }) => path).join('/')))
       .subscribe((url) => {
         console.log(url);
-        this.page = `assets/${url}.md`;
+        this.page = `assets/doc/${url}.md`;
       });
   }
 }
