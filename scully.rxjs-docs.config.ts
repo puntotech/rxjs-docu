@@ -8,23 +8,8 @@ export const config: Partial<ScullyConfig> = {
     '/:page': {
       type: 'contentFolder',
       page: {
-        folder: './src/assets/doc/sections',
+        folder: './src/assets/doc',
       },
     },
-    '/concepts/:page': {
-      type: 'contentFolder',
-      page: {
-        folder: './src/assets/doc/concepts',
-      },
-    },
-    /* '/operators/:category/:page': {
-      type: 'contentFolder',
-      category: {
-        folder: './src/assets/doc/operators',
-      },
-      page: {
-        folder: './src/assets/operators/:category',
-      },
-    }, */
   },
 };
