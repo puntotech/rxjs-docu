@@ -1,5 +1,11 @@
-<div>
+<div class="root">
   <rxjs-docs-header></rxjs-docs-header>
-  <!-- <rxjs-docs-home></rxjs-docs-home> -->
-  <router-outlet></router-outlet>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <rxjs-docs-sidenav></rxjs-docs-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
