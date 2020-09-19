@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { HighlightService } from 'src/app/shared/services/highlight.service';
 
 @Component({
   selector: 'rxjs-docs-content',
@@ -13,7 +14,11 @@ export class ContentComponent implements OnInit {
   page: string;
   defaultPage: string = 'introducción';
 
-  constructor(private route: ActivatedRoute, private library: FaIconLibrary) {
+  constructor(
+    private route: ActivatedRoute,
+    private library: FaIconLibrary,
+    private highlightService: HighlightService
+  ) {
     library.addIcons(faFolder);
   }
 
