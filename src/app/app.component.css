@@ -1,0 +1,21 @@
+mat-sidenav {
+  background-color: #fafafa;
+  width: 400px;
+}
+
+mat-sidenav-container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 64px;
+}
+
+mat-sidenav-content {
+  background-color: #fff;
+}
+
+rxjs-docs-sidenav {
+  display: block;
+  height: 100%;
+}

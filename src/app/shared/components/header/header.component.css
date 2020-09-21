@@ -3,3 +3,7 @@ img {
   width: 40px;
   margin: 5px;
 }
+
+mat-icon:hover {
+  cursor: pointer;
+}
