@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { HomeModule } from './views/home/home.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ScullyLibModule,
     BrowserAnimationsModule,
     SharedModule,
-    HomeModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
     FontAwesomeModule,
   ],

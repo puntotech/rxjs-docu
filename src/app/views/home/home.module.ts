@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { ContentComponent } from './content/content.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [HomeComponent, ContentComponent],
@@ -13,6 +14,7 @@ import { ContentComponent } from './content/content.component';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
+    ScullyLibModule,
     MarkdownModule.forChild(),
   ],
   exports: [HomeComponent],

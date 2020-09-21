@@ -1,6 +1,6 @@
 # defaultIfEmpty
 
-### Emite un valor dado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
+### Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
 
 ### Firma
 
@@ -21,7 +21,7 @@ El valor por defecto utilizado en el caso de que el Observable esté vacío.</td
 
 Si el Observable fuente está vacío, este operador emitirá un valor por defecto.
 
-<img src="" alt="Diagrama de canicas del operador defaultIfEmpty">
+<img src="assets/images/marble-diagrams/conditional-boolean/defaultIfEmpty.md" alt="Diagrama de canicas del operador defaultIfEmpty">
 
 `defaultIfEmpty` emite los valores emitidos por el Observable fuente o un valor por defecto en el caso de que el Observable fuente esté vacío (se completa sin haber emitido ningún valor `next`.)
 
@@ -75,6 +75,8 @@ const clicksBeforeFive = clicks.pipe(takeUntil(interval(5000)));
 const result = clicksBeforeFive.pipe(defaultIfEmpty("Ningún click"));
 result.subscribe((x) => console.log(x));
 ```
+
+## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/defaultIfEmpty)
 - [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts)
