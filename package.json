@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href=/dist/static && scully --scanRoutes",
+    "deploy": "ng build --prod --base-href=/ && scully --scanRoutes",
     "scully": "npm run build; scully --scanRoutes",
     "scully:serve": "scully serve"
   },
