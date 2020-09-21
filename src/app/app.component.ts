@@ -1,20 +1,17 @@
-import { Component } from '@angular/core';
-import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { HighlightService } from './shared/services/highlight.service';
-import { faFolder } from '@fortawesome/free-solid-svg-icons';
-
+import { Component, ViewChild } from '@angular/core';
+import { SidenavService } from '@shared/services/sidenav.service';
+import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'rxjs-docs';
+  @ViewChild(MatSidenav) public sidenav: MatSidenav;
 
-  constructor(
-    private library: FaIconLibrary,
-    private highlightService: HighlightService
-  ) {
-    library.addIcons(faFolder);
+  constructor(private sidenavService: SidenavService) {}
+
+  ngAfterViewInit(): void {
+    this.sidenavService.set(this.sidenav);
   }
 }
