@@ -34,13 +34,15 @@ const TREE_DATA: SectionNode[] = [
     children: [
       { name: 'Observables', url: 'concepts/observables' },
 
+      { name: 'Observador', url: 'concepts/observador' },
+
       { name: 'Operadores', url: 'concepts/operadores' },
 
-      { name: 'Suscripción', url: 'concepts/suscripcion' },
+      { name: 'Planificadores', url: 'concepts/planificadores' },
 
       { name: 'Sujetos', url: 'concepts/sujetos' },
 
-      { name: 'Planificadores', url: 'concepts/planificadores' },
+      { name: 'Suscripción', url: 'concepts/suscripcion' },
 
       { name: 'Testing', url: 'concepts/testing' },
     ],
