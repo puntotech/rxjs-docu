@@ -20,9 +20,9 @@ Une varios Observables en uno solo.
 
 <img src="assets/images/marble-diagrams/join-creation/merge.png" alt="Diagrama de canicas del operador merge">
 
-`merge` se subscribe a cada Observable de entrada de forma concurrente, y emite sus valores, sin transformarlos, en el Observable resultante.
+`merge` se subscribe a cada Observable de entrada de forma concurrente, y emite sus valores, sin transformarlos, en el Observable resultante. El Observable resultante solo se completa cuando todos los Observables de entrada se hayan completado.
 
-to each given input Observable (as arguments), and simply forwards (without doing any transformation) all the values from all the input Observables to the output Observable. The output Observable only completes once all input Observables have completed. Any error delivered by an input Observable will be immediately emitted on the output Observable.
+Cualquier error lanzado por un Observable de entrada será emitido inmediatamente en el Observable resultante.
 
 ## Ejemplos
 
