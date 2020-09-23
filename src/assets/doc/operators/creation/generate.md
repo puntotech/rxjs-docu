@@ -9,11 +9,6 @@
 ### Parámetros
 
 <table>
-<tr><td></td><td></td></tr>
-<tr><td></td><td></td></tr>
-</table>
-
-<table>
 <tr><td>initialState</td><td>Estado inicial.</td></tr>
 <tr><td>condition</td><td>Condición para finalizar la generación (al retornar falso).</td></tr>
 <tr><td>iterate</td><td>Función de los pasos de la iteración.</td></tr>
