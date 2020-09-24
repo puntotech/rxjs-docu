@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # distinctUntilChanged
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
 
@@ -116,5 +125,6 @@ Un ejemplo usando una función de comparación
     // { age: 5, name: 'Foo' }
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinctUntilChanged)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts)

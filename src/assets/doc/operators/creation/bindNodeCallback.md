@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # bindNodeCallback
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/bindNodeCallback.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Convierte una callback API del estilo de Node.js a una función que retorna un Observable
 
@@ -538,5 +547,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(...args: any[]) => Observable<any[]>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/bindNodeCallback)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/bindNodeCallback.ts)

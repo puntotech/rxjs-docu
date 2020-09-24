@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # tap
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/tap.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Lleva a cabo un efecto colateral en cada emisión del Observable fuente, pero retorna un Observable que es idéntico a la fuente
 
@@ -21,7 +30,7 @@ Callback for the completion of the source.</td></tr>
 
 `MonoTypeOperatorFunction<T>`: Un Observable idéntico a la fuente, pero ejecuta el Observador o la/las callbacks en cada emisión.
 
-### Descripción
+## Descripción
 
 Intercepta cada emisión de la fuente y ejecuta una función. Retorna un Observable idéntico a la fuente siempre y cuando no ocurra ningún error.
 
@@ -31,9 +40,7 @@ Retorna un Observable reflejo del Observable fuente, modificado para que el Obse
 
 Este operador es muy útil para depurar Observables (ver si el valor emitido es correcto) o para llevar a cabo cualquier tipo de efecto colateral.
 
-Nota: este operador es diferente al `subscribe` del Observable. Si no se realiza una suscripción al Observable retornado por `tap`, los efectos colaterales que se hayan especificado no ocurrirán nunca. Por tanto, `tap` simplemente espía en la ejecución existente, en lugar de disparar una ejecución como hace `subscribe`.
-
-this is different to a subscribe on the Observable. If the Observable returned by tap is not subscribed, the side effects specified by the Observer will never happen. tap therefore simply spies on existing execution, it does not trigger an execution to happen like subscribe does.
+Nota: este operador es diferente al `subscribe` del Observable. Si no se realiza una suscripción al Observable retornado por `tap`, los efectos colaterales que se hayan especificado no ocurrirán nunca. Por tanto, `tap` se limita a espiar a la ejecución existente, en lugar de disparar una ejecución como hace `subscribe`.
 
 ## Ejemplos
 
@@ -182,5 +189,6 @@ Tipo: <code>() => void</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/tap)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/tap.ts)

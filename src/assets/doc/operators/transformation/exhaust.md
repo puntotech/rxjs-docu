@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # exhaust
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
 
@@ -14,7 +23,7 @@ No recibe ningún parámetro.
 
 `OperatorFunction<any, T>`: Un Observable que recibe una fuente de Observables y propaga el primer Observable hasta que este se completa, antes de suscribirse al siguiente Observable.
 
-### Descripción
+## Descripción
 
 'Aplasta' un Observable de Observables ignorando los Observables internos posteriores mientras el Observable interno actual se esté ejecutando.
 
@@ -75,5 +84,6 @@ const result = higherOrder.pipe(exhaust());
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/exhaust)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts)

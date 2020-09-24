@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # fromFetch
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Utiliza la API Fetch para hacer una petición HTTP
 
@@ -7,11 +16,6 @@
 `fromFetch<T>(input: string | Request, initWithSelector: RequestInit & { selector?: (response: Response) => any; } = {}): Observable<Response | T>`
 
 ### Parámetros
-
-<table>
-<tr><td></td><td></td></tr>
-<tr><td></td><td></td></tr>
-</table>
 
 <table>
 <tr><td>input</td><td>El recurso al que se quiere hacer el <code>fetch</code>. Puede ser una URL o un objeto petición.</td></tr>
@@ -68,15 +72,15 @@ import { switchMap, catchError } from "rxjs/operators";
 const data$ = fromFetch("https://api.github.com/users?per_page=5").pipe(
   switchMap((response) => {
     if (response.ok) {
-      // OK return data
+      // OK devolver los datos
       return response.json();
     } else {
-      // Server is returning a status requiring the client to try something else.
+      // El servidor retorna un status requiriendo que el cliente intente otra cosa
       return of({ error: true, message: `Error ${response.status}` });
     }
   }),
   catchError((err) => {
-    // Network or other error, handle appropriately
+    // Gestionando cualquier tipo de error
     console.error(err);
     return of({ error: true, message: err.message });
   })
@@ -110,5 +114,6 @@ data$.subscribe({
 });
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/fetch/fromFetch)
-- [Código fuente(https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts)

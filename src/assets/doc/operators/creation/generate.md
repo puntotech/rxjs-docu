@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # generate
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/generate.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
 
@@ -141,5 +150,6 @@ Genera una secuencia observable ejecutando un bucle impulsado por el estado para
 
 `Observable<T>`: La secuencia generada.
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/generate)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/generate.ts)

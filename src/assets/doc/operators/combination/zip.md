@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # zip
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/zip.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Combina varios Observables para crear un Observable cuyos valores se calculen a partir de las emisiones, en orden, de cada uno de sus Observables de entrada
 
@@ -336,4 +345,3 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/zip)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/zip.ts)

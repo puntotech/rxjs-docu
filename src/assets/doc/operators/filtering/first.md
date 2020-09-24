@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # first
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/first.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
 
@@ -23,7 +32,7 @@ El valor por defecto que se emitirá en el caso de que no se encuentre ningún e
 
 `EmptyError`: Lanza un `EmptyError` si el Observable se completa sin emitir ninguna notificación `next`.
 
-### Descripción
+## Descripción
 
 Emite únicamente el primer valor. O emite el primer valor que cumpla alguna condición.
 
@@ -176,5 +185,6 @@ Tipo: <code>D</code>.</td></tr>
 
 `OperatorFunction<T, T | D>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/first)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/first.ts)

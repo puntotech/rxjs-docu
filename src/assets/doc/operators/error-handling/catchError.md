@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # catchError
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/catchError.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Captura errores en el Observable que se manejan devolviendo un Observable nuevo o lanzando un error
 
@@ -183,5 +192,6 @@ of(1, 2, 3, 4, 5)
 // 1, 2, 3, error en la fuente. Detalles: four!
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/catchError)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/catchError.ts)

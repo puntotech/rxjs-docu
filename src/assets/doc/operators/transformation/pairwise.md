@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # pairwise
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/pairwise.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Agrupa las emisiones consecutivas en pares y las emite en forma de array
 
@@ -14,7 +23,7 @@ No recibe ningún parámetro.
 
 `OperatorFunction<T, [T, T]>`: Un Observable de pares (en forma de array) de valores consecutivos del Observable fuente.
 
-### Descripción
+## Descripción
 
 Recoge el valor actual y el anterior en un array, y lo emite.
 
@@ -76,5 +85,6 @@ const distance = pairs.pipe(
 distance.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/pairwise)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/pairwise.ts)

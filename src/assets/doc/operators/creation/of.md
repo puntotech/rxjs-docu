@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # of
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/of.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Convierte los argumentos en una secuencia Observable.
 
@@ -119,9 +128,6 @@ of([1, 2, 3]).subscribe(
 // 'Fin'
 ```
 
-## Recetas
-
 ## Recursos Adicionales
 
-- [of](https://rxjs.dev/api/index/function/of) - Documentación oficial en inglés
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/of.ts)
+- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/of)

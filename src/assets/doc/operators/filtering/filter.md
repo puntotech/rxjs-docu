@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # filter
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/filter.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
 
@@ -95,5 +104,6 @@ const clicksOnDivs = clicks.pipe(filter((ev) => ev.target.tagName === "DIV"));
 clicksOnDivs.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/filter)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/filter.ts)

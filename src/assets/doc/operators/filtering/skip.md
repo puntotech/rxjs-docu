@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # skip
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skip.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Retorna un Observable que se salta las primeras x emisiones del Observable fuente
 
@@ -56,5 +65,6 @@ pokemon$.pipe(skip(1)).subscribe(console.log);
 // Salida: { "Charmander", type: "Fire"}, { name: "Squirtle", type: "Water" }
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skip)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skip.ts)

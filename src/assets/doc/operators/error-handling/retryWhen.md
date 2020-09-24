@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # retryWhen
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retryWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Reintenta una secuencia Observable cuando ocurre un error
 
@@ -101,11 +110,8 @@ pokemonId$
 // Salida: 'Reintentado 2 veces, con un retraso de 3000ms, pero ha ocurrido un error: ajax error 404', 'charmeleon', 'charizard', '¡Completado!'
 ```
 
-## Recursos
+## Recursos adicionales
 
 [Backoff exponencial]()
 
-## Ver también
-
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/retryWhen)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retryWhen.ts)

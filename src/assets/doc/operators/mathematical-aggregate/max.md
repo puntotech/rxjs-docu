@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # max
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/max.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite el elemento de mayor valor
 
@@ -111,5 +120,6 @@ Utilizar una función de comparación para obtener el elemento de mayor valor
     .subscribe((x: Person) => console.log(x.name)); // -> 'Beer'
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/max)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/max.ts)

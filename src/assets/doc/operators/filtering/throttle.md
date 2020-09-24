@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # throttle
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttle.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite un valor del Observable fuente e ignora las emisiones siguientes durante un tiempo determinado por un segundo Observable. Después, repite el proceso
 
@@ -82,5 +91,6 @@ const result = clicks.pipe(throttle((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/throttle)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttle.ts)

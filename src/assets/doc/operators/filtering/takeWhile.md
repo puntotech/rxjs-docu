@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # takeWhile
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeWhile.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite las emisiones del Observable fuente siempre y hasta cuando cumplan la condición especificada. Se completa en cuanto haya un valor que no cumpla la condición
 
@@ -159,5 +168,6 @@ Tipo: <code>boolean</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/takeWhile)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeWhile.ts)

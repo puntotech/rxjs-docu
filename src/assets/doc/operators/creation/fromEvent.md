@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # fromEvent
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
 
@@ -152,5 +161,6 @@ clicksInDiv.subscribe(() => console.log("div"));
 // will log "document" and then "div".
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/fromEvent);
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts)

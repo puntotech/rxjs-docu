@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # timeoutWith
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
 
@@ -19,7 +28,7 @@ El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</t
 
 `OperatorFunction<T, T | R>`: Un Observable que refleja el comportamiento de la fuente o, cuando no supera la comprobación del _timeout_, de un segundo Observable proporcionado por parámetros.
 
-### Descripción
+## Descripción
 
 Es una versión del operador `timeout` que permite especificar un Observable comodín.
 
@@ -103,5 +112,6 @@ seconds.pipe(timeoutWith(900, minutes)).subscribe(
 );
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/timeoutWith)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts)

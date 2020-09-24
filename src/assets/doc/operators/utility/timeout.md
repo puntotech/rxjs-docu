@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # timeout
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
 
@@ -19,7 +28,7 @@ El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</t
 
 `MonoTypeOperatorFunction<T>`: Un Observable que refleja el comportamiento de la fuente, a no ser que la comprobación del _timeout_ falle.
 
-### Descripción
+## Descripción
 
 Lanza un error si el Observable no emite valores suficientemente rápido.
 
@@ -125,5 +134,6 @@ seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
 );
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/timeout)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts)

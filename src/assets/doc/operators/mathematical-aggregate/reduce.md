@@ -1,8 +1,17 @@
+<div class="page-heading">
+
 # reduce
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/reduce.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente
 
-💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan]()
+💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan]('/operators/transformation/scan')
 
 ### Firma
 
@@ -88,5 +97,6 @@ Tipo: <code>T</code>.</td></tr>
 
 `OperatorFunction<T, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/reduce)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/reduce.ts)

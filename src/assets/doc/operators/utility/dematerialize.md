@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # dematerialize
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Convierte un Observable de objetos Notification en las emisiones que representan
 
@@ -14,9 +23,7 @@ No recibe ningún parámetro.
 
 `OperatorFunction<Notification<T>, T>`: Un Observable que emite elementos y notificaciones embebidos en objetos `Notification` emitidos por el Observable fuente.
 
-An Observable that emits items and notifications embedded in Notification objects emitted by the source Observable.
-
-### Description
+## Description
 
 Transforma los objetos `Notification` en emisiones `next`, `error` y `complete`. Es el operador opuesto a `materialize`.
 
@@ -81,5 +88,6 @@ upperCase.subscribe(
 // TypeError: x.toUpperCase is not a function
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/dematerialize)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts)

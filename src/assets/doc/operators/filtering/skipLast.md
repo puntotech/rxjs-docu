@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # skipLast
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipLast.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Saltar las últimas x emisiones del Observable fuente
 
@@ -20,7 +29,7 @@
 
 `ArgumentOutOfRangeError` Al usar `skipLast(i)`, se lanza un error `ArgumentOutOrRangeError` si `i < 0`.
 
-### Descripción
+## Descripción
 
 Se salta las últimas `count` emisiones del Observable fuente.
 
@@ -78,5 +87,6 @@ skipLastTwo.subscribe((x) => console.log(x));
 // 1 2 3
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipLast)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipLast.ts)

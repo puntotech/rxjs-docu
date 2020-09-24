@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # expand
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/expand.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
 
@@ -7,11 +16,6 @@
 `expand<T, R>(project: (value: T, index: number) => any, concurrent: number = Number.POSITIVE_INFINITY, scheduler: SchedulerLike = undefined): OperatorFunction<T, R>`
 
 ### Parámetros
-
-<table>
-<tr><td></td><td></td></tr>
-<tr><td></td><td></td></tr>
-</table>
 
 <table>
 <tr><td>project</td><td>Una función que, al aplicarse a un elemento emitido por la fuente, retorna un Observable.</td></tr>
@@ -27,7 +31,7 @@ El <code>SchedulerLike</code> que se utiliza para suscribirse a cada Observable 
 
 that emits the source values and also result of applying the projection function to each value emitted on the output Observable and and merging the results of the Observables obtained from this transformation.
 
-### Descripción
+## Descripción
 
 Es similar a `mergeMap`, pero aplica la función de proyección a cada valor de la fuente además de a cada valor de salida. Es recursivo.
 
@@ -103,5 +107,6 @@ const powersOfTwo = clicks.pipe(
 powersOfTwo.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/expand)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/expand.ts)

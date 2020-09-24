@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # ajax
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/ajax/ajax.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable para una petición Ajax
 
@@ -166,5 +175,6 @@ const obs$ = ajax(`https://api.github.com/404`).pipe(
 );
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs.dev/api/ajax/ajax)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/ajax/ajax.ts)

@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # distinctUntilKeyChanged
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
 
@@ -152,5 +161,6 @@ Un ejemplo comparando las primeras letras de la propiedad `name`
     // { age: 5, name: 'Foo2' }
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinctUntilKeyChanged)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts)

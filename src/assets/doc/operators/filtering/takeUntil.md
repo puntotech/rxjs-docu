@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # takeUntil
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeUntil.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor
 
@@ -114,5 +123,6 @@ const result = source.pipe(takeUntil(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/takeUntil)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeUntil.ts)

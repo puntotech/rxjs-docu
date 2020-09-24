@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # windowToggle
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un segundo Observable emite, y se cierra cuando un tercer Observable retornado por una función emite
 
@@ -17,7 +26,7 @@
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
-### Descripción
+## Descripción
 
 Es como `bufferToggle`, pero emite un Observable anidado en lugar de un array.
 
@@ -70,5 +79,6 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowToggle)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts)

@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # buffer
 
-### Almacena los valores del Observable en un búfer hasta que emita otro Observable
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+### Almacena los valores del Observable en un búfer hasta que otro Observable emita
 
 ### Firma
 
@@ -16,7 +25,7 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de búfers, que son arrays de valores.
 
-### Descripción
+## Descripción
 
 Acumula valores en un array, y emite dicho array cuando un segundo Observable emita.
 
@@ -75,5 +84,6 @@ const buffered = intervalEvents.pipe(buffer(clicks));
 buffered.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/buffer)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts)

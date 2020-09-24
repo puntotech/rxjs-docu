@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # switchMap
 
-Projects each source value to an Observable which is merged in the output Observable, emitting values only from the most recently projected Observable.
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+### Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
 
 ### Firma
 
@@ -18,7 +27,7 @@ Projects each source value to an Observable which is merged in the output Observ
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección (y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente, obteniendo únicamente los valores del Observable interno más reciente.
 
-### Descripción
+## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' estos Observables internos.
 
@@ -180,5 +189,6 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/switchMap)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts)

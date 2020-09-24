@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # combineAll
 
-<h3>Convierte un Observable de orden superior en uno de primer orden aplicando <code>combineLatest</code> cuando el Observable de orden superior se completa</h3>
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineAll.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h3>Convierte un Observable de orden superior en uno de primer orden aplicando <a href="/operators/combination/combineLatest">combineLatest</a> cuando el Observable de orden superior se completa</h3>
 
 ### Firma
 
@@ -17,7 +26,7 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 
 `OperatorFunction<T, R>`
 
-### Descripción
+## Descripción
 
 <img src="assets/images/marble-diagrams/join-creation/combineAll.png" alt="Diagrama de canicas del operador combineAll">
 
@@ -77,7 +86,7 @@ result.subscribe((x) => console.log(x));
 
 ## Sobrecargas
 
-combineAll(): OperatorFunction<ObservableInput<T>, T[]>
+`combineAll(): OperatorFunction<ObservableInput<T>, T[]>`
 
 ### Parámetros
 
@@ -121,5 +130,6 @@ No recibe ningún parámetro.
 
 `OperatorFunction<any, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/combineAll)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineAll.ts)

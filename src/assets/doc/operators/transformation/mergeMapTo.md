@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # mergeMapTo
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMapTo.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona con el Observable resultante
 
@@ -20,7 +29,7 @@ El máximo número de Observables internos a los que se suscribe de forma concur
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite elementos del Observable `innerObservable` proporcionado.
 
-### Descripción
+## Descripción
 
 Es como `mergeMap`, pero siempre proyecta los valores al mismo Observable interno.
 
@@ -80,5 +89,6 @@ const result = clicks.pipe(mergeMapTo(interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeMapTo)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMapTo.ts)

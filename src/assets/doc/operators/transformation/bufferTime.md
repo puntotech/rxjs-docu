@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # bufferTime
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Acumula valores del Observable fuente durante un periodo de tiempo
 
@@ -16,7 +25,7 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
-### Descripción
+## Descripción
 
 Almacena valores en un array, y emite esos arrays periódicamente en el tiempo.
 
@@ -124,5 +133,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `OperatorFunction<T, T[]>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferTime.ts)

@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # take
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/take.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite las primeras x emisiones del Observable fuente
 
@@ -81,5 +90,6 @@ takeFive.subscribe((x) => console.log(x));
 // Salida: 0, 1, 2, 3, 4
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/take)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/take.ts)

@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # mapTo
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mapTo.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite el mismo valor cada vez que el Observable fuente emite un valor
 
@@ -16,7 +25,7 @@
 
 `OperatorFunction<T, R>`: Un Observable que emite el mismo valor cada vez que el Observable fuente emite algo.
 
-### Descripción
+## Descripción
 
 Es como `map`, pero proyecta cada emisión siempre al mismo valor.
 
@@ -67,5 +76,6 @@ const greetings = clicks.pipe(mapTo("Hi"));
 greetings.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mapTo);
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mapTo.ts)

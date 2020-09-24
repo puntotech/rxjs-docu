@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # windowCount
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowCount.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Acumula valores del Observable fuente en un Observable anidado (ventana), que contiene como mucho un número determinado de valores
 
@@ -19,7 +28,7 @@ El intervalo que señala cuándo abrir una ventana nueva. Por ejemplo, si `start
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
-### Descripción
+## Descripción
 
 Es como `bufferCount`, pero emite un Observable anidado en lugar de un array.
 
@@ -84,5 +93,6 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowCount)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowCount.ts)

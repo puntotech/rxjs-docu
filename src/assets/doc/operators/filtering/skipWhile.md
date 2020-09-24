@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # skipWhile
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipWhile.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Se salta las emisiones del Observable fuente hasta que una condición deje de cumplirse
 
@@ -74,5 +83,6 @@ pokemon$.pipe(skipWhile(({ type }) => type === "Grass")).subscribe(console.log);
 // Salida: { name: "Charmander", type: "Fire" }, { name: "Treecko", type: "Grass" }, { name: "Squirtle", type: "Water" }
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipWhile)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipWhile.ts)

@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # timeInterval
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeInterval.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Convierte un Observable que emite elementos en uno que emite indicaciones de la cantidad de tiempo transcurrida entre emisiones
 
@@ -17,7 +26,7 @@ El planificador utilizado para obtener el tiempo.</td></tr>
 
 `OperatorFunction<T, TimeInterval<T>>`: Un Observable que emite información sobre el valor y el intervalo.
 
-### Descripción
+## Descripción
 
 Emite un objeto que contiene el valor actual y el tiempo transcurrido entre la emisión del valor actual y el valor anterior, que se calcula utilizando el método `now()` del planificador que se haya proporcionado para obtener el momento exacto de cada emisión, y después calculando la diferencia. Dado que el planificador es `async` por defecto, el intervalo estará en milisegundos.
 
@@ -72,5 +81,6 @@ seconds.pipe(timeout(900)).subscribe(
 // {value: 2, interval: 1000}
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/timeInterval)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeInterval.ts)

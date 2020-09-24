@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # defaultIfEmpty
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
 
@@ -79,4 +88,3 @@ result.subscribe((x) => console.log(x));
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/defaultIfEmpty)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts)

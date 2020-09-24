@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # interval
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
 
@@ -14,7 +23,7 @@
 <tr><td>period</td><td>Opcional. El valor por defecto es 0.
 El tamaño del intervalo en milisegundos (por defecto) o en la unidad de tiempo determinada por el reloj del planificador.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto is async.
-El `SchedulerLike` que utilizar para planificar la emisión de valores y para proporcionar la noción del "tiempo".</td></tr>
+El <code>SchedulerLike</code> que se utiliza para planificar la emisión de valores y para proporcionar la noción del "tiempo".</td></tr>
 </table>
 
 ### Retorna
@@ -73,5 +82,6 @@ takeFourNumbers.subscribe((x) => console.log("Next: ", x));
 // Salida: "Next: 0", "Next: 1", "Next: 2", "Next: 3"
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/interval)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts)

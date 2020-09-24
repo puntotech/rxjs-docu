@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # debounce
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado por otro Observable sin que el Observable fuente emita ningún valor
 
@@ -16,7 +25,7 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente durante un periodo de tiempo determinado por el Observable retornado por `durationSelector`. Es posible que algunos valores se pierdan si se producen demasiado frecuentemente.
 
-### Descripción
+## Descripción
 
 Es como `debounceTime`, pero el periodo de silenciamiento de emisiones está determinado por un segundo Observable.
 
@@ -81,11 +90,8 @@ const result = clicks.pipe(debounce(() => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recetas relacionadas
+## Recursos adicionales
 
 - [Type-Ahead]()
 
-## Ver también
-
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/debounce)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts)

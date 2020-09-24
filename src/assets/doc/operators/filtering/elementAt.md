@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # elementAt
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
 
@@ -98,5 +107,6 @@ result.subscribe((x) => console.log(x));
 // click 3 = objeto MouseEvent
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/elementAt)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts)
