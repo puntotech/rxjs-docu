@@ -19,3 +19,15 @@ rxjs-docs-sidenav {
   display: block;
   height: 100%;
 }
+
+@media only screen and (min-width: 1200px) and (max-device-width: 1600px) {
+  mat-sidenav {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  mat-sidenav {
+    width: 400px;
+  }
+}
