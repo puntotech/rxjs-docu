@@ -19,12 +19,8 @@ code {
   padding: 4px 6px;
 }
 
-pre.language-javascript.line-numbers {
-  margin: 20px 0;
-}
-
-.marble-diagram {
-  margin: 20px 0;
+.mat-typography {
+  font-size: 16px;
 }
 
 .mat-typography h1 {
@@ -59,7 +55,6 @@ blockquote {
 }
 
 markdown {
-  font-size: 16px;
   font-weight: normal;
   letter-spacing: 0.3px;
   line-height: 24px;
