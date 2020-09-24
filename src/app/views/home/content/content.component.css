@@ -1,0 +1,36 @@
+img {
+  width: 100%;
+}
+
+h2 {
+  margin: 34px 0 24px;
+}
+
+h3 {
+  margin: 30px 0 20px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.code-toolbar {
+  margin: 30px 0;
+}
+
+.page-heading a {
+  height: 30px;
+  width: 30px;
+}
+
+.page-heading a svg {
+  color: #1b1f23;
+  height: 100%;
+  transition: color 1s;
+  width: 100%;
+}
+
+.page-heading a:hover svg {
+  color: #d81b60;
+}
