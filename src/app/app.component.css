@@ -1,6 +1,6 @@
 mat-sidenav {
   background-color: #fafafa;
-  width: 400px;
+  width: 70%;
 }
 
 mat-sidenav-container {
@@ -20,7 +20,7 @@ rxjs-docs-sidenav {
   height: 100%;
 }
 
-@media only screen and (min-width: 1200px) and (max-device-width: 1600px) {
+@media only screen and (min-width: 450px) and (max-device-width: 1600px) {
   mat-sidenav {
     width: 300px;
   }
