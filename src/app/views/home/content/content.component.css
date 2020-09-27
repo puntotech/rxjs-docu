@@ -19,9 +19,13 @@ div.code-toolbar {
   margin: 30px 0;
 }
 
+.md-container {
+  padding: 25px;
+}
+
 .page-heading a {
-  height: 30px;
-  width: 30px;
+  height: 32px;
+  width: 32px;
 }
 
 .page-heading a svg {
@@ -33,4 +37,10 @@ div.code-toolbar {
 
 .page-heading a:hover svg {
   color: #d81b60;
+}
+
+@media only screen and (min-width: 450px) {
+  .md-container {
+    padding: 40px;
+  }
 }
