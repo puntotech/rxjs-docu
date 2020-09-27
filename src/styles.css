@@ -1,16 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "~prismjs/themes/prism-okaidia.css";
 
 html,
 body {
   height: 100%;
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica,
-    Arial, "Lucida Grande", sans-serif;
-  color: #333;
+
+p,
+span {
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  line-height: 24px;
 }
 
 code {
@@ -20,7 +19,11 @@ code {
 }
 
 .mat-typography {
+  color: #333;
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+    Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
+  margin: 0;
 }
 
 .mat-typography h1 {
@@ -52,16 +55,6 @@ blockquote {
   padding-left: 1.3em;
   border-left: 5px solid #dfdfdf;
   font-style: italic;
-}
-
-markdown {
-  font-weight: normal;
-  letter-spacing: 0.3px;
-  line-height: 24px;
-}
-
-.md-container {
-  padding: 40px;
 }
 
 .fading-line {
