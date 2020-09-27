@@ -360,6 +360,14 @@ const TREE_DATA: SectionNode[] = [
   {
     name: 'Versión 6',
     url: 'version-6',
+    children: [
+      {
+        name: 'Funcionalidades obsoletas',
+        url: 'version-6/funcionalidades-obsoletas',
+      },
+      { name: 'Migración', url: 'version-6/migracion' },
+      { name: 'Operadores de tubería', url: 'version-6/operadores-tuberia' },
+    ],
   },
   {
     name: 'Código de Conducta',
