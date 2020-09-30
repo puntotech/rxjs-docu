@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # switchMapTo
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMapTo.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Proyecta cada valor de la fuente al mismo Observable interno, posteriormente usando switchMap para unirlos al Observable resultante
 
@@ -18,7 +27,7 @@ Tipo: <code>(outerValue: T, innerValue: I, outerIndex: number, innerIndex: numbe
 
 `OperatorFunction<T, I | R>`: Un Observable que emite elementos del `innerObservable` cada vez que el Observable fuente emite un valor. Se obtienen los valores del Observable interno más reciente.
 
-### Descripción
+## Descripción
 
 Es como `switchMap`, pero siempre proyecta los valores sobre el mismo Observable interno.
 
@@ -101,5 +110,6 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/switchMapTo)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMapTo.ts)

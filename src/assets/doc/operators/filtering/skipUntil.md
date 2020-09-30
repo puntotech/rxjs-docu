@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # skipUntil
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipUntil.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Retorna un Observable que se salta los valores emitidos por el Observable fuente hasta que un segundo Observable emite un valor
 
@@ -79,5 +88,6 @@ const emitAfterClick = intervalObservable.pipe(skipUntil(click));
 const subscribe = emitAfterClick.subscribe((value) => console.log(value));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipUntil)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipUntil.ts)

@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # merge
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/merge.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
 
@@ -536,4 +545,3 @@ Tipo: <code>number</code>.</td></tr>
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/merge)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/merge.ts)

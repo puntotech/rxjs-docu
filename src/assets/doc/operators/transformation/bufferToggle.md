@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # bufferToggle
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 <h3> Acumula valores del Observable fuente a partir de una emisión de <code>openings</code> en un búfer, que se cierra cuando el Observable retornado por la función <code>closingSelector</code> emite</h3>
 
@@ -17,7 +26,7 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
-### Descripción
+## Descripción
 
 Almacena valores en un array. Abre el búfer cuando `openings` emite, y llama a la función `closingSelector` para obtener el Observable que indica cuándo cerrar el búfer.
 
@@ -79,5 +88,6 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferToggle)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts)

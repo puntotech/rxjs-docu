@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # auditTime
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/auditTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente.
 
@@ -18,7 +27,7 @@ El <code>SchedulerLike</code> que utilizar para gestionar los temporizadores que
 
 `MonoTypeOperatorFunction<T>`: An Observable that performs rate-limiting of emissions from the source Observable.
 
-### Descripción
+## Descripción
 
 Cuando recibe un valor de la fuente, lo ignora, además de todos los valores posteriores durante un periodo de tiempo. Una vez finalizado el periodo de tiempo, emite el valor más reciente del Observable fuente.
 
@@ -56,5 +65,6 @@ const result = clicks.pipe(auditTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/auditTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/auditTime.ts)

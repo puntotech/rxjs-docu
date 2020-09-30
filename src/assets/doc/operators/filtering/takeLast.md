@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # takeLast
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeLast.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite las últimas x emisiones del Observable fuente
 
@@ -93,5 +102,6 @@ const lastThree = many.pipe(takeLast(3));
 lastThree.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/takeLast)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeLast.ts)

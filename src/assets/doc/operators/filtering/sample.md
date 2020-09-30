@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # sample
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sample.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite
 
@@ -73,5 +82,6 @@ const result = seconds.pipe(sample(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/sample)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sample.ts)

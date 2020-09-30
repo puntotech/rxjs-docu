@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # pluck
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/pluck.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Extrae propiedadas de un objeto
 
@@ -16,7 +25,7 @@
 
 `OperatorFunction<T, R>`: Un nuevo Observable de propiedades de los valores de la fuente.
 
-### Descripción
+## Descripción
 
 Es como `map`, pero se utiliza para extraer una de las propiedades anidadas de los objetos emitidos.
 
@@ -176,5 +185,6 @@ tagNames.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/pluck)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/pluck.ts)

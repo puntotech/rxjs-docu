@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # retry
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retry.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error
 
@@ -107,5 +116,6 @@ const subscribe = example.subscribe({
 // "Error!: Retried 2 times then quit!"
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs.dev/api/operators/retry)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retry.ts)

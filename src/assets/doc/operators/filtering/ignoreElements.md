@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # ignoreElements
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/ignoreElements.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 <h3>Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a <code>complete</code> o a <code>error</code></h3>
 
@@ -78,5 +87,6 @@ of("you", "talking", "to", "me")
 // 'the end'
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/ignoreElements)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/ignoreElements.ts)

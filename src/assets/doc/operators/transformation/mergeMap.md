@@ -1,8 +1,17 @@
+<div class="page-heading">
+
 # mergeMap
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante
 
-💡 Se debe utilizar `mergeMap` si se quiere tener varios Observables internos suscritos de forma concurrente
+💡 Se debe utilizar `mergeMap` si se quieren tener varios Observables internos suscritos de forma concurrente
 
 ### Firma
 
@@ -22,7 +31,7 @@ El máximo número de Observables de entrada suscritos de forma concurrente.</td
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección ( y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente y fusionando los resultados de los Observables obtenidos a partir de esta transformación.
 
-### Descripción
+## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' cada uno de estos Observables internos mediante el operador `mergeAll`.
 
@@ -148,5 +157,6 @@ Tipo: <code>number.</td></tr>
 
 `OperatorFunction<T, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeMap)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMap.ts)

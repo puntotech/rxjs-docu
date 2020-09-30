@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # throttleTime
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttleTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite un valor del Observable fuente e ignora las emisiones siguientes durante un periodo de tiempo determinado. Después, repite el proceso
 
@@ -20,7 +29,7 @@ Un objeto de configuración para definir el comportamiento de los parámetros <c
 
 `MonoTypeOperatorFunction<T>`: Un Observable that performs the throttle operation to limit the rate of emissions from the source.
 
-### Descripción
+## Descripción
 
 Emite un valor, ignorando las siguientes emisiones durante `duration` milisegundos.
 
@@ -108,5 +117,6 @@ doubleClick.subscribe((throttleValue: Event) => {
 
 Si se habilita el parámetro `leading` en est ejemplo, la salida sería el primer click y el doble click, pero se restringiría cualquier click adicional en un periodo de 400ms.
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/throttleTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttleTime.ts)

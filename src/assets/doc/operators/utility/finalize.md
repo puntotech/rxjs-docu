@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # finalize
 
-### Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en <code>complete</code> o en <code>error</code>
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h3> Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en <code>complete</code> o en <code>error</code> </h3>
 
 ### Firma
 
@@ -73,5 +82,6 @@ ghibliFilm$
 // Salida: Castle in the Sky, Grave of the Fireflies, My Neighbor Totoro, Flujo Completado, Peticiones Realizadas
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/finalize)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts)

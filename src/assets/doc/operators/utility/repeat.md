@@ -1,8 +1,15 @@
+<div class="page-heading">
+
 # repeat
 
-### Retorna un Observable que se resuscribe <code>count</code> veces al flujo fuente cuando el Observable fuente se completa
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeat.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
-Returns an Observable that will resubscribe to the source stream when the source stream completes, at most count times.
+<h3> Retorna un Observable que se resuscribe <code>count</code> veces al flujo fuente cuando el Observable fuente se completa </h3>
 
 ### Firma
 
@@ -22,7 +29,7 @@ El número de veces que se repiten los valores del Observable fuente. Si se espe
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se resuscribirá `count` veces al flujo fuente cuando el flujo fuente se complete.
 
-### Descripción
+## Descripción
 
 Repite todos los valores emitidos por la fuente. Es como el operador `retry`, para casos que no sean de error.
 
@@ -122,5 +129,6 @@ example.subscribe((x) => console.log(x));
 // 2
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/repeat)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeat.ts)

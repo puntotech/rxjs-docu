@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # withLatestFrom
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/withLatestFrom.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
 
@@ -262,4 +271,3 @@ result.subscribe((x) => console.log(x));
 `OperatorFunction<T, R>`
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/withLatestFrom)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/withLatestFrom.ts)

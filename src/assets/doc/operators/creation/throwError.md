@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # throwError
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/throwError.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable que solo emite una notificación de error
 
@@ -19,7 +28,7 @@ El <code>SchedulerLike</code> que utilizar para planificar la emisión de la not
 
 `Observable<never>`: Un Observable de error: emite solo la notificación `error` utilizando el argumento `error` proporcionado
 
-### Descripción
+## Descripción
 
 Emite un Error y nada más.
 
@@ -94,7 +103,9 @@ import { mergeMap } from "rxjs/operators";
 
 interval(1000)
   .pipe(
-    mergeMap((x) => (x === 2 ? throwError("Twos are bad") : of("a", "b", "c")))
+    mergeMap((x) =>
+      x === 2 ? throwError("El número 2 no mola") : of("a", "b", "c")
+    )
   )
   .subscribe(
     (x) => console.log(x),
@@ -108,8 +119,9 @@ interval(1000)
 // a
 // b
 // c
-// (error) Twos are bad
+// (error) El número 2 no mola
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/throwError)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/throwError.ts)

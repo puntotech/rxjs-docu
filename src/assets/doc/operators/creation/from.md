@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # from
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/from.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable
 
@@ -174,9 +183,6 @@ console.log("Fin");
 // 30
 ```
 
-## Recetas
-
 ## Recursos Adicionales
 
-- [from](https://rxjs.dev/api/index/function/from) - Documentación oficial en inglés
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/from.ts)
+- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/from)

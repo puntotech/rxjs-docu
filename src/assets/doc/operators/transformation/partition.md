@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # partition
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Divide el Observable fuente en dos, uno con los valores que cumplen una condición, y otro con los valores que no la cumplan
 
@@ -19,7 +28,7 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 `[Observable<T>, Observable<T>]`: Un array con dos Observables: uno con valores que cumplen la función `predicate`, y otro con valores que no la cumplen.
 
-### Descripción
+## Descripción
 
 Es como `filter`, pero retorna dos Observables: uno como el Observable resultante de `filter`, y otro con los valores que no han superado la condición.
 
@@ -118,5 +127,6 @@ evens$.subscribe((x) => console.log("pares", x));
 // pares 6
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/partition)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts)

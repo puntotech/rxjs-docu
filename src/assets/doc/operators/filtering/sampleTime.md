@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # sampleTime
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sampleTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite la emisión más reciente del Observable fuente en cada periodo de tiempo determinado
 
@@ -77,5 +86,6 @@ const result = clicks.pipe(sampleTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/sampleTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sampleTime.ts)

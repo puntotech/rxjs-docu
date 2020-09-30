@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # startWith
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/startWith.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite los elementos que se especifiquen como argumentos antes de empezar a emitir las emisiones del Observable fuente
 
@@ -286,4 +295,3 @@ OperatorFunction<T, T | D | E | F | G | H>
 `OperatorFunction<T, T | D>`
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/startWith)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/startWith.ts)

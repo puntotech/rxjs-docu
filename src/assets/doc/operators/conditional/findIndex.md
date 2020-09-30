@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # findIndex
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
 
@@ -81,5 +90,6 @@ const result = clicks.pipe(findIndex((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/findIndex)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts)

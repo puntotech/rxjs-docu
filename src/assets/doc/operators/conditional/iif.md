@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # iif
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Decide qué Observable será suscrito en tiempo de suscripción
 
@@ -31,6 +40,8 @@ Los Observables para ambos casos (_true_ y _false_) son opcionales. Si la condic
 En el caso de tener lógica más compleja que requiera decidir entre más de dos Observables, el operador `defer` probablemente sea una opción mejor. De hecho, el comportamiento del operador `iif` se puede implementar fácilmente con el operador `defer`, y existe únicamente por razones de conveniencia y legibilidad.
 
 ## Ejemplos
+
+// TODO change example
 
 Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
 
@@ -121,5 +132,6 @@ observableIfYouHaveAccess.subscribe(
 // "The end"
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/iif)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts)

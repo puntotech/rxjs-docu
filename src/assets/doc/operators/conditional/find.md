@@ -1,8 +1,17 @@
+<div class="page-heading">
+
 # find
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición
 
-💡 Si queremos obtener el primer elemento emitido, sin que cumpla ninguna operación, podemos usar el operador [first]()
+💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first]('/operators/filtering/first')
 
 ### Firma
 
@@ -98,5 +107,6 @@ const result = clicks.pipe(find((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/find)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts)

@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # isEmpty
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite _false_ si el Observable emite cualquier valor, o emite _true_ si el Observable se completa sin emitir ningún valor
 
@@ -80,5 +89,6 @@ Emite _false_ para un Sujeto que no está vacío
     // Salida: a, false, b, c
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/isEmpty)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts)

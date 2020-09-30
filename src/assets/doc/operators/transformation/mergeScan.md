@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # mergeScan
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
 
@@ -19,7 +28,7 @@ El máximo número de Observables internos a los que se suscribe de forma concur
 
 `OperatorFunction<T, R>`: Un Observable de los valores acumulados.
 
-### Descripción
+## Descripción
 
 Es como `scan`, pero los Observables retornados por el acumulador se fusionan en el Observable resultante.
 
@@ -87,5 +96,6 @@ count$.subscribe((x) => console.log(x));
 // ...y así sucesivamente para cada click
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeScan)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts)

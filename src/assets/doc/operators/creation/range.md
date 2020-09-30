@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # range
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/range.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable que emite una secuencia de números dentro de un rango
 
@@ -68,5 +77,6 @@ const numbers = range(1, 10);
 numbers.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/range)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/range.ts)

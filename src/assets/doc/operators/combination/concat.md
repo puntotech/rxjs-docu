@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # concat
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/concat.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable que emite secuencialmente todos los valores de un Observable dado, y después continúa con el siguiente
 
@@ -394,4 +403,3 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/concat)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/concat.ts)

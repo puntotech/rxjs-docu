@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # min
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/min.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite el elemento de menor valor
 
@@ -111,5 +120,6 @@ Utilizar una función de comparación para obtener el elemento de menor valor
     .subscribe((x: Person) => console.log(x.name)); // -> 'Bar'
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/min)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/min.ts)

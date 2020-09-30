@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # audit
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/audit.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Ignora los valores emitidos por el Observable fuente durante un periodo de tiempo cuya duración está determinada por un segundo Observable. Una vez terminado el periodo, emite el valor más reciente y repite el proceso
 
@@ -17,7 +26,7 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que limita las emisiones del Observable fuente.
 
-### Descripción
+## Descripción
 
 Es como `auditTime`, pero la duración del silenciamiento está determinada por un segundo Observable.
 
@@ -57,5 +66,6 @@ const result = clicks.pipe(audit((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/audit)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/audit.ts)

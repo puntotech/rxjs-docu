@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # combineLatest
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineLatest.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Combina varios Observables para crear un Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
 

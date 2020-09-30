@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # observeOn
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Reemite todas las notificaciones del Observable fuente con el planificador especificado
 
@@ -21,7 +30,7 @@ Number of milliseconds that states with what delay every notification should be 
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite las mismas notificaciones que el Observable fuente, pero con el planificador especificado.
 
-### Descripción
+## Descripción
 
 Utiliza el planificador especificado, desde fuera del Observable.
 
@@ -70,5 +79,6 @@ intervals
   });
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/observeOn)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts)

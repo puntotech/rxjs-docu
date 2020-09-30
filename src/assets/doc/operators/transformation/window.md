@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # window
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/window.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
 
@@ -16,7 +25,7 @@
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables que emiten valores del Observable fuente.
 
-### Descripción
+## Descripción
 
 Es como `buffer`, pero emite un Observable anidado en lugar de un array.
 
@@ -65,5 +74,6 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/window)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/window.ts)

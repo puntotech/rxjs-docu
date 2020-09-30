@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # concatMapTo
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMapTo.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Proyecta cada valor emitido por la fuente al mismo Observable interno, que se une al Observable resultante de forma secuencial
 
@@ -20,7 +29,7 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable de valores obtenido a partir de fusionar el Observable consigo mismo, una vez por cada valor emitido por la fuente.
 
-### Descripción
+## Descripción
 
 Es como `concatMap`, pero siempre proyecta cada valor al mismo Observable interno.
 
@@ -129,5 +138,6 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/concatMapTo)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMapTo.ts)

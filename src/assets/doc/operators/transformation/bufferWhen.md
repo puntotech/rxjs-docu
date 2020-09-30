@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # bufferWhen
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
 
@@ -16,7 +25,7 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
-### Descripción
+## Descripción
 
 Almacena valores en un array. Cuando comienza a almacenar valores, llama a una función que retorna un Observable que indica cuándo cerrar el búfer actual y abrir uno nuevo, para seguir almacenando valores.
 
@@ -70,5 +79,6 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferWhen)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts)

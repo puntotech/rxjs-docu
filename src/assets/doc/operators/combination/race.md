@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # race
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Retorna un Observable que refleja al primer Observable que emita un valor
 
@@ -284,4 +293,3 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/race)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts)

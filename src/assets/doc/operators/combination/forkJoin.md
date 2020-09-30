@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # forkJoin
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/forkJoin.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Accepts an Array of ObservableInput or a dictionary Object of ObservableInput and returns an Observable that emits eitoeraan array of values in the exact same order as the passed array, or a dictionary of values in the same shape as the passed dictionary.
 
@@ -368,4 +377,3 @@ observable.subscribe({
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/forkJoin)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/forkJoin.ts)

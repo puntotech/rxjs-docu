@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # timer
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/timer.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Crea un Observable que comienza a emitir una secuencia ascendente de números consecutivos a intervalos, tras un periodo inicial de tiempo
 
@@ -21,7 +30,7 @@ EL <code>SchedulerLike</code> que utilizar para planificar las emisiones, propor
 
 `Observable<number>`: Un Observable que emite una secuencia ascendente de números consecutivos, comenzando por el valor 0, tras un periodo de tiempo inicial especificado por `dueTime`.
 
-### Descripción
+## Descripción
 
 Es como `interval`, pero se puede especificar cuándo deben comenzar las emisiones.
 
@@ -81,5 +90,6 @@ const numbers = timer(5000);
 numbers.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/timer)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/timer.ts)

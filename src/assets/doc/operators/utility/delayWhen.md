@@ -1,8 +1,15 @@
+<div class="page-heading">
+
 # delayWhen
 
-###
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delayWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
-Delays the emission of items from the source Observable by a given time span determined by the emissions of another Observable.
+### Retrasa la emisión de los elementos del Observable fuente en función de las emisiones de un segundo Observable
 
 ### Firma
 
@@ -11,7 +18,8 @@ Delays the emission of items from the source Observable by a given time span det
 ## Parámetros
 
 <table>
-<tr><td>delayDurationSelector</td><td>A function that returns an Observable for each value emitted by the source Observable, which is then used to delay the emission of that item on the output Observable until the Observable returned from this function emits a value.</td></tr>
+<tr><td>delayDurationSelector</td><td>Una función que retorna un Observable por cada elemento emitido por el Observable fuente, que se utiliza para retrasar la emisión de dicho elemento: cuando el Observable retornado por esta función emite, también se emite el valor del Observable fuente.</td></tr>
+
 <tr><td>subscriptionDelay</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 Un Observable que disapra la suscripción al Observable fuente en cuanto emita algún valor.</td></tr>
 </table>
@@ -26,11 +34,9 @@ Es como `delay`, pero la duración del retraso de cada emisión se determina por
 
 <img src="assets/images/marble-diagrams/utility/delayWhen.png" alt="Diagrama de cancicas del operador delayWhen">
 
-`delayWhen` desplaza cada valor emitido por el Observable fuente en el tiempo, en
+`delayWhen` retrasa la emisión de cada valor emitido por el Observable fuente, según las emisiones de un segundo Observable. Cuando la fuente emite un valor, se llama a la función `delayDurationSelector` con dicho valor como argumento. Esta función retorna un Observable, llamado Observable de duración. Cuando el Observable de duración emite un valor o se completa, el valor emitido por la fuente se emite en el Observable resultante.
 
-time shifts each emitted value from the source Observable by a time span determined by another Observable. When the source emits a value, the delayDurationSelector function is called with the source value as argument, and should return an Observable, called the "duration" Observable. The source value is emitted on the output Observable only when the duration Observable emits a value or completes. The completion of the notifier triggering the emission of the source value is deprecated behavior and will be removed in future versions.
-
-Optionally, delayWhen takes a second argument, subscriptionDelay, which is an Observable. When subscriptionDelay emits its first value or completes, the source Observable is subscribed to and starts behaving like described in the previous paragraph. If subscriptionDelay is not provided, delayWhen will subscribe to the source Observable as soon as the output Observable is subscribed.
+De forma opcional, `delayWhen` recibe un segundo argumento, `subscriptionDelay`, que es un Observable. Cuando `subscriptionDelay` emite su primer valor o se completa, `delayWhen` se suscribe al Observable fuente, que comienza a comportarse según lo descrito en el párrafo anterior. Si no se proporciona un `subscriptionDelay`, `delayWhen` se suscribirá al Observable fuente en cuanto se realice la suscripción al Observable resultante.
 
 ## Ejemplos
 
@@ -65,5 +71,6 @@ delayWhen(event => interval(Math.random() \* 5000)),
 delayedClicks.subscribe(x => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/delayWhen)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delayWhen.ts)

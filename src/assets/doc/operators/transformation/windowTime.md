@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # windowTime
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Acumula valores del Observable fuente en un Observable anidado (ventana) periódicamente
 
@@ -18,7 +27,7 @@ El planificador con el que planificar los intervalos que determinan los límites
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
-### Descripción
+## Descripción
 
 Es como `bufferTime`, pero emite un Observable anidado en lugar de un array.
 
@@ -132,5 +141,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `OperatorFunction<T, Observable<T>>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowTime.ts)

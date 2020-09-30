@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # every
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/every.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Retorna un Observable que emite
 
@@ -94,5 +103,6 @@ of(1, 2, 3, 4, 5, 6)
   .subscribe((x) => console.log(x)); // -> false
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/every)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/every.ts)

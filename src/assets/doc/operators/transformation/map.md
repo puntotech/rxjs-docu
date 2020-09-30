@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # map
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
 
@@ -18,7 +27,7 @@ Un argumento opcional para definir el valor del <code>this</code> en la función
 
 `OperatorFunction<T, R>`: Un Observable que emite los valores del Observable fuente transformados por la función de proyección.
 
-### Descripción
+## Descripción
 
 Al igual que `Array.prototype.map()`, aplica una función de transformación a cada uno de los valores emitidos por la fuente, para obtener los valores de salida correspondientes.
 
@@ -69,5 +78,6 @@ const positions = clicks.pipe(map((ev) => ev.clientX));
 positions.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/map)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts)

@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # last
 
-### Emite el último valor (o el último valor que cumpla una condición) emitido por el Observable fuente
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/last.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+### Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
 
 ### Firma
 
@@ -133,5 +142,6 @@ Tipo: <code>D</code>.</td></tr>
 
 `OperatorFunction<T, T | D>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/last)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/last.ts)

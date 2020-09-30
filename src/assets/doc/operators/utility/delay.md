@@ -1,6 +1,13 @@
-// TODO
+<div class="page-heading">
 
 # delay
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Retrasa la emisión de los elementos del Observable fuente en un tiempo determinado o hasta una fecha determinada
 
@@ -20,7 +27,7 @@ El <code>SchedulerLike</code> que se utiliza para gestionar los temporizadores q
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente por el `timeout` o `Date` especificado.
 
-### Descripción
+## Descripción
 
 Retrasa las emisiones del Observable durante un tiempo o hasta una fecha determinados.
 
@@ -89,5 +96,6 @@ const delayedClicks = clicks.pipe(delay(date)); // click emitted only after that
 delayedClicks.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/delay)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts)

@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # exhaustMap
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaustMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Proyecta cada emisión de la fuente a un Observable interno que se fusiona con el Observable resultante únicamente si el Observable interno anterior se ha completado
 
@@ -22,7 +31,7 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que contiene Observables proyectados de cada elemento de la fuente. Ignora los Observables proyectados que comiencen antes de que el Observable proyectado actual se haya completado.
 
-### Descripción
+## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' todos estos Observables internos mediante el operador `exhaust`.
 
@@ -122,5 +131,6 @@ Tipo: <code>(outerValue: T, innerValue: I, outerIndex: number, innerIndex: numbe
 
 `OperatorFunction<T, R>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/exhaustMap)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaustMap.ts)

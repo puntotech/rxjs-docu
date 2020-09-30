@@ -1,8 +1,15 @@
+<div class="page-heading">
+
 # subscribeOn
 
-### Suscribe Observadores al Observable según el <code>SchedulerLike</code> especificado, de forma asíncrona
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/subscribeOn.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
-Asynchronously subscribes Observers to this Observable on the specified SchedulerLike.
+### Suscribe a los Observadores asíncronamente al Observable fuente en función del <code>SchedulerLike</code> especificado
 
 ### Firma
 
@@ -22,7 +29,7 @@ Tipo: <code>number</code>.</td></tr>
 
 source Observable modified so that its subscriptions happen on the specified SchedulerLike.
 
-### Descripción
+## Descripción
 
 Con `subscribeOn` se puede decidir qué tipo de planificador utilizará un Observable cuando se realicen suscripciones a él.
 
@@ -88,5 +95,6 @@ merge(a, b).subscribe(console.log);
 
 La salida será 5, 6, 7, 8, 9, 1, 2, 3, 4. Esto es debido a que el Observable `b` emite sus valores de forma síncrona y directa, pero las emisiones del Observable `a` se planifican en el bucle de eventos, dado que se está utilizando el `asyncScheduler`.
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/subscribeOn)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts)

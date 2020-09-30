@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # mergeAll
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeAll.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
 
@@ -17,7 +26,7 @@ El máximo número de Observables internos suscritos concurrentemente.</td></tr>
 
 `OperatorFunction<ObservableInput<T>, T>`: Un Observable que emite los valores de todos los Observables internos que emita el Observable fuente.
 
-### Descripción
+## Descripción
 
 Convierte un Observable de orden superior en uno de primer orden.
 
@@ -112,4 +121,3 @@ firstOrder.subscribe((x) => console.log(x));
 ```
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeAll)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeAll.ts)

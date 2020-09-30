@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # count
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/count.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
 
@@ -182,5 +191,6 @@ result.subscribe((x) => console.log(x));
 // 4
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/count)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/count.ts)

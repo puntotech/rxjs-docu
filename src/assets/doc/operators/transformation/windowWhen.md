@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # windowWhen
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
 
@@ -16,7 +25,7 @@
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
-### Descripción
+## Descripción
 
 Es como `bufferWhen`, pero emite un Observable anidado en lugar de un array.
 
@@ -85,5 +94,6 @@ mergeAll() // 'Aplastar' el Observable de Observables
 result.subscribe(x => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowWhen)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts)

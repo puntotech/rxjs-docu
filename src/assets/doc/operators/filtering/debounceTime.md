@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # debounceTime
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounceTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 ### Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado sin que este emita ningún valor
 
@@ -80,5 +89,6 @@ const result = clicks.pipe(debounceTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounceTime.ts)

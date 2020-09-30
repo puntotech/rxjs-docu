@@ -1,4 +1,13 @@
+<div class="page-heading">
+
 # groupBy
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
 <h3>Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como <code>GroupedObservables</code>, con un <code>GroupedObservable</code> por cada grupo </h3>
 
@@ -225,5 +234,6 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 `OperatorFunction<T, GroupedObservable<K, R>>`
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/groupBy)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts)
