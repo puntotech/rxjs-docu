@@ -2,7 +2,17 @@ img {
   width: 100%;
 }
 
+h1 {
+  border-bottom: 2px solid #e3e7e7;
+  margin-bottom: 30px;
+  padding-bottom: 35px;
+  width: 100%;
+}
+
 h2 {
+  border-top: 2px solid #e3e7e7;
+  margin-top: 30px;
+  padding-top: 35px;
   margin: 34px 0 24px;
 }
 
@@ -10,17 +20,44 @@ h3 {
   margin: 30px 0 20px;
 }
 
+pre {
+  margin: 30px 0;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: normal;
+}
+
+.collection-table {
+  width: 400px;
+}
+
+.protocol-table {
+  width: 800px;
+}
+
+.md-container {
+  padding: 25px;
+}
+
 .page-heading {
   display: flex;
   justify-content: space-between;
+}
+
+.subtitle {
+  border: none;
+  margin: 0 0 20px;
+  padding-top: 0;
 }
 
 div.code-toolbar {
   margin: 30px 0;
 }
 
-.md-container {
-  padding: 25px;
+.page-heading h3 {
+  margin: 0 0 20px;
 }
 
 .page-heading a {
@@ -31,7 +68,7 @@ div.code-toolbar {
 .page-heading a svg {
   color: #1b1f23;
   height: 100%;
-  transition: color 1s;
+  transition: color 0.5s;
   width: 100%;
 }
 
