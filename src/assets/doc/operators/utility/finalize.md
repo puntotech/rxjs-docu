@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h3> Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en <code>complete</code> o en <code>error</code> </h3>
+<h2 class="subtitle"> Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en complete o en error></h2>
 
 ### Firma
 
@@ -27,9 +27,9 @@
 
 ## Ejemplos
 
-Ejecutar la función _callback_ tras la compleción del Observable
+**Ejecutar la función _callback_ tras la compleción del Observable**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -45,9 +45,9 @@ fruit$
 
 `finalize`
 
-La función _callback_ se ejecuta aunque ocurra un error
+**La función _callback_ se ejecuta aunque ocurra un error**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { throwError } from "rxjs";
@@ -61,9 +61,9 @@ error$
 // Output: (error) '¡Oh no!', 'Ejecutando a pesar del error!'
 ```
 
-Ejecutar la función _callback_ tras realizar todas las peticiones AJAX
+**Ejecutar la función _callback_ tras realizar todas las peticiones AJAX**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { finalize, take, map, mergeAll } from "rxjs/operators";

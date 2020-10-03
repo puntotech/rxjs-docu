@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Compara secuencialmente todos los valores emitidos por dos Observables utilizando una función de comparación (opcional) y retorna un Observable que emite un solo valor booleano en función de si las dos secuencias son o no iguales.
+<h2 class="subtitle"> Compara secuencialmente todos los valores emitidos por dos Observables utilizando una función de comparación (opcional) y retorna un Observable que emite un solo valor booleano en función de si las dos secuencias son o no iguales.
+</h2>
 
 ### Firma
 

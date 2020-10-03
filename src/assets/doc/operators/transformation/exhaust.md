@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
+<h2 class="subtitle"> Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
+</h2>
 
 ### Firma
 
@@ -33,17 +34,11 @@ No recibe ningún parámetro.
 
 ## Ejemplos
 
-// TODO: Add example (maybe pokemon gif animation?)
+**Obtener 3 películas de Studio Ghibli al hacer click en el botón**
 
-[StackBlitz]()
+Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
 
-```javascript
-
-```
-
-Obtener 3 películas de Studio Ghibli al hacer click en el botón. Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
-
-[StackBlitz](https://stackblitz.com/edit/rxjs-exhaust-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-exhaust-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { delay, exhaust, map, mergeAll, take } from "rxjs/operators";
@@ -72,7 +67,7 @@ click$
 
 ### Ejemplo de la documentación oficial
 
-Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo
+**Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

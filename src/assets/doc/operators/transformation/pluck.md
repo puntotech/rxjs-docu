@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Extrae propiedadas de un objeto
+<h2 class="subtitle"> Extrae propiedadas de un objeto
+</h2>
 
 ### Firma
 
@@ -35,9 +36,9 @@ Dada una lista de cadenas que describan la ruta de una propiedad de un objeto, o
 
 ## Ejemplos
 
-Obtener una propiedad de un objeto
+**Obtener una propiedad de un objeto**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-pluck-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-pluck-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { pluck } from "rxjs/operators";
@@ -53,9 +54,9 @@ pokemon$.pipe(pluck("name")).subscribe(console.log);
 // Salida: Charmander, Squirtle, Bulbasaur
 ```
 
-Obtener una propiedad anidada de un objeto
+**Obtener una propiedad anidada de un objeto**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-pluck-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-pluck-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { pluck } from "rxjs/operators";
@@ -73,7 +74,7 @@ pokemon$.pipe(pluck("stats", "attack")).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Proyectar cada click a la propiedad `tagName` del elemento `target` del click.
+**Proyectar cada click a la propiedad tagName del elemento target del click**
 
 ```javascript
 import { fromEvent } from "rxjs";

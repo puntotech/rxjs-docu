@@ -9,9 +9,9 @@
 </a>
 </div>
 
-### Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición
+<h2 class="subtitle"> Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición</h2>
 
-💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first]('/operators/filtering/first')
+💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first](/operators/filtering/first)
 
 ### Firma
 
@@ -39,9 +39,9 @@ Encuentra el primer valor que cumple una condición y lo emite.
 
 ## Ejemplos
 
-Emite la primera vez que se presiona la tecla X, y se completa el flujo
+**Emite la primera vez que se presiona la tecla X, y se completa el flujo**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-find-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-find?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { find } from "rxjs/operators";
@@ -53,9 +53,9 @@ key$.pipe(find(({ code }) => code === "KeyX")).subscribe(console.log);
 // Salida: KeyboardEvent {}
 ```
 
-Emite el primer Pokémon de tipo _Water_
+**Emitir el primer Pokémon de tipo _Water_**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-find-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-find-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { find } from "rxjs/operators";
@@ -72,20 +72,22 @@ pokemon$.pipe(find(({ type }) => type === "Water")).subscribe(console.log);
 // Salida: { name: "Squirtle", type: "Water" }
 ```
 
-Si ningún elemento cumple la condición, se emite `undefined`
+**Si ningún elemento cumple la condición, se emite undefined**
+
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-find-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { find } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Gyarados", type: "Water" },
+const user$ = from([
+  { name: "Nya", language: "TS" },
+  { name: "Juan", language: "JS" },
+  { name: "Carlos", language: "Java" },
 ]);
 
-pokemon$
-  .pipe(find(({ type }) => type === "no existe"))
+user$
+  .pipe(find(({ language }) => language === "PHP"))
   .subscribe(console.log, console.error, () =>
     console.log("¡Flujo completado!")
   );
@@ -94,9 +96,7 @@ pokemon$
 
 ### Ejemplo de la documentación oficial
 
-Encuentra y emite el primer click que ocurra en un elemento DIV
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Encuentra y emite el primer click que ocurra en un elemento DIV**
 
 ```javascript
 import { fromEvent } from "rxjs";

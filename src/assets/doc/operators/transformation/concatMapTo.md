@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Proyecta cada valor emitido por la fuente al mismo Observable interno, que se une al Observable resultante de forma secuencial
+<h2 class="subtitle"> Proyecta cada valor emitido por la fuente al mismo Observable interno, que se une al Observable resultante de forma secuencial</h2>
 
 💡 `concatMapTo` siempre utiliza el mismo Observable interno, sin tener en cuenta el valor emitido por la fuente. Si se quiere tener en cuenta el valor emitido, se debe utilizar `concatMap`
 
@@ -43,9 +43,9 @@ Advertencia: Si los valores de la fuente se emiten de forma ilimitada, y más r�
 
 ## Ejemplos
 
-Proyectar cada click al mismo Observable interno, que emite un mensaje
+**Proyectar cada click al mismo Observable interno, que emite un mensaje**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-concatmapto-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmapto-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, of } from "rxjs";
@@ -57,9 +57,9 @@ click$.pipe(concatMapTo(of("Hola, has hecho click :D"))).subscribe(console.log);
 // Salida: (click) 'Hola, has hecho click :D' (click) 'Hola, has hecho click :D'...
 ```
 
-Cada 3 segundos, obtener los títulos de las 3 primeras películas de Ghibli
+**Cada 3 segundos, obtener los títulos de las 3 primeras películas de Ghibli**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-concatmapto-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmapto-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concatMapTo, map, mergeAll, take } from "rxjs/operators";

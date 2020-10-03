@@ -9,11 +9,11 @@
 </a>
 </div>
 
-### Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable
+<h2 class="subtitle"> Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable
 
 <div class="fading-line"></div>
 
-### Firma
+<h2 class="subtitle"> Firma
 
 `from<T>(input: any, scheduler?: SchedulerLike): Observable<T>`
 
@@ -40,9 +40,9 @@ Convierte prácticamente cualquier elemento en un Observable.
 
 ## Ejemplos
 
-Crear un Observable a partir de una cadena
+**Crear un Observable a partir de una cadena**
 
-[Stackblitz](https://stackblitz.com/edit/docu-rxjs-from?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from } from "rxjs";
@@ -53,9 +53,9 @@ letter$.subscribe(console.log);
 // Salida: 'R', 'x', 'J', 'S', ' ', 'm', 'o', 'l', 'a'
 ```
 
-Crear un Observable a partir de un Array de cadenas
+**Crear un Observable a partir de un Array de cadenas**
 
-[Stackblitz](https://stackblitz.com/edit/docu-rxjs-from-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from } from "rxjs";
@@ -66,9 +66,9 @@ fruit$.subscribe((fruit) => console.log(fruit));
 // Salida: Fresa, Cereza, Mora
 ```
 
-Crear un Observable a partir de un `Map`
+**Crear un Observable a partir de un Map**
 
-[Stackblitz](https://stackblitz.com/edit/docu-rxjs-from-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from } from "rxjs";
@@ -85,9 +85,9 @@ pokemon$.subscribe(console.log);
 // Salida: ["Squirtle", "Water"], ["Charmander", "Fire"], ["Bulbasur", "Grass"]
 ```
 
-Crear un Observable a partir de una promesa
+**Crear un Observable a partir de una promesa**
 
-[Stackblitz](https://stackblitz.com/edit/docu-rxjs-from-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from } from "rxjs";
@@ -98,9 +98,9 @@ promise$.subscribe(console.log);
 // Salida: 'Prometo empezar a aprender RxJS'
 ```
 
-Crear un Observable a partir de un `NodeList`
+**Crear un Observable a partir de un NodeList**
 
-[Stackblitz](https://stackblitz.com/edit/docu-rxjs-from-5?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-5?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from } from "rxjs";
@@ -113,7 +113,7 @@ node$.subscribe((node) => console.log(node));
 
 ### Ejemplos de la documentación oficial
 
-Convertir un array a un Observable
+**Convertir un array a un Observable**
 
 ```javascript
 import { from } from "rxjs";
@@ -129,7 +129,7 @@ result.subscribe((x) => console.log(x));
 // 30
 ```
 
-Convertir un iterable infinito (a partir de un generador) a un Observable
+**Convertir un iterable infinito (a partir de un generador) en un Observable**
 
 ```javascript
 import { from } from "rxjs";
@@ -161,7 +161,7 @@ result.subscribe((x) => console.log(x));
 // 1536
 ```
 
-Con el planificador `asyncScheduler`
+**Con el planificador asyncScheduler**
 
 ```javascript
 import { from, asyncScheduler } from "rxjs";

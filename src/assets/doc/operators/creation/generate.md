@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
+<h2 class="subtitle"> Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
+</h2>
 
 ### Firma
 
@@ -47,9 +48,9 @@ Both forms of generate can optionally accept a scheduler. In case of multi-param
 
 ## Ejemplos
 
-Emitir los números del 1 al 10
+**Emitir los números del 1 al 10**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-generate?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-generate?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { generate } from "rxjs";
@@ -64,9 +65,9 @@ number$.subscribe(console.log);
 // Salida: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ```
 
-Emitir los números pares del 2 al 10, utilizando un objeto como parámetro
+**Emitir los números pares del 2 al 10, utilizando un objeto como parámetro**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-generate-2?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-generate-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { generate } from "rxjs";

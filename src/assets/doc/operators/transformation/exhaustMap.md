@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Proyecta cada emisión de la fuente a un Observable interno que se fusiona con el Observable resultante únicamente si el Observable interno anterior se ha completado
+<h2 class="subtitle"> Proyecta cada emisión de la fuente a un Observable interno que se fusiona con el Observable resultante únicamente si el Observable interno anterior se ha completado</h2>
 
 💡 Se debe utilizar `exhaustMap` si se quiere ignorar los Observables internos mientras no se haya completado el Observable interno anterior
 
@@ -41,17 +41,11 @@ Retorna un Observable que aplica una función a cada uno de los elementos emitid
 
 ## Ejemplos
 
-// TODO: Add example (maybe pokemon gif animation?)
+**Obtener 3 películas de Studio Ghibli al hacer click en el botón**
 
-[StackBlitz]()
+Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
 
-```javascript
-
-```
-
-Obtener 3 películas de Studio Ghibli al hacer click en el botón. Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
-
-[StackBlitz](https://stackblitz.com/edit/rxjs-exhaustmap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-exhaustmap-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { delay, exhaustMap, map, mergeAll, take } from "rxjs/operators";
@@ -76,7 +70,7 @@ click$.pipe(exhaustMap((_) => getGhibliFilms())).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo
+**Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

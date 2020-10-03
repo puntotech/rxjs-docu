@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Proyecta cada valor de la fuente al mismo Observable interno, posteriormente usando switchMap para unirlos al Observable resultante
+<h2 class="subtitle"> Proyecta cada valor de la fuente al mismo Observable interno, posteriormente usando switchMap para unirlos al Observable resultante
+</h2>
 
 ### Firma
 
@@ -37,9 +38,11 @@ Proyecta cada emisión de la fuente al Observable `innerObservable` proporcionad
 
 ## Ejemplos
 
-Proyectar cada click al mismo Observable interno, que emite un mensaje. Si antes de que pasen dos segundos se vuelve a hacer click, `switchMapTo` cancelará la suscripción al Observable interno antiguo y se suscribirá al nuevo. Esto quiere decir que, si no dejamos que pasen dos segundos sin hacer ningún click, nunca veremos el mensaje del Observable interno.
+**Proyectar cada click al mismo Observable interno, que emite un mensaje**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-switchmapto-1?file=index.html)
+Si antes de que pasen dos segundos se vuelve a hacer click, switchMapTo cancelará la suscripción al Observable interno antiguo y se suscribirá al nuevo. Esto quiere decir que, si no se deja que pasen dos segundos sin hacer ningún click, nunca se verá el mensaje del Observable interno.
+
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-switchmapto-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, of } from "rxjs";
@@ -53,13 +56,15 @@ click$.pipe(switchMapTo(message$)).subscribe(console.log);
 // Salida: (click) (2s) 'Hola, has hecho click :D' (click) (1s) (click) (2s) 'Hola, has hecho click :D'...
 ```
 
-Cada 3 segundos, obtener los títulos de las 3 primeras películas de Ghibli
+**Cada 3 segundos, obtener los títulos de las 3 primeras películas de Ghibli**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-switchmapto-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-switchmapto-2?file=index.ts">StackBlitz</a>
+
+<!-- TODO example -->
 
 ### Ejemplo de la documentación oficial
 
-Reinicia un Observable intervalo con cada click
+**Reinicia un Observable intervalo con cada click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

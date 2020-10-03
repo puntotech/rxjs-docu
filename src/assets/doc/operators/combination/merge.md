@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
+<h2 class="subtitle"> Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
 
 `merge<T, R>(...observables: any[]): Observable<R>`
 
@@ -35,9 +35,9 @@ Cualquier error lanzado por un Observable de entrada será emitido inmediatament
 
 ## Ejemplos
 
-Unir dos Observables ajax
+**Unir dos Observables ajax**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-merge?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-merge?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concat } from "rxjs";
@@ -53,9 +53,9 @@ concat(totoroFilmData$, charmanderData$).subscribe(console.log);
 // Salida: {..., title: 'My Neighbor Totoro', ...}, { abilities: [], ...}
 ```
 
-`merge` se suscribe de forma concurrente (a la vez) a todos los Observables de entrada, mientras que `concat` se suscribe a ellos por orden, y hasta que el primero no se complete, no se suscribe al siguiente. Comparación entre `concat` y `merge`:
+**`merge` se suscribe de forma concurrente (a la vez) a todos los Observables de entrada, mientras que `concat` se suscribe a ellos por orden, y hasta que el primero no se complete, no se suscribe al siguiente. Comparación entre `concat` y `merge`:**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-merge-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-merge-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concat, merge, timer } from "rxjs";
@@ -76,7 +76,7 @@ concat(first$, second$, third$).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Unir 2 Observables: 1s `interval` y `clicks`
+**Unir 2 Observables: 1s interval y clicks**
 
 ```javascript
 import { merge, fromEvent, interval } from "rxjs";
@@ -91,7 +91,7 @@ clicksOrTimer.subscribe((x) => console.log(x));
 // clicks imprime MouseEvents por console cada vez que se haga click en el 'document'
 ```
 
-Unir 3 Observables, pero solo ejecutar 2 de forma concurrente
+**Unir 3 Observables, pero solo ejecutar 2 de forma concurrente**
 
 ```javascript
 import { merge, interval } from "rxjs";

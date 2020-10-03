@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Crea un Observable que solo emite una notificación de error
+<h2 class="subtitle"> Crea un Observable que solo emite una notificación de error
+</h2>
 
 ### Firma
 
@@ -38,9 +39,9 @@ Este operador estático es útil para crear un Observable simple que solo emite 
 
 ## Ejemplos
 
-Emitir un error simple
+**Emitir un error simple**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-throwerror?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-throwerror?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { throwError } from "rxjs";
@@ -54,9 +55,9 @@ error$.subscribe(
 // Salida: (error) 'Oh no!
 ```
 
-Lanzar un error según se cumpla una condición
+**Lanzar un error según se cumpla una condición**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-throwerror-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-throwerror-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of, throwError } from "rxjs";
@@ -81,7 +82,7 @@ user$
 
 ### Ejemplos de la documentación oficial
 
-Emitir el número 7 y después un Error
+**Emitir el número 7 y después un Error**
 
 ```javascript
 import { throwError, concat, of } from "rxjs";
@@ -95,7 +96,7 @@ result.subscribe(
 // Salida: 7, (error) Error: oops!
 ```
 
-Proyecta cada número a la secuencia 'a', 'b', 'c' pero lanza un error para el número 2
+**Proyectar cada número a la secuencia 'a', 'b', 'c', lanzando un error para el número 2**
 
 ```javascript
 import { throwError, interval, of } from "rxjs";

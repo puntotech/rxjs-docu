@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Combina varios Observables para crear un Observable cuyos valores se calculen a partir de las emisiones, en orden, de cada uno de sus Observables de entrada
+<h2 class="subtitle"> Combina varios Observables para crear un Observable cuyos valores se calculen a partir de las emisiones, en orden, de cada uno de sus Observables de entrada
+</h2>
 
 ### Firma
 
@@ -31,9 +32,9 @@ Si el último parámetro es una función, esta se utiliza para computar el valor
 
 ## Ejemplos
 
-Esperar a que dos Observables emitan un valor, y emitir ambos valores en un array
+**Esperar a que dos Observables emitan un valor, y emitir ambos valores en un array**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-zip?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-zip?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { zip, timer } from "rxjs";
@@ -46,10 +47,10 @@ zip(hello$, world$).subscribe(console.log);
 // Salida: ['Hello', 'World']
 ```
 
-Al combinarlo con `interval` (o `timer`), `zip` puede utilizarse para emitir los valores de un Observable cada cierto tiempo.
-Ej: Emitir una cadena cada vez que `interval` emite (cada segundo)
+**Al combinarlo con interval (o timer), zip puede utilizarse para emitir los valores de un Observable cada cierto tiempo.**
+**Ej: Emitir una cadena cada vez que interval emite (cada segundo)**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-zip-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-zip-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from, interval, zip } from "rxjs";
@@ -66,7 +67,7 @@ pokemon$.subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Combinar la edad y el nombre de distintas fuentes
+**Combinar la edad y el nombre de distintas fuentes**
 
 ```javascript
 import { zip, of } from "rxjs";

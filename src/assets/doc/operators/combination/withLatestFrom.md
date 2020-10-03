@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
+<h2 class="subtitle"> Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
+</h2>
 
 ### Firma
 
@@ -35,9 +36,9 @@ Cuando el Observable fuente emite un valor, combina dicho valor con las emisione
 
 ## Ejemplos
 
-Combinar cada tecla pulsada con un Observable intervalo, para saber en qué momento se pulsa cada tecla
+**Combinar cada tecla pulsada con un Observable intervalo, para saber en qué momento se pulsa cada tecla**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-withlatestfrom?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-withlatestfrom?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -61,7 +62,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Emitir un array con el temporizador más reciente más el evento click, en cada click
+**Emitir un array con el temporizador más reciente más el evento click, en cada click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor
+<h2 class="subtitle"> Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor
+</h2>
 
 ### Firma
 
@@ -37,9 +38,9 @@ Si el notificador no emite ningún valor y se completa, `takeUntil` emitirá tod
 
 ## Ejemplos
 
-Emitir valores hasta que `timer$` emita a los 4 segundos
+**Emitir valores hasta que timer\$ emita a los 4 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takeuntil-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takeuntil-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { takeUntil } from "rxjs/operators";
@@ -52,9 +53,9 @@ number$.pipe(takeUntil(timer$)).subscribe(console.log);
 // Salida: 0, 1, 2
 ```
 
-Emitir valores hasta que se pulse una tecla
+**Emitir valores hasta que se pulse una tecla**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takeuntil-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takeuntil-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { takeUntil } from "rxjs/operators";
@@ -67,11 +68,13 @@ number$.pipe(takeUntil(key$)).subscribe(console.log);
 // Salida: O, 1, 2, 3, 4 (Pulsar tecla)
 ```
 
+**Cancelar la ejecución de un Observable con un Sujeto y takeUntil**
+
 Una técnica muy útil para poder cancelar la ejecución de uno o varios Observables es utilizar un Sujeto junto al operador `takeUntil`. De esta manera, no hay que cancelar la suscripción manualmente a todos los Observables que se crean. A continuación, una demostración de esta técnica:
 
 Para cancelar la suscripción a un Observable, se debe almacenar la suscripción a dicho Observable, y llamar al método `unsubscribe`. Esto implica que por cada Observable que se cree, se debe almacenar una Suscripción. Esta forma de cancelar suscripciones es tediosa e imposible de mantener a medida que una aplicación escala.
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-unsubscribe-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-unsubscribe-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval, timer } from "rxjs";
@@ -86,7 +89,7 @@ number$Subscription.unsubscribe();
 
 Sin embargo, al utilizar el operador `takeUntil`, ya no es necesario almacenar ninguna suscripción. Lo único que hay que hacer es crear un Sujeto, y utilizar `takeUntil` con dicho Sujeto, de tal forma que cuando `stop$` emita un valor, todo Observable que utilice el operador se cancelará.
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takeuntil-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takeuntil-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { takeUntil, tap } from "rxjs/operators";
@@ -111,7 +114,7 @@ interval(1000)
 
 ### Ejemplo de la documentación oficial
 
-Emitir una secuencia de números cada segundo, hasta que se haga click
+**Emitir una secuencia de números cada segundo, hasta que se haga click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

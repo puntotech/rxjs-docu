@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
+<h2 class="subtitle"> Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
+</h2>
 
 ### Firma
 
@@ -42,9 +43,9 @@ Retorna un Observable que emite el último elemento emitido por el Observable fu
 
 ## Ejemplos
 
-Emitir la última cadena de una secuencia
+**Emitir la última cadena de una secuencia**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-last-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { last } from "rxjs/operators";
@@ -56,9 +57,9 @@ fruit$.pipe(last()).subscribe(console.log);
 // Salida: Arándano
 ```
 
-Emitir el último elemento que cumpla una condición
+**Emitir el último elemento que cumpla una condición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-last-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -75,9 +76,9 @@ user$.pipe(last(({ age }) => age === 21)).subscribe(console.log);
 // Salida: { name: 'carla.1003', age: 21 }
 ```
 
-Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición
+**Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-last-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { last } from "rxjs/operators";

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Reemite todas las notificaciones del Observable fuente con el planificador especificado
+<h2 class="subtitle"> Reemite todas las notificaciones del Observable fuente con el planificador especificado
+</h2>
 
 ### Firma
 
@@ -42,9 +43,9 @@ De hecho, el operador `observeOn` acepta un segundo parámetro, que especifica e
 
 ### Ejemplos
 
-Utilizar el planificador `animationFrameScheduler` para que la animación sea más fluida
+**Utilizar el planificador animationFrameScheduler para que la animación sea más fluida**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-observeon-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-observeon-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval, animationFrameScheduler } from "rxjs";
@@ -62,9 +63,9 @@ interval$
   .subscribe();
 ```
 
-### Ejemplo del a documentación oficial
+### Ejemplo de la documentación oficial
 
-Asegurar que los valores del `subscribe` se llaman justo antes del repintado del navegador
+**Asegurar que los valores del subscribe se llaman justo antes del repintado del navegador**
 
 ```javascript
 import { interval } from "rxjs";

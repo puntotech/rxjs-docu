@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado sin que este emita ningún valor
+<h2 class="subtitle"> Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado sin que este emita ningún valor
+</h2>
 
 ### Firma
 
@@ -42,9 +43,9 @@ Recibe un `SchedulerLike` opcional para manejar los temporizadores.
 
 ## Ejemplos
 
-Emitir la tecla pulsada más reciente, tras una sucesión rápida de teclas. Por ejemplo, si escribimos 'RxJS mola' muy rápidamente (con menos de 500ms entre pulsaciones), solo se emitirá la última letra (a)
+**Emitir la tecla pulsada más reciente, tras una sucesión rápida de teclas. Por ejemplo, si escribimos 'RxJS mola' muy rápidamente (con menos de 500ms entre pulsaciones), solo se emitirá la última letra (a)**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-debouncetime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-debouncetime-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { debounceTime } from "rxjs/operators";
@@ -56,9 +57,9 @@ key$.pipe(debounceTime(500)).subscribe(({ code }) => console.log(code));
 // Salida: KeyE
 ```
 
-Emitir la posición del último click tras una sucesión rápida de clicks
+**Emitir la posición del último click tras una sucesión rápida de clicks**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-debouncetime-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-debouncetime-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { debounceTime } from "rxjs/operators";
@@ -78,7 +79,7 @@ click$
 
 ### Ejemplo de la documentación oficial
 
-Emite el click más reciente tras una sucesión de clicks
+**Emite el click más reciente tras una sucesión de clicks**
 
 ```javascript
 import { fromEvent } from "rxjs";

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
+<h2 class="subtitle"> Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
+</h2>
 
 ### Firma
 
@@ -42,9 +43,9 @@ También se puede proporcionar un Planificador como tercer argumento opcional, q
 
 ## Ejemplos
 
-Emitir una secuencia de números si no se presiona ninguna tecla en 5s
+**Emitir una secuencia de números si no se presiona ninguna tecla en 5s**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-tpkuum?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-tpkuum?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { interval, fromEvent } from "rxjs";
@@ -63,9 +64,9 @@ key$
 // Salida: (Presionar tecla) KeyX (5s) 0, 1, 2, 3, 4...
 ```
 
-Emitir un mensaje en caso de que ocurra el _timeout_ de una petición
+**Emitir un mensaje en caso de que ocurra el _timeout_ de una petición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-timeoutwith-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-timeoutwith-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -95,10 +96,10 @@ delay$
 
 ### Ejemplo de la documentación oficial
 
-Proporcionar un Observable comodín
+**Proporcionar un Observable comodín**
 
 ```javascript
-import { intrerval } from "rxjs";
+import { interval } from "rxjs";
 import { timeoutWith } from "rxjs/operators";
 
 const seconds = interval(1000);

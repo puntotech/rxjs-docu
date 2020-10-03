@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Convierte una callback API del estilo de Node.js a una función que retorna un Observable
+<h2 class="subtitle"> Convierte una callback API del estilo de Node.js a una función que retorna un Observable
+</h2>
 
 ### Firma
 
@@ -43,11 +44,11 @@ De entrada recibe una función `func` que recibe algunos parámetros, pero el ú
 
 La salida de `bindNodeCallback` es una función que recibe los mismo parámetros que `func`, excepto el último (la callback.) Cuando se hace una llamada a la función de salida con argumentos, retornará un Observable. Si `func` hace una llamada a su callback con el parámetro de error presente, el Observable lanzará un error con ese valor. Si no se proporciona el parámetro de error, el Observable emitirá el segundo parámetro. Si hay más parámetros (tercero, cuarto etc.), el Observable emitirá un array con todos los argumentos, excepto el primer argumento de error.
 
-Nota: la llamada a `func` no se realizará en el mismo momento en el que se haga la llamada a la función de salida, sino en el momento en el que el Observable resultante sea suscrito. Por defecto, la llamada a `func` se hará de forma síncrona tras la suscripción, pero este comportamiento se puede cambiar proporcionando un planificador como tercer parámetro (opcional). `SchedulerLike` también puede controlar cuándo se emiten los valores de la _callback_ en el Observable resultante. Para saber más, leer la sección de [bindCallback](), ya que el comportamiento de `SchedulerLike` en ambos operadores es exactamente igual.
+Nota: la llamada a `func` no se realizará en el mismo momento en el que se haga la llamada a la función de salida, sino en el momento en el que el Observable resultante sea suscrito. Por defecto, la llamada a `func` se hará de forma síncrona tras la suscripción, pero este comportamiento se puede cambiar proporcionando un planificador como tercer parámetro (opcional). `SchedulerLike` también puede controlar cuándo se emiten los valores de la _callback_ en el Observable resultante. Para saber más, leer la sección de [bindCallback](/operators/creation/bindCallback), ya que el comportamiento de `SchedulerLike` en ambos operadores es exactamente igual.
 
 Al igual que con `bindCallback`, el contexto (`this`) de la función de entrada será que tenga la función de salida en el momento en el que se llame.
 
-Una vez que el Observable resultante emita un valor, se completará inmediatamente. Esto implica que si la función `func` vuelve a llamar a la _callback_, los valores de la segunda y demás llamadas nunca aparecerán en el flujo. Si se necesita manejar funciones que llaman a la _callback_ varias veces, se debe utilizar [fromEvent]() o [fromEventPattern]().
+Una vez que el Observable resultante emita un valor, se completará inmediatamente. Esto implica que si la función `func` vuelve a llamar a la _callback_, los valores de la segunda y demás llamadas nunca aparecerán en el flujo. Si se necesita manejar funciones que llaman a la _callback_ varias veces, se debe utilizar [fromEvent](/operators/creation/fromEvent) o [fromEventPattern](/operators/creation/fromEventPattern).
 
 Nota: `bindNodeCallback` se puede utilizar en entornos distintos a Node.js. Las _callbacks_ del 'estilo de Node.js' son una convención, por lo que si la API que se quiera utilizar implementa este tipo de _callback_, ya sea en el navegador o cualquier otro entorno, `bindNodeCallback` se puede utilizar de forma segura con las funciones de dicha API.
 

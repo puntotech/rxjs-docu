@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana) periódicamente
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana) periódicamente
+</h2>
 
 ### Firma
 
@@ -40,9 +41,9 @@ Con el argumento `windowCreationInterval` se puede determinar cuándo abrir nuev
 
 ## Ejemplos
 
-Recoge teclas pulsadas en una nueva ventana cada 5s
+**Recoge teclas pulsadas en una nueva ventana cada 5s**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowtime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowtime-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -64,7 +65,7 @@ key$
 
 ### Ejemplos de la documentación oficial
 
-Emitir como mucho 2 eventos click en ventanas de 1s
+**Emitir como mucho 2 eventos click en ventanas de 1s**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -79,7 +80,7 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-Emitir como mucho 2 eventos click en ventanas de 1s, abriendo una ventana nueva cada 5s
+**Emitir como mucho 2 eventos click en ventanas de 1s, abriendo una ventana nueva cada 5s**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -94,7 +95,7 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-Igual que el ejemplo anterior, pero con `maxWindowCount` en lugar del operador `take`
+**Igual que el ejemplo anterior, pero con maxWindowCount en lugar del operador take**
 
 ```javascript
 import { fromEvent } from "rxjs";

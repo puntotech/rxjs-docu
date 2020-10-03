@@ -9,9 +9,9 @@
 </a>
 </div>
 
-### Aplica una función acumuladora a los valores del Observable fuente y retorna cada resultado inmediato
+<h2 class="subtitle"> Aplica una función acumuladora a los valores del Observable fuente y retorna cada resultado inmediato</h2>
 
-💡 Si solo se necesita el valor acumulado cuando el Observable esté completo, se puede utilizar [reduce]()
+💡 Si solo se necesita emitir el valor acumulado una vez que el Observable se haya completado, se puede utilizar [reduce](/operators/mathematical-aggregate/reduce)
 
 ### Firma
 
@@ -41,9 +41,9 @@ Retorna un Observable que aplica una función de acumulación a cada elemento em
 
 ## Ejemplos
 
-Sumar una secuencia de números
+**Sumar una secuencia de números**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-scan-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-scan-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { scan } from "rxjs/operators";
@@ -55,9 +55,9 @@ number$.pipe(scan((acc, val) => acc + val)).subscribe(console.log);
 // Salida: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55
 ```
 
-Sumar una secuencia de números proporcionando un valor inicial
+**Sumar una secuencia de números proporcionando un valor inicial**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-scan-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-scan-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { scan } from "rxjs/operators";
@@ -69,9 +69,9 @@ number$.pipe(scan((acc, val) => acc + val, 10)).subscribe(console.log);
 // Salida: 11, 13, 16, 20, 25, 31, 38, 46, 55, 65
 ```
 
-Concatenar una secuencia de cadenas
+**Concatenar una secuencia de cadenas**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-scan-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-scan-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { scan } from "rxjs/operators";
@@ -94,7 +94,7 @@ letter$.pipe(scan((acc, val) => acc + val)).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Contar el número de eventos click
+**Contar el número de eventos click**
 
 ```javascript
 import { fromEvent } from "rxjs";

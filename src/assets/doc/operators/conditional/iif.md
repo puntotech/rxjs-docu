@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Decide qué Observable será suscrito en tiempo de suscripción
+<h2 class="subtitle"> Decide qué Observable será suscrito en tiempo de suscripción
+</h2>
 
 ### Firma
 
@@ -41,11 +42,11 @@ En el caso de tener lógica más compleja que requiera decidir entre más de dos
 
 ## Ejemplos
 
-// TODO change example
+<!-- TODO change example -->
 
 Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-iif-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-iif-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { iif, range } from "rxjs";
@@ -71,14 +72,12 @@ range(1, 4)
     )
   )
   .subscribe(console.log, console.error);
-// Output: Rick Sanchez, ivysaur, Summer Smith, charmander
+// Salida: Rick Sanchez, ivysaur, Summer Smith, charmander
 ```
 
 ## Ejemplos de la documentación oficial
 
-Cambia en tiempo de ejecución qué Observable será suscrito
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Cambia en tiempo de ejecución qué Observable será suscrito**
 
 ```javascript
 import { iif, of } from "rxjs";
@@ -99,9 +98,7 @@ firstOrSecond.subscribe((value) => console.log(value));
 // "second"
 ```
 
-Controlar el acceso a un Observable
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Controlar el acceso a un Observable**
 
 ```javascript
 let accessGranted;

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Saltar las últimas x emisiones del Observable fuente
+<h2 class="subtitle"> Saltar las últimas x emisiones del Observable fuente
+</h2>
 
 ### Firma
 
@@ -39,9 +40,9 @@ Se salta las últimas `count` emisiones del Observable fuente.
 
 ## Ejemplos
 
-Saltar los últimos 5 números
+**Saltar los últimos 5 números**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skiplast-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skiplast-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skipLast } from "rxjs/operators";
@@ -53,9 +54,9 @@ number$.pipe(skipLast(5)).subscribe(console.log);
 // Salida: 1, 2, 3, 4, 5
 ```
 
-Saltar el último valor
+**Saltar el último valor**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skiplast-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skiplast-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skipLast } from "rxjs/operators";
@@ -73,7 +74,7 @@ pokemon$.pipe(skipLast(1)).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Saltar los 2 últimos valores de un Observable
+**Saltar los 2 últimos valores de un Observable**
 
 ```javascript
 import { range } from "rxjs";

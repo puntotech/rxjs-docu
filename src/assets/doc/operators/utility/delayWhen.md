@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Retrasa la emisión de los elementos del Observable fuente en función de las emisiones de un segundo Observable
+<h2 class="subtitle"> Retrasa la emisión de los elementos del Observable fuente en función de las emisiones de un segundo Observable
+</h2>
 
 ### Firma
 
@@ -40,9 +41,9 @@ De forma opcional, `delayWhen` recibe un segundo argumento, `subscriptionDelay`,
 
 ## Ejemplos
 
-Retrasa la emisión de cada tecla pulsada durante 2 segundos
+**Retrasa la emisión de cada tecla pulsada durante 2 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-delaywhen-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-delaywhen-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { delayWhen, map } from "rxjs/operators";
@@ -58,7 +59,7 @@ key$.pipe(delayWhen(() => interval(2000))).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Retrasa cada click durante una cantidad de tiempo aleatoria, entre 0 y 5 segundos
+**Retrasa cada click durante una cantidad de tiempo aleatoria, entre 0 y 5 segundos**
 
 ```javascript
 import { fromEvent, interval } from 'rxjs';

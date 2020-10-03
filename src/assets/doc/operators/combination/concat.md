@@ -9,9 +9,9 @@
 </a>
 </div>
 
-### Crea un Observable que emite secuencialmente todos los valores de un Observable dado, y después continúa con el siguiente
+<h2 class="subtitle"> Concatena varios Observables de entrada, uno tras otro, emitiendo secuencialmente todos los valores de cada uno de ellos</h2>
 
-💡 Si se quiere emitir valores de varios Observables a la vez (concurrentemente), se puede utilizar [merge]()
+💡 Para emitir valores de varios Observables a la vez (concurrentemente), se puede utilizar <a href="/operators/combination/merge">merge</a>
 
 ### Firma
 
@@ -25,7 +25,7 @@
 
 ### Retorna
 
-`Observable<ObservedValueOf<O> | R>`: Todos los valores de cada Observable de entrada fusionados en un solo observable por orden.
+`Observable<ObservedValueOf<O> | R>`: Todos los valores de cada Observable de entrada fusionados en un solo Observable, por orden.
 
 ## Descripción
 
@@ -43,13 +43,13 @@ Si alguno de los Observables de entrada nunca llega a completarse, `concat` tamp
 
 Si alguno de los Observables de entrada lanza un error, en lugar de suscribirse al siguiente Observable, `concat` también lanzará un error inmediatamente, y no llegará a suscribirse a los Observables de entrada siguientes al que haya lanzado el error.
 
-Si se le pasa el mismo Observable a `concat` varias veces, su flujo de emisiones se repetirá en cada suscripción. Se puede repetir un Observable tantas veces como se quiera. Sin embargo, si pasarle el mismo Observable a `concat` 1000 veces resulta demasiado tedioso, siempre se puede utilizar [repeat]().
+Si se le pasa el mismo Observable a `concat` varias veces, su flujo de emisiones se repetirá en cada suscripción. Se puede repetir un Observable tantas veces como se quiera. Sin embargo, si pasarle el mismo Observable a `concat` 1000 veces resulta demasiado tedioso, siempre se puede utilizar [repeat](/operators/utility/repeat).
 
 ## Ejemplos
 
-Concatenar varios Observables distintos
+**Concatenar varios Observables distintos**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { range, from, concat } from "rxjs";
@@ -67,9 +67,9 @@ concat(number$, fruit$, totoroFilmData$).subscribe(console.log);
 // Salida: 1, 2, 3, 4, 'Fresa', 'Cereza', 'Arándano', { ..., title: 'My Neighbor Totoro', description: 'Two sisters move to the country...', ...}
 ```
 
-Concatenar el mismo Observable para repetirlo
+**Concatenar el mismo Observable para repetirlo**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from, concat } from "rxjs";
@@ -80,9 +80,9 @@ concat(message$, message$, message$).subscribe(console.log);
 // Salida: 'RxJS mola', 'RxJS mola', 'RxJS mola'
 ```
 
-Si uno de los Observables de entrada nunca llega a completarse, concat nunca se suscribirá a los siguientes Observables de entrada
+**Si uno de los Observables de entrada nunca llega a completarse, concat nunca se suscribirá a los siguientes Observables de entrada**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval, from, concat } from "rxjs";
@@ -94,9 +94,9 @@ concat(infinite$, message$).subscribe(console.log);
 // Salida: 0, 1, 2, 3...
 ```
 
-Si alguno de los Observables de entrada lanza un error, el Observable resultante lanzará un error inmediatamente, y el flujo se terminará
+**Si alguno de los Observables de entrada lanza un error, el Observable resultante lanzará un error inmediatamente, y el flujo se terminará**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { throwError, from, concat } from "rxjs";
@@ -111,7 +111,7 @@ concat(message$, error$, sadMessage$).subscribe(console.log, console.error);
 
 ### Ejemplos de la documentación oficial
 
-Concatenar un temporizador que cuente del 0 al 3 con una secuencia síncrona de los números del 1 al 10
+**Concatenar un temporizador que cuente del 0 al 3 con una secuencia síncrona de los números del 1 al 10**
 
 ```javascript
 import { concat, interval, range } from "rxjs";
@@ -126,7 +126,7 @@ result.subscribe((x) => console.log(x));
 // 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3 -inmediatamente-> 1 ... 10
 ```
 
-Concatenar 3 Observables
+**Concatenar 3 Observables**
 
 ```javascript
 import { concat, interval } from "rxjs";
@@ -146,7 +146,7 @@ result.subscribe((x) => console.log(x));
 // -500ms-> 0 -500ms-> 1 -500ms-> ... 9
 ```
 
-Concatenar el mismo Observable para repetirlo
+**Concatenar el mismo Observable para repetirlo**
 
 ```javascript
 import { concat, interval } from "rxjs";

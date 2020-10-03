@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
+<h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
+</h2>
 
 ### Firma
 
@@ -38,9 +39,9 @@ Cualquier error que se produzca en uno de los Observables internos se emite de f
 
 ## Ejemplos
 
-Realizar todas las peticiones AJAX de forma concurrente (en paralelo)
+**Realizar todas las peticiones AJAX de forma concurrente (en paralelo)**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-mergeall?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-mergeall?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mergeAll, map, delay } from "rxjs/operators";
@@ -65,9 +66,9 @@ pokemonId$
 // Salida: (2s) bulbasaur, charmeleon, charizard
 ```
 
-Realizar como mucho dos peticiones AJAX de forma concurrente
+**Realizar como mucho dos peticiones AJAX de forma concurrente**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-mergeall-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-mergeall-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mergeAll, map, delay } from "rxjs/operators";
@@ -96,7 +97,7 @@ pokemonId$
 
 ### Ejemplos de la documentación oficial
 
-Genera un Observable intervalo por cada evento click, y une sus emisiones en un solo Observable
+**Generar un Observable intervalo por cada evento click, y unir sus emisiones en un solo Observable**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -108,7 +109,7 @@ const firstOrder = higherOrder.pipe(mergeAll());
 firstOrder.subscribe((x) => console.log(x));
 ```
 
-Emite los números del 0 al 9 a intervalos de un segundo por cada click, permitiendo únicamente 2 temporizadores concurrentes
+**Emitir los números del 0 al 9 a intervalos de un segundo por cada click, permitiendo únicamente 2 temporizadores concurrentes**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

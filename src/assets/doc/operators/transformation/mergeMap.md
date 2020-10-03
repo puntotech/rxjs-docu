@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante
+<h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante</h2>
 
 💡 Se debe utilizar `mergeMap` si se quieren tener varios Observables internos suscritos de forma concurrente
 
@@ -41,9 +41,9 @@ Retorna un Observable que, después de aplicar una función a cada elemento emit
 
 ## Ejemplos
 
-Como mergeMap se suscribe a los Observables internos de forma concurrente, y se le ha añadido un retardo aleatorio a las peticiones AJAX, podremos observar que // TODO
+Como mergeMap se suscribe a los Observables internos de forma concurrente, y se le ha añadido un retardo aleatorio a las peticiones AJAX, se puede observar que // TODO
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergemap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergemap-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mergeMap, map, tap, delayWhen } from "rxjs/operators";
@@ -80,15 +80,9 @@ pokemonId$
 */
 ```
 
-[StackBlitz]()
-
-```javascript
-
-```
-
 ### Ejemplo de la documentación oficial
 
-Proyectar y 'aplastar' cada letra a un Observable que emite cada segundo
+**Proyectar y 'aplastar' cada letra a un Observable que emite cada segundo**
 
 ```javascript
 import { of, interval } from "rxjs";

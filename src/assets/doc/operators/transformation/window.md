@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
+</h2>
 
 ### Firma
 
@@ -35,9 +36,9 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 ## Ejemplos
 
-Acumular el código de las teclas pulsadas en una ventana de 5s
+**Acumular el código de las teclas pulsadas en una ventana de 5s**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-window-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-window-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -58,7 +59,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-En una ventana de 1s, emitir como mucho 2 eventos click
+**En una ventana de 1s, emitir como mucho 2 eventos click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

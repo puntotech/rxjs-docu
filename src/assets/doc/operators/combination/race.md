@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Retorna un Observable que refleja al primer Observable que emita un valor
+<h2 class="subtitle"> Retorna un Observable que refleja al primer Observable que emita un valor
+</h2>
 
 ### Firma
 
@@ -31,9 +32,9 @@ Refleja las emisiones del primer Observable que emita un valor.
 
 ## Ejemplos
 
-Hacer una carrera con 3 Observables
+**Hacer una carrera con 3 Observables**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-race?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-race?file=index.html)">StackBlitz</a>
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -50,9 +51,9 @@ race(slow$, medium$, fast$).subscribe((winner) =>
 // Salida: Y el ganador es... ¡Guepardo!
 ```
 
-Advertencia: Si alguno de los Observables lanza un error, la 'carrera' terminará con un error
+**Advertencia: Si alguno de los Observables lanza un error, la 'carrera' terminará con un error**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-race-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-race-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -70,7 +71,7 @@ race(slow$, medium$, fast$, error$).subscribe(console.log, console.error);
 
 ### Ejemplo de la documentación oficial
 
-Reflejar al primer Observable que emita un valor
+**Reflejar al primer Observable que emita un valor**
 
 ```javascript
 import { race, interval } from "rxjs";

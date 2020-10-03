@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Agrupa las emisiones consecutivas en pares y las emite en forma de array
+<h2 class="subtitle"> Agrupa las emisiones consecutivas en pares y las emite en forma de array
+</h2>
 
 ### Firma
 
@@ -33,9 +34,9 @@ La N-ésima emisión del Observable fuente hará que el Observable resultante em
 
 ## Ejemplos
 
-Agrupar la cadena anterior y la actual en un array
+**Agrupar la cadena anterior y la actual en un array**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-pairwise-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-pairwise-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { pairwise } from "rxjs/operators";
@@ -47,9 +48,9 @@ pokemon$.pipe(pairwise()).subscribe(console.log);
 // Salida: ["Bulbasaur", "Charmander"], ["Charmander", "Squirtle"]
 ```
 
-Agrupar los códigos de las teclas pulsadas (a partir de la segunda) por parejas
+**Agrupar los códigos de las teclas pulsadas (a partir de la segunda) por parejas**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-pairwise-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-pairwise-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -65,7 +66,7 @@ key$.pipe(pairwise()).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-En cada click (empezando a partir del segundo), emitir la distancia relativa al click anterior
+**En cada click (empezando a partir del segundo), emitir la distancia relativa al click anterior**
 
 ```javascript
 import { fromEvent } from "rxjs";

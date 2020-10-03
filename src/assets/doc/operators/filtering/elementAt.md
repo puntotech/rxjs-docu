@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
+<h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
+</h2>
 
 ### Firma
 
@@ -43,9 +44,9 @@ returns an Observable that emits the item at the specified index in the source O
 
 ## Ejemplos
 
-Emitir la segunda emisión del Observable fuente
+**Emitir la segunda emisión del Observable fuente**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -57,9 +58,9 @@ fruit$.pipe(elementAt(1)).subscribe(console.log);
 // Salida: Fresa
 ```
 
-Si no se encuentra el índice y no se proporciona un valor por defecto, se lanza un error
+**Si no se encuentra el índice y no se proporciona un valor por defecto, se lanza un error**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -72,9 +73,9 @@ fruit$.pipe(elementAt(5)).subscribe(console.log, console.error);
 // Salida: (error) Error: argument out of range
 ```
 
-Proporcionar un valor por defecto para que, si no se encuentra el índice especificado, no se lance un error
+**Proporcionar un valor por defecto para que, si no se encuentra el índice especificado, no se lance un error**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -91,7 +92,7 @@ fruit$.pipe(elementAt(5, defaultFruit)).subscribe(console.log, console.error);
 
 ### Ejemplo de la documentación oficial
 
-Emit only the third click event
+**Emitir solo el tercer evento click**
 
 ```javascript
 import { fromEvent } from "rxjs";

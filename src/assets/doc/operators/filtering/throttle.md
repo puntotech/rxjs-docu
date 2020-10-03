@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite un valor del Observable fuente e ignora las emisiones siguientes durante un tiempo determinado por un segundo Observable. Después, repite el proceso
+<h2 class="subtitle"> Emite un valor del Observable fuente e ignora las emisiones siguientes durante un tiempo determinado por un segundo Observable. Después, repite el proceso
+</h2>
 
 ### Firma
 
@@ -37,9 +38,9 @@ Es como `throttleTime`, pero la duración del silenciamiento está determinada p
 
 ## Ejemplos
 
-Emitir la tecla pulsada, ignorar todos los valores siguientes durante 2 segundos, y repetir
+**Emitir la tecla pulsada, ignorar todos los valores siguientes durante 2 segundos, y repetir**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-throttle-2?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttle-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { throttle } from "rxjs/operators";
@@ -53,34 +54,27 @@ key$
 // Salida: KeyX (2s) KeyO...
 ```
 
-Emitir un valor, ignorar todos los valores durante 2 segundos, y repetir
+**Emitir un valor, ignorar todos los valores durante 2 segundos, y repetir**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-throttle-3?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttle-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { map, throttle } from "rxjs/operators";
 import { interval, zip, from } from "rxjs";
 
-// El Observable pokemon$ emite un Pokémon cada segundo
-const pokemon$ = zip(
-  from([
-    "Charmander",
-    "Squirtle",
-    "Bulbasaur",
-    "Cyndaquil",
-    "Totodile",
-    "Chikorita",
-  ]),
+// El Observable language$ emite un lenguaje cada segundo
+const language$ = zip(
+  from(["JavaScript", "TypeScript", "Java", "C#", "Go", "Ruby"]),
   interval(1000)
-).pipe(map(([pokemon]) => pokemon));
+).pipe(map(([language]) => language));
 
-pokemon$.pipe(throttle(() => interval(2000))).subscribe(console.log);
-// Salida: Charmander, Cyndaquil
+language$.pipe(throttle(() => interval(2000))).subscribe(console.log);
+// Salida: JavaScript, C#
 ```
 
 ### Ejemplo de la documentación oficial
 
-Emite como mucho un click por segundo
+**Emitir como mucho un click por segundo**
 
 ```javascript
 import { fromEvent } from "rxjs";

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
+<h2 class="subtitle"> Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
+</h2>
 
 ### Firma
 

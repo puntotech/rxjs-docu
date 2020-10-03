@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente.
+<h2 class="subtitle"> Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente.
+</h2>
 
 ### Firma
 
@@ -38,9 +39,9 @@ Cuando recibe un valor de la fuente, lo ignora, además de todos los valores pos
 
 ## Ejemplos
 
-Ignorar las teclas pulsadas durante un periodo de 2s, tras el cual emitir la última tecla pulsada. Repetir.
+**Ignorar las teclas pulsadas durante un periodo de 2s, tras el cual emitir la última tecla pulsada. Repetir.**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-audittime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-audittime-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { auditTime } from "rxjs/operators";
@@ -54,7 +55,7 @@ key$.pipe(auditTime(2000)).subscribe(({ code }) => console.log(code));
 
 ### Ejemplo de la documentación oficial
 
-Emite como mucho un click por segundo
+**Emite como mucho un click por segundo**
 
 ```javascript
 import { fromEvent } from "rxjs";

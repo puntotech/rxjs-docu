@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
+<h2 class="subtitle"> Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
+</h2>
 
 ### Firma
 
@@ -37,9 +38,9 @@ Retorna un Observable que emite elementos tras aplicar una función a cada eleme
 
 ## Ejemplos
 
-Cada vez que se pulsa el botón, se hace una nueva petición, cancelando la petición anterior
+**Cada vez que se pulsa el botón, se hace una nueva petición, cancelando la petición anterior**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-switchmap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-switchmap-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -59,7 +60,7 @@ click$.pipe(switchMap((_) => getGhibliFilms())).subscribe(console.log);
 // Salida: (Click) (Se hace nueva petición) (Click) (Se hace nueva petición)...
 ```
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-switchmap-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-switchmap-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import {
@@ -117,8 +118,7 @@ searchFilm$
 
 ### Ejemplo de la documentación oficial
 
-Generar un Observable nuevo para cada valor del Observable fuente
-Generate new Observable according to source Observable values
+**Generar un Observable nuevo según los valores del Observable fuente**
 
 ```javascript
 import { of } from "rxjs";
@@ -138,7 +138,7 @@ switched.subscribe((x) => console.log(x));
 // ... y así hasta completar la secuencia
 ```
 
-Reiniciar un Observable intervalo con cada click
+**Reiniciar un Observable intervalo con cada click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Retorna un Observable que se salta las primeras x emisiones del Observable fuente
+<h2 class="subtitle"> Retorna un Observable que se salta las primeras x emisiones del Observable fuente
+</h2>
 
 ### Firma
 
@@ -33,9 +34,9 @@
 
 ## Ejemplos
 
-Ignorar los primeros 5 clicks
+**Ignorar los primeros 5 clicks**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skip-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skip-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skip } from "rxjs/operators";
@@ -47,9 +48,9 @@ click$.pipe(skip(5)).subscribe(console.log);
 // Salida: ......... ClickEvent {}...
 ```
 
-Ignorar el primer elemento
+**Ignorar el primer elemento**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skip-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skip-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skip } from "rxjs/operators";

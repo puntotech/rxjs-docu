@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite el elemento de menor valor
+<h2 class="subtitle"> Emite el elemento de menor valor
+</h2>
 
 ### Firma
 
@@ -35,9 +36,9 @@ El operador `max` opera con Observables que emiten valores numéricos (o element
 
 ## Ejemplos
 
-Obtener el valor máximo de una serie de números
+**Obtener el valor máximo de una serie de números**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-min-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-min-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -49,9 +50,9 @@ number$.pipe(min()).subscribe(console.log);
 // Salida: 2
 ```
 
-Utilizar una función de comparación para obtener la cadena más corta
+**Utilizar una función de comparación para obtener la cadena más corta**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-min-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-min-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -64,9 +65,9 @@ fruit$.pipe(min((a, b) => a.length - b.length)).subscribe(console.log);
 // Salida: Fresa
 ```
 
-Utilizar una función de comparación para comparar objetos anidados y obtener el de menor valor
+**Utilizar una función de comparación para comparar objetos anidados y obtener el de menor valor**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-min-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-min-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -89,7 +90,7 @@ pokemon$
 
 ### Ejemplos de la documentación oficial
 
-Obtener el mayor valor de una serie de números
+**Obtener el mayor valor de una serie de números**
 
 ```javascript
 import { of } from "rxjs";
@@ -100,7 +101,7 @@ of(5, 4, 7, 2, 8)
   .subscribe((x) => console.log(x)); // -> 2
 ```
 
-Utilizar una función de comparación para obtener el elemento de menor valor
+**Utilizar una función de comparación para obtener el elemento de menor valor**
 
 ```javascript
     import { of } from 'rxjs';

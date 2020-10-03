@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h3>Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a <code>complete</code> o a <code>error</code></h3>
+<h2 class="subtitle">Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a <code>complete</code> o a <code>error</code></h2>
 
 ### Firma
 
@@ -29,9 +29,9 @@ No recibe ningún parámetro
 
 ## Ejemplos
 
-Ignorar todos los valores del Observable fuente hasta que se complete
+**Ignorar todos los valores del Observable fuente hasta que se complete**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-ignoreelements-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ignoreelements?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { ignoreElements } from "rxjs/operators";
@@ -52,9 +52,9 @@ hater$
 // Salida: Haters ignorados :)
 ```
 
-Si ocurre un error, será emitido
+**Si ocurre un error, será emitido**
 
-[StackBlitz]()
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ignoreelements-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { ignoreElements } from "rxjs/operators";
@@ -70,7 +70,7 @@ error$
 
 ### Ejemplo de la documentación oficial
 
-Ignorar los valores emitidos hasta que el Observable se complete
+**Ignorar los valores emitidos hasta que el Observable se complete**
 
 ```javascript
 import { of } from "rxjs";

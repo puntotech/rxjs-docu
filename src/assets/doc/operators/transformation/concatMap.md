@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante de forma secuencial, esperando a que cada Observable interno esté completo antes de unir el siguiente
+<h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante de forma secuencial, esperando a que cada Observable interno esté completo antes de unir el siguiente</h2>
 
 💡 Se debe utilizar `concatMap` si se quiere esperar a que cada Observable interno esté completo antes de suscribirse al siguiente
 
@@ -43,9 +43,9 @@ Nota: `concatMap` es equivalente a utilizar `mergeMap`, teniendo el parámetro d
 
 ## Ejemplos
 
-Realizar varias peticiones AJAX de forma secuencial. Hasta que cada petición no termine, no se realizará la siguiente
+**Realizar varias peticiones AJAX de forma secuencial. Hasta que cada petición no termine, no se realizará la siguiente**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-concatmap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmap-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concatMap, map } from "rxjs/operators";
@@ -64,13 +64,13 @@ pokemonId$.pipe(concatMap((id) => getPokemonName(id))).subscribe(console.log);
 // Salida: bulbasaur, charmeleon, charizard
 ```
 
-Comparación entre `mergeMap` y `concatMap`:
+**Comparación entre mergeMap y concatMap**
 
-`concatMap` esperará a que cada petición esté completa antes de realizar la siguiente. Esto implica que todas las peticiones se llevarán a cabo de forma consecutiva.
+concatMap esperará a que cada petición esté completa antes de realizar la siguiente. Esto implica que todas las peticiones se llevarán a cabo de forma consecutiva.
 
-`mergeMap` no esparará a que cada petición esté completa, sino que las realizará en paralelo. Esto implica que las peticiones NO se llevarán a cabo de forma consecutiva.
+mergeMap no esparará a que cada petición esté completa, sino que las realizará en paralelo. Esto implica que las peticiones NO se llevarán a cabo de forma consecutiva.
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-concatmap-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmap-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concatMap, mergeMap, map, delayWhen } from "rxjs/operators";
@@ -101,7 +101,7 @@ pokemonId$.pipe(mergeMap((id) => getPokemonName(id))).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Para cada evento click, emitir los valores de 0 a 3 a intervalos de 1 segundo, sin concurrencia
+**Para cada evento click, emitir los valores de 0 a 3 a intervalos de 1 segundo, sin concurrencia**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

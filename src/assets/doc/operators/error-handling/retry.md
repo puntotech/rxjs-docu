@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error
+<h2 class="subtitle"> Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error</h2>
 
 💡 Muy útil para reintentar peticiones HTTP
 
@@ -38,9 +38,9 @@ Todos los valores emitidos por el Observable fuente se emitirán en el Observabl
 
 ## Ejemplos
 
-Reintentar una petición Ajax 3 veces en el caso de que haya algún error
+**Reintentar una petición Ajax 3 veces en el caso de que haya algún error**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retry?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retry?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { retry } from "rxjs/operators";
@@ -52,9 +52,9 @@ ghibliFilm$.pipe(retry(3)).subscribe(console.log, console.error);
 // Salida: (error) Error: ajax error 404
 ```
 
-Utilizar `retry` junto a `catchError` para que, en el caso de que los tres reintentos de la petición Ajax fallen, el flujo continúe en lugar de acabar en error.
+**Utilizar `retry` junto a `catchError` para que, en el caso de que los tres reintentos de la petición Ajax fallen, el flujo continúe en lugar de acabar en error.**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retry-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retry-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { catchError, concatMap, map, retry } from "rxjs/operators";

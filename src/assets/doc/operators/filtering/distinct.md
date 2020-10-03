@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
+<h2 class="subtitle"> Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
+</h2>
 
 ### Firma
 
@@ -38,9 +39,9 @@ En otros entornos de ejecución, `distinct` utilizará una implementación míni
 
 ## Ejemplos
 
-Usar `distinct` sin un selector
+**Usar distinct sin un selector**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-distinct-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinct-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { distinct } from "rxjs/operators";
@@ -60,9 +61,9 @@ fruit$.pipe(distinct()).subscribe(console.log);
 // Salida: Fresa, Cereza, Arándano
 ```
 
-Usar `distinct` con un selector de clave
+**Usar distinct con un selector de clave**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-distinct-2?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinct-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { distinct } from "rxjs/operators";
@@ -84,7 +85,7 @@ pokemon$.pipe(distinct(({ name }) => name)).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Un ejemplo simple con números
+**Un ejemplo simple con números**
 
 ```javascript
 import { of } from "rxjs";
@@ -95,29 +96,28 @@ of(1, 1, 2, 2, 2, 1, 2, 3, 4, 3, 2, 1)
   .subscribe((x) => console.log(x)); // 1, 2, 3, 4
 ```
 
-Un ejemplo utilizando la función `keySelector`
+**Un ejemplo utilizando la función keySelector**
 
-```javascript
-    import { of } from 'rxjs';
-    import { distinct } from 'rxjs/operators';
+```typescript
+import { of } from "rxjs";
+import { distinct } from "rxjs/operators";
 
-    interface Person {
-       age: number,
-       name: string
-    }
+interface Person {
+  age: number;
+  name: string;
+}
 
-    of<Person>(
-        { age: 4, name: 'Foo'},
-        { age: 7, name: 'Bar'},
-        { age: 5, name: 'Foo'},
-      ).pipe(
-        distinct((p: Person) => p.name),
-      )
-      .subscribe(x => console.log(x));
+of<Person>(
+  { age: 4, name: "Foo" },
+  { age: 7, name: "Bar" },
+  { age: 5, name: "Foo" }
+)
+  .pipe(distinct((p: Person) => p.name))
+  .subscribe((x) => console.log(x));
 
-    // Salida:
-    // { age: 4, name: 'Foo' }
-    // { age: 7, name: 'Bar' }
+// Salida:
+// { age: 4, name: 'Foo' }
+// { age: 7, name: 'Bar' }
 ```
 
 ## Recursos adicionales

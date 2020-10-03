@@ -9,9 +9,9 @@
 </a>
 </div>
 
-### Aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente
+<h2 class="subtitle"> Aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente</h2>
 
-💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan]('/operators/transformation/scan')
+💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan](/operators/transformation/scan)
 
 ### Firma
 

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
+<h2 class="subtitle"> Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
+</h2>
 
 ### Firma
 
@@ -39,9 +40,9 @@ Es similar al método `Array.prototype.filter()`. Este operador emite únicament
 
 ## Ejemplos
 
-Emitir los números mayores que 5
+**Emitir los números mayores que 5**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-filter-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-filter-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { filter } from "rxjs/operators";
@@ -53,9 +54,9 @@ number$.pipe(filter((n) => n > 5)).subscribe(console.log);
 // Salida: 6, 7, 8, 9, 10
 ```
 
-Emitir todas las teclas, excepto la barra espaciadora
+**Emitir todas las teclas, excepto la barra espaciadora**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-filter-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-filter-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { filter, map } from "rxjs/operators";
@@ -72,9 +73,9 @@ key$
 // Salida: KeyX, KeyO...
 ```
 
-Filtrar los Pokémon de tipo agua
+**Filtrar los Pokémon de tipo agua**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-filter-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-filter-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { filter } from "rxjs/operators";
@@ -93,7 +94,7 @@ pokemon$.pipe(filter(({ type }) => type !== "Water")).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Emite solo los eventos click cuyo `target` sea un elemento DIV
+**Emite solo los eventos click cuyo target sea un elemento DIV**
 
 ```javascript
 import { fromEvent } from "rxjs";

@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite las primeras x emisiones del Observable fuente
+<h2 class="subtitle"> Emite las primeras x emisiones del Observable fuente
+</h2>
 
 ### Firma
 
@@ -39,9 +40,9 @@ Obtiene los primeros `count` valores de la fuente, y se completa.
 
 ## Ejemplos
 
-Emitir las primeras 5 teclas pulsadas
+**Emitir las primeras 5 teclas pulsadas**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-take-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-take-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { map, take } from "rxjs/operators";
@@ -58,9 +59,9 @@ key$
 // Salida: KeyR, KeyX, KeyJ, KeyS, Space
 ```
 
-Emitir los primeros 3 títulos de películas de Studio Ghibli
+**Emitir los primeros 3 títulos de películas de Studio Ghibli**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-take-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-take-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -77,7 +78,7 @@ ghibliFilm$.pipe(take(5)).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Obtener los 5 primeros segundos de un Observable infinito de un intervalo de 1 segundo.
+**Obtener los 5 primeros segundos de un Observable infinito de un intervalo de 1 segundo.**
 
 ```javascript
 import { interval } from "rxjs";

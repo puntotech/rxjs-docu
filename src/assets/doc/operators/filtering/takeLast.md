@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite las últimas x emisiones del Observable fuente
+<h2 class="subtitle"> Emite las últimas x emisiones del Observable fuente
+</h2>
 
 ### Firma
 
@@ -39,9 +40,9 @@ Almacena los últimos `count` valores, y los emite cuando el Observable fuente s
 
 ## Ejemplos
 
-Emitir el último valor de un Observable
+**Emitir el último valor de un Observable**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takelast-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takelast-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { takeLast } from "rxjs/operators";
@@ -57,9 +58,9 @@ pokemon$.pipe(takeLast(1)).subscribe(console.log);
 // Salida: { name: "Squirtle", type: "Water" }
 ```
 
-Si el Observable fuente emite más de `count` valores, se emitirán todos
+**Si el Observable fuente emite más de count valores, se emitirán todos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takelast-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takelast-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { takeLast } from "rxjs/operators";
@@ -73,9 +74,9 @@ range$
 // Salida: 0, 1, 2, 3, 4
 ```
 
-Si el Observable fuente no se completa, no se emitirá ningún valor
+**Si el Observable fuente no se completa, no se emitirá ningún valor**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takelast-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takelast-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { takeLast } from "rxjs/operators";
@@ -91,7 +92,7 @@ number$
 
 ### Ejemplo de la documentación oficial
 
-Emite los últimos 3 valores de un Observable
+**Emite los últimos 3 valores de un Observable**
 
 ```javascript
 import { range } from "rxjs";

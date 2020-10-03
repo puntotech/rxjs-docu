@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h3>Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como <code>GroupedObservables</code>, con un <code>GroupedObservable</code> por cada grupo </h3>
+<h2 class="subtitle">Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo </h2>
 
 ### Firma
 
@@ -37,19 +37,19 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 Cuando el Observable emite un elemento, se computa una clave para dicho elemento mediante la función `keySelector`.
 
-Si existe un `GroupedObservable` para la clave, el `GroupedObservable` emite.
+Si existe un GroupedObservable para la clave, el GroupedObservable emite.
 
 If a GroupedObservable for this key exists, this GroupedObservable emits. Elsewhere, a new GroupedObservable for this key is created and emits.
 
-Un `GroupedObservable` representa valores que pertenecen al mismo grupo, representado por una clave. La clave está disponible como el campo `key` de una instancia `GroupedObservable`.
+Un GroupedObservable representa valores que pertenecen al mismo grupo, representado por una clave. La clave está disponible como el campo key de una instancia GroupedObservable.
 
-Los elementos emitidos por `GroupedObservable`s son, por defecto, los elementos emitidos por el Observable, o los elementos retornados por la función `elementSelector`.
+Los elementos emitidos por GroupedObservables son, por defecto, los elementos emitidos por el Observable, o los elementos retornados por la función elementSelector.
 
 ## Ejemplos
 
-Agrupar Pokémon según su tipo, y emitir el `GroupedObservable` resultante en forma de array
+**Agrupar Pokémon según su tipo, y emitir el GroupedObservable resultante en forma de array**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-groupby-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
@@ -77,9 +77,9 @@ pokemon$
 */
 ```
 
-Agrupar Pokémon según su tipo, seleccionar únicamente el nombre y emitir el `GroupedObservable` resultante en forma de array
+**Agrupar Pokémon según su tipo, seleccionar únicamente el nombre y emitir el GroupedObservable resultante en forma de array**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-groupby-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
@@ -112,7 +112,7 @@ pokemon$
 
 ### Ejemplo de la documentación oficial
 
-Agrupar objetos por id y retornar las agrupaciones como arrays
+**Agrupar objetos por id y retornar las agrupaciones como arrays**
 
 ```javascript
 import { of } from "rxjs";
@@ -141,7 +141,7 @@ of(
 // [ { id: 3, name: 'TSLint'} ]
 ```
 
-Pivotar los datos por el campo id
+**Pivotar los datos por el campo id**
 
 ```javascript
 import { of } from "rxjs";

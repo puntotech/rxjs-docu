@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
+<h2 class="subtitle"> Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
+</h2>
 
 ### Firma
 
@@ -37,9 +38,9 @@ Al igual que la función `Array.prototype.map`, este operador aplica una funció
 
 ## Ejemplos
 
-Multiplicar cada número por 2
+**Multiplicar cada número por 2**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-map-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-map-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { map } from "rxjs/operators";
@@ -51,9 +52,9 @@ number$.pipe(map((number) => number * 2)).subscribe(console.log);
 // Salida: 2, 4, 6, 8, 10
 ```
 
-Emitir la propiedad `code` de cada objeto `KeyboardEvent`
+**Emitir la propiedad code de cada objeto KeyboardEvent**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-map-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-map-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { map } from "rxjs/operators";
@@ -67,7 +68,7 @@ key$.pipe(map(({ code }) => code)).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Proyecta cada click a la posición `clientX` de dicho click
+**Proyecta cada click a la posición clientX de dicho click**
 
 ```javascript
 import { fromEvent } from "rxjs";

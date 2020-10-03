@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Almacena los valores del Observable en un búfer hasta que otro Observable emita
+<h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que otro Observable emita
+</h2>
 
 ### Firma
 
@@ -35,9 +36,9 @@ Almacena los valores del Observable fuente en un búfer hasta que el Observable 
 
 ## Ejemplos
 
-Con cada tecla pulsada, emitir el array de los números emitidos desde la última tecla pulsada
+**Con cada tecla pulsada, emitir el array de los números emitidos desde la última tecla pulsada**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffer-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffer-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { buffer } from "rxjs/operators";
@@ -50,9 +51,11 @@ number$.pipe(buffer(key$)).subscribe(console.log);
 // Salida: (tecla pulsada) [0, 1, 2, 3] (tecla pulsada) [4, 5]
 ```
 
-Emitir los clicks hechos en un intervalo de 5 segundos. Si no se ha hecho ningún click, no se emitirá nada
+**Emitir los clicks hechos en un intervalo de 5 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffer-2?file=index.html)
+Si no se hace ningún click en el intervalo, no se emitirá nada.
+
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffer-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { buffer, filter } from "rxjs/operators";
@@ -72,7 +75,7 @@ click$
 
 ### Ejemplos de la documentación oficial
 
-Emite el array de eventos almacenados en cada click
+**Emite el array de eventos almacenados en cada click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

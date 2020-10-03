@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
+<h2 class="subtitle"> Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
+</h2>
 
 ### Firma
 
@@ -34,9 +35,9 @@ Es como `scan`, pero los Observables retornados por el acumulador se fusionan en
 
 ## Ejemplos
 
-Contar el número de teclas pulsadas
+**Contar el número de teclas pulsadas**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergescan-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergescan-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, of } from "rxjs";
@@ -48,9 +49,9 @@ key$.pipe(mergeScan((acc, one) => of(acc + one), 0)).subscribe(console.log);
 // Salida: (Pulsar tecla) 1, (Pulsar tecla ) 2, (Pulsar tecla) 3...
 ```
 
-Acumular el tiempo que esté pulsado el ratón
+**Acumular el tiempo que esté pulsado el ratón**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergescan-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergescan-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -76,7 +77,7 @@ mouseDown$
 
 ### Ejemplo de la documentación oficial
 
-Contar el número de eventos click
+**Contar el número de eventos click**
 
 ```javascript
 import { fromEvent, of } from "rxjs";

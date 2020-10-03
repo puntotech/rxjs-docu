@@ -9,9 +9,9 @@
 </a>
 </div>
 
-### Convierte una API de una callback a una función que retorna un Observable
+<h2 class="subtitle"> Convierte una API de una callback a una función que retorna un Observable</h2>
 
-💡 Si la _callback_ sigue la convención de Node.js, mejor utilizar [bindNodeCallback]('/operators/creation/bindNodeCallback')
+💡 Si la _callback_ sigue la convención de Node.js, es mejor utilizar [bindNodeCallback](/operators/creation/bindNodeCallback)
 
 ### Firma
 

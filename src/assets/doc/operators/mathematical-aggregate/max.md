@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite el elemento de mayor valor
+<h2 class="subtitle"> Emite el elemento de mayor valor
+</h2>
 
 ### Firma
 
@@ -35,9 +36,9 @@ El operador `max` opera con Observables que emiten valores numéricos (o element
 
 ## Ejemplos
 
-Obtener el valor máximo de una serie de números
+**Obtener el valor máximo de una serie de números**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-max-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-max-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -49,9 +50,9 @@ number$.pipe(max()).subscribe(console.log);
 // Salida: 10
 ```
 
-Utilizar una función de comparación para obtener la cadena más larga
+**Utilizar una función de comparación para obtener la cadena más larga**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-max-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-max-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -64,9 +65,9 @@ fruit$.pipe(max((a, b) => a.length - b.length)).subscribe(console.log);
 // Salida: Arándano
 ```
 
-Utilizar una función de comparación para comparar objetos anidados y obtener el de mayor valor
+**Utilizar una función de comparación para comparar objetos anidados y obtener el de mayor valor**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-max-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-max-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -89,7 +90,7 @@ pokemon$
 
 ### Ejemplos de la documentación oficial
 
-Obtener el mayor valor de una serie de números
+**Obtener el mayor valor de una serie de números**
 
 ```javascript
 import { of } from "rxjs";
@@ -100,7 +101,7 @@ of(5, 4, 7, 2, 8)
   .subscribe((x) => console.log(x)); // -> 8
 ```
 
-Utilizar una función de comparación para obtener el elemento de mayor valor
+**Utilizar una función de comparación para obtener el elemento de mayor valor**
 
 ```javascript
     import { of } from 'rxjs';

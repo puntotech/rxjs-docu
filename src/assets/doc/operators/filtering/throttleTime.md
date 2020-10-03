@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite un valor del Observable fuente e ignora las emisiones siguientes durante un periodo de tiempo determinado. Después, repite el proceso
+<h2 class="subtitle"> Emite un valor del Observable fuente e ignora las emisiones siguientes durante un periodo de tiempo determinado. Después, repite el proceso
+</h2>
 
 ### Firma
 
@@ -39,9 +40,9 @@ throttleTime emits the source Observable values on the output Observable when it
 
 ## Ejemplos
 
-Emitir la tecla pulsada, ignorar todos los valores siguientes durante 2 segundos, y repetir
+**Emitir la tecla pulsada, ignorar todos los valores siguientes durante 2 segundos, y repetir**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-throttletime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttletime-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { throttleTime } from "rxjs/operators";
@@ -53,9 +54,9 @@ key$.pipe(throttleTime(2000)).subscribe(({ code }) => console.log(code));
 // Salida: KeyX (2s) KeyO...
 ```
 
-Emitir un valor, ignorar todos los valores durante 2 segundos, y repetir
+**Emitir un valor, ignorar todos los valores durante 2 segundos, y repetir**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-throttletime-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttletime-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { map, throttleTime } from "rxjs/operators";
@@ -80,7 +81,7 @@ pokemon$.pipe(throttleTime(2000)).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Emite como mucho un click por segundo
+**Emite como mucho un click por segundo**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -91,7 +92,7 @@ const result = clicks.pipe(throttleTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
-Doble Click
+**Doble Click**
 
 Emitir clicks que ocurran en los 400ms siguientes al click previo. De esta manera, se detecta el doble click. Hace uso del parámetro de configuración `trailing`.
 
@@ -115,7 +116,7 @@ doubleClick.subscribe((throttleValue: Event) => {
 });
 ```
 
-Si se habilita el parámetro `leading` en est ejemplo, la salida sería el primer click y el doble click, pero se restringiría cualquier click adicional en un periodo de 400ms.
+Si se habilita el parámetro `leading` en este ejemplo, la salida sería el primer click y el doble click, pero se restringiría cualquier click adicional en un periodo de 400ms.
 
 ## Recursos adicionales
 

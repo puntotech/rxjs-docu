@@ -9,11 +9,11 @@
 </a>
 </div>
 
-### Convierte los argumentos en una secuencia Observable.
+<h2 class="subtitle"> Convierte los argumentos en una secuencia Observable.
 
 <div class="fading-line"></div>
 
-### Firma
+<h2 class="subtitle"> Firma
 
 `of(...args: (SchedulerLike | T)[]): Observable`
 
@@ -35,13 +35,13 @@ Cada argumento se convierte en una notificación next.
 
 <img class="marble-diagram" src="assets/images/marble-diagrams/creation/of.png" alt="Diagrama de canicas de of">
 
-Al contrario que [from](), no se lleva a cabo ninguna aplanación y cada argumento al completo se emite como una notificación `next`.
+Al contrario que [from](/operators/creation/from), no se lleva a cabo ninguna aplanación y cada argumento al completo se emite como una notificación `next`.
 
 ## Ejemplos
 
-Emitir una secuencia de números
+**Emitir una secuencia de números**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -52,9 +52,9 @@ number$.subscribe((number) => console.log(number));
 // Salida: 1, 2, 3, 4, 5
 ```
 
-Emitir una secuencia de cadenas
+**Emitir una secuencia de cadenas**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -65,9 +65,9 @@ pokemon$.subscribe((pokemon) => console.log(pokemon));
 // Salida: Squirtle, Charmander, Bulbasaur
 ```
 
-Emitir una secuencia de arrays
+**Emitir una secuencia de arrays**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -78,9 +78,9 @@ fruit$.subscribe((fruit) => console.log(fruit));
 // Salida: ["Fresa", "Cereza"] ["Limón", "Naranja"]
 ```
 
-Emitir una secuencia de objetos
+**Emitir una secuencia de objetos**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -96,7 +96,7 @@ iceCream$.subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Emitir los valores `10`, `20`, `30`
+**Emitir los valores 10, 20, 30**
 
 ```javascript
 import { of } from "rxjs";
@@ -113,7 +113,7 @@ of(10, 20, 30).subscribe(
 // 'Fin'
 ```
 
-Emitir el array [1,2,3]
+**Emitir el array [1,2,3]**
 
 ```javascript
 import { of } from "rxjs";

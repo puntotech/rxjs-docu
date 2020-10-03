@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite las emisiones del Observable fuente siempre y hasta cuando cumplan la condición especificada. Se completa en cuanto haya un valor que no cumpla la condición
+<h2 class="subtitle"> Emite las emisiones del Observable fuente siempre y hasta cuando cumplan la condición especificada. Se completa en cuanto haya un valor que no cumpla la condición
+</h2>
 
 ### Firma
 
@@ -37,9 +38,9 @@ Emite los valores del Observable fuente mientras cumplan la condición especific
 
 ## Ejemplos
 
-Emitir números mientras sean menores que 10
+**Emitir números mientras sean menores que 10**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takewhile-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takewhile-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { takeWhile } from "rxjs/operators";
@@ -53,9 +54,9 @@ number$
 // Salida: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, Completado
 ```
 
-Emitir las teclas pulsadas mientras no se pulse la tecla x
+**Emitir las teclas pulsadas mientras no se pulse la tecla x**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takewhile-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takewhile-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { map, takeWhile } from "rxjs/operators";
@@ -72,9 +73,9 @@ key$
 // Salida: KeyP, KeyC, KeyM (Pulsar KeyX), Completado
 ```
 
-Emitir objetos Pokémon mientras sean de tipo `Grass`
+**Emitir objetos Pokémon mientras sean de tipo Grass**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takewhile-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takewhile-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from } from "rxjs";
@@ -92,31 +93,31 @@ pokemon$.pipe(takeWhile(({ type }) => type === "Grass")).subscribe(console.log);
 // Salida: { name: "Bulbasaur", type: "Grass" }, { name: "Chikorita", type: "Grass" }
 ```
 
-Si se proporciona el valor `true` como segundo argumento (parámetro `inclusive`), el primer elemento que no cumpla la condición también se emite
+**Si se proporciona el valor true como segundo argumento (parámetro inclusive), el primer elemento que no cumpla la condición también se emite**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-takewhile-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-takewhile-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from } from "rxjs";
 import { takeWhile } from "rxjs/operators";
 
-const pokemon$ = from([
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Chikorita", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Treecko", type: "Grass" },
-  { name: "Squirtle", type: "Water" },
+const programmingLanguage$ = from([
+  { name: "Simula", type: "Object-oriented" },
+  { name: "Java", type: "Object-oriented" },
+  { name: "Wolfram", type: "Declarative" },
+  { name: "Ruby", type: "Multiparadigm" },
 ]);
 
-pokemon$
-  .pipe(takeWhile(({ type }) => type === "Grass", true))
+// Si se proporciona el valor true como segundo argumento (parámetro inclusive), el primer elemento que no cumpla la condición también se emite
+programmingLanguage$
+  .pipe(takeWhile(({ type }) => type === "Object-oriented", true))
   .subscribe(console.log);
-// Salida: { name: "Bulbasaur", type: "Grass" }, { name: "Chikorita", type: "Grass" }, { name: "Charmander", type: "Fire" }
+// Salida: { name: "Simula", type: "Object-oriented" }, { name: "Java", type: "Object-oriented" }, { name: "Wolfram", type: "Declarative" }
 ```
 
 ### Ejemplo de la documentación oficial
 
-Emite los eventos click mientras su propiedad `clientX` sea mayor a 200
+**Emite los eventos click mientras su propiedad clientX sea mayor a 200**
 
 ```javascript
 import { fromEvent } from "rxjs";

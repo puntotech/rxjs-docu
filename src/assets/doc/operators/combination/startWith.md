@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Emite los elementos que se especifiquen como argumentos antes de empezar a emitir las emisiones del Observable fuente
+<h2 class="subtitle"> Emite los elementos que se especifiquen como argumentos antes de empezar a emitir las emisiones del Observable fuente
+</h2>
 
 ### Firma
 
@@ -33,9 +34,9 @@ Primero emite sus argumentos en orden, y después las emisiones de la fuente.
 
 ## Ejemplos
 
-Proporcionar un valor inicial al flujo de emisiones
+**Proporcionar un valor inicial al flujo de emisiones**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-startwith?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-startwith?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { startWith } from "rxjs/operators";
@@ -47,9 +48,9 @@ fruit$.pipe(startWith("Arándano")).subscribe(console.log);
 // Salida: Arándano, Fresa, Cereza
 ```
 
-A `startWith` se le puede proporcionar más de un valor
+**A startWith se le puede proporcionar más de un valor**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-startwith-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-startwith-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { startWith } from "rxjs/operators";
@@ -63,7 +64,7 @@ number$.pipe(startWith(-3, -2, -1)).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Comenzar la cadena de emisiones con 'primero' y 'segundo'
+**Comenzar la cadena de emisiones con 'primero' y 'segundo'**
 
 ```javascript
 import { of } from "rxjs";

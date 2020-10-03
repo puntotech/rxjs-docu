@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
+</h2>
 
 ### Firma
 
@@ -35,9 +36,9 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 ## Ejemplos
 
-Recoger una secuencia ascendente de números en una ventana. Cada vez que se haga click, abrir una nueva ventana
+**Recoger una secuencia ascendente de números en una ventana. Cada vez que se haga click, abrir una nueva ventana**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowwhen-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowwhen-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -55,9 +56,9 @@ number$
 // Salida: Nueva ventana, 0, 1, 2, 3 (click) Nueva ventana, 4, 5, 6...
 ```
 
-Recoger teclas pulsadas en una ventana de duración aleatoria de entre 1 y 4 segundos
+**Recoger teclas pulsadas en una ventana de duración aleatoria de entre 1 y 4 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowwhen-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowwhen-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -79,7 +80,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Emitir únicamente los dos primeros eventos click en cada ventana de una duración aleatoria de entre 1 y 5 segundos
+**Emitir únicamente los dos primeros eventos click en cada ventana de una duración aleatoria de entre 1 y 5 segundos**
 
 ```javascript
 import { fromEvent, interval } from 'rxjs';

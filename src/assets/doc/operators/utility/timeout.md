@@ -9,7 +9,8 @@
 </a>
 </div>
 
-### Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
+<h2 class="subtitle"> Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
+</h2>
 
 ### Firma
 
@@ -21,7 +22,6 @@
 <tr><td>due</td><td>Un número especificando el periodo en el que el Observable tiene que emitir un valor, o una fecha especificando antes de cuándo debe completarse el Observable.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
 El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</td></tr>
-
 </table>
 
 ### Retorna
@@ -34,7 +34,7 @@ Lanza un error si el Observable no emite valores suficientemente rápido.
 
 <img src="assets/images/marble-diagrams/utility/timeout.png" alt="Diagrama de canicas del operador timeout">
 
-El operador `timeout` puede recibir un número o una fecha como argumentos.
+El operador timeout puede recibir un número o una fecha como argumentos.
 
 Si se proporciona un número, devuelve un Observable que se comporta como el Observable fuente, a no ser que transcurra un periodo de tiempo en el que no se emita ningún valor. Si por ejemplo se proporciona el número 100 como argumento y el primer valor del Observable se emite tras 50ms a partir del momento de la suscripción, dicho valor se reemitirá por el Observable resultante. Sin embargo, si transcurren 100ms sin que se emita un segundo valor, el flujo terminará con un error y se cancelará la suscripcón al Observable fuente. Estas comprobaciones se llevan a cabo durante el ciclo completo de vida del Observable - desde el momento en el que se realiza la suscripcón, hasta que se complete o se produzca un error. Por tanto, cada valor debe emitirse antes de que transcurra el intervalo de tiempo establecido desde la emisión del valor anterior.
 
@@ -44,13 +44,15 @@ Si el argumento proporcionado es una fecha, el Observable retornado se comporta 
 
 ## Ejemplos
 
-Lanzar un error si no se presiona ninguna tecla en 5 segundos
+**Lanzar un error si no se presiona ninguna tecla en 5 segundos**
 
-```javascript
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timeout?file=index.ts">StackBlitz</a>
+
+```typescript
 import { fromEvent } from "rxjs";
 import { timeout, map } from "rxjs/operators";
 
-const key$ = fromEvent < KeyboardEvent > (document, "keydown");
+const key$ = fromEvent<KeyboardEvent>(document, "keydown");
 
 key$
   .pipe(
@@ -61,11 +63,11 @@ key$
 // Salida: (5s) (Error) Error: Timeout has occurred
 ```
 
-Lanzar un error si una petición tarda más de x tiempo
+**Lanzar un error si una petición tarda más de x tiempo**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-timeout-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timeout-2?file=index.ts">StackBlitz</a>
 
-```javascript
+```typescript
 import { of } from "rxjs";
 import { concatMap, timeout, catchError, delay, map } from "rxjs/operators";
 import { ajax } from "rxjs/ajax";
@@ -97,7 +99,7 @@ delay$
 
 ### Ejemplos de la documentación oficial
 
-Comprobar si los valores se emiten antes de que transcurra cierto intervalo de tiempo
+**Comprobar si los valores se emiten antes de que transcurra cierto intervalo de tiempo**
 
 ```javascript
 import { interval } from "rxjs";
@@ -118,7 +120,7 @@ seconds.pipe(timeout(900)).subscribe(
 );
 ```
 
-Utilizar una fecha para comprobar si el Observable se ha completado
+**Utilizar una fecha para comprobar si el Observable se ha completado**
 
 ```javascript
 import { interval } from "rxjs";
@@ -129,8 +131,8 @@ const seconds = interval(1000);
 seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
   (value) => console.log(value), // Will emit values as regular `interval` would
   // until December 17, 2020 at 03:24:00.
-  (err) => console.log(err) // On December 17, 2020 at 03:24:00 it will emit an error,
-  // since Observable did not complete by then.
+  (err) => console.log(err) // Emitirá un error el día December 17, 2020 a las 03:24:00,
+  // ya que el Observable no se habrá completado
 );
 ```
 
