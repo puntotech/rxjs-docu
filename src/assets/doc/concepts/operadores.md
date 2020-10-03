@@ -1,18 +1,18 @@
-Aunque los Observables son sus cimientos, RxJS es mayormente útil debido a sus Operadores. Los Operadores son las piezas esenciales que permiten la composición de código complejo y asíncrono, de manera declarativa.
+Aunque los Observables constituyen sus cimientos, la verdadera utilidad de RxJS es gracias a sus Operadores. Los Operadores son las piezas esenciales que permiten la composición de código complejo y asíncrono, de manera declarativa.
 
 # Qué son los Operadores
 
 Los Operadores son funciones. Hay dos tipos de operadores:
 
-Los Operadores _Pipeables_ se pueden utilizar mediante la sintaxis `observableInstance.pipe(operator())`. Entre ellos se incluyen **filter(...)** y **mergeMap(...)**. Cuando son llamados, _no modifican_ la instancia del Observable existente. En su lugar, devuelven un Observable nuevo, cuya lógica de suscripción está basada en la del primer Observable.
+Los Operadores de tubería se pueden utilizar mediante la sintaxis `observableInstance.pipe(operator())`. Entre ellos se incluyen filter() y mergeMap(). Cuando son llamados, _no modifican_ la instancia del Observable existente. En su lugar, devuelven un Observable nuevo, cuya lógica de suscripción está basada en la del primer Observable.
 
-> Un Operador _Pipeable_ es una función que recibe un Observable y devuelve otro Observable. Es una operación pura: el Observable anterior no se modifica.
+> Un Operador de tubería es una función que recibe un Observable y devuelve otro Observable. Es una operación pura: el Observable anterior no se modifica.
 
-Un Operador _Pipeable_ es esencialmente una función pura que recibe un Observable como _input_ y genera otro Observable como _output_. Una suscripción al Observable de salida supone también una suscripción al Observable de entrada.
+Un Operador de tubería es esencialmente una función pura que recibe un Observable como entrada y genera otro Observable como salida. Una suscripción al Observable de salida supone también una suscripción al Observable de entrada.
 
-El otro tipo de operador son los Operadores de Creación, que pueden llamarse como si fuesen funciones independientes para crear un nuevo Observable. Por ejemplo: `of(1, 2, 3)` crea un Observable que emitirá los valores `1`, `2` y `3`, de forma consecutiva. Entraremos en más detalle sobre de los Operadores de Creación en una sección posterior.
+El otro tipo de operador es el de Creación. Estos operadores pueden llamarse como si fuesen funciones independientes para crear un nuevo Observable. Por ejemplo: `of(1, 2, 3)` crea un Observable que emitirá los valores `1`, `2` y `3`, de forma consecutiva. Entraremos en más detalle sobre de los Operadores de Creación en una sección posterior.
 
-Por ejemplo, el operador `map` es análogo al método de Array que lleva el mismo nombre. Al igual que `[1, 2, 3].map(x => x \* x)` produce `[1, 4, 9]`, el Observable creado así:
+Por ejemplo, el operador `map` es análogo al método de Array que lleva el mismo nombre. Al igual que `[1, 2, 3].map(x => x \* x)` produce `[1, 4, 9]`, el Observable creado de la siguiente manera:
 
 ```javascript
 import { of } from 'rxjs';
@@ -26,23 +26,25 @@ map(x => x \* x)(of(1, 2, 3)).subscribe((v) => console.log(`valor: ${v}`));
 // valor: 9
 ```
 
-Emitirá `1`, `4`, `9`. Otro operador bastante útil es **first**:
+Emitirá `1`, `4`, `9`.
+
+Otro operador muy útil es **first**:
 
 ```javascript
 import { of } from "rxjs";
 import { first } from "rxjs/operators";
 
-first()(of(1, 2, 3)).subscribe(v => console.log(`valor: ${v}`));
+first()(of(1, 2, 3)).subscribe((v) => console.log(`valor: ${v}`));
 
 // Logs:
 // valor: 1
 ```
 
-Hay que tener en cuenta que `map` tiene que ser construido en el momento, ya que tiene que recibir la función de mapeo. Por el contrario, `first` podría ser una constante, aunque se construye en el momento igualmente. Como norma general, todos los operadores se construyen, independientemente de que necesiten recibir argumentos o no.
+Hay que tener en cuenta que `map` tiene que ser construido en el momento, ya que tiene que recibir la función de proyección. Por el contrario, `first` podría ser una constante, aunque también se construye en el momento. Como norma general, todos los operadores se construyen, independientemente de que necesiten recibir o no argumentos.
 
-# Piping
+## Piping
 
-Los Operadores _Pipeable_ son funciones, por lo que pueden utilizarse como funciones normales:`op()(obs)`. Sin embargo, en la práctica, tienden a utilizarse muchos operadores al mismo tiempo, por lo que hacer esto hará que nuestro código sea ilegible: `op4()(op3()(op2()(op1()(obs))))`. Por esta razón, los Observables tienen un método llamado `.pipe()` que cumple esta misma función, de una forma mucho más legible:
+Los Operadores de tubería son funciones, por lo que pueden utilizarse como funciones normales:`op()(obs)`. Sin embargo, en la práctica, tienden a utilizarse muchos operadores al mismo tiempo, por lo que hacer esto hará que nuestro código sea ilegible: `op4()(op3()(op2()(op1()(obs))))`. Por esta razón, los Observables tienen un método llamado `.pipe()` que cumple esta misma función, de una forma mucho más legible:
 
 ```javascript
 obs.pipe(op1(), op2(), op3(), op3());
@@ -50,9 +52,9 @@ obs.pipe(op1(), op2(), op3(), op3());
 
 Por motivos estilísticos, `op()(obs)` nunca se utiliza, aunque solo se utilice un operador. `obs.pipe(op())` es universalmente preferible.
 
-# Operadores de Creación
+## Operadores de Creación
 
-¿Qué son los Operadores de Creación? Diferentes a los Operadores _Pipeable_, los Operadores de Creación son funciones que se pueden utilizar para crear un Observable con un comportamiento predeterminado común, o mediante la unión de otros Observables.
+¿Qué son los Operadores de Creación? Diferentes a los Operadores de tubería, los Operadores de Creación son funciones que se pueden utilizar para crear un Observable con un comportamiento predeterminado común, o mediante la unión de otros Observables.
 
 Un ejemplo clásico de un Operador de Creación es la función `interval`. Recibe un número (no un Observable) como argumento de entrada, y produce un Observable como salida:
 
@@ -62,254 +64,266 @@ import { interval } from "rxjs";
 const observable = interval(1000 /* número de milisegundos */);
 ```
 
-Podemos ver la [lista completa de Operadores estáticos de Creación aquí.]()
+Se puede ver la [lista completa de Operadores estáticos de Creación aquí.]()
 
-Higher-order Observables
+## Observables de Orden Superior
 
 Observables most commonly emit ordinary values like strings and numbers, but surprisingly often, it is necessary to handle Observables of Observables, so-called higher-order Observables. For example, imagine you had an Observable emitting strings that were the URLs of files you wanted to see. The code might look like this:
 
+```javascript
+const fileObservable = urlObservable.pipe(map((url) => http.get(url)));
+```
+
+`http.get()` retorna un Observable (probablemente de cadenas o de arrays de cadenas) por cada URL individual. Esto es un Observable de Observables, un Observable de orden superior.
+
+Pero, ¿Cómo se trabaja con un Observable de orden superior? Normalmente, se 'aplasta', para convertirlo en un Observable normal. Por ejemplo:
+
+```javascript
 const fileObservable = urlObservable.pipe(
-map(url => http.get(url)),
+  map((url) => http.get(url)),
+  concatAll()
 );
+```
 
-http.get() returns an Observable (of string or string arrays probably) for each individual URL. Now you have an Observables of Observables, a higher-order Observable.
+El operador [concatAll()](/operators/combination/concatAll) operator se subscribe cada Observable 'interno' producido por el Observable 'externo', y copia todos los valores que emite hasta que el Observable interno se completa. Entonces, se suscribe al siguiente Observable interno y repite el proceso. De esta manera, se concatenan todos los valores emitidos por todos los Observables internos. Otros operadores de combinación útiles son:
 
-But how do you work with a higher-order Observable? Typically, by flattening: by (somehow) converting a higher-order Observable into an ordinary Observable. For example:
+- [mergeAll()](/operators/combination/mergeAll) — se suscribe a cada Observable interno en cuanto lo recibe, emitiendo cada uno de sus valores en cuanto lo recibe.
+- [switchAll()](/operators/combination/switchAll) — se suscribe al primer Observable interno en cuanto lo recibe y emite cada uno de sus valores en cuanto lo recibe, pero en cuanto recibe el siguiente Observable interno, cancela la suscripción al Observable interno anterior y se suscribe al nuevo.
+- [exhaust()](/operators/combination/exhaust) — se suscribe al primer Observable interno en cuanto lo recibe, y emite cada uno de sus valores en cuanto lo recibe, descartando todos los Observables internos nuevos que recibe hasta que el primer Observable interno se haya completado.
 
-const fileObservable = urlObservable.pipe(
-map(url => http.get(url)),
-concatAll(),
-);
+Al igual que hacen muchas bibliotecas de array, combinando `map()` y `flat()` (o `flatten()`) en un solo `flatMap()`, en RxJS también existen los equivalentes de proyección de todos los operadores de combinación:
 
-The concatAll() operator subscribes to each "inner" Observable that comes out of the "outer" Observable, and copies all the emitted values until that Observable completes, and goes on to the next one. All of the values are in that way concatenated. Other useful flattening operators (called join operators) are
+- [concatMap()](/operators/combination/concatMap)
+- [mergeMap()](/operators/combination/mergeMap)
+- [switchMap()](/operators/combination/switchMap)
+- [exhaustMap()](/operators/combination/exhaustMap)
 
-    mergeAll() — subscribes to each inner Observable as it arrives, then emits each value as it arrives
-    switchAll() — subscribes to the first inner Observable when it arrives, and emits each value as it arrives, but when the next inner Observable arrives, unsubscribes to the previous one, and subscribes to the new one.
-    exhaust() — subscribes to the first inner Observable when it arrives, and emits each value as it arrives, discarding all newly arriving inner Observables until that first one completes, then waits for the next inner Observable.
+## Diagramas de canicas
 
-Just as many array library combine map() and flat() (or flatten()) into a single flatMap(), there are mapping equivalents of all the RxJS flattening operators concatMap(), mergeMap(), switchMap(), and exhaustMap().
-Marble diagrams
+Para explicar el funcionamiento de los operadores, una descripción por escrito suele ser insuficiente. Muchos operadores están relacionados con el tiempo, como por ejemplo [delay](/operators/utility/delay), [sample](/operators/filtering/sample), [throttle](/operators/filtering/throttle) o [debounce](/operators/filtering/debounce). Cada uno de estos operadores trata las emisiones de manera diferente.
 
-To explain how operators work, textual descriptions are often not enough. Many operators are related to time, they may for instance delay, sample, throttle, or debounce value emissions in different ways. Diagrams are often a better tool for that. Marble Diagrams are visual representations of how operators work, and include the input Observable(s), the operator and its parameters, and the output Observable.
+Los diagramas de canicas son representaciones visuales de cómo funcionan los operadores, incluyendo el Observable de entrada, el operador y sus parámetros y el Observable de salida. El diagrama describe cómo se emiten los valores (canicas) al ejecutarse el Observable.
 
-In a marble diagram, time flows to the right, and the diagram describes how values ("marbles") are emitted on the Observable execution.
+En un diagrama de canicas, el tiempo fluye hacia la derecha.
 
-Below you can see the anatomy of a marble diagram.
+A continuación se puede ver la anatomía de un diagrama de canicas:
 
-Throughout this documentation site, we extensively use marble diagrams to explain how operators work. They may be really useful in other contexts too, like on a whiteboard or even in our unit tests (as ASCII diagrams).
-Categories of operators
+<img src="assets/images/marble-diagram-anatomy.svg" alt="Anatomía de un diagrama de canicas">
 
-There are operators for different purposes, and they may be categorized as: creation, transformation, filtering, joining, multicasting, error handling, utility, etc. In the following list you will find all the operators organized in categories.
+En esta documentación se utilizan los diagramas de canicas para explicar el funcionamiento de los operadores. También son muy útiles en otros contextos, como por ejemplo en una pizarra o incluso a la hora de hacer tests unitarios (en forma de diagramas ASCII.)
 
-For a complete overview, see the references page.
-Creation Operators
+## Categorías de operadores
 
-    ajax
-    bindCallback
-    bindNodeCallback
-    defer
-    empty
-    from
-    fromEvent
-    fromEventPattern
-    generate
-    interval
-    of
-    range
-    throwError
-    timer
-    iif
+Hay muchos tipos diferentes de operadores, divididos en las siguientes categorías: creación, transformación, filtración, combinación, multidifusión, gestión de errores, utilidad, etc. A continuación están listados por categoría todos los operadores:
 
-Join Creation Operators
+### Operadores de creación
 
-These are Observable creation operators that also have join functionality -- emitting values of multiple source Observables.
+[ajax](/operators/creation/ajax)
+[bindCallback](/operators/creation/bindCallback)
+[bindNodeCallback](/operators/creation/bindNodeCallback)
+[defer](/operators/creation/defer)
+[empty](/operators/creation/empty)
+[from](/operators/creation/from)
+[fromEvent](/operators/creation/fromEvent)
+[fromEventPattern](/operators/creation/fromEventPattern)
+[generate](/operators/creation/generate)
+[interval](/operators/creation/interval)
+[of](/operators/creation/of)
+[range](/operators/creation/range)
+[throwError](/operators/creation/throwError)
+[timer](/operators/creation/timer)
+[iif](/operators/creation/iif)
 
-    combineLatest
-    concat
-    forkJoin
-    merge
-    race
-    zip
+### Operadores de Combinación-Creación
 
-Transformation Operators
+Estos son operadores de creación que también tienen funcionalidad de combinación -- emitiendo valores de varios Observables fuente.
 
-    buffer
-    bufferCount
-    bufferTime
-    bufferToggle
-    bufferWhen
-    concatMap
-    concatMapTo
-    exhaust
-    exhaustMap
-    expand
-    groupBy
-    map
-    mapTo
-    mergeMap
-    mergeMapTo
-    mergeScan
-    pairwise
-    partition
-    pluck
-    scan
-    switchMap
-    switchMapTo
-    window
-    windowCount
-    windowTime
-    windowToggle
-    windowWhen
+[combineLatest](/operators/combination/combineLatest)
+[concat](/operators/combination/concat)
+[forkJoin](/operators/combination/forkJoin)
+[merge](/operators/combination/merge)
+[race](/operators/combination/race)
+[zip](/operators/combination/zip)
 
-Filtering Operators
+### Operadores de Transformación
 
-    audit
-    auditTime
-    debounce
-    debounceTime
-    distinct
-    distinctKey
-    distinctUntilChanged
-    distinctUntilKeyChanged
-    elementAt
-    filter
-    first
-    ignoreElements
-    last
-    sample
-    sampleTime
-    single
-    skip
-    skipLast
-    skipUntil
-    skipWhile
-    take
-    takeLast
-    takeUntil
-    takeWhile
-    throttle
-    throttleTime
+[buffer](/operators/transformation/buffer)
+[bufferCount](/operators/transformation/bufferCount)
+[bufferTime](/operators/transformation/bufferTime)
+[bufferToggle](/operators/transformation/bufferToggle)
+[bufferWhen](/operators/transformation/bufferWhen)
+[concatMap](/operators/transformation/concatMap)
+[concatMapTo](/operators/transformation/concatMapTo)
+[exhaust](/operators/transformation/exhaust)
+[exhaustMap](/operators/transformation/exhaustMap)
+[expand](/operators/transformation/expand)
+[groupBy](/operators/transformation/groupBy)
+[map](/operators/transformation/map)
+[mapTo](/operators/transformation/mapTo)
+[mergeMap](/operators/transformation/mergeMap)
+[mergeMapTo](/operators/transformation/mergeMapTo)
+[mergeScan](/operators/transformation/mergeScan)
+[pairwise](/operators/transformation/pairwise)
+[partition](/operators/transformation/partition)
+[pluck](/operators/transformation/pluck)
+[scan](/operators/transformation/scan)
+[switchMap](/operators/transformation/switchMap)
+[switchMapTo](/operators/transformation/switchMapTo)
+[window](/operators/transformation/window)
+[windowCount](/operators/transformation/windowCount)
+[windowTime](/operators/transformation/windowTime)
+[windowToggle](/operators/transformation/windowToggle)
+[windowWhen](/operators/transformation/windowWhen)
 
-Join Operators
+### Operadores de Filtración
 
-Also see the Join Creation Operators section above.
+[audit](/operators/filtering/audit)
+[auditTime](/operators/filtering/auditTime)
+[debounce](/operators/filtering/debounce)
+[debounceTime](/operators/filtering/debounceTime)
+[distinct](/operators/filtering/distinct)
+[distinctKey](/operators/filtering/distinctKey)
+[distinctUntilChanged](/operators/filtering/distinctUntilChanged)
+[distinctUntilKeyChanged](/operators/filtering/distinctUntilKeyChanged)
+[elementAt](/operators/filtering/elementAt)
+[filter](/operators/filtering/filter)
+[first](/operators/filtering/first)
+[ignoreElements](/operators/filtering/ignoreElements)
+[last](/operators/filtering/last)
+[sample](/operators/filtering/sample)
+[sampleTime](/operators/filtering/sampleTime)
+[single](/operators/filtering/single)
+[skip](/operators/filtering/skip)
+[skipLast](/operators/filtering/skipLast)
+[skipUntil](/operators/filtering/skipUntil)
+[skipWhile](/operators/filtering/skipWhile)
+[take](/operators/filtering/take)
+[takeLast](/operators/filtering/takeLast)
+[takeUntil](/operators/filtering/takeUntil)
+[takeWhile](/operators/filtering/takeWhile)
+[throttle](/operators/filtering/throttle)
+[throttleTime](/operators/filtering/throttleTime)
 
-    combineAll
-    concatAll
-    exhaust
-    mergeAll
-    startWith
-    withLatestFrom
+### Operadores de Combinación
 
-Multicasting Operators
+Ver también la sección anterior de operadores de Combinación-Creación.
 
-    multicast
-    publish
-    publishBehavior
-    publishLast
-    publishReplay
-    share
+[combineAll](/operators/combination/combineAll)
+[concatAll](/operators/combination/concatAll)
+[exhaust](/operators/combination/exhaust)
+[mergeAll](/operators/combination/mergeAll)
+[startWith](/operators/combination/startWith)
+[withLatestFrom](/operators/combination/withLatestFrom)
 
-Error Handling Operators
+### Operadores de Multidifusión
 
-    catchError
-    retry
-    retryWhen
+[multicast](/operators/multicasting/multicast)
+[publish](/operators/multicasting/publish)
+[publishBehavior](/operators/multicasting/publishBehavior)
+[publishLast](/operators/multicasting/publishLast)
+[publishReplay](/operators/multicasting/publishReplay)
+[share](/operators/multicasting/share)
 
-Utility Operators
+### Operadores de Gestión de Errores
 
-    tap
-    delay
-    delayWhen
-    dematerialize
-    materialize
-    observeOn
-    subscribeOn
-    timeInterval
-    timestamp
-    timeout
-    timeoutWith
-    toArray
+[catchError](/operators/error-handling/catchError)
+[retry](/operators/error-handling/retry)
+[retryWhen](/operators/error-handling/retryWhen)
 
-Conditional and Boolean Operators
+### Operadores de Utilidad
 
-    defaultIfEmpty
-    every
-    find
-    findIndex
-    isEmpty
+[tap](/operators/utility/tap)
+[delay](/operators/utility/delay)
+[delayWhen](/operators/utility/delayWhen)
+[dematerialize](/operators/utility/dematerialize)
+[materialize](/operators/utility/materialize)
+[observeOn](/operators/utility/observeOn)
+[subscribeOn](/operators/utility/subscribeOn)
+[timeInterval](/operators/utility/timeInterval)
+[timestamp](/operators/utility/timestamp)
+[timeout](/operators/utility/timeout)
+[timeoutWith](/operators/utility/timeoutWith)
+[toArray](/operators/utility/toArray)
 
-Mathematical and Aggregate Operators
+### Operadores Condicionales y Booleanos
 
-    count
-    max
-    min
-    reduce
+[defaultIfEmpty](/operators/conditional/defaultIfEmpty)
+[every](/operators/conditional/every)
+[find](/operators/conditional/find)
+[findIndex](/operators/conditional/findIndex)
+[isEmpty](/operators/conditional/isEmpty)
 
-Creating custom observables
-Use the pipe() function to make new operators
+### Operadores Matemáticos y de Agregación
 
-If there is a commonly used sequence of operators in your code, use the pipe() function to extract the sequence into a new operator. Even if a sequence is not that common, breaking it out into a single operator can improve readability.
+[count](/operators/mathematical-aggregate/count)
+[max](/operators/mathematical-aggregate/max)
+[min](/operators/mathematical-aggregate/min)
+[reduce](/operators/mathematical-aggregate/reduce)
 
-For example, you could make a function that discarded odd values and doubled even values like this:
+## Creación de operadores personalizados
 
-import { pipe } from 'rxjs';
-import { filter, map } from 'rxjs';
+### Se puede utilizar la función _pipe()_ para crear operadores nuevos
+
+En el caso de tener una secuencia de operadores que se reutilice en distintas partes del código, se puede utilizar la función `pipe` para extraer dicha secuencia a un operador nuevo. Incluso aunque la secuencia no se reutilice muy a menudo, extraerla a un operador puede mejorar la legibilidad.
+
+Por ejemplo, se puede crear una función que ignore los valores impares y multiplique por dos los valores pares:
+
+```javascript
+import { pipe } from "rxjs";
+import { filter, map } from "rxjs";
 
 function discardOddDoubleEven() {
-return pipe(
-filter(v => ! (v % 2)),
-map(v => v + v),
-);
+  return pipe(
+    filter((v) => !(v % 2)),
+    map((v) => v + v)
+  );
 }
+```
 
-(The pipe() function is analogous to, but not the same thing as, the .pipe() method on an Observable.)
-Creating new operators from scratch
+(La función `pipe()` es [análoga](https://dle.rae.es/an%C3%A1logo) al método `.pipe()` de un Observable.)
 
-It is more complicated, but if you have to write an operator that cannot be made from a combination of existing operators (a rare occurrance), you can write an operator from scratch using the Observable constructor, like this:
+## Creación de un nuevo operador desde 0
 
-    import { Observable } from 'rxjs';
+Es más complicado, pero si se necesita un operador que no se pueda crear combinando operadores ya existentes (raramente ocurre esto), se puede crear un operador desde 0 utilizando el constructor Observable:
 
-    function delay(delayInMillis) {
-      return (observable) => new Observable(observer => {
-        // this function will called each time this
-        // Observable is subscribed to.
-        const allTimerIDs = new Set();
-        const subscription = observable.subscribe({
-          next(value) {
-            const timerID = setTimeout(() => {
-              observer.next(value);
-              allTimerIDs.delete(timerID);
-            }, delayInMillis);
-            allTimerIDs.add(timerID);
-          },
-          error(err) {
-            observer.error(err);
-          },
-          complete() {
-            observer.complete();
-          }
-        });
-        // the return value is the teardown function,
-        // which will be invoked when the new
-        // Observable is unsubscribed from.
-        return () => {
-          subscription.unsubscribe();
-          allTimerIDs.forEach(timerID => {
-            clearTimeout(timerID);
-          });
-        }
+```javascript
+import { Observable } from "rxjs";
+
+function delay(delayInMillis) {
+  return (observable) =>
+    new Observable((observer) => {
+      // Esta función se llamará con cada suscripción a este Observable
+      const allTimerIDs = new Set();
+      const subscription = observable.subscribe({
+        next(value) {
+          const timerID = setTimeout(() => {
+            observer.next(value);
+            allTimerIDs.delete(timerID);
+          }, delayInMillis);
+          allTimerIDs.add(timerID);
+        },
+        error(err) {
+          observer.error(err);
+        },
+        complete() {
+          observer.complete();
+        },
       });
-    }
-
-Note that you must
-
-    implement all three Observer functions, next(), error(), and complete() when subscribing to the input Observable.
-    implement a "teardown" function that cleans up when the Observable completes (in this case by unsubscribing and clearing any pending timeouts).
-    return that teardown function from the function passed to the Observable constructor.
-
-Of course, this is only an example; the delay() operator already exists.
-
+      // El valor del return es la función teardown, que se invoca cada vez que se cancela la suscripción al Observable
+      return () => {
+        subscription.unsubscribe();
+        allTimerIDs.forEach((timerID) => {
+          clearTimeout(timerID);
+        });
+      };
+    });
+}
 ```
 
-```
+Es importante que:
+
+    1. Se implementen las tres funciones Observer, `next()`, `error()`, and `complete()` when subscribing to the input Observable.
+    2. Se implemente una función *teardown* que se encargue de limpiar (en este caso, cancelando la suscripción y encargándose de cualquier *timeout* pendiente) cuando el Observable se complete.
+    3. La función que se le pasa al constructor del Observable retorne la función *teardown*.
+
+Por supuesto, este ejemplo es simplemente para mostrar cómo utilizar el constructor del Observable; el operador [delay](/operators/utility/delay) ya existe.
