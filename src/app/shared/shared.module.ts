@@ -49,7 +49,7 @@ const MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  declarations: COMPONENTS,
+  declarations: [COMPONENTS],
   imports: [MATERIAL_MODULES, CORE_MODULES, FlexLayoutModule],
   exports: [COMPONENTS, MATERIAL_MODULES, CORE_MODULES, FlexLayoutModule],
 })

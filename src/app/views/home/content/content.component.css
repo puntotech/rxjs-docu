@@ -1,0 +1,27 @@
+.md-container {
+  display: flex;
+}
+
+.md-container > * {
+  margin: 0 30px;
+  min-width: 0; /* Fix flex horizontal overflow */
+}
+
+.scrollspy-container {
+  padding: 4px;
+  display: inline-table;
+  position: sticky;
+  top: 20px;
+  border-left: 1px solid gray;
+  display: inline-table;
+}
+
+.scrollspy-container > div {
+  cursor: pointer;
+  margin-bottom: 0.6em;
+  transition: all 0.3s;
+}
+
+.scrollspy-container > div :hover {
+  color: rgb(148, 7, 78);
+}

@@ -1,3 +1,13 @@
 <div class="md-container">
-  <scully-content></scully-content>
+  <div class="scully-content-container">
+    <scully-content></scully-content>
+  </div>
+  <div class="scrollspy-container">
+    <div *ngFor="let section of sections">
+      <a (click)="scrollTo(section.id)">
+        <span *ngIf="section.id === currentSection">-> </span>
+        <span>{{ section.name }}</span>
+      </a>
+    </div>
+  </div>
 </div>

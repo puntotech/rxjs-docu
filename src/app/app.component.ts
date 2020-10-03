@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
 import { SidenavService } from '@shared/services/sidenav.service';
 import { MatSidenav } from '@angular/material/sidenav';
 @Component({
@@ -13,5 +13,10 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     this.sidenavService.set(this.sidenav);
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    console.log('SCROL APP');
   }
 }
