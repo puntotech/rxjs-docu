@@ -1,0 +1,19 @@
+.root {
+  padding: 4px;
+  padding-left: 8px;
+  display: inline-table;
+  position: sticky;
+  top: 20px;
+  border-left: 1px solid gray;
+  display: inline-table;
+}
+
+.root > div {
+  cursor: pointer;
+  margin-bottom: 0.6em;
+  transition: all 0.3s;
+}
+
+.root > div :hover {
+  color: rgb(148, 7, 78);
+}
