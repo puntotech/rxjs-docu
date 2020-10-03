@@ -20,20 +20,20 @@ export class ContentComponent implements AfterContentChecked {
 
   ngAfterContentChecked(): void {
     this.highlightService.highlightAll();
-    this.aa();
+    this.loadSections();
   }
 
   scrollTo(sectionId) {
     document.querySelector('#' + sectionId).scrollIntoView();
   }
 
-  private aa() {
-    const elements = document.querySelectorAll('h2');
+  private loadSections() {
+    const sectionsDivs = document.querySelectorAll('h2');
     this.sections = [];
-    [].forEach.call(elements, (element) => {
+    [].forEach.call(sectionsDivs, (div: HTMLDivElement) => {
       this.sections.push({
-        name: element.textContent,
-        id: element.id,
+        name: div.textContent,
+        id: div.id,
       });
     });
   }
