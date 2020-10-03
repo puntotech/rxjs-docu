@@ -15,7 +15,6 @@ span {
 code {
   background-color: #f1f1f1;
   border-radius: 2px;
-  padding: 4px 6px;
 }
 
 .mat-typography {
@@ -37,13 +36,17 @@ code {
 
 table {
   border-radius: 2px;
+  border-spacing: 0;
   box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
   margin: 25px 0;
   width: 100%;
 }
 
-table td {
+td,
+th {
+  border-bottom: 1px solid #dbdbdb;
   padding: 16px 24px;
+  text-align: left;
 }
 
 a {
@@ -80,10 +83,20 @@ blockquote {
 
 .toolbar {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
 }
 
-.toolbar-item::before {
-  content: url("assets/icons/content-copy.svg");
+.toolbar-item button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  margin: 9px;
+  transition: background-color 0.5s;
+}
+
+.toolbar-item button:hover {
+  background-color: #d81b60;
+  cursor: pointer;
 }
