@@ -14,9 +14,4 @@ export class AppComponent {
   ngAfterViewInit(): void {
     this.sidenavService.set(this.sidenav);
   }
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
-    console.log('SCROL APP');
-  }
 }

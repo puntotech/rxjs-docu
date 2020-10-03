@@ -1,8 +1,13 @@
 <div class="root">
-  <div *ngFor="let section of sections">
-    <a (click)="scrollTo(section.id)">
-      <span *ngIf="section.id === currentSection">-> </span>
-      <span>{{ section.name }}</span>
-    </a>
-  </div>
+  <a
+    class="section"
+    *ngFor="let section of sections"
+    (click)="scrollTo(section.id)"
+  >
+    <span
+      class="actual-section-indicator"
+      [class.active]="isActualSection(section.id)"
+    ></span>
+    <span>{{ section.name }}</span>
+  </a>
 </div>

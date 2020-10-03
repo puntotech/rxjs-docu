@@ -9,6 +9,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SharedModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
     FontAwesomeModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

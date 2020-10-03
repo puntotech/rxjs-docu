@@ -8,12 +8,33 @@
   display: inline-table;
 }
 
-.root > div {
-  cursor: pointer;
+.section {
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 0.6em;
+  cursor: pointer;
   transition: all 0.3s;
 }
 
-.root > div :hover {
+.actual-section-indicator {
+  width: 0;
+  height: 10px;
+  margin-left: -17px;
+  margin-right: 15px;
+  border-radius: 100px;
+  background-color: white;
+  border: 1px solid white;
+  flex: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.section:hover {
   color: rgb(148, 7, 78);
+}
+
+.actual-section-indicator.active {
+  width: 16px;
+  margin-right: 5px;
+  border: 1px solid black;
 }
