@@ -149,7 +149,13 @@ const result = clicks.pipe(switchMap((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `switchMap(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -162,6 +168,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `switchMap(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -176,6 +188,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `switchMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -188,6 +206,11 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -77,7 +77,13 @@ of("Valores de la fuente")
 // Salida: "Primero", "Segundo", "Valores de la fuente"
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `startWith(scheduler: SchedulerLike): MonoTypeOperatorFunction<T>`
 
@@ -91,6 +97,12 @@ of("Valores de la fuente")
 
 `MonoTypeOperatorFunction<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(v1: D, scheduler: SchedulerLike): OperatorFunction<T, T | D>`
 
 ### Parámetros
@@ -103,6 +115,12 @@ of("Valores de la fuente")
 ### Retorna
 
 `OperatorFunction<T, T | D>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `startWith(v1: D, v2: E, scheduler: SchedulerLike): OperatorFunction<T, T | D | E>`
 
@@ -118,6 +136,12 @@ of("Valores de la fuente")
 
 `OperatorFunction<T, T | D | E>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(v1: D, v2: E, v3: F, scheduler: SchedulerLike): OperatorFunction<T, T | D | E | F>`
 
 ### Parámetros
@@ -132,6 +156,12 @@ of("Valores de la fuente")
 ### Retorna
 
 `OperatorFunction<T, T | D | E | F>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `startWith(v1: D, v2: E, v3: F, v4: G, scheduler: SchedulerLike): OperatorFunction<T, T | D | E | F | G>`
 
@@ -149,6 +179,12 @@ of("Valores de la fuente")
 
 OperatorFunction<T, T | D | E | F | G>
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(v1: D, v2: E, v3: F, v4: G, v5: H, scheduler: SchedulerLike): OperatorFunction<T, T | D | E | F | G | H>`
 
 ### Parámetros
@@ -165,6 +201,12 @@ OperatorFunction<T, T | D | E | F | G>
 ### Retorna
 
 OperatorFunction<T, T | D | E | F | G | H>
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `startWith(v1: D, v2: E, v3: F, v4: G, v5: H, v6: I, scheduler: SchedulerLike): OperatorFunction<T, T | D | E | F | G | H | I>`
 
@@ -184,6 +226,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 `OperatorFunction<T, T | D | E | F | G | H | I>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(v1: D): OperatorFunction<T, T | D>`
 
 ### Parámetros
@@ -195,6 +243,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 ### Retorna
 
 `OperatorFunction<T, T | D>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `startWith(v1: D, v2: E): OperatorFunction<T, T | D | E>`
 
@@ -209,6 +263,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 `OperatorFunction<T, T | D | E>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(v1: D, v2: E, v3: F): OperatorFunction<T, T | D | E | F>`
 
 ### Parámetros
@@ -222,6 +282,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 ### Retorna
 
 `OperatorFunction<T, T | D | E | F>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `startWith(v1: D, v2: E, v3: F, v4: G): OperatorFunction<T, T | D | E | F | G>`
 
@@ -238,6 +304,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 `OperatorFunction<T, T | D | E | F | G>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(v1: D, v2: E, v3: F, v4: G, v5: H): OperatorFunction<T, T | D | E | F | G | H>`
 
 ### Parámetros
@@ -253,6 +325,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 ### Retorna
 
 `OperatorFunction<T, T | D | E | F | G | H>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `startWith(v1: D, v2: E, v3: F, v4: G, v5: H, v6: I): OperatorFunction<T, T | D | E | F | G | H | I>`
 
@@ -271,6 +349,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 `OperatorFunction<T, T | D | E | F | G | H | I>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(...array: D[]): OperatorFunction<T, T | D>`
 
 ### Parámetros
@@ -283,6 +367,12 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 `OperatorFunction<T, T | D>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `startWith(...array: (SchedulerLike | D)[]): OperatorFunction<T, T | D>`
 
 ### Parámetros
@@ -294,5 +384,9 @@ OperatorFunction<T, T | D | E | F | G | H>
 ### Retorna
 
 `OperatorFunction<T, T | D>`
+
+</div>
+
+</div>
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/startWith)

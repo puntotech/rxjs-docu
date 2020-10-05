@@ -154,7 +154,13 @@ observable.subscribe({
 // "¡Y así es como acaba!" inmediatamente después
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: SubscribableOrPromise<T>): Observable<[T]>`
 
@@ -167,6 +173,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[T]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: any, v2: any): Observable<[T, T2]>`
 
@@ -181,6 +193,12 @@ observable.subscribe({
 
 `Observable<[T, T2]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(v1: any, v2: any, v3: any): Observable<[T, T2, T3]>`
 
 ### Parámetros
@@ -194,6 +212,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[T, T2, T3]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: any, v2: any, v3: any, v4: any): Observable<[T, T2, T3, T4]>`
 
@@ -210,6 +234,12 @@ observable.subscribe({
 
 `Observable<[T, T2, T3, T4]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(v1: any, v2: any, v3: any, v4: any, v5: any): Observable<[T, T2, T3, T4, T5]>`
 
 ### Parámetros
@@ -225,6 +255,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[T, T2, T3, T4, T5]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any): Observable<[T, T2, T3, T4, T5, T6]>`
 
@@ -243,6 +279,12 @@ observable.subscribe({
 
 `Observable<[T, T2, T3, T4, T5, T6]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: [any]): Observable<[A]>`
 
 ### Parámetros
@@ -254,6 +296,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[A]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sources: [any, any]): Observable<[A, B]>`
 
@@ -267,6 +315,12 @@ observable.subscribe({
 
 `Observable<[A, B]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: [any, any, any]): Observable<[A, B, C]>`
 
 ### Parámetros
@@ -278,6 +332,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[A, B, C]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sources: [any, any, any, any]): Observable<[A, B, C, D]>`
 
@@ -291,6 +351,12 @@ observable.subscribe({
 
 `Observable<[A, B, C, D]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: [any, any, any, any, any]): Observable<[A, B, C, D, E]>`
 
 ### Parámetros
@@ -302,6 +368,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[A, B, C, D, E]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sources: [any, any, any, any, any, any]): Observable<[A, B, C, D, E, F]>`
 
@@ -315,6 +387,12 @@ observable.subscribe({
 
 `Observable<[A, B, C, D, E, F]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: A): Observable<ObservedValuesFromArray<A>[]>`
 
 ### Parámetros
@@ -326,6 +404,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<ObservedValuesFromArray<A>[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sourcesObject: {}): Observable<never>`
 
@@ -339,6 +423,12 @@ observable.subscribe({
 
 `Observable<never>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sourcesObject: T): Observable<{[K in keyof T]: ObservedValueOf<T[K]>;}>`
 
 ### Parámetros
@@ -350,6 +440,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<{ [K in keyof T]: ObservedValueOf<T[K]>; }>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(...args: any[]): Observable<any>`
 
@@ -363,6 +459,12 @@ observable.subscribe({
 
 `Observable<any>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(...sources: any[]): Observable<T[]>`
 
 ### Parámetros
@@ -374,6 +476,11 @@ observable.subscribe({
 ### Retorna
 
 `Observable<T[]>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -98,7 +98,13 @@ result.subscribe((x) => console.log(x));
 // (click) = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `concatMapTo(observable: O): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -111,6 +117,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concatMapTo(observable: O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -125,6 +137,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `concatMapTo(observable: O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -137,6 +155,11 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

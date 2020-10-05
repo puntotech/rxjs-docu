@@ -84,7 +84,13 @@ const result = higherOrder.pipe(combineAll());
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `combineAll(): OperatorFunction<ObservableInput<T>, T[]>`
 
@@ -96,6 +102,12 @@ No recibe ningún parámetro.
 
 `OperatorFunction<ObservableInput<T>, T[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineAll(): OperatorFunction<any, T[]>`
 
 ### Parámetros
@@ -105,6 +117,12 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<any, T[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineAll(project: (...values: T[]) => R): OperatorFunction<ObservableInput<T>, R>`
 
@@ -118,6 +136,12 @@ No recibe ningún parámetro.
 
 `OperatorFunction<ObservableInput<T>, R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineAll(project: (...values: any[]) => R): OperatorFunction<any, R>`
 
 ### Parámetros
@@ -129,6 +153,10 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<any, R>`
+
+</div>
+</div>
+</details>
 
 ## Recursos adicionales
 

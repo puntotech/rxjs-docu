@@ -172,7 +172,13 @@ of(
 // { id: 3, values: [ 'TSLint' ] }
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K): OperatorFunction<T, GroupedObservable<K, T>>`
 
@@ -185,6 +191,12 @@ of(
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector: void, durationSelector: (grouped: GroupedObservable<K, T>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, T>>`
 
@@ -199,6 +211,12 @@ of(
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector?: (value: T) => R, durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, R>>`
 
@@ -215,6 +233,12 @@ Tipo: <code>(grouped: GroupedObservable) => Observable</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, R>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector?: (value: T) => R, durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>, subjectSelector?: () => Subject<R>): OperatorFunction<T, GroupedObservable<K, R>>`
 
@@ -233,6 +257,11 @@ Tipo: <code>() => Subject</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, R>>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -169,9 +169,15 @@ concat(timer, timer) // ¡Concatenando el mismo Observable!
 // "...y se acabó!" tras 4s
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
 
-concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>
+<div class="overload-section">
+
+### Firma
+
+`concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>`
 
 ### Parámetros
 
@@ -183,6 +189,12 @@ concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>
 ### Retorna
 
 `Observable<ObservedValueOf<O1>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concat(v1: O1, v2: O2, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
 
@@ -197,6 +209,12 @@ concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>
 ### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
@@ -213,6 +231,12 @@ concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
 
 ### Parámetros
@@ -228,6 +252,12 @@ concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>
 ### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
@@ -246,7 +276,13 @@ concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
-concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
 
 ### Parámetros
 
@@ -264,6 +300,12 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `concat(v1: O1): Observable<ObservedValueOf<O1>>`
 
 ### Parámetros
@@ -275,6 +317,12 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 ### Retorna
 
 `Observable<ObservedValueOf<O1>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concat(v1: O1, v2: O2): Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
 
@@ -288,6 +336,12 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 ### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concat(v1: O1, v2: O2, v3: O3): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
@@ -303,6 +357,12 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `concat(v1: O1, v2: O2, v3: O3, v4: O4): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
 
 ### Parámetros
@@ -317,6 +377,12 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 ### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
@@ -334,6 +400,12 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
 
 ### Parámetros
@@ -345,12 +417,17 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 <tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
 <tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
 <tr><td>v6</td><td>Tipo: <code>O6</code>.</td></tr>
-<tr><td></td><td></td></tr>
 </table>
 
 ### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concat(...observables: O[]): Observable<ObservedValueOf<O>>`
 
@@ -364,6 +441,12 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 
 `Observable<ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `concat(...observables: (SchedulerLike | O)[]): Observable<ObservedValueOf<O>>`
 
 ### Parámetros
@@ -376,17 +459,11 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 
 `Observable<ObservedValueOf<O>>`
 
-`concat(...observables: any[]): Observable<R>`
+</div>
 
-### Parámetros
+<div class="overload-section">
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
-
-`Observable<R>`
+### Firma
 
 `concat(...observables: any[]): Observable<R>`
 
@@ -399,6 +476,29 @@ concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike)
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`concat(...observables: any[]): Observable<R>`
+
+### Parámetros
+
+<table>
+<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
+</table>
+
+### Retorna
+
+`Observable<R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

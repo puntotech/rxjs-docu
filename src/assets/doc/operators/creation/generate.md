@@ -26,7 +26,7 @@
 Un Scheduler para planificar el bucle de generación. Si no se proporciona, por defecto se emitirá inmediatamente.</td></tr>
 </table>
 
-## Retorna
+### Retorna
 
 `Observable<S>`: La secuencia generada.
 
@@ -82,7 +82,13 @@ evenNumber$.subscribe((number) => console.log(number));
 // Salida: 2, 4, 6, 8, 10
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `generate<T, S>(initialStateOrOptions: S | GenerateOptions<T, S>, condition?: ConditionFunc<S>, iterate?: IterateFunc<S>, resultSelectorOrObservable?: SchedulerLike | ResultFunc<S, T>, scheduler?: SchedulerLike): Observable<T>`
 
@@ -104,6 +110,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `generate(initialState: S, condition: ConditionFunc<S>, iterate: IterateFunc<S>, resultSelector: ResultFunc<S, T>, scheduler?: SchedulerLike): Observable<T>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes.
@@ -123,6 +135,12 @@ Un Scheduler para planificar el bucle de generación. Si no se proporciona, por 
 
 `Observable<T>`: La secuencia generada.
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `generate(options: GenerateBaseOptions<S>): Observable<S>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes. Esta sobrecarga acepta un objeto `options` que puede contener `initialState`, `iterate`, `condition` y `scheduler`.
@@ -137,6 +155,12 @@ Genera una secuencia observable ejecutando un bucle impulsado por el estado para
 
 `Observable<S>`: La secuencia generada.
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `generate(options: GenerateOptions<T, S>): Observable<T>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes. Esta sobrecarga acepta un objeto `options` que puede contener `initialState`, `iterate`, `condition`, `resultSelector` y `scheduler`.
@@ -150,6 +174,11 @@ Genera una secuencia observable ejecutando un bucle impulsado por el estado para
 ### Retorna
 
 `Observable<T>`: La secuencia generada.
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -56,7 +56,13 @@ const count = ones.pipe(reduce((acc, one) => acc + one, seed));
 count.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `reduce(accumulator: (acc: R, value: T, index: number) => R, seed: R): OperatorFunction<T, R>`
 
@@ -70,6 +76,12 @@ count.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `reduce(accumulator: (acc: T, value: T, index: number) => T, seed?: T): MonoTypeOperatorFunction<T>`
 
@@ -85,6 +97,12 @@ Tipo: <code>T</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `reduce(accumulator: (acc: R, value: T, index: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -96,6 +114,11 @@ Tipo: <code>T</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

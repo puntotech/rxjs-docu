@@ -100,7 +100,13 @@ bmi.subscribe((x) => console.log("BMI es " + x));
 // BMI es 23.671253629592222
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: [O1], resultSelector: (v1: ObservedValueOf<O1>) => R, scheduler?: SchedulerLike): Observable<R>`
 
@@ -117,6 +123,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(sources: [O1, O2], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>) => R, scheduler?: SchedulerLike): Observable<R>`
 
 ### Parámetros
@@ -131,6 +143,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: [O1, O2, O3], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>) => R, scheduler?: SchedulerLike): Observable<R>`
 
@@ -147,6 +165,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(sources: [O1, O2, O3, O4], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>) => R, scheduler?: SchedulerLike): Observable<R>`
 
 ### Parámetros
@@ -161,6 +185,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4, O5], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>) => R, scheduler?: SchedulerLike): Observable<R>`
 
@@ -177,6 +207,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(sources: [O1, O2, O3, O4, O5, O6], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>, v6: ObservedValueOf<O6>) => R, scheduler?: SchedulerLike): Observable<R>`
 
 ### Parámetros
@@ -191,6 +227,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: O[], resultSelector: (...args: ObservedValueOf<O>[]) => R, scheduler?: SchedulerLike): Observable<R>`
 
@@ -207,6 +249,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(v1: O1, resultSelector: (v1: ObservedValueOf<O1>) => R, scheduler?: SchedulerLike): Observable<R>`
 
 ### Parámetros
@@ -221,6 +269,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 combineLatest(v1: O1, v2: O2, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>) => R, scheduler?: `SchedulerLike): Observable<R>`
 
@@ -238,6 +292,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(v1: O1, v2: O2, v3: O3, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>) => R, scheduler?: SchedulerLike): Observable<R>`
 
 ### Parámetros
@@ -254,6 +314,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>) => R, scheduler?: SchedulerLike): Observable<R>`
 
@@ -273,6 +339,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>) => R, scheduler?: SchedulerLike): Observable<R>`
 
 ### Parámetros
@@ -291,6 +363,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>, v6: ObservedValueOf<O6>) => R, scheduler?: SchedulerLike): Observable<R>`
 
@@ -312,6 +390,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(sources: [O1], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>]>`
 
 ### Parámetros
@@ -325,6 +409,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: [O1, O2], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
@@ -340,6 +430,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(sources: [O1, O2, O3], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
 ### Parámetros
@@ -353,6 +449,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
@@ -368,6 +470,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(sources: [O1, O2, O3, O4, O5], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
 ### Parámetros
@@ -381,6 +489,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4, O5, O6], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
@@ -396,6 +510,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(sources: O[], scheduler: SchedulerLike): Observable<ObservedValueOf<O>[]>`
 
 ### Parámetros
@@ -409,6 +529,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<ObservedValueOf<O>[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(sources: [O1]): Observable<[ObservedValueOf<O1>]>`
 
@@ -424,6 +550,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `combineLatest(sources: [O1, O2]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 ### Parámetros
 
 <table>
@@ -437,6 +569,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `combineLatest(sources: [O1, O2, O3]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 ### Parámetros
 
 <table>
@@ -449,6 +587,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `combineLatest(sources: [O1, O2, O3, O4]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 ### Parámetros
 
 <table>
@@ -459,7 +603,13 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 ### Retorna
 
-`combineLatest(sources: [O1, O2, O3, O4, O5]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
+`combineLatest(sources: [O1, O2, O3, O4, O5]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>,
+
+</div>
+
+<div class="overload-section">
+
+### FirmaObservedValueOf<O5>]>`
 
 ### Parámetros
 
@@ -471,7 +621,13 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 ### Retorna
 
-`combineLatest(sources: [O1, O2, O3, O4, O5, O6]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
+`combineLatest(sources: [O1, O2, O3, O4, O5, O6]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>,
+
+</div>
+
+<div class="overload-section">
+
+### FirmaObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
 ### Parámetros
 
@@ -483,6 +639,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `combineLatest(sources: O[]): Observable<ObservedValueOf<O>[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 ### Parámetros
 
@@ -496,6 +658,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `combineLatest(v1: O1, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 ### Parámetros
 
 <table>
@@ -508,6 +676,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(v1: O1, v2: O2, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
@@ -524,6 +698,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(v1: O1, v2: O2, v3: O3, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
 ### Parámetros
@@ -539,6 +719,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
@@ -557,6 +743,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
 ### Parámetros
@@ -574,6 +766,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
@@ -594,6 +792,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(...observables: O[]): Observable<any[]>`
 
 ### Parámetros
@@ -606,6 +810,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<any[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(...observables: any[]): Observable<R>`
 
 ### Parámetros
@@ -617,6 +827,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(array: O[], resultSelector: (...values: ObservedValueOf<O>[]) => R, scheduler?: SchedulerLike): Observable<R>`
 
@@ -633,6 +849,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(...observables: (SchedulerLike | O)[]): Observable<any[]>`
 
 ### Parámetros
@@ -644,6 +866,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<any[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineLatest(...observables: (SchedulerLike | O | ((...values: ObservedValueOf<O>[]) => R))[]): Observable<R>`
 
@@ -657,6 +885,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineLatest(...observables: any[]): Observable<R>`
 
 ### Parámetros
@@ -668,6 +902,11 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

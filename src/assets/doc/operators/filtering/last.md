@@ -98,7 +98,13 @@ pokemon$
 // Salida: { name: "Bulbasaur", type: "Grass" }
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `last(predicate?: null, defaultValue?: D): OperatorFunction<T, T | D>`
 
@@ -115,6 +121,12 @@ Tipo: <code>D</code>.</td></tr>
 
 `OperatorFunction<T, T | D>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `last(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue?: S): OperatorFunction<T, S>`
 
 ### Parámetros
@@ -129,6 +141,12 @@ Tipo: <code>S</code>.</td></tr>
 
 `OperatorFunction<T, S>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `last(predicate: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
 
 ### Parámetros
@@ -142,6 +160,11 @@ Tipo: <code>D</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T | D>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -85,7 +85,13 @@ const tagNames = clicks.pipe(pluck("target", "tagName"));
 tagNames.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1): OperatorFunction<T, T[K1]>`
 
@@ -98,6 +104,12 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, T[K1]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1, k2: K2): OperatorFunction<T, T[K1][k2]>`
 
@@ -112,6 +124,12 @@ tagNames.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, T[K1][k2]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `pluck(k1: K1, k2: K2, k3: K3): OperatorFunction<T, T[K1][k2][K3]>`
 
 ### Parámetros
@@ -125,6 +143,12 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4): OperatorFunction<T, T[K1][k2][K3][k4]>`
 
@@ -141,6 +165,12 @@ tagNames.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, T[K1][k2][K3][k4]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5): OperatorFunction<T, T[K1][k2][K3][k4][K5]>`
 
 ### Parámetros
@@ -156,6 +186,12 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3][k4][K5]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5, k6: K6): OperatorFunction<T, T[K1][k2][K3][k4][K5][k6]>`
 
@@ -174,6 +210,12 @@ tagNames.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, T[K1][k2][K3][k4][K5][k6]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `pluck(...properties: string[]): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -185,6 +227,11 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

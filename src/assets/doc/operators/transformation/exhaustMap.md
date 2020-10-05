@@ -81,49 +81,68 @@ const result = clicks.pipe(exhaustMap((ev) => interval(1000).pipe(take(5))));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `exhaustMap(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
 ### Parámetros
 
-project
-
-Tipo: <code>(value: T, index: number) => O</code>.
+<table>
+<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
+</table>
 
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `exhaustMap(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
 ### Parámetros
 
-project
-
-Tipo: <code>(value: T, index: number) => O</code>.
-resultSelector
-
-Tipo: <code>undefined</code>.
+<table>
+<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
+<tr><td>resultSelector</td><td>Tipo: <code>undefined</code>.</td></tr>
+</table>
 
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `exhaustMap(project: (value: T, index: number) => any, resultSelector: (outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
 
-project
-
-Tipo: <code>(value: T, index: number) => any</code>.
-resultSelector
-
-Tipo: <code>(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R</code>.
+<table>
+<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => any</code>.</td></tr>
+<tr><td>resultSelector</td><td>Tipo: <code>(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R</code>.</td></tr>
+</table>
 
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

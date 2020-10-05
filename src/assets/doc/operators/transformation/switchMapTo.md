@@ -75,7 +75,13 @@ const result = clicks.pipe(switchMapTo(interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `switchMapTo(observable: any): OperatorFunction<any, R>`
 
@@ -88,6 +94,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<any, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `switchMapTo(observable: any, resultSelector: undefined): OperatorFunction<T, R>`
 
@@ -102,6 +114,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `switchMapTo(observable: any, resultSelector: (outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -114,6 +132,11 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

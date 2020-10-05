@@ -128,7 +128,13 @@ const result = clicks.pipe(takeWhile((ev) => ev.clientX > 200));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `takeWhile(predicate: (value: T, index: number) => value is S): OperatorFunction<T, S>`
 
@@ -141,6 +147,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, S>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `takeWhile(predicate: (value: T, index: number) => value is S, inclusive: false): OperatorFunction<T, S>`
 
@@ -155,6 +167,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, S>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `takeWhile(predicate: (value: T, index: number) => boolean, inclusive?: boolean): MonoTypeOperatorFunction<T>`
 
 ### Parámetros
@@ -168,6 +186,11 @@ Tipo: <code>boolean</code>.</td></tr>
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

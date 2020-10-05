@@ -104,7 +104,13 @@ result.subscribe((x) => console.log(x));
 // continúa listando a,b,c con un el número ascendiente que corresponda
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `mergeMap(project: (value: T, index: number) => O, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -119,6 +125,12 @@ Tipo: <code>number.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `mergeMap(project: (value: T, index: number) => O, resultSelector: undefined, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -136,6 +148,12 @@ Tipo: <code>number.</td></tr>
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `mergeMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R, concurrent?: number): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -150,6 +168,11 @@ Tipo: <code>number.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

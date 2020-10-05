@@ -114,7 +114,13 @@ merged.subscribe((x) => console.log(x));
 //   timer3 continuará emitiendo un valor cada 500ms hasta que se complete
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, scheduler: SchedulerLike): Observable<T>`
 
@@ -128,6 +134,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, concurrent: number, scheduler: SchedulerLike): Observable<T>`
 
@@ -143,6 +155,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, scheduler: SchedulerLike): Observable<T | T2>`
 
 ### Parámetros
@@ -156,6 +174,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2>`
 
@@ -172,6 +196,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, scheduler: SchedulerLike): Observable<T | T2 | T3>`
 
 ### Parámetros
@@ -186,6 +216,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3>`
 
@@ -203,6 +239,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2 | T3>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4>`
 
 ### Parámetros
@@ -218,6 +260,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3 | T4>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4>`
 
@@ -236,6 +284,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2 | T3 | T4>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5>`
 
 ### Parámetros
@@ -252,6 +306,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5>`
 
@@ -271,6 +331,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
 ### Parámetros
@@ -288,6 +354,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | `T3 | T4 | T5 | T6>`
 
@@ -308,6 +380,12 @@ merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, 
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any): Observable<T>`
 
 ### Parámetros
@@ -319,6 +397,12 @@ merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, 
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, concurrent?: number): Observable<T>`
 
@@ -334,6 +418,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any): Observable<T | T2>`
 
 ### Parámetros
@@ -346,6 +436,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, concurrent?: number): Observable<T | T2>`
 
@@ -362,6 +458,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any): Observable<T | T2 | T3>`
 
 ### Parámetros
@@ -375,6 +477,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, concurrent?: number): Observable<T | T2 | T3>`
 
@@ -392,6 +500,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any): Observable<T | T2 | T3 | T4>`
 
 ### Parámetros
@@ -406,6 +520,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3 | T4>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, concurrent?: number): Observable<T | T2 | T3 | T4>`
 
@@ -424,6 +544,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3 | T4>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any): Observable<T | T2 | T3 | T4 | T5>`
 
 ### Parámetros
@@ -439,6 +565,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, concurrent?: number): Observable<T | T2 | T3 | T4 | T5>`
 
@@ -458,6 +590,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
 ### Parámetros
@@ -474,6 +612,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent?: number): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
@@ -494,17 +638,11 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-`merge(...observables: any[]): Observable<T>`
+</div>
 
-### Parámetros
+<div class="overload-section">
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
-
-`Observable<T>`
+### Firma
 
 `merge(...observables: any[]): Observable<T>`
 
@@ -518,6 +656,30 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`merge(...observables: any[]): Observable<T>`
+
+### Parámetros
+
+<table>
+<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
+</table>
+
+### Retorna
+
+`Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(...observables: any[]): Observable<R>`
 
 ### Parámetros
@@ -530,6 +692,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(...observables: any[]): Observable<R>`
 
 ### Parámetros
@@ -541,6 +709,11 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

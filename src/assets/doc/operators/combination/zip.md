@@ -22,7 +22,7 @@
 <tr><td>observables</td><td>Tipo: <code>(O | ((...values: ObservedValueOf[]) => R))[]</code>.</td></tr>
 </table>
 
-### Retrona
+### Retorna
 
 `Observable<ObservedValueOf<O>[] | R>`
 
@@ -87,7 +87,13 @@ zip(age$, name$, isDev$)
 // { age: 29, name: 'Beer', isDev: false }
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `zip(v1: O1, resultSelector: (v1: ObservedValueOf<O1>) => R): Observable<R>`
 
@@ -101,6 +107,12 @@ zip(age$, name$, isDev$)
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(v1: O1, v2: O2, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>) => R): Observable<R>`
 
@@ -116,6 +128,12 @@ zip(age$, name$, isDev$)
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(v1: O1, v2: O2, v3: O3, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>) => R): Observable<R>`
 
 ### Parámetros
@@ -130,6 +148,12 @@ zip(age$, name$, isDev$)
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(v1: O1, v2: O2, v3: O3, v4: O4, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>) => R): Observable<R>`
 
@@ -147,6 +171,12 @@ zip(age$, name$, isDev$)
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>) => R): Observable<R>`
 
 ### Parámetros
@@ -163,6 +193,12 @@ zip(age$, name$, isDev$)
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>, v6: ObservedValueOf<O6>) => R): Observable<R>`
 
@@ -182,6 +218,12 @@ zip(age$, name$, isDev$)
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(v1: O1, v2: O2): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
 ### Parámetros
@@ -194,6 +236,12 @@ zip(age$, name$, isDev$)
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(v1: O1, v2: O2, v3: O3): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
@@ -208,6 +256,12 @@ zip(age$, name$, isDev$)
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(v1: O1, v2: O2, v3: O3, v4: O4): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
@@ -224,6 +278,12 @@ zip(age$, name$, isDev$)
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, `ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
 ### Parámetros
@@ -239,6 +299,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 ### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
@@ -257,6 +323,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(array: O[]): Observable<ObservedValueOf<O>[]>`
 
 ### Parámetros
@@ -269,6 +341,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 
 `Observable<ObservedValueOf<O>[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(array: any[]): Observable<R>`
 
 ### Parámetros
@@ -280,6 +358,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(array: O[], resultSelector: (...values: ObservedValueOf<O>[]) => R): Observable<R>`
 
@@ -294,6 +378,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(array: any[], resultSelector: (...values: any[]) => R): Observable<R>`
 
 ### Parámetros
@@ -307,6 +397,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(...observables: O[]): Observable<ObservedValueOf<O>[]>`
 
 ### Parámetros
@@ -318,6 +414,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 ### Retorna
 
 `Observable<ObservedValueOf<O>[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `zip(...observables: (O | ((...values: ObservedValueOf<O>[]) => R))[]): Observable<R>`
 
@@ -331,6 +433,12 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `zip(...observables: any[]): Observable<R>`
 
 ### Parámetros
@@ -342,6 +450,11 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -108,7 +108,13 @@ const positions = clicks.pipe(
 positions.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `tap(next: null, error: null, complete: () => void): MonoTypeOperatorFunction<T>`
 
@@ -123,6 +129,12 @@ positions.subscribe((x) => console.log(x));
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `tap(next: null, error: (error: any) => void, complete?: () => void): MonoTypeOperatorFunction<T>`
 
@@ -139,6 +151,12 @@ Tipo: <code>() => void</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `tap(next: (value: T) => void, error: null, complete: () => void): MonoTypeOperatorFunction<T>`
 
 ### Parámetros
@@ -152,6 +170,12 @@ Tipo: <code>() => void</code>.</td></tr>
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `tap(next?: (x: T) => void, error?: (e: any) => void, complete?: () => void): MonoTypeOperatorFunction<T>`
 
@@ -176,6 +200,12 @@ Tipo: <code>() => void</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `tap(observer: PartialObserver<T>): MonoTypeOperatorFunction<T>`
 
 ### Parámetros
@@ -187,6 +217,11 @@ Tipo: <code>() => void</code>.</td></tr>
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -74,7 +74,13 @@ const buffered = clicks.pipe(bufferTime(2000, 5000));
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `bufferTime(bufferTimeSpan: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>`
 
@@ -89,6 +95,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bufferTime(bufferTimeSpan: number, bufferCreationInterval: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>`
 
@@ -105,6 +117,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `OperatorFunction<T, T[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bufferTime(bufferTimeSpan: number, bufferCreationInterval: number, maxBufferSize: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>`
 
 ### Parámetros
@@ -120,6 +138,11 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T[]>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

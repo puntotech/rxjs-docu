@@ -97,7 +97,13 @@ err => console.log(err) // 5
 );
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: Function, resultSelector: Function, scheduler?: SchedulerLike): (...args: any[]) => Observable<any>`
 
@@ -114,6 +120,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(...args: any[]) => Observable<any>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
 ### Parámetros
@@ -127,6 +139,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(...args: any[]) => Observable<any[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): () => Observable<[R1, R2, R3]>`
 
@@ -142,6 +160,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `() => Observable<[R1, R2, R3]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): () => Observable<[R1, R2]>`
 
 ### Parámetros
@@ -155,6 +179,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `() => Observable<[R1, R2]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): () => Observable<R1>`
 
@@ -170,6 +200,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `() => Observable<R1>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (callback: (err: any) => any) => any, scheduler?: SchedulerLike): () => Observable<void>`
 
 ### Parámetros
@@ -183,6 +219,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `() => Observable<void>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
@@ -198,6 +240,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(...args: any[]) => Observable<any[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<[R1, R2, R3]>`
 
 ### Parámetros
@@ -211,6 +259,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1) => Observable<[R1, R2, R3]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<[R1, R2]>`
 
@@ -226,6 +280,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1) => Observable<[R1, R2]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<R1>`
 
 ### Parámetros
@@ -239,6 +299,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1) => Observable<R1>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<void>`
 
@@ -254,6 +320,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1) => Observable<void>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
 ### Parámetros
@@ -267,6 +339,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(...args: any[]) => Observable<any[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<[R1, R2, R3]>`
 
@@ -282,6 +360,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2) => Observable<[R1, R2, R3]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<[R1, R2]>`
 
 ### Parámetros
@@ -295,6 +379,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2) => Observable<[R1, R2]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<R1>`
 
@@ -310,6 +400,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2) => Observable<R1>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<void>`
 
 ### Parámetros
@@ -323,6 +419,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2) => Observable<void>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
@@ -338,6 +440,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(...args: any[]) => Observable<any[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2, R3]>`
 
 ### Parámetros
@@ -351,6 +459,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2, R3]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2]>`
 
@@ -366,6 +480,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<R1>`
 
 ### Parámetros
@@ -379,6 +499,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<R1>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<void>`
 
@@ -394,6 +520,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<void>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
 ### Parámetros
@@ -407,6 +539,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(...args: any[]) => Observable<any[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2, R3]>`
 
@@ -422,6 +560,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2, R3]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2]>`
 
 ### Parámetros
@@ -435,6 +579,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<R1>`
 
@@ -450,6 +600,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<R1>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<void>`
 
 ### Parámetros
@@ -463,6 +619,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<void>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
@@ -478,6 +640,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(...args: any[]) => Observable<any[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2, R3]>`
 
 ### Parámetros
@@ -491,6 +659,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2, R3]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2]>`
 
@@ -506,6 +680,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<R1>`
 
 ### Parámetros
@@ -519,6 +699,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<R1>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<void>`
 
@@ -534,6 +720,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<void>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bindNodeCallback(callbackFunc: Function, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
 ### Parámetros
@@ -547,6 +739,11 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `(...args: any[]) => Observable<any[]>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

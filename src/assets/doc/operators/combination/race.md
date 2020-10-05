@@ -87,7 +87,13 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 // Emite 'Rápido' cada segundo
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: [any]): Observable<A>`
 
@@ -101,6 +107,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(arg: [any, any]): Observable<A | B>`
 
 ### Parámetros
@@ -112,6 +124,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<A | B>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: [any, any, any]): Observable<A | B | C>`
 
@@ -125,6 +143,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A | B | C>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(arg: [any, any, any, any]): Observable<A | B | C | D>`
 
 ### Parámetros
@@ -136,6 +160,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<A | B | C | D>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: [any, any, any, any, any]): Observable<A | B | C | D | E>`
 
@@ -149,6 +179,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A | B | C | D | E>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(arg: any[]): Observable<T>`
 
 ### Parámetros
@@ -160,6 +196,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: any[]): Observable<{}>`
 
@@ -173,6 +215,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<{}>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(a: any): Observable<A>`
 
 ### Parámetros
@@ -184,6 +232,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<A>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(a: any, b: any): Observable<A | B>`
 
@@ -198,7 +252,13 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A | B>`
 
-race(a: any, b: any, c: any): Observable<A | B | C>
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`race(a: any, b: any, c: any): Observable<A | B | C>`
 
 ### Parámetros
 
@@ -212,7 +272,13 @@ race(a: any, b: any, c: any): Observable<A | B | C>
 
 `Observable<A | B | C>`
 
-race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>`
 
 ### Parámetros
 
@@ -226,6 +292,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 ### Retorna
 
 `Observable<A | B | C | D>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(a: any, b: any, c: any, d: any, e: any): Observable<A | B | C | D | E>`
 
@@ -243,6 +315,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 
 `Observable<A | B | C | D | E>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(observables: any[]): Observable<T>`
 
 ### Parámetros
@@ -254,6 +332,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(observables: any[]): Observable<{}>`
 
@@ -267,6 +351,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 
 `Observable<{}>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(...observables: any[]): Observable<T>`
 
 ### Parámetros
@@ -279,6 +369,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(...observables: any[]): Observable<{}>`
 
 ### Parámetros
@@ -290,6 +386,11 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 ### Retorna
 
 `Observable<{}>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 
