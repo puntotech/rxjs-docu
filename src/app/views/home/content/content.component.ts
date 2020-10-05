@@ -10,6 +10,6 @@ export class ContentComponent implements AfterViewChecked {
   constructor(private highlightService: HighlightService) {}
 
   ngAfterViewChecked(): void {
-    this.highlightService.highlightAll();
+    this.highlightService.highlight();
   }
 }
