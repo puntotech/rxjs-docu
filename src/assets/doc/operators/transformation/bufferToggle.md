@@ -11,6 +11,9 @@
 
 <h2 class="subtitle"> Acumula valores del Observable fuente a partir de una emisión de <code>openings</code> en un búfer, que se cierra cuando el Observable retornado por la función <code>closingSelector</code> emite</h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `bufferToggle<T, O>(openings: SubscribableOrPromise<O>, closingSelector: (value: O) => SubscribableOrPromise<any>): OperatorFunction<T, T[]>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
+
+</details>
 
 ## Descripción
 

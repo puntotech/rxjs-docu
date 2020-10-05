@@ -29,6 +29,8 @@ El valor de acumulación inicial.</td></tr>
 
 `OperatorFunction<T, R>`: Un Observable de valores acumulados.
 
+</details>
+
 ## Descripción
 
 Es como `reduce`, pero emite el valor acumulado cada vez que la fuente emite un valor.

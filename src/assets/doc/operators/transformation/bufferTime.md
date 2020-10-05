@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Acumula valores del Observable fuente durante un periodo de tiempo
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `bufferTime<T>(bufferTimeSpan: number): OperatorFunction<T, T[]>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
+
+</details>
 
 ## Descripción
 

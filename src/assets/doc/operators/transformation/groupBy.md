@@ -11,6 +11,9 @@
 
 <h2 class="subtitle">Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `groupBy<T, K, R>(keySelector: (value: T) => K, elementSelector?: void | ((value: T) => R), durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>, subjectSelector?: () => Subject<R>): OperatorFunction<T, GroupedObservable<K, R>>`
@@ -30,6 +33,8 @@ Tipo: <code>() => Subject</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, R>>`: Un Observable que emite `GroupedObservables`, cada uno de los cuales pertenece a un único valor clave. Cada grupo emite los elementos del Observable que comparten el mismo valor clave.
+
+</details>
 
 ## Descripción
 

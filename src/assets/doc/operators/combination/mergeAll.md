@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `mergeAll<T>(concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<ObservableInput<T>, T>`
@@ -26,6 +29,8 @@ El máximo número de Observables internos suscritos concurrentemente.</td></tr>
 ### Retorna
 
 `OperatorFunction<ObservableInput<T>, T>`: Un Observable que emite los valores de todos los Observables internos que emita el Observable fuente.
+
+</details>
 
 ## Descripción
 

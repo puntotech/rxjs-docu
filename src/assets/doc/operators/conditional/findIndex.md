@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `findIndex<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): OperatorFunction<T, number>`
@@ -27,6 +30,8 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 ### Retorna
 
 `OperatorFunction<T, number>`: Un Observable del índice del primer elemento que cumpla la condición.
+
+</details>
 
 ## Descripción
 

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite si solo existe un único valor que cumpla la condición
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `single<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): MonoTypeOperatorFunction<T>`
@@ -30,6 +33,8 @@ Una función para evaluar los elementos emitidos por el Observable fuente.</td><
 ### Lamza
 
 `EmptyError` Lanza un `EmptyError` si el Observable se completa sin emitir ninguna notificación `next`.
+
+</details>
 
 ## Descripción
 

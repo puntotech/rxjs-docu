@@ -4,7 +4,7 @@ La API listada a continuación será eliminada de la próxima versión mayor (X.
 
 <table>
 <tr><td>Scheduler</td><td> 	Scheduler es una implementación interna de RxJS, y no debe usarse directamente. En su lugar, se debe crear una clase propia e implementar SchedulerLike</td></tr>
-<tr><td>NotificationKind</td><td> 	NotificationKind está obsoleto, ya que los *const enums* no son compatibles con módulos aislados. Utilizar un <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings">literal de cadena</a> en su lugar.</td></tr>
+<tr><td>NotificationKind</td><td> 	NotificationKind está obsoleto, ya que los <i>const enums</i> no son compatibles con módulos aislados. Utilizar un <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings">literal de cadena</a> en su lugar.</td></tr>
 <tr><td>empty</td><td> 	Obsoleto. Utilizar la constante EMPTY, o scheduled (ej: `scheduled([], scheduler)` en su lugar)</td></tr>
 <tr><td>never</td><td> 	Obsoleto. Utilizar la constante NEVER en su lugar.</td></tr>
 <tr><td>ObservableLike</td><td> Usar InteropObservable</td></tr>

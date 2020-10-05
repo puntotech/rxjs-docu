@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Lleva a cabo un efecto colateral en cada emisión del Observable fuente, pero retorna un Observable que es idéntico a la fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `tap<T>(nextOrObserver?: NextObserver<T> | ErrorObserver<T> | CompletionObserver<T> | ((x: T) => void), error?: (e: any) => void, complete?: () => void): MonoTypeOperatorFunction<T>`
@@ -30,6 +33,8 @@ Callback for the completion of the source.</td></tr>
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable idéntico a la fuente, pero ejecuta el Observador o la/las callbacks en cada emisión.
+
+</details>
 
 ## Descripción
 

@@ -29,6 +29,8 @@
 
 <div class="fading-line"></div>
 
+</details>
+
 ## Descripción
 
 Cada argumento se convierte en una notificación next.

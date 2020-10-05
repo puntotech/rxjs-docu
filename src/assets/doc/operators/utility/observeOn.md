@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Reemite todas las notificaciones del Observable fuente con el planificador especificado
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `observeOn<T>(scheduler: SchedulerLike, delay: number = 0): MonoTypeOperatorFunction<T>`
@@ -30,6 +33,8 @@ Number of milliseconds that states with what delay every notification should be 
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite las mismas notificaciones que el Observable fuente, pero con el planificador especificado.
+
+</details>
 
 ## Descripción
 

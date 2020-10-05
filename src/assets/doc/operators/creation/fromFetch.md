@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Utiliza la API Fetch para hacer una petición HTTP
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `fromFetch<T>(input: string | Request, initWithSelector: RequestInit & { selector?: (response: Response) => any; } = {}): Observable<Response | T>`
@@ -27,6 +30,8 @@ Tipo: <code>RequestInit & { selector?: (response: Response) => any; }</code>.</t
 ### Retorna
 
 `Observable<Response | T>`: Un Observable que hace una petición HTTP usando la función `fetch` nativa, cuando un Observador se suscribe a él. La Suscripción está atada al `AbortController` para el `fetch`.
+
+</details>
 
 ## Descripción
 

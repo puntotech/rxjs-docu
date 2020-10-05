@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `sample<T>(notifier: Observable<any>): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite el valor más reciente del Observable fuente cuando el Observable `notifier` emite un valor o se completa.
+
+</details>
 
 ## Descripción
 

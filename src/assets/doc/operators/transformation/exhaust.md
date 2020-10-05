@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `exhaust<T>(): OperatorFunction<any, T>`
@@ -23,6 +26,8 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<any, T>`: Un Observable que recibe una fuente de Observables y propaga el primer Observable hasta que este se completa, antes de suscribirse al siguiente Observable.
+
+</details>
 
 ## Descripción
 

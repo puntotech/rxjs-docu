@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite los elementos que se especifiquen como argumentos antes de empezar a emitir las emisiones del Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `startWith<T, D>(...array: (SchedulerLike | T)[]): OperatorFunction<T, T | D>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, T | D>`: Un Observable que emite primero los elementos en el `Iterable` especificado, y después emite los valores emitidos por el Observable fuente.
+
+</details>
 
 ## Descripción
 

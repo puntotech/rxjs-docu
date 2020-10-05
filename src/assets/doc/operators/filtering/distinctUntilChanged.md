@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `distinctUntilChanged<T, K>(compare?: (x: K, y: K) => boolean, keySelector?: (x: T) => K): MonoTypeOperatorFunction<T>`

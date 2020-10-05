@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `bufferWhen<T>(closingSelector: () => Observable<any>): OperatorFunction<T, T[]>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
+
+</details>
 
 ## Descripción
 

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Convierte un Observable que emite elementos en uno que emite indicaciones de la cantidad de tiempo transcurrida entre emisiones
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `timeInterval<T>(scheduler: SchedulerLike = async): OperatorFunction<T, TimeInterval<T>>`
@@ -26,6 +29,8 @@ El planificador utilizado para obtener el tiempo.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, TimeInterval<T>>`: Un Observable que emite información sobre el valor y el intervalo.
+
+</details>
 
 ## Descripción
 

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `switchMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector?: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, ObservedValueOf<O> | R>`
@@ -27,6 +30,8 @@
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección (y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente, obteniendo únicamente los valores del Observable interno más reciente.
+
+</details>
 
 ## Descripción
 

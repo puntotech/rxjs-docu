@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente.
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `auditTime<T>(duration: number, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
@@ -27,6 +30,8 @@ El <code>SchedulerLike</code> que utilizar para gestionar los temporizadores que
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: An Observable that performs rate-limiting of emissions from the source Observable.
+
+</details>
 
 ## Descripción
 

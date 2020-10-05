@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Convierte una callback API del estilo de Node.js a una función que retorna un Observable
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `bindNodeCallback<T>(callbackFunc: Function, resultSelector: Function | SchedulerLike, scheduler?: SchedulerLike): (...args: any[]) => Observable<T>`
@@ -33,6 +36,8 @@ El planificador con el que planificar las <i>callbacks</i>.</td></tr>
 ### Retorna
 
 `(...args: any[]) => Observable<T>`: Una función que returna un Observable que emite los mismo valores que la _callback_ de Node.js devolvería.
+
+</details>
 
 ## Descripción
 

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `distinct<T, K>(keySelector?: (value: T) => K, flushes?: Observable<any>): MonoTypeOperatorFunction<T>`
@@ -28,6 +31,8 @@ Observable opcional para reiniciar el HashSet interno del operador.</td></tr>
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente de distinto valor.
+
+</details>
 
 ## Descripción
 

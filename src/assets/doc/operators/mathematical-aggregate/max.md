@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite el elemento de mayor valor
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `max<T>(comparer?: (x: T, y: T) => number): MonoTypeOperatorFunction<T>`
@@ -27,6 +30,8 @@ Función de comparación opcional, para comparar el valor de dos elementos.
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite el elemento de mayor valor.
+
+</details>
 
 ## Descripción
 

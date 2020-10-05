@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `expand<T, R>(project: (value: T, index: number) => any, concurrent: number = Number.POSITIVE_INFINITY, scheduler: SchedulerLike = undefined): OperatorFunction<T, R>`
@@ -31,6 +34,8 @@ El <code>SchedulerLike</code> que se utiliza para suscribirse a cada Observable 
 `OperatorFunction<T, R>`: Un Observable que emite los valores de la fuente y
 
 that emits the source values and also result of applying the projection function to each value emitted on the output Observable and and merging the results of the Observables obtained from this transformation.
+
+</details>
 
 ## Descripción
 

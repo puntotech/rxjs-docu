@@ -11,6 +11,9 @@
 
 <h2 class="subtitle">Convierte un Observable de orden superior en uno de primer orden aplicando <a href="/operators/combination/combineLatest">combineLatest</a> cuando el Observable de orden superior se completa</h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `combineAll<T, R>(project?: (...values: any[]) => R): OperatorFunction<T, R>`
@@ -25,6 +28,8 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</details>
 
 ## Descripción
 

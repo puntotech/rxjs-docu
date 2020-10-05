@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retorna un Observable que se salta las primeras x emisiones del Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `skip<T>(count: number): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se salta valores emitidos por el Observable fuente.
+
+</details>
 
 ## Descripción
 

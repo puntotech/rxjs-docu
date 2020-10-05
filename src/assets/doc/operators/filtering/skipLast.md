@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Saltar las últimas x emisiones del Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `skipLast<T>(count: number): MonoTypeOperatorFunction<T>`
@@ -29,6 +32,8 @@
 ### Lanza
 
 `ArgumentOutOfRangeError` Al usar `skipLast(i)`, se lanza un error `ArgumentOutOrRangeError` si `i < 0`.
+
+</details>
 
 ## Descripción
 

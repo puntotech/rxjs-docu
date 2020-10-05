@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `timeoutWith<T, R>(due: number | Date, withObservable: any, scheduler: SchedulerLike = async): OperatorFunction<T, T | R>`
@@ -28,6 +31,8 @@ El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</t
 ### Retorna
 
 `OperatorFunction<T, T | R>`: Un Observable que refleja el comportamiento de la fuente o, cuando no supera la comprobación del _timeout_, de un segundo Observable proporcionado por parámetros.
+
+</details>
 
 ## Descripción
 

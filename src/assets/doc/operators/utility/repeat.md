@@ -11,6 +11,9 @@
 
 <h2 class="subtitle"> Retorna un Observable que se resuscribe <code>count</code> veces al flujo fuente cuando el Observable fuente se completa</h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `repeat<T>(count: number = -1): MonoTypeOperatorFunction<T>`
@@ -28,6 +31,8 @@ El número de veces que se repiten los valores del Observable fuente. Si se espe
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se resuscribirá `count` veces al flujo fuente cuando el flujo fuente se complete.
+
+</details>
 
 ## Descripción
 

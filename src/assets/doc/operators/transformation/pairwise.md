@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Agrupa las emisiones consecutivas en pares y las emite en forma de array
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `pairwise<T>(): OperatorFunction<T, [T, T]>`
@@ -23,6 +26,8 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<T, [T, T]>`: Un Observable de pares (en forma de array) de valores consecutivos del Observable fuente.
+
+</details>
 
 ## Descripción
 

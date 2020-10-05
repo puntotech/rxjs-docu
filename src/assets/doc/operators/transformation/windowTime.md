@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana) periódicamente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `windowTime(windowTimeSpan: number, scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>`
@@ -27,6 +30,8 @@ El planificador con el que planificar los intervalos que determinan los límites
 ### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
+
+</details>
 
 ## Descripción
 

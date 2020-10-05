@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `distinctUntilKeyChanged<T, K extends keyof T>(key: K, compare?: (x: T[K], y: T[K]) => boolean): MonoTypeOperatorFunction<T>`
@@ -28,6 +31,8 @@ Función de comparación opcional que se utiliza para comprobar si un elemento e
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable that emite elementos del Observable fuente si la propiedad especificada es distinta a la del elemento anterior.
+
+</details>
 
 ## Descripción
 

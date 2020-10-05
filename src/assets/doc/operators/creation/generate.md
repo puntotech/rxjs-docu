@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `generate(initialState: S, condition: ConditionFunc<S>, iterate: IterateFunc<S>, scheduler?: SchedulerLike): Observable<S>`
@@ -29,6 +32,8 @@ Un Scheduler para planificar el bucle de generación. Si no se proporciona, por 
 ### Retorna
 
 `Observable<S>`: La secuencia generada.
+
+</details>
 
 ## Descripción
 

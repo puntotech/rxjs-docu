@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retorna un Observable que se salta los valores emitidos por el Observable fuente hasta que un segundo Observable emite un valor
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `skipUntil<T>(notifier: Observable<any>): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se salta elementos del Observable fuente hasta que el segundo Observable emite un valor. Entonces, comienza a emitir valores normalmente.
+
+</details>
 
 ## Descripción
 

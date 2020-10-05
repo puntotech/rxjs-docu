@@ -23,6 +23,8 @@
 
 `Observable<R>`: Un Observable que emite las emisiones de cada Observable de entrada.
 
+</details>
+
 ## Descripción
 
 Une varios Observables en uno solo.

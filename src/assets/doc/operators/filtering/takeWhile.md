@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite las emisiones del Observable fuente siempre y hasta cuando cumplan la condición especificada. Se completa en cuanto haya un valor que no cumpla la condición
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `takeWhile<T>(predicate: (value: T, index: number) => boolean, inclusive: boolean = false): MonoTypeOperatorFunction<T>`
@@ -27,6 +30,8 @@ Cuando valga <code>true</code>, el primer valor que incumpla la condición tambi
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite los valores del Observable fuente siempre y cuando cada valor cumpla la condición especificada.
+
+</details>
 
 ## Descripción
 

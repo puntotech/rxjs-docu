@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado por otro Observable sin que el Observable fuente emita ningún valor
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `debounce<T>(durationSelector: (value: T) => SubscribableOrPromise<any>): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente durante un periodo de tiempo determinado por el Observable retornado por `durationSelector`. Es posible que algunos valores se pierdan si se producen demasiado frecuentemente.
+
+</details>
 
 ## Descripción
 

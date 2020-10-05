@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Reintenta una secuencia Observable cuando ocurre un error
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `retryWhen<T>(notifier: (errors: Observable<any>) => Observable<any>): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con la lógica de reintento.
+
+</details>
 
 ## Descripción
 

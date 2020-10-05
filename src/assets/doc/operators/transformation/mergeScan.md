@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `mergeScan<T, R>(accumulator: (acc: R, value: T, index: number) => any, seed: R, concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<T, R>`
@@ -28,6 +31,8 @@ El máximo número de Observables internos a los que se suscribe de forma concur
 ### Retorna
 
 `OperatorFunction<T, R>`: Un Observable de los valores acumulados.
+
+</details>
 
 ## Descripción
 

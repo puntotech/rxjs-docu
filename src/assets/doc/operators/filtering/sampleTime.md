@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite la emisión más reciente del Observable fuente en cada periodo de tiempo determinado
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `sampleTime<T>(period: number, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
@@ -28,6 +31,8 @@ El <code>SchedulerLike</code> que utilizar para gestionar los temporizadores que
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite la emisión más reciente del Observable fuente en el intervalo de tiempo especificado.
+
+</details>
 
 ## Descripción
 

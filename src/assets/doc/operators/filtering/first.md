@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `first<T, D>(predicate?: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
@@ -32,6 +35,8 @@ El valor por defecto que se emitirá en el caso de que no se encuentre ningún e
 ### Lanza
 
 `EmptyError`: Lanza un `EmptyError` si el Observable se completa sin emitir ninguna notificación `next`.
+
+</details>
 
 ## Descripción
 

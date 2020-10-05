@@ -31,6 +31,8 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que contiene Observables proyectados de cada elemento de la fuente. Ignora los Observables proyectados que comiencen antes de que el Observable proyectado actual se haya completado.
 
+</details>
+
 ## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' todos estos Observables internos mediante el operador `exhaust`.

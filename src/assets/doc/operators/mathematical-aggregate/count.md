@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `count<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): OperatorFunction<T, number>`
@@ -32,6 +35,8 @@ Una función booleana para seleccionar qué valores se cuenta. Consta de los sig
 ### Retorna
 
 `OperatorFunction<T, number>`: Un Observable de un solo valor que representa el número de elementos contados.
+
+</details>
 
 ## Descripción
 

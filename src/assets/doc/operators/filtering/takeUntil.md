@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `takeUntil<T>(notifier: Observable<any>): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite los valores del Observable fuente hasta que el Observable notificador emita un valor.
+
+</details>
 
 ## Descripción
 

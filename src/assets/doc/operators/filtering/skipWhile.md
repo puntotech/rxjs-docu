@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Se salta las emisiones del Observable fuente hasta que una condición deje de cumplirse
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `skipWhile<T>(predicate: (value: T, index: number) => boolean): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que comienza a emitir las emisiones del Observable fuente cuando la condición especificada en la función `predicate` retorne `false`.
+
+</details>
 
 ## Descripción
 

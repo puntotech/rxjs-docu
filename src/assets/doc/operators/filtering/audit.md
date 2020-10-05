@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Ignora los valores emitidos por el Observable fuente durante un periodo de tiempo cuya duración está determinada por un segundo Observable. Una vez terminado el periodo, emite el valor más reciente y repite el proceso
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `audit<T>(durationSelector: (value: T) => SubscribableOrPromise<any>): MonoTypeOperatorFunction<T>`
@@ -26,6 +29,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que limita las emisiones del Observable fuente.
+
+</details>
 
 ## Descripción
 

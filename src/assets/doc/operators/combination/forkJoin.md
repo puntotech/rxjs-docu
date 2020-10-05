@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Accepts an Array of ObservableInput or a dictionary Object of ObservableInput and returns an Observable that emits eitoeraan array of values in the exact same order as the passed array, or a dictionary of values in the same shape as the passed dictionary.
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `forkJoin(...sources: any[]): Observable<any>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `Observable<any>`: Un Observable que emite o un array de las últimas emisiones de los Observables de entrada o el valor de la función de proyección.
+
+</details>
 
 ## Descripción
 

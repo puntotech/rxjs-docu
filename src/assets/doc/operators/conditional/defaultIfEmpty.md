@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `defaultIfEmpty<T, R>(defaultValue: R = null): OperatorFunction<T, T | R>`
@@ -26,6 +29,8 @@ El valor por defecto utilizado en el caso de que el Observable esté vacío.</td
 ### Retorna
 
 `OperatorFunction<T, T | R>`: Un Observable que puede emitir el valor por defecto especificado si el Observable fuente no emite ningún valor, o los valores emitidos por el Observable fuente.
+
+</details>
 
 ## Descripción
 

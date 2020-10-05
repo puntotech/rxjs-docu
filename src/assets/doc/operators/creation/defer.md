@@ -30,6 +30,8 @@ Puede retornar una Promesa, que se convertirá en Observable sobre la marcha.</t
 
 <div class="fading-line"></div>
 
+</details>
+
 ## Descripción
 
 El Observable se crea de forma diferida, es decir, solamente se crea cuando un Observador se suscribe a él.

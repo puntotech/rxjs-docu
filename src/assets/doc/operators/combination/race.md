@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retorna un Observable que refleja al primer Observable que emita un valor
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `race<T>(...observables: any[]): Observable<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `Observable<T>`: Un Observable que refleja las emisiones del primer Observable que emita un valor.
+
+</details>
 
 ## Descripción
 

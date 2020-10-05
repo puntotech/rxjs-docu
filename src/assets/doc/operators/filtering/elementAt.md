@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `elementAt<T>(index: number, defaultValue?: T): MonoTypeOperatorFunction<T>`
@@ -31,6 +34,8 @@ El valor por defecto retornado para índices inexistentes.</td></tr>
 ### Lanza
 
 `ArgumentOutOfRangeError` Al usar `elementAt(i)`, se lanza un `ArgumentOutOrRangeError` si `i < 0` o si el Observable se completa antes de emitir la i-ésima notificación.
+
+</details>
 
 ## Descripción
 

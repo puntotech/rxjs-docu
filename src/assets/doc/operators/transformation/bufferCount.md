@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que este alcanza el tamaño máximo indicado
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `bufferCount<T>(bufferSize: number, startBufferEvery: number = null): OperatorFunction<T, T[]>`
@@ -27,6 +30,8 @@ El intervalo a partir del cual abrir un nuevo búfer. Por ejemplo, si el valor d
 ### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
+
+</details>
 
 ## Descripción
 

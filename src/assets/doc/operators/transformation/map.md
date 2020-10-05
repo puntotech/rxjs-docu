@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `map<T, R>(project: (value: T, index: number) => R, thisArg?: any): OperatorFunction<T, R>`
@@ -27,6 +30,8 @@ Un argumento opcional para definir el valor del <code>this</code> en la función
 ### Retorna
 
 `OperatorFunction<T, R>`: Un Observable que emite los valores del Observable fuente transformados por la función de proyección.
+
+</details>
 
 ## Descripción
 

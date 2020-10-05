@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Suscribe a los Observadores asíncronamente al Observable fuente en función del <code>SchedulerLike</code> especificado
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `subscribeOn<T>(scheduler: SchedulerLike, delay: number = 0): MonoTypeOperatorFunction<T>`
@@ -27,6 +30,8 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado para que sus suscripciones ocurran en función del `SchedulerLike` especificado.
+
+</details>
 
 ## Descripción
 

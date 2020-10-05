@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `withLatestFrom<T, R>(...args: any[]): OperatorFunction<T, R>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, R>`: Un Observable de valores proyectados de cada Observable _input_, o un array de los valores más recientes de cada Observable _input_.
+
+</details>
 
 ## Descripción
 

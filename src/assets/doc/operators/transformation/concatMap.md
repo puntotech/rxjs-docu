@@ -29,6 +29,8 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección (y el `resultSelector` opcional que está obsoleto) a cada elemento emitido por el Observable fuente y obtener los valores de cada Observable interno proyectado de forma secuencial.
 
+</details>
+
 ## Descripción
 
 Proyecta cada valor a un Observable interno, que posteriormente 'aplasta' usando el operador `concatAll`.

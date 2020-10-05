@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `timeout<T>(due: number | Date, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
@@ -27,6 +30,8 @@ El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</t
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que refleja el comportamiento de la fuente, a no ser que la comprobación del _timeout_ falle.
+
+</details>
 
 ## Descripción
 

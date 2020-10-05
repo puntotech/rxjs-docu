@@ -11,6 +11,9 @@
 
 <h2 class="subtitle">Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a <code>complete</code> o a <code>error</code></h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `ignoreElements(): OperatorFunction<any, never>`
@@ -22,6 +25,8 @@ No recibe ningún parámetro
 ### Retorna
 
 `OperatorFunction<any, never>`: Un Observable vacío que solo propaga las llamadas `complete` o `error` que haga el Observable fuente.
+
+</details>
 
 ## Descripción
 

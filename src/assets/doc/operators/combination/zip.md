@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Combina varios Observables para crear un Observable cuyos valores se calculen a partir de las emisiones, en orden, de cada uno de sus Observables de entrada
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `zip<O extends ObservableInput<any>, R>(...observables: (O | ((...values: ObservedValueOf<O>[]) => R))[]): Observable<ObservedValueOf<O>[] | R>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `Observable<ObservedValueOf<O>[] | R>`
+
+</details>
 
 ## Descripción
 

@@ -11,6 +11,9 @@
 
 <h2 class="subtitle"> Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en complete o en error></h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `finalize<T>(callback: () => void): MonoTypeOperatorFunction<T>`

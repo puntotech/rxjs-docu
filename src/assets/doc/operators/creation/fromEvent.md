@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `fromEvent<T>(target: FromEventTarget<T>, eventName: string, options?: EventListenerOptions | ((...args: any[]) => T), resultSelector?: (...args: any[]) => T): Observable<T>`
@@ -35,6 +38,8 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 ### Retorna
 
 `Observable<T>`:
+
+</details>
 
 ## Descripción
 

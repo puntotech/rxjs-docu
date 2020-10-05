@@ -29,6 +29,8 @@ El valor de acumulación inicial.</td></tr>
 
 `OperatorFunction<T, T | R>`: Un Observable que emite un solo valor, resutante de haber acumulado los valores emitidos por el Observable fuente.
 
+</details>
+
 ## Descripción
 
 Combina todos los valores emitidos por la fuente mediante una función acumuladora, que indica cómo unir cada nuevo valor al valor acumulado.

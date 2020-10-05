@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Decide qué Observable será suscrito en tiempo de suscripción
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `iif<T = never, F = never>(condition: () => boolean, trueResult: SubscribableOrPromise<T> = EMPTY, falseResult: SubscribableOrPromise<F> = EMPTY): Observable<T | F>`
@@ -29,6 +32,8 @@ Tipo: <code>SubscribableOrPromise</code>.</td></tr>
 ### Retorna
 
 `Observable<T | F>`: Según la condición, devuelve el primer o el segundo Observable.
+
+</details>
 
 ## Descripción
 

@@ -27,6 +27,8 @@
 
 `Observable<ObservedValueOf<O> | R>`: Todos los valores de cada Observable de entrada fusionados en un solo Observable, por orden.
 
+</details>
+
 ## Descripción
 
 Concatena varios Observables, uno tras otro, emitiendo secuencialmente sus valores.

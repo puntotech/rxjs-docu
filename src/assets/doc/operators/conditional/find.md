@@ -29,6 +29,8 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 `OperatorFunction<T, T | undefined>`: Un Observable del primer elemento que cumpla la condición.
 
+</details>
+
 ## Descripción
 
 Encuentra el primer valor que cumple una condición y lo emite.

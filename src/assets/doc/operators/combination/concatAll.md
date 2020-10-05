@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos en orden
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `concatAll<T>(): OperatorFunction<ObservableInput<T>, T>`
@@ -23,6 +26,8 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<ObservableInput<T>, T>`: Un Observable que emite los valores emitidos por los Observables internos concatenados.
+
+</details>
 
 ## Descripción
 

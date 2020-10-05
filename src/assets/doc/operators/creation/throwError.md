@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Crea un Observable que solo emite una notificación de error
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `throwError(error: any, scheduler?: SchedulerLike): Observable<never>`
@@ -28,6 +31,8 @@ El <code>SchedulerLike</code> que utilizar para planificar la emisión de la not
 ### Retorna
 
 `Observable<never>`: Un Observable de error: emite solo la notificación `error` utilizando el argumento `error` proporcionado
+
+</details>
 
 ## Descripción
 

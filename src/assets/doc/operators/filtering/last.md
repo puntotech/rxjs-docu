@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `last<T, D>(predicate?: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
@@ -34,6 +37,8 @@ El valor por defecto opcional que se emitirá en el caso de que ningún elemento
 `EmptyError` Propaga un `EmptyError` a la _callback_ de error del Observable si este se completa antes de emitir alguna notificación `next`.
 
 `Error` - Se lanza en el caso de que ningún elemento cumple la condición especificada por el Observable fuente.
+
+</details>
 
 ## Descripción
 

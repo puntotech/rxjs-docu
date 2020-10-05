@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Repite o no una secuencia Observable en función de un Observable de notificaciones
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `repeatWhen<T>(notifier: (notifications: Observable<any>) => Observable<any>): MonoTypeOperatorFunction<T>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con lógica de repetición.
+
+</details>
 
 ## Descripción
 

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retrasa la emisión de los elementos del Observable fuente en un tiempo determinado o hasta una fecha determinada
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `delay<T>(delay: number | Date, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
@@ -27,6 +30,8 @@ El <code>SchedulerLike</code> que se utiliza para gestionar los temporizadores q
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente por el `timeout` o `Date` especificado.
+
+</details>
 
 ## Descripción
 

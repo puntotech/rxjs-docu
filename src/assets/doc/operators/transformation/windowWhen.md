@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `windowWhen<T>(closingSelector: () => Observable<any>): OperatorFunction<T, Observable<T>>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
+
+</details>
 
 ## Descripción
 

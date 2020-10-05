@@ -15,6 +15,9 @@ Returns an Observable that emits whether or not every item of the source satisfi
 
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `every<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): OperatorFunction<T, boolean>`
@@ -31,6 +34,8 @@ Objeto opcional que se utiliza como valor del <code>this</code> en la *callback*
 ### Retorna
 
 `OperatorFunction<T, boolean>`: Un Observable de un solo valor booleano que determina si todos los elementos del Observable fuente cumplen la condición especificada.
+
+</details>
 
 ## Descripción
 

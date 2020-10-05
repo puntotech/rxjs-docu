@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Combina varios Observables para crear un Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `combineLatest<O extends ObservableInput<any>, R>(...observables: (SchedulerLike | O | ((...values: ObservedValueOf<O>[]) => R))[]): Observable<R>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `Observable<R>`: Un Observable de valores proyectados a partir de las emisiones más recientes de cada Observable de entrada, o un array de los de las emisiones más recientes de cada Observable de entrada.
+
+</details>
 
 ## Descripción
 

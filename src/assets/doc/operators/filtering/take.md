@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite las primeras x emisiones del Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `take<T>(count: number): MonoTypeOperatorFunction<T>`
@@ -29,6 +32,8 @@
 ### Lanza
 
 `ArgumentOutOfRangeError` Cuando se usa `take(i)`, se lanza un Error `ArgumentOutOrRangeError` si `i < 0`.
+
+</details>
 
 ## Descripción
 

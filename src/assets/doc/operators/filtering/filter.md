@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `filter<T>(predicate: (value: T, index: number) => boolean, thisArg?: any): MonoTypeOperatorFunction<T>`
@@ -29,6 +32,8 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable de valores del Observable fuente que han cumpliado la condición especificada por la función `predicate`.
+
+</details>
 
 ## Descripción
 

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Retrasa la emisión de los elementos del Observable fuente en función de las emisiones de un segundo Observable
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `delayWhen<T>(delayDurationSelector: (value: T, index: number) => Observable<any>, subscriptionDelay?: Observable<any>): MonoTypeOperatorFunction<T>`
@@ -28,6 +31,8 @@ Un Observable que disapra la suscripción al Observable fuente en cuanto emita a
 ## Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente durante una cantidad de tiempo determinada por el Observable que retorna la función `delayDurationSelector`.
+
+</details>
 
 ## Descripción
 

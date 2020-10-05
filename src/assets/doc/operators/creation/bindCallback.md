@@ -31,6 +31,8 @@ El planificador con el que planificar las <i>callbacks</i>.</td></tr>
 
 `(...args: any[]) => Observable<T>`: Una función que returna un Observable que emite los mismos valores que devolvería la _callback_.
 
+</details>
+
 ## Descripción
 
 Dada una función `f` de tipo `f(x, callback)` retornará una función `g`, que al ser llamada como `g(x)`, retornará un Observable.

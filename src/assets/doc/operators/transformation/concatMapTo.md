@@ -29,6 +29,8 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable de valores obtenido a partir de fusionar el Observable consigo mismo, una vez por cada valor emitido por la fuente.
 
+</details>
+
 ## Descripción
 
 Es como `concatMap`, pero siempre proyecta cada valor al mismo Observable interno.

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado sin que este emita ningún valor
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `debounceTime<T>(dueTime: number, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
@@ -28,6 +31,8 @@ El `SchedulerLike` que utilizar para gestionar los temporizadores que manejan el
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa la emisiones del Observable fuente en un periodo de tiempo especificado por `dueTime`. Es posible que algunos valores sean eliminados si se emiten con demasiada frecuencia.
+
+</details>
 
 ## Descripción
 

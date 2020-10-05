@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), que contiene como mucho un número determinado de valores
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `windowCount<T>(windowSize: number, startWindowEvery: number = 0): OperatorFunction<T, Observable<T>>`
@@ -28,6 +31,8 @@ El intervalo que señala cuándo abrir una ventana nueva. Por ejemplo, si `start
 ### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
+
+</details>
 
 ## Descripción
 

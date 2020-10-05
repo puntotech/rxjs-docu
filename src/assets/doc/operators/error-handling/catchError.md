@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Captura errores en el Observable que se manejan devolviendo un Observable nuevo o lanzando un error
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `catchError<T, O extends ObservableInput<any>>(selector: (err: any, caught: Observable<T>) => O): OperatorFunction<T, T | ObservedValueOf<O>>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, T | ObservedValueOf<O>>`: Un Observable que se puede originar en el Observable fuente o en el Observable retornado por la función `selector`.
+
+</details>
 
 ## Descripción
 

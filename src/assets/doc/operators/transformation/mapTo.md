@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite el mismo valor cada vez que el Observable fuente emite un valor
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `mapTo<T, R>(value: R): OperatorFunction<T, R>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, R>`: Un Observable que emite el mismo valor cada vez que el Observable fuente emite algo.
+
+</details>
 
 ## Descripción
 

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `window<T>(windowBoundaries: Observable<any>): OperatorFunction<T, Observable<T>>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables que emiten valores del Observable fuente.
+
+</details>
 
 ## Descripción
 

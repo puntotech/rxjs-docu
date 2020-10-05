@@ -30,6 +30,8 @@
 
 <div class="fading-line"></div>
 
+</details>
+
 ## Descripción
 
 Convierte prácticamente cualquier elemento en un Observable.

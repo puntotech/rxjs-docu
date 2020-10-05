@@ -28,6 +28,8 @@ El número de reintentos que se harán antes de fallar.</td></tr>
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con la lógica de reintento.
 
+</details>
+
 ## Descripción
 
 Retorna un Observable que refleja el Observable fuente con la excepción de un error. Si el Observable fuente lanza un error, este operador se resuscribirá al Observable fuente durante un máximo de `count` veces, antes de propagar el error.

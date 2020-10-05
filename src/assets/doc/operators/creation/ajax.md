@@ -19,6 +19,8 @@
 
 <div class="fading-line"></div>
 
+</details>
+
 ## Descripción
 
 Crea un Observable para una petición Ajax a partir de un objeto de petición con la url, cabeceras etc. o a partir de una URL.

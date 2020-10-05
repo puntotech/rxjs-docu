@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Convierte un Observable de objetos Notification en las emisiones que representan
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `dematerialize<T>(): OperatorFunction<Notification<T>, T>`

@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona con el Observable resultante
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `mergeMapTo<T, R, O extends ObservableInput<any>>(innerObservable: O, resultSelector?: number | ((outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R), concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<T, ObservedValueOf<O> | R>`
@@ -29,6 +32,8 @@ El máximo número de Observables internos a los que se suscribe de forma concur
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite elementos del Observable `innerObservable` proporcionado.
+
+</details>
 
 ## Descripción
 

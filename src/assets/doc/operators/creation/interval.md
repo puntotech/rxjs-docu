@@ -30,6 +30,8 @@ El <code>SchedulerLike</code> que se utiliza para planificar la emisión de valo
 
 `Observable<number>`: Un Observable que emite una secuencia incremental de números, emitiendo un valor en cada intervalo de tiempo.
 
+</details>
+
 ## Descripción
 
 Emite una secuencia incremental de números periódicamente.

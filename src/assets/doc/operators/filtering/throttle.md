@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite un valor del Observable fuente e ignora las emisiones siguientes durante un tiempo determinado por un segundo Observable. Después, repite el proceso
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `throttle<T>(durationSelector: (value: T) => SubscribableOrPromise<any>, config: ThrottleConfig = defaultThrottleConfig): MonoTypeOperatorFunction<T>`
@@ -27,6 +30,8 @@ Un objeto de configuración para definir el comportamiento de los parámetros <c
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que lleva a cabo la acción reguladora para limitar la velocidad de emisión de la fuente.
+
+</details>
 
 ## Descripción
 

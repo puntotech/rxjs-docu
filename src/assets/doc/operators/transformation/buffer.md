@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que otro Observable emita
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `buffer<T>(closingNotifier: Observable<any>): OperatorFunction<T, T[]>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de búfers, que son arrays de valores.
+
+</details>
 
 ## Descripción
 

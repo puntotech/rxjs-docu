@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Crea un Observable que emite una secuencia de números dentro de un rango
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `range(start: number = 0, count?: number, scheduler?: SchedulerLike): Observable<number>`
@@ -30,6 +33,8 @@ El <code>SchedulerLike</code> para gestionar las emisiones.</td></tr>
 ### Retorna
 
 `Observable<number>`: Un Observable de números que emite una secuencia finita de números consecutivos dentro de un rango.
+
+</details>
 
 ## Descripción
 

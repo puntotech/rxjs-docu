@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Crea un Observable que comienza a emitir una secuencia ascendente de números consecutivos a intervalos, tras un periodo inicial de tiempo
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `timer(dueTime: number | Date = 0, periodOrScheduler?: number | SchedulerLike, scheduler?: SchedulerLike): Observable<number>`
@@ -30,6 +33,8 @@ EL <code>SchedulerLike</code> que utilizar para planificar las emisiones, propor
 ### Retorna
 
 `Observable<number>`: Un Observable que emite una secuencia ascendente de números consecutivos, comenzando por el valor 0, tras un periodo de tiempo inicial especificado por `dueTime`.
+
+</details>
 
 ## Descripción
 

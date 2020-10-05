@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Emite las últimas x emisiones del Observable fuente
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `takeLast<T>(count: number): MonoTypeOperatorFunction<T>`
@@ -29,6 +32,8 @@
 ### Lanza
 
 `ArgumentOutOfRangeError` Al usar `takeLast(i)`, se lanza un Error `ArgumentOutOrRangeError` si `i < 0`.
+
+</details>
 
 ## Descripción
 

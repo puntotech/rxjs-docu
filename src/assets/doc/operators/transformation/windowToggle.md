@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un segundo Observable emite, y se cierra cuando un tercer Observable retornado por una función emite
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `windowToggle<T, O>(openings: Observable<O>, closingSelector: (openValue: O) => Observable<any>): OperatorFunction<T, Observable<T>>`
@@ -26,6 +29,8 @@
 ### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
+
+</details>
 
 ## Descripción
 

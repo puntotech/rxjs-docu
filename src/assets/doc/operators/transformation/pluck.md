@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Extrae propiedadas de un objeto
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `pluck<T, R>(...properties: string[]): OperatorFunction<T, R>`
@@ -25,6 +28,8 @@
 ### Retorna
 
 `OperatorFunction<T, R>`: Un nuevo Observable de propiedades de los valores de la fuente.
+
+</details>
 
 ## Descripción
 

@@ -31,6 +31,8 @@ El máximo número de Observables de entrada suscritos de forma concurrente.</td
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección ( y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente y fusionando los resultados de los Observables obtenidos a partir de esta transformación.
 
+</details>
+
 ## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' cada uno de estos Observables internos mediante el operador `mergeAll`.

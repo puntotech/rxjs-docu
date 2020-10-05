@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Divide el Observable fuente en dos, uno con los valores que cumplen una condición, y otro con los valores que no la cumplan
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `partition<T>(source: any, predicate: (value: T, index: number) => boolean, thisArg?: any): [Observable<T>, Observable<T>]`
@@ -28,6 +31,8 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 ### Retorna
 
 `[Observable<T>, Observable<T>]`: Un array con dos Observables: uno con valores que cumplen la función `predicate`, y otro con valores que no la cumplen.
+
+</details>
 
 ## Descripción
 

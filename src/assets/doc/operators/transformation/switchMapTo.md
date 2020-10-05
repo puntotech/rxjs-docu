@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Proyecta cada valor de la fuente al mismo Observable interno, posteriormente usando switchMap para unirlos al Observable resultante
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `switchMapTo<T, I, R>(innerObservable: any, resultSelector?: (outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, I | R>`
@@ -27,6 +30,8 @@ Tipo: <code>(outerValue: T, innerValue: I, outerIndex: number, innerIndex: numbe
 ### Retorna
 
 `OperatorFunction<T, I | R>`: Un Observable que emite elementos del `innerObservable` cada vez que el Observable fuente emite un valor. Se obtienen los valores del Observable interno más reciente.
+
+</details>
 
 ## Descripción
 

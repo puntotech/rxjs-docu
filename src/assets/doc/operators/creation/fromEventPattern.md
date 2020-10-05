@@ -12,6 +12,9 @@
 <h2 class="subtitle"> Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
 </h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `fromEventPattern<T>(addHandler: (handler: NodeEventHandler) => any, removeHandler?: (handler: NodeEventHandler, signal?: any) => void, resultSelector?: (...args: any[]) => T): Observable<T | T[]>`
@@ -30,6 +33,8 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T[]>`: Un Observable que, cuando se dispara un evento, emite o el primer parámetro que se le haya proporcionado al manejador de eventos registrado, o el resultado de la función de proyección.
+
+</details>
 
 ## Descripción
 
