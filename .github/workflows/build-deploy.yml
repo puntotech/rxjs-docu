@@ -13,6 +13,7 @@ jobs:
     - name: GitHub Pages 
       uses: cmgriffing/scully-gh-pages-action@v9
       with:
+          deploy-branch: gh-pages
           access-token: ${{ secrets.GITHUB_TOKEN }}
 
   #  - name: Build
