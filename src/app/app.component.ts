@@ -36,6 +36,10 @@ export class AppComponent implements OnInit {
     this.updateSidenav();
   }
 
+  get mode() {
+    return !this.isMobileDisplay ? 'side' : 'over';
+  }
+
   private updateSidenav() {
     this.sidenav.toggle(!this.isMobileDisplay);
   }
