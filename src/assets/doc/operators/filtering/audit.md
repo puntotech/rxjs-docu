@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Ignora los valores emitidos por el Observable fuente durante un periodo de tiempo cuya duración está determinada por un segundo Observable. Una vez terminado el periodo, emite el valor más reciente y repite el proceso
+<h2 class="subtitle"> Ignora los valores emitidos por el Observable fuente durante un periodo de tiempo cuya duración está determinada por un segundo Observable. Una vez terminado el periodo, emite el valor más reciente y repite el proceso
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -26,6 +30,8 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que limita las emisiones del Observable fuente.
 
+</details>
+
 ## Descripción
 
 Es como `auditTime`, pero la duración del silenciamiento está determinada por un segundo Observable.
@@ -36,9 +42,9 @@ Es como `auditTime`, pero la duración del silenciamiento está determinada por 
 
 ## Ejemplos
 
-Ignorar las teclas pulsadas durante 2s, y emitir la última tecla pulsada. Repetir el proceso.
+**Ignorar las teclas pulsadas durante 2s, y emitir la última tecla pulsada. Repetir el proceso.**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-audit-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-audit-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { audit } from "rxjs/operators";
@@ -55,7 +61,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Emite clicks a un ritmo de, como mucho, un click por segundo
+**Emite clicks a un ritmo de, como mucho, un click por segundo**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

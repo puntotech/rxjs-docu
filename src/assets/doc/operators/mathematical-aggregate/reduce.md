@@ -9,9 +9,9 @@
 </a>
 </div>
 
-### Aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente
+<h2 class="subtitle"> Aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente</h2>
 
-💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan]('/operators/transformation/scan')
+💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan](/operators/transformation/scan)
 
 ### Firma
 
@@ -28,6 +28,8 @@ El valor de acumulación inicial.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T | R>`: Un Observable que emite un solo valor, resutante de haber acumulado los valores emitidos por el Observable fuente.
+
+</details>
 
 ## Descripción
 
@@ -56,7 +58,13 @@ const count = ones.pipe(reduce((acc, one) => acc + one, seed));
 count.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `reduce(accumulator: (acc: R, value: T, index: number) => R, seed: R): OperatorFunction<T, R>`
 
@@ -70,6 +78,12 @@ count.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `reduce(accumulator: (acc: T, value: T, index: number) => T, seed?: T): MonoTypeOperatorFunction<T>`
 
@@ -85,6 +99,12 @@ Tipo: <code>T</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `reduce(accumulator: (acc: R, value: T, index: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -96,6 +116,11 @@ Tipo: <code>T</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

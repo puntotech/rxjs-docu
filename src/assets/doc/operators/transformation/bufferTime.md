@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Acumula valores del Observable fuente durante un periodo de tiempo
+<h2 class="subtitle"> Acumula valores del Observable fuente durante un periodo de tiempo
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +29,8 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
+</details>
+
 ## Descripción
 
 Almacena valores en un array, y emite esos arrays periódicamente en el tiempo.
@@ -35,9 +41,9 @@ Acumula valores de la fuente durante un periodo de tiempo determinado por `buffe
 
 ## Ejemplos
 
-Almacenar valores en un array durante un periodo de 5 segundos y emitir el array
+**Almacenar valores en un array durante un periodo de 5 segundos y emitir el array**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffertime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffertime-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { bufferTime } from "rxjs/operators";
@@ -49,22 +55,9 @@ number$.pipe(bufferTime(5000)).subscribe(console.log);
 // Salida: [0, 1, 2, 3], [4, 5, 6, 7, 8]...
 ```
 
-TODO Change example
-
-```typescript
-import { bufferTime } from "rxjs/operators";
-import { fromEvent } from "rxjs";
-
-const click$ = fromEvent(document, "click");
-
-// Every 2 seconds, emits the collected clicks in an array
-click$.pipe(bufferTime(2000, maxBufferSize: 5)).subscribe(console.log);
-// Output: (2s) [] (2s) [MouseEvent, MouseEvent] (2s) [MouseEvent]...
-```
-
 ### Ejemplos de la documentación oficial
 
-Cada segundo, emitir un array de eventos click
+**Cada segundo, emitir un array de eventos click**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -75,7 +68,7 @@ const buffered = clicks.pipe(bufferTime(1000));
 buffered.subscribe((x) => console.log(x));
 ```
 
-Cada 5 segundos, emitir los eventos click de los siguientes 2 segundos
+**Cada 5 segundos, emitir los eventos click de los siguientes 2 segundos**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -86,7 +79,13 @@ const buffered = clicks.pipe(bufferTime(2000, 5000));
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `bufferTime(bufferTimeSpan: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>`
 
@@ -101,6 +100,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `bufferTime(bufferTimeSpan: number, bufferCreationInterval: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>`
 
@@ -117,6 +122,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `OperatorFunction<T, T[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `bufferTime(bufferTimeSpan: number, bufferCreationInterval: number, maxBufferSize: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>`
 
 ### Parámetros
@@ -132,6 +143,11 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T[]>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
+<h2 class="subtitle"> Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -34,6 +38,8 @@ El valor por defecto opcional que se emitirá en el caso de que ningún elemento
 
 `Error` - Se lanza en el caso de que ningún elemento cumple la condición especificada por el Observable fuente.
 
+</details>
+
 ## Descripción
 
 Retorna un Observable que emite el último elemento emitido por el Observable fuente. Opcionalmente recibe una función `predicate` como parámetro, en cuyo caso, en lugar de emitir el último elemento del Observable fuente, el Observable resultante emitirá el último elemento del Observable fuente que cumpla la condición especificada.
@@ -42,9 +48,9 @@ Retorna un Observable que emite el último elemento emitido por el Observable fu
 
 ## Ejemplos
 
-Emitir la última cadena de una secuencia
+**Emitir la última cadena de una secuencia**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-last-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { last } from "rxjs/operators";
@@ -56,9 +62,9 @@ fruit$.pipe(last()).subscribe(console.log);
 // Salida: Arándano
 ```
 
-Emitir el último elemento que cumpla una condición
+**Emitir el último elemento que cumpla una condición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-last-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -75,9 +81,9 @@ user$.pipe(last(({ age }) => age === 21)).subscribe(console.log);
 // Salida: { name: 'carla.1003', age: 21 }
 ```
 
-Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición
+**Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-last-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { last } from "rxjs/operators";
@@ -97,7 +103,13 @@ pokemon$
 // Salida: { name: "Bulbasaur", type: "Grass" }
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `last(predicate?: null, defaultValue?: D): OperatorFunction<T, T | D>`
 
@@ -114,6 +126,12 @@ Tipo: <code>D</code>.</td></tr>
 
 `OperatorFunction<T, T | D>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `last(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue?: S): OperatorFunction<T, S>`
 
 ### Parámetros
@@ -128,6 +146,12 @@ Tipo: <code>S</code>.</td></tr>
 
 `OperatorFunction<T, S>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `last(predicate: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
 
 ### Parámetros
@@ -141,6 +165,11 @@ Tipo: <code>D</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T | D>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

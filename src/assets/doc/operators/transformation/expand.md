@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
+<h2 class="subtitle"> Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -31,24 +35,29 @@ El <code>SchedulerLike</code> que se utiliza para suscribirse a cada Observable 
 
 that emits the source values and also result of applying the projection function to each value emitted on the output Observable and and merging the results of the Observables obtained from this transformation.
 
+</details>
+
 ## Descripción
 
 Es similar a `mergeMap`, pero aplica la función de proyección a cada valor de la fuente además de a cada valor de salida. Es recursivo.
 
 <img src="assets/images/marble-diagrams/transformation/expand.png" alt="Diagrama de canicas del operador expand">
 
-Retorna un Observable que aplica una función a cada elemento emitido por el Observable fuente, donde dicha función retorna un Observable, y fusiona los Observables resultantes, emitiendo el resultado de esta fusión. `expand` reemitirá cada valor de la fuente en el Observable resultante. Entonces, cada .
-Así es como `expand` se comporta de forma recursiva.
+Retorna un Observable que aplica una función a cada elemento emitido por el Observable fuente, donde dicha función retorna un Observable, y fusiona los Observables resultantes, emitiendo el resultado de esta fusión. expand reemitirá cada valor de la fuente en el Observable resultante.
 
-// TODO
+Entonces, cada valor de salida se le proporciona a la función project, que retorna un Observable interno que se fusiona en el Observable resultante. Esos valores de salida resultantes del a proyección también se le proporcionan a la función project para producir nuevos valores de salida. Así es como expand se comporta de forma recursiva.
 
-Returns an Observable that emits items based on applying a function that you supply to each item emitted by the source Observable, where that function returns an Observable, and then merging those resulting Observables and emitting the results of this merger. Expand will re-emit on the output Observable every source value. Then, each output value is given to the project function which returns an inner Observable to be merged on the output Observable. Those output values resulting from the projection are also given to the project function to produce new output values. This is how expand behaves recursively.
+// TODO Revisar traducción
+
+Returns an Observable that emits items based on applying a function that you supply to each item emitted by the source Observable, where that function returns an Observable, and then merging those resulting Observables and emitting the results of this merger. Expand will re-emit on the output Observable every source value.
+
+Then, each output value is given to the project function which returns an inner Observable to be merged on the output Observable. Those output values resulting from the projection are also given to the project function to produce new output values. This is how expand behaves recursively.
 
 ## Ejemplos
 
-Obtener los 3 números consecutivos a un número
+**Obtener los 3 números consecutivos a un número**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-expand-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-expand-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -65,9 +74,9 @@ number$
 // Salida: 1, 2, 3, 4
 ```
 
-Obtener una secuencia geométrica multiplicando el número introducido por dos
+**Obtener una secuencia geométrica multiplicando el número introducido por dos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-expand-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-expand-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, of } from "rxjs";
@@ -92,7 +101,7 @@ number$
 
 ### Ejemplo de la documentación oficial
 
-Comienza a emitir como mucho diez potencias de dos, por cada click
+**Comienza a emitir como mucho diez potencias de dos, por cada click**
 
 ```javascript
 import { fromEvent, of } from "rxjs";

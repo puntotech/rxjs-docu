@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos en orden
+<h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos en orden
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -22,6 +26,8 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<ObservableInput<T>, T>`: Un Observable que emite los valores emitidos por los Observables internos concatenados.
+
+</details>
 
 ## Descripción
 
@@ -37,9 +43,9 @@ Advertencia: Si el Observable fuente emite Observables de forma rápida e indefi
 
 ## Ejemplos
 
-`concatAll` se suscribe a cada Observable interno si, y solo si, el Observable interno anterior se ha completado. Esto implica que espera a que cada petición esté terminada antes de hacer una nueva
+**concatAll se suscribe a cada Observable interno si, y solo si, el Observable interno anterior se ha completado. Esto implica que espera a que cada petición esté terminada antes de hacer una nueva**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-concatall-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatall-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concatAll, map, delay } from "rxjs/operators";
@@ -66,7 +72,7 @@ pokemonId$
 
 ### Ejemplo de la documentación oficial
 
-Por cada evento click, emitir los números del 0 al 3 a intervalos de 1s, sin concurrencia
+**Por cada evento click, emitir los números del 0 al 3 a intervalos de 1s, sin concurrencia**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

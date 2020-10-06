@@ -41,7 +41,7 @@ Los problemas causados por los operadores de encadenamiento parcheados son los s
 
 ## ¿Qué?
 
-¿Qué es un operador de tubería? Dicho de forma sencilla, es una funcin que puede utilizarse con el operador `let` actual. Este solía ser el origen del nombre ("lettable"), pero al ser tan confuso se cambió por "pipeable" (de tubería), ya que están diseñados para utilizarse con la utilidad `pipe`. Se puede considerar un operador de tubería a cualquier función que devuelva una función con la siguiente firma: `<T, R>(source: Observable<T>) => Observable <R>`.
+¿Qué es un operador de tubería? Dicho de forma sencilla, es una función que puede utilizarse con el operador `let` actual. Este fue el origen del primer nombre que se le puso ("lettable"), pero al ser tan confuso se cambió por "pipeable" (de tubería), ya que están diseñados para utilizarse con la utilidad `pipe`. Se puede considerar un operador de tubería a cualquier función que devuelva una función con la siguiente firma: `<T, R>(source: Observable<T>) => Observable <R>`.
 
 Existe un método `pipe` incorporado a `Observable` en `Observable.prototype.pipe` que puede utilizarse para componer los operadores de manera similar a cómo se solía hacer con encadenación (ejemplo mostrado a continuación).
 
@@ -85,7 +85,7 @@ source$
 
 Es cierto que _siempre_ se ha podido hacer con `let`... Pero ahora, construir un operador personalizado es tan sencillo como escribir una función. Ahora se pueden componer los operadores personalizados con los demás operadores rxjs de forma perfecta.
 
-```javascript
+```typescript
 import { Observable, interval } from "rxjs";
 import { filter, map, take, toArray } from "rxjs/operators";
 
@@ -93,9 +93,7 @@ import { filter, map, take, toArray } from "rxjs/operators";
  * Un operador que obtiene cada N-ésimo valor
  */
 const takeEveryNth = (n: number) => <T>(source: Observable<T>) =>
-  new Observable() <
-  T >
-  ((observer) => {
+  new Observable()<T>((observer) => {
     let count = 0;
     return source.subscribe({
       next(x) {
@@ -165,7 +163,7 @@ range(0, 10)
   .subscribe((x) => console.log(x));
 ```
 
-# Proceso de Construcción y Treeshaking
+## Proceso de Construcción y Treeshaking
 
 Cuando se realizan importaciones de un fichero manifest (o de re-exportación), el _bundle_ de una aplicación puede llegar a aumentar de tamaño. Los operadores de tubería se pueden importar desde `rxjs/operators`, pero hacerlo sin cambiar el proceso de construcción suele provocar el aumento de tamaño del _bundle_ de la aplicación. Esto es debido a que, por defecto, `rxjs/operators` resuelve a la salida de CommonJS de rxjs.
 

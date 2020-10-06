@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite
+<h2 class="subtitle"> Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +29,8 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite el valor más reciente del Observable fuente cuando el Observable `notifier` emite un valor o se completa.
 
+</details>
+
 ## Descripción
 
 Es como `sampleTime`, pero toma una muestra del Observable fuente cuando el Observable notificador emite un valor.
@@ -35,9 +41,9 @@ Cuando el Observable `notifier` emite un valor o se completa, `sample` toma una 
 
 ## Ejemplos
 
-Emitir el valor más reciente desde el último muestreo, realizado cuando `interval` emite (cada 2s)
+**Emitir el valor más reciente desde el último muestreo, realizado cuando interval emite (cada 2s)**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-sample-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-sample-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval } from "rxjs";
@@ -49,9 +55,9 @@ number$.pipe(sample(interval(2000))).subscribe(console.log);
 // Salida: 1, 3, 5, 7, 9...
 ```
 
-Emitir el valor más reciente desde el último muestreo, realizado cada vez que se pulsa una tecla
+**Emitir el valor más reciente desde el último muestreo, realizado cada vez que se pulsa una tecla**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-sample-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-sample-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -70,7 +76,7 @@ number$
 
 ### Ejemplo de la documentación oficial
 
-Con cada click, realizar un muestreo del temporizador `seconds`
+**Con cada click, realizar un muestreo del temporizador seconds**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

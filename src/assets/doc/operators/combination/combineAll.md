@@ -9,7 +9,10 @@
 </a>
 </div>
 
-<h3>Convierte un Observable de orden superior en uno de primer orden aplicando <a href="/operators/combination/combineLatest">combineLatest</a> cuando el Observable de orden superior se completa</h3>
+<h2 class="subtitle">Convierte un Observable de orden superior en uno de primer orden aplicando <a href="/operators/combination/combineLatest">combineLatest</a> cuando el Observable de orden superior se completa</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -26,6 +29,8 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 
 `OperatorFunction<T, R>`
 
+</details>
+
 ## Descripción
 
 <img src="assets/images/marble-diagrams/join-creation/combineAll.png" alt="Diagrama de canicas del operador combineAll">
@@ -39,9 +44,9 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 
 ## Ejemplos
 
-`combineAll` espera a recibir todos los valores, y los combina en un array
+**combineAll espera a recibir todos los valores, y los combina en un array**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-combineall-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-combineall-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -68,7 +73,7 @@ pokemonId$
 
 ### Ejemplo de la documentación oficial
 
-Proyectar dos eventos click sobre un Observable intervalo, y aplicar `combineAll`
+**Proyectar dos eventos click sobre un Observable intervalo, y aplicar combineAll**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -84,7 +89,13 @@ const result = higherOrder.pipe(combineAll());
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `combineAll(): OperatorFunction<ObservableInput<T>, T[]>`
 
@@ -96,6 +107,12 @@ No recibe ningún parámetro.
 
 `OperatorFunction<ObservableInput<T>, T[]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineAll(): OperatorFunction<any, T[]>`
 
 ### Parámetros
@@ -105,6 +122,12 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<any, T[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `combineAll(project: (...values: T[]) => R): OperatorFunction<ObservableInput<T>, R>`
 
@@ -118,6 +141,12 @@ No recibe ningún parámetro.
 
 `OperatorFunction<ObservableInput<T>, R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `combineAll(project: (...values: any[]) => R): OperatorFunction<any, R>`
 
 ### Parámetros
@@ -129,6 +158,10 @@ No recibe ningún parámetro.
 ### Retorna
 
 `OperatorFunction<any, R>`
+
+</div>
+</div>
+</details>
 
 ## Recursos adicionales
 

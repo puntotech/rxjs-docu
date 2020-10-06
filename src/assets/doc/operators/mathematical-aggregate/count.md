@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
+<h2 class="subtitle"> Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -32,6 +36,8 @@ Una función booleana para seleccionar qué valores se cuenta. Consta de los sig
 
 `OperatorFunction<T, number>`: Un Observable de un solo valor que representa el número de elementos contados.
 
+</details>
+
 ## Descripción
 
 Indica cuántos valores se han emitido cuanod la fuente se completa.
@@ -44,9 +50,9 @@ Este operador recibe una función opcional `predicate` como argumento, en cuyo c
 
 ## Ejemplos
 
-Contar el número de emisiones
+**Contar el número de emisiones**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-count-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { range } from "rxjs";
@@ -59,9 +65,9 @@ number$.pipe(count()).subscribe(console.log);
 // Salida: 4
 ```
 
-Contar el número de teclas pulsadas en 5 segundos
+**Contar el número de teclas pulsadas en 5 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-count-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -75,9 +81,9 @@ key$.pipe(count()).subscribe(console.log);
 // Salida: (pulsar 5 teclas) 5
 ```
 
-Si la fuente no finaliza, count nunca emitirá ni se completará
+**Si la fuente no finaliza, count nunca emitirá ni se completará**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-count-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 const infiniteNumber$ = interval(1000);
@@ -86,9 +92,9 @@ infiniteNumber$.pipe(count()).subscribe(console.log);
 // Salida:
 ```
 
-Contar las peticiones realizadas con éxito
+**Contar las peticiones realizadas con éxito**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-count-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -111,9 +117,9 @@ pokemonId$
 // Salida: 3
 ```
 
-Si ocurre un error, `count` no emitirá nada
+**Si ocurre un error, `count` no emitirá nada**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-count-5?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-5?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -136,9 +142,9 @@ pokemonId$
 // Salida:
 ```
 
-Gestionar el error para que count cuente el número de peticiones realizadas con éxito
+**Gestionar el error para que count cuente el número de peticiones realizadas con éxito**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-count-6?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-6?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -165,7 +171,7 @@ pokemonId$
 
 ### Ejemplos de la documentación oficial
 
-Contar cuántos segundos pasan desde el primer click
+**Contar cuántos segundos pasan desde el primer click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -178,7 +184,7 @@ const result = secondsBeforeClick.pipe(count());
 result.subscribe((x) => console.log(x));
 ```
 
-Contar cuántos números impares hay entre 1 y 7
+**Contar cuántos números impares hay entre 1 y 7**
 
 ```javascript
 import { range } from "rxjs";

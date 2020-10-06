@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
+<h2 class="subtitle"> Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
 
 `merge<T, R>(...observables: any[]): Observable<R>`
 
@@ -23,6 +23,8 @@
 
 `Observable<R>`: Un Observable que emite las emisiones de cada Observable de entrada.
 
+</details>
+
 ## Descripción
 
 Une varios Observables en uno solo.
@@ -35,9 +37,9 @@ Cualquier error lanzado por un Observable de entrada será emitido inmediatament
 
 ## Ejemplos
 
-Unir dos Observables ajax
+**Unir dos Observables ajax**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-merge?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-merge?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concat } from "rxjs";
@@ -53,9 +55,9 @@ concat(totoroFilmData$, charmanderData$).subscribe(console.log);
 // Salida: {..., title: 'My Neighbor Totoro', ...}, { abilities: [], ...}
 ```
 
-`merge` se suscribe de forma concurrente (a la vez) a todos los Observables de entrada, mientras que `concat` se suscribe a ellos por orden, y hasta que el primero no se complete, no se suscribe al siguiente. Comparación entre `concat` y `merge`:
+**`merge` se suscribe de forma concurrente (a la vez) a todos los Observables de entrada, mientras que `concat` se suscribe a ellos por orden, y hasta que el primero no se complete, no se suscribe al siguiente. Comparación entre `concat` y `merge`:**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-merge-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-merge-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concat, merge, timer } from "rxjs";
@@ -76,7 +78,7 @@ concat(first$, second$, third$).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Unir 2 Observables: 1s `interval` y `clicks`
+**Unir 2 Observables: 1s interval y clicks**
 
 ```javascript
 import { merge, fromEvent, interval } from "rxjs";
@@ -91,7 +93,7 @@ clicksOrTimer.subscribe((x) => console.log(x));
 // clicks imprime MouseEvents por console cada vez que se haga click en el 'document'
 ```
 
-Unir 3 Observables, pero solo ejecutar 2 de forma concurrente
+**Unir 3 Observables, pero solo ejecutar 2 de forma concurrente**
 
 ```javascript
 import { merge, interval } from "rxjs";
@@ -114,7 +116,13 @@ merged.subscribe((x) => console.log(x));
 //   timer3 continuará emitiendo un valor cada 500ms hasta que se complete
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, scheduler: SchedulerLike): Observable<T>`
 
@@ -128,6 +136,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, concurrent: number, scheduler: SchedulerLike): Observable<T>`
 
@@ -143,6 +157,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, scheduler: SchedulerLike): Observable<T | T2>`
 
 ### Parámetros
@@ -156,6 +176,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2>`
 
@@ -172,6 +198,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, scheduler: SchedulerLike): Observable<T | T2 | T3>`
 
 ### Parámetros
@@ -186,6 +218,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3>`
 
@@ -203,6 +241,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2 | T3>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4>`
 
 ### Parámetros
@@ -218,6 +262,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3 | T4>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4>`
 
@@ -236,6 +286,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2 | T3 | T4>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5>`
 
 ### Parámetros
@@ -252,6 +308,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5>`
 
@@ -271,6 +333,12 @@ merged.subscribe((x) => console.log(x));
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
 ### Parámetros
@@ -288,6 +356,12 @@ merged.subscribe((x) => console.log(x));
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | `T3 | T4 | T5 | T6>`
 
@@ -308,6 +382,12 @@ merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, 
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any): Observable<T>`
 
 ### Parámetros
@@ -319,6 +399,12 @@ merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, 
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, concurrent?: number): Observable<T>`
 
@@ -334,6 +420,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any): Observable<T | T2>`
 
 ### Parámetros
@@ -346,6 +438,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, concurrent?: number): Observable<T | T2>`
 
@@ -362,6 +460,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any): Observable<T | T2 | T3>`
 
 ### Parámetros
@@ -375,6 +479,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, concurrent?: number): Observable<T | T2 | T3>`
 
@@ -392,6 +502,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any): Observable<T | T2 | T3 | T4>`
 
 ### Parámetros
@@ -406,6 +522,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3 | T4>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, concurrent?: number): Observable<T | T2 | T3 | T4>`
 
@@ -424,6 +546,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3 | T4>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any): Observable<T | T2 | T3 | T4 | T5>`
 
 ### Parámetros
@@ -439,6 +567,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, concurrent?: number): Observable<T | T2 | T3 | T4 | T5>`
 
@@ -458,6 +592,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
 ### Parámetros
@@ -474,6 +614,12 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent?: number): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
@@ -494,17 +640,11 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-`merge(...observables: any[]): Observable<T>`
+</div>
 
-### Parámetros
+<div class="overload-section">
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
-
-`Observable<T>`
+### Firma
 
 `merge(...observables: any[]): Observable<T>`
 
@@ -518,6 +658,30 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`merge(...observables: any[]): Observable<T>`
+
+### Parámetros
+
+<table>
+<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
+</table>
+
+### Retorna
+
+`Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(...observables: any[]): Observable<R>`
 
 ### Parámetros
@@ -530,6 +694,12 @@ Tipo: <code>number</code>.</td></tr>
 
 `Observable<R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `merge(...observables: any[]): Observable<R>`
 
 ### Parámetros
@@ -541,6 +711,11 @@ Tipo: <code>number</code>.</td></tr>
 ### Retorna
 
 `Observable<R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

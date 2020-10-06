@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Repite o no una secuencia Observable en función de un Observable de notificaciones
+<h2 class="subtitle"> Repite o no una secuencia Observable en función de un Observable de notificaciones
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,25 +29,39 @@
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con lógica de repetición.
 
+</details>
+
 ## Descripción
 
 <img src="assets/images/marble-diagrams/utility/repeatWhen.png" alt="Diagrama de canicas del operador repeatWhen">
 
-// TODO Revise translation
+<!-- TODO Revise translation -->
 
 Retorna un Observable que refleja el Observable fuente con la excepción de un evento `complete`. Si el Observable fuente hace una llamada `complete`, `repeatWhen` emitirá al Observable retornado por el notificador. Si ese Observable hace una llamada `complete` o `error`, entonces este método hará una llamada `complete` o `error` en la suscripción hija. Si no, `repeatWhen` volverá a suscribirse al Observable fuente.
 
-Returns an Observable that mirrors the source Observable with the exception of a complete. If the source Observable calls complete, this method will emit to the Observable returned from notifier. If that Observable calls complete or error, then this method will call complete or error on the child subscription. Otherwise this method will resubscribe to the source Observable.
+<!-- Returns an Observable that mirrors the source Observable with the exception of a complete. If the source Observable calls complete, this method will emit to the Observable returned from notifier. If that Observable calls complete or error, then this method will call complete or error on the child subscription. Otherwise this method will resubscribe to the source Observable. -->
 
 ## Ejemplos
 
-```javascript
+**Repetir una secuencia de números con cada click**
 
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-repeatwhen?file=index.ts">StackBlitz</a>
+
+```javascript
+import { repeatWhen } from "rxjs/operators";
+import { fromEvent, range } from "rxjs";
+
+const click$ = fromEvent < MouseEvent > (document, "click");
+
+const number$ = range(1, 3);
+
+number$.pipe(repeatWhen(() => click$)).subscribe(console.log);
+// Salida: 1, 2, 3 (click) 1, 2, 3
 ```
 
-Suscribirse al Observable fuente con cada click, desencadenando una nueva petición AJAX con un id aleatorio
+**Suscribirse al Observable fuente con cada click, desencadenando una nueva petición AJAX con un id aleatorio**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-repeatwhen-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeatwhen-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { repeatWhen, map } from "rxjs/operators";
@@ -74,7 +92,7 @@ defer(() =>
 
 #### Ejemplo de la documentación oficial
 
-Repetir un flujo de mensajes con cada click
+**Repetir un flujo de mensajes con cada click**
 
 ```javascript
 import { of, fromEvent } from "rxjs";

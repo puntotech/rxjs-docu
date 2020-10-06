@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Extrae propiedadas de un objeto
+<h2 class="subtitle"> Extrae propiedadas de un objeto
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +29,8 @@
 
 `OperatorFunction<T, R>`: Un nuevo Observable de propiedades de los valores de la fuente.
 
+</details>
+
 ## Descripción
 
 Es como `map`, pero se utiliza para extraer una de las propiedades anidadas de los objetos emitidos.
@@ -35,9 +41,9 @@ Dada una lista de cadenas que describan la ruta de una propiedad de un objeto, o
 
 ## Ejemplos
 
-Obtener una propiedad de un objeto
+**Obtener una propiedad de un objeto**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-pluck-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-pluck-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { pluck } from "rxjs/operators";
@@ -53,9 +59,9 @@ pokemon$.pipe(pluck("name")).subscribe(console.log);
 // Salida: Charmander, Squirtle, Bulbasaur
 ```
 
-Obtener una propiedad anidada de un objeto
+**Obtener una propiedad anidada de un objeto**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-pluck-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-pluck-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { pluck } from "rxjs/operators";
@@ -73,7 +79,7 @@ pokemon$.pipe(pluck("stats", "attack")).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Proyectar cada click a la propiedad `tagName` del elemento `target` del click.
+**Proyectar cada click a la propiedad tagName del elemento target del click**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -84,7 +90,13 @@ const tagNames = clicks.pipe(pluck("target", "tagName"));
 tagNames.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1): OperatorFunction<T, T[K1]>`
 
@@ -97,6 +109,12 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, T[K1]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1, k2: K2): OperatorFunction<T, T[K1][k2]>`
 
@@ -111,6 +129,12 @@ tagNames.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, T[K1][k2]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `pluck(k1: K1, k2: K2, k3: K3): OperatorFunction<T, T[K1][k2][K3]>`
 
 ### Parámetros
@@ -124,6 +148,12 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4): OperatorFunction<T, T[K1][k2][K3][k4]>`
 
@@ -140,6 +170,12 @@ tagNames.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, T[K1][k2][K3][k4]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5): OperatorFunction<T, T[K1][k2][K3][k4][K5]>`
 
 ### Parámetros
@@ -155,6 +191,12 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3][k4][K5]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5, k6: K6): OperatorFunction<T, T[K1][k2][K3][k4][K5][k6]>`
 
@@ -173,6 +215,12 @@ tagNames.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, T[K1][k2][K3][k4][K5][k6]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `pluck(...properties: string[]): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -184,6 +232,11 @@ tagNames.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

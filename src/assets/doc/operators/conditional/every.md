@@ -9,9 +9,14 @@
 </a>
 </div>
 
-### Retorna un Observable que emite
+<h2 class="subtitle"> Retorna un Observable que emite
 
 Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
+
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -30,15 +35,17 @@ Objeto opcional que se utiliza como valor del <code>this</code> en la *callback*
 
 `OperatorFunction<T, boolean>`: Un Observable de un solo valor booleano que determina si todos los elementos del Observable fuente cumplen la condición especificada.
 
+</details>
+
 ## Descripción
 
 Si todos los valores emitidos por el Observable fuente cumplen la condición especificada, `every` emite _true_. Si hay algún valor que no cumpla la condición, se emite _false_.
 
 ## Ejemplos
 
-Comprobar si todos los valores emitidos son numéricos
+**Comprobar si todos los valores emitidos son numéricos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-every-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-every-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -50,9 +57,9 @@ number$.pipe(every((n) => Number.isInteger(n))).subscribe(console.log);
 // Salida: true
 ```
 
-Comprobar si todos los valores emitidos son menores a 2
+**Comprobar si todos los valores emitidos son menores a 2**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-every-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-every-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -64,9 +71,9 @@ number$.pipe(every((n) => n < 2)).subscribe(console.log);
 // Salida: false
 ```
 
-Comprobar si todas las peticiones tienen un status 200 (todo OK)
+**Comprobar si todas las peticiones tienen un status 200 (todo OK)**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-every-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-every-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -90,9 +97,7 @@ pokemonId$
 
 ### Ejemplo de la documentación oficial
 
-Un simple ejemplo que emite _true_ si todos los elementos son menores a 5, _false_ en caso contrario
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Un simple ejemplo que emite _true_ si todos los elementos son menores a 5, _false_ en caso contrario**
 
 ```javascript
 import { of } from "rxjs";

@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona con el Observable resultante
+<h2 class="subtitle"> Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona con el Observable resultante
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -29,6 +33,8 @@ El máximo número de Observables internos a los que se suscribe de forma concur
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite elementos del Observable `innerObservable` proporcionado.
 
+</details>
+
 ## Descripción
 
 Es como `mergeMap`, pero siempre proyecta los valores al mismo Observable interno.
@@ -39,9 +45,9 @@ Proyecta cada emisión de la fuente al Observable `innerObservable` dado, indepe
 
 ## Ejemplos
 
-Proyectar cada click al mismo Observable interno, que emite un mensaje
+**Proyectar cada click al mismo Observable interno, que emite un mensaje**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergemapto-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergemapto-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, of } from "rxjs";
@@ -53,9 +59,9 @@ click$.pipe(mergeMapTo(of("Hola, has hecho click :D"))).subscribe(console.log);
 // Salida: (click) 'Hola, has hecho click :D' (click) 'Hola, has hecho click :D'...
 ```
 
-Cada 3 segundos, obtener los títulos de las 3 primeras películas de Ghibli
+**Cada 3 segundos, obtener los títulos de las 3 primeras películas de Ghibli**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergemapto-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergemapto-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mergeMapTo, map, mergeAll, take } from "rxjs/operators";
@@ -78,7 +84,7 @@ second$.pipe(mergeMapTo(getGhibliFilmTitles())).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Por cada evento click, empezar un intervalo Observable de 1 segundo
+**Por cada evento click, empezar un intervalo Observable de 1 segundo**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
+<h2 class="subtitle"> Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -32,6 +36,8 @@ El valor por defecto que se emitirá en el caso de que no se encuentre ningún e
 
 `EmptyError`: Lanza un `EmptyError` si el Observable se completa sin emitir ninguna notificación `next`.
 
+</details>
+
 ## Descripción
 
 Emite únicamente el primer valor. O emite el primer valor que cumpla alguna condición.
@@ -43,9 +49,9 @@ Lanza un error en el caso de que no se encuentre un elemento válido y no se hay
 
 ## Ejemplos
 
-Emitir la primera cadena de una secuencia
+**Emitir la primera cadena de una secuencia**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-first-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-first-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { first } from "rxjs/operators";
@@ -57,9 +63,9 @@ fruit$.pipe(first()).subscribe(console.log);
 // Salida: Cereza
 ```
 
-Emitir la primera tecla pulsada
+**Emitir la primera tecla pulsada**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-rxjs-first-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-rxjs-first-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { first, map } from "rxjs/operators";
@@ -76,9 +82,9 @@ keyPressed$
 // Salida: KeyX
 ```
 
-Emitir el primer elemento que cumpla una condición
+**Emitir el primer elemento que cumpla una condición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-first-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-first-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -94,9 +100,9 @@ user$.pipe(first(({ age }) => age === 21)).subscribe(console.log);
 // Salida: { name: 'zaldih', age: 21 }
 ```
 
-Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición
+**Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-first-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-first-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { first } from "rxjs/operators";
@@ -118,7 +124,7 @@ pokemon$
 
 ### Ejemplos de la documentación oficial
 
-Emitir solo el primer click que ocurra en el DOM
+**Emitir solo el primer click que ocurra en el DOM**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -129,7 +135,7 @@ const result = clicks.pipe(first());
 result.subscribe((x) => console.log(x));
 ```
 
-Emitir el primer click que ocurra en un DIV
+**Emitir el primer click que ocurra en un DIV**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -140,7 +146,13 @@ const result = clicks.pipe(first((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `first(predicate?: null, defaultValue?: D): OperatorFunction<T, T | D>`
 
@@ -157,6 +169,12 @@ Tipo: <code>D</code>.</td></tr>
 
 `OperatorFunction<T, T | D>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `first(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue?: S): OperatorFunction<T, S>`
 
 ### Parameters
@@ -171,6 +189,12 @@ Tipo: <code>S</code>.</td></tr>
 
 `OperatorFunction<T, S>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `first(predicate: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
 
 ### Parameters
@@ -184,6 +208,11 @@ Tipo: <code>D</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, T | D>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

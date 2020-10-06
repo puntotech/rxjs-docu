@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Convierte un Observable de orden superior en uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
+<h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -23,6 +27,8 @@ No recibe ningún parámetro.
 
 `OperatorFunction<any, T>`: Un Observable que recibe un Observable de orden superior y propaga el primer Observable hasta que se completa, antes de suscribirse al siguiente Observable.
 
+</details>
+
 ## Descripción
 
 Convierte un Observable de orden superior en uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado.
@@ -33,9 +39,9 @@ Convierte un Observable de orden superior en uno de primer orden ignorando los O
 
 ## Ejemplos
 
-Ignorar todos los Observables internos hasta que el Observable interno actual esté completo
+**Ignorar todos los Observables internos hasta que el Observable interno actual esté completo**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-exhaust?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-exhaust?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { exhaust, map, delay } from "rxjs/operators";
@@ -62,7 +68,7 @@ pokemonId$
 
 ### Ejemplo de la documentación oficial
 
-Por cada click, ejecutar un temporizador, únicamente si no hay ningún temporizador activo
+**Por cada click, ejecutar un temporizador, únicamente si no hay ningún temporizador activo**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

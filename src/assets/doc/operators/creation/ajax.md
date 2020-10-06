@@ -9,15 +9,17 @@
 </a>
 </div>
 
-### Crea un Observable para una petición Ajax
+<h2 class="subtitle"> Crea un Observable para una petición Ajax
 
 <div class="fading-line"></div>
 
-### Firma
+<h2 class="subtitle"> Firma
 
 `ajax(urlOrRequest: string | AjaxRequest): Observable<AjaxResponse>`
 
 <div class="fading-line"></div>
+
+</details>
 
 ## Descripción
 
@@ -25,9 +27,9 @@ Crea un Observable para una petición Ajax a partir de un objeto de petición co
 
 ## Ejemplos
 
-Realizar una petición Ajax, y emitir el objeto AjaxResponse completo
+**Realizar una petición Ajax, y emitir el objeto AjaxResponse completo**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -38,15 +40,14 @@ ghibliFilmsResponse$.subscribe(console.log);
 // Salida: AjaxResponse { ...request: {...}, status: 200...}
 ```
 
-Emitir únicamente los datos del objeto respuesta
+**Emitir únicamente los datos del objeto respuesta**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { ajax } from "rxjs/ajax";
 import { mergeAll } from "rxjs/operators";
 
-// Observable will only emit the response data
 const ghibliFilm$ = ajax
   .getJSON("https://ghibliapi.herokuapp.com/films")
   .pipe(mergeAll());
@@ -59,7 +60,9 @@ ghibliFilm$.subscribe(console.log);
 */
 ```
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax-3?file=index.ts)
+**Utilizar un objeto de configuración para los parámetros de la petición AJAX**
+
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -78,9 +81,9 @@ ghibliFilmWithHeaders$.subscribe(console.log);
 // Salida: AjaxResponse {xhr: {}, request: {}...}
 ```
 
-Realizar varias peticiones Ajax mediante un operador de proyección de orden superior ([mergeMap](), [switchMap](), [concatMap](), [exhaustMap]())
+**Realizar varias peticiones Ajax mediante un operador de proyección de orden superior ([mergeMap](/operators/transformation/mergeMap), [switchMap](/operators/transformation/switchMap), [concatMap](/operators/transformation/concatMap), [exhaustMap](/operators/transformation/exhaustMap))**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from, of } from "rxjs";
@@ -102,7 +105,7 @@ filmId$.pipe(mergeMap((id) => getGhibliFilm(id))).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Usar `ajax()` para obtener el objeto de respuesta que retorna la API
+**Usar ajax() para obtener el objeto de respuesta que retorna la API**
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -118,7 +121,7 @@ const obs$ = ajax(`https://api.github.com/users?per_page=5`).pipe(
 );
 ```
 
-Usar `ajax.getJSON()` para obtener datos de la API
+**Usar ajax.getJSON() para obtener datos de la API**
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -134,7 +137,7 @@ const obs$ = ajax.getJSON(`https://api.github.com/users?per_page=5`).pipe(
 );
 ```
 
-Usar `ajax()` con un objeto como argumento y el método POST con un retraso de 2 segundos
+**Usar ajax() con un objeto como argumento y el método POST con un retraso de 2 segundos**
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -159,7 +162,7 @@ const users = ajax({
 );
 ```
 
-Usar `ajax()` para hacer una llamada a la API, que devuelve un objeto error
+**Usar ajax() para hacer una llamada a la API, que devuelve un objeto error**
 
 ```javascript
 import { ajax } from "rxjs/ajax";

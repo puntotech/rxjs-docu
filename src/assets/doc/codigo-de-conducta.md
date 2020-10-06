@@ -4,9 +4,9 @@
 
 En el interés de fomentar un entorno abierto y acogedor, los contribuidores y mantenedores nos comprometemos a hacer que la participación en nuestro proyecto y en nuestra comunidad sea una experiencia libre de acoso, independientemente de la edad, tamaño de cuerpo, minusvalías, etnia, identidad de género y expresión, nivel de experiencia, educación, estatus socioeconómico, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.
 
-# Nuestros Estándares
+## Nuestros Estándares
 
-A continuación tenemos ejemplos de conductas que fomentan un entorno positivo:
+A continuación se muestran ejemplos de conductas que fomentan un entorno positivo:
 
 - Utilizar un lenguaje inclusivo y acogedor.
 - Ser respetuoso con puntos de vista y experiencias diferentes.
@@ -14,7 +14,7 @@ A continuación tenemos ejemplos de conductas que fomentan un entorno positivo:
 - Centrarse en lo que sea mejor para la comunidad.
 - Mostrar empatía hacia otros miembros de la comunidad.
 
-A continuación tenemos ejemplos de conductas inaceptables:
+A continuación se muestran ejemplos de conductas inaceptables:
 
 - Uso de lenguaje o imágenes sexuales, además de atenciones/avances sexuales indeseados.
 - _Trolling_, comentarios insultantes/derogatorios y ataques personales o políticos.

@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
+<h2 class="subtitle"> Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -37,9 +41,9 @@ Si no se proporciona una función de comparación, se utiliza una verificación 
 
 ## Ejemplos
 
-Usar `distinctUntilChanged` sin una función de comparación
+**Usar distinctUntilChanged` sin una función de comparación**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilchanged-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilchanged-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { distinctUntilChanged } from "rxjs/operators";
@@ -51,9 +55,9 @@ fruit$.pipe(distinctUntilChanged()).subscribe(console.log);
 // Salida: Fresa, Cereza, Arándano, Fresa
 ```
 
-Usar `distinctUntilChanged` con una función de comparación
+**Usar distinctUntilChanged con una función de comparación**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilchanged-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilchanged-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { distinctUntilChanged } from "rxjs/operators";
@@ -87,7 +91,7 @@ pokemon$
 
 ### Ejemplos de la documentación oficial
 
-Un ejemplo simple con números
+**Un ejemplo simple con números**
 
 ```javascript
 import { of } from "rxjs";
@@ -98,7 +102,7 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
   .subscribe((x) => console.log(x)); // 1, 2, 1, 2, 3, 4
 ```
 
-Un ejemplo usando una función de comparación
+**Un ejemplo usando una función de comparación**
 
 ```javascript
     import { of } from 'rxjs';

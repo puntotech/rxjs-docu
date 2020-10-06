@@ -9,7 +9,7 @@
 </a>
 </div>
 
-### Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante
+<h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante</h2>
 
 💡 Se debe utilizar `mergeMap` si se quieren tener varios Observables internos suscritos de forma concurrente
 
@@ -31,6 +31,8 @@ El máximo número de Observables de entrada suscritos de forma concurrente.</td
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección ( y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente y fusionando los resultados de los Observables obtenidos a partir de esta transformación.
 
+</details>
+
 ## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' cada uno de estos Observables internos mediante el operador `mergeAll`.
@@ -41,9 +43,9 @@ Retorna un Observable que, después de aplicar una función a cada elemento emit
 
 ## Ejemplos
 
-Como mergeMap se suscribe a los Observables internos de forma concurrente, y se le ha añadido un retardo aleatorio a las peticiones AJAX, podremos observar que // TODO
+Como mergeMap se suscribe a los Observables internos de forma concurrente, y se le ha añadido un retardo aleatorio a las peticiones AJAX, se puede observar que // TODO
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergemap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergemap-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mergeMap, map, tap, delayWhen } from "rxjs/operators";
@@ -80,15 +82,9 @@ pokemonId$
 */
 ```
 
-[StackBlitz]()
-
-```javascript
-
-```
-
 ### Ejemplo de la documentación oficial
 
-Proyectar y 'aplastar' cada letra a un Observable que emite cada segundo
+**Proyectar y 'aplastar' cada letra a un Observable que emite cada segundo**
 
 ```javascript
 import { of, interval } from "rxjs";
@@ -110,7 +106,13 @@ result.subscribe((x) => console.log(x));
 // continúa listando a,b,c con un el número ascendiente que corresponda
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `mergeMap(project: (value: T, index: number) => O, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -125,6 +127,12 @@ Tipo: <code>number.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `mergeMap(project: (value: T, index: number) => O, resultSelector: undefined, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -142,6 +150,12 @@ Tipo: <code>number.</td></tr>
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `mergeMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R, concurrent?: number): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -156,6 +170,11 @@ Tipo: <code>number.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+</div>
+</details>
 
 ## Recursos adicionales
 

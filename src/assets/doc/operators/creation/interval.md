@@ -9,11 +9,11 @@
 </a>
 </div>
 
-### Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
+<h2 class="subtitle"> Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
 
 <div class="fading-line"></div>
 
-### Firma
+<h2 class="subtitle"> Firma
 
 `interval(period: number = 0, scheduler: SchedulerLike = async): Observable<number>`
 
@@ -30,6 +30,8 @@ El <code>SchedulerLike</code> que se utiliza para planificar la emisión de valo
 
 `Observable<number>`: Un Observable que emite una secuencia incremental de números, emitiendo un valor en cada intervalo de tiempo.
 
+</details>
+
 ## Descripción
 
 Emite una secuencia incremental de números periódicamente.
@@ -40,9 +42,9 @@ Emite una secuencia incremental de números periódicamente.
 
 ## Ejemplos
 
-Emitir una secuencia de números ascendente con un intervalo de 2 segundos entre cada emisión
+**Emitir una secuencia de números ascendente con un intervalo de 2 segundos entre cada emisión**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-interval?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-interval?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval } from "rxjs";
@@ -53,9 +55,9 @@ number$.subscribe(console.log);
 // Salida: 0, 1, 2, 3, 4, 5...
 ```
 
-Si no se proporciona ningún valor a `interval`, emitirá valores cada 0ms
+**Si no se le proporciona ningún valor a interval, emitirá valores cada 0ms**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-interval-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-interval-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval } from "rxjs";
@@ -68,7 +70,7 @@ superFastNumber$.subscribe((number) => console.log(number));
 
 ### Ejemplo de la documentación oficial
 
-Emite números ascendentes, uno cada segundo (1000ms) hasta el número 3.
+**Emite números ascendentes, uno cada segundo (1000ms) hasta el número 3**
 
 ```javascript
 import { interval } from "rxjs";

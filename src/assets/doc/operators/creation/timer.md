@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Crea un Observable que comienza a emitir una secuencia ascendente de números consecutivos a intervalos, tras un periodo inicial de tiempo
+<h2 class="subtitle"> Crea un Observable que comienza a emitir una secuencia ascendente de números consecutivos a intervalos, tras un periodo inicial de tiempo
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -30,6 +34,8 @@ EL <code>SchedulerLike</code> que utilizar para planificar las emisiones, propor
 
 `Observable<number>`: Un Observable que emite una secuencia ascendente de números consecutivos, comenzando por el valor 0, tras un periodo de tiempo inicial especificado por `dueTime`.
 
+</details>
+
 ## Descripción
 
 Es como `interval`, pero se puede especificar cuándo deben comenzar las emisiones.
@@ -44,9 +50,9 @@ Si no se proporciona el valor `period`, el Observable resultante emite un único
 
 ## Ejemplos
 
-Emitir un único valor, 0, tras 2 segundos de espera
+**Emitir un único valor, 0, tras 2 segundos de espera**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-timer?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timer?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { timer } from "rxjs";
@@ -57,9 +63,9 @@ zero$.subscribe(console.log);
 // Salida: 0
 ```
 
-Emitir una secuencia ascendente de números a intervalos de 1 segundo, tras 5 segundos de espera
+**Emitir una secuencia ascendente de números a intervalos de 1 segundo, tras 5 segundos de espera**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-timer-2?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timer-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { timer } from "rxjs";
@@ -72,7 +78,7 @@ number$.subscribe((number) => console.log(number));
 
 ### Ejemplos de la documentación oficial
 
-Emitir una secuencia ascendente de números, uno cada segundo (1000ms), comenzando tras 3 segundos
+**Emitir una secuencia ascendente de números, uno cada segundo (1000ms), comenzando tras 3 segundos**
 
 ```javascript
 import { timer } from "rxjs";

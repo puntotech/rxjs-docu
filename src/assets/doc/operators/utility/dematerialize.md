@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Convierte un Observable de objetos Notification en las emisiones que representan
+<h2 class="subtitle"> Convierte un Observable de objetos Notification en las emisiones que representan
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -35,9 +39,9 @@ Se utiliza junto al operador `materialize`.
 
 ## Ejemplos
 
-Convierte las Notificaciones en emisiones con el mismo valor y tipo (error, next o complete)
+**Convierte las Notificaciones en emisiones con el mismo valor y tipo (error, next o complete)**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-dematerialize-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-dematerialize-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { dematerialize } from "rxjs/operators";
@@ -62,7 +66,7 @@ notification$.pipe(dematerialize()).subscribe(console.log, console.error);
 
 ### Ejemplo de la documentación oficial
 
-Convierte un Observable de Notificaciones en un Observable de valores
+**Convierte un Observable de Notificaciones en un Observable de valores**
 
 ```javascript
 import { of, Notification } from "rxjs";

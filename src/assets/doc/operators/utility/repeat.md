@@ -9,7 +9,10 @@
 </a>
 </div>
 
-<h3> Retorna un Observable que se resuscribe <code>count</code> veces al flujo fuente cuando el Observable fuente se completa </h3>
+<h2 class="subtitle"> Retorna un Observable que se resuscribe <code>count</code> veces al flujo fuente cuando el Observable fuente se completa</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -29,6 +32,8 @@ El número de veces que se repiten los valores del Observable fuente. Si se espe
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se resuscribirá `count` veces al flujo fuente cuando el flujo fuente se complete.
 
+</details>
+
 ## Descripción
 
 Repite todos los valores emitidos por la fuente. Es como el operador `retry`, para casos que no sean de error.
@@ -41,9 +46,9 @@ Nota: `repeat(0)` retorna un Observable vacío y `repeat()` se repetirá para si
 
 ## Ejemplos
 
-Repetir una petición AJAX
+**Repetir una petición AJAX**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-repeat-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeat-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { repeat } from "rxjs/operators";
@@ -62,25 +67,26 @@ ghibliFilm$
 // Output: My Neighbor Totoro, My Neighbor Totoro, My Neighbor Totoro
 ```
 
-Retornar un Observable vacío
+**Retornar un Observable vacío**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-repeat-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeat-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { repeat } from "rxjs/operators";
 import { of } from "rxjs";
 
-const pokemon$ = of("Squirtle", "Bulbasaur", "Charmander");
+const language$ = of("JavaScript", "TypeScript", "Go");
 
-pokemon$
-  .pipe(repeat(0))
-  .subscribe(console.log, console.error, () => console.log("Flujo completado"));
+language$.pipe(repeat(0)).subscribe({
+  next: console.log,
+  complete: () => console.log("Flujo completado"),
+});
 // Salida: Flujo completado
 ```
 
-Repetir un flujo de mensajes de forma infinita
+**Repetir un flujo de mensajes de forma infinita**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-repeat-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeat-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { repeat } from "rxjs/operators";
@@ -94,23 +100,23 @@ answer$.pipe(repeat()).subscribe(console.log);
 
 #### Ejemplos de la documentación oficial
 
-Repetir un flujo de mensajes
+**Repetir un flujo de mensajes**
 
 ```javascript
 import { of } from "rxjs";
 import { repeat, delay } from "rxjs/operators";
 
-const source = of("Repeat message");
+const source = of("Repetir mensaje");
 const example = source.pipe(repeat(3));
 example.subscribe((x) => console.log(x));
 
-// Results
-// Repeat message
-// Repeat message
-// Repeat message
+// Salida:
+// Repetir mensaje
+// Repetir mensaje
+// Repetir mensaje
 ```
 
-Repetir 3 valores, 2 veces
+**Repetir 3 valores, 2 veces**
 
 ```javascript
 import { interval } from "rxjs";
@@ -120,7 +126,7 @@ const source = interval(1000);
 const example = source.pipe(take(3), repeat(2));
 example.subscribe((x) => console.log(x));
 
-// Results every second
+// Salida: (cada segundo)
 // 0
 // 1
 // 2

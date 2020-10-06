@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Captura errores en el Observable que se manejan devolviendo un Observable nuevo o lanzando un error
+<h2 class="subtitle"> Captura errores en el Observable que se manejan devolviendo un Observable nuevo o lanzando un error
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +29,8 @@
 
 `OperatorFunction<T, T | ObservedValueOf<O>>`: Un Observable que se puede originar en el Observable fuente o en el Observable retornado por la función `selector`.
 
+</details>
+
 ## Descripción
 
 `catchError` captura errores en el Observable fuente, manejándolos de dos maneras posibles: bien devolviendo un Observable nuevo o bien lanzando un nuevo error.
@@ -33,9 +39,9 @@
 
 ## Ejemplos
 
-Capturar un error, retornando un Observable
+**Capturar un error, retornando un Observable**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-catcherror?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-catcherror?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { throwError, of } from "rxjs";
@@ -49,9 +55,9 @@ error$
 // Salida: Error capturado grácilmente: ¡Oh no!
 ```
 
-Capturar un error y lanzar otro error
+**Capturar un error y lanzar otro error**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-catcherror-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-catcherror-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { throwError, of } from "rxjs";
@@ -69,11 +75,11 @@ error$
 // Salida: (Error) Lanzando un nuevo error: Oh no!
 ```
 
-Al capturar los errores que ocurren en un Observable interno (un Observable emitido por un Observable de orden superior), se debe tener cuidado a la hora de utilizar el operador `catchError` ya que, si se coloca en el sitio equivocado, el flujo del Observable fuente no seguirá ejecutándose tras capturar el error.
+**Al capturar los errores que ocurren en un Observable interno (un Observable emitido por un Observable de orden superior), se debe tener cuidado a la hora de utilizar el operador `catchError` ya que, si se coloca en el sitio equivocado, el flujo del Observable fuente no seguirá ejecutándose tras capturar el error.**
 
-A continuación, se puede ver cómo el uso incorrecto de `catchError` hará que, después de capturar el error que devuelve la primera petición, el flujo se completará y no se harán las otras dos peticiones restantes:
+**A continuación, se puede ver cómo el uso incorrecto de `catchError` hará que, después de capturar el error que devuelve la primera petición, el flujo se completará y no se harán las otras dos peticiones restantes:**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-catcherror-inner?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-catcherror-inner?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { map, concatMap, catchError } from "rxjs/operators";
@@ -97,9 +103,9 @@ pokemonId$
 // Salida: ¡Oh no, ha ocurrido un error! AjaxError: ajax error 404, Completado
 ```
 
-Sin embargo, si se utiliza `catchError` en el Observable interno, el comportamiento es el que se busca: cuando falle la primera petición, se capturará el error y el flujo seguirá ejecutándose, realizando las dos peticiones restantes:
+**Sin embargo, si se utiliza `catchError` en el Observable interno, el comportamiento es el que se busca: cuando falle la primera petición, se capturará el error y el flujo seguirá ejecutándose, realizando las dos peticiones r**estantes:
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-catcherror-inner-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-catcherror-inner-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { map, concatMap, catchError } from "rxjs/operators";
@@ -126,7 +132,7 @@ pokemonId$
 
 ### Ejemplos de la documentación oficial
 
-Continuar con un Observable diferente cuando ocurre un error
+**Continuar con un Observable diferente cuando ocurre un error**
 
 ```javascript
 import { of } from "rxjs";
@@ -146,7 +152,7 @@ of(1, 2, 3, 4, 5)
 // 1, 2, 3, I, II, III, IV, V
 ```
 
-Reiniciar el Observable fuente en caso de error, parecido al operador retry()
+**Reiniciar el Observable fuente en caso de error, parecido al operador retry()**
 
 ```javascript
 import { of } from "rxjs";
@@ -167,7 +173,7 @@ of(1, 2, 3, 4, 5)
 // 1, 2, 3, 1, 2, 3...
 ```
 
-Lanza un error nuevo cuando el Observable fuente lanza un error
+**Lanzar un error nuevo cuando el Observable fuente lance un error**
 
 ```javascript
 import { of } from "rxjs";

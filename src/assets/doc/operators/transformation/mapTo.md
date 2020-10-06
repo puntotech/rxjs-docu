@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Emite el mismo valor cada vez que el Observable fuente emite un valor
+<h2 class="subtitle"> Emite el mismo valor cada vez que el Observable fuente emite un valor
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +29,8 @@
 
 `OperatorFunction<T, R>`: Un Observable que emite el mismo valor cada vez que el Observable fuente emite algo.
 
+</details>
+
 ## Descripción
 
 Es como `map`, pero proyecta cada emisión siempre al mismo valor.
@@ -35,9 +41,9 @@ Recibe un valor constante como argumento, que emite cuandoquiera que el Observab
 
 ## Ejemplos
 
-Emitir "La respuesta es 42" de forma indefinida
+**Emitir "La respuesta es 42" de forma indefinida**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mapto-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mapto-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -49,9 +55,9 @@ number$.pipe(mapTo("La respuesta es 42")).subscribe(console.log);
 // Salida: La respuesta es 42, La respuesta es 42, La respuesta es 42, La respuesta es 42...
 ```
 
-Emitir "¡Tecla pulsada!" cada vez que pulsemos una tecla
+**Emitir "¡Tecla pulsada!" cada vez que se pulse una tecla**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mapto-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mapto-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -65,7 +71,7 @@ key$.pipe(mapTo("¡Tecla pulsada!")).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Proyectar cada click a la cadena 'Hi'
+**Proyectar cada click a la cadena 'Hi'**
 
 ```javascript
 import { fromEvent } from "rxjs";

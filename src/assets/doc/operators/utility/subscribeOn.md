@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Suscribe a los Observadores asíncronamente al Observable fuente en función del <code>SchedulerLike</code> especificado
+<h2 class="subtitle"> Suscribe a los Observadores asíncronamente al Observable fuente en función del <code>SchedulerLike</code> especificado
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,27 +29,23 @@ Tipo: <code>number</code>.</td></tr>
 
 ### Retorna
 
-`MonoTypeOperatorFunction<T>`: El Observable fuente modificado para que sus suscripciones ocurran según el `SchedulerLike` especificado.
+`MonoTypeOperatorFunction<T>`: El Observable fuente modificado para que sus suscripciones ocurran en función del `SchedulerLike` especificado.
 
-source Observable modified so that its subscriptions happen on the specified SchedulerLike.
+</details>
 
 ## Descripción
 
-Con `subscribeOn` se puede decidir qué tipo de planificador utilizará un Observable cuando se realicen suscripciones a él.
+Con `subscribeOn` se puede decidir qué tipo de planificador utilizará un Observable cuando sea suscrito.
 
-With subscribeOn you can decide what type of scheduler a specific Observable will be using when it is subscribed to.
-
-Los planificadores controlan la velocidad y el orden de las emisiones a los observadores desde un flujo Observable.
-
-Schedulers control the speed and order of emissions to observers from an Observable stream.
+Los planificadores controlan la velocidad y el orden en el que se emiten los valores a los observadores desde un flujo Observable.
 
 <img src="assets/images/marble-diagrams/utility/subscribeOn.png" alt="Diagrama de canicas del operador subscribeOn">
 
 ### Ejemplos
 
-Comparación entre los distintos planificadores
+**Comparación entre los distintos planificadores**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-subscribeon-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-subscribeon-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { subscribeOn } from "rxjs/operators";
@@ -80,9 +80,9 @@ const b = of(5, 6, 7, 8, 9);
 merge(a, b).subscribe(console.log);
 ```
 
-Tanto el Observable `a` como el Observable `b` emitirán sus valores de forma directa y síncrona cuando se realice alguna suscripción sobre ellos. Esto resultará en la siguiente salida: 1, 2, 3, 4, 5, 6, 7, 8, 9
+Tanto el Observable a como el Observable b emitirán sus valores de forma directa y síncrona cuando se realice alguna suscripción sobre ellos. Esto resultará en la siguiente salida: 1, 2, 3, 4, 5, 6, 7, 8, 9
 
-Sin embargo, si se utiliza el operador `subscribeOn` para indicar que se quiere utilizar el `asyncScheduler` para los valores emitidos por el Observable `a`:
+Sin embargo, si se utiliza el operador subscribeOn para indicar que se quiere utilizar el asyncScheduler para los valores emitidos por el Observable a:
 
 ```javascript
 import { of, merge, asyncScheduler } from "rxjs";
@@ -93,7 +93,7 @@ const b = of(5, 6, 7, 8, 9);
 merge(a, b).subscribe(console.log);
 ```
 
-La salida será 5, 6, 7, 8, 9, 1, 2, 3, 4. Esto es debido a que el Observable `b` emite sus valores de forma síncrona y directa, pero las emisiones del Observable `a` se planifican en el bucle de eventos, dado que se está utilizando el `asyncScheduler`.
+La salida será 5, 6, 7, 8, 9, 1, 2, 3, 4. Esto es debido a que el Observable b emite sus valores de forma síncrona y directa, pero las emisiones del Observable a se planifican en el bucle de eventos, dado que se está utilizando el asyncScheduler.
 
 ## Recursos adicionales
 

@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana), que contiene como mucho un número determinado de valores
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), que contiene como mucho un número determinado de valores
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -28,6 +32,8 @@ El intervalo que señala cuándo abrir una ventana nueva. Por ejemplo, si `start
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
+</details>
+
 ## Descripción
 
 Es como `bufferCount`, pero emite un Observable anidado en lugar de un array.
@@ -38,11 +44,13 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 ## Ejemplos
 
-// TODO add new example with startWindowEvery param
+<!-- TODO add example with startWindowEvery param -->
 
-Recoge un máximo de cuatro teclas pulsadas en una ventana. Cada ventana se emite cuando haya recogido cuatro valores.
+**Recoge un máximo de cuatro teclas pulsadas en una ventana**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowcount-1?file=index.ts)
+Cada ventana se emite cuando haya recogido cuatro valores.
+
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowcount-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -64,7 +72,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Ignorar cada 3er evento click, comenzando a partir del primero
+**Ignorar cada 3er evento click, comenzando a partir del primero**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -79,7 +87,7 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-Ignorar cada 3er evento click, comenzando a partir del tercero
+**Ignorar cada 3er evento click, comenzando a partir del tercero**
 
 ```javascript
 import { fromEvent } from "rxjs";

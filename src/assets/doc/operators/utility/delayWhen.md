@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Retrasa la emisión de los elementos del Observable fuente en función de las emisiones de un segundo Observable
+<h2 class="subtitle"> Retrasa la emisión de los elementos del Observable fuente en función de las emisiones de un segundo Observable
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -28,6 +32,8 @@ Un Observable que disapra la suscripción al Observable fuente en cuanto emita a
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente durante una cantidad de tiempo determinada por el Observable que retorna la función `delayDurationSelector`.
 
+</details>
+
 ## Descripción
 
 Es como `delay`, pero la duración del retraso de cada emisión se determina por un segundo Observable.
@@ -40,9 +46,9 @@ De forma opcional, `delayWhen` recibe un segundo argumento, `subscriptionDelay`,
 
 ## Ejemplos
 
-Retrasa la emisión de cada tecla pulsada durante 2 segundos
+**Retrasa la emisión de cada tecla pulsada durante 2 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-delaywhen-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-delaywhen-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { delayWhen, map } from "rxjs/operators";
@@ -58,7 +64,7 @@ key$.pipe(delayWhen(() => interval(2000))).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Retrasa cada click durante una cantidad de tiempo aleatoria, entre 0 y 5 segundos
+**Retrasa cada click durante una cantidad de tiempo aleatoria, entre 0 y 5 segundos**
 
 ```javascript
 import { fromEvent, interval } from 'rxjs';

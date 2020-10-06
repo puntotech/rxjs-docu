@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Reintenta una secuencia Observable cuando ocurre un error
+<h2 class="subtitle"> Reintenta una secuencia Observable cuando ocurre un error
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +29,8 @@
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con la lógica de reintento.
 
+</details>
+
 ## Descripción
 
 Retorna un Observable que refleja el Observable fuente con la excepción de un error. Si el Observable fuente lanza un error, `retryWhen` emitirá el `Throwable` que provocó el error al Observable retornado por `notifier`. Si ese Observable hace una llamada a `complete` o a `error`, entonces este operador llamará a `complete` o a `error` en la suscripción hija. En caso contrario, `retryWhen` se resuscribirá al Observable fuente.
@@ -33,9 +39,9 @@ Retorna un Observable que refleja el Observable fuente con la excepción de un e
 
 ## Ejemplos
 
-Reintentar una secuencia Observable tras esperar un tiempo determinado, sin un número limitado de intentos
+**Reintentar una secuencia Observable tras esperar un tiempo determinado, sin un número limitado de intentos**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retrywhen?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retrywhen?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval, timer, throwError } from "rxjs";
@@ -64,9 +70,9 @@ number$
 // Salida: 0, 1, 2, 3, 4, 5, Ha ocurrido un error: Número demasiado alto (3s después se repite el proceso) 0, 1...
 ```
 
-Reintentar una secuencia Observable tras esperar un tiempo determinado, con un número limitado de intentos
+**Reintentar una secuencia Observable tras esperar un tiempo determinado, con un número limitado de intentos**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retrywhen-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retrywhen-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import {
@@ -112,6 +118,6 @@ pokemonId$
 
 ## Recursos adicionales
 
-[Backoff exponencial]()
+- [Backoff exponencial]()
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/retryWhen)

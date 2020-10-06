@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
+<h2 class="subtitle"> Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -27,6 +31,8 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 `OperatorFunction<T, number>`: Un Observable del índice del primer elemento que cumpla la condición.
 
+</details>
+
 ## Descripción
 
 Es como `find`, pero emite el índice del valor encontrado, en lugar del propio valor.
@@ -37,9 +43,9 @@ findIndex searches for the first item in the source Observable that matches the 
 
 ## Ejemplos
 
-Emite el índice del primer Pokémon de tipo fuego
+**Emite el índice del primer Pokémon de tipo fuego**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-findindex-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-findindex-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { findIndex } from "rxjs/operators";
@@ -56,15 +62,15 @@ pokemon$.pipe(findIndex(({ type }) => type === "Fire")).subscribe(console.log);
 // Salida: 1
 ```
 
-Emite el índice de la primera vez que se pulse la tecla x
+**Emite el índice de la primera vez que se pulse la tecla x**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-findindex-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-findindex-2?file=index.ts">StackBlitz</a>
 
-```javascript
+```typescript
 import { findIndex, map } from "rxjs/operators";
 import { fromEvent } from "rxjs";
 
-const key$ = fromEvent < KeyboardEvent > (document, "keydown");
+const key$ = fromEvent<KeyboardEvent>(document, "keydown");
 
 key$
   .pipe(
@@ -72,14 +78,12 @@ key$
     findIndex((code) => code === "KeyX")
   )
   .subscribe(console.log);
-// Salida: (Tecla n) (Tecla f) (Tecla x) 2
+// Salida: (Pulsar tecla n) (Pulsar tecla f) (Pulsar tecla x) 2
 ```
 
 ### Ejemplo de la documentación oficial
 
-Emite el índice del primer click que ocurre en un elemento DIV
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Emite el índice del primer click que ocurre en un elemento DIV**
 
 ```javascript
 import { fromEvent } from "rxjs";

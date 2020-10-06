@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Retorna un Observable que se salta los valores emitidos por el Observable fuente hasta que un segundo Observable emite un valor
+<h2 class="subtitle"> Retorna un Observable que se salta los valores emitidos por el Observable fuente hasta que un segundo Observable emite un valor
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +29,8 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se salta elementos del Observable fuente hasta que el segundo Observable emite un valor. Entonces, comienza a emitir valores normalmente.
 
+</details>
+
 ## Descripción
 
 El operador `skipUntil` se salta las emisiones del Observable fuente hasta que el segundo Observable emita un valor. Esto puede ser especialmente útil para gestionar las interacciones del usuario, las respuestas de peticiones http o para esperar a que pasen periodos determinados de tiempo.
@@ -37,9 +43,9 @@ Si el Observable notificador se completa o lanza un error sin haber emitido ning
 
 ## Ejemplos
 
-Saltar la secuencia de números hasta que se pulse la barra espaciadora
+**Saltar la secuencia de números hasta que se pulse la barra espaciadora**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skipuntil-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skipuntil-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { filter, map, skipUntil } from "rxjs/operators";
@@ -56,9 +62,9 @@ number$.pipe(skipUntil(key$)).subscribe(console.log);
 // Salida: (4s) (Pulsar barra espaciadora) 4, 5, 6...
 ```
 
-Saltar la secuencia de números hasta que pasen 4 segundos
+**Saltar la secuencia de números hasta que pasen 4 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skipuntil-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skipuntil-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skipUntil } from "rxjs/operators";
@@ -73,7 +79,7 @@ number$.pipe(skipUntil(timer$)).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Saltar las emisiones del Observable fuente hasta que el usuario haga click
+**Saltar las emisiones del Observable fuente hasta que el usuario haga click**
 
 ```javascript
 import { interval, fromEvent } from "rxjs";

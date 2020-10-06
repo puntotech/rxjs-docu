@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Convierte un Observable que emite elementos en uno que emite indicaciones de la cantidad de tiempo transcurrida entre emisiones
+<h2 class="subtitle"> Convierte un Observable que emite elementos en uno que emite indicaciones de la cantidad de tiempo transcurrida entre emisiones
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -26,21 +30,23 @@ El planificador utilizado para obtener el tiempo.</td></tr>
 
 `OperatorFunction<T, TimeInterval<T>>`: Un Observable que emite información sobre el valor y el intervalo.
 
+</details>
+
 ## Descripción
 
 Emite un objeto que contiene el valor actual y el tiempo transcurrido entre la emisión del valor actual y el valor anterior, que se calcula utilizando el método `now()` del planificador que se haya proporcionado para obtener el momento exacto de cada emisión, y después calculando la diferencia. Dado que el planificador es `async` por defecto, el intervalo estará en milisegundos.
 
 ## Ejemplos
 
-Emitir el valor de la tecla pulsada, además del tiempo transcurrido desde la última tecla presionada
+**Emitir el valor de la tecla pulsada, además del tiempo transcurrido desde la última tecla presionada**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-timeinterval-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timeinterval?file=index.ts">StackBlitz</a>
 
-```javascript
+```typescript
 import { timeInterval } from "rxjs/operators";
 import { fromEvent } from "rxjs";
 
-const key$ = fromEvent < KeyboardEvent > (document, "keydown");
+const key$ = fromEvent<KeyboardEvent>(document, "keydown");
 
 key$
   .pipe(timeInterval())
@@ -57,7 +63,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Emitir el intervalo de tiempo transcurrido entre la emisión del valor actual y del valor anterior
+**Emitir el intervalo de tiempo transcurrido entre la emisión del valor actual y del valor anterior**
 
 ```javascript
 const seconds = interval(1000);
@@ -72,9 +78,9 @@ seconds.pipe(timeout(900)).subscribe(
   (err) => console.log(err)
 );
 
-// NOTE: The values will never be this precise,
-// intervals created with `interval` or `setInterval`
-// are non-deterministic.
+// NOTA: Los Valores nunca serán así de precisos,
+// los intervalos creados con `interval` o `setInterval`
+// no son deterministas.
 
 // {value: 0, interval: 1000}
 // {value: 1, interval: 1000}

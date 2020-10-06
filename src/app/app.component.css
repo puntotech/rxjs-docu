@@ -20,7 +20,7 @@ rxjs-docs-sidenav {
   height: 100%;
 }
 
-@media only screen and (min-width: 450px) and (max-device-width: 1600px) {
+@media screen and (min-width: 450px) and (max-width: 16000px) {
   mat-sidenav {
     width: 300px;
   }

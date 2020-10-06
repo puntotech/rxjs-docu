@@ -9,7 +9,11 @@
 </a>
 </div>
 
-### Emite la emisión más reciente del Observable fuente en cada periodo de tiempo determinado
+<h2 class="subtitle"> Emite la emisión más reciente del Observable fuente en cada periodo de tiempo determinado
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -28,6 +32,8 @@ El <code>SchedulerLike</code> que utilizar para gestionar los temporizadores que
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite la emisión más reciente del Observable fuente en el intervalo de tiempo especificado.
 
+</details>
+
 ## Descripción
 
 Toma una muestra del Observable fuente a intervalos periódicos de tiempo, emitiendo la emisión más reciente en dicho periodo de tiempo.
@@ -38,9 +44,9 @@ Toma una muestra del Observable fuente a intervalos periódicos de tiempo, emiti
 
 ## Ejemplos
 
-Emitir el valor más reciente desde el último muestreo, realizado cada 2 segundos
+**Emitir el valor más reciente desde el último muestreo, realizado cada 2 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-sampletime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-sampletime-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -52,9 +58,9 @@ number$.pipe(sampleTime(2000)).subscribe(console.log);
 // Salida: 0, 2, 4, 6, 8...
 ```
 
-Emitir la tecla pulsada más reciente desde el último muestreo, realizado cada 2 segundos
+**Emitir la tecla pulsada más reciente desde el último muestreo, realizado cada 2 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-sampletime-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-sampletime-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -75,7 +81,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Cada segundo, emitir el click más reciente
+**Cada segundo, emitir el click más reciente**
 
 ```javascript
 import { fromEvent } from "rxjs";

@@ -44,7 +44,21 @@ const TREE_DATA: SectionNode[] = [
 
       { name: 'Suscripción', url: 'concepts/suscripcion' },
 
-      { name: 'Testing', url: 'concepts/testing' },
+      {
+        name: 'Testing',
+        url: 'concepts/testing',
+        children: [
+          {
+            name: 'Tests de Canicas',
+            url: 'concepts/testing/tests-de-canicas',
+          },
+
+          {
+            name: 'Contribuir tests a RxJS',
+            url: 'concepts/testing/contribuir-tests-a-rxjs',
+          },
+        ],
+      },
     ],
   },
   {
