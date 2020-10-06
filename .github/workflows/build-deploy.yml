@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: GitHub Pages 
+   # - name: GitHub Pages 
    #   uses: cmgriffing/scully-gh-pages-action@v9
    #   with:
    #       deploy-branch: gh-pages
