@@ -14,12 +14,12 @@ export class AppComponent implements OnInit {
 
   maxMobileDisplayWidth = 1000;
   isMobileDisplay: boolean;
+  mode: string;
 
   constructor(private sidenavService: SidenavService, private router: Router) {}
 
   ngOnInit() {
-    this.isMobileDisplay = this.isMobileDisplayWidth(window.innerWidth);
-    this.updateSidenav();
+    this.onResize(window.innerWidth);
 
     this.router.events
       .pipe(filter((val) => val instanceof NavigationEnd))
@@ -33,15 +33,16 @@ export class AppComponent implements OnInit {
   @HostListener('window:resize', ['$event.target.innerWidth'])
   onResize(width: number) {
     this.isMobileDisplay = this.isMobileDisplayWidth(width);
+    this.updateMode();
     this.updateSidenav();
-  }
-
-  get mode() {
-    return !this.isMobileDisplay ? 'side' : 'over';
   }
 
   private updateSidenav() {
     this.sidenav.toggle(!this.isMobileDisplay);
+  }
+
+  private updateMode() {
+    this.mode = this.isMobileDisplay ? 'over' : 'side';
   }
 
   private isMobileDisplayWidth(width: number) {
