@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href=/rxjs-docu/ && scully --scanRoutes",
+    "deploy": "ng build --prod && scully --scanRoutes --prod",
     "scully": "npm run build; scully --scanRoutes",
     "scully:serve": "scully serve"
   },
@@ -32,6 +32,7 @@
     "@scullyio/init": "0.0.26",
     "@scullyio/ng-lib": "^1.0.0-beta.1",
     "@scullyio/scully": "latest",
+    "@scullyio/scully-plugin-base-href-rewrite": "^1.0.0-beta.0",
     "emoji-toolkit": "^6.0.1",
     "ngx-markdown": "^9.0.0",
     "prismjs": "^1.20.0",
