@@ -15,7 +15,8 @@ jobs:
       with:
           deploy-branch: gh-pages
           access-token: ${{ secrets.ACCESS_TOKEN }}
-
+          build-args: --prod
+          scully-args: --scanRoutes --prod
    # - name: Build
    #   run: |
   #      npm install
