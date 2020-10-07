@@ -15,7 +15,6 @@ jobs:
       with:
           deploy-branch: gh-pages
           access-token: ${{ secrets.ACCESS_TOKEN }}
-          build-args: '--prod'
 
    # - name: Build
    #   run: |
