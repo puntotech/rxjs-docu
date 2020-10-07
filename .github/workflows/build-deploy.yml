@@ -15,7 +15,7 @@ jobs:
       with:
           deploy-branch: gh-pages
           access-token: ${{ secrets.ACCESS_TOKEN }}
-          build-args: --prod --base-href=/rxjs-docu/
+          build-args: --prod --base-href=/rxjs-docu/ --deploy-url=/rxjs-docu/
    # - name: Build
    #   run: |
   #      npm install
