@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # debounce
 
-### Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado por otro Observable sin que el Observable fuente emita ningún valor
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado por otro Observable sin que el Observable fuente emita ningún valor
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,7 +29,9 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente durante un periodo de tiempo determinado por el Observable retornado por `durationSelector`. Es posible que algunos valores se pierdan si se producen demasiado frecuentemente.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `debounceTime`, pero el periodo de silenciamiento de emisiones está determinado por un segundo Observable.
 
@@ -32,9 +47,9 @@ Al igual que `debouncetime`, este es un operador de limitación de emisiones, y 
 
 ## Ejemplos
 
-Emitir la tecla pulsada más reciente, tras una sucesión rápida de teclas. Por ejemplo, si escribimos 'RxJS mola' muy rápidamente (con menos de 500ms entre pulsaciones), solo se emitirá la última letra (a)
+**Emitir la tecla pulsada más reciente, tras una sucesión rápida de teclas. Por ejemplo, si escribimos 'RxJS mola' muy rápidamente (con menos de 500ms entre pulsaciones), solo se emitirá la última letra (a)**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-debounce-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-debounce-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { debounce } from "rxjs/operators";
@@ -48,9 +63,9 @@ key$
 // Salida: KeyA
 ```
 
-Emitir la posición del último click tras una sucesión rápida de clicks
+**Emitir la posición del último click tras una sucesión rápida de clicks**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-debounce-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-debounce-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { debounce } from "rxjs/operators";
@@ -70,7 +85,7 @@ click$
 
 ### Ejemplo de la documentación oficial
 
-Emitir el click más reciente tras una sucesión rápida de clicks
+**Emitir el click más reciente tras una sucesión rápida de clicks**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -81,11 +96,8 @@ const result = clicks.pipe(debounce(() => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recetas relacionadas
+## Recursos adicionales
 
 - [Type-Ahead]()
 
-## Ver también
-
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/debounce)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts)

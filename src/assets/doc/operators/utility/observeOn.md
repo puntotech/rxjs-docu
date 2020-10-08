@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # observeOn
 
-### Reemite todas las notificaciones del Observable fuente con el planificador especificado
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Reemite todas las notificaciones del Observable fuente con el planificador especificado
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -21,7 +34,9 @@ Number of milliseconds that states with what delay every notification should be 
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite las mismas notificaciones que el Observable fuente, pero con el planificador especificado.
 
-### Descripción
+</details>
+
+## Descripción
 
 Utiliza el planificador especificado, desde fuera del Observable.
 
@@ -33,9 +48,9 @@ De hecho, el operador `observeOn` acepta un segundo parámetro, que especifica e
 
 ### Ejemplos
 
-Utilizar el planificador `animationFrameScheduler` para que la animación sea más fluida
+**Utilizar el planificador animationFrameScheduler para que la animación sea más fluida**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-observeon-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-observeon-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval, animationFrameScheduler } from "rxjs";
@@ -53,9 +68,9 @@ interval$
   .subscribe();
 ```
 
-### Ejemplo del a documentación oficial
+### Ejemplo de la documentación oficial
 
-Asegurar que los valores del `subscribe` se llaman justo antes del repintado del navegador
+**Asegurar que los valores del subscribe se llaman justo antes del repintado del navegador**
 
 ```javascript
 import { interval } from "rxjs";
@@ -70,5 +85,6 @@ intervals
   });
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/observeOn)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts)

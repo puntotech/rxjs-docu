@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # iif
 
-### Decide qué Observable será suscrito en tiempo de suscripción
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Decide qué Observable será suscrito en tiempo de suscripción
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -20,6 +33,8 @@ Tipo: <code>SubscribableOrPromise</code>.</td></tr>
 
 `Observable<T | F>`: Según la condición, devuelve el primer o el segundo Observable.
 
+</details>
+
 ## Descripción
 
 Es una sentencia if para Observables.
@@ -32,9 +47,11 @@ En el caso de tener lógica más compleja que requiera decidir entre más de dos
 
 ## Ejemplos
 
+<!-- TODO change example -->
+
 Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-iif-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-iif-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { iif, range } from "rxjs";
@@ -60,14 +77,12 @@ range(1, 4)
     )
   )
   .subscribe(console.log, console.error);
-// Output: Rick Sanchez, ivysaur, Summer Smith, charmander
+// Salida: Rick Sanchez, ivysaur, Summer Smith, charmander
 ```
 
 ## Ejemplos de la documentación oficial
 
-Cambia en tiempo de ejecución qué Observable será suscrito
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Cambia en tiempo de ejecución qué Observable será suscrito**
 
 ```javascript
 import { iif, of } from "rxjs";
@@ -88,9 +103,7 @@ firstOrSecond.subscribe((value) => console.log(value));
 // "second"
 ```
 
-Controlar el acceso a un Observable
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Controlar el acceso a un Observable**
 
 ```javascript
 let accessGranted;
@@ -121,5 +134,6 @@ observableIfYouHaveAccess.subscribe(
 // "The end"
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/iif)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts)

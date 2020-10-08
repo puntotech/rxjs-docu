@@ -20,7 +20,7 @@ import 'prismjs/components/prism-typescript';
 export class HighlightService {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  highlightAll() {
+  highlight() {
     if (isPlatformBrowser(this.platformId)) {
       highlightAll();
     }

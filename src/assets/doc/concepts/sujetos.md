@@ -1,16 +1,16 @@
 # Sujetos / Subjects
 
-¿Qué es un Sujeto? Un Sujeto RxJS es un tipo especial de Observable que permite la multidifusión de valores a muchos Observadores. Mientras los Observables simples son de monodifusión (cada Observador suscrito es propietario de una ejecución independiente del Observable), los Sujetos son de multidifusión
+¿Qué es un Sujeto? Un Sujeto RxJS es un tipo especial de Observable que permite la multidifusión de valores a muchos Observadores. Mientras los Observables simples son de monodifusión (cada Observador suscrito es propietario de una ejecución independiente del Observable), los Sujetos son de multidifusión.
 
-> Un Sujeto es como un Observable, pero permite la multidifusión a muchos Observadores. Los Sujetos son como EventEmitters: mantienen un registro de múltiples listeners.
+> Un Sujeto es como un Observable, pero permite la multidifusión a muchos Observadores. Los Sujetos son como EventEmitters: mantienen un registro de múltiples _listeners_.
 
-Cada Sujeto es un Observable. Dado un Sujeto, se puede suscribirse a él, proporcionando un Observador, que empezará a recibir valores. Desde la perspectiva del Observador, no se puede saber si la ejecución Observable viene de un Observable monodifusión simple o de un Sujeto.
+Cada Sujeto es un Observable. Dado un Sujeto, se puede suscribir a él, proporcionando un Observador, que empezará a recibir valores. Desde la perspectiva del Observador, no se puede saber si la ejecución Observable viene de un Observable monodifusión simple o de un Sujeto.
 
 Internamente en el Sujeto, `susbscribe` no invoca una nueva ejecución que emite valores. Simplemente registra el Observador proporcionado en una lista de Observadores, de manera similar a cómo funciona `addListener` en otras bibliotecas y lenguajes.
 
 Cada Sujeto es un Observador. Es un objeto con los métodos `next(v)`, `error(e)`, y `complete()`. Para proporcionarle un nuevo valor al Sujeto, basta con hacer una llamada a `next(value)`, y este será proporcionado a los Observadores registrados en el Sujeto, mediante multidifusión.
 
-En el siguiente ejemplo, tenemos dos Observadores vinculados a un Sujeto, y le proporcionamos varios valores al Sujeto:
+En el siguiente ejemplo, se tienen dos Observadores vinculados a un Sujeto, y se le proporcionan varios valores al Sujeto:
 
 ```javascript
 import { Subject } from 'rxjs';
@@ -27,14 +27,14 @@ subject.subscribe({
 subject.next(1);
 subject.next(2);
 
-// Logs:
+// Salida:
 // observerA: 1
 // observerB: 1
 // observerA: 2
 // observerB: 2
 ```
 
-Dado que un Sujeto es un Observador, esto quiere decir que podemos proporcionar un Sujeto como argumento a la función `subscribe` de cualquier Observable, tal y como se muestra a continuación:
+Dado que un Sujeto es un Observador, esto quiere decir que se puede proporcionar un Sujeto como argumento a la función `subscribe` de cualquier Observable, tal y como se muestra a continuación:
 
 ```javascript
 import { Subject, from } from 'rxjs';
@@ -73,9 +73,9 @@ Un "Observable multidifusión" envía notificaciones a través de un Sujeto que 
 
 Internamente, así es como funciona el operador `multicast`: los Observadores se suscriben a un Sujeto subyacente, y el Sujeto se suscribe al Observable fuente. El siguiente ejemplo es similar al anterior que utilizaba `observable.subscribe(subject)`:
 
-´´´javascript
-import { from, Subject } from 'rxjs';
-import { multicast } from 'rxjs/operators';
+```javascript
+import { from, Subject } from "rxjs";
+import { multicast } from "rxjs/operators";
 
 const source = from([1, 2, 3]);
 const subject = new Subject();
@@ -83,17 +83,18 @@ const multicasted = source.pipe(multicast(subject));
 
 // Estos son, internamente, `subject.subscribe({...})`:
 multicasted.subscribe({
-next: (v) => console.log(`observerA: ${v}`)
+  next: (v) => console.log(`observerA: ${v}`),
 });
 multicasted.subscribe({
-next: (v) => console.log(`observerB: ${v}`)
+  next: (v) => console.log(`observerB: ${v}`),
 });
 
 // Este es, internamente, `source.subscribe(subject)`:
 multicasted.connect();
-´´´
+```
 
 `multicast` retorna un Observable que parece un Observable normal, pero que funciona como un Sujeto a la hora de realizar una suscripción.
+
 `multicast` retorna un `ConnectableObservable`, que es simplemente un Observable con el método `connect()`.
 
 El método `connect()` es importante para determinar exactamente cuándo se da comienzo a la ejecución Observable compartida. Dado que `connect()` hace `source.subscribe(subject)` internamente, devuelve una Suscripción, que podemos cancelar, para asimismo cancelar la ejecución Observable compartida.
@@ -334,9 +335,9 @@ subject.subscribe({
 subject.next(5);
 subject.complete();
 
-// Output:
+// Salida:
 // observerA: 5
 // observerB: 5
 ```
 
-El `AsyncSubject` es similar al operador `last()`, en el sentido de que espera a haber recibido la notificacin `complete` para enviar el valor último.
+El `AsyncSubject` es similar al operador [last()](/operators/filtering/last), en el sentido de que espera a haber recibido la notificacin `complete` para enviar el valor último.

@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # partition
 
-### Divide el Observable fuente en dos, uno con los valores que cumplen una condición, y otro con los valores que no la cumplan
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Divide el Observable fuente en dos, uno con los valores que cumplen una condición, y otro con los valores que no la cumplan
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -19,7 +32,9 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 `[Observable<T>, Observable<T>]`: Un array con dos Observables: uno con valores que cumplen la función `predicate`, y otro con valores que no la cumplen.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `filter`, pero retorna dos Observables: uno como el Observable resultante de `filter`, y otro con los valores que no han superado la condición.
 
@@ -29,39 +44,42 @@ Es como `filter`, pero retorna dos Observables: uno como el Observable resultant
 
 ## Ejemplos
 
-Dividir una serie de Pokémon en dos Observables, uno con los de tipo Agua y otro con los restantes
+**Dividir una serie de Pokémon en dos Observables, uno con los de tipo Agua y otro con los restantes**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-partition-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-partition-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { partition, from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Cyndaquil", type: "Fire" },
-  { name: "Totodile", type: "Water" },
-  { name: "Chikorita", type: "Grass" },
+const programmer$ = from([
+  { name: "Juan", type: "Backend" },
+  { name: "Toni", type: "Frontend" },
+  { name: "Nya", type: "Backend" },
+  { name: "Carlos", type: "Full stack" },
 ]);
 
-const [waterPokemon$, miscellaneousPokemon$] = partition(
-  pokemon$,
-  ({ type }) => type === "Water"
+// Dividir una serie de Pokémon en dos Observables, uno con los de tipo Agua y otro con los restantes
+const [frontendProgrammer$, miscellaneousProgrammer$] = partition(
+  programmer$,
+  ({ type }) => type === "Frontend"
 );
 
-// Emite los Pokémon de tipo agua
-waterPokemon$.subscribe(console.log);
-// Salida: { name: "Squirtle", type: "Water" }, { name: "Totodile", type: "Water" }
+// Emite los programadores frontend
+frontendProgrammer$.subscribe(console.log);
+// Salida: { name: "Toni", type: "Frontend" }
 
-// Emite el resto de Pokémon
-miscellaneousPokemon$.subscribe(console.log);
-// Salida: { name: "Charmander", type: "Fire" }, { name: "Bulbasaur", type: "Grass" }, { name: "Cyndaquil", type: "Fire" }, { name: "Chikorita", type: "Grass" }
+// Emite el resto de programadores
+miscellaneousProgrammer$.subscribe(console.log);
+/* Salida: 
+{ name: "Juan", type: "Backend" },
+{ name: "Nya", type: "Backend" },
+{ name: "Carlos", type: "Full stack" }
+*/
 ```
 
-Dividir las peticiones realizadas con éxito y las peticiones fallidas en dos Observables distintos
+**Dividir las peticiones realizadas con éxito y las peticiones fallidas en dos Observables distintos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-partition-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-partition-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { catchError, concatMap, map } from "rxjs/operators";
@@ -95,7 +113,7 @@ failedRequest$.subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Divide una secuencia de números en dos Observables de números pares e impares
+**Divide una secuencia de números en dos Observables de números pares e impares**
 
 ```javascript
 import { of, partition } from "rxjs";
@@ -118,5 +136,6 @@ evens$.subscribe((x) => console.log("pares", x));
 // pares 6
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/partition)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts)

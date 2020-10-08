@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # max
 
-### Emite el elemento de mayor valor
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/max.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Emite el elemento de mayor valor
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -18,6 +31,8 @@ Función de comparación opcional, para comparar el valor de dos elementos.
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite el elemento de mayor valor.
 
+</details>
+
 ## Descripción
 
 El operador `max` opera con Observables que emiten valores numéricos (o elementos que se puedan comparar mediante la función de comparación proporcionada), emitiendo un solo valor cuando el Observable fuente se completa: el elemento de mayor valor.
@@ -26,9 +41,9 @@ El operador `max` opera con Observables que emiten valores numéricos (o element
 
 ## Ejemplos
 
-Obtener el valor máximo de una serie de números
+**Obtener el valor máximo de una serie de números**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-max-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-max-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -40,9 +55,9 @@ number$.pipe(max()).subscribe(console.log);
 // Salida: 10
 ```
 
-Utilizar una función de comparación para obtener la cadena más larga
+**Utilizar una función de comparación para obtener la cadena más larga**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-max-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-max-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -55,9 +70,9 @@ fruit$.pipe(max((a, b) => a.length - b.length)).subscribe(console.log);
 // Salida: Arándano
 ```
 
-Utilizar una función de comparación para comparar objetos anidados y obtener el de mayor valor
+**Utilizar una función de comparación para comparar objetos anidados y obtener el de mayor valor**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-max-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-max-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -80,7 +95,7 @@ pokemon$
 
 ### Ejemplos de la documentación oficial
 
-Obtener el mayor valor de una serie de números
+**Obtener el mayor valor de una serie de números**
 
 ```javascript
 import { of } from "rxjs";
@@ -91,7 +106,7 @@ of(5, 4, 7, 2, 8)
   .subscribe((x) => console.log(x)); // -> 8
 ```
 
-Utilizar una función de comparación para obtener el elemento de mayor valor
+**Utilizar una función de comparación para obtener el elemento de mayor valor**
 
 ```javascript
     import { of } from 'rxjs';
@@ -111,5 +126,6 @@ Utilizar una función de comparación para obtener el elemento de mayor valor
     .subscribe((x: Person) => console.log(x.name)); // -> 'Beer'
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/max)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/max.ts)

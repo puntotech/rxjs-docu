@@ -1,8 +1,17 @@
+<div class="page-heading">
+
 # scan
 
-### Aplica una función acumuladora a los valores del Observable fuente y retorna cada resultado inmediato
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/scan.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
 
-💡 Si solo se necesita el valor acumulado cuando el Observable esté completo, se puede utilizar [reduce]()
+<h2 class="subtitle"> Aplica una función acumuladora a los valores del Observable fuente y retorna cada resultado inmediato</h2>
+
+💡 Si solo se necesita emitir el valor acumulado una vez que el Observable se haya completado, se puede utilizar [reduce](/operators/mathematical-aggregate/reduce)
 
 ### Firma
 
@@ -20,7 +29,9 @@ El valor de acumulación inicial.</td></tr>
 
 `OperatorFunction<T, R>`: Un Observable de valores acumulados.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `reduce`, pero emite el valor acumulado cada vez que la fuente emite un valor.
 
@@ -32,9 +43,9 @@ Retorna un Observable que aplica una función de acumulación a cada elemento em
 
 ## Ejemplos
 
-Sumar una secuencia de números
+**Sumar una secuencia de números**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-scan-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-scan-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { scan } from "rxjs/operators";
@@ -46,9 +57,9 @@ number$.pipe(scan((acc, val) => acc + val)).subscribe(console.log);
 // Salida: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55
 ```
 
-Sumar una secuencia de números proporcionando un valor inicial
+**Sumar una secuencia de números proporcionando un valor inicial**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-scan-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-scan-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { scan } from "rxjs/operators";
@@ -60,9 +71,9 @@ number$.pipe(scan((acc, val) => acc + val, 10)).subscribe(console.log);
 // Salida: 11, 13, 16, 20, 25, 31, 38, 46, 55, 65
 ```
 
-Concatenar una secuencia de cadenas
+**Concatenar una secuencia de cadenas**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-scan-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-scan-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { scan } from "rxjs/operators";
@@ -85,7 +96,7 @@ letter$.pipe(scan((acc, val) => acc + val)).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Contar el número de eventos click
+**Contar el número de eventos click**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -98,7 +109,13 @@ const count = ones.pipe(scan((acc, one) => acc + one, seed));
 count.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `scan(accumulator: (acc: R, value: T, index: number) => R, seed: R): OperatorFunction<T, R>`
 
@@ -112,6 +129,12 @@ count.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `scan(accumulator: (acc: T, value: T, index: number) => T, seed?: T): MonoTypeOperatorFunction<T>`
 
@@ -127,6 +150,12 @@ Tipo: <code>T</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `scan(accumulator: (acc: R, value: T, index: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -139,5 +168,11 @@ Tipo: <code>T</code>.</td></tr>
 
 `OperatorFunction<T, R>`
 
+</div>
+
+</div>
+</details>
+
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/scan)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/scan.ts)

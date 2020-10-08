@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # defaultIfEmpty
 
-### Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -17,6 +30,8 @@ El valor por defecto utilizado en el caso de que el Observable esté vacío.</td
 
 `OperatorFunction<T, T | R>`: Un Observable que puede emitir el valor por defecto especificado si el Observable fuente no emite ningún valor, o los valores emitidos por el Observable fuente.
 
+</details>
+
 ## Descripción
 
 Si el Observable fuente está vacío, este operador emitirá un valor por defecto.
@@ -27,9 +42,9 @@ Si el Observable fuente está vacío, este operador emitirá un valor por defect
 
 ## Ejemplos
 
-Como el Observable está vacío, se emitirá el valor por defecto
+**Como el Observable está vacío, se emitirá el valor por defecto**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-defaultifempty-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-defaultifempty-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { defaultIfEmpty } from "rxjs/operators";
@@ -41,9 +56,9 @@ empty$.pipe(defaultIfEmpty("La respuesta es 42")).subscribe(console.log);
 // Salida: La respuesta es 42
 ```
 
-Si no se presiona ninguna tecla en 4 segundos, se emitirá el valor de la tecla por defecto
+**Si no se presiona ninguna tecla en 4 segundos, se emitirá el valor de la tecla por defecto**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-defaultifempty-2?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-defaultifempty-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { defaultIfEmpty, map, takeUntil } from "rxjs/operators";
@@ -62,9 +77,7 @@ key$.pipe(defaultIfEmpty(defaultKey)).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Si en 5 segundos no se hace ningún click, se emitirá "Ningún click"
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Si en 5 segundos no se hace ningún click, se emitirá el mensaje "Ningún click"**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -79,4 +92,3 @@ result.subscribe((x) => console.log(x));
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/defaultIfEmpty)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts)

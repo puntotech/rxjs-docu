@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # exhaust
 
-### Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -14,7 +27,9 @@ No recibe ningún parámetro.
 
 `OperatorFunction<any, T>`: Un Observable que recibe una fuente de Observables y propaga el primer Observable hasta que este se completa, antes de suscribirse al siguiente Observable.
 
-### Descripción
+</details>
+
+## Descripción
 
 'Aplasta' un Observable de Observables ignorando los Observables internos posteriores mientras el Observable interno actual se esté ejecutando.
 
@@ -24,17 +39,11 @@ No recibe ningún parámetro.
 
 ## Ejemplos
 
-// TODO: Add example (maybe pokemon gif animation?)
+**Obtener 3 películas de Studio Ghibli al hacer click en el botón**
 
-[StackBlitz]()
+Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
 
-```javascript
-
-```
-
-Obtener 3 películas de Studio Ghibli al hacer click en el botón. Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
-
-[StackBlitz](https://stackblitz.com/edit/rxjs-exhaust-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-exhaust-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { delay, exhaust, map, mergeAll, take } from "rxjs/operators";
@@ -63,7 +72,7 @@ click$
 
 ### Ejemplo de la documentación oficial
 
-Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo
+**Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -75,5 +84,6 @@ const result = higherOrder.pipe(exhaust());
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/exhaust)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts)

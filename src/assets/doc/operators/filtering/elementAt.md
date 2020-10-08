@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # elementAt
 
-### Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -22,6 +35,8 @@ El valor por defecto retornado para índices inexistentes.</td></tr>
 
 `ArgumentOutOfRangeError` Al usar `elementAt(i)`, se lanza un `ArgumentOutOrRangeError` si `i < 0` o si el Observable se completa antes de emitir la i-ésima notificación.
 
+</details>
+
 ## Descripción
 
 Emite únicamente el valor i-ésimo, y se completa.
@@ -34,9 +49,9 @@ returns an Observable that emits the item at the specified index in the source O
 
 ## Ejemplos
 
-Emitir la segunda emisión del Observable fuente
+**Emitir la segunda emisión del Observable fuente**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -48,9 +63,9 @@ fruit$.pipe(elementAt(1)).subscribe(console.log);
 // Salida: Fresa
 ```
 
-Si no se encuentra el índice y no se proporciona un valor por defecto, se lanza un error
+**Si no se encuentra el índice y no se proporciona un valor por defecto, se lanza un error**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -63,9 +78,9 @@ fruit$.pipe(elementAt(5)).subscribe(console.log, console.error);
 // Salida: (error) Error: argument out of range
 ```
 
-Proporcionar un valor por defecto para que, si no se encuentra el índice especificado, no se lance un error
+**Proporcionar un valor por defecto para que, si no se encuentra el índice especificado, no se lance un error**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -82,7 +97,7 @@ fruit$.pipe(elementAt(5, defaultFruit)).subscribe(console.log, console.error);
 
 ### Ejemplo de la documentación oficial
 
-Emit only the third click event
+**Emitir solo el tercer evento click**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -98,5 +113,6 @@ result.subscribe((x) => console.log(x));
 // click 3 = objeto MouseEvent
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/elementAt)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts)

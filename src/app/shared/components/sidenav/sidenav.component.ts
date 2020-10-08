@@ -44,7 +44,21 @@ const TREE_DATA: SectionNode[] = [
 
       { name: 'Suscripción', url: 'concepts/suscripcion' },
 
-      { name: 'Testing', url: 'concepts/testing' },
+      {
+        name: 'Testing',
+        url: 'concepts/testing',
+        children: [
+          {
+            name: 'Tests de Canicas',
+            url: 'concepts/testing/tests-de-canicas',
+          },
+
+          {
+            name: 'Contribuir tests a RxJS',
+            url: 'concepts/testing/contribuir-tests-a-rxjs',
+          },
+        ],
+      },
     ],
   },
   {
@@ -160,8 +174,6 @@ const TREE_DATA: SectionNode[] = [
           { name: 'debounceTime', url: 'operators/filtering/debounceTime' },
 
           { name: 'distinct', url: 'operators/filtering/distinct' },
-
-          { name: 'distinctKey', url: 'operators/filtering/distinctKey' },
 
           {
             name: 'distinctUntilChanged',
@@ -312,7 +324,7 @@ const TREE_DATA: SectionNode[] = [
             url: 'operators/transformation/windowToggle',
           },
 
-          { name: 'windoWhen', url: 'operators/transformation/windoWhen' },
+          { name: 'windowWhen', url: 'operators/transformation/windowWhen' },
         ],
       },
       {
@@ -362,6 +374,14 @@ const TREE_DATA: SectionNode[] = [
   {
     name: 'Versión 6',
     url: 'version-6',
+    children: [
+      {
+        name: 'Funcionalidades obsoletas',
+        url: 'version-6/funcionalidades-obsoletas',
+      },
+      { name: 'Migración', url: 'version-6/migracion' },
+      { name: 'Operadores de tubería', url: 'version-6/operadores-tuberia' },
+    ],
   },
   {
     name: 'Código de Conducta',

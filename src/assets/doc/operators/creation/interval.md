@@ -1,10 +1,19 @@
+<div class="page-heading">
+
 # interval
 
-### Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
 
 <div class="fading-line"></div>
 
-### Firma
+<h2 class="subtitle"> Firma
 
 `interval(period: number = 0, scheduler: SchedulerLike = async): Observable<number>`
 
@@ -14,12 +23,14 @@
 <tr><td>period</td><td>Opcional. El valor por defecto es 0.
 El tamaño del intervalo en milisegundos (por defecto) o en la unidad de tiempo determinada por el reloj del planificador.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto is async.
-El `SchedulerLike` que utilizar para planificar la emisión de valores y para proporcionar la noción del "tiempo".</td></tr>
+El <code>SchedulerLike</code> que se utiliza para planificar la emisión de valores y para proporcionar la noción del "tiempo".</td></tr>
 </table>
 
 ### Retorna
 
 `Observable<number>`: Un Observable que emite una secuencia incremental de números, emitiendo un valor en cada intervalo de tiempo.
+
+</details>
 
 ## Descripción
 
@@ -31,9 +42,9 @@ Emite una secuencia incremental de números periódicamente.
 
 ## Ejemplos
 
-Emitir una secuencia de números ascendente con un intervalo de 2 segundos entre cada emisión
+**Emitir una secuencia de números ascendente con un intervalo de 2 segundos entre cada emisión**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-interval?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-interval?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval } from "rxjs";
@@ -44,9 +55,9 @@ number$.subscribe(console.log);
 // Salida: 0, 1, 2, 3, 4, 5...
 ```
 
-Si no se proporciona ningún valor a `interval`, emitirá valores cada 0ms
+**Si no se le proporciona ningún valor a interval, emitirá valores cada 0ms**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-interval-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-interval-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { interval } from "rxjs";
@@ -59,7 +70,7 @@ superFastNumber$.subscribe((number) => console.log(number));
 
 ### Ejemplo de la documentación oficial
 
-Emite números ascendentes, uno cada segundo (1000ms) hasta el número 3.
+**Emite números ascendentes, uno cada segundo (1000ms) hasta el número 3**
 
 ```javascript
 import { interval } from "rxjs";
@@ -73,5 +84,6 @@ takeFourNumbers.subscribe((x) => console.log("Next: ", x));
 // Salida: "Next: 0", "Next: 1", "Next: 2", "Next: 3"
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/interval)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts)

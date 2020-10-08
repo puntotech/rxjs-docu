@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # fromEventPattern
 
-### Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -20,6 +33,8 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 ### Retorna
 
 `Observable<T | T[]>`: Un Observable que, cuando se dispara un evento, emite o el primer parámetro que se le haya proporcionado al manejador de eventos registrado, o el resultado de la función de proyección.
+
+</details>
 
 ## Descripción
 
@@ -101,5 +116,6 @@ Usar `fromEventPattern` con función de proyección
     // "EVENT_TYPE --- EVENT_MESSAGE"
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/fromEventPattern)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts)

@@ -1,6 +1,18 @@
+<div class="page-heading">
+
 # groupBy
 
-<h3>Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como <code>GroupedObservables</code>, con un <code>GroupedObservable</code> por cada grupo </h3>
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle">Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo </h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -22,25 +34,27 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 `OperatorFunction<T, GroupedObservable<K, R>>`: Un Observable que emite `GroupedObservables`, cada uno de los cuales pertenece a un único valor clave. Cada grupo emite los elementos del Observable que comparten el mismo valor clave.
 
+</details>
+
 ## Descripción
 
 <img src="assets/images/marble-diagrams/transformation/groupBy.png" alt="Diagrama de canicas del operador groupBy">
 
 Cuando el Observable emite un elemento, se computa una clave para dicho elemento mediante la función `keySelector`.
 
-Si existe un `GroupedObservable` para la clave, el `GroupedObservable` emite.
+Si existe un GroupedObservable para la clave, el GroupedObservable emite.
 
 If a GroupedObservable for this key exists, this GroupedObservable emits. Elsewhere, a new GroupedObservable for this key is created and emits.
 
-Un `GroupedObservable` representa valores que pertenecen al mismo grupo, representado por una clave. La clave está disponible como el campo `key` de una instancia `GroupedObservable`.
+Un GroupedObservable representa valores que pertenecen al mismo grupo, representado por una clave. La clave está disponible como el campo key de una instancia GroupedObservable.
 
-Los elementos emitidos por `GroupedObservable`s son, por defecto, los elementos emitidos por el Observable, o los elementos retornados por la función `elementSelector`.
+Los elementos emitidos por GroupedObservables son, por defecto, los elementos emitidos por el Observable, o los elementos retornados por la función elementSelector.
 
 ## Ejemplos
 
-Agrupar Pokémon según su tipo, y emitir el `GroupedObservable` resultante en forma de array
+**Agrupar Pokémon según su tipo, y emitir el GroupedObservable resultante en forma de array**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-groupby-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
@@ -68,9 +82,9 @@ pokemon$
 */
 ```
 
-Agrupar Pokémon según su tipo, seleccionar únicamente el nombre y emitir el `GroupedObservable` resultante en forma de array
+**Agrupar Pokémon según su tipo, seleccionar únicamente el nombre y emitir el GroupedObservable resultante en forma de array**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-groupby-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
@@ -103,7 +117,7 @@ pokemon$
 
 ### Ejemplo de la documentación oficial
 
-Agrupar objetos por id y retornar las agrupaciones como arrays
+**Agrupar objetos por id y retornar las agrupaciones como arrays**
 
 ```javascript
 import { of } from "rxjs";
@@ -132,7 +146,7 @@ of(
 // [ { id: 3, name: 'TSLint'} ]
 ```
 
-Pivotar los datos por el campo id
+**Pivotar los datos por el campo id**
 
 ```javascript
 import { of } from "rxjs";
@@ -163,7 +177,13 @@ of(
 // { id: 3, values: [ 'TSLint' ] }
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K): OperatorFunction<T, GroupedObservable<K, T>>`
 
@@ -176,6 +196,12 @@ of(
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector: void, durationSelector: (grouped: GroupedObservable<K, T>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, T>>`
 
@@ -190,6 +216,12 @@ of(
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector?: (value: T) => R, durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, R>>`
 
@@ -206,6 +238,12 @@ Tipo: <code>(grouped: GroupedObservable) => Observable</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, R>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector?: (value: T) => R, durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>, subjectSelector?: () => Subject<R>): OperatorFunction<T, GroupedObservable<K, R>>`
 
@@ -225,5 +263,11 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 `OperatorFunction<T, GroupedObservable<K, R>>`
 
+</div>
+
+</div>
+</details>
+
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/groupBy)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts)

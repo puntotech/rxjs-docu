@@ -1,4 +1,4 @@
-import { Component, AfterContentChecked } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 import { HighlightService } from 'src/app/shared/services/highlight.service';
 
 @Component({
@@ -6,10 +6,10 @@ import { HighlightService } from 'src/app/shared/services/highlight.service';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
 })
-export class ContentComponent implements AfterContentChecked {
+export class ContentComponent implements AfterViewChecked {
   constructor(private highlightService: HighlightService) {}
 
-  ngAfterContentChecked(): void {
-    this.highlightService.highlightAll();
+  ngAfterViewChecked(): void {
+    this.highlightService.highlight();
   }
 }

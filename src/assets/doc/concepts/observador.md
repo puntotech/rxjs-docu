@@ -1,4 +1,4 @@
-# Observador / Observer
+# Observador
 
 ¿Qué es un Observador? Un Observador es un consumidor de los valores emitidos por un Observable. Los Observadores son simplemente conjuntos de _callbacks_, una para cada tipo de notificación entregada por el Observable: `next`, `error` y `complete`. A continuación vemos un ejemplo de un objeto Observador clásico:
 
@@ -17,9 +17,9 @@ Para utilizar el Observador, se le provee al `subscribe` de un Observable:
 observable.subscribe(observer);
 ```
 
-> Los Observadores son objetos con tres callbacks, una para cada tipo de notificación que un Observable puede emitir
+> Los Observadores son objetos con tres callbacks, una para cada tipo de notificación que un Observable puede emitir.
 
-Los Observadores en RxJS pueden ser parciales. Aunque no se provea una de las _callbacks_, la ejecución del Observable ocurrirá de forma normal, excepto por el hecho de que algunos tipos de notificaciones serán ignorados, ya que carecen de la _callback_ correspondiente en el Observador.
+Los Observadores en RxJS pueden ser parciales. Aunque no se proporcione una de las _callbacks_, la ejecución del Observable ocurrirá de forma normal, excepto por el hecho de que algunos tipos de notificaciones se ignorarán, ya que carecen de la _callback_ correspondiente en el Observador.
 
 El ejemplo visto a continuación muestra un Observador sin la _callback_ `complete`:
 

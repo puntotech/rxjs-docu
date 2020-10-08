@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # concatMap
 
-### Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante de forma secuencial, esperando a que cada Observable interno esté completo antes de unir el siguiente
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante de forma secuencial, esperando a que cada Observable interno esté completo antes de unir el siguiente</h2>
 
 💡 Se debe utilizar `concatMap` si se quiere esperar a que cada Observable interno esté completo antes de suscribirse al siguiente
 
@@ -20,7 +29,9 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección (y el `resultSelector` opcional que está obsoleto) a cada elemento emitido por el Observable fuente y obtener los valores de cada Observable interno proyectado de forma secuencial.
 
-### Descripción
+</details>
+
+## Descripción
 
 Proyecta cada valor a un Observable interno, que posteriormente 'aplasta' usando el operador `concatAll`.
 
@@ -34,9 +45,9 @@ Nota: `concatMap` es equivalente a utilizar `mergeMap`, teniendo el parámetro d
 
 ## Ejemplos
 
-Realizar varias peticiones AJAX de forma secuencial. Hasta que cada petición no termine, no se realizará la siguiente
+**Realizar varias peticiones AJAX de forma secuencial. Hasta que cada petición no termine, no se realizará la siguiente**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-concatmap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmap-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concatMap, map } from "rxjs/operators";
@@ -55,13 +66,13 @@ pokemonId$.pipe(concatMap((id) => getPokemonName(id))).subscribe(console.log);
 // Salida: bulbasaur, charmeleon, charizard
 ```
 
-Comparación entre `mergeMap` y `concatMap`:
+**Comparación entre mergeMap y concatMap**
 
-`concatMap` esperará a que cada petición esté completa antes de realizar la siguiente. Esto implica que todas las peticiones se llevarán a cabo de forma consecutiva.
+concatMap esperará a que cada petición esté completa antes de realizar la siguiente. Esto implica que todas las peticiones se llevarán a cabo de forma consecutiva.
 
-`mergeMap` no esparará a que cada petición esté completa, sino que las realizará en paralelo. Esto implica que las peticiones NO se llevarán a cabo de forma consecutiva.
+mergeMap no esparará a que cada petición esté completa, sino que las realizará en paralelo. Esto implica que las peticiones NO se llevarán a cabo de forma consecutiva.
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-concatmap-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmap-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { concatMap, mergeMap, map, delayWhen } from "rxjs/operators";
@@ -92,7 +103,7 @@ pokemonId$.pipe(mergeMap((id) => getPokemonName(id))).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Para cada evento click, emitir los valores de 0 a 3 a intervalos de 1 segundo, sin concurrencia
+**Para cada evento click, emitir los valores de 0 a 3 a intervalos de 1 segundo, sin concurrencia**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -108,7 +119,13 @@ result.subscribe((x) => console.log(x));
 // (click) = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `concatMap(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -121,6 +138,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `concatMap(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -135,6 +158,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `concatMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -148,5 +177,11 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+</div>
+</details>
+
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/concatMap)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMap.ts)

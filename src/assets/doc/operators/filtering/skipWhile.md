@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # skipWhile
 
-### Se salta las emisiones del Observable fuente hasta que una condición deje de cumplirse
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipWhile.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Se salta las emisiones del Observable fuente hasta que una condición deje de cumplirse
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,6 +29,8 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que comienza a emitir las emisiones del Observable fuente cuando la condición especificada en la función `predicate` retorne `false`.
 
+</details>
+
 ## Descripción
 
 Retorna un Observable que se salta los elementos emitidos por el Observable fuente mientras la condición especificada retorne `true`, y que empieza a emitirlos en cuanto la condición deje de cumplirse.
@@ -26,9 +41,9 @@ Advertencia: Una vez que la condición no se cumpla, no se volverá a revaluar. 
 
 ## Ejemplos
 
-Saltar la secuencia de números mientras sean menores que 3
+**Saltar la secuencia de números mientras sean menores que 3**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skipwhile-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skipwhile-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skipWhile } from "rxjs/operators";
@@ -40,9 +55,11 @@ number$.pipe(skipWhile((num) => num < 3)).subscribe(console.log);
 // Salida: 3, 4, 5, 6, 7...
 ```
 
-La condición no se cumple cuando el Observable comienza a emitir (los números emitidos no son mayores que 3), por lo que, aunque más adelante sí que se cumpla (cuando los números emitidos sean mayores que 3), ningún valor se saltará. Esto es debido a que la condición nunca vuelve a evaluarse tras devolver `false`.
+**Si la condición comienza siendo falsa, no se saltará ningún valor**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skipwhile-2?file=index.ts)
+La condición no se cumple cuando el Observable comienza a emitir (los números emitidos no son mayores que 3), por lo que, aunque más adelante sí que se cumpla (cuando los números emitidos sean mayores que 3), no se saltará ningún valor. Esto es debido a que la condición nunca vuelve a evaluarse tras devolver `false`.
+
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skipwhile-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skipWhile } from "rxjs/operators";
@@ -54,9 +71,9 @@ number$.pipe(skipWhile((num) => num > 3)).subscribe(console.log);
 // Salida: 0, 1, 2, 3, 4, 5, 6, 7...
 ```
 
-Saltar los objetos Pokémon que dejen de ser de tipo `Grass`
+**Saltar los objetos Pokémon que dejen de ser de tipo `Grass`**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skipwhile-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skipwhile-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skipWhile } from "rxjs/operators";
@@ -74,5 +91,6 @@ pokemon$.pipe(skipWhile(({ type }) => type === "Grass")).subscribe(console.log);
 // Salida: { name: "Charmander", type: "Fire" }, { name: "Treecko", type: "Grass" }, { name: "Squirtle", type: "Water" }
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipWhile)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipWhile.ts)

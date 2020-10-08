@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # withLatestFrom
 
-### Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/withLatestFrom.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,6 +29,8 @@
 
 `OperatorFunction<T, R>`: Un Observable de valores proyectados de cada Observable _input_, o un array de los valores más recientes de cada Observable _input_.
 
+</details>
+
 ## Descripción
 
 Cuando el Observable fuente emite un valor, combina dicho valor con las emisiones más recientes de los demás Observables, y emite el resultado de dicha combinación.
@@ -26,9 +41,9 @@ Cuando el Observable fuente emite un valor, combina dicho valor con las emisione
 
 ## Ejemplos
 
-Combinar cada tecla pulsada con un Observable intervalo, para saber en qué momento se pulsa cada tecla
+**Combinar cada tecla pulsada con un Observable intervalo, para saber en qué momento se pulsa cada tecla**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-withlatestfrom?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-withlatestfrom?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -52,7 +67,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Emitir un array con el temporizador más reciente más el evento click, en cada click
+**Emitir un array con el temporizador más reciente más el evento click, en cada click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -64,7 +79,13 @@ const result = clicks.pipe(withLatestFrom(timer));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(project: (v1: T) => R): OperatorFunction<T, R>`
 
@@ -77,6 +98,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(source2: O2, project: (v1: T, v2: ObservedValueOf<O2>) => R): OperatorFunction<T, R>`
 
@@ -92,6 +119,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `withLatestFrom(v2: O2, v3: O3, project: (v1: T, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -105,6 +138,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(v2: O2, v3: O3, v4: O4, project: (v1: T, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>) => R): OperatorFunction<T, R>`
 
@@ -121,6 +160,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `withLatestFrom(v2: O2, v3: O3, v4: O4, v5: O5, project: (v1: T, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -136,6 +181,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, project: (v1: T, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>, v6: ObservedValueOf<O6>) => R): OperatorFunction<T, R>`
 
@@ -154,6 +205,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `withLatestFrom(source2: O2): OperatorFunction<T, [T, ObservedValueOf<O2>]>`
 
 ### Parámetros
@@ -165,6 +222,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, [T, ObservedValueOf<O2>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(v2: O2, v3: O3): OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
@@ -179,6 +242,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `withLatestFrom(v2: O2, v3: O3, v4: O4): OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
 ### Parámetros
@@ -192,6 +261,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(v2: O2, v3: O3, v4: O4, v5: O5): OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
@@ -208,6 +283,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `withLatestFrom(v2: O2, v3: O3, v4: O4, v5: O5, v6: O6): OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
 ### Parámetros
@@ -222,7 +303,13 @@ result.subscribe((x) => console.log(x));
 
 ### Retorna
 
-`OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, `ObservedValueOf<O6>]>
+`OperatorFunction<T, [T, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(...observables: any[]): OperatorFunction<T, R>`
 
@@ -236,6 +323,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `withLatestFrom(array: any[]): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -247,6 +340,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, R>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `withLatestFrom(array: any[], project: (...values: any[]) => R): OperatorFunction<T, R>`
 
@@ -261,5 +360,8 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+</div>
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/withLatestFrom)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/withLatestFrom.ts)

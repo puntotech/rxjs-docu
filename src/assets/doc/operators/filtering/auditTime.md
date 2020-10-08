@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # auditTime
 
-### Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente.
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/auditTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente.
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -18,7 +31,9 @@ El <code>SchedulerLike</code> que utilizar para gestionar los temporizadores que
 
 `MonoTypeOperatorFunction<T>`: An Observable that performs rate-limiting of emissions from the source Observable.
 
-### Descripción
+</details>
+
+## Descripción
 
 Cuando recibe un valor de la fuente, lo ignora, además de todos los valores posteriores durante un periodo de tiempo. Una vez finalizado el periodo de tiempo, emite el valor más reciente del Observable fuente.
 
@@ -29,9 +44,9 @@ Cuando recibe un valor de la fuente, lo ignora, además de todos los valores pos
 
 ## Ejemplos
 
-Ignorar las teclas pulsadas durante un periodo de 2s, tras el cual emitir la última tecla pulsada. Repetir.
+**Ignorar las teclas pulsadas durante un periodo de 2s, tras el cual emitir la última tecla pulsada. Repetir.**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-audittime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-audittime-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { auditTime } from "rxjs/operators";
@@ -45,7 +60,7 @@ key$.pipe(auditTime(2000)).subscribe(({ code }) => console.log(code));
 
 ### Ejemplo de la documentación oficial
 
-Emite como mucho un click por segundo
+**Emite como mucho un click por segundo**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -56,5 +71,6 @@ const result = clicks.pipe(auditTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/auditTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/auditTime.ts)

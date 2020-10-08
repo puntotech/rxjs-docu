@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # distinctUntilKeyChanged
 
-### Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -19,6 +32,8 @@ Función de comparación opcional que se utiliza para comprobar si un elemento e
 
 `MonoTypeOperatorFunction<T>`: Un Observable that emite elementos del Observable fuente si la propiedad especificada es distinta a la del elemento anterior.
 
+</details>
+
 ## Descripción
 
 Si se proporciona una función de comparación, se utilizará para comprobar si cada elemento se debe emitir o no.
@@ -27,9 +42,9 @@ Si no se proporciona una función de comparación, se utiliza una verificación 
 
 ## Ejemplos
 
-Emitir solo cuando la tecla pulsada sea distinta a la tecla pulsada anterior
+**Emitir solo cuando la tecla pulsada sea distinta a la tecla pulsada anterior**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { distinctUntilKeyChanged, map } from "rxjs/operators";
@@ -44,9 +59,9 @@ key$.subscribe(console.log);
 // Salida: (Pulsar tecla y) (Pulsar tecla x) 'KeyX'
 ```
 
-Emitir el objeto Pokémon si su propiedad `name` es distinta a la del objeto anterior
+**Emitir el objeto Pokémon si su propiedad `name` es distinta a la del objeto anterior**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { distinctUntilKeyChanged } from "rxjs/operators";
@@ -65,9 +80,9 @@ pokemon$.pipe(distinctUntilKeyChanged("name")).subscribe(console.log);
 // Salida: { name: "Squirtle", type: "Water" } { name: "Bulbasaur", type: "Grass" } { name: "Charmander", type: "Fire" }
 ```
 
-Utilizar una función de comparación para ignorar las diferencias de mayúsculas/minúsculas
+**Utilizar una función de comparación para ignorar las diferencias de mayúsculas/minúsculas**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -98,59 +113,63 @@ user$
 
 ### Ejemplos de la documentación oficial
 
-Un ejemplo comparando el campo `name`
+**Un ejemplo comparando el campo name**
 
-```javascript
-    import { of } from 'rxjs';
-    import { distinctUntilKeyChanged } from 'rxjs/operators';
+```typescript
+import { of } from "rxjs";
+import { distinctUntilKeyChanged } from "rxjs/operators";
 
-     interface Person {
-        age: number,
-        name: string
-     }
+interface Person {
+  age: number;
+  name: string;
+}
 
-    of<Person>(
-        { age: 4, name: 'Foo'},
-        { age: 7, name: 'Bar'},
-        { age: 5, name: 'Foo'},
-        { age: 6, name: 'Foo'},
-      ).pipe(
-        distinctUntilKeyChanged('name'),
-      )
-      .subscribe(x => console.log(x));
+of<Person>(
+  { age: 4, name: "Foo" },
+  { age: 7, name: "Bar" },
+  { age: 5, name: "Foo" },
+  { age: 6, name: "Foo" }
+)
+  .pipe(distinctUntilKeyChanged("name"))
+  .subscribe((x) => console.log(x));
 
-    // Salida:
-    // { age: 4, name: 'Foo' }
-    // { age: 7, name: 'Bar' }
-    // { age: 5, name: 'Foo' }
+// Salida:
+// { age: 4, name: 'Foo' }
+// { age: 7, name: 'Bar' }
+// { age: 5, name: 'Foo' }
 ```
 
-Un ejemplo comparando las primeras letras de la propiedad `name`
+**Un ejemplo comparando las primeras letras de la propiedad name**
 
-```javascript
-    import { of } from 'rxjs';
-    import { distinctUntilKeyChanged } from 'rxjs/operators';
+```typescript
+import { of } from "rxjs";
+import { distinctUntilKeyChanged } from "rxjs/operators";
 
-    interface Person {
-        age: number,
-        name: string
-     }
+interface Person {
+  age: number;
+  name: string;
+}
 
-    of<Person>(
-        { age: 4, name: 'Foo1'},
-        { age: 7, name: 'Bar'},
-        { age: 5, name: 'Foo2'},
-        { age: 6, name: 'Foo3'},
-      ).pipe(
-        distinctUntilKeyChanged('name', (x: string, y: string) => x.substring(0, 3) === y.substring(0, 3)),
-      )
-      .subscribe(x => console.log(x));
+of<Person>(
+  { age: 4, name: "Foo1" },
+  { age: 7, name: "Bar" },
+  { age: 5, name: "Foo2" },
+  { age: 6, name: "Foo3" }
+)
+  .pipe(
+    distinctUntilKeyChanged(
+      "name",
+      (x: string, y: string) => x.substring(0, 3) === y.substring(0, 3)
+    )
+  )
+  .subscribe((x) => console.log(x));
 
-    // Salida:
-    // { age: 4, name: 'Foo1' }
-    // { age: 7, name: 'Bar' }
-    // { age: 5, name: 'Foo2' }
+// Salida:
+// { age: 4, name: 'Foo1' }
+// { age: 7, name: 'Bar' }
+// { age: 5, name: 'Foo2' }
 ```
+
+## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinctUntilKeyChanged)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts)

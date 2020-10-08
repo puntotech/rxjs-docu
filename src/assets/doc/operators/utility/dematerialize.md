@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # dematerialize
 
-### Convierte un Observable de objetos Notification en las emisiones que representan
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Convierte un Observable de objetos Notification en las emisiones que representan
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -14,9 +27,7 @@ No recibe ningún parámetro.
 
 `OperatorFunction<Notification<T>, T>`: Un Observable que emite elementos y notificaciones embebidos en objetos `Notification` emitidos por el Observable fuente.
 
-An Observable that emits items and notifications embedded in Notification objects emitted by the source Observable.
-
-### Description
+## Description
 
 Transforma los objetos `Notification` en emisiones `next`, `error` y `complete`. Es el operador opuesto a `materialize`.
 
@@ -28,9 +39,9 @@ Se utiliza junto al operador `materialize`.
 
 ## Ejemplos
 
-Convierte las Notificaciones en emisiones con el mismo valor y tipo (error, next o complete)
+**Convierte las Notificaciones en emisiones con el mismo valor y tipo (error, next o complete)**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-dematerialize-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-dematerialize-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { dematerialize } from "rxjs/operators";
@@ -55,7 +66,7 @@ notification$.pipe(dematerialize()).subscribe(console.log, console.error);
 
 ### Ejemplo de la documentación oficial
 
-Convierte un Observable de Notificaciones en un Observable de valores
+**Convierte un Observable de Notificaciones en un Observable de valores**
 
 ```javascript
 import { of, Notification } from "rxjs";
@@ -81,5 +92,6 @@ upperCase.subscribe(
 // TypeError: x.toUpperCase is not a function
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/dematerialize)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts)

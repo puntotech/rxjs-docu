@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # windowToggle
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un segundo Observable emite, y se cierra cuando un tercer Observable retornado por una función emite
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un segundo Observable emite, y se cierra cuando un tercer Observable retornado por una función emite
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -17,7 +30,9 @@
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `bufferToggle`, pero emite un Observable anidado en lugar de un array.
 
@@ -27,9 +42,11 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 ## Ejemplos
 
-Abrir una nueva ventana cada vez que se pulse una tecla numérica, cuya duración esté determinada por el valor de la tecla que se pulse. Ejemplo: Si se pulsa la tecla 6, la duración de la ventana será de 6 segundos
+**Abrir una nueva ventana cada vez que se pulse una tecla numérica, cuya duración esté determinada por el valor de la tecla que se pulse.**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowtoggle-1?file=index.ts)
+Ejemplo: Si se pulsa la tecla 6, la duración de la ventana será de 6 segundos.
+
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowtoggle-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -55,7 +72,7 @@ number$
 
 ### Ejemplo de la documentación oficial
 
-Cada 2 segundos, emitir los eventos clicks de los siguientes 500ms
+**Cada 2 segundos, emitir los eventos clicks de los siguientes 500ms**
 
 ```javascript
 import { fromEvent, interval, EMPTY } from "rxjs";
@@ -70,5 +87,6 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowToggle)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts)

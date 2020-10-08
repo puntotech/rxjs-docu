@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # exhaustMap
 
-### Proyecta cada emisión de la fuente a un Observable interno que se fusiona con el Observable resultante únicamente si el Observable interno anterior se ha completado
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaustMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Proyecta cada emisión de la fuente a un Observable interno que se fusiona con el Observable resultante únicamente si el Observable interno anterior se ha completado</h2>
 
 💡 Se debe utilizar `exhaustMap` si se quiere ignorar los Observables internos mientras no se haya completado el Observable interno anterior
 
@@ -22,7 +31,9 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que contiene Observables proyectados de cada elemento de la fuente. Ignora los Observables proyectados que comiencen antes de que el Observable proyectado actual se haya completado.
 
-### Descripción
+</details>
+
+## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' todos estos Observables internos mediante el operador `exhaust`.
 
@@ -32,17 +43,11 @@ Retorna un Observable que aplica una función a cada uno de los elementos emitid
 
 ## Ejemplos
 
-// TODO: Add example (maybe pokemon gif animation?)
+**Obtener 3 películas de Studio Ghibli al hacer click en el botón**
 
-[StackBlitz]()
+Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
 
-```javascript
-
-```
-
-Obtener 3 películas de Studio Ghibli al hacer click en el botón. Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
-
-[StackBlitz](https://stackblitz.com/edit/rxjs-exhaustmap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-exhaustmap-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { delay, exhaustMap, map, mergeAll, take } from "rxjs/operators";
@@ -67,7 +72,7 @@ click$.pipe(exhaustMap((_) => getGhibliFilms())).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo
+**Ejecuta un temporizador con cada click, únicamente si no hay ningún temporizador activo**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -78,49 +83,69 @@ const result = clicks.pipe(exhaustMap((ev) => interval(1000).pipe(take(5))));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `exhaustMap(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
 ### Parámetros
 
-project
-
-Tipo: <code>(value: T, index: number) => O</code>.
+<table>
+<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
+</table>
 
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `exhaustMap(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
 ### Parámetros
 
-project
-
-Tipo: <code>(value: T, index: number) => O</code>.
-resultSelector
-
-Tipo: <code>undefined</code>.
+<table>
+<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
+<tr><td>resultSelector</td><td>Tipo: <code>undefined</code>.</td></tr>
+</table>
 
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `exhaustMap(project: (value: T, index: number) => any, resultSelector: (outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
 
-project
-
-Tipo: <code>(value: T, index: number) => any</code>.
-resultSelector
-
-Tipo: <code>(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R</code>.
+<table>
+<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => any</code>.</td></tr>
+<tr><td>resultSelector</td><td>Tipo: <code>(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R</code>.</td></tr>
+</table>
 
 ### Retorna
 
 `OperatorFunction<T, R>`
 
+</div>
+
+</div>
+</details>
+
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/exhaustMap)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaustMap.ts)

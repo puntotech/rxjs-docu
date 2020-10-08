@@ -1,6 +1,18 @@
+<div class="page-heading">
+
 # bufferToggle
 
-<h3> Acumula valores del Observable fuente a partir de una emisión de <code>openings</code> en un búfer, que se cierra cuando el Observable retornado por la función <code>closingSelector</code> emite</h3>
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Acumula valores del Observable fuente a partir de una emisión de <code>openings</code> en un búfer, que se cierra cuando el Observable retornado por la función <code>closingSelector</code> emite</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -17,7 +29,9 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
-### Descripción
+</details>
+
+## Descripción
 
 Almacena valores en un array. Abre el búfer cuando `openings` emite, y llama a la función `closingSelector` para obtener el Observable que indica cuándo cerrar el búfer.
 
@@ -27,9 +41,9 @@ Almacena valores del Observable fuente abriendo el búfer cuando el Observable `
 
 ## Ejemplos
 
-Abrir el búfer cada cuatro segundos, durante dos segundos
+**Abrir el búfer cada cuatro segundos, durante dos segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffertoggle-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffertoggle-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -43,9 +57,9 @@ number$
 // Salida: [3, 4], [7, 8], [11, 12]...
 ```
 
-Emitir eventos `MouseEvent` mientras esté pulsado el botón del mouse, hasta que dejemos de pulsarlo
+**Emitir eventos MouseEvent mientras esté pulsado el botón del mouse, hasta que dejemos de pulsarlo**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffertoggle-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffertoggle-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -65,7 +79,7 @@ mouse$
 
 ### Ejemplo de la documentación oficial
 
-Cada dos segundos, emite los eventos click de los siguientes 500 milisegundos
+**Cada dos segundos, emite los eventos click de los siguientes 500 milisegundos**
 
 ```javascript
 import { fromEvent, interval, EMPTY } from "rxjs";
@@ -79,5 +93,6 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferToggle)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts)

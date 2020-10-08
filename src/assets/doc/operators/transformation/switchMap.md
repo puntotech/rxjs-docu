@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # switchMap
 
-Projects each source value to an Observable which is merged in the output Observable, emitting values only from the most recently projected Observable.
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -18,7 +31,9 @@ Projects each source value to an Observable which is merged in the output Observ
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección (y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente, obteniendo únicamente los valores del Observable interno más reciente.
 
-### Descripción
+</details>
+
+## Descripción
 
 Proyecta cada valor a un Observable interno, y 'aplasta' estos Observables internos.
 
@@ -28,9 +43,9 @@ Retorna un Observable que emite elementos tras aplicar una función a cada eleme
 
 ## Ejemplos
 
-Cada vez que se pulsa el botón, se hace una nueva petición, cancelando la petición anterior
+**Cada vez que se pulsa el botón, se hace una nueva petición, cancelando la petición anterior**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-switchmap-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-switchmap-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -50,7 +65,7 @@ click$.pipe(switchMap((_) => getGhibliFilms())).subscribe(console.log);
 // Salida: (Click) (Se hace nueva petición) (Click) (Se hace nueva petición)...
 ```
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-switchmap-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-switchmap-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import {
@@ -108,8 +123,7 @@ searchFilm$
 
 ### Ejemplo de la documentación oficial
 
-Generar un Observable nuevo para cada valor del Observable fuente
-Generate new Observable according to source Observable values
+**Generar un Observable nuevo según los valores del Observable fuente**
 
 ```javascript
 import { of } from "rxjs";
@@ -129,7 +143,7 @@ switched.subscribe((x) => console.log(x));
 // ... y así hasta completar la secuencia
 ```
 
-Reiniciar un Observable intervalo con cada click
+**Reiniciar un Observable intervalo con cada click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -140,7 +154,13 @@ const result = clicks.pipe(switchMap((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `switchMap(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -153,6 +173,12 @@ result.subscribe((x) => console.log(x));
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `switchMap(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -167,6 +193,12 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `switchMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
 ### Parámetros
@@ -180,5 +212,11 @@ result.subscribe((x) => console.log(x));
 
 `OperatorFunction<T, R>`
 
+</div>
+
+</div>
+</details>
+
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/switchMap)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts)

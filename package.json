@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href=/ && scully --scanRoutes",
-    "scully": "npm run build; scully --scanRoutes",
+    "deploy": "ng build --prod && scully --scanRoutes --prod",
+    "scully": "scully --scanRoutes",
     "scully:serve": "scully serve"
   },
   "private": true,
@@ -32,6 +32,7 @@
     "@scullyio/init": "0.0.26",
     "@scullyio/ng-lib": "^1.0.0-beta.1",
     "@scullyio/scully": "latest",
+    "@scullyio/scully-plugin-base-href-rewrite": "^1.0.0-beta.0",
     "emoji-toolkit": "^6.0.1",
     "ngx-markdown": "^9.0.0",
     "prismjs": "^1.20.0",
@@ -40,7 +41,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.3",
+    "@angular-devkit/build-angular": "^0.901.12",
     "@angular/cli": "~9.1.3",
     "@angular/compiler-cli": "~9.1.3",
     "@angular/language-service": "~9.1.3",
@@ -56,7 +57,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
-    "protractor": "~5.4.3",
+    "protractor": "^7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"

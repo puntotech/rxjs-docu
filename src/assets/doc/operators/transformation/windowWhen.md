@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # windowWhen
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,7 +29,9 @@
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `bufferWhen`, pero emite un Observable anidado en lugar de un array.
 
@@ -26,9 +41,9 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 ## Ejemplos
 
-Recoger una secuencia ascendente de números en una ventana. Cada vez que se haga click, abrir una nueva ventana
+**Recoger una secuencia ascendente de números en una ventana. Cada vez que se haga click, abrir una nueva ventana**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowwhen-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowwhen-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -46,9 +61,9 @@ number$
 // Salida: Nueva ventana, 0, 1, 2, 3 (click) Nueva ventana, 4, 5, 6...
 ```
 
-Recoger teclas pulsadas en una ventana de duración aleatoria de entre 1 y 4 segundos
+**Recoger teclas pulsadas en una ventana de duración aleatoria de entre 1 y 4 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowwhen-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowwhen-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -70,7 +85,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-Emitir únicamente los dos primeros eventos click en cada ventana de una duración aleatoria de entre 1 y 5 segundos
+**Emitir únicamente los dos primeros eventos click en cada ventana de una duración aleatoria de entre 1 y 5 segundos**
 
 ```javascript
 import { fromEvent, interval } from 'rxjs';
@@ -85,5 +100,6 @@ mergeAll() // 'Aplastar' el Observable de Observables
 result.subscribe(x => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowWhen)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts)

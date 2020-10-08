@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # generate
 
-### Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/generate.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,9 +29,11 @@
 Un Scheduler para planificar el bucle de generación. Si no se proporciona, por defecto se emitirá inmediatamente.</td></tr>
 </table>
 
-## Retorna
+### Retorna
 
 `Observable<S>`: La secuencia generada.
+
+</details>
 
 ## Descripción
 
@@ -38,9 +53,9 @@ Both forms of generate can optionally accept a scheduler. In case of multi-param
 
 ## Ejemplos
 
-Emitir los números del 1 al 10
+**Emitir los números del 1 al 10**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-generate?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-generate?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { generate } from "rxjs";
@@ -55,9 +70,9 @@ number$.subscribe(console.log);
 // Salida: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ```
 
-Emitir los números pares del 2 al 10, utilizando un objeto como parámetro
+**Emitir los números pares del 2 al 10, utilizando un objeto como parámetro**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-generate-2?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-generate-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { generate } from "rxjs";
@@ -72,7 +87,13 @@ evenNumber$.subscribe((number) => console.log(number));
 // Salida: 2, 4, 6, 8, 10
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `generate<T, S>(initialStateOrOptions: S | GenerateOptions<T, S>, condition?: ConditionFunc<S>, iterate?: IterateFunc<S>, resultSelectorOrObservable?: SchedulerLike | ResultFunc<S, T>, scheduler?: SchedulerLike): Observable<T>`
 
@@ -94,6 +115,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `Observable<T>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `generate(initialState: S, condition: ConditionFunc<S>, iterate: IterateFunc<S>, resultSelector: ResultFunc<S, T>, scheduler?: SchedulerLike): Observable<T>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes.
@@ -113,6 +140,12 @@ Un Scheduler para planificar el bucle de generación. Si no se proporciona, por 
 
 `Observable<T>`: La secuencia generada.
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `generate(options: GenerateBaseOptions<S>): Observable<S>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes. Esta sobrecarga acepta un objeto `options` que puede contener `initialState`, `iterate`, `condition` y `scheduler`.
@@ -126,6 +159,12 @@ Genera una secuencia observable ejecutando un bucle impulsado por el estado para
 ### Retorna
 
 `Observable<S>`: La secuencia generada.
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `generate(options: GenerateOptions<T, S>): Observable<T>`
 
@@ -141,5 +180,11 @@ Genera una secuencia observable ejecutando un bucle impulsado por el estado para
 
 `Observable<T>`: La secuencia generada.
 
+</div>
+
+</div>
+</details>
+
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/generate)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/generate.ts)

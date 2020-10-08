@@ -1,8 +1,8 @@
 # Instalación
 
-A continuación tenemos las distintas maneras de instalar RxJS:
+A continuación se muestran las distintas formas de instalar RxJS:
 
-# ES6 vía npm
+## ES6 vía npm
 
 ```javascript
 npm install rxjs
@@ -25,7 +25,7 @@ import { map } from "rxjs/operators";
 of(1, 2, 3).pipe(map((x) => x + "!!!")); // etc
 ```
 
-- Ver [Documentación de Operadores de Tubería]() para más información acerca de operadores de tubería.
+- Ver la sección [Operadores de Tubería](/version-6/operadores-tuberia) para más información acerca de operadores de tubería.
 
 Para utilizar con el _bundle_ importado de forma global:
 
@@ -36,7 +36,7 @@ const { map } = rxjs.operators;
 of(1, 2, 3).pipe(map((x) => x + "!!!")); // etc
 ```
 
-# CommonJS vía npm
+## CommonJS vía npm
 
 Si nos aparece un error como _error TS2304: Cannot find name 'Promise'_ o _error TS2304: Cannot find name 'Iterable'_ al utilizar RxJS, es posible que tengamos que instalar un conjunto de tipos adicional.
 
@@ -50,7 +50,7 @@ typings install es6-shim --ambient
 
 3. Añadimos el fichero de definición de tipos incluido en el `tsconfig.json` o en el argumento del CLI.
 
-# Todos los tipos de Módulo (CJS/ES6/AMD/TypeScript) vía npm
+## Todos los demás tipos de Módulos (CJS/ES6/AMD/TypeScript) vía npm
 
 Para instalar esta biblioteca vía npm versión 3, se utiliza el siguiente comando:
 
@@ -64,7 +64,7 @@ Si se utiliza la versión 2 de npm antes de que esta biblioteca haya alcanzado u
 npm install @reactivex/rxjs@5.0.0-beta.1
 ```
 
-# CDN
+## CDN
 
 Para CDN, se puede utilizar [unpkg]. Únicamente hay que reemplazar la palabra clave `version` de los siguientes enlaces con la versión actual de RxJS:
 

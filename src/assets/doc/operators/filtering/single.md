@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # single
 
-### Emite si solo existe un único valor que cumpla la condición
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/single.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Emite si solo existe un único valor que cumpla la condición
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -21,6 +34,8 @@ Una función para evaluar los elementos emitidos por el Observable fuente.</td><
 
 `EmptyError` Lanza un `EmptyError` si el Observable se completa sin emitir ninguna notificación `next`.
 
+</details>
+
 ## Descripción
 
 Es como `first`, pero emite un error si hay más de un valor.
@@ -33,9 +48,9 @@ Si el Observable fuente emite elementos, pero ninguno cumple la condición espec
 
 ## Ejemplos
 
-Emitir el único elemento que cumpla la condición
+**Emitir el único elemento que cumpla la condición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-single-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-single-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { single } from "rxjs/operators";
@@ -51,9 +66,9 @@ pokemon$.pipe(single(({ type }) => type === "Water")).subscribe(console.log);
 // Salida: { name: "Squirtle", type: "Water" }
 ```
 
-Si hay más de un elemento que cumpla la condición, se lanzará un error
+**Si hay más de un elemento que cumpla la condición, se lanzará un error**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-single-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-single-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { range } from "rxjs";
@@ -65,9 +80,9 @@ number$.pipe(single((n) => n % 2 === 0)).subscribe(console.log, console.error);
 // Salida: (error) Sequence contains more than one element
 ```
 
-Si no hay ningún elemento que cumpla la condición, se emitirá `undefined`
+**Si no hay ningún elemento que cumpla la condición, se emitirá undefined**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-single-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-single-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -85,7 +100,7 @@ user$.pipe(single(({ age }) => age < 18)).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Emitir 'Error'
+**Emitir 'Error'**
 
 ```javascript
 import { range } from "rxjs";
@@ -100,7 +115,7 @@ numbers.subscribe(
 // 'Error'
 ```
 
-Emitir 'undefined'
+**Emitir 'undefined'**
 
 ```javascript
 import { range } from "rxjs";
@@ -112,5 +127,6 @@ numbers.subscribe((x) => console.log(x));
 // 'undefined'
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/single)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/single.ts)

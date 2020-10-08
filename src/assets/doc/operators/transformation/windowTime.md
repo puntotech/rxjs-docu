@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # windowTime
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana) periódicamente
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana) periódicamente
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -18,7 +31,9 @@ El planificador con el que planificar los intervalos que determinan los límites
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `bufferTime`, pero emite un Observable anidado en lugar de un array.
 
@@ -31,9 +46,9 @@ Con el argumento `windowCreationInterval` se puede determinar cuándo abrir nuev
 
 ## Ejemplos
 
-Recoge teclas pulsadas en una nueva ventana cada 5s
+**Recoge teclas pulsadas en una nueva ventana cada 5s**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-windowtime-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowtime-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -55,7 +70,7 @@ key$
 
 ### Ejemplos de la documentación oficial
 
-Emitir como mucho 2 eventos click en ventanas de 1s
+**Emitir como mucho 2 eventos click en ventanas de 1s**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -70,7 +85,7 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-Emitir como mucho 2 eventos click en ventanas de 1s, abriendo una ventana nueva cada 5s
+**Emitir como mucho 2 eventos click en ventanas de 1s, abriendo una ventana nueva cada 5s**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -85,7 +100,7 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-Igual que el ejemplo anterior, pero con `maxWindowCount` en lugar del operador `take`
+**Igual que el ejemplo anterior, pero con maxWindowCount en lugar del operador take**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -99,7 +114,14 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-### Sobrecargas
+<details>
+
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `windowTime(windowTimeSpan: number, windowCreationInterval: number, scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>`
 
@@ -115,6 +137,12 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, Observable<T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `windowTime(windowTimeSpan: number, windowCreationInterval: number, maxWindowSize: number, scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>`
 
@@ -132,5 +160,11 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `OperatorFunction<T, Observable<T>>`
 
+</div>
+
+</div>
+</details>
+
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowTime)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowTime.ts)

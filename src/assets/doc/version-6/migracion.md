@@ -10,8 +10,7 @@ La capa de compatibilidad regresiva facilita el proceso de actualización, permi
 
 3. Si la aplicación resulta afectada por alguno de los pocos _breaking changes_ que no se cubren en `rxjs-compat`, se debe actualizar el código afectado acorde a las instrucciones proporcionadas a continuación.
 
-4. Eventualmente, se querrá [prescindir de la capa de compatibilidad]() para completar la actualización a RxJS v6. Al llevarlo a cabo disminuirá significativamente el tamaño de la aplicación.
-   Se puede refactorizar el código TypeScript para que no dependa en `rxjs-compat` con `rxjs-tslint`:
+4. Eventualmente, se querrá [prescindir de la capa de compatibilidad]() para completar la actualización a RxJS v6. Al hacerlo, el tamaño de la aplicación disminuirá significativamente. Se puede refactorizar el código TypeScript para que no dependa en `rxjs-compat` con `rxjs-tslint`:
 
 ```javascript
 npm i -g rxjs-tslint
@@ -20,9 +19,9 @@ rxjs-5-to-6-migrate -p [ruta/hacia/tsconfig.json]
 
 5. Antes del lanzamiento de RxJS v7, será necesario eliminar o reemplazar toda funcionalidad obsoleta.
 
-# Compatibilidad regresiva
+## Compatibilidad regresiva
 
-Para minimizar el impacto de la actualización, el lanzamiento de RxJS v6 se hizo en conjunto a un paquete hermano `rxjs-compat`, que proporciona una capa de compatibilidad entre las APIs de v5 y v6. La mayoría de los desarrolladores con aplicaciones en producción deberían llevar a cabo el proceso de actualización instalando tanto `rxjs` como `rxjs-compat` en ^6.0.0:
+Para minimizar el impacto de la actualización, el lanzamiento de RxJS v6 se hizo en conjunto con el paquete `rxjs-compat`, que proporciona una capa de compatibilidad entre las APIs de v5 y v6. La mayoría de los desarrolladores con aplicaciones en producción deberían llevar a cabo el proceso de actualización instalando tanto `rxjs` como `rxjs-compat` en ^6.0.0:
 
 ```javascript
 npm i rxjs@6 rxjs-compat@6
@@ -30,19 +29,19 @@ npm i rxjs@6 rxjs-compat@6
 
 Para obtener más información sobre este paquete, [ver aquí](https://www.npmjs.com/package/rxjs-compat).
 
-El paquete de compatibilidad aumenta el tamaño del _bundle_ de la aplicación, por lo que se recomienda prescindir de él en cuanto la aplicación y las dependencias hayan sido actualizadas. El aumento del tamaño se exacerba si se utiliza una versión de Webpack previa a 4.0.0.
+El paquete de compatibilidad aumenta el tamaño del _bundle_ de la aplicación, por lo que se recomienda prescindir de él en cuanto la aplicación y las dependencias hayan sido actualizadas. El aumento del tamaño se exacerba si se utiliza una versión de Webpack previa a la 4.0.0.
 
-Para una explicación completa acerca de lo que se debe actualizar para poder prescindir de `rxjs-compat`, ver [Prescindir de la capa de compatibilidad](). Se debe tener en cuenta que al actualizar una aplicación a v6 de forma completa puede descubrir errores de tipado que no fuesen mostrados anteriormente.
+Para una explicación completa acerca de lo que se debe actualizar para poder prescindir de `rxjs-compat`, ver la sección [Prescindir de la capa de compatibilidad](). Se debe tener en cuenta que al actualizar una aplicación a v6 de forma completa puede descubrir errores de tipado que no fuesen mostrados anteriormente.
 
-# _Breaking Changes_ no cubiertos por rxjs-compat
+## _Breaking Changes_ no cubiertos por rxjs-compat
 
-Si se ha instalado `rxjs-compat`, únicamente hay dos _breaking changes_ que haya que arreglar de forma inmediata.
+Si se ha instalado `rxjs-compat`, únicamente hay dos _breaking changes_ que haya que arreglar de forma inmediata:
 
-## Gestión de errores síncrona
+### Gestión de errores síncrona
 
 La gestión de errores síncrona (hacer una llamada al método `Observable.subscribe()` desde un bloque `try/catch`) ya no recibe soporte. Si se utiliza, debe ser reemplazada con gestión de errores asíncrona, mediante el uso de la _callback_ de `error` en el método `Observable.subscribe()`. [Ver ejemplos.](https://rxjs-dev.firebaseapp.com/guide/v6/migration#ex-1)
 
-## Operadores prototipo de TypeScript
+### Operadores prototipo de TypeScript
 
 Si se definen operadores prototipo propios en TypeScript y se modifica el _namespace_ del `Observable`, será necesario cambiar el código del operador para conseguir que TypeScript compile. [Ver ejemplos.](https://rxjs-dev.firebaseapp.com/guide/v6/migration#ex-2) Este es un caso relativamente raro, que probablemente afecte solo a desarrolladores de TypeScript de nivel avanzado.
 
@@ -130,7 +129,7 @@ Para que este código compile correctamente en v6, se deben llevar a cambio los 
     .subscribe();
 ```
 
-# Prescindir de la capa de compatibilidad
+## Prescindir de la capa de compatibilidad
 
 Si se utilizan funcionalidades que se han eliminado de v6, pero a las que se les da soporte en el paquete `rxjs-compat`, se debe refactorizar/reescribir el código para completar la actualización a v6. Las siguientes áreas de funcionalidad dependen de la capa de compatibilidad:
 
@@ -139,7 +138,7 @@ Si se utilizan funcionalidades que se han eliminado de v6, pero a las que se les
 - Las clases que operan en los Observables se han sustituido por funciones.
 - En las funciones que contengan el parámetro `resultSelector`, los parámetros se han vuelto obsoletos (en la mayoría de los casos) y se han reemplazado por dos funciones. Aquellos que hayan sido reemplazados deben actualizarse antes de poder prescindir de la capa de compatibilidad.
 
-# Rutas de importación
+## Rutas de importación
 
 A aquellos que sean desarrolladores de TypeScript se les recomienda utilizar `rxjs-tslint` para refactorizar las rutas de importación.
 
@@ -187,7 +186,7 @@ import { ajax } from "rxjs/ajax";
 import { TestScheduler } from "rxjs/testing";
 ```
 
-# Sintaxis de operadores tubería
+## Sintaxis de operadores tubería
 
 El estilo de código de encadenamiento de operadores que había anteriormente ha sido reemplazado por las tuberías, de tal manera que el resultado de cada operador es la entrada del siguiente. Los operadores tubería fueron añadidos en la versión 5.5. Para el debate completo acerca de estos operadores y de los cambios requeridos, [ver aquí](https://github.com/ReactiveX/rxjs/blob/91088dae1df097be2370c73300ffa11b27fd0100/doc/pipeable-operators.md).
 
@@ -195,9 +194,9 @@ Antes de poder prescindir de la capa de compatibilidad, se debe refactorizar el 
 
 - Ver [Conversión a sintaxis de tubería]() para obtener más detalles sobre cómo refactorizar utilizando [rxjs-tslint](https://github.com/reactivex/rxjs-tslint).
 
-# Clases Observables
+## Clases Observables
 
-Todas las [clases observables](https://github.com/ReactiveX/rxjs/tree/5.5.8/src/observable) han sido eliminadas de v6, para ser sutituidas por operadores ya existentes o nuevos que llevan a cabo las mismas operaciones que los métodos de clase. Por ejemplo, `ArrayObservable.create(myArray)` se puede sustituir por `from(myArray)`, o por el operador nuevo `fromArray()`.
+Todas las [clases observables](https://github.com/ReactiveX/rxjs/tree/5.5.8/src/observable) han sido eliminadas de v6, para ser sutituidas por operadores nuevos, o ya existentes, que llevan a cabo las mismas operaciones que los métodos de clase. Por ejemplo, `ArrayObservable.create(myArray)` se puede sustituir por `from(myArray)`, o por el operador nuevo `fromArray()`.
 
 - `ConnectableObservable` carece de acceso directo en v6, y es accesible únicamente a través de los operadores `multicast`, `publish`, `publishReplay` y `publishLast`.
 - `SubscribeOnObservable` carece de acceso directo en v6, y es accesible únicamente a través del operador `subscribeOn`.
@@ -209,7 +208,7 @@ Todas las [clases observables](https://github.com/ReactiveX/rxjs/tree/5.5.8/src/
 <tr><td>bindCallback </td> 	<td>BoundCallbackObservable</td></tr>
 <tr><td>bindNodeCallback </td> 	<td>BoundNodeCallbackObservable</td></tr>
 <tr><td>defer </td> 	<td>DeferObservable</td></tr>
-<tr><td>empty or EMPTY (constant)</td> 	<td>EmptyObservable</td></tr>
+<tr><td>empty o EMPTY (constante)</td> 	<td>EmptyObservable</td></tr>
 <tr><td>throwError </td> 	<td>ErrorObservable</td></tr>
 <tr><td>forkJoin </td> 	<td>ForkJoinObservable</td></tr>
 <tr><td>fromEvent </td> 	<td>FromEventObservable</td></tr>
@@ -219,7 +218,7 @@ Todas las [clases observables](https://github.com/ReactiveX/rxjs/tree/5.5.8/src/
 <tr><td>iif </td> 	<td>IfObservable</td></tr>
 <tr><td>interval </td> 	<td>IntervalObservable</td></tr>
 <tr><td>from </td> 	<td>IteratorObservable</td></tr>
-<tr><td>NEVER (constant)</td> 	<td>NeverObservable</td></tr>
+<tr><td>NEVER (constante)</td> 	<td>NeverObservable</td></tr>
 <tr><td>pairs </td> 	<td>PairsObservable</td></tr>
 <tr><td>from </td> 	<td>PromiseObservable</td></tr>
 <tr><td>range </td> 	<td>RangeObservable</td></tr>
@@ -228,7 +227,7 @@ Todas las [clases observables](https://github.com/ReactiveX/rxjs/tree/5.5.8/src/
 <tr><td>using </td> 	<td>UsingObservable</td></tr>
 </table>
 
-# Selectores de resultado eliminados u obsoletos
+## Selectores de resultado eliminados u obsoletos
 
 Los selectores de resultado son una funcionalidad que no se utiliza frecuentemente (en muchas casos no estaban documentados), pero incrementaban el tamaño del código de forma significativa. En el caso de utilizarse, se debe reemplazar el parámetro `resultSelector` obsoleto por código de selección de resultado externo.
 
@@ -238,7 +237,7 @@ Los selectores de resultado son una funcionalidad que no se utiliza frecuentemen
 
 Ver [Migración de Selector de Resultado]() para más detalles sobre qué operadores se ven afectados y cómo quitar las funciones de selección de resultado de la llamada al operador.
 
-# Funcionalidades obsoletas
+## Funcionalidades obsoletas
 
 Antes del lanzamiento de RxJS v7, se debe eliminar/reemplazar cualquier uso de funcionalidades obsoletas. Las siguientes áreas contienen funcionalidad obsoleta:
 
@@ -257,7 +256,7 @@ Ver [Cómo convertir métodos obsoletos](https://rxjs-dev.firebaseapp.com/guide/
 - Selectores de resultado.
   Ver [Migración de Selectores de Resultado]() para obtener más detalles sobre qué operadores se ven afectados y cómo quitar las funciones de selección de resultado de la llamada al operador.
 
-# Cómo: Convertir a sintaxis de tubería
+## Cómo: Convertir a sintaxis de tubería
 
 Antes de convertir los operadores de encadenamiento a operadores de tubería, hay que asegurarse de importar los operadores que se vayan a utilizar de `rxjs/operators`. Por ejemplo:
 
@@ -653,7 +652,7 @@ fromEvent(button, "click", resultSelector);
 fromEvent(button, "click").pipe(map(resultSelector));
 ```
 
-# Cambio de nombre de módulo UMD
+## Renombramiento del módulo UMD
 
 En RxJS v6.x, el nombre de módulo UMD se ha cambiado de Rx a rxjs para que concuerde con los nombres de los demás módulos.
 

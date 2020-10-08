@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # mergeScan
 
-### Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -19,15 +32,17 @@ El máximo número de Observables internos a los que se suscribe de forma concur
 
 `OperatorFunction<T, R>`: Un Observable de los valores acumulados.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `scan`, pero los Observables retornados por el acumulador se fusionan en el Observable resultante.
 
 ## Ejemplos
 
-Contar el número de teclas pulsadas
+**Contar el número de teclas pulsadas**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergescan-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergescan-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, of } from "rxjs";
@@ -39,9 +54,9 @@ key$.pipe(mergeScan((acc, one) => of(acc + one), 0)).subscribe(console.log);
 // Salida: (Pulsar tecla) 1, (Pulsar tecla ) 2, (Pulsar tecla) 3...
 ```
 
-Acumular el tiempo que esté pulsado el ratón
+**Acumular el tiempo que esté pulsado el ratón**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-mergescan-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergescan-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -67,7 +82,7 @@ mouseDown$
 
 ### Ejemplo de la documentación oficial
 
-Contar el número de eventos click
+**Contar el número de eventos click**
 
 ```javascript
 import { fromEvent, of } from "rxjs";
@@ -87,5 +102,6 @@ count$.subscribe((x) => console.log(x));
 // ...y así sucesivamente para cada click
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeScan)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts)

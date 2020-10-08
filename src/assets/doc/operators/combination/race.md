@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # race
 
-### Retorna un Observable que refleja al primer Observable que emita un valor
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Retorna un Observable que refleja al primer Observable que emita un valor
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,15 +29,17 @@
 
 `Observable<T>`: Un Observable que refleja las emisiones del primer Observable que emita un valor.
 
+</details>
+
 ## Descripción
 
 Refleja las emisiones del primer Observable que emita un valor.
 
 ## Ejemplos
 
-Hacer una carrera con 3 Observables
+**Hacer una carrera con 3 Observables**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-race?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-race?file=index.html)">StackBlitz</a>
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -41,9 +56,9 @@ race(slow$, medium$, fast$).subscribe((winner) =>
 // Salida: Y el ganador es... ¡Guepardo!
 ```
 
-Advertencia: Si alguno de los Observables lanza un error, la 'carrera' terminará con un error
+**Advertencia: Si alguno de los Observables lanza un error, la 'carrera' terminará con un error**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-race-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-race-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -61,7 +76,7 @@ race(slow$, medium$, fast$, error$).subscribe(console.log, console.error);
 
 ### Ejemplo de la documentación oficial
 
-Reflejar al primer Observable que emita un valor
+**Reflejar al primer Observable que emita un valor**
 
 ```javascript
 import { race, interval } from "rxjs";
@@ -77,7 +92,13 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 // Emite 'Rápido' cada segundo
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: [any]): Observable<A>`
 
@@ -91,6 +112,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(arg: [any, any]): Observable<A | B>`
 
 ### Parámetros
@@ -102,6 +129,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<A | B>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: [any, any, any]): Observable<A | B | C>`
 
@@ -115,6 +148,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A | B | C>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(arg: [any, any, any, any]): Observable<A | B | C | D>`
 
 ### Parámetros
@@ -126,6 +165,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<A | B | C | D>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: [any, any, any, any, any]): Observable<A | B | C | D | E>`
 
@@ -139,6 +184,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A | B | C | D | E>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(arg: any[]): Observable<T>`
 
 ### Parámetros
@@ -150,6 +201,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(arg: any[]): Observable<{}>`
 
@@ -163,6 +220,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<{}>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(a: any): Observable<A>`
 
 ### Parámetros
@@ -174,6 +237,12 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ### Retorna
 
 `Observable<A>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(a: any, b: any): Observable<A | B>`
 
@@ -188,7 +257,13 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 `Observable<A | B>`
 
-race(a: any, b: any, c: any): Observable<A | B | C>
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`race(a: any, b: any, c: any): Observable<A | B | C>`
 
 ### Parámetros
 
@@ -202,7 +277,13 @@ race(a: any, b: any, c: any): Observable<A | B | C>
 
 `Observable<A | B | C>`
 
-race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>`
 
 ### Parámetros
 
@@ -216,6 +297,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 ### Retorna
 
 `Observable<A | B | C | D>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(a: any, b: any, c: any, d: any, e: any): Observable<A | B | C | D | E>`
 
@@ -233,6 +320,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 
 `Observable<A | B | C | D | E>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(observables: any[]): Observable<T>`
 
 ### Parámetros
@@ -244,6 +337,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(observables: any[]): Observable<{}>`
 
@@ -257,6 +356,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 
 `Observable<{}>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `race(...observables: any[]): Observable<T>`
 
 ### Parámetros
@@ -268,6 +373,12 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 ### Retorna
 
 `Observable<T>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `race(...observables: any[]): Observable<{}>`
 
@@ -281,7 +392,11 @@ race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>
 
 `Observable<{}>`
 
+</div>
+
+</div>
+</details>
+
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/race)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts)

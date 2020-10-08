@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # isEmpty
 
-### Emite _false_ si el Observable emite cualquier valor, o emite _true_ si el Observable se completa sin emitir ningún valor
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Emite _false_ si el Observable emite cualquier valor, o emite _true_ si el Observable se completa sin emitir ningún valor
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -14,6 +27,8 @@ No recibe ningún parámetro.
 
 `OperatorFunction<T, boolean>`: Un Observable de valor booleano indicando si el Observable estaba vacío o no.
 
+</details>
+
 ## Descripción
 
 Indica si un Observable emite algún valor o no.
@@ -26,9 +41,9 @@ Se podría lograr un efecto similar con el operador `count`, pero `isEmpty` pued
 
 ## Ejemplos
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-isempty?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-isempty?file=index.ts">StackBlitz</a>
 
-Emite _false_ para un Observable que no está vacío
+**Emite _false_ para un Observable que no está vacío**
 
 ```javascript
 import { of } from "rxjs";
@@ -40,9 +55,9 @@ word$.pipe(isEmpty()).subscribe(console.log);
 // Salida: false
 ```
 
-Emite _true_ para Observables vacíos
+**Emite _true_ para Observables vacíos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-isempty-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-isempty-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { EMPTY, of } from "rxjs";
@@ -60,9 +75,7 @@ anotherEmpty$.pipe(isEmpty()).subscribe(console.log);
 
 ### Ejemplo de la documentación oficial
 
-Emite _false_ para un Sujeto que no está vacío
-
-[StackBlitz](https://stackblitz.com/run?devtoolsheight=50)
+**Emite _false_ para un Sujeto que no está vacío**
 
 ```javascript
     import { Subject } from 'rxjs';
@@ -80,5 +93,6 @@ Emite _false_ para un Sujeto que no está vacío
     // Salida: a, false, b, c
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/isEmpty)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts)

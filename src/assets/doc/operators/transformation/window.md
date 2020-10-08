@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # window
 
-### Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/window.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,7 +29,9 @@
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables que emiten valores del Observable fuente.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es como `buffer`, pero emite un Observable anidado en lugar de un array.
 
@@ -26,9 +41,9 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 ## Ejemplos
 
-Acumular el código de las teclas pulsadas en una ventana de 5s
+**Acumular el código de las teclas pulsadas en una ventana de 5s**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-window-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-window-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -49,7 +64,7 @@ key$
 
 ### Ejemplo de la documentación oficial
 
-En una ventana de 1s, emitir como mucho 2 eventos click
+**En una ventana de 1s, emitir como mucho 2 eventos click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -65,5 +80,6 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/window)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/window.ts)

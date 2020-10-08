@@ -1,8 +1,5 @@
 # Introducción
 
-<hr>
-<br>
-
 RxJS es una biblioteca para componer programas asíncronos y basados en eventos, mediante secuencias observables. Proporciona un tipo _core_, el Observable, varios tipos satélite (Observer, Schedulers, Subjects) y operadores inspirados por las [funciones de Array](https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.6) (`map`, `filter`, `reduce`, `every` etc.) para manejar eventos asíncronos como si fuesen colecciones.
 
 > Podemos considerar a RxJS como el [Lodash](https://lodash.com/) para eventos.
@@ -13,7 +10,7 @@ Los conceptos esenciales de RxJS que resuelven el manejo asíncrono de eventos s
 
 - Observable: representa la idea de una colección invocable de valores futuros o eventos.
 - Observador: es una colleción de _callbacks_ que sabe cómo escuchar a los valores proporcionados por el Observable.
-- Suscripción: representa la ejecución de un Observable, es muy útil a la hora de cancelar la ejecución.
+- Suscripción: representa la ejecución de un Observable; es muy útil a la hora de cancelar la ejecución.
 - Operadores: son funciones puras que permiten enfocar el manejo de las colecciones desde un estilo de programación funcional, con operaciones como `map`, `filter`, `concat`, `reduce` etc.
 - Sujeto: es el equivalente a un EventEmitter, y la única manera de multidifundir un valor o un evento a múltiples Observadores.
 - Planificadores: son despachadores centralizados para controlar la concurrencia, permitiendo coordinar cuándo ocurrirá la computación en `setTimeout`, `requestAnimationFrame` u otros.

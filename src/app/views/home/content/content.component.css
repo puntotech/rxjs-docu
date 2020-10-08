@@ -6,3 +6,120 @@
   margin: 0 24px;
   min-width: 0; /* Fix flex horizontal overflow */
 }
+
+details {
+  border-top: 2px solid #e3e7e7;
+  margin: 50px 0 0;
+  padding: 30px 0 0;
+}
+
+h1 {
+  border-bottom: 2px solid #e3e7e7;
+  margin-bottom: 30px;
+  padding-bottom: 35px;
+  width: 100%;
+}
+
+h2 {
+  border-top: 2px solid #e3e7e7;
+  margin-top: 30px;
+  padding-top: 35px;
+  margin: 34px 0 24px;
+}
+
+h3 {
+  margin: 30px 0 20px;
+}
+
+img {
+  width: 100%;
+}
+
+pre {
+  margin: 30px 0;
+}
+
+summary {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 15px 0;
+  padding: 20px 10px;
+  transition: 0.5s background-color;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: normal;
+}
+
+.overload-container {
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.overload-section {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0 20px 15px;
+}
+
+.collection-table {
+  width: 400px;
+}
+
+.protocol-table {
+  width: 800px;
+}
+
+.md-container {
+  padding: 25px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subtitle {
+  border: none;
+  margin: 0 0 20px;
+  padding-top: 0;
+}
+
+div.code-toolbar {
+  margin: 30px 0;
+}
+
+.page-heading h3 {
+  margin: 0 0 20px;
+}
+
+.page-heading a {
+  height: 32px;
+  width: 33px;
+}
+
+summary:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+.page-heading a svg {
+  color: #1b1f23;
+  height: 100%;
+  transition: color 0.5s;
+  width: 100%;
+}
+
+.page-heading a:hover svg {
+  color: #d81b60;
+}
+
+.overload-container .overload-section:last-child {
+  border: none;
+}
+
+@media only screen and (min-width: 450px) {
+  .md-container {
+    padding: 40px;
+  }
+}

@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # timeoutWith
 
-### Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -19,7 +32,9 @@ El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</t
 
 `OperatorFunction<T, T | R>`: Un Observable que refleja el comportamiento de la fuente o, cuando no supera la comprobación del _timeout_, de un segundo Observable proporcionado por parámetros.
 
-### Descripción
+</details>
+
+## Descripción
 
 Es una versión del operador `timeout` que permite especificar un Observable comodín.
 
@@ -33,9 +48,9 @@ También se puede proporcionar un Planificador como tercer argumento opcional, q
 
 ## Ejemplos
 
-Emitir una secuencia de números si no se presiona ninguna tecla en 5s
+**Emitir una secuencia de números si no se presiona ninguna tecla en 5s**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-tpkuum?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-tpkuum?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { interval, fromEvent } from "rxjs";
@@ -54,9 +69,9 @@ key$
 // Salida: (Presionar tecla) KeyX (5s) 0, 1, 2, 3, 4...
 ```
 
-Emitir un mensaje en caso de que ocurra el _timeout_ de una petición
+**Emitir un mensaje en caso de que ocurra el _timeout_ de una petición**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-timeoutwith-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-timeoutwith-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -86,10 +101,10 @@ delay$
 
 ### Ejemplo de la documentación oficial
 
-Proporcionar un Observable comodín
+**Proporcionar un Observable comodín**
 
 ```javascript
-import { intrerval } from "rxjs";
+import { interval } from "rxjs";
 import { timeoutWith } from "rxjs/operators";
 
 const seconds = interval(1000);
@@ -103,5 +118,6 @@ seconds.pipe(timeoutWith(900, minutes)).subscribe(
 );
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/timeoutWith)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts)

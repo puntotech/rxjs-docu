@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # skip
 
-### Retorna un Observable que se salta las primeras x emisiones del Observable fuente
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skip.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Retorna un Observable que se salta las primeras x emisiones del Observable fuente
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,6 +29,8 @@
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se salta valores emitidos por el Observable fuente.
 
+</details>
+
 ## Descripción
 
 `skip` se salta un número determinado por el parámetro `count` de emisiones del Observable fuente, y después continúa emitiendo valores normalmente.
@@ -24,9 +39,9 @@
 
 ## Ejemplos
 
-Ignorar los primeros 5 clicks
+**Ignorar los primeros 5 clicks**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skip-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skip-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skip } from "rxjs/operators";
@@ -38,9 +53,9 @@ click$.pipe(skip(5)).subscribe(console.log);
 // Salida: ......... ClickEvent {}...
 ```
 
-Ignorar el primer elemento
+**Ignorar el primer elemento**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-skip-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-skip-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skip } from "rxjs/operators";
@@ -56,5 +71,6 @@ pokemon$.pipe(skip(1)).subscribe(console.log);
 // Salida: { "Charmander", type: "Fire"}, { name: "Squirtle", type: "Water" }
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skip)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skip.ts)

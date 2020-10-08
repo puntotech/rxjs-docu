@@ -1,6 +1,18 @@
+<div class="page-heading">
+
 # finalize
 
-### Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en <code>complete</code> o en <code>error</code>
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en complete o en error></h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -18,9 +30,9 @@
 
 ## Ejemplos
 
-Ejecutar la función _callback_ tras la compleción del Observable
+**Ejecutar la función _callback_ tras la compleción del Observable**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-1?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { of } from "rxjs";
@@ -36,9 +48,9 @@ fruit$
 
 `finalize`
 
-La función _callback_ se ejecuta aunque ocurra un error
+**La función _callback_ se ejecuta aunque ocurra un error**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { throwError } from "rxjs";
@@ -52,9 +64,9 @@ error$
 // Output: (error) '¡Oh no!', 'Ejecutando a pesar del error!'
 ```
 
-Ejecutar la función _callback_ tras realizar todas las peticiones AJAX
+**Ejecutar la función _callback_ tras realizar todas las peticiones AJAX**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { finalize, take, map, mergeAll } from "rxjs/operators";
@@ -73,5 +85,6 @@ ghibliFilm$
 // Salida: Castle in the Sky, Grave of the Fireflies, My Neighbor Totoro, Flujo Completado, Peticiones Realizadas
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/finalize)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts)

@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # sequenceEqual
 
-### Compara secuencialmente todos los valores emitidos por dos Observables utilizando una función de comparación (opcional) y retorna un Observable que emite un solo valor booleano en función de si las dos secuencias son o no iguales.
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sequenceEqual.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Compara secuencialmente todos los valores emitidos por dos Observables utilizando una función de comparación (opcional) y retorna un Observable que emite un solo valor booleano en función de si las dos secuencias son o no iguales.
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -17,6 +30,8 @@ Una función opcional para comparar cada par de valores.</td></tr>
 ### Retorna
 
 `OperatorFunction<T, boolean>`: Un Observable que emite un solo valor booleano representando si los valores emitidos por ambos Observables son iguales, en el mismo orden.
+
+</details>
 
 ## Descripción
 
@@ -61,5 +76,6 @@ matches.subscribe((matched) =>
 );
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/sequenceEqual)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sequenceEqual.ts)

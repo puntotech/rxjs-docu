@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # bufferCount
 
-Buffers the source Observable values until the size hits the maximum bufferSize given.
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferCount.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que este alcanza el tamaño máximo indicado
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -18,7 +31,9 @@ El intervalo a partir del cual abrir un nuevo búfer. Por ejemplo, si el valor d
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
-### Descripción
+</details>
+
+## Descripción
 
 Almacena valores en un array, y emite dicho array cuando su tamaño sea el especificado por `bufferSize`.
 
@@ -28,9 +43,9 @@ Almacena valores del Observable fuente y emite el búfer cuando este llega al ta
 
 ## Ejemplos
 
-Almacenar cada 5 valores en un array y emitirlo
+**Almacenar cada 5 valores en un array y emitirlo**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffercount-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffercount-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { bufferCount } from "rxjs/operators";
@@ -44,7 +59,7 @@ number$.pipe(bufferCount(5)).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Emitir los últimos dos eventos click en un array
+**Emitir los últimos dos eventos click en un array**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -55,7 +70,7 @@ const buffered = clicks.pipe(bufferCount(2));
 buffered.subscribe((x) => console.log(x));
 ```
 
-En cada click, emitir los dos últimos eventos click en un array
+**En cada click, emitir los dos últimos eventos click en un array**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -66,5 +81,6 @@ const buffered = clicks.pipe(bufferCount(2, 1));
 buffered.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferCount)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferCount.ts)

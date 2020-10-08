@@ -1,10 +1,10 @@
 # Planificador / Scheduler
 
-¿Qué es un Planificador? Un Planificador controla cuándo comienza una suscripción, y cuándo se envan las notificaciones. Está compuesto por tres componentes:
+¿Qué es un Planificador? Un Planificador controla cuándo comienza una suscripción, y cuándo se envían las notificaciones. Está compuesto por tres componentes:
 
-- Un Planificador es una estructura de datos. Sabe cómo almacenar y poner tareas en cola basándose en la prioridad u otro criterio.
+- Un Planificador es una estructura de datos. Sabe cómo almacenar y poner tareas a la cola basándose en la prioridad u otro criterio.
 - Un Planificador es un contexto de ejecución. Denota dónde y cuándo se ejecuta una tarea (ej: inmediatamente, o mediante otro mecanismo de _callback_ tal como `setTimeout`, `process.nextTick` o el Animation frame.)
-- Un Planificador tiene un reloj (virtual.) Este proporciona la noción de "tiempo" mediante un método de acceso `now()` en el Planificador. Las tareas que se planifican en un Planificador particular se adherirán únicamente a la noción de tiempo proporcionada por su reloj.
+- Un Planificador tiene un reloj (virtual.) Este proporciona la noción de "tiempo" mediante un método de acceso `now()` en el Planificador. Las tareas que se planifican con un Planificador particular se adherirán únicamente a la noción de tiempo proporcionada por su reloj.
 
 > Un `Scheduler` permite definir en qué contexto de ejecución se enviarán las notificaciones de un Observable a su Observador.
 
@@ -36,7 +36,7 @@ observable.subscribe({
 console.log("Justo después de subscribe");
 ```
 
-Al ejecutar, recibimos la siguiente salida:
+Al ejecutar el código, se recibe la siguiente salida:
 
 ```
 Justo antes de subscribe
@@ -47,7 +47,7 @@ Obtenido valor 3
 Completado
 ```
 
-Nótese que las notificaciones `Obtenido valor...` fueron enviadas después de `Justo después de subscribe`. Este comportamiento es distinto del comportamiento por defecto que hemos podido ver hasta ahora. Esto es debido a que `observeOn(asyncScheduler)` introduce un Observador proxy entre `new Observable` y el Observador final. Se pueden renombrar los identificadores para hacer que este distinción sea obvia, como podemos ver en el siguiente código:
+Nótese que las notificaciones `Obtenido valor...` se enviaron después de `Justo después de subscribe`. Este comportamiento es distinto al comportamiento por defecto que hemos podido ver hasta ahora. Esto es debido a que `observeOn(asyncScheduler)` introduce un Observador proxy entre `new Observable` y el Observador final. Se pueden renombrar los identificadores para hacer que esta distinción sea obvia, como podemos ver en el siguiente código:
 
 ```javascript
 import { Observable, asyncScheduler } from "rxjs";
@@ -102,12 +102,12 @@ El método `schedule()` de un Planificador recibe un argumento `delay`, que se r
 El Planificador `async` es uno de los Planificadores que proporciona RxJS. Cada uno de estos Planificadores se puede crear y retornar mediante las propiedades estáticas del objeto `Scheduler`.
 
 <table>
-<tr><td>Scheduler</td><td> 	Purpose</td></tr>
-<tr><td>null</td><td> 	By not passing any scheduler, notifications are delivered synchronously and recursively. Use this for constant-time operations or tail recursive operations.</td></tr>
-<tr><td>queueScheduler</td><td> 	Schedules on a queue in the current event frame (trampoline scheduler). Use this for iteration operations.</td></tr>
-<tr><td>asapScheduler</td><td> 	Schedules on the micro task queue, which is the same queue used for promises. Basically after the current job, but before the next job. Use this for asynchronous conversions.</td></tr>
-<tr><td>asyncScheduler</td><td> 	Schedules work with setInterval. Use this for time-based operations.</td></tr>
-<tr><td>animationFrameScheduler</td><td> 	Schedules task that will happen just before next browser content repaint. Can be used to create smooth browser animations.</td></tr>
+<tr><th>Planificador</th><th>Función</th></tr>
+<tr><td>null</td><td> 	Si no se proporciona un planificador, las notificaciones se emiten de forma síncrona y recursiva. Se debe utilizar para operaciones de tiempo constante u operaciones recursivas lineales finales.</td></tr>
+<tr><td>queueScheduler</td><td> 	Planifica en una cola en el *event frame* actual (planificador trampolín.) Se debe utilizar para operaciones de iteración. on a queue in the current event frame (trampoline scheduler). Use this for iteration operations.</td></tr>
+<tr><td>asapScheduler</td><td> 	Planifica en la cola de *micro task*, que es la misma cola que se utiliza para las promesas. Básicamente se planifica después de la tarea actual, pero antes de la siguiente tarea. Se debe utilizar para conversiones asíncronas.</td></tr>
+<tr><td>asyncScheduler</td><td> 	Planifica tareas con setInterval. Se debe utilizar para operaciones basadas en el tiempo.</td></tr>
+<tr><td>animationFrameScheduler</td><td> 	Planifica una tarea que ocurrirá justo antes del siguiente repintado del contenido del navegador. Se puede utilizar para crear animaciones más fluidas en el navegador.</td></tr>
 </table>
 
 # Usando Planificadores

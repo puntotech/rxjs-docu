@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # forkJoin
 
-### Accepts an Array of ObservableInput or a dictionary Object of ObservableInput and returns an Observable that emits eitoeraan array of values in the exact same order as the passed array, or a dictionary of values in the same shape as the passed dictionary.
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/forkJoin.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Accepts an Array of ObservableInput or a dictionary Object of ObservableInput and returns an Observable that emits eitoeraan array of values in the exact same order as the passed array, or a dictionary of values in the same shape as the passed dictionary.
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,6 +29,8 @@
 
 `Observable<any>`: Un Observable que emite o un array de las últimas emisiones de los Observables de entrada o el valor de la función de proyección.
 
+</details>
+
 ## Descripción
 
 Espera a que todos los Observables se completen, y combina sus últimas emisiones.
@@ -30,7 +45,7 @@ Si se le proporciona un array de n Observables a `forkJoin`, el array resultante
 
 Si se le proporciona un diccionario de Observables a `forkJoin` el objeto resultante tendrá las mismas claves que el diccionario. Los últimos valores que se hayan emitido por cada Observable de entrada estarán situados bajo la clave correspondiente.
 
-`forkJoin` emite una única vez, y se completará justo después. Si se necesita emitir valores combinados durante el ciclo de vida de los Observables de entrada, se recomienza utilizar [combineLatest]() o [zip]().
+`forkJoin` emite una única vez, y se completará justo después. Si se necesita emitir valores combinados durante el ciclo de vida de los Observables de entrada, se recomienza utilizar [combineLatest](/operators/combination/combineLatest) o [zip](/operators/combination/zip).
 
 Para que el array resultante tenga la misma longitud que el número de Observables de entrada, cuando alguno de dichos Observables se complete sin emitir ningún valor, `forkJoin` también se completará y no emitirá ningún valor, aunque ya tenga recogidos algunos valores de los demás Observables. Además, si hay algún Observable que nunca llegue a completarse, `forkJoin` tampoco se completará, a no ser que, en cualquier momento, alguno de los demás Observables de entrada se complete sin emitir ningún valor, lo que nos trae de vuelta al caso anterior. Como norma general, para que `forkJoin` pueda emitir un valor, todos los Observables de entrada tienen que emitir mínimo un valor, y completarse.
 
@@ -40,9 +55,9 @@ Opcionalmente, `forkJoin` recibe una función de proyección, que se llamará co
 
 ## Ejemplos
 
-Combinar la última emisión de dos Observables distintos
+**Combinar la última emisión de dos Observables distintos**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { forkJoin, of } from "rxjs";
@@ -56,9 +71,9 @@ pokemon$.subscribe(console.log);
 // Salida: [ 'Squirtle', 'Water' ]
 ```
 
-Combinar la última emisión de dos Observables distintos, contenidos en un diccionario de datos
+**Combinar la última emisión de dos Observables distintos, contenidos en un diccionario de datos**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin-2?file=index.html)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { forkJoin, of } from "rxjs";
@@ -72,9 +87,9 @@ pokemonDictionary$.subscribe(console.log);
 // Salida: { name: Squirtle, type: Water }
 ```
 
-Si alguno de los Observables de entrada lanza un error, el Observable resultante lanzará un error inmediatamente, y el flujo se terminará
+**Si alguno de los Observables de entrada lanza un error, el Observable resultante lanzará un error inmediatamente, y el flujo se terminará**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { throwError, from, forkJoin } from "rxjs";
@@ -87,9 +102,9 @@ forkJoin([message$, error$, sadMessage$]).subscribe(console.log, console.error);
 // Salida: 'Este mensaje se emitirá', (error) Oh no
 ```
 
-Si se utiliza el operador `catchError` en el Observable de entrada que lanza el error, el Observable resultante se completará sin problemas
+**Si se utiliza el operador `catchError` en el Observable de entrada que lanza el error, el Observable resultante se completará sin problemas**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin-4?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { from, forkJoin, of, throwError } from "rxjs";
@@ -108,7 +123,7 @@ forkJoin([message$, error$, happyMessage$]).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Usar `forkJoin` con un diccionario de Observables de entrada
+**Usar forkJoin con un diccionario de Observables de entrada**
 
 ```javascript
 import { forkJoin, of, timer } from "rxjs";
@@ -128,7 +143,7 @@ observable.subscribe({
 // "¡Y así es como acaba!" inmediatamente después
 ```
 
-Usar `forkJoin` con un array de Observables de entrada
+**Usar forkJoin con un array de Observables de entrada**
 
 ```javascript
 import { forkJoin, of } from "rxjs";
@@ -144,7 +159,13 @@ observable.subscribe({
 // "¡Y así es como acaba!" inmediatamente después
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: SubscribableOrPromise<T>): Observable<[T]>`
 
@@ -157,6 +178,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[T]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: any, v2: any): Observable<[T, T2]>`
 
@@ -171,6 +198,12 @@ observable.subscribe({
 
 `Observable<[T, T2]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(v1: any, v2: any, v3: any): Observable<[T, T2, T3]>`
 
 ### Parámetros
@@ -184,6 +217,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[T, T2, T3]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: any, v2: any, v3: any, v4: any): Observable<[T, T2, T3, T4]>`
 
@@ -200,6 +239,12 @@ observable.subscribe({
 
 `Observable<[T, T2, T3, T4]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(v1: any, v2: any, v3: any, v4: any, v5: any): Observable<[T, T2, T3, T4, T5]>`
 
 ### Parámetros
@@ -215,6 +260,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[T, T2, T3, T4, T5]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any): Observable<[T, T2, T3, T4, T5, T6]>`
 
@@ -233,6 +284,12 @@ observable.subscribe({
 
 `Observable<[T, T2, T3, T4, T5, T6]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: [any]): Observable<[A]>`
 
 ### Parámetros
@@ -244,6 +301,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[A]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sources: [any, any]): Observable<[A, B]>`
 
@@ -257,6 +320,12 @@ observable.subscribe({
 
 `Observable<[A, B]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: [any, any, any]): Observable<[A, B, C]>`
 
 ### Parámetros
@@ -268,6 +337,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[A, B, C]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sources: [any, any, any, any]): Observable<[A, B, C, D]>`
 
@@ -281,6 +356,12 @@ observable.subscribe({
 
 `Observable<[A, B, C, D]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: [any, any, any, any, any]): Observable<[A, B, C, D, E]>`
 
 ### Parámetros
@@ -292,6 +373,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<[A, B, C, D, E]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sources: [any, any, any, any, any, any]): Observable<[A, B, C, D, E, F]>`
 
@@ -305,6 +392,12 @@ observable.subscribe({
 
 `Observable<[A, B, C, D, E, F]>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sources: A): Observable<ObservedValuesFromArray<A>[]>`
 
 ### Parámetros
@@ -316,6 +409,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<ObservedValuesFromArray<A>[]>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(sourcesObject: {}): Observable<never>`
 
@@ -329,6 +428,12 @@ observable.subscribe({
 
 `Observable<never>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(sourcesObject: T): Observable<{[K in keyof T]: ObservedValueOf<T[K]>;}>`
 
 ### Parámetros
@@ -340,6 +445,12 @@ observable.subscribe({
 ### Retorna
 
 `Observable<{ [K in keyof T]: ObservedValueOf<T[K]>; }>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `forkJoin(...args: any[]): Observable<any>`
 
@@ -353,6 +464,12 @@ observable.subscribe({
 
 `Observable<any>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `forkJoin(...sources: any[]): Observable<T[]>`
 
 ### Parámetros
@@ -365,7 +482,11 @@ observable.subscribe({
 
 `Observable<T[]>`
 
+</div>
+
+</div>
+</details>
+
 ## Recursos adicionales
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/forkJoin)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/forkJoin.ts)

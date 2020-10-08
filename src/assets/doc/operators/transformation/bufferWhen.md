@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # bufferWhen
 
-### Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,7 +29,9 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
-### Descripción
+</details>
+
+## Descripción
 
 Almacena valores en un array. Cuando comienza a almacenar valores, llama a una función que retorna un Observable que indica cuándo cerrar el búfer actual y abrir uno nuevo, para seguir almacenando valores.
 
@@ -26,9 +41,9 @@ Abre un búfer de forma inmediata, que cierra cuando el Observable retornado por
 
 ## Ejemplos
 
-Almacenar valores durante periodos de 4 segundos
+**Almacenar valores durante periodos de 4 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-bufferwhen-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-bufferwhen-1?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { bufferWhen } from "rxjs/operators";
@@ -40,9 +55,9 @@ number$.pipe(bufferWhen(() => interval(4000))).subscribe(console.log);
 // Salida: [0, 1, 2], [3, 4, 5, 6], [7, 8, 9, 10]...
 ```
 
-Almacenar valores hasta que se haga click
+**Almacenar valores hasta que se haga click**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-bufferwhen-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-bufferwhen-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { bufferWhen } from "rxjs/operators";
@@ -57,7 +72,7 @@ number$.pipe(bufferWhen(() => click$)).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-Emite un array de clicks cada [1-5] seconds
+**Emite un array de clicks cada [1-5] segundos**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -70,5 +85,6 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferWhen)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts)

@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # buffer
 
-### Almacena los valores del Observable en un búfer hasta que emita otro Observable
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que otro Observable emita
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -16,7 +29,9 @@
 
 `OperatorFunction<T, T[]>`: Un Observable de búfers, que son arrays de valores.
 
-### Descripción
+</details>
+
+## Descripción
 
 Acumula valores en un array, y emite dicho array cuando un segundo Observable emita.
 
@@ -26,9 +41,9 @@ Almacena los valores del Observable fuente en un búfer hasta que el Observable 
 
 ## Ejemplos
 
-Con cada tecla pulsada, emitir el array de los números emitidos desde la última tecla pulsada
+**Con cada tecla pulsada, emitir el array de los números emitidos desde la última tecla pulsada**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffer-1?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffer-1?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { buffer } from "rxjs/operators";
@@ -41,9 +56,11 @@ number$.pipe(buffer(key$)).subscribe(console.log);
 // Salida: (tecla pulsada) [0, 1, 2, 3] (tecla pulsada) [4, 5]
 ```
 
-Emitir los clicks hechos en un intervalo de 5 segundos. Si no se ha hecho ningún click, no se emitirá nada
+**Emitir los clicks hechos en un intervalo de 5 segundos**
 
-[StackBlitz](https://stackblitz.com/edit/rxjs-buffer-2?file=index.html)
+Si no se hace ningún click en el intervalo, no se emitirá nada.
+
+<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffer-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { buffer, filter } from "rxjs/operators";
@@ -63,7 +80,7 @@ click$
 
 ### Ejemplos de la documentación oficial
 
-Emite el array de eventos almacenados en cada click
+**Emite el array de eventos almacenados en cada click**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -75,5 +92,6 @@ const buffered = intervalEvents.pipe(buffer(clicks));
 buffered.subscribe((x) => console.log(x));
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/buffer)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts)

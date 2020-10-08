@@ -1,6 +1,19 @@
+<div class="page-heading">
+
 # fromEvent
 
-### Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
+</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -25,6 +38,8 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 ### Retorna
 
 `Observable<T>`:
+
+</details>
 
 ## Descripción
 
@@ -70,9 +85,9 @@ Al igual que en el caso de un `NodeList`, se trata de una colección de Nodos de
 
 ## Ejemplos
 
-Crear un Observable que emite clicks
+**Crear un Observable que emite clicks**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -83,9 +98,9 @@ click$.subscribe((click) => console.log(click));
 // Salida: (click) MouseEvent {isTrusted: true}
 ```
 
-Crear un Observable que emite teclas pulsadas
+**Crear un Observable que emite teclas pulsadas**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent-2?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -96,9 +111,9 @@ keyPressed$.subscribe(console.log);
 // Salida: (pulsar tecla) KeyboardEvent {isTrusted: true}
 ```
 
-Crear un Observable que emita cambios en el scroll
+**Crear un Observable que emita cambios en el scroll**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent-3?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent-3?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -109,9 +124,9 @@ scroll$.subscribe((scroll) => console.log(scroll));
 // Salida: (scroll) UIEvent {isTrusted: true}
 ```
 
-Crear un Observable que emite cuando se copie un texto
+**Crear un Observable que emite cuando se copie un texto**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent-4?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent-4?file=index.ts">StackBlitz</a>
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -137,20 +152,21 @@ clicks.subscribe((x) => console.log(x));
 ```javascript
 import { fromEvent } from "rxjs";
 
-const clicksInDocument = fromEvent(document, "click", true); // note optional configuration parameter
-// which will be passed to addEventListener
+const clicksInDocument = fromEvent(document, "click", true); // Nótese el parámetro de configuración opcionalparameter
+// que se le pasará a addEventListener
 const clicksInDiv = fromEvent(someDivInDocument, "click");
 
 clicksInDocument.subscribe(() => console.log("document"));
 clicksInDiv.subscribe(() => console.log("div"));
 
-// By default events bubble UP in DOM tree, so normally
-// when we would click on div in document
-// "div" would be logged first and then "document".
-// Since we specified optional `capture` option, document
-// will catch event when it goes DOWN DOM tree, so console
-// will log "document" and then "div".
+// Por defecto, los eventos se propagan hacia arriba por el árbol del DOM,
+// por lo que, normalmente, cuando se hace click en el div
+// primero se mostrará "div" primero en la consola, y después "document".
+// Dado que se ha especificado la opción `capture` option, el "document"
+// capturará el evento cuando se propague hacia ABAJO en el árbol del DOM, por lo
+// que la consola mostrará "document" primero, y luego "div".
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/fromEvent);
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts)

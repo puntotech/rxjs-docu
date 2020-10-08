@@ -1,6 +1,15 @@
+<div class="page-heading">
+
 # retry
 
-### Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retry.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle"> Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error</h2>
 
 💡 Muy útil para reintentar peticiones HTTP
 
@@ -19,6 +28,8 @@ El número de reintentos que se harán antes de fallar.</td></tr>
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con la lógica de reintento.
 
+</details>
+
 ## Descripción
 
 Retorna un Observable que refleja el Observable fuente con la excepción de un error. Si el Observable fuente lanza un error, este operador se resuscribirá al Observable fuente durante un máximo de `count` veces, antes de propagar el error.
@@ -29,9 +40,9 @@ Todos los valores emitidos por el Observable fuente se emitirán en el Observabl
 
 ## Ejemplos
 
-Reintentar una petición Ajax 3 veces en el caso de que haya algún error
+**Reintentar una petición Ajax 3 veces en el caso de que haya algún error**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retry?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retry?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { retry } from "rxjs/operators";
@@ -43,9 +54,9 @@ ghibliFilm$.pipe(retry(3)).subscribe(console.log, console.error);
 // Salida: (error) Error: ajax error 404
 ```
 
-Utilizar `retry` junto a `catchError` para que, en el caso de que los tres reintentos de la petición Ajax fallen, el flujo continúe en lugar de acabar en error.
+**Utilizar `retry` junto a `catchError` para que, en el caso de que los tres reintentos de la petición Ajax fallen, el flujo continúe en lugar de acabar en error.**
 
-[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retry-2?file=index.ts)
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retry-2?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { catchError, concatMap, map, retry } from "rxjs/operators";
@@ -107,5 +118,6 @@ const subscribe = example.subscribe({
 // "Error!: Retried 2 times then quit!"
 ```
 
+## Recursos adicionales
+
 - [Documentación oficial en inglés](https://rxjs.dev/api/operators/retry)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retry.ts)
