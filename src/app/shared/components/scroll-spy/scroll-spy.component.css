@@ -9,7 +9,7 @@
 }
 
 .section {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   margin-bottom: 0.6em;
   cursor: pointer;
