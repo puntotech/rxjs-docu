@@ -23,10 +23,16 @@ import { NgModule } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { RouterModule } from '@angular/router';
+import { ScrollSpyComponent } from './components/scroll-spy/scroll-spy.component';
 
 const CORE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
-const COMPONENTS = [FooterComponent, HeaderComponent, SidenavComponent];
+const COMPONENTS = [
+  FooterComponent,
+  HeaderComponent,
+  SidenavComponent,
+  ScrollSpyComponent,
+];
 
 const MATERIAL_MODULES = [
   MatInputModule,
@@ -49,7 +55,7 @@ const MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  declarations: COMPONENTS,
+  declarations: [COMPONENTS, ScrollSpyComponent],
   imports: [MATERIAL_MODULES, CORE_MODULES, FlexLayoutModule],
   exports: [COMPONENTS, MATERIAL_MODULES, CORE_MODULES, FlexLayoutModule],
 })

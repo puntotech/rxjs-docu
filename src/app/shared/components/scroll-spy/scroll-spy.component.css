@@ -1,0 +1,40 @@
+.root {
+  padding: 4px;
+  padding-left: 8px;
+  display: inline-table;
+  position: sticky;
+  top: 20px;
+  border-left: 1px solid gray;
+  display: inline-table;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.actual-section-indicator {
+  width: 0;
+  height: 10px;
+  margin-left: -17px;
+  margin-right: 15px;
+  border-radius: 100px;
+  background-color: white;
+  border: 1px solid white;
+  flex: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.section:hover {
+  color: rgb(148, 7, 78);
+}
+
+.actual-section-indicator.active {
+  width: 16px;
+  margin-right: 5px;
+  border: 1px solid black;
+}
