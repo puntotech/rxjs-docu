@@ -16,13 +16,22 @@ mat-sidenav-content {
 }
 
 rxjs-docs-sidenav {
+  box-sizing: border-box;
   display: block;
-  height: 100%;
-  margin: 10px 30px;
+  padding: 10px 30px;
 }
 
-::ng-deep mat-sidenav .mat-drawer-inner-container {
-  height: auto;
+.github-icon {
+  height: 32px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 33px;
+}
+
+.github-icon svg {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (min-width: 450px) and (max-width: 16000px) {
