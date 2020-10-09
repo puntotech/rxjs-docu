@@ -1,0 +1,17 @@
+<div class="flex-center group-buttons">
+  <a
+    *ngFor="let group of groups"
+    [class.selected]="group === selectedGroup"
+    class="button mat-button filter-button"
+    (click)="selectGroup(group)"
+    >{{ group.name }}</a
+  >
+</div>
+<section *ngIf="selectedGroup" class="grid-fluid">
+  <div class="contributor-group">
+    <app-team
+      *ngFor="let person of selectedGroup.contributors"
+      [person]="person"
+    ></app-team>
+  </div>
+</section>

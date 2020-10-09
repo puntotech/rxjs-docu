@@ -1,0 +1,82 @@
+{
+    "ben": {
+        "name": "Ben Lesh",
+        "role": "Developer",
+        "github": "https://github.com/benlesh",
+        "picture": "https://avatars2.githubusercontent.com/u/1540597",
+        "twitter": "https://twitter.com/BenLesh",
+        "website": "http://www.benlesh.com",
+        "group": "Core Team"
+    },
+    "paul": {
+        "name": "Paul Taylor",
+        "role": "Developer",
+        "github": "https://github.com/trxcllnt",
+        "picture": "https://avatars2.githubusercontent.com/u/178183",
+        "twitter": "https://twitter.com/trxcllnt",
+        "website": "http://graphistry.com",
+        "group": "Core Team"
+    },
+    "oj": {
+        "name": "OJ Kwon",
+        "role": "Developer",
+        "github": "https://github.com/kwonoj",
+        "picture": "https://avatars1.githubusercontent.com/u/1210596",
+        "twitter": "https://twitter.com/_ojkwon",
+        "group": "Core Team"
+    },
+    "david": {
+        "name": "David Driscoll",
+        "role": "Developer",
+        "github": "https://github.com/david-driscoll",
+        "picture": "https://avatars0.githubusercontent.com/u/1269157",
+        "twitter": "https://twitter.com/david_dotnet",
+        "website": "http://david-driscoll.github.io",
+        "group": "Core Team"
+    },
+    "tracy": {
+        "name": "Tracy Lee",
+        "role": "Developer",
+        "github": "https://github.com/ladyleet",
+        "picture": "https://avatars0.githubusercontent.com/u/8270563",
+        "twitter": "https://twitter.com/ladyleet",
+        "website": "http://thisdot.co",
+        "group": "Core Team"
+    },
+    "nya": {
+        "name": "Estefanía García",
+        "github": "https://github.com/nyagarcia",
+        "picture": "https://avatars1.githubusercontent.com/u/37065748",
+        "twitter": "https://twitter.com/nyablk",
+        "website": "https://github.com/nyagarcia",
+        "role": "Core Team ES",
+        "group": "Core Team ES"
+    },
+    "juan": {
+        "name": "Juan Torres",
+        "github": "https://github.com/zaldih",
+        "picture": "https://avatars3.githubusercontent.com/u/16844185",
+        "twitter": "https://twitter.com/juaniman99",
+        "website": "https://github.com/zaldih",
+        "role": "Core Team ES",
+        "group": "Core Team ES"
+    },
+    "carlos": {
+        "name": "Carlos Caballero",
+        "github": "https://github.com/caballerog",
+        "picture": "https://avatars1.githubusercontent.com/u/8807391",
+        "twitter": "https://twitter.com/caballerog",
+        "website": "https://carloscaballero.io",
+        "role": "Core Team ES",
+        "group": "Core Team ES"
+    },
+    "toni": {
+        "name": "Toni Villena",
+        "github": "https://github.com/tonivj5",
+        "picture": "https://avatars1.githubusercontent.com/u/7110786",
+        "twitter": "https://twitter.com/tonivj5",
+        "website": "https://github.com/tonivj5",
+        "role": "Core Team ES",
+        "group": "Core Team ES"
+    }
+}
