@@ -18,11 +18,26 @@ mat-sidenav-content {
 rxjs-docs-sidenav {
   display: block;
   height: 100%;
+  margin: 10px 30px;
+}
+
+::ng-deep mat-sidenav .mat-drawer-inner-container {
+  height: auto;
 }
 
 @media screen and (min-width: 450px) and (max-width: 16000px) {
   mat-sidenav {
     width: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  mat-sidenav-container {
+    top: 0;
+  }
+
+  rxjs-docs-header {
+    display: none;
   }
 }
 
