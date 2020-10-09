@@ -1,3 +1,13 @@
+a {
+  margin-left: 15px;
+  width: 100%;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
 mat-sidenav-container {
   -webkit-box-shadow: 10px 0px 5px -2px rgba(224, 224, 224, 0.83);
   -moz-box-shadow: 10px 0px 5px -2px rgba(224, 224, 224, 0.83);
@@ -10,8 +20,41 @@ mat-tree {
   height: 100%;
 }
 
+mat-tree a {
+  color: #c27390;
+  font-weight: 500;
+}
+
+mat-tree-node button {
+  color: #d81b60;
+}
+
+mat-nested-tree-node li {
+  list-style: none;
+}
+
 .section-tree-invisible {
   display: none;
+}
+
+.sidenav-header {
+  margin-bottom: 15px;
+}
+
+.github-icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav-header a {
+  height: 32px;
+  width: 33px;
+}
+
+.sidenav-header h1 {
+  font-size: 25px;
+  margin: 0;
+  margin-left: 10px;
 }
 
 .section-tree ul,
@@ -21,16 +64,9 @@ mat-tree {
   list-style-type: none;
 }
 
-.mat-icon-rtl-mirror {
+mat-tree > mat-tree-node > a,
+mat-tree > mat-nested-tree-node > li > div > a {
   color: #d81b60;
-}
-
-a {
-  margin-left: 15px;
-  width: 100%;
-}
-
-a.nested {
   margin-left: 0;
 }
 
