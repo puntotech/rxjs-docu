@@ -1,22 +1,11 @@
-import { FlatTreeControl } from '@angular/cdk/tree';
+import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
-import {
-  MatTreeFlatDataSource,
-  MatTreeFlattener,
-} from '@angular/material/tree';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
 
 interface SectionNode {
   name: string;
-
   children?: SectionNode[];
   url: string;
-}
-
-interface FlatNode {
-  expandable: boolean;
-  name: string;
-
-  level: number;
 }
 
 const TREE_DATA: SectionNode[] = [
@@ -398,32 +387,13 @@ const TREE_DATA: SectionNode[] = [
   styleUrls: ['sidenav.component.css'],
 })
 export class SidenavComponent {
-  private _transformer = (node: SectionNode, level: number) => {
-    return {
-      expandable: !!node.children && node.children.length > 0,
-      name: node.name,
-      level: level,
-      url: node.url,
-    };
-  };
-
-  treeControl = new FlatTreeControl<FlatNode>(
-    (node) => node.level,
-    (node) => node.expandable
-  );
-
-  treeFlattener = new MatTreeFlattener(
-    this._transformer,
-    (node) => node.level,
-    (node) => node.expandable,
-    (node) => node.children
-  );
-
-  dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+  treeControl = new NestedTreeControl<SectionNode>((node) => node.children);
+  dataSource = new MatTreeNestedDataSource<SectionNode>();
 
   constructor() {
     this.dataSource.data = TREE_DATA;
   }
 
-  hasChild = (_: number, node: FlatNode) => node.expandable;
+  hasChild = (_: number, node: SectionNode) =>
+    !!node.children && node.children.length > 0;
 }
