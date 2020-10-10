@@ -11,11 +11,11 @@ interface SectionNode {
 const TREE_DATA: SectionNode[] = [
   {
     name: 'Introducción',
-    url: 'introduccion',
+    url: 'introduction',
   },
   {
     name: 'Instalación',
-    url: 'instalacion',
+    url: 'installation',
   },
   {
     name: 'Conceptos',
@@ -23,15 +23,15 @@ const TREE_DATA: SectionNode[] = [
     children: [
       { name: 'Observables', url: 'concepts/observables' },
 
-      { name: 'Observador', url: 'concepts/observador' },
+      { name: 'Observador', url: 'concepts/observer' },
 
-      { name: 'Operadores', url: 'concepts/operadores' },
+      { name: 'Operadores', url: 'concepts/operators' },
 
-      { name: 'Planificadores', url: 'concepts/planificadores' },
+      { name: 'Planificadores', url: 'concepts/schedulers' },
 
-      { name: 'Sujetos', url: 'concepts/sujetos' },
+      { name: 'Sujetos', url: 'concepts/subjects' },
 
-      { name: 'Suscripción', url: 'concepts/suscripcion' },
+      { name: 'Suscripción', url: 'concepts/subscription' },
 
       {
         name: 'Testing',
@@ -39,12 +39,12 @@ const TREE_DATA: SectionNode[] = [
         children: [
           {
             name: 'Tests de Canicas',
-            url: 'concepts/testing/tests-de-canicas',
+            url: 'concepts/testing/marble-testing',
           },
 
           {
             name: 'Contribuir tests a RxJS',
-            url: 'concepts/testing/contribuir-tests-a-rxjs',
+            url: 'concepts/testing/contribute-tests-to-rxjs',
           },
         ],
       },
@@ -366,15 +366,15 @@ const TREE_DATA: SectionNode[] = [
     children: [
       {
         name: 'Funcionalidades obsoletas',
-        url: 'version-6/funcionalidades-obsoletas',
+        url: 'version-6/deprecations',
       },
-      { name: 'Migración', url: 'version-6/migracion' },
-      { name: 'Operadores de tubería', url: 'version-6/operadores-tuberia' },
+      { name: 'Migración', url: 'version-6/migration' },
+      { name: 'Operadores de tubería', url: 'version-6/pipeable-operators' },
     ],
   },
   {
     name: 'Código de Conducta',
-    url: 'codigo-de-conducta',
+    url: 'code-of-conduct',
   },
 ];
 
