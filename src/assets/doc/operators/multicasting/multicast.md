@@ -9,7 +9,10 @@
 </a>
 </div>
 
-### Retorna un Observable que emite el resultado de invocar el selector especificado sobre los elementos emitidos por un ConnectableObservable, que comparte una sola suscripción al flujo subyacente
+<h2 class="subtitle">Retorna un Observable que emite el resultado de invocar el selector especificado sobre los elementos emitidos por un ConnectableObservable, que comparte una sola suscripción al flujo subyacente</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -27,9 +30,11 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 
 `OperatorFunction<T, R>`: Un Observable que emite el resultado de invocar el selector sobre las emisiones de un `ConnectableObservable`, que comparte una sola suscripción al flujo subyacente.
 
+</details>
+
 ## Descripción
 
-<img src="assets/operators/marble-diagrams/multicasting/multicast.png" alt="Diagrama de canicas del operador multicast">
+<img src="assets/images/marble-diagrams/multicasting/multicast.png" alt="Diagrama de canicas del operador multicast">
 
 ## Ejemplos
 
@@ -45,19 +50,31 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 
 ``` -->
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `multicast(subject: Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
 ### Parámetros
 
 <table>
-<tr>subject<td></td><td>Tipo: <code>Subject</code>.</td></tr>
+<tr><td>subject</td><td>Tipo: <code>Subject</code>.</td></tr>
 </table>
 
 ### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `multicast(subject: Subject<T>, selector: (shared: Observable<T>) => O): UnaryFunction<Observable<T>, ConnectableObservable<ObservedValueOf<O>>>`
 
@@ -70,7 +87,15 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 
 ### Retorna
 
-`UnaryFunction<Observable<T>, ConnectableObservable<ObservedValueOf<O>>> multicast(subjectFactory: (this: Observable<T>) => Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
+`UnaryFunction<Observable<T>, ConnectableObservable<ObservedValueOf<O>>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
+
+`multicast(subjectFactory: (this: Observable<T>) => Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
 ### Parámetros
 
@@ -81,6 +106,12 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 ### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `multicast(SubjectFactory: (this: Observable<T>) => Subject<T>, selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -94,6 +125,10 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 ### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
+
+</div>
+
+</details>
 
 ## Recursos adicionales
 

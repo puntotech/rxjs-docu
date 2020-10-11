@@ -9,6 +9,9 @@
 </a>
 </div>
 
+<details class="no-subtitle">
+<summary>Signatura</summary>
+
 ### Firma
 
 `publishBehavior<T>(value: T): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
@@ -22,6 +25,8 @@
 ### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
+
+</details>
 
 ## Recursos adicionales
 

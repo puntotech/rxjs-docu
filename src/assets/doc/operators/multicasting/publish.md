@@ -9,7 +9,10 @@
 </a>
 </div>
 
-### Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores
+<h2 class="subtitle"> Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -27,11 +30,13 @@ Función de selección opcional que puede utilizar la secuencia fuente multidifu
 
 `MonoTypeOperatorFunction<T> | OperatorFunction<T, R>`: Un `ConnectableObservable` que, cuando se hace una llamada a su método `connect`, hace que el Observable fuente emita valores a sus Observadores.
 
+</details>
+
 ## Descripción
 
 Convierte un Observable frío en un Observable caliente.
 
-<img src="assets/operators/marble-diagrams/multicasting/publish.png" alt="Diagrama de canicas del operador publish">
+<img src="assets/images/marble-diagrams/multicasting/publish.png" alt="Diagrama de canicas del operador publish">
 
 ## Ejemplos
 
@@ -75,7 +80,13 @@ source$
 // 'Flujo 3: 9'
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `publish(): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
@@ -86,6 +97,12 @@ No recibe ningún parámetro.
 ### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `publish(selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -99,6 +116,12 @@ No recibe ningún parámetro.
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `publish(selector: MonoTypeOperatorFunction<T>): MonoTypeOperatorFunction<T>`
 
 ### Parámetros
@@ -110,6 +133,10 @@ No recibe ningún parámetro.
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`
+
+</div>
+
+</details>
 
 ## Recursos adicionales
 

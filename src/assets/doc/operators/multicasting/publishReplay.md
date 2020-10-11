@@ -9,6 +9,9 @@
 </a>
 </div>
 
+<details class="no-subtitle">
+<summary>Signatura</summary>
+
 ### Firma
 
 `publishReplay<T, R>(bufferSize?: number, windowTime?: number, selectorOrScheduler?: SchedulerLike | OperatorFunction<T, R>, scheduler?: SchedulerLike): UnaryFunction<Observable<T>, ConnectableObservable<R>>`
@@ -29,6 +32,8 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<R>>`
+
+</details>
 
 ## Recursos adicionales
 
