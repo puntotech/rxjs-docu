@@ -67,21 +67,14 @@ key$.pipe(throttleTime(2000)).subscribe(({ code }) => console.log(code));
 import { map, throttleTime } from "rxjs/operators";
 import { interval, zip, from } from "rxjs";
 
-// El Observable pokemon$ emite un Pokémon cada segundo
-const pokemon$ = zip(
-  from([
-    "Charmander",
-    "Squirtle",
-    "Bulbasaur",
-    "Cyndaquil",
-    "Totodile",
-    "Chikorita",
-  ]),
+// El Observable fruit$ emite una fruta cada segundo
+const fruit$ = zip(
+  from(["Fresa", "Cereza", "Arándano", "Mora", "Frambuesa", "Grosella"]),
   interval(1000)
-).pipe(map(([pokemon]) => pokemon));
+).pipe(map(([fruit]) => fruit));
 
-pokemon$.pipe(throttleTime(2000)).subscribe(console.log);
-// Salida: Charmander, Cyndaquil
+fruit$.pipe(throttleTime(2000)).subscribe(console.log);
+// Salida: Fresa, Mora
 ```
 
 ### Ejemplos de la documentación oficial

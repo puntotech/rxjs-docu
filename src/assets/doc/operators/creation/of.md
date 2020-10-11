@@ -61,10 +61,10 @@ number$.subscribe((number) => console.log(number));
 ```javascript
 import { of } from "rxjs";
 
-const pokemon$ = of("Squirtle", "Charmander", "Bulbasaur");
+const framework$ = of("Angular", "React", "Vue");
 
-pokemon$.subscribe((pokemon) => console.log(pokemon));
-// Salida: Squirtle, Charmander, Bulbasaur
+framework$.subscribe(console.log);
+// Salida: Angular, React, Vue
 ```
 
 **Emitir una secuencia de arrays**

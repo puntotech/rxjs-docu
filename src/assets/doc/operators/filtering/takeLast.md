@@ -53,14 +53,14 @@ Almacena los últimos `count` valores, y los emite cuando el Observable fuente s
 import { takeLast } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
+const language$ = from([
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Scala", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$.pipe(takeLast(1)).subscribe(console.log);
-// Salida: { name: "Squirtle", type: "Water" }
+language$.pipe(takeLast(1)).subscribe(console.log);
+// Salida: { name: "Haskell", type: "Funcional" }
 ```
 
 **Si el Observable fuente emite más de count valores, se emitirán todos**

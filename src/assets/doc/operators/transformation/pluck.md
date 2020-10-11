@@ -49,14 +49,14 @@ Dada una lista de cadenas que describan la ruta de una propiedad de un objeto, o
 import { pluck } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
+const language$ = from([
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Rust", type: "Multiparadigma" },
 ]);
 
-pokemon$.pipe(pluck("name")).subscribe(console.log);
-// Salida: Charmander, Squirtle, Bulbasaur
+language$.pipe(pluck("name")).subscribe(console.log);
+// Salida: Ruby, Haskell, Rust
 ```
 
 **Obtener una propiedad anidada de un objeto**
@@ -65,16 +65,17 @@ pokemon$.pipe(pluck("name")).subscribe(console.log);
 
 ```javascript
 import { pluck } from "rxjs/operators";
-import { from } from "rxjs";
+import { of } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire", stats: { attack: 40, defense: 35 } },
-  { name: "Squirtle", type: "Water", stats: { attack: 38, defense: 40 } },
-  { name: "Bulbasaur", type: "Grass", stats: { attack: 40, defense: 40 } },
-]);
+const githubUser$ = of(
+  { name: "zaldih", stats: { repositories: 23 } },
+  { name: "NyaGarcia", stats: { repositories: 30 } },
+  { name: "caballerog", stats: { repositories: 89 } },
+  { name: "tonivj5", stats: { repositories: 51 } }
+);
 
-pokemon$.pipe(pluck("stats", "attack")).subscribe(console.log);
-// Salida: 35, 40, 40
+githubUser$.pipe(pluck("stats", "repositories")).subscribe(console.log);
+// Salida: 23, 30, 89, 51
 ```
 
 ### Ejemplo de la documentación oficial

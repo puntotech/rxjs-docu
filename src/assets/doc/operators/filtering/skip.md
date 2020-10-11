@@ -61,14 +61,14 @@ click$.pipe(skip(5)).subscribe(console.log);
 import { skip } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
+const language$ = from([
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$.pipe(skip(1)).subscribe(console.log);
-// Salida: { "Charmander", type: "Fire"}, { name: "Squirtle", type: "Water" }
+language$.pipe(skip(1)).subscribe(console.log);
+// Salida: { name: "Ruby", type: "Multiparadigma" }, { name: "Haskell", type: "Funcional" }
 ```
 
 ## Recursos adicionales
