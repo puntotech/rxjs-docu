@@ -65,6 +65,12 @@ th {
   padding: 25px;
 }
 
+.no-subtitle {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .page-heading {
   display: flex;
   justify-content: space-between;
