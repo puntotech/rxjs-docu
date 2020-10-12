@@ -84,6 +84,6 @@ const positions = clicks.pipe(map((ev) => ev.clientX));
 positions.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/map">Documentación oficial en inglés</a>

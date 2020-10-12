@@ -111,6 +111,6 @@ No recibe ningún parámetro.
 
 `MonoTypeOperatorFunction<T>`
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>

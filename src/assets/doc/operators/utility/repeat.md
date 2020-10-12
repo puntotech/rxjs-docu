@@ -135,6 +135,6 @@ example.subscribe((x) => console.log(x));
 // 2
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/repeat">Documentación oficial en inglés</a>

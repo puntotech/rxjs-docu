@@ -72,6 +72,6 @@ const result = clicks.pipe(audit((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/audit">Documentación oficial en inglés</a>

@@ -177,6 +177,6 @@ of<Person>(
 // { age: 5, name: 'Foo2' }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilKeyChanged">Documentación oficial en inglés</a>

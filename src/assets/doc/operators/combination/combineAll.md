@@ -163,6 +163,6 @@ No recibe ningún parámetro.
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/combineAll">Documentación oficial en inglés</a>

@@ -108,6 +108,6 @@ of(1, 2, 3, 4, 5, 6)
   .subscribe((x) => console.log(x)); // -> false
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/every">Documentación oficial en inglés</a>

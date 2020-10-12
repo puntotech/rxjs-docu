@@ -77,6 +77,6 @@ delayWhen(event => interval(Math.random() \* 5000)),
 delayedClicks.subscribe(x => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/delayWhen">Documentación oficial en inglés</a>

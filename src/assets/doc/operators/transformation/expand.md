@@ -116,6 +116,6 @@ const powersOfTwo = clicks.pipe(
 powersOfTwo.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/expand">Documentación oficial en inglés</a>

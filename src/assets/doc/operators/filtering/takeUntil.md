@@ -131,6 +131,6 @@ const result = source.pipe(takeUntil(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/takeUntil">Documentación oficial en inglés</a>

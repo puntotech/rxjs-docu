@@ -85,6 +85,6 @@ ghibliFilm$
 // Salida: Castle in the Sky, Grave of the Fireflies, My Neighbor Totoro, Flujo Completado, Peticiones Realizadas
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/finalize">Documentación oficial en inglés</a>

@@ -217,6 +217,6 @@ Tipo: <code>D</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/first">Documentación oficial en inglés</a>

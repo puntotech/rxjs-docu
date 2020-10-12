@@ -115,6 +115,6 @@ const clicksOnDivs = clicks.pipe(filter((ev) => ev.target.tagName === "DIV"));
 clicksOnDivs.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/filter">Documentación oficial en inglés</a>

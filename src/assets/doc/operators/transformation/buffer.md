@@ -92,6 +92,6 @@ const buffered = intervalEvents.pipe(buffer(clicks));
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/buffer">Documentación oficial en inglés</a>

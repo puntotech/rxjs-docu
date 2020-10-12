@@ -97,6 +97,6 @@ language$
 */
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/skipWhile">Documentación oficial en inglés</a>

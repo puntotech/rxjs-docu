@@ -113,6 +113,6 @@ result.subscribe((x) => console.log(x));
 // click 3 = objeto MouseEvent
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/elementAt">Documentación oficial en inglés</a>

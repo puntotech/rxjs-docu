@@ -93,6 +93,6 @@ skipLastTwo.subscribe((x) => console.log(x));
 // 1 2 3
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/skipLast">Documentación oficial en inglés</a>

@@ -176,6 +176,6 @@ Tipo: <code>number.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/mergeMap">Documentación oficial en inglés</a>

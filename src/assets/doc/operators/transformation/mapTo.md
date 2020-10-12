@@ -82,6 +82,6 @@ const greetings = clicks.pipe(mapTo("Hi"));
 greetings.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/mapTo">Documentación oficial en inglés</a>

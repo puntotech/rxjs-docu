@@ -811,6 +811,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/bindCallback">Documentación oficial en inglés</a>

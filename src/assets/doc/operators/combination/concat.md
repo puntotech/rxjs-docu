@@ -502,6 +502,6 @@ concat(timer, timer) // ¡Concatenando el mismo Observable!
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/concat">Documentación oficial en inglés</a>

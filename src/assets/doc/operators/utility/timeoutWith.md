@@ -118,6 +118,6 @@ seconds.pipe(timeoutWith(900, minutes)).subscribe(
 );
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/timeoutWith">Documentación oficial en inglés</a>

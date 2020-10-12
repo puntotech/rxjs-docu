@@ -127,6 +127,6 @@ of(5, 4, 7, 2, 8)
     .subscribe((x: Person) => console.log(x.name)); // -> 'Beer'
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/max">Documentación oficial en inglés</a>

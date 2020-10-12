@@ -87,6 +87,6 @@ seconds.pipe(timeout(900)).subscribe(
 // {value: 2, interval: 1000}
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/timeInterval">Documentación oficial en inglés</a>

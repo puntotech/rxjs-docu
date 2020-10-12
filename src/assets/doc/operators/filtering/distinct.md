@@ -129,6 +129,6 @@ of<Person>(
 // { age: 7, name: 'Bar' }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/distinct">Documentación oficial en inglés</a>

@@ -65,6 +65,6 @@ publishedInterval.subscribe();
 // No ocurre nada hasta que no se llame a la función connect() del Observable
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/refCount">Documentación oficial en inglés</a>

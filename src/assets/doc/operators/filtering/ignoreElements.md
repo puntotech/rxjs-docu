@@ -92,6 +92,6 @@ of("you", "talking", "to", "me")
 // 'the end'
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/ignoreElements">Documentación oficial en inglés</a>

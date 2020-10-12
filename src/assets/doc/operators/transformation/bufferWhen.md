@@ -85,6 +85,6 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/bufferWhen">Documentación oficial en inglés</a>

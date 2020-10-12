@@ -135,6 +135,6 @@ evens$.subscribe((x) => console.log("pares", x));
 // pares 6
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/partition">Documentación oficial en inglés</a>

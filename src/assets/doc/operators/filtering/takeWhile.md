@@ -199,6 +199,6 @@ Tipo: <code>boolean</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/takeWhile">Documentación oficial en inglés</a>

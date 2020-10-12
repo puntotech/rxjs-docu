@@ -84,6 +84,6 @@ takeFourNumbers.subscribe((x) => console.log("Next: ", x));
 // Salida: "Next: 0", "Next: 1", "Next: 2", "Next: 3"
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/interval">Documentación oficial en inglés</a>

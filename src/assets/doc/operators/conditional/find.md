@@ -113,6 +113,6 @@ const result = clicks.pipe(find((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/find">Documentación oficial en inglés</a>

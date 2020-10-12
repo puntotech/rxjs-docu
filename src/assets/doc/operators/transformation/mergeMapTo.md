@@ -95,6 +95,6 @@ const result = clicks.pipe(mergeMapTo(interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/mergeMapTo">Documentación oficial en inglés</a>

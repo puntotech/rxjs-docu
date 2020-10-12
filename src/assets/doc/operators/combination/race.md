@@ -397,6 +397,6 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a href="https://rxjs.dev/api/index/function/race">Documentación oficial en inglés</a>

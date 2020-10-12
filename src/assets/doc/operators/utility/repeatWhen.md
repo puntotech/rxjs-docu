@@ -106,6 +106,6 @@ source
   .subscribe((data) => console.log(data));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/repeatWhen">Documentación oficial en inglés</a>

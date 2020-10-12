@@ -162,6 +162,6 @@ clicksInDiv.subscribe(() => console.log("div"));
 // que la consola mostrará "document" primero, y luego "div".
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/fromEvent">Documentación oficial en inglés</a>

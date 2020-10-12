@@ -71,6 +71,6 @@ const result = clicks.pipe(auditTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/auditTime">Documentación oficial en inglés</a>

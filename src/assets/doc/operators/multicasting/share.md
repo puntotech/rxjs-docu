@@ -101,6 +101,6 @@ ghibliFilmDescription$.subscribe(console.log);
 */
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/share">Documentación oficial en inglés</a>

@@ -71,6 +71,6 @@ language$.pipe(skip(1)).subscribe(console.log);
 // Salida: { name: "Ruby", type: "Multiparadigma" }, { name: "Haskell", type: "Funcional" }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/skip">Documentación oficial en inglés</a>

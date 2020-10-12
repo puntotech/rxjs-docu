@@ -118,6 +118,6 @@ const subscribe = example.subscribe({
 // "Error!: Retried 2 times then quit!"
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/retry">Documentación oficial en inglés</a>

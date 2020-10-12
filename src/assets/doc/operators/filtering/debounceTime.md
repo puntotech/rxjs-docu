@@ -95,6 +95,6 @@ const result = clicks.pipe(debounceTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/debounceTime">Documentación oficial en inglés</a>

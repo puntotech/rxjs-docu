@@ -266,6 +266,6 @@ Tipo: <code>() => Subject</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/groupBy">Documentación oficial en inglés</a>

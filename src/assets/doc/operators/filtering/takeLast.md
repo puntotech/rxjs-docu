@@ -108,6 +108,6 @@ const lastThree = many.pipe(takeLast(3));
 lastThree.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/takeLast">Documentación oficial en inglés</a>

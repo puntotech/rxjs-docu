@@ -129,6 +129,6 @@ numbers.subscribe((x) => console.log(x));
 // 'undefined'
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/single">Documentación oficial en inglés</a>

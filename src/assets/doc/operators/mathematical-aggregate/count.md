@@ -197,6 +197,6 @@ result.subscribe((x) => console.log(x));
 // 4
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/count">Documentación oficial en inglés</a>

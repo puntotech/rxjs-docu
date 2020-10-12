@@ -23,6 +23,6 @@
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publishBehavior">Documentación oficial en inglés</a>

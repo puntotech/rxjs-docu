@@ -92,6 +92,6 @@ upperCase.subscribe(
 // TypeError: x.toUpperCase is not a function
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/dematerialize">Documentación oficial en inglés</a>

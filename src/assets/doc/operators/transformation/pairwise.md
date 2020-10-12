@@ -91,6 +91,6 @@ const distance = pairs.pipe(
 distance.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/pairwise">Documentación oficial en inglés</a>

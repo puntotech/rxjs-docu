@@ -81,6 +81,6 @@ const buffered = clicks.pipe(bufferCount(2, 1));
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/bufferCount">Documentación oficial en inglés</a>

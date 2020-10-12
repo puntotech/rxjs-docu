@@ -96,6 +96,6 @@ takeFive.subscribe((x) => console.log(x));
 // Salida: 0, 1, 2, 3, 4
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/take">Documentación oficial en inglés</a>

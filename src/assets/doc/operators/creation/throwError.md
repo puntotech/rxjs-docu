@@ -128,6 +128,6 @@ interval(1000)
 // (error) El número 2 no mola
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/throwError">Documentación oficial en inglés</a>

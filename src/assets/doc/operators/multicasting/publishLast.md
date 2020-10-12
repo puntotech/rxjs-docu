@@ -67,6 +67,6 @@ connectable.connect();
 //    "Sub. B Complete"
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publishLast">Documentación oficial en inglés</a>
