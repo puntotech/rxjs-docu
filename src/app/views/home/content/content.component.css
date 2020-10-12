@@ -26,6 +26,11 @@ img {
   width: 100%;
 }
 
+li {
+  line-height: 2em;
+  list-style: none;
+}
+
 pre {
   margin: 30px 0;
 }
