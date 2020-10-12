@@ -376,6 +376,10 @@ const TREE_DATA: SectionNode[] = [
     name: 'Código de Conducta',
     url: 'code-of-conduct',
   },
+  {
+    name: 'Equipo',
+    url: 'team',
+  },
 ];
 
 /**
