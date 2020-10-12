@@ -137,4 +137,4 @@ example.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/observeOn">Documentación oficial en inglés</a>
+- <a target="_blank" href="https://rxjs.dev/api/operators/repeat">Documentación oficial en inglés</a>
