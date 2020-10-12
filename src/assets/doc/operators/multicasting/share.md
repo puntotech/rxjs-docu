@@ -13,7 +13,7 @@
 
 💡 Se puede utilizar share para convertir un Observable frío en uno caliente
 
-💡 share es como utilizar <a href="/operators/multicasting/multicast">multicast</a> con un Sujeto y <a href="/operators/multicasting/refCount">refCount</a>
+💡 share es como utilizar <a href="/operators/multicasting/multicast"> con un Sujeto y <a href="/operators/multicasting/refCount">refCount</a>
 
 ## Firma
 
@@ -103,4 +103,4 @@ ghibliFilmDescription$.subscribe(console.log);
 
 ## Recursos adicionales -
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/share">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs.dev/api/operators/share)

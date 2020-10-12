@@ -201,4 +201,4 @@ Tipo: <code>boolean</code>.</td></tr>
 
 ## Recursos adicionales -
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/takeWhile">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/takeWhile)

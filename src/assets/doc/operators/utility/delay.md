@@ -104,4 +104,4 @@ delayedClicks.subscribe((x) => console.log(x));
 
 ## Recursos adicionales -
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/delay">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/delay)

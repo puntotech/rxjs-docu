@@ -60,4 +60,4 @@ source.pipe(switchAll()).subscribe((x) => console.log(x));
 
 ## Recursos adicionales -
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/switchAll">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs.dev/api/operators/switchAll)

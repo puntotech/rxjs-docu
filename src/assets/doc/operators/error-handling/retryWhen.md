@@ -118,4 +118,6 @@ pokemonId$
 
 ## Recursos adicionales -
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/retryWhen">Documentación oficial en inglés</a>
+- [Backoff exponencial]()
+
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/retryWhen)

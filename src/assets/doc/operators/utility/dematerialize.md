@@ -86,7 +86,7 @@ upperCase.subscribe(
   (e) => console.error(e)
 );
 
-// Salida:
+// Results in:
 // A
 // B
 // TypeError: x.toUpperCase is not a function
@@ -94,4 +94,4 @@ upperCase.subscribe(
 
 ## Recursos adicionales -
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/dematerialize">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/dematerialize)

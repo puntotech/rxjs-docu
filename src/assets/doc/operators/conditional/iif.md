@@ -136,4 +136,4 @@ observableIfYouHaveAccess.subscribe(
 
 ## Recursos adicionales -
 
-- <a target="_blank" href="https://rxjs.dev/api/index/function/iif">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/iif)
