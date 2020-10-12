@@ -91,4 +91,4 @@ result.subscribe((x) => console.log(x));
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/defaultIfEmpty)
+- <a target="_blank" href="https://rxjs.dev/api/operators/defaultIfEmpty">Documentación oficial en inglés</a>

@@ -129,4 +129,4 @@ of(5, 4, 7, 2, 8)
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/max)
+- <a target="_blank" href="https://rxjs.dev/api/operators/max">Documentación oficial en inglés</a>

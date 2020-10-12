@@ -99,4 +99,4 @@ language$
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipWhile)
+- <a target="_blank" href="https://rxjs.dev/api/operators/skipWhile">Documentación oficial en inglés</a>

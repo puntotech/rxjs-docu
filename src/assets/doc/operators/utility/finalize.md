@@ -87,4 +87,4 @@ ghibliFilm$
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/finalize)
+- <a target="_blank" href="https://rxjs.dev/api/operators/finalize">Documentación oficial en inglés</a>

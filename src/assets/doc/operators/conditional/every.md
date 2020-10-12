@@ -110,4 +110,4 @@ of(1, 2, 3, 4, 5, 6)
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/every)
+- <a target="_blank" href="https://rxjs.dev/api/operators/every">Documentación oficial en inglés</a>

@@ -219,4 +219,4 @@ Tipo: <code>D</code>.</td></tr>
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/first)
+- <a target="_blank" href="https://rxjs.dev/api/operators/first">Documentación oficial en inglés</a>

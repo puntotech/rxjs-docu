@@ -126,4 +126,4 @@ const firstOrder = higherOrder.pipe(mergeAll(2));
 firstOrder.subscribe((x) => console.log(x));
 ```
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeAll)
+- <a target="_blank" href="https://rxjs.dev/api/operators/mergeAll">Documentación oficial en inglés</a>

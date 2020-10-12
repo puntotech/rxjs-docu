@@ -95,4 +95,4 @@ skipLastTwo.subscribe((x) => console.log(x));
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipLast)
+- <a target="_blank" href="https://rxjs.dev/api/operators/skipLast">Documentación oficial en inglés</a>

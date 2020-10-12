@@ -268,4 +268,4 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/groupBy)
+- <a target="_blank" href="https://rxjs.dev/api/operators/groupBy">Documentación oficial en inglés</a>

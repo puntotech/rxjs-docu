@@ -143,4 +143,4 @@ seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
 
 ## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/timeout)
+- <a target="_blank" href="https://rxjs.dev/api/operators/timeout">Documentación oficial en inglés</a>
