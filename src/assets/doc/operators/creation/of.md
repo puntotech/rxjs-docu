@@ -132,4 +132,4 @@ of([1, 2, 3]).subscribe(
 
 ## Recursos Adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/index/function/of">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/of)

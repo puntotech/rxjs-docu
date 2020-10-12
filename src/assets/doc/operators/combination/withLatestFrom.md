@@ -364,4 +364,4 @@ result.subscribe((x) => console.log(x));
 
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/withLatestFrom">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/withLatestFrom)

@@ -87,4 +87,4 @@ buffered.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/bufferWhen">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferWhen)

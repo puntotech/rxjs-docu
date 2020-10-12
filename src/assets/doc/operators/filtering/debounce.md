@@ -37,7 +37,7 @@ Es como `debounceTime`, pero el periodo de silenciamiento de emisiones está det
 
 <img src="assets/images/marble-diagrams/filtering/debounce.png" alt="Diagrama de canicas del operador debounce">
 
-<!-- TODO Revise translation -->
+// TODO Revise translation
 
 `debounce` retrasa los valores emitidos por el Observable fuente, eliminando las emisiones almacenadas pendientes de ser emitidas si el Observable fuente emite algún valor. Este operador almacena el valor más reciente emitido por el Observable fuente, y genera un Observable de duración mediante una llamada a la función `durationSelector`. Este valor se emite una vez que el Observable de duración emite un valor o se completa, y si el Observable fuente no ha emitido ningún valor desde la creación del Observable de duración. Si el Observable fuente emite un valor antes de que el Observable de duración emita o se complete, el valor almacenado será eliminado, y nunca se emitirá en el Observable resultante.
 
@@ -98,4 +98,6 @@ result.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/debounce">Documentación oficial en inglés</a>
+- [Type-Ahead]()
+
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/debounce)

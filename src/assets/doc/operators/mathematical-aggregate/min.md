@@ -129,4 +129,4 @@ of(5, 4, 7, 2, 8)
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/min">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/min)

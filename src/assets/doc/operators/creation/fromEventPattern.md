@@ -118,4 +118,4 @@ Usar `fromEventPattern` con función de proyección
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/index/function/fromEventPattern">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/fromEventPattern)

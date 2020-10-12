@@ -113,4 +113,4 @@ No recibe ningún parámetro.
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs.dev/api/operators/publish)

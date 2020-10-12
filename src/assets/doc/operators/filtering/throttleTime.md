@@ -118,4 +118,4 @@ Si se habilita el parámetro `leading` en este ejemplo, la salida sería el prim
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/throttleTime">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/throttleTime)

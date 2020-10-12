@@ -89,4 +89,4 @@ firstOrder.subscribe((x) => console.log(x));
 // Un click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
 ```
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/concatAll">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/concatAll)

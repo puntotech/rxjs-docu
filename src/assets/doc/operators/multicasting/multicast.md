@@ -97,4 +97,4 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/multicast">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs.dev/api/operators/multicast)

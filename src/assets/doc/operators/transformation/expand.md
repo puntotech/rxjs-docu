@@ -118,4 +118,4 @@ powersOfTwo.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/expand">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/expand)

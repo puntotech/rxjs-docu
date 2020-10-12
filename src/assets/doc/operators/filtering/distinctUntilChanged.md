@@ -131,4 +131,4 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
 
 ## Recursos adicionales
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilChanged">Documentación oficial en inglés</a>
+- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinctUntilChanged)
