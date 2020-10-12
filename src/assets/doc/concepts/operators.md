@@ -87,16 +87,16 @@ const fileObservable = urlObservable.pipe(
 
 El operador [concatAll()](/operators/combination/concatAll) operator se subscribe cada Observable 'interno' producido por el Observable 'externo', y copia todos los valores que emite hasta que el Observable interno se completa. Entonces, se suscribe al siguiente Observable interno y repite el proceso. De esta manera, se concatenan todos los valores emitidos por todos los Observables internos. Otros operadores de combinación útiles son:
 
-- <a href="/operators/combination/mergeAll">mergeAll</a> — se suscribe a cada Observable interno en cuanto lo recibe, emitiendo cada uno de sus valores en cuanto lo recibe.
-- <a href="/operators/combination/switchAll">switchAll</a> — se suscribe al primer Observable interno en cuanto lo recibe y emite cada uno de sus valores en cuanto lo recibe, pero en cuanto recibe el siguiente Observable interno, cancela la suscripción al Observable interno anterior y se suscribe al nuevo.
-- <a href="/operators/combination/exhaust">exhaust</a> — se suscribe al primer Observable interno en cuanto lo recibe, y emite cada uno de sus valores en cuanto lo recibe, descartando todos los Observables internos nuevos que recibe hasta que el primer Observable interno se haya completado.
+- [mergeAll()](/operators/combination/mergeAll) — se suscribe a cada Observable interno en cuanto lo recibe, emitiendo cada uno de sus valores en cuanto lo recibe.
+- [switchAll()](/operators/combination/switchAll) — se suscribe al primer Observable interno en cuanto lo recibe y emite cada uno de sus valores en cuanto lo recibe, pero en cuanto recibe el siguiente Observable interno, cancela la suscripción al Observable interno anterior y se suscribe al nuevo.
+- [exhaust()](/operators/combination/exhaust) — se suscribe al primer Observable interno en cuanto lo recibe, y emite cada uno de sus valores en cuanto lo recibe, descartando todos los Observables internos nuevos que recibe hasta que el primer Observable interno se haya completado.
 
 Al igual que hacen muchas bibliotecas de array, combinando `map()` y `flat()` (o `flatten()`) en un solo `flatMap()`, en RxJS también existen los equivalentes de proyección de todos los operadores de combinación:
 
-- <a href="/operators/combination/concatMap">concatMap()</a>
-- <a href="/operators/combination/mergeMap">mergeMap()</a>
-- <a href="/operators/combination/switchMap">switchMap()</a>
-- <a href="/operators/combination/exhaustMap">exhaustMap()</a>
+- [concatMap()](/operators/combination/concatMap)
+- [mergeMap()](/operators/combination/mergeMap)
+- [switchMap()](/operators/combination/switchMap)
+- [exhaustMap()](/operators/combination/exhaustMap)
 
 ## Diagramas de canicas
 
