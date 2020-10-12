@@ -92,6 +92,6 @@ const buffered = intervalEvents.pipe(buffer(clicks));
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/buffer)

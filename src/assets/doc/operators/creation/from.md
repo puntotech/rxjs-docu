@@ -185,6 +185,6 @@ console.log("Fin");
 // 30
 ```
 
-## Recursos Adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/from)

@@ -113,6 +113,6 @@ const result = clicks.pipe(find((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/find)

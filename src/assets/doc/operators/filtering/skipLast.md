@@ -93,6 +93,6 @@ skipLastTwo.subscribe((x) => console.log(x));
 // 1 2 3
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipLast)

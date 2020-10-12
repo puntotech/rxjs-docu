@@ -197,6 +197,6 @@ result.subscribe((x) => console.log(x));
 // 4
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/count)

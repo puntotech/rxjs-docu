@@ -134,6 +134,6 @@ observableIfYouHaveAccess.subscribe(
 // "The end"
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/iif)

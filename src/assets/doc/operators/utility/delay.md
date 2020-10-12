@@ -102,6 +102,6 @@ const delayedClicks = clicks.pipe(delay(date)); // click emitted only after that
 delayedClicks.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/delay)

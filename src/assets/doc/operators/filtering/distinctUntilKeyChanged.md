@@ -177,6 +177,6 @@ of<Person>(
 // { age: 5, name: 'Foo2' }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinctUntilKeyChanged)

@@ -129,6 +129,6 @@ of<Person>(
 // { age: 7, name: 'Bar' }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinct)

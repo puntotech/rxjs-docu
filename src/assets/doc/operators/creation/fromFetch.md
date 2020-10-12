@@ -121,6 +121,6 @@ data$.subscribe({
 });
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/fetch/fromFetch)

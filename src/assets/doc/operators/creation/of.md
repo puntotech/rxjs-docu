@@ -130,6 +130,6 @@ of([1, 2, 3]).subscribe(
 // 'Fin'
 ```
 
-## Recursos Adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/of)

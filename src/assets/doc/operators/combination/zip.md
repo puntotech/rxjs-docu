@@ -460,6 +460,6 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/zip)

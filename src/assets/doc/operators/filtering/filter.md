@@ -115,6 +115,6 @@ const clicksOnDivs = clicks.pipe(filter((ev) => ev.target.tagName === "DIV"));
 clicksOnDivs.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/filter)

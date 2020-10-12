@@ -116,6 +116,6 @@ Usar `fromEventPattern` con función de proyección
     // "EVENT_TYPE --- EVENT_MESSAGE"
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/fromEventPattern)

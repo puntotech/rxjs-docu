@@ -198,6 +198,6 @@ of(1, 2, 3, 4, 5)
 // 1, 2, 3, error en la fuente. Detalles: four!
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/catchError)

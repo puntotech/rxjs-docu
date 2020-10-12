@@ -116,6 +116,6 @@ doubleClick.subscribe((throttleValue: Event) => {
 
 Si se habilita el parámetro `leading` en este ejemplo, la salida sería el primer click y el doble click, pero se restringiría cualquier click adicional en un periodo de 400ms.
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/throttleTime)

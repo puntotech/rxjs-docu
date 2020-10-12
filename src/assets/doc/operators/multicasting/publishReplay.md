@@ -30,6 +30,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `UnaryFunction<Observable<T>, ConnectableObservable<R>>`
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/operators/publishReplay)

@@ -105,6 +105,6 @@ clicksOrInterval.subscribe((x) => console.log(x));
 // Si el resultado de Math.random() es mayor que 0.5 se suscribirá al Observable de clicks. Si el resultado es menor que 0.5 se suscribirá al Observable intervalo
 ```
 
-## Recursos Adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/defer)

@@ -167,6 +167,6 @@ clicksInDiv.subscribe(() => console.log("div"));
 // que la consola mostrará "document" primero, y luego "div".
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/fromEvent);

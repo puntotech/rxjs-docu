@@ -95,6 +95,6 @@ merge(a, b).subscribe(console.log);
 
 La salida será 5, 6, 7, 8, 9, 1, 2, 3, 4. Esto es debido a que el Observable b emite sus valores de forma síncrona y directa, pero las emisiones del Observable a se planifican en el bucle de eventos, dado que se está utilizando el asyncScheduler.
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/subscribeOn)

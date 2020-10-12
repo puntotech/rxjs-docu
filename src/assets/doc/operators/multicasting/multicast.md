@@ -95,6 +95,6 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/operators/multicast)

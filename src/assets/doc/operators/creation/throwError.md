@@ -128,6 +128,6 @@ interval(1000)
 // (error) El número 2 no mola
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/throwError)

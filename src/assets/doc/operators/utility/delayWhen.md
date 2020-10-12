@@ -77,6 +77,6 @@ delayWhen(event => interval(Math.random() \* 5000)),
 delayedClicks.subscribe(x => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/delayWhen)

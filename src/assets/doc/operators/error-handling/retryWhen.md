@@ -116,7 +116,7 @@ pokemonId$
 // Salida: 'Reintentado 2 veces, con un retraso de 3000ms, pero ha ocurrido un error: ajax error 404', 'charmeleon', 'charizard', '¡Completado!'
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Backoff exponencial]()
 

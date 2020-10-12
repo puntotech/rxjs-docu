@@ -108,6 +108,6 @@ const lastThree = many.pipe(takeLast(3));
 lastThree.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/takeLast)

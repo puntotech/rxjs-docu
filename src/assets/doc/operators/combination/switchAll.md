@@ -58,6 +58,6 @@ source.pipe(switchAll()).subscribe((x) => console.log(x));
 // Salida: (click) 1, 2, 3, 4... (click) 1, 2, 3... (click) ...
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/operators/switchAll)

@@ -178,6 +178,6 @@ const obs$ = ajax(`https://api.github.com/404`).pipe(
 );
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/ajax/ajax)

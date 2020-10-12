@@ -108,6 +108,6 @@ of(1, 2, 3, 4, 5, 6)
   .subscribe((x) => console.log(x)); // -> false
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/every)

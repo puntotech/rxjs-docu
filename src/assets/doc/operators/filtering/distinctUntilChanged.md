@@ -129,6 +129,6 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
     // { age: 5, name: 'Foo' }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinctUntilChanged)

@@ -176,6 +176,6 @@ Tipo: <code>number.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeMap)

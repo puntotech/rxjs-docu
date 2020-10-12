@@ -96,7 +96,7 @@ const result = clicks.pipe(debounce(() => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Type-Ahead]()
 

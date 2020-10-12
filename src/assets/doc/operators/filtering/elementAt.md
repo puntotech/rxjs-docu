@@ -113,6 +113,6 @@ result.subscribe((x) => console.log(x));
 // click 3 = objeto MouseEvent
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/elementAt)

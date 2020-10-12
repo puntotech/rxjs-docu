@@ -135,6 +135,6 @@ evens$.subscribe((x) => console.log("pares", x));
 // pares 6
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/partition)

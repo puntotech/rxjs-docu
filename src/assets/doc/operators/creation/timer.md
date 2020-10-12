@@ -96,6 +96,6 @@ const numbers = timer(5000);
 numbers.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/timer)

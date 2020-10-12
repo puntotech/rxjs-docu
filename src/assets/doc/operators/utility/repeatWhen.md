@@ -106,6 +106,6 @@ source
   .subscribe((data) => console.log(data));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/repeatWhen)

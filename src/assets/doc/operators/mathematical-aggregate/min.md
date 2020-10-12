@@ -127,6 +127,6 @@ of(5, 4, 7, 2, 8)
     .subscribe((x: Person) => console.log(x.name)); // -> 'Bar'
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/min)

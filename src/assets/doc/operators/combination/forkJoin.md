@@ -488,6 +488,6 @@ observable.subscribe({
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
 - [Documentación oficial en inglés](https://rxjs.dev/api/index/function/forkJoin)
