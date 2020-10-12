@@ -78,7 +78,7 @@ key$
 // Salida: KeyP, KeyC, KeyM (Pulsar KeyX), Completado
 ```
 
-**Emitir objetos Pokémon mientras sean de tipo Grass**
+**Emitir lenguajes mientras sean de tipo Multiparadigma**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-takewhile-3?file=index.ts">StackBlitz</a>
 
@@ -86,16 +86,18 @@ key$
 import { from } from "rxjs";
 import { takeWhile } from "rxjs/operators";
 
-const pokemon$ = from([
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Chikorita", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Treecko", type: "Grass" },
-  { name: "Squirtle", type: "Water" },
+const language$ = from([
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Rust", type: "Multiparadigma" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Scala", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$.pipe(takeWhile(({ type }) => type === "Grass")).subscribe(console.log);
-// Salida: { name: "Bulbasaur", type: "Grass" }, { name: "Chikorita", type: "Grass" }
+language$
+  .pipe(takeWhile(({ type }) => type === "Multiparadigma"))
+  .subscribe(console.log);
+// Salida: { name: "Ruby", type: "Multiparadigma" }, { name: "Rust", type: "Multiparadigma" }
 ```
 
 **Si se proporciona el valor true como segundo argumento (parámetro inclusive), el primer elemento que no cumpla la condición también se emite**

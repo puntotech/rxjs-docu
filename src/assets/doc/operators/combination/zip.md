@@ -61,13 +61,12 @@ zip(hello$, world$).subscribe(console.log);
 import { from, interval, zip } from "rxjs";
 import { map } from "rxjs/operators";
 
-const pokemon$ = zip(
-  from(["Charmander", "Squirtle", "Bulbasaur"]),
-  interval(1000)
-).pipe(map(([pokemon]) => pokemon));
+const framework$ = zip(from(["Angular", "React", "Vue"]), interval(1000)).pipe(
+  map(([framework]) => framework)
+);
 
-pokemon$.subscribe(console.log);
-// Salida: (1s) Charmander (1s) Squirtle (1s) Bulbasaur
+framework$.subscribe(console.log);
+// Salida: (1s) Angular (1s) React (1s) Vue
 ```
 
 ### Ejemplo de la documentación oficial

@@ -59,7 +59,7 @@ key$.subscribe(console.log);
 // Salida: (Pulsar tecla y) (Pulsar tecla x) 'KeyX'
 ```
 
-**Emitir el objeto Pokémon si su propiedad `name` es distinta a la del objeto anterior**
+**Emitir el objeto lenguaje si su propiedad name es distinta a la del objeto anterior**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-2?file=index.ts">StackBlitz</a>
 
@@ -67,17 +67,24 @@ key$.subscribe(console.log);
 import { distinctUntilKeyChanged } from "rxjs/operators";
 import { of } from "rxjs";
 
-const pokemon$ = of(
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Charmander", type: "Fire" },
-  { name: "squirtle", type: "Water" }
+const language$ = of(
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" }
 );
 
-pokemon$.pipe(distinctUntilKeyChanged("name")).subscribe(console.log);
-// Salida: { name: "Squirtle", type: "Water" } { name: "Bulbasaur", type: "Grass" } { name: "Charmander", type: "Fire" }
+language$.pipe(distinctUntilKeyChanged("name")).subscribe(console.log);
+/* Salida:
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" }
+*/
 ```
 
 **Utilizar una función de comparación para ignorar las diferencias de mayúsculas/minúsculas**

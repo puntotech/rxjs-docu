@@ -75,16 +75,16 @@ fruit$.subscribe((fruit) => console.log(fruit));
 ```javascript
 import { from } from "rxjs";
 
-const pokemon$ = from(
+const language$ = from(
   new Map([
-    ["Squirtle", "Water"],
-    ["Charmander", "Fire"],
-    ["Bulbasur", "Grass"],
+    ["Java", "Orientado a objetos"],
+    ["Ruby", "Multiparadigma"],
+    ["Haskell", "Funcional"],
   ])
 );
 
-pokemon$.subscribe(console.log);
-// Salida: ["Squirtle", "Water"], ["Charmander", "Fire"], ["Bulbasur", "Grass"]
+language$.subscribe(console.log);
+// Salida: ["Java", "Orientado a objetos"], ["Ruby", "Multiparadigma"], ["Haskell", "Funcional"]
 ```
 
 **Crear un Observable a partir de una promesa**
