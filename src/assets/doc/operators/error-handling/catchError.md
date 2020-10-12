@@ -35,7 +35,7 @@
 
 `catchError` captura errores en el Observable fuente, manejándolos de dos maneras posibles: bien devolviendo un Observable nuevo o bien lanzando un nuevo error.
 
-<img src="assets/images/marble-diagrams/error-handling/catchError.png" alt="Diagrama de canicas del operador catch">
+<img src="assets/images/marble-diagrams/error-handling/catchError.png" alt="Diagrama de canicas del operador catchError">
 
 ## Ejemplos
 
