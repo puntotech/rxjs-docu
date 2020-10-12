@@ -25,4 +25,4 @@
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/operators/publishBehavior)
+- <a target="_blank" href="https://rxjs.dev/api/operators/publishBehavior">Documentación oficial en inglés</a>

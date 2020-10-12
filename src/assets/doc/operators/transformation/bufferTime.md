@@ -151,4 +151,4 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferTime)
+- <a target="_blank" href="https://rxjs.dev/api/operators/bufferTime">Documentación oficial en inglés</a>

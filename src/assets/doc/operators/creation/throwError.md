@@ -130,4 +130,4 @@ interval(1000)
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/throwError)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/throwError">Documentación oficial en inglés</a>

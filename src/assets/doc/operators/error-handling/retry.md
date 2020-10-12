@@ -120,4 +120,4 @@ const subscribe = example.subscribe({
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/operators/retry)
+- <a target="_blank" href="https://rxjs.dev/api/operators/retry">Documentación oficial en inglés</a>

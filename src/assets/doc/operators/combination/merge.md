@@ -719,4 +719,4 @@ Tipo: <code>number</code>.</td></tr>
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/merge)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/merge">Documentación oficial en inglés</a>

@@ -490,4 +490,4 @@ observable.subscribe({
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/forkJoin)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/forkJoin">Documentación oficial en inglés</a>

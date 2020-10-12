@@ -94,4 +94,4 @@ of("you", "talking", "to", "me")
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/ignoreElements)
+- <a target="_blank" href="https://rxjs.dev/api/operators/ignoreElements">Documentación oficial en inglés</a>

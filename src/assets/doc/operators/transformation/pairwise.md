@@ -93,4 +93,4 @@ distance.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/pairwise)
+- <a target="_blank" href="https://rxjs.dev/api/operators/pairwise">Documentación oficial en inglés</a>

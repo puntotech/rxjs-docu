@@ -86,4 +86,4 @@ takeFourNumbers.subscribe((x) => console.log("Next: ", x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/interval)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/interval">Documentación oficial en inglés</a>

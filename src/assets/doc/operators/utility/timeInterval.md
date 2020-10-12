@@ -89,4 +89,4 @@ seconds.pipe(timeout(900)).subscribe(
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/timeInterval)
+- <a target="_blank" href="https://rxjs.dev/api/operators/timeInterval">Documentación oficial en inglés</a>

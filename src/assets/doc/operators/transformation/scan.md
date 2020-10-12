@@ -175,4 +175,4 @@ Tipo: <code>T</code>.</td></tr>
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/scan)
+- <a target="_blank" href="https://rxjs.dev/api/operators/scan">Documentación oficial en inglés</a>

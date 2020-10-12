@@ -165,4 +165,4 @@ result.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/concatMapTo)
+- <a target="_blank" href="https://rxjs.dev/api/operators/concatMapTo">Documentación oficial en inglés</a>

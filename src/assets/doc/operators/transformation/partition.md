@@ -137,4 +137,4 @@ evens$.subscribe((x) => console.log("pares", x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/partition)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/partition">Documentación oficial en inglés</a>

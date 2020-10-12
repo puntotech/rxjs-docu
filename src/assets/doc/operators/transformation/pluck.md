@@ -241,4 +241,4 @@ tagNames.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/pluck)
+- <a target="_blank" href="https://rxjs.dev/api/operators/pluck">Documentación oficial en inglés</a>

@@ -33,7 +33,7 @@ No recibe ningún parámetro.
 
 Indica si un Observable emite algún valor o no.
 
-<img src="" alt="Diagrama de canicas del operador isEmpty">
+<img src="assets/images/marble-diagrams/conditional-boolean/isEmpty.png" alt="Diagrama de canicas del operador isEmpty">
 
 `isEmpty` transforma un Observable que emite valores en un Observable que emite un solo valor booleano representando si el Observable fuente emite o no valores. En cuanto el Observable fuente emita un valor, `isEmpty` emitirá _false_ y se completará. Si el Observable fuente se completa sin haber emitido ningún valor, `isEmpty` emitirá _true_ y se completará.
 
@@ -95,4 +95,4 @@ anotherEmpty$.pipe(isEmpty()).subscribe(console.log);
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/isEmpty)
+- <a target="_blank" href="https://rxjs.dev/api/operators/isEmpty">Documentación oficial en inglés</a>

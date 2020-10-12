@@ -69,4 +69,4 @@ connectable.connect();
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/operators/publishLast)
+- <a target="_blank" href="https://rxjs.dev/api/operators/publishLast">Documentación oficial en inglés</a>

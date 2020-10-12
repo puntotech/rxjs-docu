@@ -94,4 +94,4 @@ result.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/sampleTime)
+- <a target=" _blank" href="https://rxjs.dev/api/operators/sampleTime">Documentación oficial en inglés</a>

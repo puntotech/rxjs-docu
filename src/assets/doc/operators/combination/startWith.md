@@ -394,4 +394,4 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 </div>
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/startWith)
+- <a target="_blank" href="https://rxjs.dev/api/operators/startWith">Documentación oficial en inglés</a>

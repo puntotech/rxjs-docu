@@ -98,4 +98,4 @@ takeFive.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/take)
+- <a target="_blank" href="https://rxjs.dev/api/operators/take">Documentación oficial en inglés</a>

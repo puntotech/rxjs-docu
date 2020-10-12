@@ -399,4 +399,4 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/race)
+- <a href="https://rxjs.dev/api/index/function/race">Documentación oficial en inglés</a>

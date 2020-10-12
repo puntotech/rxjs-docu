@@ -148,4 +148,4 @@ result.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/exhaustMap)
+- <a target="_blank" href="https://rxjs.dev/api/operators/exhaustMap">Documentación oficial en inglés</a>

@@ -83,4 +83,4 @@ buffered.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferCount)
+- <a target="_blank" href="https://rxjs.dev/api/operators/bufferCount">Documentación oficial en inglés</a>

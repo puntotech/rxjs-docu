@@ -97,4 +97,4 @@ La salida será 5, 6, 7, 8, 9, 1, 2, 3, 4. Esto es debido a que el Observable b 
 
 ## Recursos adicionales
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/subscribeOn)
+- <a target="_blank" href="https://rxjs.dev/api/operators/subscribeOn">Documentación oficial en inglés</a>
