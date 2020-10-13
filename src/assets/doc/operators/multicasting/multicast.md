@@ -29,7 +29,7 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 
 ## Descripción
 
-<img src="assets/operators/marble-diagrams/multicasting/multicast.png" alt="Diagrama de canicas del operador multicast">
+<img src="assets/images/marble-diagrams/multicasting/multicast.png" alt="Diagrama de canicas del operador multicast">
 
 ## Ejemplos
 

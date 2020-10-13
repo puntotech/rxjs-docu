@@ -25,7 +25,7 @@ No recibe ningún parámetro.
 
 ## Descripción
 
-<img src="assets/operators/marble-diagrams/multicasting/publishLast.png" alt="Diagrama de canicas del operador publishLast">
+<img src="assets/images/marble-diagrams/multicasting/publishLast.png" alt="Diagrama de canicas del operador publishLast">
 
 Es similar a <a href="/operators/multicasting/publish">publish</a>, pero espera a que el Observable fuente se complete, para almacenar su último valor emitido. Al igual que <a href="/operators/multicasting/publishReplay">publishReplay</a> y <a href="/operators/multicasting/publishBehavior">publishBehavior</a>, almacena este último valor emitido aunque no tenga ningún suscriptor. Si llega un suscriptor nuevo, este recibirá el valor almacenado y se completará.
 

@@ -31,7 +31,7 @@ Función de selección opcional que puede utilizar la secuencia fuente multidifu
 
 Convierte un Observable frío en un Observable caliente.
 
-<img src="assets/operators/marble-diagrams/multicasting/publish.png" alt="Diagrama de canicas del operador publish">
+<img src="assets/images/marble-diagrams/multicasting/publish.png" alt="Diagrama de canicas del operador publish">
 
 ## Ejemplos
 
