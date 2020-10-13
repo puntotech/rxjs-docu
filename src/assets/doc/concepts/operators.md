@@ -108,7 +108,7 @@ En un diagrama de canicas, el tiempo fluye hacia la derecha.
 
 A continuación se puede ver la anatomía de un diagrama de canicas:
 
-<img src="assets/images/marble-diagram-anatomy.svg" alt="Anatomía de un diagrama de canicas">
+<img src="assets/images/marble-diagram-anatomy.png" alt="Anatomía de un diagrama de canicas">
 
 En esta documentación se utilizan los diagramas de canicas para explicar el funcionamiento de los operadores. También son muy útiles en otros contextos, como por ejemplo en una pizarra o incluso a la hora de hacer tests unitarios (en forma de diagramas ASCII.)
 
