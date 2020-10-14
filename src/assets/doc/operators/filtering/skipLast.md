@@ -67,14 +67,14 @@ number$.pipe(skipLast(5)).subscribe(console.log);
 import { skipLast } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
+const language$ = from([
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$.pipe(skipLast(1)).subscribe(console.log);
-// Salida: { name: "Bulbasaur", type: "Grass" }, { name: "Charmander", type: "Fire" }
+language$.pipe(skip(1)).subscribe(console.log);
+// Salida: { name: "Ruby", type: "Multiparadigma" }, { name: "Haskell", type: "Funcional" }
 ```
 
 ### Ejemplo de la documentación oficial
@@ -93,6 +93,6 @@ skipLastTwo.subscribe((x) => console.log(x));
 // 1 2 3
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipLast)
+- <a target="_blank" href="https://rxjs.dev/api/operators/skipLast">Documentación oficial en inglés</a>

@@ -61,10 +61,10 @@ number$.subscribe((number) => console.log(number));
 ```javascript
 import { of } from "rxjs";
 
-const pokemon$ = of("Squirtle", "Charmander", "Bulbasaur");
+const framework$ = of("Angular", "React", "Vue");
 
-pokemon$.subscribe((pokemon) => console.log(pokemon));
-// Salida: Squirtle, Charmander, Bulbasaur
+framework$.subscribe(console.log);
+// Salida: Angular, React, Vue
 ```
 
 **Emitir una secuencia de arrays**
@@ -130,6 +130,6 @@ of([1, 2, 3]).subscribe(
 // 'Fin'
 ```
 
-## Recursos Adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/of)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/of">Documentación oficial en inglés</a>

@@ -61,13 +61,12 @@ zip(hello$, world$).subscribe(console.log);
 import { from, interval, zip } from "rxjs";
 import { map } from "rxjs/operators";
 
-const pokemon$ = zip(
-  from(["Charmander", "Squirtle", "Bulbasaur"]),
-  interval(1000)
-).pipe(map(([pokemon]) => pokemon));
+const framework$ = zip(from(["Angular", "React", "Vue"]), interval(1000)).pipe(
+  map(([framework]) => framework)
+);
 
-pokemon$.subscribe(console.log);
-// Salida: (1s) Charmander (1s) Squirtle (1s) Bulbasaur
+framework$.subscribe(console.log);
+// Salida: (1s) Angular (1s) React (1s) Vue
 ```
 
 ### Ejemplo de la documentación oficial
@@ -461,6 +460,6 @@ zip(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<[ObservedValueOf<O1>, Ob
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/zip)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/zip">Documentación oficial en inglés</a>

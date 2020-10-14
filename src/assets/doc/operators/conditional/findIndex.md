@@ -43,7 +43,7 @@ findIndex searches for the first item in the source Observable that matches the 
 
 ## Ejemplos
 
-**Emite el índice del primer Pokémon de tipo fuego**
+**Emitir el índice del primer lenguaje de tipo Multiparadigma**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-findindex-1?file=index.ts">StackBlitz</a>
 
@@ -51,14 +51,16 @@ findIndex searches for the first item in the source Observable that matches the 
 import { findIndex } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Squirtle", type: "Water" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Cyndaquil", type: "Fire" },
+const language$ = from([
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Rust", type: "Multiparadigma" },
 ]);
 
-pokemon$.pipe(findIndex(({ type }) => type === "Fire")).subscribe(console.log);
+language$
+  .pipe(findIndex(({ type }) => type === "Multiparadigma"))
+  .subscribe(console.log);
 // Salida: 1
 ```
 
@@ -94,6 +96,6 @@ const result = clicks.pipe(findIndex((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/findIndex)
+- <a target="_blank" href="https://rxjs.dev/api/operators/findIndex">Documentación oficial en inglés</a>

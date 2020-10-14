@@ -84,6 +84,6 @@ const result = higherOrder.pipe(exhaust());
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/exhaust)
+- <a target="_blank" href="https://rxjs.dev/api/operators/exhaust">Documentación oficial en inglés</a>

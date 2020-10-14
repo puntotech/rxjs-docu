@@ -185,6 +185,6 @@ Genera una secuencia observable ejecutando un bucle impulsado por el estado para
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/generate)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/generate">Documentación oficial en inglés</a>

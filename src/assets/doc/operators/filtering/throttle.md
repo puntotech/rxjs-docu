@@ -90,6 +90,6 @@ const result = clicks.pipe(throttle((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/throttle)
+- <a target="_blank" href="https://rxjs.dev/api/operators/throttle">Documentación oficial en inglés</a>

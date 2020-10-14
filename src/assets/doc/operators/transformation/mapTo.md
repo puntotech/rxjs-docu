@@ -82,6 +82,6 @@ const greetings = clicks.pipe(mapTo("Hi"));
 greetings.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mapTo);
+- <a target="_blank" href="https://rxjs.dev/api/operators/mapTo">Documentación oficial en inglés</a>

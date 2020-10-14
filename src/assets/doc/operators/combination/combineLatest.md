@@ -913,7 +913,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/combineLatest)
-- [Código fuente](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/combineLatest.ts)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/combineLatest">Documentación oficial en inglés</a>

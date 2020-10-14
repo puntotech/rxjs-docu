@@ -83,6 +83,6 @@ const numbers = range(1, 10);
 numbers.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/range)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/range">Documentación oficial en inglés</a>

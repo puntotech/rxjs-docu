@@ -94,6 +94,6 @@ const emitAfterClick = intervalObservable.pipe(skipUntil(click));
 const subscribe = emitAfterClick.subscribe((value) => console.log(value));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipUntil)
+- <a target="_blank" href="https://rxjs.dev/api/operators/skipUntil">Documentación oficial en inglés</a>

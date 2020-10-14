@@ -67,21 +67,14 @@ key$.pipe(throttleTime(2000)).subscribe(({ code }) => console.log(code));
 import { map, throttleTime } from "rxjs/operators";
 import { interval, zip, from } from "rxjs";
 
-// El Observable pokemon$ emite un Pokémon cada segundo
-const pokemon$ = zip(
-  from([
-    "Charmander",
-    "Squirtle",
-    "Bulbasaur",
-    "Cyndaquil",
-    "Totodile",
-    "Chikorita",
-  ]),
+// El Observable fruit$ emite una fruta cada segundo
+const fruit$ = zip(
+  from(["Fresa", "Cereza", "Arándano", "Mora", "Frambuesa", "Grosella"]),
   interval(1000)
-).pipe(map(([pokemon]) => pokemon));
+).pipe(map(([fruit]) => fruit));
 
-pokemon$.pipe(throttleTime(2000)).subscribe(console.log);
-// Salida: Charmander, Cyndaquil
+fruit$.pipe(throttleTime(2000)).subscribe(console.log);
+// Salida: Fresa, Mora
 ```
 
 ### Ejemplos de la documentación oficial
@@ -123,6 +116,6 @@ doubleClick.subscribe((throttleValue: Event) => {
 
 Si se habilita el parámetro `leading` en este ejemplo, la salida sería el primer click y el doble click, pero se restringiría cualquier click adicional en un periodo de 400ms.
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/throttleTime)
+- <a target="_blank" href="https://rxjs.dev/api/operators/throttleTime">Documentación oficial en inglés</a>

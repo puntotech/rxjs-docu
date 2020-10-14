@@ -44,7 +44,7 @@ Es como `filter`, pero retorna dos Observables: uno como el Observable resultant
 
 ## Ejemplos
 
-**Dividir una serie de Pokémon en dos Observables, uno con los de tipo Agua y otro con los restantes**
+**Dividir una serie de pogramadores en dos Observables, uno con los que sean de Frontend y otro con los restantes**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-partition-1?file=index.ts">StackBlitz</a>
 
@@ -58,7 +58,6 @@ const programmer$ = from([
   { name: "Carlos", type: "Full stack" },
 ]);
 
-// Dividir una serie de Pokémon en dos Observables, uno con los de tipo Agua y otro con los restantes
 const [frontendProgrammer$, miscellaneousProgrammer$] = partition(
   programmer$,
   ({ type }) => type === "Frontend"
@@ -136,6 +135,6 @@ evens$.subscribe((x) => console.log("pares", x));
 // pares 6
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/partition)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/partition">Documentación oficial en inglés</a>

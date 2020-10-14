@@ -87,6 +87,6 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/windowToggle)
+- <a target="_blank" href="https://rxjs.dev/api/operators/windowToggle">Documentación oficial en inglés</a>

@@ -55,7 +55,9 @@ key$.pipe(find(({ code }) => code === "KeyX")).subscribe(console.log);
 // Salida: KeyboardEvent {}
 ```
 
-**Emitir el primer Pokémon de tipo _Water_**
+**Emitir el primer lenguaje de tipo Multiparadigma**
+
+Aunque haya más de un lenguaje de tipo multiparadigma, find emite únicamente el primero que encuentra.
 
 <a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-find-2?file=index.ts">StackBlitz</a>
 
@@ -63,15 +65,17 @@ key$.pipe(find(({ code }) => code === "KeyX")).subscribe(console.log);
 import { find } from "rxjs/operators";
 import { from } from "rxjs";
 
-// Aunque haya más de un Pokémon de tipo agua, find emite únicamente el primero que encuentra
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Gyarados", type: "Water" },
+const language$ = from([
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Rust", type: "Multiparadigma" },
 ]);
 
-pokemon$.pipe(find(({ type }) => type === "Water")).subscribe(console.log);
-// Salida: { name: "Squirtle", type: "Water" }
+language$
+  .pipe(find(({ type }) => type === "Multiparadigma"))
+  .subscribe(console.log);
+// Salida: { name: "Ruby", type: "Multiparadigma" }
 ```
 
 **Si ningún elemento cumple la condición, se emite undefined**
@@ -109,6 +113,6 @@ const result = clicks.pipe(find((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/find)
+- <a target="_blank" href="https://rxjs.dev/api/operators/find">Documentación oficial en inglés</a>

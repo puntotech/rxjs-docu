@@ -217,6 +217,6 @@ result.subscribe((x) => console.log(x));
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/switchMap)
+- <a target="_blank" href="https://rxjs.dev/api/operators/switchMap">Documentación oficial en inglés</a>

@@ -93,6 +93,6 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/bufferToggle)
+- <a target="_blank" href="https://rxjs.dev/api/operators/bufferToggle">Documentación oficial en inglés</a>

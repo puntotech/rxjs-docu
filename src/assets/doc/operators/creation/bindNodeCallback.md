@@ -22,11 +22,6 @@
 ### Parámetros
 
 <table>
-<tr><td></td><td></td></tr>
-<tr><td></td><td></td></tr>
-</table>
-
-<table>
 <tr><td>callbackFunc</td><td>Tipo: <code>Function</code>.</td></tr>
 <tr><td>resultSelector</td><td>Tipo: <code>Function | SchedulerLike</code>.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
@@ -750,6 +745,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/bindNodeCallback)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/bindNodeCallback">Documentación oficial en inglés</a>

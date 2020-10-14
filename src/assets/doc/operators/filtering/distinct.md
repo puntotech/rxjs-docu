@@ -74,18 +74,22 @@ fruit$.pipe(distinct()).subscribe(console.log);
 import { distinct } from "rxjs/operators";
 import { of } from "rxjs";
 
-const pokemon$ = of(
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" }
+const language$ = of(
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" }
 );
 
-pokemon$.pipe(distinct(({ name }) => name)).subscribe(console.log);
-// Salida: { name: "Squirtle", type: "Water" } { name: "Bulbasaur", type: "Grass" } { name: "Charmander", type: "Fire" }
+language$.pipe(distinct(({ name }) => name)).subscribe(console.log);
+/* Salida: 
+{ name: "Java", type: "Orientado a objetos" }, 
+{ name: "Ruby", type: "Multiparadigma" }, 
+{ name: "Haskell", type: "Funcional" }
+*/
 ```
 
 ### Ejemplos de la documentación oficial
@@ -125,6 +129,6 @@ of<Person>(
 // { age: 7, name: 'Bar' }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinct)
+- <a target="_blank" href="https://rxjs.dev/api/operators/distinct">Documentación oficial en inglés</a>

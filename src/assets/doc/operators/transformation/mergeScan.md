@@ -102,6 +102,6 @@ count$.subscribe((x) => console.log(x));
 // ...y así sucesivamente para cada click
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeScan)
+- <a target="_blank" href="https://rxjs.dev/api/operators/mergeScan">Documentación oficial en inglés</a>

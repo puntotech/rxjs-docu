@@ -78,7 +78,7 @@ key$
 // Salida: KeyX, KeyO...
 ```
 
-**Filtrar los Pokémon de tipo agua**
+**Filtrar los lenguages de tipo Multiparadigma**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-filter-3?file=index.ts">StackBlitz</a>
 
@@ -86,15 +86,20 @@ key$
 import { filter } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Gyarados", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
+const language$ = from([
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Rust", type: "Multiparadigma" },
 ]);
 
-pokemon$.pipe(filter(({ type }) => type !== "Water")).subscribe(console.log);
-// Salida: { name: "Bulbasaur", type: "Grass" }, { name: "Charmander", type: "Fire" }
+language$
+  .pipe(filter(({ type }) => type !== "Multiparadigma"))
+  .subscribe(console.log);
+/* Salida: 
+{ name: "Java", type: "Orientado a objetos" },
+{ name: "Haskell", type: "Funcional" }
+*/
 ```
 
 ### Ejemplos de la documentación oficial
@@ -110,6 +115,6 @@ const clicksOnDivs = clicks.pipe(filter((ev) => ev.target.tagName === "DIV"));
 clicksOnDivs.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/filter)
+- <a target="_blank" href="https://rxjs.dev/api/operators/filter">Documentación oficial en inglés</a>

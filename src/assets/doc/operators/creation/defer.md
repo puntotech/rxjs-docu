@@ -59,7 +59,7 @@ deferredTime$.subscribe(console.log);
 // Salida: La fecha en el momento de la suscripción
 ```
 
-**Crear un Observable que emita un Pokemon distinto cada vez que un observador se suscribe a él**
+**Crear un Observable que emita una fruta distinta cada vez que un observador se suscribe a él**
 
 <a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-defer-2?file=index.ts">StackBlitz</a>
 
@@ -72,7 +72,7 @@ function getRandomFruit() {
   return fruits[Math.floor(Math.random() * 3)];
 }
 
-// Cada suscriptor a este Observable recibirá SIEMPRE la misma fruta, ya que la función getRandomPokemon se ejecuta solo una vez, en el momento en el que se crea el Observable
+// Cada suscriptor a este Observable recibirá SIEMPRE la misma fruta, ya que la función getRandomFruit se ejecuta solo una vez, en el momento en el que se crea el Observable
 const randomFruit$ = of(getRandomFruit());
 
 // Cada suscriptor a este Observable recibirá una fruta DISTINTA cada vez, ya que la función getRandomFruit se ejecuta cada vez que nos suscribimos
@@ -105,6 +105,6 @@ clicksOrInterval.subscribe((x) => console.log(x));
 // Si el resultado de Math.random() es mayor que 0.5 se suscribirá al Observable de clicks. Si el resultado es menor que 0.5 se suscribirá al Observable intervalo
 ```
 
-## Recursos Adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/defer)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/defer">Documentación oficial en inglés</a>

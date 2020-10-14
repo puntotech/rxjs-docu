@@ -47,10 +47,10 @@ La N-ésima emisión del Observable fuente hará que el Observable resultante em
 import { pairwise } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from(["Bulbasaur", "Charmander", "Squirtle"]);
+const framework$ = from(["Angular", "React", "Vue"]);
 
-pokemon$.pipe(pairwise()).subscribe(console.log);
-// Salida: ["Bulbasaur", "Charmander"], ["Charmander", "Squirtle"]
+framework$.pipe(pairwise()).subscribe(console.log);
+// Salida: ["Angular", "React"], ["React", "Vue"]
 ```
 
 **Agrupar los códigos de las teclas pulsadas (a partir de la segunda) por parejas**
@@ -91,6 +91,6 @@ const distance = pairs.pipe(
 distance.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/pairwise)
+- <a target="_blank" href="https://rxjs.dev/api/operators/pairwise">Documentación oficial en inglés</a>

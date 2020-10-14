@@ -122,6 +122,6 @@ Tipo: <code>T</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/reduce)
+- <a target="_blank" href="https://rxjs.dev/api/operators/reduce">Documentación oficial en inglés</a>

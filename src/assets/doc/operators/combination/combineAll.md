@@ -163,6 +163,6 @@ No recibe ningún parámetro.
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/combineAll)
+- <a target="_blank" href="https://rxjs.dev/api/operators/combineAll">Documentación oficial en inglés</a>

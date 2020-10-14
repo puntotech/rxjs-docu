@@ -95,6 +95,6 @@ const result = clicks.pipe(mergeMapTo(interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/mergeMapTo)
+- <a target="_blank" href="https://rxjs.dev/api/operators/mergeMapTo">Documentación oficial en inglés</a>

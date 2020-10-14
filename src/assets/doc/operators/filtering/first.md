@@ -108,18 +108,21 @@ user$.pipe(first(({ age }) => age === 21)).subscribe(console.log);
 import { first } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Gyarados", type: "Water" },
+const language$ = from([
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Rust", type: "Multiparadigma" },
 ]);
 
-pokemon$
+language$
   .pipe(
-    first(({ type }) => type === "Grass", { name: "Bulbasaur", type: "Grass" })
+    first(({ type }) => type === "Orientado a objetos", {
+      name: "Java",
+      type: "Orientado a objetos",
+    })
   )
   .subscribe(console.log);
-// Salida: { name: "Bulbasaur", type: "Grass" }
+// Salida: { name: "Java", type: "Orientado a objetos" }
 ```
 
 ### Ejemplos de la documentación oficial
@@ -214,6 +217,6 @@ Tipo: <code>D</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/first)
+- <a target="_blank" href="https://rxjs.dev/api/operators/first">Documentación oficial en inglés</a>

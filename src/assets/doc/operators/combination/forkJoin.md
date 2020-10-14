@@ -60,15 +60,16 @@ Opcionalmente, `forkJoin` recibe una función de proyección, que se llamará co
 <a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin?file=index.ts">StackBlitz</a>
 
 ```javascript
-import { forkJoin, of } from "rxjs";
+import { forkJoin, from, of } from "rxjs";
 
-const pokemon$ = forkJoin([
-  of("Bulbasaur", "Charmander", "Squirtle"),
-  of("Grass", "Fire", "Water"),
+const language$ = forkJoin([
+  of("Java", "Ruby", "Haskell"),
+  from(["Orientado a objetos", "Multiparadigma", "Funcional"]),
 ]);
 
-pokemon$.subscribe(console.log);
-// Salida: [ 'Squirtle', 'Water' ]
+// Combinar la última emisión de dos Observables distintos
+language$.subscribe(console.log);
+// Salida: ["Haskell", "Funcional"]
 ```
 
 **Combinar la última emisión de dos Observables distintos, contenidos en un diccionario de datos**
@@ -76,15 +77,15 @@ pokemon$.subscribe(console.log);
 <a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin-2?file=index.ts">StackBlitz</a>
 
 ```javascript
-import { forkJoin, of } from "rxjs";
+import { forkJoin, from, of } from "rxjs";
 
-const pokemonDictionary$ = forkJoin({
-  name: of("Bulbasaur", "Charmander", "Squirtle"),
-  type: of("Grass", "Fire", "Water"),
+const languageDictionary$ = forkJoin({
+  language: of("Java", "Ruby", "Haskell"),
+  type: from(["Orientado a objetos", "Multiparadigma", "Funcional"]),
 });
 
-pokemonDictionary$.subscribe(console.log);
-// Salida: { name: Squirtle, type: Water }
+languageDictionary$.subscribe(console.log);
+// Salida: { language: Haskell, type: Funcional }
 ```
 
 **Si alguno de los Observables de entrada lanza un error, el Observable resultante lanzará un error inmediatamente, y el flujo se terminará**
@@ -487,6 +488,6 @@ observable.subscribe({
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/index/function/forkJoin)
+- <a target="_blank" href="https://rxjs.dev/api/index/function/forkJoin">Documentación oficial en inglés</a>

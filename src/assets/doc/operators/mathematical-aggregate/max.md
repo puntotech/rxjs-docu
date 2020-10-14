@@ -78,19 +78,20 @@ fruit$.pipe(max((a, b) => a.length - b.length)).subscribe(console.log);
 import { of } from "rxjs";
 import { map, max } from "rxjs/operators";
 
-const pokemon$ = of(
-  { name: "Squirtle", stats: { attack: 30, defence: 40 } },
-  { name: "Charmander", stats: { attack: 40, defence: 35 } },
-  { name: "Bulbasaur", stats: { attack: 35, defence: 40 } }
+const githubUser$ = of(
+  { name: "zaldih", stats: { repositories: 23 } },
+  { name: "NyaGarcia", stats: { repositories: 30 } },
+  { name: "caballerog", stats: { repositories: 89 } },
+  { name: "tonivj5", stats: { repositories: 51 } }
 );
 
-pokemon$
+githubUser$
   .pipe(
-    max((a, b) => a.stats.attack - b.stats.attack),
+    max((a, b) => a.stats.repositories - b.stats.repositories),
     map(({ name }) => name)
   )
   .subscribe(console.log);
-// Salida: Charmander
+// Salida: caballerog
 ```
 
 ### Ejemplos de la documentación oficial
@@ -126,6 +127,6 @@ of(5, 4, 7, 2, 8)
     .subscribe((x: Person) => console.log(x.name)); // -> 'Beer'
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/max)
+- <a target="_blank" href="https://rxjs.dev/api/operators/max">Documentación oficial en inglés</a>

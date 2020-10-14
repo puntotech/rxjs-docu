@@ -63,17 +63,17 @@ fruit$.pipe(distinctUntilChanged()).subscribe(console.log);
 import { distinctUntilChanged } from "rxjs/operators";
 import { of } from "rxjs";
 
-const pokemon$ = of(
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" }
+const language$ = of(
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" }
 );
 
-pokemon$
+language$
   .pipe(
     distinctUntilChanged(
       ({ name: previousName }, { name }) => previousName === name
@@ -81,12 +81,12 @@ pokemon$
   )
   .subscribe(console.log);
 /* Salida: 
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" }
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" }
- */
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" }
+*/
 ```
 
 ### Ejemplos de la documentación oficial
@@ -129,6 +129,6 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
     // { age: 5, name: 'Foo' }
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/distinctUntilChanged)
+- <a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilChanged">Documentación oficial en inglés</a>

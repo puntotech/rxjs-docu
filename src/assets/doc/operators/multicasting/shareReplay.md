@@ -57,6 +57,6 @@ Comparación entre `share` y `shareReplay`
 
 ``` -->
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs.dev/api/operators/shareReplay)
+- <a target="_blank" href="https://rxjs.dev/api/operators/shareReplay">Documentación oficial en inglés</a>

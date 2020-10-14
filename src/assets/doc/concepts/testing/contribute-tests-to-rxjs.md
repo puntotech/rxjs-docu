@@ -1,12 +1,12 @@
 # Cómo Hacer Tests de Canicas
 
-> Este documento se refiere a cómo hacer tests de canicas sobre el **funcionamiento interno del repositorio de RxJS**, y está orientado a todo el que quiera ayudar con el mantenimiento del repositorio de RxJS. **Los usuarios de RxJS** deberían leer <a href="/concepts/testing">la guía para hacer tests de canicas para aplicaciones</a> en lugar de este documento. La mayor diferencia es que el comportamiento del `TestScheduler` difiere entre el uso manual y el uso de la función auxiliar `testScheduler.run(callback)`.
+> Este documento se refiere a cómo hacer tests de canicas sobre el **funcionamiento interno del repositorio de RxJS**, y está orientado a todo el que quiera ayudar con el mantenimiento del repositorio de RxJS. **Los usuarios de RxJS** deberían leer <a href="/concepts/marble-testing">la guía para hacer tests de canicas para aplicaciones</a> en lugar de este documento. La mayor diferencia es que el comportamiento del `TestScheduler` difiere entre el uso manual y el uso de la función auxiliar `testScheduler.run(callback)`.
 
 Los "Tests de Canicas" son tests que utilizan un Planificador Virtual especializado llamado `TestScheduler`. Nos permiten hacer test a operaciones asíncronas de forma síncrona y fiable. La "sintaxis de canicas" es un concepto que se ha adaptado a partir de enseñanzas y/o documentos de personas tal y como [@jhusain](https://twitter.com/jhusain), [@headinthebox](https://twitter.com/headinthebox), [@mattpodwysocki](https://twitter.com/mattpodwysocki) y [@andrestaltz](https://twitter.com/andrestaltz). De hecho, André Staltz inicialmente la recomendó como un DSL para crear tests unitarios, y desde entonces, se ha alterado y adoptado.
 
 ## Ver También
 
-- <a href="/codigo-de-conducta">Código de Conducta</a>
+- <a href="/code-of-conduct">Código de Conducta</a>
 
 ## Métodos Básicos
 

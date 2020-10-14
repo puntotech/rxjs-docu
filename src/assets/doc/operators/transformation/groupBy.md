@@ -52,7 +52,7 @@ Los elementos emitidos por GroupedObservables son, por defecto, los elementos em
 
 ## Ejemplos
 
-**Agrupar Pokémon según su tipo, y emitir el GroupedObservable resultante en forma de array**
+**Agrupar lenguajes de programación según su tipo, y emitir el GroupedObservable resultante en forma de array**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-1?file=index.ts">StackBlitz</a>
 
@@ -60,29 +60,28 @@ Los elementos emitidos por GroupedObservables son, por defecto, los elementos em
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Cyndaquil", type: "Fire" },
-  { name: "Totodile", type: "Water" },
-  { name: "Chikorita", type: "Grass" },
+const language$ = from([
+  { name: "Rust", type: "Multiparadigma" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Scala", type: "Multiparadigma" },
+  { name: "Simula", type: "Orientado a objetos" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$
+language$
   .pipe(
     groupBy(({ type }) => type),
     mergeMap((group$) => group$.pipe(toArray()))
   )
   .subscribe(console.log);
 /* Salida: 
-[{ name: "Charmander", type: "Fire" }, { name: "Cyndaquil", type: "Fire" }],
-[{ name: "Squirtle", type: "Water" }, { name: "Totodile", type: "Water" }],
-[{ name: "Bulbasaur", type: "Grass" }, { name: "Chikorita", type: "Grass" }]
+[{ name: "Rust", type: "Multiparadigma" }, { name: "Scala", type: "Multiparadigma" }],
+[{ name: "Java", type: "Orientado a objetos" }, { name: "Simula", type: "Orientado a objetos" }],
+[{ name: "Haskell", type: "Funcional" }]
 */
 ```
 
-**Agrupar Pokémon según su tipo, seleccionar únicamente el nombre y emitir el GroupedObservable resultante en forma de array**
+**Agrupar lenguajes de programación según su tipo, seleccionar únicamente el nombre y emitir el GroupedObservable resultante en forma de array**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-2?file=index.ts">StackBlitz</a>
 
@@ -90,16 +89,15 @@ pokemon$
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Cyndaquil", type: "Fire" },
-  { name: "Totodile", type: "Water" },
-  { name: "Chikorita", type: "Grass" },
+const language$ = from([
+  { name: "Rust", type: "Multiparadigma" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Scala", type: "Multiparadigma" },
+  { name: "Simula", type: "Orientado a objetos" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$
+language$
   .pipe(
     groupBy(
       ({ type }) => type,
@@ -109,10 +107,10 @@ pokemon$
   )
   .subscribe(console.log);
 /* Salida:
-  ["Charmander", "Cyndaquil"],
-  ["Squirtle", "Totodile"],,
-  ["Bulbasaur", "Chikorita"]
-   */
+  ["Rust", "Scala"],
+  ["Java", "Simula"],,
+  ["Haskell"]
+*/
 ```
 
 ### Ejemplo de la documentación oficial
@@ -268,6 +266,6 @@ Tipo: <code>() => Subject</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/groupBy)
+- <a target="_blank" href="https://rxjs.dev/api/operators/groupBy">Documentación oficial en inglés</a>

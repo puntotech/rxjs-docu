@@ -35,7 +35,7 @@
 
 `catchError` captura errores en el Observable fuente, manejándolos de dos maneras posibles: bien devolviendo un Observable nuevo o bien lanzando un nuevo error.
 
-<img src="assets/images/marble-diagrams/error-handling/catchError.png" alt="Diagrama de canicas del operador catch">
+<img src="assets/images/marble-diagrams/error-handling/catchError.png" alt="Diagrama de canicas del operador catchError">
 
 ## Ejemplos
 
@@ -198,6 +198,6 @@ of(1, 2, 3, 4, 5)
 // 1, 2, 3, error en la fuente. Detalles: four!
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/catchError)
+- <a target="_blank" href="https://rxjs.dev/api/operators/catchError">Documentación oficial en inglés</a>

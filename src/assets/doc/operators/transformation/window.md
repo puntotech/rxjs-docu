@@ -80,6 +80,6 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/window)
+- <a target="_blank" href="https://rxjs.dev/api/operators/window">Documentación oficial en inglés</a>

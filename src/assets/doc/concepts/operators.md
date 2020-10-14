@@ -87,16 +87,16 @@ const fileObservable = urlObservable.pipe(
 
 El operador [concatAll()](/operators/combination/concatAll) operator se subscribe cada Observable 'interno' producido por el Observable 'externo', y copia todos los valores que emite hasta que el Observable interno se completa. Entonces, se suscribe al siguiente Observable interno y repite el proceso. De esta manera, se concatenan todos los valores emitidos por todos los Observables internos. Otros operadores de combinación útiles son:
 
-- [mergeAll()](/operators/combination/mergeAll) — se suscribe a cada Observable interno en cuanto lo recibe, emitiendo cada uno de sus valores en cuanto lo recibe.
-- [switchAll()](/operators/combination/switchAll) — se suscribe al primer Observable interno en cuanto lo recibe y emite cada uno de sus valores en cuanto lo recibe, pero en cuanto recibe el siguiente Observable interno, cancela la suscripción al Observable interno anterior y se suscribe al nuevo.
-- [exhaust()](/operators/combination/exhaust) — se suscribe al primer Observable interno en cuanto lo recibe, y emite cada uno de sus valores en cuanto lo recibe, descartando todos los Observables internos nuevos que recibe hasta que el primer Observable interno se haya completado.
+- <a href="/operators/combination/mergeAll">mergeAll()</a> — se suscribe a cada Observable interno en cuanto lo recibe, emitiendo cada uno de sus valores en cuanto lo recibe.
+- <a href="/operators/combination/switchAll">switchAll()</a> — se suscribe al primer Observable interno en cuanto lo recibe y emite cada uno de sus valores en cuanto lo recibe, pero en cuanto recibe el siguiente Observable interno, cancela la suscripción al Observable interno anterior y se suscribe al nuevo.
+- <a href="/operators/combination/exhaust">exhaust()</a> — se suscribe al primer Observable interno en cuanto lo recibe, y emite cada uno de sus valores en cuanto lo recibe, descartando todos los Observables internos nuevos que recibe hasta que el primer Observable interno se haya completado.
 
 Al igual que hacen muchas bibliotecas de array, combinando `map()` y `flat()` (o `flatten()`) en un solo `flatMap()`, en RxJS también existen los equivalentes de proyección de todos los operadores de combinación:
 
-- [concatMap()](/operators/combination/concatMap)
-- [mergeMap()](/operators/combination/mergeMap)
-- [switchMap()](/operators/combination/switchMap)
-- [exhaustMap()](/operators/combination/exhaustMap)
+- <a href="/operators/combination/concatMap">concatMap()</a>
+- <a href="/operators/combination/mergeMap">mergeMap()</a>
+- <a href="/operators/combination/switchMap">switchMap()</a>
+- <a href="/operators/combination/exhaustMap">exhaustMap()</a>
 
 ## Diagramas de canicas
 
@@ -108,7 +108,7 @@ En un diagrama de canicas, el tiempo fluye hacia la derecha.
 
 A continuación se puede ver la anatomía de un diagrama de canicas:
 
-<img src="assets/images/marble-diagram-anatomy.svg" alt="Anatomía de un diagrama de canicas">
+<img src="assets/images/marble-diagram-anatomy.png" alt="Anatomía de un diagrama de canicas">
 
 En esta documentación se utilizan los diagramas de canicas para explicar el funcionamiento de los operadores. También son muy útiles en otros contextos, como por ejemplo en una pizarra o incluso a la hora de hacer tests unitarios (en forma de diagramas ASCII.)
 
@@ -118,147 +118,147 @@ Hay muchos tipos diferentes de operadores, divididos en las siguientes categorí
 
 ### Operadores de creación
 
-[ajax](/operators/creation/ajax)
-[bindCallback](/operators/creation/bindCallback)
-[bindNodeCallback](/operators/creation/bindNodeCallback)
-[defer](/operators/creation/defer)
-[empty](/operators/creation/empty)
-[from](/operators/creation/from)
-[fromEvent](/operators/creation/fromEvent)
-[fromEventPattern](/operators/creation/fromEventPattern)
-[generate](/operators/creation/generate)
-[interval](/operators/creation/interval)
-[of](/operators/creation/of)
-[range](/operators/creation/range)
-[throwError](/operators/creation/throwError)
-[timer](/operators/creation/timer)
-[iif](/operators/creation/iif)
+- [ajax](/operators/creation/ajax)
+- [bindCallback](/operators/creation/bindCallback)
+- [bindNodeCallback](/operators/creation/bindNodeCallback)
+- [defer](/operators/creation/defer)
+- [empty](/operators/creation/empty)
+- [from](/operators/creation/from)
+- [fromEvent](/operators/creation/fromEvent)
+- [fromEventPattern](/operators/creation/fromEventPattern)
+- [generate](/operators/creation/generate)
+- [interval](/operators/creation/interval)
+- [of](/operators/creation/of)
+- [range](/operators/creation/range)
+- [throwError](/operators/creation/throwError)
+- [timer](/operators/creation/timer)
+- [iif](/operators/creation/iif)
 
 ### Operadores de Combinación-Creación
 
 Estos son operadores de creación que también tienen funcionalidad de combinación -- emitiendo valores de varios Observables fuente.
 
-[combineLatest](/operators/combination/combineLatest)
-[concat](/operators/combination/concat)
-[forkJoin](/operators/combination/forkJoin)
-[merge](/operators/combination/merge)
-[race](/operators/combination/race)
-[zip](/operators/combination/zip)
+- [combineLatest](/operators/combination/combineLatest)
+- [concat](/operators/combination/concat)
+- [forkJoin](/operators/combination/forkJoin)
+- [merge](/operators/combination/merge)
+- [race](/operators/combination/race)
+- [zip](/operators/combination/zip)
 
 ### Operadores de Transformación
 
-[buffer](/operators/transformation/buffer)
-[bufferCount](/operators/transformation/bufferCount)
-[bufferTime](/operators/transformation/bufferTime)
-[bufferToggle](/operators/transformation/bufferToggle)
-[bufferWhen](/operators/transformation/bufferWhen)
-[concatMap](/operators/transformation/concatMap)
-[concatMapTo](/operators/transformation/concatMapTo)
-[exhaust](/operators/transformation/exhaust)
-[exhaustMap](/operators/transformation/exhaustMap)
-[expand](/operators/transformation/expand)
-[groupBy](/operators/transformation/groupBy)
-[map](/operators/transformation/map)
-[mapTo](/operators/transformation/mapTo)
-[mergeMap](/operators/transformation/mergeMap)
-[mergeMapTo](/operators/transformation/mergeMapTo)
-[mergeScan](/operators/transformation/mergeScan)
-[pairwise](/operators/transformation/pairwise)
-[partition](/operators/transformation/partition)
-[pluck](/operators/transformation/pluck)
-[scan](/operators/transformation/scan)
-[switchMap](/operators/transformation/switchMap)
-[switchMapTo](/operators/transformation/switchMapTo)
-[window](/operators/transformation/window)
-[windowCount](/operators/transformation/windowCount)
-[windowTime](/operators/transformation/windowTime)
-[windowToggle](/operators/transformation/windowToggle)
-[windowWhen](/operators/transformation/windowWhen)
+- [buffer](/operators/transformation/buffer)
+- [bufferCount](/operators/transformation/bufferCount)
+- [bufferTime](/operators/transformation/bufferTime)
+- [bufferToggle](/operators/transformation/bufferToggle)
+- [bufferWhen](/operators/transformation/bufferWhen)
+- [concatMap](/operators/transformation/concatMap)
+- [concatMapTo](/operators/transformation/concatMapTo)
+- [exhaust](/operators/transformation/exhaust)
+- [exhaustMap](/operators/transformation/exhaustMap)
+- [expand](/operators/transformation/expand)
+- [groupBy](/operators/transformation/groupBy)
+- [map](/operators/transformation/map)
+- [mapTo](/operators/transformation/mapTo)
+- [mergeMap](/operators/transformation/mergeMap)
+- [mergeMapTo](/operators/transformation/mergeMapTo)
+- [mergeScan](/operators/transformation/mergeScan)
+- [pairwise](/operators/transformation/pairwise)
+- [partition](/operators/transformation/partition)
+- [pluck](/operators/transformation/pluck)
+- [scan](/operators/transformation/scan)
+- [switchMap](/operators/transformation/switchMap)
+- [switchMapTo](/operators/transformation/switchMapTo)
+- [window](/operators/transformation/window)
+- [windowCount](/operators/transformation/windowCount)
+- [windowTime](/operators/transformation/windowTime)
+- [windowToggle](/operators/transformation/windowToggle)
+- [windowWhen](/operators/transformation/windowWhen)
 
 ### Operadores de Filtración
 
-[audit](/operators/filtering/audit)
-[auditTime](/operators/filtering/auditTime)
-[debounce](/operators/filtering/debounce)
-[debounceTime](/operators/filtering/debounceTime)
-[distinct](/operators/filtering/distinct)
-[distinctKey](/operators/filtering/distinctKey)
-[distinctUntilChanged](/operators/filtering/distinctUntilChanged)
-[distinctUntilKeyChanged](/operators/filtering/distinctUntilKeyChanged)
-[elementAt](/operators/filtering/elementAt)
-[filter](/operators/filtering/filter)
-[first](/operators/filtering/first)
-[ignoreElements](/operators/filtering/ignoreElements)
-[last](/operators/filtering/last)
-[sample](/operators/filtering/sample)
-[sampleTime](/operators/filtering/sampleTime)
-[single](/operators/filtering/single)
-[skip](/operators/filtering/skip)
-[skipLast](/operators/filtering/skipLast)
-[skipUntil](/operators/filtering/skipUntil)
-[skipWhile](/operators/filtering/skipWhile)
-[take](/operators/filtering/take)
-[takeLast](/operators/filtering/takeLast)
-[takeUntil](/operators/filtering/takeUntil)
-[takeWhile](/operators/filtering/takeWhile)
-[throttle](/operators/filtering/throttle)
-[throttleTime](/operators/filtering/throttleTime)
+- [audit](/operators/filtering/audit)
+- [auditTime](/operators/filtering/auditTime)
+- [debounce](/operators/filtering/debounce)
+- [debounceTime](/operators/filtering/debounceTime)
+- [distinct](/operators/filtering/distinct)
+- [distinctKey](/operators/filtering/distinctKey)
+- [distinctUntilChanged](/operators/filtering/distinctUntilChanged)
+- [distinctUntilKeyChanged](/operators/filtering/distinctUntilKeyChanged)
+- [elementAt](/operators/filtering/elementAt)
+- [filter](/operators/filtering/filter)
+- [first](/operators/filtering/first)
+- [ignoreElements](/operators/filtering/ignoreElements)
+- [last](/operators/filtering/last)
+- [sample](/operators/filtering/sample)
+- [sampleTime](/operators/filtering/sampleTime)
+- [single](/operators/filtering/single)
+- [skip](/operators/filtering/skip)
+- [skipLast](/operators/filtering/skipLast)
+- [skipUntil](/operators/filtering/skipUntil)
+- [skipWhile](/operators/filtering/skipWhile)
+- [take](/operators/filtering/take)
+- [takeLast](/operators/filtering/takeLast)
+- [takeUntil](/operators/filtering/takeUntil)
+- [takeWhile](/operators/filtering/takeWhile)
+- [throttle](/operators/filtering/throttle)
+- [throttleTime](/operators/filtering/throttleTime)
 
 ### Operadores de Combinación
 
 Ver también la sección anterior de operadores de Combinación-Creación.
 
-[combineAll](/operators/combination/combineAll)
-[concatAll](/operators/combination/concatAll)
-[exhaust](/operators/combination/exhaust)
-[mergeAll](/operators/combination/mergeAll)
-[startWith](/operators/combination/startWith)
-[withLatestFrom](/operators/combination/withLatestFrom)
+- [combineAll](/operators/combination/combineAll)
+- [concatAll](/operators/combination/concatAll)
+- [exhaust](/operators/combination/exhaust)
+- [mergeAll](/operators/combination/mergeAll)
+- [startWith](/operators/combination/startWith)
+- [withLatestFrom](/operators/combination/withLatestFrom)
 
 ### Operadores de Multidifusión
 
-[multicast](/operators/multicasting/multicast)
-[publish](/operators/multicasting/publish)
-[publishBehavior](/operators/multicasting/publishBehavior)
-[publishLast](/operators/multicasting/publishLast)
-[publishReplay](/operators/multicasting/publishReplay)
-[share](/operators/multicasting/share)
+- [multicast](/operators/multicasting/multicast)
+- [publish](/operators/multicasting/publish)
+- [publishBehavior](/operators/multicasting/publishBehavior)
+- [publishLast](/operators/multicasting/publishLast)
+- [publishReplay](/operators/multicasting/publishReplay)
+- [share](/operators/multicasting/share)
 
 ### Operadores de Gestión de Errores
 
-[catchError](/operators/error-handling/catchError)
-[retry](/operators/error-handling/retry)
-[retryWhen](/operators/error-handling/retryWhen)
+- [catchError](/operators/error-handling/catchError)
+- [retry](/operators/error-handling/retry)
+- [retryWhen](/operators/error-handling/retryWhen)
 
 ### Operadores de Utilidad
 
-[tap](/operators/utility/tap)
-[delay](/operators/utility/delay)
-[delayWhen](/operators/utility/delayWhen)
-[dematerialize](/operators/utility/dematerialize)
-[materialize](/operators/utility/materialize)
-[observeOn](/operators/utility/observeOn)
-[subscribeOn](/operators/utility/subscribeOn)
-[timeInterval](/operators/utility/timeInterval)
-[timestamp](/operators/utility/timestamp)
-[timeout](/operators/utility/timeout)
-[timeoutWith](/operators/utility/timeoutWith)
-[toArray](/operators/utility/toArray)
+- [tap](/operators/utility/tap)
+- [delay](/operators/utility/delay)
+- [delayWhen](/operators/utility/delayWhen)
+- [dematerialize](/operators/utility/dematerialize)
+- [materialize](/operators/utility/materialize)
+- [observeOn](/operators/utility/observeOn)
+- [subscribeOn](/operators/utility/subscribeOn)
+- [timeInterval](/operators/utility/timeInterval)
+- [timestamp](/operators/utility/timestamp)
+- [timeout](/operators/utility/timeout)
+- [timeoutWith](/operators/utility/timeoutWith)
+- [toArray](/operators/utility/toArray)
 
 ### Operadores Condicionales y Booleanos
 
-[defaultIfEmpty](/operators/conditional/defaultIfEmpty)
-[every](/operators/conditional/every)
-[find](/operators/conditional/find)
-[findIndex](/operators/conditional/findIndex)
-[isEmpty](/operators/conditional/isEmpty)
+- [defaultIfEmpty](/operators/conditional/defaultIfEmpty)
+- [every](/operators/conditional/every)
+- [find](/operators/conditional/find)
+- [findIndex](/operators/conditional/findIndex)
+- [isEmpty](/operators/conditional/isEmpty)
 
 ### Operadores Matemáticos y de Agregación
 
-[count](/operators/mathematical-aggregate/count)
-[max](/operators/mathematical-aggregate/max)
-[min](/operators/mathematical-aggregate/min)
-[reduce](/operators/mathematical-aggregate/reduce)
+- [count](/operators/mathematical-aggregate/count)
+- [max](/operators/mathematical-aggregate/max)
+- [min](/operators/mathematical-aggregate/min)
+- [reduce](/operators/mathematical-aggregate/reduce)
 
 ## Creación de operadores personalizados
 

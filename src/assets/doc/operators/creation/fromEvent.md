@@ -22,11 +22,6 @@
 ### Parámetros
 
 <table>
-<tr><td></td><td></td></tr>
-<tr><td></td><td></td></tr>
-</table>
-
-<table>
 <tr><td>target</td><td>El <code>EventTarget</code> del DOM, el <code>EventEmitter</code> de Node.js, el <code>NodeList</code> o <code>HTMLCollection</code> al que adjuntar el manejador de eventos.</td></tr>
 <tr><td>eventName</td><td>El nombre del evento que se desea escuchar, emitido por el <code>target</code>.</td></tr>
 <tr><td>options</td><td>Opcional. El valor por defecto es <code>undefined</code>.
@@ -167,6 +162,6 @@ clicksInDiv.subscribe(() => console.log("div"));
 // que la consola mostrará "document" primero, y luego "div".
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/index/function/fromEvent);
+- <a target="_blank" href="https://rxjs.dev/api/index/function/fromEvent">Documentación oficial en inglés</a>

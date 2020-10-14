@@ -56,14 +56,16 @@ Si el Observable fuente emite elementos, pero ninguno cumple la condición espec
 import { single } from "rxjs/operators";
 import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Squirtle", type: "Water" },
+const language$ = from([
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$.pipe(single(({ type }) => type === "Water")).subscribe(console.log);
-// Salida: { name: "Squirtle", type: "Water" }
+language$
+  .pipe(single(({ type }) => type === "Multiparadigma"))
+  .subscribe(console.log);
+// Salida: { name: "Ruby", type: "Multiparadigma" }
 ```
 
 **Si hay más de un elemento que cumpla la condición, se lanzará un error**
@@ -127,6 +129,6 @@ numbers.subscribe((x) => console.log(x));
 // 'undefined'
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/single)
+- <a target="_blank" href="https://rxjs.dev/api/operators/single">Documentación oficial en inglés</a>

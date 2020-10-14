@@ -71,26 +71,32 @@ number$.pipe(skipWhile((num) => num > 3)).subscribe(console.log);
 // Salida: 0, 1, 2, 3, 4, 5, 6, 7...
 ```
 
-**Saltar los objetos Pokémon que dejen de ser de tipo `Grass`**
+**Saltar los lenguajes mientras sean de tipo Multiparadigma**
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-skipwhile-3?file=index.ts">StackBlitz</a>
 
 ```javascript
 import { skipWhile } from "rxjs/operators";
-import { interval, from } from "rxjs";
+import { from } from "rxjs";
 
-const pokemon$ = from([
-  { name: "Bulbasaur", type: "Grass" },
-  { name: "Chikorita", type: "Grass" },
-  { name: "Charmander", type: "Fire" },
-  { name: "Treecko", type: "Grass" },
-  { name: "Squirtle", type: "Water" },
+const language$ = from([
+  { name: "Ruby", type: "Multiparadigma" },
+  { name: "Rust", type: "Multiparadigma" },
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Scala", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
 ]);
 
-pokemon$.pipe(skipWhile(({ type }) => type === "Grass")).subscribe(console.log);
-// Salida: { name: "Charmander", type: "Fire" }, { name: "Treecko", type: "Grass" }, { name: "Squirtle", type: "Water" }
+language$
+  .pipe(skipWhile(({ type }) => type === "Multiparadigma"))
+  .subscribe(console.log);
+/* Salida: 
+  { name: "Java", type: "Orientado a objetos" },
+  { name: "Scala", type: "Multiparadigma" },
+  { name: "Haskell", type: "Funcional" },
+*/
 ```
 
-## Recursos adicionales
+## Recursos adicionales -
 
-- [Documentación oficial en inglés](https://rxjs-dev.firebaseapp.com/api/operators/skipWhile)
+- <a target="_blank" href="https://rxjs.dev/api/operators/skipWhile">Documentación oficial en inglés</a>
