@@ -9,6 +9,9 @@
 </a>
 </div>
 
+<details class="no-subtitle">
+<summary>Signatura</summary>
+
 ### Firma
 
 `publishBehavior<T>(value: T): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
@@ -23,6 +26,10 @@
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-## Recursos adicionales -
+</div>
+
+</details>
+
+## Recursos adicionales
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publishBehavior">Documentación oficial en inglés</a>

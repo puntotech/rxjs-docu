@@ -9,7 +9,10 @@
 </a>
 </div>
 
-Retorna una secuencia Observable conectable que comparte una sola suscripción a la secuencia subyacente, que contiene solo la última notificación
+<h2 class="subtitle">Retorna una secuencia Observable conectable que comparte una sola suscripción a la secuencia subyacente, que contiene solo la última notificación</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -22,6 +25,8 @@ No recibe ningún parámetro.
 ## Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`: Una secuencia observable que contiene los elementos de una secuencia producida al multidifundir la secuencia fuente.
+
+</details>
 
 ## Descripción
 

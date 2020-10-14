@@ -9,11 +9,14 @@
 </a>
 </div>
 
-### Comparte el Observable fuente entre varios suscriptores
+<h2 class="subtitle"> Comparte el Observable fuente entre varios suscriptores</h2>
 
 💡 Se puede utilizar share para convertir un Observable frío en uno caliente
 
 💡 share es como utilizar <a href="/operators/multicasting/multicast">multicast</a> con un Sujeto y <a href="/operators/multicasting/refCount">refCount</a>
+
+<details>
+<summary>Signatura</summary>
 
 ## Firma
 
@@ -26,6 +29,8 @@ No recibe ningún parámetro.
 ## Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que, al ser conectado, hace que el Observable fuente emita valores a sus Observadores.
+
+</details>
 
 ## Descripción
 

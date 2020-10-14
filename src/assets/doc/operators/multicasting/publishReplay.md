@@ -9,6 +9,9 @@
 </a>
 </div>
 
+<details class="no-subtitle">
+<summary>Signatura</summary>
+
 ### Firma
 
 `publishReplay<T, R>(bufferSize?: number, windowTime?: number, selectorOrScheduler?: SchedulerLike | OperatorFunction<T, R>, scheduler?: SchedulerLike): UnaryFunction<Observable<T>, ConnectableObservable<R>>`
@@ -30,6 +33,10 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 `UnaryFunction<Observable<T>, ConnectableObservable<R>>`
 
-## Recursos adicionales -
+</div>
+
+</details>
+
+## Recursos adicionales
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publishReplay">Documentación oficial en inglés</a>

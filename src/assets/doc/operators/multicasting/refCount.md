@@ -9,9 +9,12 @@
 </a>
 </div>
 
-### Hace que un ConnectableObservable se comporte como un Obesrvable normal, y automatiza la forma de conectarse a él
+<h2> Hace que un ConnectableObservable se comporte como un Obesrvable normal, y automatiza la forma de conectarse a él</h2>
 
 💡 Utilizar el operador <a href="/operators/multicasting/share">share</a> es exactamente igual que utilizar el operador <a href="/operators/multicasting/publish">publish</a> (convirtiendo el Observable en uno caliente) en conjunto con el operador refCount.
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -24,6 +27,8 @@ No recibe ningún parámetro.
 ## Retorna
 
 `MonoTypeOperatorFunction<T>`
+
+</details>
 
 ## Descripción
 

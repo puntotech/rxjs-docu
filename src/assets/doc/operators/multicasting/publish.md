@@ -9,7 +9,10 @@
 </a>
 </div>
 
-### Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores
+<h2 class="subtitle"> Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores</h2>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -26,6 +29,8 @@ Función de selección opcional que puede utilizar la secuencia fuente multidifu
 ### Retorna
 
 `MonoTypeOperatorFunction<T> | OperatorFunction<T, R>`: Un `ConnectableObservable` que, cuando se hace una llamada a su método `connect`, hace que el Observable fuente emita valores a sus Observadores.
+
+</details>
 
 ## Descripción
 
@@ -75,7 +80,13 @@ source$
 // 'Flujo 3: 9'
 ```
 
-## Sobrecargas
+<details>
+<summary>Sobrecargas</summary>
+<div class="overload-container">
+
+<div class="overload-section">
+
+### Firma
 
 `publish(): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
@@ -86,6 +97,12 @@ No recibe ningún parámetro.
 ### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
+
+</div>
+
+<div class="overload-section">
+
+### Firma
 
 `publish(selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
@@ -99,6 +116,12 @@ No recibe ningún parámetro.
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
+</div>
+
+<div class="overload-section">
+
+### Firma
+
 `publish(selector: MonoTypeOperatorFunction<T>): MonoTypeOperatorFunction<T>`
 
 ### Parámetros
@@ -111,6 +134,10 @@ No recibe ningún parámetro.
 
 `MonoTypeOperatorFunction<T>`
 
-## Recursos adicionales -
+</div>
+
+</details>
+
+## Recursos adicionales
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>

@@ -9,9 +9,12 @@
 </a>
 </div>
 
-### Comparte el Observable fuente entre varios suscriptores, repitiendo las últimas n emisiones con cada suscripción
+<h2 class="subtitle"> Comparte el Observable fuente entre varios suscriptores, repitiendo las últimas n emisiones con cada suscripción </h2>
 
 💡 La capacidad de repetir emisiones es lo que diferencia a shareReplay de <a href="/operators/multicasting/share">share</a>
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -31,6 +34,8 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 ### Retorna
 
 `MonoTypeOperatorFunction<T>`
+
+</details>
 
 ## Descripción
 
