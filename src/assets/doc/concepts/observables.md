@@ -148,7 +148,7 @@ Y se obtiene la misma salida:
 ```
 "Hola"
 42
-("Hola")
+"Hola"
 42
 ```
 
