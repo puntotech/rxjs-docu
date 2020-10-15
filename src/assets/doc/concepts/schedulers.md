@@ -53,14 +53,14 @@ Nótese que las notificaciones `Obtenido valor...` se enviaron después de `Just
 import { Observable, asyncScheduler } from "rxjs";
 import { observeOn } from "rxjs/operators";
 
-var observable = new Observable((proxyObserver) => {
+const observable = new Observable((proxyObserver) => {
   proxyObserver.next(1);
   proxyObserver.next(2);
   proxyObserver.next(3);
   proxyObserver.complete();
 }).pipe(observeOn(asyncScheduler));
 
-var finalObserver = {
+const finalObserver = {
   next(x) {
     console.log("Obtenido valor " + x);
   },
