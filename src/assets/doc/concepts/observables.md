@@ -339,7 +339,7 @@ Las notificaciones "Next" son las más importantes, y las más comunes: represen
 La mejor forma de expresar estas restricciones es mediante la Gramática Observable o Contract, escrita mediante una expresión regular:
 
 ```javascript
-next\*(error|complete)?
+(next)*(error|complete)?
 ```
 
 > En una Ejecución Observable, se pueden emitir desde cero a infinitas notificaciones. En el caso de que se diera una notificación "Error" o "Complete", ninguna otra notificación podrá emitirse a partir de ese momento.
