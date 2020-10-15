@@ -278,7 +278,7 @@ subject.next(5);
 // observerB: 5
 ```
 
-También se puede especificar el parámetro `windowTime` en milisegundos, además del tamaño del buffer, para dterminar cuán antiguos pueden ser los valores almacenados. En el siguiente ejemplo utilizamos un tamaño bastante mayor de buffer, `100`, pero un parámetro `windowTime` de solo `500` milisegundos.
+También se puede especificar el parámetro `windowTime` en milisegundos, además del tamaño del buffer, para determinar cuán antiguos pueden ser los valores almacenados. En el siguiente ejemplo utilizamos un tamaño bastante mayor de buffer, `100`, pero un parámetro `windowTime` de solo `500` milisegundos.
 
 ```javascript
 import { ReplaySubject } from "rxjs";
