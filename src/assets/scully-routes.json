@@ -1,1 +1,241 @@
-[{"route":"/"},{"route":"/codigo-de-conducta","sourceFile":"codigo-de-conducta.md"},{"route":"/concepts/contribuir-tests-a-rxjs","sourceFile":"contribuir-tests-a-rxjs.md"},{"route":"/concepts/observables","sourceFile":"observables.md"},{"route":"/concepts/observador","sourceFile":"observador.md"},{"route":"/concepts/operadores","sourceFile":"operadores.md"},{"route":"/concepts/planificadores","sourceFile":"planificadores.md"},{"route":"/concepts/sujetos","sourceFile":"sujetos.md"},{"route":"/concepts/suscripcion","sourceFile":"suscripcion.md"},{"route":"/concepts/testing","sourceFile":"testing.md"},{"route":"/instalacion","sourceFile":"instalacion.md"},{"route":"/introduccion","sourceFile":"introduccion.md"},{"route":"/operators/combination/combineAll","sourceFile":"combineAll.md"},{"route":"/operators/combination/combineLatest","sourceFile":"combineLatest.md"},{"route":"/operators/combination/concat","sourceFile":"concat.md"},{"route":"/operators/combination/concatAll","sourceFile":"concatAll.md"},{"route":"/operators/combination/exhaust","sourceFile":"exhaust.md"},{"route":"/operators/combination/forkJoin","sourceFile":"forkJoin.md"},{"route":"/operators/combination/merge","sourceFile":"merge.md"},{"route":"/operators/combination/mergeAll","sourceFile":"mergeAll.md"},{"route":"/operators/combination/race","sourceFile":"race.md"},{"route":"/operators/combination/startWith","sourceFile":"startWith.md"},{"route":"/operators/combination/withLatestFrom","sourceFile":"withLatestFrom.md"},{"route":"/operators/combination/zip","sourceFile":"zip.md"},{"route":"/operators/conditional/defaultIfEmpty","sourceFile":"defaultIfEmpty.md"},{"route":"/operators/conditional/every","sourceFile":"every.md"},{"route":"/operators/conditional/find","sourceFile":"find.md"},{"route":"/operators/conditional/findIndex","sourceFile":"findIndex.md"},{"route":"/operators/conditional/iif","sourceFile":"iif.md"},{"route":"/operators/conditional/isEmpty","sourceFile":"isEmpty.md"},{"route":"/operators/conditional/sequenceEqual","sourceFile":"sequenceEqual.md"},{"route":"/operators/creation/ajax","sourceFile":"ajax.md"},{"route":"/operators/creation/bindCallback","sourceFile":"bindCallback.md"},{"route":"/operators/creation/bindNodeCallback","sourceFile":"bindNodeCallback.md"},{"route":"/operators/creation/defer","sourceFile":"defer.md"},{"route":"/operators/creation/from","sourceFile":"from.md"},{"route":"/operators/creation/fromEvent","sourceFile":"fromEvent.md"},{"route":"/operators/creation/fromEventPattern","sourceFile":"fromEventPattern.md"},{"route":"/operators/creation/fromFetch","sourceFile":"fromFetch.md"},{"route":"/operators/creation/generate","sourceFile":"generate.md"},{"route":"/operators/creation/interval","sourceFile":"interval.md"},{"route":"/operators/creation/of","sourceFile":"of.md"},{"route":"/operators/creation/range","sourceFile":"range.md"},{"route":"/operators/creation/throwError","sourceFile":"throwError.md"},{"route":"/operators/creation/timer","sourceFile":"timer.md"},{"route":"/operators/error-handling/catchError","sourceFile":"catchError.md"},{"route":"/operators/error-handling/retry","sourceFile":"retry.md"},{"route":"/operators/error-handling/retryWhen","sourceFile":"retryWhen.md"},{"route":"/operators/filtering/audit","sourceFile":"audit.md"},{"route":"/operators/filtering/auditTime","sourceFile":"auditTime.md"},{"route":"/operators/filtering/debounce","sourceFile":"debounce.md"},{"route":"/operators/filtering/debounceTime","sourceFile":"debounceTime.md"},{"route":"/operators/filtering/distinct","sourceFile":"distinct.md"},{"route":"/operators/filtering/distinctUntilChanged","sourceFile":"distinctUntilChanged.md"},{"route":"/operators/filtering/distinctUntilKeyChanged","sourceFile":"distinctUntilKeyChanged.md"},{"route":"/operators/filtering/elementAt","sourceFile":"elementAt.md"},{"route":"/operators/filtering/filter","sourceFile":"filter.md"},{"route":"/operators/filtering/first","sourceFile":"first.md"},{"route":"/operators/filtering/ignoreElements","sourceFile":"ignoreElements.md"},{"route":"/operators/filtering/last","sourceFile":"last.md"},{"route":"/operators/filtering/sample","sourceFile":"sample.md"},{"route":"/operators/filtering/sampleTime","sourceFile":"sampleTime.md"},{"route":"/operators/filtering/single","sourceFile":"single.md"},{"route":"/operators/filtering/skip","sourceFile":"skip.md"},{"route":"/operators/filtering/skipLast","sourceFile":"skipLast.md"},{"route":"/operators/filtering/skipUntil","sourceFile":"skipUntil.md"},{"route":"/operators/filtering/skipWhile","sourceFile":"skipWhile.md"},{"route":"/operators/filtering/take","sourceFile":"take.md"},{"route":"/operators/filtering/takeLast","sourceFile":"takeLast.md"},{"route":"/operators/filtering/takeUntil","sourceFile":"takeUntil.md"},{"route":"/operators/filtering/takeWhile","sourceFile":"takeWhile.md"},{"route":"/operators/filtering/throttle","sourceFile":"throttle.md"},{"route":"/operators/filtering/throttleTime","sourceFile":"throttleTime.md"},{"route":"/operators/mathematical-aggregate/count","sourceFile":"count.md"},{"route":"/operators/mathematical-aggregate/max","sourceFile":"max.md"},{"route":"/operators/mathematical-aggregate/min","sourceFile":"min.md"},{"route":"/operators/mathematical-aggregate/reduce","sourceFile":"reduce.md"},{"route":"/operators/transformation/buffer","sourceFile":"buffer.md"},{"route":"/operators/transformation/bufferCount","sourceFile":"bufferCount.md"},{"route":"/operators/transformation/bufferTime","sourceFile":"bufferTime.md"},{"route":"/operators/transformation/bufferToggle","sourceFile":"bufferToggle.md"},{"route":"/operators/transformation/bufferWhen","sourceFile":"bufferWhen.md"},{"route":"/operators/transformation/concatMap","sourceFile":"concatMap.md"},{"route":"/operators/transformation/concatMapTo","sourceFile":"concatMapTo.md"},{"route":"/operators/transformation/exhaust","sourceFile":"exhaust.md"},{"route":"/operators/transformation/exhaustMap","sourceFile":"exhaustMap.md"},{"route":"/operators/transformation/expand","sourceFile":"expand.md"},{"route":"/operators/transformation/groupBy","sourceFile":"groupBy.md"},{"route":"/operators/transformation/map","sourceFile":"map.md"},{"route":"/operators/transformation/mapTo","sourceFile":"mapTo.md"},{"route":"/operators/transformation/mergeMap","sourceFile":"mergeMap.md"},{"route":"/operators/transformation/mergeMapTo","sourceFile":"mergeMapTo.md"},{"route":"/operators/transformation/mergeScan","sourceFile":"mergeScan.md"},{"route":"/operators/transformation/pairwise","sourceFile":"pairwise.md"},{"route":"/operators/transformation/partition","sourceFile":"partition.md"},{"route":"/operators/transformation/pluck","sourceFile":"pluck.md"},{"route":"/operators/transformation/scan","sourceFile":"scan.md"},{"route":"/operators/transformation/switchMap","sourceFile":"switchMap.md"},{"route":"/operators/transformation/switchMapTo","sourceFile":"switchMapTo.md"},{"route":"/operators/transformation/window","sourceFile":"window.md"},{"route":"/operators/transformation/windowCount","sourceFile":"windowCount.md"},{"route":"/operators/transformation/windowTime","sourceFile":"windowTime.md"},{"route":"/operators/transformation/windowToggle","sourceFile":"windowToggle.md"},{"route":"/operators/transformation/windowWhen","sourceFile":"windowWhen.md"},{"route":"/operators/utility/delay","sourceFile":"delay.md"},{"route":"/operators/utility/delayWhen","sourceFile":"delayWhen.md"},{"route":"/operators/utility/dematerialize","sourceFile":"dematerialize.md"},{"route":"/operators/utility/finalize","sourceFile":"finalize.md"},{"route":"/operators/utility/observeOn","sourceFile":"observeOn.md"},{"route":"/operators/utility/repeat","sourceFile":"repeat.md"},{"route":"/operators/utility/repeatWhen","sourceFile":"repeatWhen.md"},{"route":"/operators/utility/subscribeOn","sourceFile":"subscribeOn.md"},{"route":"/operators/utility/tap","sourceFile":"tap.md"},{"route":"/operators/utility/timeInterval","sourceFile":"timeInterval.md"},{"route":"/operators/utility/timeout","sourceFile":"timeout.md"},{"route":"/operators/utility/timeoutWith","sourceFile":"timeoutWith.md"},{"route":"/version-6/funcionalidades-obsoletas","sourceFile":"funcionalidades-obsoletas.md"},{"route":"/version-6/migracion","sourceFile":"migracion.md"},{"route":"/version-6/operadores-tuberia","sourceFile":"operadores-tuberia.md"}]
+[
+  { "route": "/" },
+  { "route": "/codigo-de-conducta", "sourceFile": "codigo-de-conducta.md" },
+  {
+    "route": "/concepts/contribuir-tests-a-rxjs",
+    "sourceFile": "contribuir-tests-a-rxjs.md"
+  },
+  { "route": "/concepts/observables", "sourceFile": "observables.md" },
+  { "route": "/concepts/observador", "sourceFile": "observador.md" },
+  { "route": "/concepts/operadores", "sourceFile": "operadores.md" },
+  { "route": "/concepts/planificadores", "sourceFile": "planificadores.md" },
+  { "route": "/concepts/sujetos", "sourceFile": "sujetos.md" },
+  { "route": "/concepts/suscripcion", "sourceFile": "suscripcion.md" },
+  { "route": "/concepts/testing", "sourceFile": "testing.md" },
+  { "route": "/instalacion", "sourceFile": "instalacion.md" },
+  { "route": "/introduccion", "sourceFile": "introduccion.md" },
+  {
+    "route": "/operators/combination/combineAll",
+    "sourceFile": "combineAll.md"
+  },
+  {
+    "route": "/operators/combination/combineLatest",
+    "sourceFile": "combineLatest.md"
+  },
+  { "route": "/operators/combination/concat", "sourceFile": "concat.md" },
+  { "route": "/operators/combination/concatAll", "sourceFile": "concatAll.md" },
+  { "route": "/operators/combination/exhaust", "sourceFile": "exhaust.md" },
+  { "route": "/operators/combination/forkJoin", "sourceFile": "forkJoin.md" },
+  { "route": "/operators/combination/merge", "sourceFile": "merge.md" },
+  { "route": "/operators/combination/mergeAll", "sourceFile": "mergeAll.md" },
+  { "route": "/operators/combination/race", "sourceFile": "race.md" },
+  { "route": "/operators/combination/startWith", "sourceFile": "startWith.md" },
+  {
+    "route": "/operators/combination/withLatestFrom",
+    "sourceFile": "withLatestFrom.md"
+  },
+  { "route": "/operators/combination/zip", "sourceFile": "zip.md" },
+  {
+    "route": "/operators/conditional/defaultIfEmpty",
+    "sourceFile": "defaultIfEmpty.md"
+  },
+  { "route": "/operators/conditional/every", "sourceFile": "every.md" },
+  { "route": "/operators/conditional/find", "sourceFile": "find.md" },
+  { "route": "/operators/conditional/findIndex", "sourceFile": "findIndex.md" },
+  { "route": "/operators/conditional/iif", "sourceFile": "iif.md" },
+  { "route": "/operators/conditional/isEmpty", "sourceFile": "isEmpty.md" },
+  {
+    "route": "/operators/conditional/sequenceEqual",
+    "sourceFile": "sequenceEqual.md"
+  },
+  { "route": "/operators/creation/ajax", "sourceFile": "ajax.md" },
+  {
+    "route": "/operators/creation/bindCallback",
+    "sourceFile": "bindCallback.md"
+  },
+  {
+    "route": "/operators/creation/bindNodeCallback",
+    "sourceFile": "bindNodeCallback.md"
+  },
+  { "route": "/operators/creation/defer", "sourceFile": "defer.md" },
+  { "route": "/operators/creation/from", "sourceFile": "from.md" },
+  { "route": "/operators/creation/fromEvent", "sourceFile": "fromEvent.md" },
+  {
+    "route": "/operators/creation/fromEventPattern",
+    "sourceFile": "fromEventPattern.md"
+  },
+  { "route": "/operators/creation/fromFetch", "sourceFile": "fromFetch.md" },
+  { "route": "/operators/creation/generate", "sourceFile": "generate.md" },
+  { "route": "/operators/creation/interval", "sourceFile": "interval.md" },
+  { "route": "/operators/creation/of", "sourceFile": "of.md" },
+  { "route": "/operators/creation/range", "sourceFile": "range.md" },
+  { "route": "/operators/creation/throwError", "sourceFile": "throwError.md" },
+  { "route": "/operators/creation/timer", "sourceFile": "timer.md" },
+  {
+    "route": "/operators/error-handling/catchError",
+    "sourceFile": "catchError.md"
+  },
+  { "route": "/operators/error-handling/retry", "sourceFile": "retry.md" },
+  {
+    "route": "/operators/error-handling/retryWhen",
+    "sourceFile": "retryWhen.md"
+  },
+  { "route": "/operators/filtering/audit", "sourceFile": "audit.md" },
+  { "route": "/operators/filtering/auditTime", "sourceFile": "auditTime.md" },
+  { "route": "/operators/filtering/debounce", "sourceFile": "debounce.md" },
+  {
+    "route": "/operators/filtering/debounceTime",
+    "sourceFile": "debounceTime.md"
+  },
+  { "route": "/operators/filtering/distinct", "sourceFile": "distinct.md" },
+  {
+    "route": "/operators/filtering/distinctUntilChanged",
+    "sourceFile": "distinctUntilChanged.md"
+  },
+  {
+    "route": "/operators/filtering/distinctUntilKeyChanged",
+    "sourceFile": "distinctUntilKeyChanged.md"
+  },
+  { "route": "/operators/filtering/elementAt", "sourceFile": "elementAt.md" },
+  { "route": "/operators/filtering/filter", "sourceFile": "filter.md" },
+  { "route": "/operators/filtering/first", "sourceFile": "first.md" },
+  {
+    "route": "/operators/filtering/ignoreElements",
+    "sourceFile": "ignoreElements.md"
+  },
+  { "route": "/operators/filtering/last", "sourceFile": "last.md" },
+  { "route": "/operators/filtering/sample", "sourceFile": "sample.md" },
+  { "route": "/operators/filtering/sampleTime", "sourceFile": "sampleTime.md" },
+  { "route": "/operators/filtering/single", "sourceFile": "single.md" },
+  { "route": "/operators/filtering/skip", "sourceFile": "skip.md" },
+  { "route": "/operators/filtering/skipLast", "sourceFile": "skipLast.md" },
+  { "route": "/operators/filtering/skipUntil", "sourceFile": "skipUntil.md" },
+  { "route": "/operators/filtering/skipWhile", "sourceFile": "skipWhile.md" },
+  { "route": "/operators/filtering/take", "sourceFile": "take.md" },
+  { "route": "/operators/filtering/takeLast", "sourceFile": "takeLast.md" },
+  { "route": "/operators/filtering/takeUntil", "sourceFile": "takeUntil.md" },
+  { "route": "/operators/filtering/takeWhile", "sourceFile": "takeWhile.md" },
+  { "route": "/operators/filtering/throttle", "sourceFile": "throttle.md" },
+  {
+    "route": "/operators/filtering/throttleTime",
+    "sourceFile": "throttleTime.md"
+  },
+  {
+    "route": "/operators/mathematical-aggregate/count",
+    "sourceFile": "count.md"
+  },
+  { "route": "/operators/mathematical-aggregate/max", "sourceFile": "max.md" },
+  { "route": "/operators/mathematical-aggregate/min", "sourceFile": "min.md" },
+  {
+    "route": "/operators/mathematical-aggregate/reduce",
+    "sourceFile": "reduce.md"
+  },
+  { "route": "/operators/transformation/buffer", "sourceFile": "buffer.md" },
+  {
+    "route": "/operators/transformation/bufferCount",
+    "sourceFile": "bufferCount.md"
+  },
+  {
+    "route": "/operators/transformation/bufferTime",
+    "sourceFile": "bufferTime.md"
+  },
+  {
+    "route": "/operators/transformation/bufferToggle",
+    "sourceFile": "bufferToggle.md"
+  },
+  {
+    "route": "/operators/transformation/bufferWhen",
+    "sourceFile": "bufferWhen.md"
+  },
+  {
+    "route": "/operators/transformation/concatMap",
+    "sourceFile": "concatMap.md"
+  },
+  {
+    "route": "/operators/transformation/concatMapTo",
+    "sourceFile": "concatMapTo.md"
+  },
+  { "route": "/operators/transformation/exhaust", "sourceFile": "exhaust.md" },
+  {
+    "route": "/operators/transformation/exhaustMap",
+    "sourceFile": "exhaustMap.md"
+  },
+  { "route": "/operators/transformation/expand", "sourceFile": "expand.md" },
+  { "route": "/operators/transformation/groupBy", "sourceFile": "groupBy.md" },
+  { "route": "/operators/transformation/map", "sourceFile": "map.md" },
+  { "route": "/operators/transformation/mapTo", "sourceFile": "mapTo.md" },
+  {
+    "route": "/operators/transformation/mergeMap",
+    "sourceFile": "mergeMap.md"
+  },
+  {
+    "route": "/operators/transformation/mergeMapTo",
+    "sourceFile": "mergeMapTo.md"
+  },
+  {
+    "route": "/operators/transformation/mergeScan",
+    "sourceFile": "mergeScan.md"
+  },
+  {
+    "route": "/operators/transformation/pairwise",
+    "sourceFile": "pairwise.md"
+  },
+  {
+    "route": "/operators/transformation/partition",
+    "sourceFile": "partition.md"
+  },
+  { "route": "/operators/transformation/pluck", "sourceFile": "pluck.md" },
+  { "route": "/operators/transformation/scan", "sourceFile": "scan.md" },
+  {
+    "route": "/operators/transformation/switchMap",
+    "sourceFile": "switchMap.md"
+  },
+  {
+    "route": "/operators/transformation/switchMapTo",
+    "sourceFile": "switchMapTo.md"
+  },
+  { "route": "/operators/transformation/window", "sourceFile": "window.md" },
+  {
+    "route": "/operators/transformation/windowCount",
+    "sourceFile": "windowCount.md"
+  },
+  {
+    "route": "/operators/transformation/windowTime",
+    "sourceFile": "windowTime.md"
+  },
+  {
+    "route": "/operators/transformation/windowToggle",
+    "sourceFile": "windowToggle.md"
+  },
+  {
+    "route": "/operators/transformation/windowWhen",
+    "sourceFile": "windowWhen.md"
+  },
+  { "route": "/operators/utility/delay", "sourceFile": "delay.md" },
+  { "route": "/operators/utility/delayWhen", "sourceFile": "delayWhen.md" },
+  {
+    "route": "/operators/utility/dematerialize",
+    "sourceFile": "dematerialize.md"
+  },
+  { "route": "/operators/utility/finalize", "sourceFile": "finalize.md" },
+  { "route": "/operators/utility/observeOn", "sourceFile": "observeOn.md" },
+  { "route": "/operators/utility/repeat", "sourceFile": "repeat.md" },
+  { "route": "/operators/utility/repeatWhen", "sourceFile": "repeatWhen.md" },
+  { "route": "/operators/utility/subscribeOn", "sourceFile": "subscribeOn.md" },
+  { "route": "/operators/utility/tap", "sourceFile": "tap.md" },
+  {
+    "route": "/operators/utility/timeInterval",
+    "sourceFile": "timeInterval.md"
+  },
+  { "route": "/operators/utility/timeout", "sourceFile": "timeout.md" },
+  { "route": "/operators/utility/timeoutWith", "sourceFile": "timeoutWith.md" },
+  {
+    "route": "/version-6/funcionalidades-obsoletas",
+    "sourceFile": "funcionalidades-obsoletas.md"
+  },
+  { "route": "/version-6/migracion", "sourceFile": "migracion.md" },
+  {
+    "route": "/version-6/operadores-tuberia",
+    "sourceFile": "operadores-tuberia.md"
+  }
+]

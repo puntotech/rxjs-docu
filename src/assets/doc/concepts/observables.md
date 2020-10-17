@@ -7,7 +7,7 @@ Ejemplo: el siguiente Observable empuja los valores `1`, `2`, `3` inmediatamente
 ```javascript
 import { Observable } from "rxjs";
 
-const observable = new Observable(subscriber => {
+const observable = new Observable((subscriber) => {
   subscriber.next(1);
   subscriber.next(2);
   subscriber.next(3);
@@ -23,7 +23,7 @@ Para invocar al Observable y poder ver estos valores, nos tenemos que _suscribir
 ```javascript
 import { Observable } from "rxjs";
 
-const observable = new Observable(subscriber => {
+const observable = new Observable((subscriber) => {
   subscriber.next(1);
   subscriber.next(2);
   subscriber.next(3);
@@ -43,7 +43,7 @@ observable.subscribe({
   },
   complete() {
     console.log("listo");
-  }
+  },
 });
 console.log("justo después de la suscripción");
 ```
