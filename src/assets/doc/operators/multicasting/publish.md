@@ -9,7 +9,9 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores</h2>
+<h2 class="subtitle">Convierte un Observable frío en un Observable caliente</h2>
+
+💡 publish es equivalente a `multicast(() => new Subject())`
 
 <details>
 <summary>Signatura</summary>
@@ -34,17 +36,53 @@ Función de selección opcional que puede utilizar la secuencia fuente multidifu
 
 ## Descripción
 
-Convierte un Observable frío en un Observable caliente.
+Convierte un Observable frío en un Observable caliente, utilizando el operador <a href="/operators/multicasting/multicast">multicast</a> junto a un Sujeto internamente.
 
 <img src="assets/images/marble-diagrams/multicasting/publish.png" alt="Diagrama de canicas del operador publish">
 
+Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores. En el caso de que no se llame a `connect`, el Observable fuente no emitirá ningún valor.
+
+💡 Para evitar tener que llamar a connect manualmente, se puede utilizar el [operador refCount](/operators/multicasting/refCount).
+
 ## Ejemplos
 
-<!-- [StackBlitz]()
+**Compartir el Observable fuente con publish**
 
-```javascript
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publish?file=index.ts">StackBlitz</a>
 
-``` -->
+```typescript
+import { ConnectableObservable, interval, timer } from "rxjs";
+import { publish, tap, take } from "rxjs/operators";
+
+// number$ no empezará a emitir valores hasta que se haga una llamada a connect
+const number$ = interval(1000).pipe(take(4));
+
+const multicasted$ = number$.pipe(
+  tap(() =>
+    console.log("Fuente compartida, efecto secundario se ejecuta una sola vez")
+  ),
+  publish()
+) as ConnectableObservable<number>;
+
+// Llamando a connect tras 3 seconds
+timer(3000)
+  .pipe(tap(() => multicasted$.connect()))
+  .subscribe();
+
+multicasted$.subscribe((val) => console.log(`Observador 1: ${val}`));
+multicasted$.subscribe((val) => console.log(`Observador 2: ${val}`));
+
+/* Salida:
+Fuente compartida, efecto secundario se ejecuta una sola vez,
+Observador 1: 0,
+Observador 2: 0,
+(1s)
+Fuente compartida, efecto secundario se ejecuta una sola vez,
+Observador 1: 1,
+Observador 2: 1,
+...
+*/
+```
 
 ### Ejemplos de la documentación oficial
 
