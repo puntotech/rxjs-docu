@@ -398,7 +398,7 @@ Cuando se hace una llamada a `observable.subscribe`, el Observador se vincula a 
 const subscription = observable.subscribe((x) => console.log(x));
 ```
 
-La Suscripción representa la ejecución en curso, y tiene una API minimalista que permite cancelar dicha ejecución. Se puede leer más acerca del [tipo Subscription](/concepts/subscription). Con `subscription.unsubscribe()` se puede cancelar la ejecución en curso:
+La Suscripción representa la ejecución en curso, y tiene una API minimalista que permite cancelar dicha ejecución. Se puede leer más acerca del [tipo Subscription aquí](/concepts/subscription). Con `subscription.unsubscribe()` se puede cancelar la ejecución en curso:
 
 ```javascript
 import { from } from "rxjs";
