@@ -29,7 +29,7 @@ El <code>SchedulerLike</code> que utilizar para gestionar los temporizadores que
 
 ### Retorna
 
-`MonoTypeOperatorFunction<T>`: An Observable that performs rate-limiting of emissions from the source Observable.
+`MonoTypeOperatorFunction<T>`: Un Observable que limita las emisiones del Observable fuente.
 
 </details>
 
