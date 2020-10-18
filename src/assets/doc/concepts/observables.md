@@ -84,7 +84,7 @@ En ES2015, se introdujeron [las funciones e iteradores _generator_](https://deve
 
 ¿Qué es _Push_? En los sistemas _Push_, el _Producer_ determina cuándo se le envían los datos al _Consumer_. El _Consumer_ no es consciente de cuándo va a recibir los datos.
 
-Las Promesas son los sistemas _Push_ más comunes que hay hoy en día en JavaScript. Una Promesa (el _Producer_) hace entrega de un valor resuelto a callbacks registradas (los _Consumers_), pero, al contrario que las funciones, es la Promesa la que determina en qué momento se "empuja" el valor a las callbacks.
+Las Promesas son los sistemas _Push_ más comunes que hay hoy en día en JavaScript. Una Promesa (el _Producer_) hace entrega de un valor resuelto a *callbacks* registradas (los _Consumers_), pero, al contrario que las funciones, es la Promesa la que determina en qué momento se "empuja" el valor a las *callbacks*.
 
 RxJS propone Observables, un nuevo sistema _Push_ para JavaScript. Un Observable es un _Producer_ de múltiples valores, "empujándolos" a los Observadores (_Consumers_).
 
@@ -318,7 +318,7 @@ No es una coincidencia que `observable.subscribe` y `subscribe` en `new Observab
 
 Esto muestra que las llamadas `subscribe` no se comparten entre los diversos Observadores del mismo Observable. Al hacer una llamada a `observable.subscribe` desde un Observador, la función `subscribe in new Observable(function subscribe(subscriber) {...})` se ejecuta para dicho suscriptor. Cada llamada a `observable.subscribe` provoca un _setup_ independiente para dicho suscriber.
 
-> Suscribirse a un Observable es como llamar a una función, proporcionando callbacks donde se recibirán los datos.
+> Suscribirse a un Observable es como llamar a una función, proporcionando *callbacks* donde se recibirán los datos.
 
 Esto es drásticamente diferente a las APIs de manejo de eventos como `addEventListener` / `removeEventListener`. Con `observable.subscribe`, el Observador no se registra como un listener en el Observable. El Observable ni siquiera mantiene una lista de Observadores agregados.
 
