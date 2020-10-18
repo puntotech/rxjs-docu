@@ -39,7 +39,7 @@ Dada una función `f` de tipo `f(x, callback)` retornará una función `g`, que 
 
 `bindCallback` no es un operador, dado que ni su entrada ni su salida son Observables. De entrada recibe una función `func` que recibe algunos parámetros. El último parámetro debe ser una función _callback_, a la que `func` hará una llamada cuando haya terminado.
 
-La salid de `bindCallback` es una función que recibe los mismos parámetros que `func`, exceptuando el último (la _callback_.) Cuando se llama a la función de salida con argumentos, esta retorna un Observable. Si la función `func` hace una llamada a su _callback_ con un solo argumento, el Observable resultante emitirá ese valor. Por el contrario, si se hace una llamada a la _callback_ con más de un valor, el Observable resultante emitirá un array con dichos valores como argumentos.
+La salida de `bindCallback` es una función que recibe los mismos parámetros que `func`, exceptuando el último (la _callback_.) Cuando se llama a la función de salida con argumentos, esta retorna un Observable. Si la función `func` hace una llamada a su _callback_ con un solo argumento, el Observable resultante emitirá ese valor. Por el contrario, si se hace una llamada a la _callback_ con más de un valor, el Observable resultante emitirá un array con dichos valores como argumentos.
 
 Es muy importante tener en cuenta que la llamada a la función de entrada `func` no se realiza a la vez que la llamada a la función de salida, sino cuando el Observable retornado por la función de salida es suscrito. Esto implica que si `func` hace una petición AJAX, dicha petición se hará cada vez que se hace una suscripción al Observable resultante, pero no antes.
 
