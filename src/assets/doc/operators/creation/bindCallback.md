@@ -24,7 +24,7 @@
 <tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 Tipo: <code>Function | SchedulerLike</code>.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El planificador con el que planificar las <i>callbacks</i>.</td></tr>
+El planificador con el que planificar las <em>callbacks</em>.</td></tr>
 </table>
 
 ### Retorna
