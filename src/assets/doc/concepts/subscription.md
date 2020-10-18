@@ -1,6 +1,6 @@
 # Suscripción
 
-¿Qué es una Suscripción? Una Suscripción es un objeto que representa un recurso desechable, normalmente la ejecución de un Observable. Las Suscripciones tienen un método importante, `unsubscribe`, que no recibe ningún argumento y se encarga de deshacerse del recurso mantenido por la suscripción. En versiones anteriores de RxJS, la Suscripción llevaba el nombre de "Disposable" ("Desechable".)
+¿Qué es una Suscripción? Una Suscripción es un objeto que representa un recurso desechable, normalmente la ejecución de un Observable. Las Suscripciones tienen un método importante, `unsubscribe`, que no recibe ningún argumento y se encarga de deshacerse del recurso mantenido por la Suscripción. En versiones anteriores de RxJS, la Suscripción llevaba el nombre de "Disposable" ("Desechable".)
 
 ```javascript
 import { interval } from "rxjs";
