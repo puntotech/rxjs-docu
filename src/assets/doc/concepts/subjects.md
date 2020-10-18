@@ -34,7 +34,7 @@ subject.next(2);
 // observerB: 2
 ```
 
-Dado que un Sujeto es un Observador, esto quiere decir que se puede proporcionar un Sujeto como argumento a la función `subscribe` de cualquier Observable, tal y como se muestra a continuación:
+Dado que un Sujeto es un Observador, quiere decir que se puede proporcionar un Sujeto como argumento a la función `subscribe` de cualquier Observable, tal y como se muestra a continuación:
 
 ```javascript
 import { Subject, from } from 'rxjs';
