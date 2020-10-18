@@ -24,10 +24,7 @@
 <table>
 <tr><td>scheduler</td>El planificador que se utilizará para replanificar las notificaciones del Observable fuente.<td></td></tr>
 <tr><td>delay</td><td>Opcional. El valor por defecto es 0.
-
-El número de milisegundos de retraso que se aplicará a la replanificación de cada notificación.
-Number of milliseconds that states with what delay every notification should be rescheduled.</td></tr>
-
+El número de milisegundos de retraso que se aplicará a la replanificación de cada notificación.</td></tr>
 </table>
 
 ### Retorna
