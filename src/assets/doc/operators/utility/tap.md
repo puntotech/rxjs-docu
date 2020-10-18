@@ -40,7 +40,7 @@ Callback for the completion of the source.</td></tr>
 
 Intercepta cada emisión de la fuente y ejecuta una función. Retorna un Observable idéntico a la fuente siempre y cuando no ocurra ningún error.
 
-Retorna un Observable que refleja al Observable fuente, pero modificado de tal manera para que el Observador que se le haya proporcionado al operador pueda ser llamado para llevar a cabo un efecto colateral por cada valor, error o compleción emitidos por el Observable fuente. Si se produce cualquier error en Observador/manejadores mencionados anteriormente, este se envía de forma segura por el canal de error del Observable de salida.
+Retorna un Observable que refleja al Observable fuente, pero modificado de tal manera para que el Observador que se le haya proporcionado al operador pueda ser llamado para llevar a cabo un efecto colateral por cada valor, error o completación emitidos por el Observable fuente. Si se produce cualquier error en Observador/manejadores mencionados anteriormente, este se envía de forma segura por el canal de error del Observable de salida.
 
 Este operador es muy útil para depurar Observables (ver si el valor emitido es correcto) o para llevar a cabo cualquier tipo de efecto colateral.
 
