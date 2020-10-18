@@ -44,9 +44,7 @@ Emite únicamente el valor i-ésimo, y se completa.
 <img src="assets/images/marble-diagrams/filtering/elementAt.png" alt="Diagrama de canicas del operador elementAt">
 
 `elementAt` retorna un Observable que emite el elemento en la posición indicada por el índice, o un valor por defecto si el índice proporcionado está fuera de rango y se proporciona dicho valor por defecto. En el caso de que no se proporcione, el Observable resultante emitirá un error `ArgumentOutOfRangeError`.
-
-returns an Observable that emits the item at the specified index in the source Observable, or a default value if that index is out of range and the default argument is provided. If the default argument is not given and the index is out of range, the output Observable will emit an ArgumentOutOfRangeError error.
-
+s
 ## Ejemplos
 
 **Emitir la segunda emisión del Observable fuente**
