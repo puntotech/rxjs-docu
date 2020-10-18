@@ -22,7 +22,7 @@
 ### Parámetros
 
 <table>
-<tr><td>project</td><td>La functión que se aplica a cada valor emitido por el Observable fuente. El parámetro `index` es el número `i` para la `i`ésima emisión que haya ocurrido desde la suscripción, comenzando por el número 0.</td></tr>
+<tr><td>project</td><td>La función que se aplica a cada valor emitido por el Observable fuente. El parámetro `index` es el número `i` para la `i`ésima emisión que haya ocurrido desde la suscripción, comenzando por el número 0.</td></tr>
 <tr><td>thisArg</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 Un argumento opcional para definir el valor del <code>this</code> en la función de proyección.</td></tr>
 </table>
