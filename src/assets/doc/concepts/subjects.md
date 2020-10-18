@@ -313,7 +313,7 @@ setTimeout(() => {
 
 ## AsyncSubject
 
-El `AsyncSubject` es una variante donde únicamente se envía el último valor de la ejecución Observable a sus Observadores, y esto ocurre solo cuando la ejecución haya completado.
+El `AsyncSubject` es una variante donde únicamente se envía el último valor de la ejecución Observable a sus Observadores, y esto ocurre solo cuando la ejecución se ha completado.
 
 ```javascript
 import { AsyncSubject } from "rxjs";
