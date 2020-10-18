@@ -20,7 +20,7 @@
 ### Parámetros
 
 <table>
-<tr><td>predicate</td>Una función que se llama con cada elemento para comprobar si se cumple o no la condición.<td></td></tr>
+<tr><td>predicate</td><td>Una función que se llama con cada elemento para comprobar si se cumple o no la condición.</td></tr>
 <tr><td>thisArg</td>Opcional. El valor por defecto es <code>undefined</code>.
 Un argumento opcional para determinar el valor del <code>this</code> en la función <code>predicate</code>.<td></td></tr>
 <table>
