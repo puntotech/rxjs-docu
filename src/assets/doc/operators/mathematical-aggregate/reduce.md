@@ -43,6 +43,8 @@ Retorna un Observable que aplica la función acumuladora especificada a cada ele
 
 ## Ejemplos
 
+### Ejemplos de la documentación oficial
+
 **Contar el número de eventos click que ocurran en 5 segundos**
 
 ```javascript
