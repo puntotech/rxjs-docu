@@ -38,7 +38,7 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 `combineAll` recibe un Observable de Observables y recoge todos los Observables que contenga. Una vez que el Observable externo se haya completado, se suscribe a todos los Observables recogidos y combina sus valores mediante la estrategia `combineLatest`, de manera que:
 
 - Cada vez que un Observable interno emite, el Observable resultante emite.
-- Cuando el Observable retornado emite, emite todos los valores recientes de tal manera:
+- Cuando el Observable retornado emite, emite todos los valores recientes de manera que:
   - Si se proporciona una función `project`, se llama a dicha función con cada valor de cada Observable interno en el orden en el que llegaron, y el resultado de la función de proyección es lo que se emite en el Observable resultante.
   - Si no se proporciona una función `project`, el Observable resultante emite un array de todos los valores recientes.
 
