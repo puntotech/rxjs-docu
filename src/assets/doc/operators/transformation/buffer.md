@@ -27,7 +27,7 @@
 
 ### Retorna
 
-`OperatorFunction<T, T[]>`: Un Observable de búfers, que son arrays de valores.
+`OperatorFunction<T, T[]>`: Un Observable de búferes, que son arrays de valores.
 
 </details>
 
