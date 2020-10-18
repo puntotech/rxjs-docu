@@ -324,7 +324,7 @@ function delay(delayInMillis) {
 
 Es importante que:
 
-    1. Se implementen las tres funciones Observer, `next()`, `error()`, and `complete()` when subscribing to the input Observable.
+    1. Se implementen las tres funciones Observer, `next()`, `error()`, y `complete()` a la hora de suscribirse al Observable de entrada.
     2. Se implemente una función *teardown* que se encargue de limpiar (en este caso, cancelando la suscripción y encargándose de cualquier *timeout* pendiente) cuando el Observable se complete.
     3. La función que se le pasa al constructor del Observable retorne la función *teardown*.
 
