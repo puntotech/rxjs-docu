@@ -40,7 +40,7 @@ Espera a que todos los Observables se completen, y combina sus últimas emisione
 
 `forkJoin` espera a que todos los Observables de entrada se completen, y entonces emite un array u objeto con la última emisión de cada uno de estos Observables.
 
-Si se le proporciona un array de n Observables a `forkJoin`, el array resultante contendrá n valores, donde el primer valor es la última emisión del primer Observable, el segundo valor es la última emisión del segundo Observable, y así sucesivamente.
+Si se le proporciona un array de *n* Observables a `forkJoin`, el array resultante contendrá *n* valores, donde el primer valor es la última emisión del primer Observable, el segundo valor es la última emisión del segundo Observable, y así sucesivamente.
 
 Si se le proporciona un diccionario de Observables a `forkJoin` el objeto resultante tendrá las mismas claves que el diccionario. Los últimos valores que se hayan emitido por cada Observable de entrada estarán situados bajo la clave correspondiente.
 
