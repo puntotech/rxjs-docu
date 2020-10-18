@@ -17,7 +17,7 @@ subscription.unsubscribe();
 
 > Una Suscripción contiene una función `unsubscribe()` para desechar recursos o cancelar ejecuciones de Observables.
 
-Las suscripciones también pueden unirse, de manera que una llamada a la funcin `unsubscribe()` de una suscripción pueda cancelar múltiples suscripciones. Se puede lograr esto al "añadir" una suscripción a otra:
+Las suscripciones también pueden unirse, de manera que una llamada a la función `unsubscribe()` de una suscripción pueda cancelar múltiples suscripciones. Se puede lograr esto al "añadir" una suscripción a otra:
 
 ```javascript
 import { interval } from "rxjs";
