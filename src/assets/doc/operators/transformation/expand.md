@@ -31,9 +31,7 @@ El <code>SchedulerLike</code> que se utiliza para suscribirse a cada Observable 
 
 ### Retorna
 
-`OperatorFunction<T, R>`: Un Observable que emite los valores de la fuente y
-
-that emits the source values and also result of applying the projection function to each value emitted on the output Observable and and merging the results of the Observables obtained from this transformation.
+`OperatorFunction<T, R>`: Un Observable que emite los valores de la fuente. También emite el resultado de aplicar la función de proyeccón a cada valor emitido en el Observable de salida, fusionando los Observables obtenidos de esta transformación.
 
 </details>
 
