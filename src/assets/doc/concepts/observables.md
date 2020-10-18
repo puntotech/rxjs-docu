@@ -94,7 +94,7 @@ RxJS propone Observables, un nuevo sistema _Push_ para JavaScript. Un Observable
 
 - Una Promesa es una computación que puede o no retornar finalmente un único valor.
 
-- Un Observable es una computación evaluada de forma perezosa que puede retornar cero o (potencialmente) infinitos valores de forma síncrona o asíncrona desde el momento de la invocación o en delante.
+- Un Observable es una computación evaluada de forma perezosa que puede retornar cero o (potencialmente) infinitos valores de forma síncrona o asíncrona desde el momento de la invocación o en adelante.
 
 ## Observables como generalizaciones de funciones
 
