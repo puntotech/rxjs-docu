@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Crea un Observable que, al ser suscrito, llama a una factoría Observable para crear un Observable nuevo por cada suscriptor
+<h2 class="subtitle"> Crea un Observable que, al ser suscrito, llama a una factoría Observable para crear otro Observable nuevo por cada suscriptor
 
 <div class="fading-line"></div>
 
