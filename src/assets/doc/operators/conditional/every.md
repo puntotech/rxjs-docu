@@ -9,11 +9,7 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Retorna un Observable que emite
-
-Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
-
-</h2>
+<h2 class="subtitle"> Retorna un Observable que emite un valor booleano que determina si todas las emisiones de la fuente cumplen o no una condición</h2>
 
 <details>
 <summary>Signatura</summary>
@@ -22,7 +18,7 @@ Returns an Observable that emits whether or not every item of the source satisfi
 
 `every<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): OperatorFunction<T, boolean>`
 
-### Parameters
+### Parámetros
 
 <table>
 <tr><td>predicate</td><td>Una función que determina si el valor cumple o no la condición.</td></tr>
