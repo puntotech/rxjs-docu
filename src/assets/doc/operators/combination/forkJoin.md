@@ -9,8 +9,7 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Accepts an Array of ObservableInput or a dictionary Object of ObservableInput and returns an Observable that emits eitoeraan array of values in the exact same order as the passed array, or a dictionary of values in the same shape as the passed dictionary.
-</h2>
+<h2 class="subtitle"> Acepta un Array de Observables o un diccionario de Observables, y retorna otro Observable que emite o bien un array de valores en el mismo orden que el array proporcionado, o un diccionario de valores con la misma forma que el diccionario proporcionado</h2>
 
 <details>
 <summary>Signatura</summary>
@@ -37,7 +36,7 @@ Espera a que todos los Observables se completen, y combina sus últimas emisione
 
 <img src="assets/images/marble-diagrams/join-creation/forkJoin.png" alt="Diagrama de canicas del operador forkJoin">
 
-`forkJoin` es un operador que recibe un array de Observables o un diccionario de Observables como parámetro de entrda. Si no se proporciona ningún Observable de entrada, el Observable resultante se completa inmediatamente.
+`forkJoin` es un operador que recibe un array de Observables o un diccionario de Observables como parámetro de entrada. Si no se proporciona ningún Observable de entrada, el Observable resultante se completa inmediatamente.
 
 `forkJoin` espera a que todos los Observables de entrada se completen, y entonces emite un array u objeto con la última emisión de cada uno de estos Observables.
 
