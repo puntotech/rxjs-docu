@@ -68,7 +68,9 @@ Se puede ver la [lista completa de Operadores estáticos de Creación aquí.]()
 
 ## Observables de Orden Superior
 
-Observables most commonly emit ordinary values like strings and numbers, but surprisingly often, it is necessary to handle Observables of Observables, so-called higher-order Observables. For example, imagine you had an Observable emitting strings that were the URLs of files you wanted to see. The code might look like this:
+Los Observables suelen emitir valores ordinarios como cadenas o números, pero a veces (y más a menudo de lo que pudiera parecer), es necesario manejar un Observable que emite Observables, también conocido como un Observable de orden superior. 
+
+Por ejemplo, se podría tener un Observable que emite las URLs de unos ficheros que se quieren ver. El código sería algo parecido a lo siguiente:
 
 ```javascript
 const fileObservable = urlObservable.pipe(map((url) => http.get(url)));
