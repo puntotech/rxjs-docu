@@ -38,7 +38,7 @@ observable.subscribe((x) =>
 );
 ```
 
-Internamente en `observable.subscribe`, se creará un objeto Observer utilizando el primer argumento _callback_ como el manejador `next`. Los tres tipos de _callbacks_ pueden proporcionarse como argumentos:
+Internamente en `observable.subscribe`, se creará un objeto Observador utilizando el primer argumento _callback_ como el manejador `next`. Los tres tipos de _callbacks_ pueden proporcionarse como argumentos:
 
 ```javascript
 observable.subscribe(
