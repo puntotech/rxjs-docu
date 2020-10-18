@@ -44,7 +44,7 @@ Hay que tener en cuenta que `map` tiene que ser construido en el momento, ya que
 
 ## Piping
 
-Los Operadores de tubería son funciones, por lo que pueden utilizarse como funciones normales:`op()(obs)`. Sin embargo, en la práctica, tienden a utilizarse muchos operadores al mismo tiempo, por lo que hacer esto hará que nuestro código sea ilegible: `op4()(op3()(op2()(op1()(obs))))`. Por esta razón, los Observables tienen un método llamado `.pipe()` que cumple esta misma función, de una forma mucho más legible:
+Los Operadores de tubería son funciones, por lo que pueden utilizarse como funciones normales: `op()(obs)`. Sin embargo, en la práctica, tienden a utilizarse muchos operadores al mismo tiempo, por lo que hacer esto hará que nuestro código sea ilegible: `op4()(op3()(op2()(op1()(obs))))`. Por esta razón, los Observables tienen un método llamado `.pipe()` que cumple esta misma función, de una forma mucho más legible:
 
 ```javascript
 obs.pipe(op1(), op2(), op3(), op3());
