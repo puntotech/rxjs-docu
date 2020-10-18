@@ -35,7 +35,7 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 
 <img src="assets/images/marble-diagrams/join-creation/combineAll.png" alt="Diagrama de canicas del operador combineAll">
 
-`combineAll` recibe un Observable de Observables y recoge todos los Observables que contenga. Una vez que el Observable externo se haya completado, se suscribe a todos los Observables recogidos y combina sus valores mediante la estrategía `combineLatest`, de manera que:
+`combineAll` recibe un Observable de Observables y recoge todos los Observables que contenga. Una vez que el Observable externo se haya completado, se suscribe a todos los Observables recogidos y combina sus valores mediante la estrategia `combineLatest`, de manera que:
 
 - Cada vez que un Observable interno emite, el Observable resultante emite.
 - Cuando el Observable retornado emite, emite todos los valores recientes de tal manera:
