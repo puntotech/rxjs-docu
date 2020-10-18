@@ -38,7 +38,7 @@ setTimeout(() => {
 }, 1000);
 ```
 
-Al ejecutar el ejemplo anterior, podemos ver la siguiente salida en la consola:
+Al ejecutar el ejemplo anterior, se puede ver la siguiente salida en la consola:
 
 ```
 second: 0
