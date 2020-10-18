@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
+<h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emisiones del Observable fuente
 </h2>
 
 <details>
