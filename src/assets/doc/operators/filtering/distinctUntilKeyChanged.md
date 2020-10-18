@@ -30,7 +30,7 @@ Función de comparación opcional que se utiliza para comprobar si un elemento e
 
 ### Retorna
 
-`MonoTypeOperatorFunction<T>`: Un Observable that emite elementos del Observable fuente si la propiedad especificada es distinta a la del elemento anterior.
+`MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente si la propiedad especificada es distinta a la del elemento anterior.
 
 </details>
 
