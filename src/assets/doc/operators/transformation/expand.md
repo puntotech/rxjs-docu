@@ -41,15 +41,9 @@ Es similar a `mergeMap`, pero aplica la función de proyección a cada valor de 
 
 <img src="assets/images/marble-diagrams/transformation/expand.png" alt="Diagrama de canicas del operador expand">
 
-Retorna un Observable que aplica una función a cada elemento emitido por el Observable fuente, donde dicha función retorna un Observable, y fusiona los Observables resultantes, emitiendo el resultado de esta fusión. expand reemitirá cada valor de la fuente en el Observable resultante.
+Retorna un Observable que aplica una función a cada elemento emitido por el Observable fuente, donde dicha función retorna otro Observable, y fusiona los Observables resultantes, emitiendo el resultado de esta fusión. expand reemitirá cada valor de la fuente en el Observable resultante.
 
-Entonces, cada valor de salida se le proporciona a la función project, que retorna un Observable interno que se fusiona en el Observable resultante. Esos valores de salida resultantes del a proyección también se le proporcionan a la función project para producir nuevos valores de salida. Así es como expand se comporta de forma recursiva.
-
-// TODO Revisar traducción
-
-Returns an Observable that emits items based on applying a function that you supply to each item emitted by the source Observable, where that function returns an Observable, and then merging those resulting Observables and emitting the results of this merger. Expand will re-emit on the output Observable every source value.
-
-Then, each output value is given to the project function which returns an inner Observable to be merged on the output Observable. Those output values resulting from the projection are also given to the project function to produce new output values. This is how expand behaves recursively.
+Entonces, cada valor de salida se le proporciona a la función de proyección, que retorna un Observable interno que se fusiona en el Observable resultante. Esos valores de salida resultantes de la proyección también se le proporcionan a la función project para producir nuevos valores de salida. Así es como expand se comporta de forma recursiva.
 
 ## Ejemplos
 
