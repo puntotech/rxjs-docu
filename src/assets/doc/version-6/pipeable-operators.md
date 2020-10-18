@@ -33,7 +33,7 @@ Los problemas causados por los operadores de encadenamiento parcheados son los s
 
 1. Cualquier biblioteca que importe un operador de parche aumentará el `Observable.prototype` para cualquier consumidor de dicha biblioteca, creando dependencias ciegas. Si la biblioteca elimina su uso, romperán sin saberlo el código de todos los demás. Con los operadores de tubería, hay que importar los operadores que se necesiten directamente en cada fichero en el que se vayan a utilizar.
 
-2. Los operadores parcheados directamente en el prototype no son "[tree-shakeable](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)" mediante herramientas como rollup o webpack. Los operadores de tubería sí que lo serán, dado que son simples funciones que se importan de los módulos de forma directa.
+2. Los operadores parcheados directamente en el *prototype* no son "[tree-shakeable](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)" mediante herramientas como rollup o webpack. Los operadores de tubería sí que lo serán, dado que son simples funciones que se importan de los módulos de forma directa.
 
 3. Los operadores importados en aplicaciones que no se utilicen no pueden detectarse de forma fiable por ninguna herramienta de compilado ni regla de linter. Esto quiere decir que si se importa el operador `scan`, aunque deje de utilizarse en el código, se seguirá añadiendo al _bundle_ de salida. Con los operadores de tubería, si se deja de darles uso, una regla de linter será capaz de indicárnoslo.
 
