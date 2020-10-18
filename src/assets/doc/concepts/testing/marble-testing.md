@@ -33,7 +33,7 @@ it("generate the stream correctly", () => {
 
 La llamada a la función _callback_ que se proporciona a `testScheduler.run(callback)` se realiza con el objeto `helpers` que contiene las funciones que se utilizan para escribir los tests.
 
-> Cuando el código contenido en la _callback_ se está ejecutando, cualquier operador que utilice temporizadores/`AsyncScheduler` (como `delay`, `debounceTime` etc.) utilizará el `TestScheduler` de forma \*\*automática\*\*, para poporciona "tiempo virtual". Ya no es necesario proporcionarles el `TestScheduler`, como se hacía anteriormente.
+> Cuando el código contenido en la _callback_ se está ejecutando, cualquier operador que utilice temporizadores/`AsyncScheduler` (como `delay`, `debounceTime` etc.) utilizará el `TestScheduler` de forma \*\*automática\*\*, para proporciona "tiempo virtual". Ya no es necesario proporcionarles el `TestScheduler`, como se hacía anteriormente.
 
 ```javascript
 testScheduler.run((helpers) => {
