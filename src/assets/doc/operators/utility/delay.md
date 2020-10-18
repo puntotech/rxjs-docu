@@ -22,7 +22,7 @@
 ### Parámetros
 
 <table>
-<tr><td>delay</td><td>La duración del retraso en milisegundos (un número) o la fecha hasta la que se retrasa la emisión de los elementos. The delay duration in milliseconds (a number) or a Date until which the emission of the source items is delayed.</td></tr>
+<tr><td>delay</td><td>La duración del retraso en milisegundos (un número) o la fecha hasta la que se retrasa la emisión de los elementos.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
 El <code>SchedulerLike</code> que se utiliza para gestionar los temporizadores que se encargan de retrasar cada elemento.</td></tr>
 </table>
