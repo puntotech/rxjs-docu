@@ -22,7 +22,7 @@
 ### Parámetros
 
 <table>
-<tr><td>selector</td>Una función que recibe como argumentos <code>err</code>, que es el error, y <code>caught</code>, que es el Observable fuente, por si se quiere "reiniciar" el Observable devolviéndolo otra vez. El Observable que se retorne por el selector es el que se utilizará para continuar la cadena Observable.<td></td></tr>
+<tr><td>selector</td><td>Una función que recibe como argumentos <code>err</code>, que es el error, y <code>caught</code>, que es el Observable fuente, por si se quiere "reiniciar" el Observable devolviéndolo otra vez. El Observable que se retorne por el selector es el que se utilizará para continuar la cadena Observable.</td></tr>
 </table>
 
 ### Retorna
