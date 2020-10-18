@@ -104,7 +104,7 @@ El Planificador `async` es uno de los Planificadores que proporciona RxJS. Cada 
 <table>
 <tr><th>Planificador</th><th>Función</th></tr>
 <tr><td>null</td><td> 	Si no se proporciona un planificador, las notificaciones se emiten de forma síncrona y recursiva. Se debe utilizar para operaciones de tiempo constante u operaciones recursivas lineales finales.</td></tr>
-<tr><td>queueScheduler</td><td> 	Planifica en una cola en el *event frame* actual (planificador trampolín.) Se debe utilizar para operaciones de iteración. on a queue in the current event frame (trampoline scheduler). Use this for iteration operations.</td></tr>
+<tr><td>queueScheduler</td><td> 	Planifica en una cola en el *event frame* actual (planificador trampolín.) Se debe utilizar para operaciones de iteración.</td></tr>
 <tr><td>asapScheduler</td><td> 	Planifica en la cola de *micro task*, que es la misma cola que se utiliza para las promesas. Básicamente se planifica después de la tarea actual, pero antes de la siguiente tarea. Se debe utilizar para conversiones asíncronas.</td></tr>
 <tr><td>asyncScheduler</td><td> 	Planifica tareas con setInterval. Se debe utilizar para operaciones basadas en el tiempo.</td></tr>
 <tr><td>animationFrameScheduler</td><td> 	Planifica una tarea que ocurrirá justo antes del siguiente repintado del contenido del navegador. Se puede utilizar para crear animaciones más fluidas en el navegador.</td></tr>
