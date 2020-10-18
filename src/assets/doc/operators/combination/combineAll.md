@@ -39,7 +39,7 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 
 - Cada vez que un Observable interno emite, el Observable resultante emite.
 - Cuando el Observable retornado emite, emite todos los valores recientes de tal manera:
-  - Si se proporciona una función `project`, se llama dicha función con cada valor de cada Observable interno en el orden en el que llegaron, y el resultado de la función de proyección es lo que se emite en el Observable resultante.
+  - Si se proporciona una función `project`, se llama a dicha función con cada valor de cada Observable interno en el orden en el que llegaron, y el resultado de la función de proyección es lo que se emite en el Observable resultante.
   - Si no se proporciona una función `project`, el Observable resultante emite un array de todos los valores recientes.
 
 ## Ejemplos
