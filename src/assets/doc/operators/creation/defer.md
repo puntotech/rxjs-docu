@@ -13,7 +13,10 @@
 
 <div class="fading-line"></div>
 
-<h2 class="subtitle"> Firma
+<details> 
+<summary>Signatura</summary>
+
+### Firma
 
 `defer<R extends ObservableInput<any> | void>(observableFactory: () => R): Observable<ObservedValueOf<R>>`
 
@@ -27,8 +30,6 @@ Puede retornar una Promesa, que se convertirá en Observable sobre la marcha.</t
 ### Retorna
 
 `Observable<ObservedValueOf<R>>`: Un Observable cuyos Observadores disparan la invocación de la función factoría Observable proporcionada al suscribirse.
-
-<div class="fading-line"></div>
 
 </details>
 
