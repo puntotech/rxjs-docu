@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite
+<h2 class="subtitle"> Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite un valor
 </h2>
 
 <details>
