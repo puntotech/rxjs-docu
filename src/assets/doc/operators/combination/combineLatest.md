@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Combina varios Observables para crear un Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
+<h2 class="subtitle"> Combina varios Observables para crear otro Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
 </h2>
 
 <details>
