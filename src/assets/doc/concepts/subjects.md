@@ -340,4 +340,4 @@ subject.complete();
 // observerB: 5
 ```
 
-El `AsyncSubject` es similar al operador [last()](/operators/filtering/last), ya que espera a haber recibido la notificacin `complete` para enviar el valor último.
+El `AsyncSubject` es similar al operador [last()](/operators/filtering/last), ya que espera a haber recibido la notificación `complete` para enviar el valor último.
