@@ -42,9 +42,7 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 Cuando el Observable emite un elemento, se computa una clave para dicho elemento mediante la función `keySelector`.
 
-Si existe un GroupedObservable para la clave, el GroupedObservable emite.
-
-If a GroupedObservable for this key exists, this GroupedObservable emits. Elsewhere, a new GroupedObservable for this key is created and emits.
+Si existe un GroupedObservable para dicha clave, el GroupedObservable emite. Si no existe, se crea un GroupedObservable para dicha clave y emite.
 
 Un GroupedObservable representa valores que pertenecen al mismo grupo, representado por una clave. La clave está disponible como el campo key de una instancia GroupedObservable.
 
