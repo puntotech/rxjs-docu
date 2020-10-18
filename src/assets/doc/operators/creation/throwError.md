@@ -22,7 +22,7 @@
 ### Parámetros
 
 <table>
-<tr><td>error</td><td>The particular Error to pass to the error notification.</td></tr>
+<tr><td>error</td><td>El Error que se le proporciona a la notificación error.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 El <code>SchedulerLike</code> que utilizar para planificar la emisión de la notificación <code>error</code>.</td></tr>
 
