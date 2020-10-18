@@ -40,7 +40,7 @@ Una función booleana para seleccionar qué valores se cuenta. Consta de los sig
 
 ## Descripción
 
-Indica cuántos valores se han emitido cuanod la fuente se completa.
+Indica cuántos valores se han emitido cuando la fuente se completa.
 
 <img src="assets/images/marble-diagrams/mathematical-aggregate/count.png" alt="Diagrma de cancias del operador count">
 
