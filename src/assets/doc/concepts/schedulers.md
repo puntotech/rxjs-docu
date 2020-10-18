@@ -116,7 +116,7 @@ Es posible haber utilizado Planificadores en código RxJS sin tener que declarar
 
 Dado que RxJS utiliza el Planificador de concurrencia mínima, se puede elegir un Planificador si se quiere introducir concurrencia por razones de rendimiento. Para especificar un Planificador concreto, se pueden utilizar aquellos métodos de operador que reciban un Planificador, ej: `from([10, 20, 30], asyncScheduler)`.
 
-Los operadores de creación estáticos suelen recibir un Planificador como argumento. Por ejemplo, `from(array, scheduler)` nos permite especificar el Planificador que vaya a utilizarse para enviar cada notificación convertida del `array`. Suele ser el último argumento que recibe el operador. Los siguientes operadores de creación estáticos reciben un Planificador como argumento:
+Los operadores de creación estáticos suelen recibir un Planificador como argumento. Por ejemplo, `from(array, scheduler)`, que nos permite especificar el Planificador que vaya a utilizarse para enviar cada notificación convertida del `array`. Suele ser el último argumento que recibe el operador. Los siguientes operadores de creación estáticos reciben un Planificador como argumento:
 
 - `bindCallback`
 - `bindNodeCallback`
