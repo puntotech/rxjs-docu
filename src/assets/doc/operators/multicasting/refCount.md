@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<h2> Hace que un ConnectableObservable se comporte como un Obesrvable normal, y automatiza la forma de conectarse a él</h2>
+<h2 class="subtitle"> Hace que un ConnectableObservable se comporte como un Obesrvable normal, y automatiza la forma de conectarse a él</h2>
 
 💡 Utilizar el operador <a href="/operators/multicasting/share">share</a> es equivalente a utilizar el operador <a href="/operators/multicasting/publish">publish</a> (convirtiendo el Observable en uno caliente) junto al operador refCount.
 
