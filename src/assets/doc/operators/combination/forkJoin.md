@@ -9,8 +9,7 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Accepts an Array of ObservableInput or a dictionary Object of ObservableInput and returns an Observable that emits eitoeraan array of values in the exact same order as the passed array, or a dictionary of values in the same shape as the passed dictionary.
-</h2>
+<h2 class="subtitle"> Acepta un Array de Observables o un diccionario de Observables, y retorna otro Observable que emite o bien un array de valores en el mismo orden que el array proporcionado, o un diccionario de valores con la misma forma que el diccionario proporcionado</h2>
 
 <details>
 <summary>Signatura</summary>
@@ -37,17 +36,17 @@ Espera a que todos los Observables se completen, y combina sus últimas emisione
 
 <img src="assets/images/marble-diagrams/join-creation/forkJoin.png" alt="Diagrama de canicas del operador forkJoin">
 
-`forkJoin` es un operador que recibe un array de Observables o un diccionario de Observables como parámetro de entrda. Si no se proporciona ningún Observable de entrada, el Observable resultante se completa inmediatamente.
+`forkJoin` es un operador que recibe un array de Observables o un diccionario de Observables como parámetro de entrada. Si no se proporciona ningún Observable de entrada, el Observable resultante se completa inmediatamente.
 
 `forkJoin` espera a que todos los Observables de entrada se completen, y entonces emite un array u objeto con la última emisión de cada uno de estos Observables.
 
-Si se le proporciona un array de n Observables a `forkJoin`, el array resultante contendrá n valores, donde el primer valor es la última emisión del primer Observable, el segundo valor es la última emisión del segundo Observable, y así sucesivamente.
+Si se le proporciona un array de *n* Observables a `forkJoin`, el array resultante contendrá *n* valores, donde el primer valor es la última emisión del primer Observable, el segundo valor es la última emisión del segundo Observable, y así sucesivamente.
 
 Si se le proporciona un diccionario de Observables a `forkJoin` el objeto resultante tendrá las mismas claves que el diccionario. Los últimos valores que se hayan emitido por cada Observable de entrada estarán situados bajo la clave correspondiente.
 
 `forkJoin` emite una única vez, y se completará justo después. Si se necesita emitir valores combinados durante el ciclo de vida de los Observables de entrada, se recomienza utilizar [combineLatest](/operators/combination/combineLatest) o [zip](/operators/combination/zip).
 
-Para que el array resultante tenga la misma longitud que el número de Observables de entrada, cuando alguno de dichos Observables se complete sin emitir ningún valor, `forkJoin` también se completará y no emitirá ningún valor, aunque ya tenga recogidos algunos valores de los demás Observables. Además, si hay algún Observable que nunca llegue a completarse, `forkJoin` tampoco se completará, a no ser que, en cualquier momento, alguno de los demás Observables de entrada se complete sin emitir ningún valor, lo que nos trae de vuelta al caso anterior. Como norma general, para que `forkJoin` pueda emitir un valor, todos los Observables de entrada tienen que emitir mínimo un valor, y completarse.
+Para que el array resultante tenga la misma longitud que el número de Observables de entrada, cuando alguno de dichos Observables se complete sin emitir ningún valor, `forkJoin` también se completará y no emitirá ningún valor, aunque ya tenga recogidos algunos valores de los demás Observables. Además, si hay algún Observable que nunca llegue a completarse, `forkJoin` tampoco se completará, a no ser que, en cualquier momento, alguno de los demás Observables de entrada se complete sin emitir ningún valor, lo que nos trae de vuelta al caso anterior. Como norma general, para que `forkJoin` pueda emitir un valor, todos los Observables de entrada tienen que emitir como mínimo un valor, y completarse.
 
 Si alguno de los Observables de entrada lanza un error, `forkJoin` también lo hará, y se cancelará la suscripción a todos los demás Observables de entrada.
 

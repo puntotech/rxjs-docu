@@ -9,11 +9,14 @@
 </a>
 </div>
 
-<h2 class="subtitle"> Crea un Observable que, al ser suscrito, llama a una factoría Observable para crear un Observable nuevo por cada suscriptor
+<h2 class="subtitle"> Crea un Observable que, al ser suscrito, llama a una factoría Observable para crear otro Observable nuevo por cada suscriptor
 
 <div class="fading-line"></div>
 
-<h2 class="subtitle"> Firma
+<details> 
+<summary>Signatura</summary>
+
+### Firma
 
 `defer<R extends ObservableInput<any> | void>(observableFactory: () => R): Observable<ObservedValueOf<R>>`
 
@@ -27,8 +30,6 @@ Puede retornar una Promesa, que se convertirá en Observable sobre la marcha.</t
 ### Retorna
 
 `Observable<ObservedValueOf<R>>`: Un Observable cuyos Observadores disparan la invocación de la función factoría Observable proporcionada al suscribirse.
-
-<div class="fading-line"></div>
 
 </details>
 

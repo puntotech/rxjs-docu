@@ -35,7 +35,7 @@ Concatena varios Observables, uno tras otro, emitiendo secuencialmente sus valor
 
 <img src="assets/images/marble-diagrams/join-creation/concat.png" alt="Diagrama de canicas del operador concat">
 
-`concat` une varios Observables, suscribiéndose a ellos de uno en uno y fusionando los valores que emitan en el Observable resultante. Los Observables de netrada se pueden proporcionar en un array, o directamente como argumentos. Proporcionarle un array vacío a `concat` resulta en un Observable que se completa inmediatamente.
+`concat` une varios Observables, suscribiéndose a ellos de uno en uno y fusionando los valores que emitan en el Observable resultante. Los Observables de entrada se pueden proporcionar en un array, o directamente como argumentos. Proporcionarle un array vacío a `concat` resulta en un Observable que se completa inmediatamente.
 
 `concat` se suscribe al primer Observable de entrada y emite todos sus valores intactos, sin cambiarlos ni transformarlos. Cuando ese primer Observable se completa, se suscribe al siguiente Observable y, de nuevo, emite todos sus valores. Este proceso se repite hasta que el operador agote todos los Observables de entrada. Cuando el último Observable de entrada se complete, `concat` también se completará. `concat` emite los valores de un solo Observable cada vez.
 

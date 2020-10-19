@@ -22,7 +22,7 @@
 ### Parámetros
 
 <table>
-<tr><td>selector</td>Una función que recibe como argumentos <code>err</code>, que es el error, y <code>caught</code>, que es el Observable fuente, por si se quiere "reiniciar" el Observable devolviéndolo otra vez. El Observable que se retorne por el selector es el que se utilizará para continuar la cadena Observable.<td></td></tr>
+<tr><td>selector</td><td>Una función que recibe como argumentos <code>err</code>, que es el error, y <code>caught</code>, que es el Observable fuente, por si se quiere "reiniciar" el Observable devolviéndolo otra vez. El Observable que se retorne por el selector es el que se utilizará para continuar la cadena Observable.</td></tr>
 </table>
 
 ### Retorna
@@ -75,9 +75,11 @@ error$
 // Salida: (Error) Lanzando un nuevo error: Oh no!
 ```
 
-**Al capturar los errores que ocurren en un Observable interno (un Observable emitido por un Observable de orden superior), se debe tener cuidado a la hora de utilizar el operador `catchError` ya que, si se coloca en el sitio equivocado, el flujo del Observable fuente no seguirá ejecutándose tras capturar el error.**
+**Capturar los errores de un Observable interno**
 
-**A continuación, se puede ver cómo el uso incorrecto de `catchError` hará que, después de capturar el error que devuelve la primera petición, el flujo se completará y no se harán las otras dos peticiones restantes:**
+Al capturar los errores que ocurren en un Observable interno (un Observable emitido por un Observable de orden superior), se debe tener cuidado a la hora de utilizar el operador `catchError` ya que, si se coloca en el sitio equivocado, el flujo del Observable fuente no seguirá ejecutándose tras capturar el error.
+
+A continuación, se puede ver cómo el uso incorrecto de `catchError` hará que, después de capturar el error que devuelve la primera petición, el flujo se completará y no se harán las otras dos peticiones restantes:
 
 <a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-catcherror-inner?file=index.ts">StackBlitz</a>
 
@@ -103,7 +105,7 @@ pokemonId$
 // Salida: ¡Oh no, ha ocurrido un error! AjaxError: ajax error 404, Completado
 ```
 
-**Sin embargo, si se utiliza `catchError` en el Observable interno, el comportamiento es el que se busca: cuando falle la primera petición, se capturará el error y el flujo seguirá ejecutándose, realizando las dos peticiones r**estantes:
+Sin embargo, si se utiliza `catchError` en el Observable interno, el comportamiento es el que se busca: cuando falle la primera petición, se capturará el error y el flujo seguirá ejecutándose, realizando las dos peticiones restantes:
 
 <a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-catcherror-inner-2?file=index.ts">StackBlitz</a>
 

@@ -38,8 +38,7 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 
 ## Descripción
 
-Se utiliza cuando `fromEvent` n
-When that method for adding event handler was something fromEvent was not prepared for.
+Se utiliza cuando `fromEvent` no está preparado para manejar un determinado método para añadir manejadores de eventos.
 
 <img src="assets/images/marble-diagrams/fromEventPattern.png" alt="Diagrama de canicas de fromEventPattern">
 

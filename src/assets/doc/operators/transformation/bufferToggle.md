@@ -21,7 +21,7 @@
 ### Parámetros
 
 <table>
-<tr><td>openings</td><td>Un <code>Subscribable</code> o <code>Promise</code> de notificaciones para abrir nuevos búfers.</td></tr>
+<tr><td>openings</td><td>Un <code>Subscribable</code> o <code>Promise</code> de notificaciones para abrir nuevos búferes.</td></tr>
 <tr><td>closingSelector</td><td>Una función que recibe el valor emitido por el Observable <code>openings</code> y retorna un <code>Subscribable</code> o <code>Promise</code>, que señala, mediante emisiones, que el búfer asociado debe ser emitido y cerrado.</td></tr>
 </table>
 

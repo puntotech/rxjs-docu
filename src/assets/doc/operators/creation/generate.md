@@ -41,15 +41,28 @@ Se utiliza en lugar de hacer llamadas a `next` dentro de un bucle for.
 
 <img src="assets/images/marble-diagrams/creation/generate.png" alt="Diagrama de canicas de generate">
 
-generate allows you to create stream of values generated with a loop very similar to traditional for loop. First argument of generate is a beginning value. Second argument is a function that accepts this value and tests if some condition still holds. If it does, loop continues, if not, it stops. Third value is a function which takes previously defined value and modifies it in some way on each iteration. Note how these three parameters are direct equivalents of three expressions in regular for loop: first expression initializes some state (for example numeric index), second tests if loop can make next iteration (for example if index is lower than 10) and third states how defined value will be modified on every step (index will be incremented by one).
+generate permite crear un flujo de valores generador con un bucle muy similar a un bucle for tradicional. 
 
-Return value of a generate operator is an Observable that on each loop iteration emits a value. First, condition function is ran. If it returned true, Observable emits currently stored value (initial value at the first iteration) and then updates that value with iterate function. If at some point condition returned false, Observable completes at that moment.
+- El primer argumento de generate es el valor inicial.
+- El segundo valor es una función que acepta este valor y comprueba si una condición se sigue o no cumpliendo. En caso afirmativo, el bucle continúa. Si no, el bucle se para.
+- El tercer valor es una función que recibe el valor definido anteriormente y lo modifica en cada iteración.
 
-Optionally you can pass fourth parameter to generate - a result selector function which allows you to immediately map value that would normally be emitted by an Observable.
+Estos tres parámetros son equivalentes a las tres expresiones de un bucle for tradicional: la primera expresión inicializa un estado (como por ejemplo un índice numérico), la segunda comprueba si el bucle puede o no hacer la siguiente iteración (como por ejemplo si el índice es menor que 10) y la tercera indica cómo el valor definido se modifica en cada iteración (como por ejemplo, incrementar dicho valor en 1.)
 
-If you find three anonymous functions in generate call hard to read, you can provide single object to the operator instead. That object has properties: initialState, condition, iterate and resultSelector, which should have respective values that you would normally pass to generate. resultSelector is still optional, but that form of calling generate allows you to omit condition as well. If you omit it, that means condition always holds, so output Observable will never complete.
+El vaor retornado del operador generate es un Observable que emite un valor en cada iteración del bucle. Primero, se ejecuta la función de condición. Si la función retorna *true*, el Observable emite el valor almacenado (el valor inicial en la primera iteración) y después actualiza dicho valor con la función de iteración. Si en algún momento la función de condición retorna *false*, el Observable se completa.
 
-Both forms of generate can optionally accept a scheduler. In case of multi-parameter call, scheduler simply comes as a last argument (no matter if there is resultSelector function or not). In case of single-parameter call, you can provide it as a scheduler property on object passed to the operator. In both cases scheduler decides when next iteration of the loop will happen and therefore when next value will be emitted by the Observable. For example to ensure that each value is pushed to the observer on separate task in event loop, you could use async scheduler. Note that by default (when no scheduler is passed) values are simply emitted synchronously.
+Opcionalmente, se le puede proporcionar un cuarto parámetro a generate - una función de selección de resultado.
+
+Si se encuentra que las tres funciones anónimas en la llamada a generate son difíciles de leer, se le puede proporcionar un solo objeto en su lugar. Dicho objeto tiene las siguientes propiedades:
+
+- initialState
+- condition
+- iterate
+- resultSelector
+
+La propiedad condition es opcional en este objeto. Si se omite dicha propiedad, la condición siempre se cumplirá, por lo que el Observable de salida nunca llegará a completarse. El valor de la propiedad resultSelector sigue siendo opcional. 
+
+Ambas formas de generate reciben un planificador de forma opcional. En el caso de la llamada multiparámetro, el planificador se proporciona como último argumento (independientemente de que haya una función resultSelector o no.) En el caso de la llamada monoparámetro, se puede proporcionar como propiedad *scheduler* en el objeto proporcionado al operador. En ambos casos el planificador decide el momento en el que ocurre la siguiente iteración del bucle, y por tanto, cuándo se emite la siguiente notificación next. Por ejemplo, para asegurar que cada valor se emite en una tarea distinta del bucle de eventos, se puede utilizar el Planificador async. Por defecto los valores se emiten de forma síncrona.
 
 ## Ejemplos
 

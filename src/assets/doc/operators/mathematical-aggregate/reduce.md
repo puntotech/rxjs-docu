@@ -43,7 +43,9 @@ Retorna un Observable que aplica la función acumuladora especificada a cada ele
 
 ## Ejemplos
 
-Count the number of click events that happened in 5 seconds
+### Ejemplos de la documentación oficial
+
+**Contar el número de eventos click que ocurran en 5 segundos**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";

@@ -22,7 +22,7 @@
 ### Parámetros
 
 <table>
-<tr><td>project</td><td>A function that, when applied to an item emitted by the source Observable, ### retorns an Observable.<atd></tr>
+<tr><td>project</td><td>Una función que, al aplicarse a un elemento emitido por el Observable fuente, retorna otro Observable.<td></tr>
 <tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 `Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R</code>.</td></tr>`
 </table>
