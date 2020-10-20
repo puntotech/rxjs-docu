@@ -92,6 +92,4 @@ result.subscribe((x) => console.log(x));
 </a>
 </div>
 
--
-
 - <a target="_blank" href="https://rxjs.dev/api/operators/throttle">Documentación oficial en inglés</a>
