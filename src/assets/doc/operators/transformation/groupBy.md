@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # groupBy
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle">Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo </h2>
 
@@ -264,6 +255,15 @@ Tipo: <code>() => Subject</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/groupBy">Documentación oficial en inglés</a>

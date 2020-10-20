@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # find
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición</h2>
 
@@ -113,6 +104,15 @@ const result = clicks.pipe(find((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/find">Documentación oficial en inglés</a>

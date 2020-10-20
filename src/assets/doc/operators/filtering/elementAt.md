@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # elementAt
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emisiones del Observable fuente
 </h2>
@@ -45,6 +36,7 @@ Emite únicamente el valor i-ésimo, y se completa.
 
 `elementAt` retorna un Observable que emite el elemento en la posición indicada por el índice, o un valor por defecto si el índice proporcionado está fuera de rango y se proporciona dicho valor por defecto. En el caso de que no se proporcione, el Observable resultante emitirá un error `ArgumentOutOfRangeError`.
 s
+
 ## Ejemplos
 
 **Emitir la segunda emisión del Observable fuente**
@@ -111,6 +103,15 @@ result.subscribe((x) => console.log(x));
 // click 3 = objeto MouseEvent
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/elementAt">Documentación oficial en inglés</a>

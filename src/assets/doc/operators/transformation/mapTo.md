@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # mapTo
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mapTo.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite el mismo valor cada vez que el Observable fuente emite un valor
 </h2>
@@ -82,6 +73,15 @@ const greetings = clicks.pipe(mapTo("Hi"));
 greetings.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mapTo.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/mapTo">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # map
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
 </h2>
@@ -84,6 +75,15 @@ const positions = clicks.pipe(map((ev) => ev.clientX));
 positions.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/map">Documentación oficial en inglés</a>

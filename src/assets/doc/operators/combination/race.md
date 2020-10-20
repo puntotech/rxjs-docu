@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # race
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retorna un Observable que refleja al primer Observable que emita un valor
 </h2>
@@ -397,6 +388,15 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a href="https://rxjs.dev/api/index/function/race">Documentación oficial en inglés</a>

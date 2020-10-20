@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # concatMap
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMap.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante de forma secuencial, esperando a que cada Observable interno esté completo antes de unir el siguiente</h2>
 
@@ -182,6 +173,15 @@ result.subscribe((x) => console.log(x));
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/concatMap">Documentación oficial en inglés</a>

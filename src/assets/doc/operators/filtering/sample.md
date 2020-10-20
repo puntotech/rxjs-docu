@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # sample
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sample.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite un valor
 </h2>
@@ -88,6 +79,15 @@ const result = seconds.pipe(sample(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sample.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/sample">Documentación oficial en inglés</a>

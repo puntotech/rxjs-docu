@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # share
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Comparte el Observable fuente entre varios suscriptores</h2>
 
@@ -99,13 +90,22 @@ const ghibliFilmDescription$ = ghibliFilm$.pipe(
 ghibliFilmTitle$.subscribe(console.log);
 
 ghibliFilmDescription$.subscribe(console.log);
-/* Salida: 
+/* Salida:
 'Nueva petición'
 'Castle in the Sky',
 'The orphan Sheeta inherited a mysterious crystal that links her to the mythical...'
 */
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/share">Documentación oficial en inglés</a>

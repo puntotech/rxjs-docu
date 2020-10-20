@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # dematerialize
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Convierte un Observable de objetos Notification en las emisiones que representan
 </h2>
@@ -92,6 +83,15 @@ upperCase.subscribe(
 // TypeError: x.toUpperCase is not a function
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/dematerialize">Documentación oficial en inglés</a>

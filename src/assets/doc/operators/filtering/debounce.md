@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # debounce
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado por otro Observable sin que el Observable fuente emita ningún valor
 </h2>
@@ -94,6 +85,15 @@ const result = clicks.pipe(debounce(() => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/debounce">Documentación oficial en inglés</a>

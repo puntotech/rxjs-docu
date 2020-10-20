@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # timeout
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
 </h2>
@@ -141,6 +132,15 @@ seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
 );
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/timeout">Documentación oficial en inglés</a>

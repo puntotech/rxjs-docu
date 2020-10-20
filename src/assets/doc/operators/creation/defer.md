@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # defer
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/defer.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable que, al ser suscrito, llama a una factoría Observable para crear otro Observable nuevo por cada suscriptor
 
@@ -106,6 +97,15 @@ clicksOrInterval.subscribe((x) => console.log(x));
 // Si el resultado de Math.random() es mayor que 0.5 se suscribirá al Observable de clicks. Si el resultado es menor que 0.5 se suscribirá al Observable intervalo
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/defer.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/defer">Documentación oficial en inglés</a>

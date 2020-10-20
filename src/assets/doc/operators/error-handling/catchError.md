@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # catchError
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/catchError.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Captura errores en el Observable que se manejan devolviendo un Observable nuevo o lanzando un error
 </h2>
@@ -200,6 +191,15 @@ of(1, 2, 3, 4, 5)
 // 1, 2, 3, error en la fuente. Detalles: four!
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/catchError.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/catchError">Documentación oficial en inglés</a>

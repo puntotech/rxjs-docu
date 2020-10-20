@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # bufferWhen
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
 </h2>
@@ -85,6 +76,15 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/bufferWhen">Documentación oficial en inglés</a>

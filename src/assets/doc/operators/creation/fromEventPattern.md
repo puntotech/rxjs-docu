@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # fromEventPattern
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
 </h2>
@@ -115,6 +106,15 @@ Usar `fromEventPattern` con función de proyección
     // "EVENT_TYPE --- EVENT_MESSAGE"
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/fromEventPattern">Documentación oficial en inglés</a>

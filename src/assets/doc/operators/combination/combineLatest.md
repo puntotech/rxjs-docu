@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # combineLatest
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineLatest.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Combina varios Observables para crear otro Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
 </h2>
@@ -37,7 +28,7 @@ Cuando uno de los Observables de entrada emite un valor, utiliza las últimas em
 
 <img src="assets/images/marble-diagrams/join-creation/combineLatest.png" alt="Diagrama de canicas del operador combineLatest">
 
-`combineLatest` combina los valores de todos los Observables de entrada. Para ello, se suscribe a cada uno de los Observables en orden, y cuando alguno de los Observables emite, recoge las emisiones más recientes de cada uno en un array. Por tanto, si se le proporcionan *n* Observables al operador, el Observable retornado siempre emitirá un array de *n* valores, en el orden en el que los Observables se hayan pasado como parámetros (el valor del primer Observable estará en la primera posición del array etc.)
+`combineLatest` combina los valores de todos los Observables de entrada. Para ello, se suscribe a cada uno de los Observables en orden, y cuando alguno de los Observables emite, recoge las emisiones más recientes de cada uno en un array. Por tanto, si se le proporcionan _n_ Observables al operador, el Observable retornado siempre emitirá un array de _n_ valores, en el orden en el que los Observables se hayan pasado como parámetros (el valor del primer Observable estará en la primera posición del array etc.)
 
 La versión estática de `combineLatest` acepta un array de Observables o varios Observables pasados directamente como argumentos individuales. Se debe tener en cuenta que el array de Observables es una buena opción, si no se sabe de antemano cuántos Observables se van a combinar. Proporcionarle un array vacío a `combineLatest` resulta en un Observable que se completa inmediatamente.
 
@@ -913,6 +904,15 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineLatest.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/combineLatest">Documentación oficial en inglés</a>

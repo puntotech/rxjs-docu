@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # skipLast
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipLast.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Saltar las últimas x emisiones del Observable fuente
 </h2>
@@ -93,6 +84,15 @@ skipLastTwo.subscribe((x) => console.log(x));
 // 1 2 3
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipLast.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/skipLast">Documentación oficial en inglés</a>

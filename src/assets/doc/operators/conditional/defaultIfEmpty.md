@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # defaultIfEmpty
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
 </h2>
@@ -89,6 +80,15 @@ const result = clicksBeforeFive.pipe(defaultIfEmpty("Ningún click"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/defaultIfEmpty">Documentación oficial en inglés</a>
