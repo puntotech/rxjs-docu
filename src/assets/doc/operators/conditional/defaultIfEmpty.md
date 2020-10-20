@@ -15,7 +15,7 @@
 <table>
 <tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>null</code>.
 El valor por defecto utilizado en el caso de que el Observable esté vacío.</td></tr>
-<table>
+</table>
 
 ### Retorna
 
