@@ -4,6 +4,9 @@
 
 💡 `concatMapTo` siempre utiliza el mismo Observable interno, sin tener en cuenta el valor emitido por la fuente. Si se quiere tener en cuenta el valor emitido, se debe utilizar `concatMap`
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `concatMapTo<T, R, O extends ObservableInput<any>>(innerObservable: O, resultSelector?: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, ObservedValueOf<O> | R>`
