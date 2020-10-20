@@ -18,6 +18,8 @@ No recibe ningún parámetro.
 
 `OperatorFunction<Notification<T>, T>`: Un Observable que emite elementos y notificaciones embebidos en objetos `Notification` emitidos por el Observable fuente.
 
+</details>
+
 ## Description
 
 Transforma los objetos `Notification` en emisiones `next`, `error` y `complete`. Es el operador opuesto a `materialize`.
