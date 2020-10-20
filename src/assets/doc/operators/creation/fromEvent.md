@@ -125,6 +125,8 @@ copie$.subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
+**Emitir los clicks que ocurran en el DOM**
+
 ```javascript
 import { fromEvent } from "rxjs";
 
@@ -134,6 +136,8 @@ clicks.subscribe((x) => console.log(x));
 // Salida:
 // (click) MouseEvent{...} (click) MouseEvent{...}
 ```
+
+**Usar addEventListener con la opción de captura**
 
 ```javascript
 import { fromEvent } from "rxjs";

@@ -4,6 +4,9 @@
 
 💡 Si la _callback_ sigue la convención de Node.js, es mejor utilizar [bindNodeCallback](/operators/creation/bindNodeCallback)
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `bindCallback<T>(callbackFunc: Function, resultSelector?: Function | SchedulerLike, scheduler?: SchedulerLike): (...args: any[]) => Observable<T>`

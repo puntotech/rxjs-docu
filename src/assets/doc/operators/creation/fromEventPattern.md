@@ -31,7 +31,7 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 
 Se utiliza cuando `fromEvent` no está preparado para manejar un determinado método para añadir manejadores de eventos.
 
-<img src="assets/images/marble-diagrams/fromEventPattern.png" alt="Diagrama de canicas de fromEventPattern">
+<img src="assets/images/marble-diagrams/creation/fromEventPattern.png" alt="Diagrama de canicas de fromEventPattern">
 
 `fromEventPattern` permite convertir cualquier API de registro de funciones manejadores en eventos, en un Observable. Es similar a `fromEvent`, pero mucho más flexible. De hecho, todos los casos de uso de `fromEvent` podrían manejarse con `fromEventPattern` (aunque de forma más verbosa.)
 
