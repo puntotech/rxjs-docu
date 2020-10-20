@@ -4,6 +4,9 @@
 
 💡 Se debe utilizar `exhaustMap` si se quiere ignorar los Observables internos mientras no se haya completado el Observable interno anterior
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `exhaustMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector?: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, ObservedValueOf<O> | R>`

@@ -4,6 +4,9 @@
 
 💡 Se debe utilizar `concatMap` si se quiere esperar a que cada Observable interno esté completo antes de suscribirse al siguiente
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `concatMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector?: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, ObservedValueOf<O> | R>`
