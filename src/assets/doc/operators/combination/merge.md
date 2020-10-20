@@ -2,6 +2,11 @@
 
 <h2 class="subtitle"> Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
 
+<details>
+<summary>Signatura</summary>
+
+### Firma
+
 `merge<T, R>(...observables: any[]): Observable<R>`
 
 ### Parámetros
