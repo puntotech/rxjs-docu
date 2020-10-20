@@ -4,6 +4,9 @@
 
 💡 Si solo se necesita emitir el valor acumulado una vez que el Observable se haya completado, se puede utilizar [reduce](/operators/mathematical-aggregate/reduce)
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `scan<T, R>(accumulator: (acc: R, value: T, index: number) => R, seed?: T | R): OperatorFunction<T, R>`
