@@ -15,8 +15,7 @@
 <tr><td>predicate</td><td>Una función que determina si el valor cumple o no la condición.</td></tr>
 <tr><td>thisArg</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 Objeto opcional que se utiliza como valor del <code>this</code> en la *callback*</td></tr>
-
-<table>
+</table>
 
 ### Retorna
 
