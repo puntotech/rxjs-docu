@@ -354,6 +354,7 @@ result.subscribe((x) => console.log(x));
 </div>
 
 </div>
+</details>
 
 <div class="additional-section">
 
