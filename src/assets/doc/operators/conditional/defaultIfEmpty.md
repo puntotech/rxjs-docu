@@ -27,7 +27,7 @@ El valor por defecto utilizado en el caso de que el Observable esté vacío.</td
 
 Si el Observable fuente está vacío, este operador emitirá un valor por defecto.
 
-<img src="assets/images/marble-diagrams/conditional-boolean/defaultIfEmpty.md" alt="Diagrama de canicas del operador defaultIfEmpty">
+<img src="assets/images/marble-diagrams/conditional-boolean/defaultIfEmpty.png" alt="Diagrama de canicas del operador defaultIfEmpty">
 
 `defaultIfEmpty` emite los valores emitidos por el Observable fuente o un valor por defecto en el caso de que el Observable fuente esté vacío (se completa sin haber emitido ningún valor `next`.)
 
