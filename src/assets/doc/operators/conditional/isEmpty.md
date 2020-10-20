@@ -1,6 +1,6 @@
 # isEmpty
 
-<h2 class="subtitle"> Emite _false_ si el Observable emite cualquier valor, o emite _true_ si el Observable se completa sin emitir ningún valor
+<h2 class="subtitle"> Emite false si el Observable emite cualquier valor, o emite true si el Observable se completa sin emitir ningún valor
 </h2>
 
 <details>

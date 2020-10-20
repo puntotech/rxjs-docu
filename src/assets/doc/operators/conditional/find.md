@@ -4,6 +4,9 @@
 
 💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first](/operators/filtering/first)
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `find<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): OperatorFunction<T, T | undefined>`
@@ -14,7 +17,7 @@
 <tr><td>predicate</td><td>Una función que se llama con cada elemento para comprobar si se cumple o no la condición.</td></tr>
 <tr><td>thisArg</td>Opcional. El valor por defecto es <code>undefined</code>.
 Un argumento opcional para determinar el valor del <code>this</code> en la función <code>predicate</code>.<td></td></tr>
-<table>
+</table>
 
 ### Retorna
 
