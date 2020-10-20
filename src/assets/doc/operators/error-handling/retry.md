@@ -2,7 +2,10 @@
 
 <h2 class="subtitle"> Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error</h2>
 
-💡 Muy útil para reintentar peticiones HTTP
+💡 retry es muy útil para reintentar peticiones HTTP
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
