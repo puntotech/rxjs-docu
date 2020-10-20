@@ -24,6 +24,8 @@ Tipo: <code>(x: T) => K</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente que tengan valores distintos.
 
+</details>
+
 # Descripción
 
 Si se proporciona una función de comparación, se utilizará para comprobar si cada elemento se debe emitir o no.
