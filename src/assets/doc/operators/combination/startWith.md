@@ -384,6 +384,7 @@ OperatorFunction<T, T | D | E | F | G | H>
 </div>
 
 </div>
+</details>
 
 <div class="additional-section">
 
