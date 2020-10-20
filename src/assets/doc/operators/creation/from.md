@@ -2,6 +2,9 @@
 
 <h2 class="subtitle"> Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable</h2>
 
+<details> 
+<summary>Signatura</summary>
+
 ### Firma
 
 `from<T>(input: any, scheduler?: SchedulerLike): Observable<T>`
