@@ -83,7 +83,7 @@ const buffered = intervalEvents.pipe(buffer(clicks));
 buffered.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

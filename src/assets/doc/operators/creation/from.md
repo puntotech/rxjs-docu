@@ -176,7 +176,7 @@ console.log("Fin");
 // 30
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

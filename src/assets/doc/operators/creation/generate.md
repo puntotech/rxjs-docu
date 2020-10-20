@@ -189,7 +189,7 @@ Genera una secuencia observable ejecutando un bucle impulsado por el estado para
 </div>
 </details>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

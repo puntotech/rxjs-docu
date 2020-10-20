@@ -81,7 +81,7 @@ const result = clicks.pipe(throttle((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

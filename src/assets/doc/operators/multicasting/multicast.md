@@ -255,7 +255,7 @@ Observador tardío: 1
 
 </details>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

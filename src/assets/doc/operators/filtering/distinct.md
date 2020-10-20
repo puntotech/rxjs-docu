@@ -120,7 +120,7 @@ of<Person>(
 // { age: 7, name: 'Bar' }
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

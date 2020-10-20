@@ -97,7 +97,7 @@ source
   .subscribe((data) => console.log(data));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

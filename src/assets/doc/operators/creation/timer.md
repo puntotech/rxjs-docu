@@ -87,7 +87,7 @@ const numbers = timer(5000);
 numbers.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

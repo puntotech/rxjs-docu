@@ -126,7 +126,7 @@ evens$.subscribe((x) => console.log("pares", x));
 // pares 6
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

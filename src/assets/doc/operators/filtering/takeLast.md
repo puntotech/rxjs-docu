@@ -99,7 +99,7 @@ const lastThree = many.pipe(takeLast(3));
 lastThree.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

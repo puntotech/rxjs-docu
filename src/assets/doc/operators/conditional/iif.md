@@ -125,7 +125,7 @@ observableIfYouHaveAccess.subscribe(
 // "The end"
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

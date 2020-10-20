@@ -120,7 +120,7 @@ of([1, 2, 3]).subscribe(
 // 'Fin'
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

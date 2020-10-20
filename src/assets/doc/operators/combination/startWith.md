@@ -385,7 +385,7 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 </div>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

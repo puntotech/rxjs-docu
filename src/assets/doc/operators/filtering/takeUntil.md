@@ -122,7 +122,7 @@ const result = source.pipe(takeUntil(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

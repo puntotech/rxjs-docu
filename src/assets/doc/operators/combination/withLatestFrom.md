@@ -355,7 +355,7 @@ result.subscribe((x) => console.log(x));
 
 </div>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

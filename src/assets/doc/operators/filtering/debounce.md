@@ -85,7 +85,7 @@ const result = clicks.pipe(debounce(() => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

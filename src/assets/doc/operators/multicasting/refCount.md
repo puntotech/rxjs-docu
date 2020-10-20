@@ -61,7 +61,7 @@ publishedInterval.subscribe();
 // No ocurre nada hasta que no se llame a la función connect() del Observable
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

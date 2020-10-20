@@ -87,7 +87,7 @@ takeFive.subscribe((x) => console.log(x));
 // Salida: 0, 1, 2, 3, 4
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

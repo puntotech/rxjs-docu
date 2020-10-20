@@ -167,7 +167,7 @@ Tipo: <code>number.</td></tr>
 </div>
 </details>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

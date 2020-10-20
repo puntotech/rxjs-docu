@@ -62,7 +62,7 @@ language$.pipe(skip(1)).subscribe(console.log);
 // Salida: { name: "Ruby", type: "Multiparadigma" }, { name: "Haskell", type: "Funcional" }
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

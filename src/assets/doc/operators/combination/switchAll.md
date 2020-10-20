@@ -49,7 +49,7 @@ source.pipe(switchAll()).subscribe((x) => console.log(x));
 // Salida: (click) 1, 2, 3, 4... (click) 1, 2, 3... (click) ...
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

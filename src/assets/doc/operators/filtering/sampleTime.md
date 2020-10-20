@@ -83,7 +83,7 @@ const result = clicks.pipe(sampleTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

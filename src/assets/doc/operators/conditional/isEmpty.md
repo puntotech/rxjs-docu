@@ -84,7 +84,7 @@ anotherEmpty$.pipe(isEmpty()).subscribe(console.log);
     // Salida: a, false, b, c
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

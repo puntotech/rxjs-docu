@@ -904,7 +904,7 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 </div>
 </details>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

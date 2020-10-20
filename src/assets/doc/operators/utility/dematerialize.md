@@ -83,7 +83,7 @@ upperCase.subscribe(
 // TypeError: x.toUpperCase is not a function
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

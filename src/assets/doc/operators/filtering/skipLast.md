@@ -84,7 +84,7 @@ skipLastTwo.subscribe((x) => console.log(x));
 // 1 2 3
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

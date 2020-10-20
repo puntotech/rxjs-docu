@@ -63,7 +63,7 @@ connectable.connect();
 //    "Sub. B Complete"
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

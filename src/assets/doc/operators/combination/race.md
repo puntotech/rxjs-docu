@@ -388,7 +388,7 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 </div>
 </details>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

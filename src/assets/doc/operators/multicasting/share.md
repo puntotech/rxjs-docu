@@ -97,7 +97,7 @@ ghibliFilmDescription$.subscribe(console.log);
 */
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

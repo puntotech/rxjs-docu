@@ -132,7 +132,7 @@ seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
 );
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

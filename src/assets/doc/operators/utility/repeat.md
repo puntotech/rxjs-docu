@@ -126,7 +126,7 @@ example.subscribe((x) => console.log(x));
 // 2
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

@@ -85,7 +85,7 @@ const emitAfterClick = intervalObservable.pipe(skipUntil(click));
 const subscribe = emitAfterClick.subscribe((value) => console.log(value));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

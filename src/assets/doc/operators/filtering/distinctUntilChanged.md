@@ -120,7 +120,7 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
     // { age: 5, name: 'Foo' }
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

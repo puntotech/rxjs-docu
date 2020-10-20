@@ -109,7 +109,7 @@ seconds.pipe(timeoutWith(900, minutes)).subscribe(
 );
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

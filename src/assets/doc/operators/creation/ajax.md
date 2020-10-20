@@ -168,7 +168,7 @@ const obs$ = ajax(`https://api.github.com/404`).pipe(
 );
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

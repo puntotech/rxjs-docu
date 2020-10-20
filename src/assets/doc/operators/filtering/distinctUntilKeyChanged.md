@@ -168,7 +168,7 @@ of<Person>(
 // { age: 5, name: 'Foo2' }
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

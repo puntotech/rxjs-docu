@@ -82,7 +82,7 @@ const distance = pairs.pipe(
 distance.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

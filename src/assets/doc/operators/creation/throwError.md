@@ -119,7 +119,7 @@ interval(1000)
 // (error) El número 2 no mola
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

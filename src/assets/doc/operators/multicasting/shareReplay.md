@@ -48,7 +48,7 @@ Comparación entre `share` y `shareReplay`
 
 ``` -->
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

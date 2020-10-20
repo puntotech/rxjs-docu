@@ -79,7 +79,7 @@ const result = seconds.pipe(sample(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

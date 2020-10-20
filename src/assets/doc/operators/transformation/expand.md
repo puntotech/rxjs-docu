@@ -99,7 +99,7 @@ const powersOfTwo = clicks.pipe(
 powersOfTwo.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

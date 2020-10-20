@@ -83,7 +83,7 @@ of("you", "talking", "to", "me")
 // 'the end'
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

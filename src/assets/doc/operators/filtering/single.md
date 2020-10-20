@@ -120,7 +120,7 @@ numbers.subscribe((x) => console.log(x));
 // 'undefined'
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

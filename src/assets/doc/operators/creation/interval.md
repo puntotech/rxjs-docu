@@ -75,7 +75,7 @@ takeFourNumbers.subscribe((x) => console.log("Next: ", x));
 // Salida: "Next: 0", "Next: 1", "Next: 2", "Next: 3"
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

@@ -109,7 +109,7 @@ const subscribe = example.subscribe({
 // "Error!: Retried 2 times then quit!"
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

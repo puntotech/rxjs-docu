@@ -117,7 +117,7 @@ const firstOrder = higherOrder.pipe(mergeAll(2));
 firstOrder.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

@@ -112,7 +112,7 @@ data$.subscribe({
 });
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

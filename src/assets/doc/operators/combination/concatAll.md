@@ -80,7 +80,7 @@ firstOrder.subscribe((x) => console.log(x));
 // Un click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

@@ -72,7 +72,7 @@ const buffered = clicks.pipe(bufferCount(2, 1));
 buffered.subscribe((x) => console.log(x));
 ```
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 

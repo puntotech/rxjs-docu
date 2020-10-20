@@ -493,7 +493,7 @@ concat(timer, timer) // ¡Concatenando el mismo Observable!
 </div>
 </details>
 
-<div class="page-footer">
+<div class="additional-section">
 
 ## Recursos adicionales
 
