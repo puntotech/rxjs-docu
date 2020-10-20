@@ -1,8 +1,8 @@
 # from
 
-<h2 class="subtitle"> Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable
+<h2 class="subtitle"> Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable</h2>
 
-<h2 class="subtitle"> Firma
+### Firma
 
 `from<T>(input: any, scheduler?: SchedulerLike): Observable<T>`
 
