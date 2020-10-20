@@ -4,6 +4,9 @@
 
 💡 Se debe utilizar `mergeMap` si se quieren tener varios Observables internos suscritos de forma concurrente
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `mergeMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector?: number | ((outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R), concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<T, ObservedValueOf<O> | R>`
