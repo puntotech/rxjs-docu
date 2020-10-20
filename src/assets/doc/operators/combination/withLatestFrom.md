@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # withLatestFrom
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/withLatestFrom.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
 </h2>
@@ -362,6 +353,17 @@ result.subscribe((x) => console.log(x));
 
 </div>
 
+</div>
+
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/withLatestFrom.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
 </div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/withLatestFrom">Documentación oficial en inglés</a>

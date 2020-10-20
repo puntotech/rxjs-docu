@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # sampleTime
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sampleTime.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite la emisión más reciente del Observable fuente en cada periodo de tiempo determinado
 </h2>
@@ -92,6 +83,15 @@ const result = clicks.pipe(sampleTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sampleTime.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target=" _blank" href="https://rxjs.dev/api/operators/sampleTime">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # switchMap
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
 </h2>
@@ -217,6 +208,15 @@ result.subscribe((x) => console.log(x));
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/switchMap">Documentación oficial en inglés</a>

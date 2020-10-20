@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # distinct
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinct.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
 </h2>
@@ -129,6 +120,15 @@ of<Person>(
 // { age: 7, name: 'Bar' }
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinct.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/distinct">Documentación oficial en inglés</a>

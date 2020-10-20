@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # repeat
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeat.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retorna un Observable que se resuscribe <code>count</code> veces al flujo fuente cuando el Observable fuente se completa</h2>
 
@@ -135,6 +126,15 @@ example.subscribe((x) => console.log(x));
 // 2
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeat.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/repeat">Documentación oficial en inglés</a>

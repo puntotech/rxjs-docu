@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # bufferToggle
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Acumula valores del Observable fuente a partir de una emisión de <code>openings</code> en un búfer, que se cierra cuando el Observable retornado por la función <code>closingSelector</code> emite</h2>
 
@@ -93,6 +84,15 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/bufferToggle">Documentación oficial en inglés</a>

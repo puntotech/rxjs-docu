@@ -1,19 +1,11 @@
-<div class="page-heading">
-
 # of
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/of.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
+<h2 class="subtitle"> Convierte los argumentos en una secuencia Observable.</h2>
 
-<h2 class="subtitle"> Convierte los argumentos en una secuencia Observable.
+<details>
+<summary></summary>
 
-<div class="fading-line"></div>
-
-<h2 class="subtitle"> Firma
+### Firma
 
 `of(...args: (SchedulerLike | T)[]): Observable`
 
@@ -26,8 +18,6 @@
 ### Retorna
 
 `Observable<T>`: Un Observable que emite los argumentos descritos anteriormente y se completa.
-
-<div class="fading-line"></div>
 
 </details>
 
@@ -130,6 +120,15 @@ of([1, 2, 3]).subscribe(
 // 'Fin'
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/of.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/of">Documentación oficial en inglés</a>

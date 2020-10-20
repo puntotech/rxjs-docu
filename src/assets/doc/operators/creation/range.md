@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # range
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/range.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable que emite una secuencia de números dentro de un rango
 </h2>
@@ -83,6 +74,15 @@ const numbers = range(1, 10);
 numbers.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/range.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/range">Documentación oficial en inglés</a>

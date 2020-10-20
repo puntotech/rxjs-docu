@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # bufferCount
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferCount.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que este alcanza el tamaño máximo indicado
 </h2>
@@ -81,6 +72,15 @@ const buffered = clicks.pipe(bufferCount(2, 1));
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferCount.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/bufferCount">Documentación oficial en inglés</a>

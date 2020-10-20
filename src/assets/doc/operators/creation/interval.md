@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # interval
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
 
@@ -84,6 +75,15 @@ takeFourNumbers.subscribe((x) => console.log("Next: ", x));
 // Salida: "Next: 0", "Next: 1", "Next: 2", "Next: 3"
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/interval">Documentación oficial en inglés</a>

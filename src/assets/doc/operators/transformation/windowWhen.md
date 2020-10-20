@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # windowWhen
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
 </h2>
@@ -100,6 +91,15 @@ mergeAll() // 'Aplastar' el Observable de Observables
 result.subscribe(x => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/windowWhen">Documentación oficial en inglés</a>

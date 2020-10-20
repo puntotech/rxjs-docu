@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # findIndex
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
 </h2>
@@ -96,6 +87,15 @@ const result = clicks.pipe(findIndex((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/findIndex">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # combineAll
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineAll.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle">Convierte un Observable de orden superior en uno de primer orden aplicando <a href="/operators/combination/combineLatest">combineLatest</a> cuando el Observable de orden superior se completa</h2>
 
@@ -163,6 +154,15 @@ No recibe ningún parámetro.
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineAll.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/combineAll">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # partition
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Divide el Observable fuente en dos, uno con los valores que cumplen una condición, y otro con los valores que no la cumplan
 </h2>
@@ -135,6 +126,15 @@ evens$.subscribe((x) => console.log("pares", x));
 // pares 6
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/partition">Documentación oficial en inglés</a>

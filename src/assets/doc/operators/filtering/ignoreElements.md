@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # ignoreElements
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/ignoreElements.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle">Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a <code>complete</code> o a <code>error</code></h2>
 
@@ -92,6 +83,15 @@ of("you", "talking", "to", "me")
 // 'the end'
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/ignoreElements.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/ignoreElements">Documentación oficial en inglés</a>

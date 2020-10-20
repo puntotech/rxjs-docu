@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # fromEvent
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
 </h2>
@@ -162,6 +153,15 @@ clicksInDiv.subscribe(() => console.log("div"));
 // que la consola mostrará "document" primero, y luego "div".
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/fromEvent">Documentación oficial en inglés</a>

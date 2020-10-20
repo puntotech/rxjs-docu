@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # sequenceEqual
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sequenceEqual.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Compara secuencialmente todos los valores emitidos por dos Observables utilizando una función de comparación (opcional) y retorna un Observable que emite un solo valor booleano en función de si las dos secuencias son o no iguales.
 </h2>
@@ -76,6 +67,15 @@ matches.subscribe((matched) =>
 );
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sequenceEqual.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/sequenceEqual">Documentación oficial en inglés</a>

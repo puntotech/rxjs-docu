@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # scan
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/scan.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Aplica una función acumuladora a los valores del Observable fuente y retorna cada resultado inmediato</h2>
 
@@ -173,6 +164,15 @@ Tipo: <code>T</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/scan.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/scan">Documentación oficial en inglés</a>

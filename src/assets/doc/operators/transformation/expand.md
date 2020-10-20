@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # expand
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/expand.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
 </h2>
@@ -108,6 +99,15 @@ const powersOfTwo = clicks.pipe(
 powersOfTwo.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/expand.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/expand">Documentación oficial en inglés</a>

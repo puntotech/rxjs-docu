@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # mergeScan
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
 </h2>
@@ -102,6 +93,15 @@ count$.subscribe((x) => console.log(x));
 // ...y así sucesivamente para cada click
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/mergeScan">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # multicast
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/multicast.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle">Comparte el Observable fuente utilizando un Sujeto</h2>
 
@@ -264,6 +255,15 @@ Observador tardío: 1
 
 </details>
 
+<div class="page-footer">
+
 ## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/multicast.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/multicast">Documentación oficial en inglés</a>

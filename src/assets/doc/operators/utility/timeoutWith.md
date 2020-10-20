@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # timeoutWith
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
 </h2>
@@ -118,6 +109,15 @@ seconds.pipe(timeoutWith(900, minutes)).subscribe(
 );
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/timeoutWith">Documentación oficial en inglés</a>

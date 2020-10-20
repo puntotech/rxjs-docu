@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # windowToggle
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un segundo Observable emite, y se cierra cuando un tercer Observable retornado por una función emite
 </h2>
@@ -87,6 +78,15 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/windowToggle">Documentación oficial en inglés</a>

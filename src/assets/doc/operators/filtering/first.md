@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # first
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/first.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
 </h2>
@@ -217,6 +208,15 @@ Tipo: <code>D</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/first.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/first">Documentación oficial en inglés</a>

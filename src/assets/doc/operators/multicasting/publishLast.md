@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # publishLast
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle">Retorna una secuencia Observable conectable que comparte una sola suscripción a la secuencia subyacente, que contiene solo la última notificación</h2>
 
@@ -72,6 +63,15 @@ connectable.connect();
 //    "Sub. B Complete"
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publishLast">Documentación oficial en inglés</a>

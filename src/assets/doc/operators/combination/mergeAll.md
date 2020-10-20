@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # mergeAll
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeAll.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
 </h2>
@@ -125,5 +116,16 @@ const higherOrder = clicks.pipe(map((ev) => interval(1000).pipe(take(10))));
 const firstOrder = higherOrder.pipe(mergeAll(2));
 firstOrder.subscribe((x) => console.log(x));
 ```
+
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeAll.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/mergeAll">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # every
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/every.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retorna un Observable que emite un valor booleano que determina si todas las emisiones de la fuente cumplen o no una condición</h2>
 
@@ -104,6 +95,15 @@ of(1, 2, 3, 4, 5, 6)
   .subscribe((x) => console.log(x)); // -> false
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/every.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/every">Documentación oficial en inglés</a>

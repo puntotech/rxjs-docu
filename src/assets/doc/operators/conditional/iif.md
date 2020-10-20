@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # iif
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Decide qué Observable será suscrito en tiempo de suscripción
 </h2>
@@ -134,6 +125,15 @@ observableIfYouHaveAccess.subscribe(
 // "The end"
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/iif">Documentación oficial en inglés</a>

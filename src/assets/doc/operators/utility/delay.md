@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # delay
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retrasa la emisión de los elementos del Observable fuente en un tiempo determinado o hasta una fecha determinada
 </h2>
@@ -102,6 +93,15 @@ const delayedClicks = clicks.pipe(delay(date)); // click emitted only after that
 delayedClicks.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/delay">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # startWith
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/startWith.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite los elementos que se especifiquen como argumentos antes de empezar a emitir las emisiones del Observable fuente
 </h2>
@@ -392,6 +383,17 @@ OperatorFunction<T, T | D | E | F | G | H>
 
 </div>
 
+</div>
+
+<div class="page-footer">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/startWith.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
 </div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/startWith">Documentación oficial en inglés</a>
