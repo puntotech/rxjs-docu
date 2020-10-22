@@ -2,6 +2,9 @@
 
 <h2 class="subtitle"> Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique</h2>
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `interval(period: number = 0, scheduler: SchedulerLike = async): Observable<number>`
