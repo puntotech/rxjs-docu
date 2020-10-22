@@ -3,7 +3,7 @@
 <h2 class="subtitle"> Convierte los argumentos en una secuencia Observable.</h2>
 
 <details>
-<summary></summary>
+<summary>Signatura</summary>
 
 ### Firma
 
