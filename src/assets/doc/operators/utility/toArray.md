@@ -21,7 +21,7 @@ No recibe ningún parámetro.
 
 ## Descripción
 
-Emite todos los valores del Observable fuete en un array cuando este se completa.
+Emite todos los valores del Observable fuente en un array cuando este se completa.
 
 <img src="assets/images/marble-diagrams/utility/toArray.png" alt="Diagrama de canicas del operador toArray">
 
