@@ -36,7 +36,7 @@ Por defecto, se utiliza el planificador async, que retorna `Date.now()` (miliseg
 
 ### Ejemplo de la documentación oficial
 
-**En este ejemplo hay un timestamp adjuntado al evento click del documeto**
+**En este ejemplo hay un timestamp adjuntado al evento click del documento**
 
 ```javascript
 import { fromEvent } from "rxjs";
