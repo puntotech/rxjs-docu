@@ -4,6 +4,9 @@
 
 💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan](/operators/transformation/scan)
 
+<details>
+<summary>Signatura</summary>
+
 ### Firma
 
 `reduce<T, R>(accumulator: (acc: T | R, value: T, index?: number) => T | R, seed?: T | R): OperatorFunction<T, T | R>`
