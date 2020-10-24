@@ -40,7 +40,7 @@ En el caso de tener lógica más compleja que requiera decidir entre más de dos
 
 <!-- TODO change example -->
 
-Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
+<!-- Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-iif-1?file=index.ts">StackBlitz</a>
 
@@ -69,7 +69,7 @@ range(1, 4)
   )
   .subscribe(console.log, console.error);
 // Salida: Rick Sanchez, ivysaur, Summer Smith, charmander
-```
+``` -->
 
 ## Ejemplos de la documentación oficial
 
