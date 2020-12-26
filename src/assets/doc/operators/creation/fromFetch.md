@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # fromFetch
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Utiliza la API Fetch para hacer una petición HTTP
 </h2>
@@ -121,6 +112,15 @@ data$.subscribe({
 });
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/fetch/fromFetch">Documentación oficial en inglés</a>

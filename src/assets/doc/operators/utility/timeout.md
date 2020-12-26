@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # timeout
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
 </h2>
@@ -43,7 +34,7 @@ El operador timeout puede recibir un número o una fecha como argumentos.
 
 Si se proporciona un número, devuelve un Observable que se comporta como el Observable fuente, a no ser que transcurra un periodo de tiempo en el que no se emita ningún valor. Si por ejemplo se proporciona el número 100 como argumento y el primer valor del Observable se emite tras 50ms a partir del momento de la suscripción, dicho valor se reemitirá por el Observable resultante. Sin embargo, si transcurren 100ms sin que se emita un segundo valor, el flujo terminará con un error y se cancelará la suscripcón al Observable fuente. Estas comprobaciones se llevan a cabo durante el ciclo completo de vida del Observable - desde el momento en el que se realiza la suscripcón, hasta que se complete o se produzca un error. Por tanto, cada valor debe emitirse antes de que transcurra el intervalo de tiempo establecido desde la emisión del valor anterior.
 
-Si el argumento proporcionado es una fecha, el Observable retornado se comporta de forma distinta. Lanzará un error si el Observable no se completa antes de la fecha establecida. Esto quiere decir que, en este caso, los intervales de tiempo entre la emisión de valores son irrelevantes. Si el Observable no se completa antes de la fecha establecida, se cancelará la suscripción al Observable fuente. A excepción de esto, el flujo resultante se comporta exactamente igual que el Observable fuente.
+Si el argumento proporcionado es una fecha, el Observable retornado se comporta de forma distinta. Lanzará un error si el Observable no se completa antes de la fecha establecida. Esto quiere decir que, en este caso, los intervalos de tiempo entre la emisión de valores son irrelevantes. Si el Observable no se completa antes de la fecha establecida, se cancelará la suscripción al Observable fuente. A excepción de esto, el flujo resultante se comporta exactamente igual que el Observable fuente.
 
 `timeout` puede recibir un Planificador como segundo parámetro. Se utiliza para planificar en qué momento llevará a cabo el Observable retornado las comprobaciones de si el Observable fuente ha emitido algún valor o se ha completado.
 
@@ -141,6 +132,15 @@ seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
 );
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/timeout">Documentación oficial en inglés</a>

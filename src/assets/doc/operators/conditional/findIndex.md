@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # findIndex
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
 </h2>
@@ -35,11 +26,11 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 ## Descripción
 
-Es como `find`, pero emite el índice del valor encontrado, en lugar del propio valor.
+Es como [find](/operators/conditional/find), pero emite el índice del valor encontrado, en lugar del propio valor.
 
 <img src="assets/images/marble-diagrams/conditional-boolean/findIndex.png" alt="Diagrama de canicas del operador findIndex">
 
-findIndex searches for the first item in the source Observable that matches the specified condition embodied by the predicate, and returns the (zero-based) index of the first occurrence in the source. Unlike first, the predicate is required in findIndex, and does not emit an error if a valid value is not found.
+findIndex busca el primer elemento del Observable fuente que cumpla la condición especificada en el predicado y retorna su índice (de base cero.) Al contrario que [first](/operators/filtering/first), el predicado es obligatorio en findIndex, y tampoco emite un error si no encuentra un valor válido.
 
 ## Ejemplos
 
@@ -96,6 +87,15 @@ const result = clicks.pipe(findIndex((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/findIndex">Documentación oficial en inglés</a>

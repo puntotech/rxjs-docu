@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # debounce
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado por otro Observable sin que el Observable fuente emita ningún valor
 </h2>
@@ -39,9 +30,7 @@ Es como `debounceTime`, pero el periodo de silenciamiento de emisiones está det
 
 <!-- TODO Revise translation -->
 
-`debounce` retrasa los valores emitidos por el Observable fuente, eliminando las emisiones almacenadas pendientes de ser emitidas si el Observable fuente emite algún valor. Este operador almacena el valor más reciente emitido por el Observable fuente, y genera un Observable de duración mediante una llamada a la función `durationSelector`. Este valor se emite una vez que el Observable de duración emite un valor o se completa, y si el Observable fuente no ha emitido ningún valor desde la creación del Observable de duración. Si el Observable fuente emite un valor antes de que el Observable de duración emita o se complete, el valor almacenado será eliminado, y nunca se emitirá en el Observable resultante.
-
-delays values emitted by the source Observable, but drops previous pending delayed emissions if a new value arrives on the source Observable. This operator keeps track of the most recent value from the source Observable, and spawns a duration Observable by calling the durationSelector function. The value is emitted only when the duration Observable emits a value or completes, and if no other value was emitted on the source Observable since the duration Observable was spawned. If a new value appears before the duration Observable emits, the previous value will be dropped and will not be emitted on the output Observable.
+`debounce` retrasa los valores emitidos por el Observable fuente, eliminando las emisiones almacenadas que estén pendientes de ser emitidas si el Observable fuente emite algún valor. Este operador almacena el valor más reciente emitido por el Observable fuente, y genera un Observable 'de duración' mediante una llamada a la función `durationSelector`. El valor almacenado se emite una vez que el Observable de duración emite un valor o se completa, y si el Observable fuente no ha emitido ningún valor desde la creación del Observable de duración. Si el Observable fuente emite un valor antes de que el Observable de duración emita o se complete, el valor almacenado será eliminado, y nunca se emitirá en el Observable resultante.
 
 Al igual que `debouncetime`, este es un operador de limitación de emisiones, y también un operador similar a `delay`, ya que las emisiones del Observable resultante no tienen por qué ocurrir en el mismo momento en el que ocurrieron en el Observable fuente.
 
@@ -96,6 +85,15 @@ const result = clicks.pipe(debounce(() => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounce.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/debounce">Documentación oficial en inglés</a>

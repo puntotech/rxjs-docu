@@ -1,19 +1,6 @@
-<div class="page-heading">
-
 # every
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/every.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
-<h2 class="subtitle"> Retorna un Observable que emite
-
-Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
-
-</h2>
+<h2 class="subtitle"> Retorna un Observable que emite un valor booleano que determina si todas las emisiones de la fuente cumplen o no una condición</h2>
 
 <details>
 <summary>Signatura</summary>
@@ -22,14 +9,13 @@ Returns an Observable that emits whether or not every item of the source satisfi
 
 `every<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): OperatorFunction<T, boolean>`
 
-### Parameters
+### Parámetros
 
 <table>
 <tr><td>predicate</td><td>Una función que determina si el valor cumple o no la condición.</td></tr>
 <tr><td>thisArg</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 Objeto opcional que se utiliza como valor del <code>this</code> en la *callback*</td></tr>
-
-<table>
+</table>
 
 ### Retorna
 
@@ -108,6 +94,15 @@ of(1, 2, 3, 4, 5, 6)
   .subscribe((x) => console.log(x)); // -> false
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/every.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/every">Documentación oficial en inglés</a>

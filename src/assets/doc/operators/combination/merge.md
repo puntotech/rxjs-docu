@@ -1,15 +1,11 @@
-<div class="page-heading">
-
 # merge
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/merge.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
 <h2 class="subtitle"> Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
+
+<details>
+<summary>Signatura</summary>
+
+### Firma
 
 `merge<T, R>(...observables: any[]): Observable<R>`
 
@@ -717,6 +713,15 @@ Tipo: <code>number</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/merge.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/merge">Documentación oficial en inglés</a>

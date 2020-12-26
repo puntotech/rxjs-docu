@@ -1,15 +1,6 @@
-<div class="page-heading">
-
 # isEmpty
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
-<h2 class="subtitle"> Emite _false_ si el Observable emite cualquier valor, o emite _true_ si el Observable se completa sin emitir ningún valor
+<h2 class="subtitle"> Emite false si el Observable emite cualquier valor, o emite true si el Observable se completa sin emitir ningún valor
 </h2>
 
 <details>
@@ -93,6 +84,15 @@ anotherEmpty$.pipe(isEmpty()).subscribe(console.log);
     // Salida: a, false, b, c
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/isEmpty">Documentación oficial en inglés</a>

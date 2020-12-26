@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # defaultIfEmpty
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
 </h2>
@@ -24,7 +15,7 @@
 <table>
 <tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>null</code>.
 El valor por defecto utilizado en el caso de que el Observable esté vacío.</td></tr>
-<table>
+</table>
 
 ### Retorna
 
@@ -36,7 +27,7 @@ El valor por defecto utilizado en el caso de que el Observable esté vacío.</td
 
 Si el Observable fuente está vacío, este operador emitirá un valor por defecto.
 
-<img src="assets/images/marble-diagrams/conditional-boolean/defaultIfEmpty.md" alt="Diagrama de canicas del operador defaultIfEmpty">
+<img src="assets/images/marble-diagrams/conditional-boolean/defaultIfEmpty.png" alt="Diagrama de canicas del operador defaultIfEmpty">
 
 `defaultIfEmpty` emite los valores emitidos por el Observable fuente o un valor por defecto en el caso de que el Observable fuente esté vacío (se completa sin haber emitido ningún valor `next`.)
 
@@ -89,6 +80,15 @@ const result = clicksBeforeFive.pipe(defaultIfEmpty("Ningún click"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/defaultIfEmpty.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/defaultIfEmpty">Documentación oficial en inglés</a>

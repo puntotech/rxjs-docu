@@ -84,17 +84,17 @@ En ES2015, se introdujeron [las funciones e iteradores _generator_](https://deve
 
 ¿Qué es _Push_? En los sistemas _Push_, el _Producer_ determina cuándo se le envían los datos al _Consumer_. El _Consumer_ no es consciente de cuándo va a recibir los datos.
 
-Las Promesas son los sistemas _Push_ más comunes que hay hoy en día en JavaScript. Una Promesa (el _Producer_) hace entrega de un valor resuelto a callbacks registradas (los _Consumers_), pero, al contrario que las funciones, es la Promesa la que determina en qué momento el valor se "empuja" a las callbacks.
+Las Promesas son los sistemas _Push_ más comunes que hay hoy en día en JavaScript. Una Promesa (el _Producer_) hace entrega de un valor resuelto a *callbacks* registradas (los _Consumers_), pero, al contrario que las funciones, es la Promesa la que determina en qué momento se "empuja" el valor a las *callbacks*.
 
-RxJS propone Observables, un nuevo sistema _Push_ para JavaScript. Un Observable es un _Producer_ de múltiples valores, "empujándolos" a los Observadores (_Consumers_).
+RxJS propone Observables, un nuevo sistema _Push_ para JavaScript. Un Observable es un _Producer_ de múltiples valores que "empuja" a los Observadores (_Consumers_).
 
 - Una Función es una computación evaluada de forma perezosa que retorna un único valor de forma síncrona al ser invocada.
 
-- Un generador es una computación evaluada de forma perezosa que devuelve cero o (potencialmente) infinitos valores de forma síncrona en la iteración.
+- Un Generador es una computación evaluada de forma perezosa que devuelve cero o (potencialmente) infinitos valores de forma síncrona en la iteración.
 
 - Una Promesa es una computación que puede o no retornar finalmente un único valor.
 
-- Un Observable es una computación evaluada de forma perezosa que puede retornar cero o (potencialmente) infinitos valores de forma síncrona o asíncrona desde el momento de la invocación o en delante.
+- Un Observable es una computación evaluada de forma perezosa que puede retornar cero o (potencialmente) infinitos valores de forma síncrona o asíncrona desde el momento de la invocación o en adelante.
 
 ## Observables como generalizaciones de funciones
 
@@ -148,11 +148,11 @@ Y se obtiene la misma salida:
 ```
 "Hola"
 42
-("Hola")
+"Hola"
 42
 ```
 
-Esto ocurre porque tanto las funcioens como los Observables son computaciones perezosas. Si no se llama a la función, el `console.log('Hola')` no ocurrirá. Lo mismo ocurre con los Observables, si no se 'llaman' (con subscribe), el `console.log('Hola')` no ocurrirá. Además, tanto las llamadas a funciones, como las suscripciones son operaciones aisladas: dos llamadas a funciones provocan dos efectos colaterales separados, y dos suscripciones a Observables provocan dos efectos colaterales separados. Al contrario que los EventEmitters, sin tener en cuenta la existencia de los suscriptores, comparten los efectos colaterales y son de ejecución _eager_ o inmediata.
+Esto ocurre porque tanto las funciones como los Observables son computaciones perezosas. Si no se llama a la función, el `console.log('Hola')` no ocurrirá. Lo mismo ocurre con los Observables, si no se 'llaman' (con subscribe), el `console.log('Hola')` no ocurrirá. Además, tanto las llamadas a funciones, como las suscripciones son operaciones aisladas: dos llamadas a funciones provocan dos efectos colaterales separados, y dos suscripciones a Observables provocan dos efectos colaterales separados. Al contrario que los EventEmitters, sin tener en cuenta la existencia de los suscriptores, comparten los efectos colaterales y son de ejecución _eager_ o inmediata.
 
 > Suscribirse a un Observable es análogo a llamar a una función.
 
@@ -318,15 +318,15 @@ No es una coincidencia que `observable.subscribe` y `subscribe` en `new Observab
 
 Esto muestra que las llamadas `subscribe` no se comparten entre los diversos Observadores del mismo Observable. Al hacer una llamada a `observable.subscribe` desde un Observador, la función `subscribe in new Observable(function subscribe(subscriber) {...})` se ejecuta para dicho suscriptor. Cada llamada a `observable.subscribe` provoca un _setup_ independiente para dicho suscriber.
 
-> Suscribirse a un Observable es como llamar a una función, proporcionando callbacks donde se recibirán los datos.
+> Suscribirse a un Observable es como llamar a una función, proporcionando *callbacks* donde se recibirán los datos.
 
-Esto es drásticamente diferente a las APIs de manejo de eventos como `addEventListener` / `removeEventListener`. Con `observable.subscribe`, el Observador no se registra como un listener en el Observable. El Observable ni siquiera mantiene una lista de Observadors agregados.
+Esto es drásticamente diferente a las APIs de manejo de eventos como `addEventListener` / `removeEventListener`. Con `observable.subscribe`, el Observador no se registra como un listener en el Observable. El Observable ni siquiera mantiene una lista de Observadores agregados.
 
 La llamada `subscribe` es simplemente una forma de que comience la "ejecución Observable" y de enviar valores o eventos a un Observador de dicha ejecución.
 
 ## Ejecutando Observables
 
-El código dentro de `new Observable(function subscribe(subscriber) {...})` representa una "ejecución Observable", una computación perezosa que solo se da para code Observador que se suscribe. La ejecución produce múltiples valores a lo largo del tiempo, bien síncrona o asíncronamente.
+El código dentro de `new Observable(function subscribe(subscriber) {...})` representa una "ejecución Observable", una computación perezosa que solo se da para el Observador que se suscribe. La ejecución produce múltiples valores a lo largo del tiempo, bien síncrona o asíncronamente.
 
 Hay tres tipos de valores que una Ejecución Observable puede emitir:
 
@@ -339,7 +339,7 @@ Las notificaciones "Next" son las más importantes, y las más comunes: represen
 La mejor forma de expresar estas restricciones es mediante la Gramática Observable o Contract, escrita mediante una expresión regular:
 
 ```javascript
-next\*(error|complete)?
+next*(error|complete)?
 ```
 
 > En una Ejecución Observable, se pueden emitir desde cero a infinitas notificaciones. En el caso de que se diera una notificación "Error" o "Complete", ninguna otra notificación podrá emitirse a partir de ese momento.
@@ -398,7 +398,7 @@ Cuando se hace una llamada a `observable.subscribe`, el Observador se vincula a 
 const subscription = observable.subscribe((x) => console.log(x));
 ```
 
-La Suscripción representa la ejecución en curso, y tiene una API minimalista que permite cancelar dicha ejecución. Se puede leer más acerca del [tipo Subscription aquí](). Con `subscription.unsubscribe()` se puede cancelar la ejecución en curso:
+La Suscripción representa la ejecución en curso, y tiene una API minimalista que permite cancelar dicha ejecución. Se puede leer más acerca del [tipo Subscription aquí](/concepts/subscription). Con `subscription.unsubscribe()` se puede cancelar la ejecución en curso:
 
 ```javascript
 import { from } from "rxjs";

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # concatAll
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatAll.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos en orden
 </h2>
@@ -88,5 +79,16 @@ firstOrder.subscribe((x) => console.log(x));
 // Por cada click en el "document" se emitirán los números del 0 al 3 a intervalos de 1s
 // Un click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
 ```
+
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatAll.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/concatAll">Documentación oficial en inglés</a>

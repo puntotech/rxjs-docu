@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # observeOn
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Reemite todas las notificaciones del Observable fuente con el planificador especificado
 </h2>
@@ -24,10 +15,7 @@
 <table>
 <tr><td>scheduler</td>El planificador que se utilizará para replanificar las notificaciones del Observable fuente.<td></td></tr>
 <tr><td>delay</td><td>Opcional. El valor por defecto es 0.
-
-El número de milisegundos de retraso que se aplicará a la replanificación de cada notificación.
-Number of milliseconds that states with what delay every notification should be rescheduled.</td></tr>
-
+El número de milisegundos de retraso que se aplicará a la replanificación de cada notificación.</td></tr>
 </table>
 
 ### Retorna
@@ -85,6 +73,15 @@ intervals
   });
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/observeOn">Documentación oficial en inglés</a>

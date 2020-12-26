@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # iif
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Decide qué Observable será suscrito en tiempo de suscripción
 </h2>
@@ -49,7 +40,7 @@ En el caso de tener lógica más compleja que requiera decidir entre más de dos
 
 <!-- TODO change example -->
 
-Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
+<!-- Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
 
 <a target="_blank" href="https://stackblitz.com/edit/rxjs-iif-1?file=index.ts">StackBlitz</a>
 
@@ -78,7 +69,7 @@ range(1, 4)
   )
   .subscribe(console.log, console.error);
 // Salida: Rick Sanchez, ivysaur, Summer Smith, charmander
-```
+``` -->
 
 ## Ejemplos de la documentación oficial
 
@@ -134,6 +125,15 @@ observableIfYouHaveAccess.subscribe(
 // "The end"
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/iif">Documentación oficial en inglés</a>

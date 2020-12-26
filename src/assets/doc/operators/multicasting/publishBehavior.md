@@ -1,5 +1,3 @@
-<div class="page-heading">
-
 # publishBehavior
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishBehavior.ts">
@@ -86,5 +84,12 @@ Observador 2: 1,
 ```
 
 ## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishBehavior.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/publishBehavior">Documentación oficial en inglés</a>

@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # delay
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retrasa la emisión de los elementos del Observable fuente en un tiempo determinado o hasta una fecha determinada
 </h2>
@@ -22,7 +13,7 @@
 ### Parámetros
 
 <table>
-<tr><td>delay</td><td>La duración del retraso en milisegundos (un número) o la fecha hasta la que se retrasa la emisión de los elementos. The delay duration in milliseconds (a number) or a Date until which the emission of the source items is delayed.</td></tr>
+<tr><td>delay</td><td>La duración del retraso en milisegundos (un número) o la fecha hasta la que se retrasa la emisión de los elementos.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
 El <code>SchedulerLike</code> que se utiliza para gestionar los temporizadores que se encargan de retrasar cada elemento.</td></tr>
 </table>
@@ -102,6 +93,15 @@ const delayedClicks = clicks.pipe(delay(date)); // click emitted only after that
 delayedClicks.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/delay">Documentación oficial en inglés</a>

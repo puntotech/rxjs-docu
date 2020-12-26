@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # buffer
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que otro Observable emita
 </h2>
@@ -27,7 +18,7 @@
 
 ### Retorna
 
-`OperatorFunction<T, T[]>`: Un Observable de búfers, que son arrays de valores.
+`OperatorFunction<T, T[]>`: Un Observable de búferes, que son arrays de valores.
 
 </details>
 
@@ -92,6 +83,15 @@ const buffered = intervalEvents.pipe(buffer(clicks));
 buffered.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/buffer">Documentación oficial en inglés</a>

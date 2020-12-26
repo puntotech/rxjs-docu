@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # take
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/take.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite las primeras x emisiones del Observable fuente
 </h2>
@@ -96,6 +87,15 @@ takeFive.subscribe((x) => console.log(x));
 // Salida: 0, 1, 2, 3, 4
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/take.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/take">Documentación oficial en inglés</a>

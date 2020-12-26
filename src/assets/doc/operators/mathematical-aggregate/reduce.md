@@ -1,17 +1,11 @@
-<div class="page-heading">
-
 # reduce
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/reduce.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente</h2>
 
 💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan](/operators/transformation/scan)
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -43,7 +37,9 @@ Retorna un Observable que aplica la función acumuladora especificada a cada ele
 
 ## Ejemplos
 
-Count the number of click events that happened in 5 seconds
+### Ejemplos de la documentación oficial
+
+**Contar el número de eventos click que ocurran en 5 segundos**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -122,6 +118,15 @@ Tipo: <code>T</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/reduce.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/reduce">Documentación oficial en inglés</a>

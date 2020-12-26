@@ -1,17 +1,11 @@
-<div class="page-heading">
-
 # retry
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retry.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error</h2>
 
-💡 Muy útil para reintentar peticiones HTTP
+💡 retry es muy útil para reintentar peticiones HTTP
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -118,6 +112,15 @@ const subscribe = example.subscribe({
 // "Error!: Retried 2 times then quit!"
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retry.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/retry">Documentación oficial en inglés</a>

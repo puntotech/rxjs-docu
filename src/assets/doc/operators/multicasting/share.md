@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # share
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Comparte el Observable fuente entre varios suscriptores</h2>
 
@@ -44,7 +35,7 @@ Retorna un Observable nuevo que multidifunde (comparte) el Observable original. 
 
 ## Ejemplos
 
-Por defecto, los Observables son fríos. Esto quiere decir que con cada suscripción, se vuelve a crear el . Por tanto, si un Observable realiza una petición AJAX, cada vez que reciba una suscripción nueva, **volverá a hacer la petición**. Este comportamiento se puede observar en el siguiente ejemplo:
+Por defecto, los Observables son fríos. Esto quiere decir que con cada suscripción, se vuelve a crear el productor subyacente. Por tanto, si un Observable realiza una petición AJAX, cada vez que reciba una suscripción nueva, **volverá a hacer la petición**. Este comportamiento se puede observar en el siguiente ejemplo:
 
 [StackBlitz](https://stackblitz.com/edit/docu-rxjs-share?file=index.ts)
 
@@ -99,13 +90,22 @@ const ghibliFilmDescription$ = ghibliFilm$.pipe(
 ghibliFilmTitle$.subscribe(console.log);
 
 ghibliFilmDescription$.subscribe(console.log);
-/* Salida: 
+/* Salida:
 'Nueva petición'
 'Castle in the Sky',
 'The orphan Sheeta inherited a mysterious crystal that links her to the mythical...'
 */
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/share">Documentación oficial en inglés</a>

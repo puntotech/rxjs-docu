@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # fromEventPattern
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
 </h2>
@@ -38,10 +29,9 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 
 ## Descripción
 
-Se utiliza cuando `fromEvent` n
-When that method for adding event handler was something fromEvent was not prepared for.
+Se utiliza cuando `fromEvent` no está preparado para manejar un determinado método para añadir manejadores de eventos.
 
-<img src="assets/images/marble-diagrams/fromEventPattern.png" alt="Diagrama de canicas de fromEventPattern">
+<img src="assets/images/marble-diagrams/creation/fromEventPattern.png" alt="Diagrama de canicas de fromEventPattern">
 
 `fromEventPattern` permite convertir cualquier API de registro de funciones manejadores en eventos, en un Observable. Es similar a `fromEvent`, pero mucho más flexible. De hecho, todos los casos de uso de `fromEvent` podrían manejarse con `fromEventPattern` (aunque de forma más verbosa.)
 
@@ -116,6 +106,15 @@ Usar `fromEventPattern` con función de proyección
     // "EVENT_TYPE --- EVENT_MESSAGE"
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/fromEventPattern">Documentación oficial en inglés</a>

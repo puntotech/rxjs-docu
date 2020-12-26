@@ -1,17 +1,11 @@
-<div class="page-heading">
-
 # concatMapTo
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMapTo.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Proyecta cada valor emitido por la fuente al mismo Observable interno, que se une al Observable resultante de forma secuencial</h2>
 
 💡 `concatMapTo` siempre utiliza el mismo Observable interno, sin tener en cuenta el valor emitido por la fuente. Si se quiere tener en cuenta el valor emitido, se debe utilizar `concatMap`
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -163,6 +157,15 @@ result.subscribe((x) => console.log(x));
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMapTo.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/concatMapTo">Documentación oficial en inglés</a>
