@@ -1,27 +1,21 @@
-# RxjsDocs
+# ¿Qué es RxJS Docu?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+Este proyecto está basado en la documentación oficial de RxJS y es una versión de la documentación en Castellano. Además de los ejemplos que encuentras en la documentación oficial se han incorporado otros que permiten ampliar los conocimientos a los lectores.
 
-## Development server
+# Introducción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+RxJS es una biblioteca para componer programas asíncronos y basados en eventos, mediante secuencias observables. Proporciona un tipo _core_, el Observable, varios tipos satélite (Observer, Schedulers, Subjects) y operadores inspirados por las [funciones de Array](https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.6) (`map`, `filter`, `reduce`, `every` etc.) para manejar eventos asíncronos como si fuesen colecciones.
 
-## Code scaffolding
+> Podemos considerar a RxJS como el [Lodash](https://lodash.com/) para eventos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ReactiveX combina el [patrón Observador](<https://es.wikipedia.org/wiki/Observer_(patr%C3%B3n_de_dise%C3%B1o)>) con el [patrón Iterador](<https://es.wikipedia.org/wiki/Iterador_(patr%C3%B3n_de_dise%C3%B1o)>) y la [programación funcional con colecciones](https://martinfowler.com/articles/collection-pipeline/#NestedOperatorExpressions), constituyendo así la solución ideal para manejar secuencias de eventos.
 
-## Build
+Los conceptos esenciales de RxJS que resuelven el manejo asíncrono de eventos son los siguientes:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Observable: representa la idea de una colección invocable de valores futuros o eventos.
+- Observador: es una colleción de _callbacks_ que sabe cómo escuchar a los valores proporcionados por el Observable.
+- Suscripción: representa la ejecución de un Observable; es muy útil a la hora de cancelar la ejecución.
+- Operadores: son funciones puras que permiten enfocar el manejo de las colecciones desde un estilo de programación funcional, con operaciones como `map`, `filter`, `concat`, `reduce` etc.
+- Sujeto: es el equivalente a un EventEmitter, y la única manera de multidifundir un valor o un evento a múltiples Observadores.
+- Planificadores: son despachadores centralizados para controlar la concurrencia, permitiendo coordinar cuándo ocurrirá la computación en `setTimeout`, `requestAnimationFrame` u otros.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
