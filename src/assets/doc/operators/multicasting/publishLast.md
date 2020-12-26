@@ -1,6 +1,15 @@
 # publishLast
 
-<h2 class="subtitle">Retorna una secuencia Observable conectable que comparte una sola suscripción a la secuencia subyacente, que contiene solo la última notificación</h2>
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts">
+<svg>
+  <use xlink:href="/assets/icons/github.svg#github"></use>
+</svg>
+</a>
+</div>
+
+<h2 class="subtitle">Comparte el Observable fuente, emitiendo únicamente el último valor emitido a los observadores</h2>
+
+💡 publishLast es equivalente a `multicast(() => new AsyncSubject())`
 
 <details>
 <summary>Signatura</summary>
@@ -21,11 +30,64 @@ No recibe ningún parámetro.
 
 ## Descripción
 
+Retorna una secuencia Observable conectable que comparte una sola suscripción a la secuencia subyacente, que contiene solo la última notificación. Para ello utiliza el operador <a href="/operators/multicasting/multicast">multicast</a> junto a un AsyncSubject internamente.
+
 <img src="assets/images/marble-diagrams/multicasting/publishLast.png" alt="Diagrama de canicas del operador publishLast">
 
 Es similar a <a href="/operators/multicasting/publish">publish</a>, pero espera a que el Observable fuente se complete, para almacenar su último valor emitido. Al igual que <a href="/operators/multicasting/publishReplay">publishReplay</a> y <a href="/operators/multicasting/publishBehavior">publishBehavior</a>, almacena este último valor emitido aunque no tenga ningún suscriptor. Si llega un suscriptor nuevo, este recibirá el valor almacenado y se completará.
 
 ## Ejemplos
+
+**Compartir el Observable fuente, emitiendo únicamente su último valor**
+
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publishlast?file=index.html">StackBlitz</a>
+
+```typescript
+import { ConnectableObservable, interval, timer } from "rxjs";
+import { publishLast, tap, take } from "rxjs/operators";
+
+// number$ no empezará a emitir valores hasta que se haga una llamada a connect
+const number$ = interval(1000).pipe(take(4));
+
+const multicasted$ = number$.pipe(publishLast()) as ConnectableObservable<
+  number
+>;
+
+// Llamando a connect
+multicasted$.connect();
+
+multicasted$.subscribe((val) => console.log(`Observador 1: ${val}`));
+multicasted$.subscribe((val) => console.log(`Observador 2: ${val}`));
+
+/* Salida:
+(4s)
+Observador 1: 3,
+Observador 2: 3
+*/
+```
+
+**Si el Observable fuente no llega a completarse, nunca se emitirá ningún valor**
+
+<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publishlast-2?file=index.ts">StackBlitz</a>
+
+```javascript
+import { ConnectableObservable, interval } from "rxjs";
+import { publishLast } from "rxjs/operators";
+
+// El Observable fuente nunca se completa
+const number$ = interval(1000);
+
+const multicasted$ = number$.pipe(publishLast()) as ConnectableObservable<
+  number
+>;
+
+// Llamando a connect
+multicasted$.connect();
+
+multicasted$.subscribe(val => console.log(`Observador 1: ${val}`));
+multicasted$.subscribe(val => console.log(`Observador 2: ${val}`));
+// Salida:
+```
 
 ### Ejemplo de la documentación oficial
 
