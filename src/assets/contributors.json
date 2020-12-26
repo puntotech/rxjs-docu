@@ -5,8 +5,8 @@
     "picture": "https://pbs.twimg.com/profile_images/1078240654352961536/hsW2VtHY_400x400.jpg",
     "twitter": "https://twitter.com/nyablk",
     "website": "https://github.com/nyagarcia",
-    "role": "Core Team ES",
-    "group": "Core Team ES"
+    "role": "Team ES",
+    "group": "Team ES"
   },
   "juan": {
     "name": "Juan Torres",
@@ -14,8 +14,8 @@
     "picture": "https://avatars3.githubusercontent.com/u/16844185",
     "twitter": "https://twitter.com/juaniman99",
     "website": "https://github.com/zaldih",
-    "role": "Core Team ES",
-    "group": "Core Team ES"
+    "role": "Team ES",
+    "group": "Team ES"
   },
   "carlos": {
     "name": "Carlos Caballero",
@@ -23,8 +23,8 @@
     "picture": "https://carloscaballero.io/assets/img/profile_image.jpg?v=ed8cb96981",
     "twitter": "https://twitter.com/carlillo",
     "website": "https://carloscaballero.io",
-    "role": "Core Team ES",
-    "group": "Core Team ES"
+    "role": "Team ES",
+    "group": "Team ES"
   },
   "toni": {
     "name": "Toni Villena",
@@ -32,17 +32,17 @@
     "picture": "https://avatars1.githubusercontent.com/u/7110786",
     "twitter": "https://twitter.com/tonivj5",
     "website": "https://github.com/tonivj5",
-    "role": "Core Team ES",
-    "group": "Core Team ES"
+    "role": "Team ES",
+    "group": "Team ES"
   },
   "lucy": {
     "name": "Lucy Gallardo",
     "github": "https://github.com/lucy6767",
-    "picture": "https://pbs.twimg.com/profile_images/1315638932239986695/pstxeWNB_400x400.jpg",
+    "picture": "https://pbs.twimg.com/profile_images/1315650504970719233/5D5zwJKs_400x400.jpg",
     "twitter": "https://twitter.com/lucy6767",
     "website": "https://github.com/lucy6767",
-    "role": "Core Team ES",
-    "group": "Core Team ES"
+    "role": "Team ES",
+    "group": "Team ES"
   },
   "ben": {
     "name": "Ben Lesh",

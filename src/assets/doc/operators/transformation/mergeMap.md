@@ -1,17 +1,11 @@
-<div class="page-heading">
-
 # mergeMap
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMap.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante</h2>
 
 💡 Se debe utilizar `mergeMap` si se quieren tener varios Observables internos suscritos de forma concurrente
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -176,6 +170,15 @@ Tipo: <code>number.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMap.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/mergeMap">Documentación oficial en inglés</a>

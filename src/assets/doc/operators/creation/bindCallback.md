@@ -1,17 +1,11 @@
-<div class="page-heading">
-
 # bindCallback
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/bindCallback.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
-<h2 class="subtitle"> Convierte una API de una callback a una función que retorna un Observable</h2>
+<h2 class="subtitle"> Convierte una API de una <em>callback</em> a una función que retorna un Observable</h2>
 
 💡 Si la _callback_ sigue la convención de Node.js, es mejor utilizar [bindNodeCallback](/operators/creation/bindNodeCallback)
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -24,7 +18,7 @@
 <tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 Tipo: <code>Function | SchedulerLike</code>.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El planificador con el que planificar las <i>callbacks</i>.</td></tr>
+El planificador con el que planificar las <em>callbacks</em>.</td></tr>
 </table>
 
 ### Retorna
@@ -39,7 +33,7 @@ Dada una función `f` de tipo `f(x, callback)` retornará una función `g`, que 
 
 `bindCallback` no es un operador, dado que ni su entrada ni su salida son Observables. De entrada recibe una función `func` que recibe algunos parámetros. El último parámetro debe ser una función _callback_, a la que `func` hará una llamada cuando haya terminado.
 
-La salid de `bindCallback` es una función que recibe los mismos parámetros que `func`, exceptuando el último (la _callback_.) Cuando se llama a la función de salida con argumentos, esta retorna un Observable. Si la función `func` hace una llamada a su _callback_ con un solo argumento, el Observable resultante emitirá ese valor. Por el contrario, si se hace una llamada a la _callback_ con más de un valor, el Observable resultante emitirá un array con dichos valores como argumentos.
+La salida de `bindCallback` es una función que recibe los mismos parámetros que `func`, exceptuando el último (la _callback_.) Cuando se llama a la función de salida con argumentos, esta retorna un Observable. Si la función `func` hace una llamada a su _callback_ con un solo argumento, el Observable resultante emitirá ese valor. Por el contrario, si se hace una llamada a la _callback_ con más de un valor, el Observable resultante emitirá un array con dichos valores como argumentos.
 
 Es muy importante tener en cuenta que la llamada a la función de entrada `func` no se realiza a la vez que la llamada a la función de salida, sino cuando el Observable retornado por la función de salida es suscrito. Esto implica que si `func` hace una petición AJAX, dicha petición se hará cada vez que se hace una suscripción al Observable resultante, pero no antes.
 
@@ -811,6 +805,15 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/bindCallback.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/bindCallback">Documentación oficial en inglés</a>

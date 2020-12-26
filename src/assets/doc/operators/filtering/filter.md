@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # filter
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/filter.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
 </h2>
@@ -115,6 +106,15 @@ const clicksOnDivs = clicks.pipe(filter((ev) => ev.target.tagName === "DIV"));
 clicksOnDivs.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/filter.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/filter">Documentación oficial en inglés</a>

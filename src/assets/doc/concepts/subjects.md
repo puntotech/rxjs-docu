@@ -34,7 +34,7 @@ subject.next(2);
 // observerB: 2
 ```
 
-Dado que un Sujeto es un Observador, esto quiere decir que se puede proporcionar un Sujeto como argumento a la función `subscribe` de cualquier Observable, tal y como se muestra a continuación:
+Dado que un Sujeto es un Observador, quiere decir que se puede proporcionar un Sujeto como argumento a la función `subscribe` de cualquier Observable, tal y como se muestra a continuación:
 
 ```javascript
 import { Subject, from } from 'rxjs';
@@ -278,7 +278,7 @@ subject.next(5);
 // observerB: 5
 ```
 
-También se puede especificar el parámetro `windowTime` en milisegundos, además del tamaño del buffer, para dterminar cuán antiguos pueden ser los valores almacenados. En el siguiente ejemplo utilizamos un tamaño bastante mayor de buffer, `100`, pero un parámetro `windowTime` de solo `500` milisegundos.
+También se puede especificar el parámetro `windowTime` en milisegundos, además del tamaño del buffer, para determinar cuán antiguos pueden ser los valores almacenados. En el siguiente ejemplo utilizamos un tamaño bastante mayor de buffer, `100`, pero un parámetro `windowTime` de solo `500` milisegundos.
 
 ```javascript
 import { ReplaySubject } from "rxjs";
@@ -313,7 +313,7 @@ setTimeout(() => {
 
 ## AsyncSubject
 
-El `AsyncSubject` es una variante donde únicamente se envía el último valor de la ejecución Observable a sus Observadores, y esto ocurre solo cuando la ejecución haya completado.
+El `AsyncSubject` es una variante donde únicamente se envía el último valor de la ejecución Observable a sus Observadores, y esto ocurre solo cuando la ejecución se ha completado.
 
 ```javascript
 import { AsyncSubject } from "rxjs";
@@ -340,4 +340,4 @@ subject.complete();
 // observerB: 5
 ```
 
-El `AsyncSubject` es similar al operador [last()](/operators/filtering/last), en el sentido de que espera a haber recibido la notificacin `complete` para enviar el valor último.
+El `AsyncSubject` es similar al operador [last()](/operators/filtering/last), ya que espera a haber recibido la notificación `complete` para enviar el valor último.

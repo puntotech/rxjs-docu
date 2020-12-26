@@ -44,7 +44,7 @@ Hay que tener en cuenta que `map` tiene que ser construido en el momento, ya que
 
 ## Piping
 
-Los Operadores de tubería son funciones, por lo que pueden utilizarse como funciones normales:`op()(obs)`. Sin embargo, en la práctica, tienden a utilizarse muchos operadores al mismo tiempo, por lo que hacer esto hará que nuestro código sea ilegible: `op4()(op3()(op2()(op1()(obs))))`. Por esta razón, los Observables tienen un método llamado `.pipe()` que cumple esta misma función, de una forma mucho más legible:
+Los Operadores de tubería son funciones, por lo que pueden utilizarse como funciones normales: `op()(obs)`. Sin embargo, en la práctica, tienden a utilizarse muchos operadores al mismo tiempo, por lo que hacer esto hará que nuestro código sea ilegible: `op4()(op3()(op2()(op1()(obs))))`. Por esta razón, los Observables tienen un método llamado `.pipe()` que cumple esta misma función, de una forma mucho más legible:
 
 ```javascript
 obs.pipe(op1(), op2(), op3(), op3());
@@ -68,7 +68,9 @@ Se puede ver la [lista completa de Operadores estáticos de Creación aquí.]()
 
 ## Observables de Orden Superior
 
-Observables most commonly emit ordinary values like strings and numbers, but surprisingly often, it is necessary to handle Observables of Observables, so-called higher-order Observables. For example, imagine you had an Observable emitting strings that were the URLs of files you wanted to see. The code might look like this:
+Los Observables suelen emitir valores ordinarios como cadenas o números, pero a veces (y más a menudo de lo que pudiera parecer), es necesario manejar un Observable que emite Observables, también conocido como un Observable de orden superior. 
+
+Por ejemplo, se podría tener un Observable que emite las URLs de unos ficheros que se quieren ver. El código sería algo parecido a lo siguiente:
 
 ```javascript
 const fileObservable = urlObservable.pipe(map((url) => http.get(url)));
@@ -322,7 +324,7 @@ function delay(delayInMillis) {
 
 Es importante que:
 
-    1. Se implementen las tres funciones Observer, `next()`, `error()`, and `complete()` when subscribing to the input Observable.
+    1. Se implementen las tres funciones Observer, `next()`, `error()`, y `complete()` a la hora de suscribirse al Observable de entrada.
     2. Se implemente una función *teardown* que se encargue de limpiar (en este caso, cancelando la suscripción y encargándose de cualquier *timeout* pendiente) cuando el Observable se complete.
     3. La función que se le pasa al constructor del Observable retorne la función *teardown*.
 

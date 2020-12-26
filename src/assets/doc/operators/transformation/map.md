@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # map
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
 </h2>
@@ -22,7 +13,7 @@
 ### Parámetros
 
 <table>
-<tr><td>project</td><td>La functión que se aplica a cada valor emitido por el Observable fuente. El parámetro `index` es el número `i` para la `i`ésima emisión que haya ocurrido desde la suscripción, comenzando por el número 0.</td></tr>
+<tr><td>project</td><td>La función que se aplica a cada valor emitido por el Observable fuente. El parámetro `index` es el número `i` para la `i`ésima emisión que haya ocurrido desde la suscripción, comenzando por el número 0.</td></tr>
 <tr><td>thisArg</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 Un argumento opcional para definir el valor del <code>this</code> en la función de proyección.</td></tr>
 </table>
@@ -84,6 +75,15 @@ const positions = clicks.pipe(map((ev) => ev.clientX));
 positions.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/map">Documentación oficial en inglés</a>

@@ -1,15 +1,6 @@
-<div class="page-heading">
-
 # elementAt
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
-<h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emissiones del Observable fuente
+<h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emisiones del Observable fuente
 </h2>
 
 <details>
@@ -44,8 +35,7 @@ Emite únicamente el valor i-ésimo, y se completa.
 <img src="assets/images/marble-diagrams/filtering/elementAt.png" alt="Diagrama de canicas del operador elementAt">
 
 `elementAt` retorna un Observable que emite el elemento en la posición indicada por el índice, o un valor por defecto si el índice proporcionado está fuera de rango y se proporciona dicho valor por defecto. En el caso de que no se proporcione, el Observable resultante emitirá un error `ArgumentOutOfRangeError`.
-
-returns an Observable that emits the item at the specified index in the source Observable, or a default value if that index is out of range and the default argument is provided. If the default argument is not given and the index is out of range, the output Observable will emit an ArgumentOutOfRangeError error.
+s
 
 ## Ejemplos
 
@@ -113,6 +103,15 @@ result.subscribe((x) => console.log(x));
 // click 3 = objeto MouseEvent
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/elementAt">Documentación oficial en inglés</a>

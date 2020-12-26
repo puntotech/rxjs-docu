@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # count
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/count.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
 </h2>
@@ -40,7 +31,7 @@ Una función booleana para seleccionar qué valores se cuenta. Consta de los sig
 
 ## Descripción
 
-Indica cuántos valores se han emitido cuanod la fuente se completa.
+Indica cuántos valores se han emitido cuando la fuente se completa.
 
 <img src="assets/images/marble-diagrams/mathematical-aggregate/count.png" alt="Diagrma de cancias del operador count">
 
@@ -197,6 +188,15 @@ result.subscribe((x) => console.log(x));
 // 4
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/count.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/count">Documentación oficial en inglés</a>

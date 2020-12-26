@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # window
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/window.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
 </h2>
@@ -80,6 +71,15 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/window.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/window">Documentación oficial en inglés</a>

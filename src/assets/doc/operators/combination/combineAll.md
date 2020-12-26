@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # combineAll
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineAll.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle">Convierte un Observable de orden superior en uno de primer orden aplicando <a href="/operators/combination/combineLatest">combineLatest</a> cuando el Observable de orden superior se completa</h2>
 
@@ -35,11 +26,11 @@ Tipo: <code>(...values: any[]) => R</code>.</td></tr>
 
 <img src="assets/images/marble-diagrams/join-creation/combineAll.png" alt="Diagrama de canicas del operador combineAll">
 
-`combineAll` recibe un Observable de Observables y recoge todos los Observables que contenga. Una vez que el Observable externo se haya completado, se suscribe a todos los Observables recogidos y combina sus valores mediante la estrategía `combineLatest`, de manera que:
+`combineAll` recibe un Observable de Observables y recoge todos los Observables que contenga. Una vez que el Observable externo se haya completado, se suscribe a todos los Observables recogidos y combina sus valores mediante la estrategia `combineLatest`, de manera que:
 
 - Cada vez que un Observable interno emite, el Observable resultante emite.
-- Cuando el Observable retornado emite, emite todos los valores recientes de tal manera:
-  - Si se proporciona una función `project`, se llama dicha función con cada valor de cada Observable interno en el orden en el que llegaron, y el resultado de la función de proyección es lo que se emite en el Observable resultante.
+- Cuando el Observable retornado emite, emite todos los valores recientes de manera que:
+  - Si se proporciona una función `project`, se llama a dicha función con cada valor de cada Observable interno en el orden en el que llegaron, y el resultado de la función de proyección es lo que se emite en el Observable resultante.
   - Si no se proporciona una función `project`, el Observable resultante emite un array de todos los valores recientes.
 
 ## Ejemplos
@@ -163,6 +154,15 @@ No recibe ningún parámetro.
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineAll.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/combineAll">Documentación oficial en inglés</a>

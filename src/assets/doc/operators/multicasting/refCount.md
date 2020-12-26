@@ -1,5 +1,3 @@
-<div class="page-heading">
-
 # refCount
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/refCount.ts">
@@ -239,6 +237,15 @@ publishedInterval.subscribe();
 // No ocurre nada hasta que no se llame a la función connect() del Observable
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/refCount.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/refCount">Documentación oficial en inglés</a>

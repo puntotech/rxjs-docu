@@ -1,17 +1,11 @@
-<div class="page-heading">
-
 # find
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición</h2>
 
 💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first](/operators/filtering/first)
+
+<details>
+<summary>Signatura</summary>
 
 ### Firma
 
@@ -20,10 +14,10 @@
 ### Parámetros
 
 <table>
-<tr><td>predicate</td>Una función que se llama con cada elemente para comprobar si se cumple o no la condición.<td></td></tr>
+<tr><td>predicate</td><td>Una función que se llama con cada elemento para comprobar si se cumple o no la condición.</td></tr>
 <tr><td>thisArg</td>Opcional. El valor por defecto es <code>undefined</code>.
 Un argumento opcional para determinar el valor del <code>this</code> en la función <code>predicate</code>.<td></td></tr>
-<table>
+</table>
 
 ### Retorna
 
@@ -113,6 +107,15 @@ const result = clicks.pipe(find((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/find">Documentación oficial en inglés</a>

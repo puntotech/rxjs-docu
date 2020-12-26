@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # distinctUntilChanged
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
 </h2>
@@ -33,7 +24,9 @@ Tipo: <code>(x: T) => K</code>.</td></tr>
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente que tengan valores distintos.
 
-# Descripción
+</details>
+
+## Descripción
 
 Si se proporciona una función de comparación, se utilizará para comprobar si cada elemento se debe emitir o no.
 
@@ -129,6 +122,15 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
     // { age: 5, name: 'Foo' }
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilChanged">Documentación oficial en inglés</a>

@@ -33,7 +33,7 @@ it("generate the stream correctly", () => {
 
 La llamada a la función _callback_ que se proporciona a `testScheduler.run(callback)` se realiza con el objeto `helpers` que contiene las funciones que se utilizan para escribir los tests.
 
-> Cuando el código contenido en la _callback_ se está ejecutando, cualquier operador que utilice temporizadores/`AsyncScheduler` (como `delay`, `debounceTime` etc.) utilizará el `TestScheduler` de forma \*\*automática\*\*, para poporciona "tiempo virtual". Ya no es necesario proporcionarles el `TestScheduler`, como se hacía anteriormente.
+> Cuando el código contenido en la _callback_ se está ejecutando, cualquier operador que utilice temporizadores/`AsyncScheduler` (como `delay`, `debounceTime` etc.) utilizará el `TestScheduler` de forma \*\*automática\*\*, para proporciona "tiempo virtual". Ya no es necesario proporcionarles el `TestScheduler`, como se hacía anteriormente.
 
 ```javascript
 testScheduler.run((helpers) => {
@@ -63,7 +63,7 @@ IMPORTANTE: Esta guía de sintaxis se refiere al uso de diagramas de canicas en 
 - `' '` espacio en blanco: el espacio en blanco horizontal se ignora, y puede utilizarse para alinear verticalmente múltiples diagramas de canicas.
 - `'-'` _frame_: representa el paso de un _frame_ de tiempo virtual (ver la descripción anterior de _frame_).
 - `[0-9]+[ms|s|m]` progresión de tiempo: la sintaxis de progresión de tiempo permite progresar el tiempo virtual en una cantidad determinada. Es un número, seguido por una unidad de tiempo: `ms` (milisegundos), `s` (segundos) o `m` (minutos) sin espacio entre ellos. Ej: `a 10ms b`. Ver [Sintaxis de Progresión de Tiempo]() para obtener más detalles.
-- `'|'` compleción: representa la compleción con éxito de un Observable. Es el Productor del Observable señalando `complete()`.
+- `'|'` completación: representa la completación con éxito de un Observable. Es el Productor del Observable señalando `complete()`.
 - `'#'` error: representa un error finalizando el Observable. Es el Productor del Observable señalando `error()`.
 - [a-z0-9] Ej; `'a'` cualquier carácter alfanumérico: representa un valor emitido por el Productor señalando `next()`. Debe considerarse que se puede proyectar esto a un objeto o array, de la siguiente manera:
 

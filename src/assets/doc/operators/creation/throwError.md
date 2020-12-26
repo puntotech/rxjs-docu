@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # throwError
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/throwError.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable que solo emite una notificación de error
 </h2>
@@ -22,7 +13,7 @@
 ### Parámetros
 
 <table>
-<tr><td>error</td><td>The particular Error to pass to the error notification.</td></tr>
+<tr><td>error</td><td>El Error que se le proporciona a la notificación error.</td></tr>
 <tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
 El <code>SchedulerLike</code> que utilizar para planificar la emisión de la notificación <code>error</code>.</td></tr>
 
@@ -128,6 +119,15 @@ interval(1000)
 // (error) El número 2 no mola
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/throwError.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/throwError">Documentación oficial en inglés</a>

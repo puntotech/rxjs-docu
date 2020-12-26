@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # fromEvent
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
 </h2>
@@ -46,7 +37,7 @@ Crea un Observable a partir de eventos del DOM, de eventos EventEmitter de Node.
 
 Cada vez que se realiza una suscripción al Observable resultante, la función de manejo de eventos se registra al `event target`. Cuando el evento se dispare, el valor que se pase como primer argumento a la función registrada será emitido por el Observable resultante. Cuando se cancele la suscripción al Observable, la función se desvinculará del _event target_.
 
-Se debe tener en cuenta que si las llamadas a la función registrada al _event target_ se hacen con más de un argumento, ningún argumento a partir del segundo, este inclusive, aparecerá en el flujo resultante. Para poder acceder a dichos argumentos, se le puede proporcionar una función de proyección opcional a `fromEvent`, que se llamará con todos los argumentos proporcionados al manejador de eventos. El Observble resultante emitirá los valores retornados por la función de proyección, en lugar del valor habitual.
+Se debe tener en cuenta que si las llamadas a la función registrada al _event target_ se hacen con más de un argumento, ningún argumento a partir del segundo, este inclusive, aparecerá en el flujo resultante. Para poder acceder a dichos argumentos, se le puede proporcionar una función de proyección opcional a `fromEvent`, que se llamará con todos los argumentos proporcionados al manejador de eventos. El Observable resultante emitirá los valores retornados por la función de proyección, en lugar del valor habitual.
 
 También debe tenerse en cuenta que los _event targets_ listados más adelante se comprueban mediante [duck typing](https://es.wikipedia.org/wiki/Duck_typing), o tipifación dinámica. Esto implica que, independientemente del tipo de objeto y del entorno en el que se trabaje, se puede utilizar `fromEvent` en dicho objeto si se exponen los métodos descritos (siempre y cuando se tengan el comportamiento descrito anteriormente). Por ejemplo, si una biblioteca de Node.js expone un _event target_ cuyos métodos se llaman igual que los del `EventTarget` del DOM, el utilizar `fromEvent` es una buena elección.
 
@@ -134,6 +125,8 @@ copie$.subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
+**Emitir los clicks que ocurran en el DOM**
+
 ```javascript
 import { fromEvent } from "rxjs";
 
@@ -143,6 +136,8 @@ clicks.subscribe((x) => console.log(x));
 // Salida:
 // (click) MouseEvent{...} (click) MouseEvent{...}
 ```
+
+**Usar addEventListener con la opción de captura**
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -162,6 +157,15 @@ clicksInDiv.subscribe(() => console.log("div"));
 // que la consola mostrará "document" primero, y luego "div".
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/index/function/fromEvent">Documentación oficial en inglés</a>

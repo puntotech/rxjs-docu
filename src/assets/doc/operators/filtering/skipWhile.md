@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # skipWhile
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipWhile.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Se salta las emisiones del Observable fuente hasta que una condición deje de cumplirse
 </h2>
@@ -90,13 +81,22 @@ const language$ = from([
 language$
   .pipe(skipWhile(({ type }) => type === "Multiparadigma"))
   .subscribe(console.log);
-/* Salida: 
+/* Salida:
   { name: "Java", type: "Orientado a objetos" },
   { name: "Scala", type: "Multiparadigma" },
   { name: "Haskell", type: "Funcional" },
 */
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipWhile.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/skipWhile">Documentación oficial en inglés</a>

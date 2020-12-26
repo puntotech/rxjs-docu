@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # distinctUntilKeyChanged
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
 </h2>
@@ -30,7 +21,7 @@ Función de comparación opcional que se utiliza para comprobar si un elemento e
 
 ### Retorna
 
-`MonoTypeOperatorFunction<T>`: Un Observable that emite elementos del Observable fuente si la propiedad especificada es distinta a la del elemento anterior.
+`MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente si la propiedad especificada es distinta a la del elemento anterior.
 
 </details>
 
@@ -177,6 +168,15 @@ of<Person>(
 // { age: 5, name: 'Foo2' }
 ```
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilKeyChanged">Documentación oficial en inglés</a>

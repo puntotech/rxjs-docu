@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # tap
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/tap.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle"> Lleva a cabo un efecto colateral en cada emisión del Observable fuente, pero retorna un Observable que es idéntico a la fuente
 </h2>
@@ -40,7 +31,7 @@ Callback for the completion of the source.</td></tr>
 
 Intercepta cada emisión de la fuente y ejecuta una función. Retorna un Observable idéntico a la fuente siempre y cuando no ocurra ningún error.
 
-Retorna un Observable que refleja al Observable fuente, pero modificado de tal manera para que el Observador que se le haya proporcionado al operador pueda ser llamado para llevar a cabo un efecto colateral por cada valor, error o compleción emitidos por el Observable fuente. Si se produce cualquier error en Observador/manejadores mencionados anteriormente, este se envía de forma segura por el canal de error del Observable de salida.
+Retorna un Observable que refleja al Observable fuente, pero modificado de tal manera para que el Observador que se le haya proporcionado al operador pueda ser llamado para llevar a cabo un efecto colateral por cada valor, error o completación emitidos por el Observable fuente. Si se produce cualquier error en Observador/manejadores mencionados anteriormente, este se envía de forma segura por el canal de error del Observable de salida.
 
 Este operador es muy útil para depurar Observables (ver si el valor emitido es correcto) o para llevar a cabo cualquier tipo de efecto colateral.
 
@@ -228,6 +219,15 @@ Tipo: <code>() => void</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/tap.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/tap">Documentación oficial en inglés</a>

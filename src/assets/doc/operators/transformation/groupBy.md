@@ -1,13 +1,4 @@
-<div class="page-heading">
-
 # groupBy
-
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
 
 <h2 class="subtitle">Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo </h2>
 
@@ -42,9 +33,7 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 Cuando el Observable emite un elemento, se computa una clave para dicho elemento mediante la función `keySelector`.
 
-Si existe un GroupedObservable para la clave, el GroupedObservable emite.
-
-If a GroupedObservable for this key exists, this GroupedObservable emits. Elsewhere, a new GroupedObservable for this key is created and emits.
+Si existe un GroupedObservable para dicha clave, el GroupedObservable emite. Si no existe, se crea un GroupedObservable para dicha clave y emite.
 
 Un GroupedObservable representa valores que pertenecen al mismo grupo, representado por una clave. La clave está disponible como el campo key de una instancia GroupedObservable.
 
@@ -266,6 +255,15 @@ Tipo: <code>() => Subject</code>.</td></tr>
 </div>
 </details>
 
-## Recursos adicionales -
+<div class="additional-section">
+
+## Recursos adicionales
+
+<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts">
+<svg>
+  <use xlink:href="/assets/icons/source.svg#source-code"></use>
+</svg>
+</a>
+</div>
 
 - <a target="_blank" href="https://rxjs.dev/api/operators/groupBy">Documentación oficial en inglés</a>
