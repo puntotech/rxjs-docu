@@ -1,0 +1,69 @@
+.container {
+  padding: 50px;
+}
+
+.api-container {
+  padding: 20px;
+}
+
+.operator-category {
+  margin-left: 20px;
+}
+
+.category-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.api-element {
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.api-type {
+  border-radius: 3px;
+  color: #fff;
+  margin-right: 10px;
+  padding: 2px 5px;
+}
+
+.class {
+  background-color: #2196f3;
+}
+
+.const {
+  background-color: #6e6e6e;
+  padding: 2px 5.5px;
+}
+
+.decorator {
+  background-color: #1565c0;
+}
+
+.directive {
+  background-color: #d81b60;
+}
+
+.enum {
+  background-color: #ffa000;
+  padding: 2px 6px;
+}
+
+.function {
+  background-color: #2e7d32;
+  padding: 2px 6px;
+}
+
+.interface {
+  background-color: #009688;
+  padding: 2px 8px;
+}
+
+.pipe {
+  background-color: #546e7a;
+}
+
+.type-alias {
+  background-color: #7cb342;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Lista de la API</h1>
+    <div class="api-container">
+        <div *ngFor="let category of apiData | keyvalue: preserveOrder">
+            <h2>{{category.key}}</h2>
+            <ng-container [ngTemplateOutlet]="category.key === 'Operadores' ? operators : generic" 
+            [ngTemplateOutletContext]="{category:category}">
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<ng-template #operators let-apiCategory="category">
+        <div class="operator-category" *ngFor="let operatorCategory of apiCategory.value | keyvalue">
+            <h3>{{operatorCategory.key}}</h3>
+            <ng-container [ngTemplateOutlet]="generic" [ngTemplateOutletContext]="{category:operatorCategory}">
+            </ng-container>
+        </div>
+</ng-template>
+
+<ng-template #generic let-category="category">
+    <div class="category-content">
+        <div class="api-element" *ngFor="let apiElement of category.value | keyvalue">
+            <span class="api-type" [class]="apiElement.value.type | lowercase">{{apiTypes[apiElement.value.type]}}</span>
+            <a [routerLink]="apiElement.value.url">{{apiElement.key}}</a>
+        </div>
+    </div>
+</ng-template>
