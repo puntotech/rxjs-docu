@@ -7,9 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { ContentComponent } from './content/content.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ApiComponent } from './api/api.component';
 
 @NgModule({
-  declarations: [HomeComponent, ContentComponent],
+  declarations: [ApiComponent, HomeComponent, ContentComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
