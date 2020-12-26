@@ -1,0 +1,290 @@
+{
+  "Index": {
+  "ArgumentOutOfRangeError": {
+    "type": "Interface",
+    "url": "/api/index/ArgumentOutOfRangeError",
+    "deprecated": "false"
+  },
+  "bindCallback": { "type": "Function", "url": "/api/index/bindCallback", "deprecated": "false" },
+  "bindNodeCallback": { "type": "Function", "url": "/api/index/bindNodeCallback", "deprecated": "false" },
+  "CompletionObserver": { "type": "Interface", "url": "/api/index/CompletionObserver", "deprecated": "false" },
+  "config": { "type": "Const", "url": "/api/index/config", "deprecated": "false" },
+  "ConnectableObservable": { "type": "Class", "url": "/api/index/ConnectableObservable", "deprecated": "false" },
+  "EmptyError": { "type": "Interface", "url": "/api/index/EmptyError", "deprecated": "false" },
+  "ErrorObserver": { "type": "Interface", "url": "/api/index/ErrorObserver", "deprecated": "false" },
+  "FactoryOrValue": { "type": "Type-Alias", "url": "/api/index/FactoryOrValue", "deprecated": "false" },
+  "GroupedObservable": { "type": "Class", "url": "/api/index/GroupedObservable", "deprecated": "false" },
+  "identity": { "type": "Function", "url": "/api/index/identity", "deprecated": "false" },
+  "InteropObservable": { "type": "Type-Alias", "url": "/api/index/InteropObservable", "deprecated": "false" },
+  "isObservable": { "type": "Function", "url": "/api/index/isObservable", "deprecated": "false" },
+  "MonoTypeOperatorFunction": {
+    "type": "Interface",
+    "url": "/api/index/MonoTypeOperatorFunction",
+    "deprecated": "false"
+  },
+  "NextObserver": { "type": "Interface", "url": "/api/index/NextObserver", "deprecated": "false" },
+  "noop": { "type": "Function", "url": "/api/index/noop", "deprecated": "false" },
+  "Notification": { "type": "Class", "url": "/api/index/Notification", "deprecated": "false" },
+  "NotificationKind": {
+    "type": "Enum",
+    "url": "/api/index/NotificationKind",
+    "deprecated": "true"
+  },
+  "ObjectUnsubscribedError": {
+    "type": "Interface",
+    "url": "/api/index/ObjectUnsubscribedError",
+    "deprecated": "false"
+  },
+  "Observable": { "type": "Class", "url": "/api/index/Observable", "deprecated": "false" },
+  "observable": { "type": "Const", "url": "/api/index/observable", "deprecated": "false" },
+  "ObservableInput": { "type": "Type-Alias", "url": "/api/index/ObservableInput", "deprecated": "false" },
+  "ObservableLike": {
+    "type": "Type-Alias",
+    "url": "/api/index/ObservableLike",
+    "deprecated": "true"
+  },
+  "ObservedValueOf": { "type": "Type-Alias", "url": "/api/index/ObservedValueOf", "deprecated": "false" },
+  "ObservedValuesFromArray": {
+    "type": "Type-Alias",
+    "url": "/api/index/ObservedValuesFromArray",
+    "deprecated": "false"
+  },
+  "Observer": { "type": "Interface", "url": "/api/index/Observer", "deprecated": "false" },
+  "onErrorResumeNext": { "type": "Function", "url": "/api/index/onErrorResumeNext", "deprecated": "false" },
+  "Operator": { "type": "Class", "url": "/api/index/Operator", "deprecated": "false" },
+  "OperatorFunction": { "type": "Class", "url": "/api/index/OperatorFunction", "deprecated": "false" },
+  "PartialObserver": { "type": "Type-Alias", "url": "/api/index/PartialObserver", "deprecated": "false" },
+  "pipe": { "type": "Function", "url": "/api/index/pipe", "deprecated": "false" },
+  "queue": { "type": "Const", "url": "/api/index/queue", "deprecated": "false" },
+  "scheduled": { "type": "Function", "url": "/api/index/scheduled", "deprecated": "false" },
+  "Scheduler": { "type": "Class", "url": "/api/index/Scheduler", "deprecated": "true" },
+  "SchedulerAction": { "type": "Interface", "url": "/api/index/SchedulerAction", "deprecated": "false" },
+  "SchedulerLike": { "type": "Interface", "url": "/api/index/SchedulerLike", "deprecated": "false" },
+  "Subscribable": { "type": "Interface", "url": "/api/index/Subscribable", "deprecated": "false" },
+  "SubscribableOrPromise": { "type": "Type-Alias", "url": "/api/index/SubscribableOrPromise", "deprecated": "false" },
+  "Subscriber": { "type": "Class", "url": "/api/index/Subscriber", "deprecated": "false" },
+  "Subscription": { "type": "Class", "url": "/api/index/Subscription", "deprecated": "false" },
+  "SubscriptionLike": { "type": "Interface", "url": "/api/index/SubscriptionLike", "deprecated": "false" },
+  "TeardownLogic": { "type": "Type-Alias", "url": "/api/index/TeardownLogic", "deprecated": "false" },
+  "TimeInterval": { "type": "Interface", "url": "/api/index/TimeInterval", "deprecated": "false" },
+  "TimeoutError": { "type": "Interface", "url": "/api/index/TimeoutError", "deprecated": "false" },
+  "Timestamp": { "type": "Interface", "url": "/api/index/Timestamp", "deprecated": "false" },
+  "UnaryFunction": { "type": "Interface", "url": "/api/index/UnaryFunction", "deprecated": "false" },
+  "Unsubscribable": { "type": "Interface", "url": "/api/index/Unsubscribable", "deprecated": "false" },
+  "UnsubscriptionError": { "type": "Interface", "url": "/api/index/UnsubscriptionError", "deprecated": "false" },
+  "VirtualTimeScheduler": { "type": "Class", "url": "/api/index/VirtualTimeScheduler", "deprecated": "false" }
+},
+
+"Operadores": 
+    {
+      "Combinación": {  
+        "combineAll": { "name": "combineAll", "type":"Function", "url": "operators/combination/combineAll", "deprecated": false },
+        "combineLatest": { "name": "combineLatest", "type":"Function", "url": "operators/combination/combineLatest", "deprecated": false },
+        "concat": { "name": "concat", "type":"Function", "url": "operators/combination/concat", "deprecated": false },
+        "concatAll": { "name": "concatAll", "type":"Function", "url": "operators/combination/concatAll", "deprecated": false },
+        "exhaust": { "name": "exhaust", "type":"Function", "url": "operators/combination/exhaust", "deprecated": false },
+        "forkJoin": { "name": "forkJoin", "type":"Function", "url": "operators/combination/forkJoin", "deprecated": false },
+        "merge": { "name": "merge", "type":"Function", "url": "operators/combination/merge", "deprecated": false },
+        "mergeAll": { "name": "mergeAll", "type":"Function", "url": "operators/combination/mergeAll", "deprecated": false },
+        "race": { "name": "race", "type":"Function", "url": "operators/combination/race", "deprecated": false },
+        "startWith": { "name": "startWith", "type":"Function", "url": "operators/combination/startWith", "deprecated": false },
+        "withLatestFrom": { "name": "withLatestFrom", "type":"Function", "url": "operators/combination/withLatestFrom", "deprecated": false },
+        "zip": { "name": "zip", "type":"Function", "url": "operators/combination/zip", "deprecated": false }
+      },
+      "Condicionales": {
+     
+        "defaultIfEmpty": { "name": "defaultIfEmpty", "type":"Function", "url": "operators/conditional/defaultIfEmpty", "deprecated": false },
+
+        "every": { "name": "every", "type":"Function", "url": "operators/conditional/every", "deprecated": false },
+
+        "find": { "name": "find", "type":"Function", "url": "operators/conditional/find", "deprecated": false },
+
+        "findIndex": { "name": "findIndex", "type":"Function", "url": "operators/conditional/findIndex", "deprecated": false },
+
+        "isEmpty": { "name": "isEmpty", "type":"Function", "url": "operators/conditional/isEmpty", "deprecated": false }
+      },
+      "Creación": {
+     
+        "ajax": { "name": "ajax", "type":"Function", "url": "operators/creation/ajax", "deprecated": false },
+
+        "defer": { "name": "defer", "type":"Function", "url": "operators/creation/defer", "deprecated": false },
+
+        "empty": { "name": "empty", "type":"Function", "url": "operators/creation/empty", "deprecated": false },
+
+        "from": { "name": "from", "type":"Function", "url": "operators/creation/from", "deprecated": false },
+
+        "fromEvent": { "name": "fromEvent", "type":"Function", "url": "operators/creation/fromEvent", "deprecated": false },
+
+        "fromEventPattern": { "name": "fromEventPattern", "type":"Function", "url": "operators/creation/fromEventPattern", "deprecated": false },
+
+        "fromFetch": { "name": "fromFetch", "type":"Function", "url": "operators/creation/fromFetch", "deprecated": false },
+
+        "generate": { "name": "generate", "type":"Function", "url": "operators/creation/generate", "deprecated": false },
+
+        "interval": { "name": "interval", "type":"Function", "url": "operators/creation/interval", "deprecated": false },
+
+        "of": { "name": "of", "type":"Function", "url": "operators/creation/of", "deprecated": false },
+
+        "range": { "name": "range", "type":"Function", "url": "operators/creation/range", "deprecated": false },
+
+        "throwError": { "name": "throwError", "type":"Function", "url": "operators/creation/throwError", "deprecated": false },
+
+        "timer": { "name": "timer", "type":"Function", "url": "operators/creation/timer", "deprecated": false },
+
+        "iif": { "name": "iif", "type":"Function", "url": "operators/creation/iif", "deprecated": false }
+      },
+      "Filtración": {
+     
+        "audit": { "name": "audit", "type":"Function", "url": "operators/filtering/audit", "deprecated": false },
+
+        "auditTime": { "name": "auditTime", "type":"Function", "url": "operators/filtering/auditTime", "deprecated": false },
+
+        "debounce": { "name": "debounce", "type":"Function", "url": "operators/filtering/debounce", "deprecated": false },
+
+        "debounceTime": { "name": "debounceTime", "type":"Function", "url": "operators/filtering/debounceTime", "deprecated": false },
+
+        "distinct": { "name": "distinct", "type":"Function", "url": "operators/filtering/distinct", "deprecated": false },
+
+        "distinctUntilChanged": { "name": "distinctUntilChanged", "type":"Function", "url": "operators/filtering/distinctUntilChanged", "deprecated": false },
+
+       "distinctUntilKeyChanged": { "name": "distinctUntilKeyChanged", "type":"Function", "url": "operators/filtering/distinctUntilKeyChanged", "deprecated": false },
+
+        "elementAt": { "name": "elementAt", "type":"Function", "url": "operators/filtering/elementAt", "deprecated": false },
+
+        "filter": { "name": "filter", "type":"Function", "url": "operators/filtering/filter", "deprecated": false },
+
+        "first": { "name": "first", "type":"Function", "url": "operators/filtering/first", "deprecated": false },
+
+       "ignoreElements": { "name": "ignoreElements", "type":"Function", "url": "operators/filtering/ignoreElements", "deprecated": false },
+
+        "last": { "name": "last", "type":"Function", "url": "operators/filtering/last", "deprecated": false },
+
+        "sample": { "name": "sample", "type":"Function", "url": "operators/filtering/sample", "deprecated": false },
+
+        "sampleTime": { "name": "sampleTime", "type":"Function", "url": "operators/filtering/sampleTime", "deprecated": false },
+
+        "single": { "name": "single", "type":"Function", "url": "operators/filtering/single", "deprecated": false },
+
+        "skip": { "name": "skip", "type":"Function", "url": "operators/filtering/skip", "deprecated": false },
+
+        "skipLast": { "name": "skipLast", "type":"Function", "url": "operators/filtering/skipLast", "deprecated": false },
+
+        "skipUntil": { "name": "skipUntil", "type":"Function", "url": "operators/filtering/skipUntil", "deprecated": false },
+
+        "skipWhile": { "name": "skipWhile", "type":"Function", "url": "operators/filtering/skipWhile", "deprecated": false },
+
+        "take": { "name": "take", "type":"Function", "url": "operators/filtering/take", "deprecated": false },
+
+        "takeLast": { "name": "takeLast", "type":"Function", "url": "operators/filtering/takeLast", "deprecated": false },
+
+        "takeUntil": { "name": "takeUntil", "type":"Function", "url": "operators/filtering/takeUntil", "deprecated": false },
+
+        "takeWhile": { "name": "takeWhile", "type":"Function", "url": "operators/filtering/takeWhile", "deprecated": false },
+
+        "throttle": { "name": "throttle", "type":"Function", "url": "operators/filtering/throttle", "deprecated": false },
+
+        "throttleTime": { "name": "throttleTime", "type":"Function", "url": "operators/filtering/throttleTime", "deprecated": false }
+      },
+      "Gestión de Errores": {
+     
+      "catchError": { "name": "catchError", "type":"Function", "url": "operators/error-handling/catchError", "deprecated": false },
+
+      "retry": { "name": "retry", "type":"Function", "url": "operators/error-handling/retry", "deprecated": false },
+
+       "retryWhen": { "name": "retryWhen", "type":"Function", "url": "operators/error-handling/retryWhen", "deprecated": false }
+    },
+      "Multidifusión" : {
+    
+        "multicast": { "name": "multicast", "type":"Function", "url": "operators/multicasting/multicast", "deprecated": false },
+
+        "publish": { "name": "publish", "type":"Function", "url": "operators/multicasting/publish", "deprecated": false },
+
+        "publishBehavior": { "name": "publishBehavior", "type":"Function", "url": "operators/multicasting/publishBehavior", "deprecated": false },
+
+        "publishLast": { "name": "publishLast", "type":"Function", "url": "operators/multicasting/publishLast", "deprecated": false },
+
+        "publishReplay": { "name": "publishReplay", "type":"Function", "url": "operators/multicasting/publishReplay", "deprecated": false },
+
+        "share": { "name": "share", "type":"Function", "url": "operators/multicasting/share", "deprecated": false }
+      },
+      "Transformación": {
+        "buffer": { "name": "buffer", "type":"Function", "url": "operators/transformation/buffer", "deprecated": false },
+        "bufferCount": { "name": "bufferCount", "type":"Function", "url": "operators/transformation/bufferCount", "deprecated": false },
+        "bufferTime": { "name": "bufferTime", "type":"Function", "url": "operators/transformation/bufferTime", "deprecated": false },
+        "bufferToggle": { "name": "bufferToggle", "type":"Function", "url": "operators/transformation/bufferToggle", "deprecated": false },
+        "bufferWhen": { "name": "bufferWhen", "type":"Function", "url": "operators/transformation/bufferWhen", "deprecated": false },
+        "concatMap": { "name": "concatMap", "type":"Function", "url": "operators/transformation/concatMap", "deprecated": false },
+        "concatMapTo": { "name": "concatMapTo", "type":"Function", "url": "operators/transformation/concatMapTo", "deprecated": false },
+        "exhaust": { "name": "exhaust", "type":"Function", "url": "operators/transformation/exhaust", "deprecated": false },
+        "exhaustMap": { "name": "exhaustMap", "type":"Function", "url": "operators/transformation/exhaustMap", "deprecated": false },
+        "expand": { "name": "expand", "type":"Function", "url": "operators/transformation/expand", "deprecated": false },
+        "groupBy": { "name": "groupBy", "type":"Function", "url": "operators/transformation/groupBy", "deprecated": false },
+        "map": { "name": "map", "type":"Function", "url": "operators/transformation/map", "deprecated": false },
+        "mapTo": { "name": "mapTo", "type":"Function", "url": "operators/transformation/mapTo", "deprecated": false },
+        "mergeMap": { "name": "mergeMap", "type":"Function", "url": "operators/transformation/mergeMap", "deprecated": false },
+        "mergeMapTo": { "name": "mergeMapTo", "type":"Function", "url": "operators/transformation/mergeMapTo", "deprecated": false },
+        "mergeScan": { "name": "mergeScan", "type":"Function", "url": "operators/transformation/mergeScan", "deprecated": false },
+        "pairwise": { "name": "pairwise", "type":"Function", "url": "operators/transformation/pairwise", "deprecated": false },
+        "partition": { "name": "partition", "type":"Function", "url": "operators/transformation/partition", "deprecated": false },
+        "pluck": { "name": "pluck", "type":"Function", "url": "operators/transformation/pluck", "deprecated": false },
+        "scan": { "name": "scan", "type":"Function", "url": "operators/transformation/scan", "deprecated": false },
+        "switchMap": { "name": "switchMap", "type":"Function", "url": "operators/transformation/switchMap", "deprecated": false },
+        "switchMapTo": { "name": "switchMapTo", "type":"Function", "url": "operators/transformation/switchMapTo", "deprecated": false },
+        "window": { "name": "window", "type":"Function", "url": "operators/transformation/window", "deprecated": false },
+        "windowCount": { "name": "windowCount", "type":"Function", "url": "operators/transformation/windowCount", "deprecated": false },
+        "windowTime": { "name": "windowTime", "type":"Function", "url": "operators/transformation/windowTime", "deprecated": false },
+        "windowToggle": { "name": "windowToggle", "type":"Function", "url": "operators/transformation/windowToggle", "deprecated": false },
+        "windowWhen": { "name": "windowWhen", "type":"Function", "url": "operators/transformation/windowWhen", "deprecated": false }
+        },
+      "Utilidad": {
+        "tap": { "name": "tap", "type":"Function", "url": "operators/utility/tap", "deprecated": false },
+        "delay": { "name": "delay", "type":"Function", "url": "operators/utility/delay", "deprecated": false },
+        "delayWhen": { "name": "delayWhen", "type":"Function", "url": "operators/utility/delayWhen", "deprecated": false },
+        "dematerialize": { "name": "dematerialize", "type":"Function", "url": "operators/utility/dematerialize", "deprecated": false },
+        "materialize": { "name": "materialize", "type":"Function", "url": "operators/utility/materialize", "deprecated": false },
+        "observeOn": { "name": "observeOn", "type":"Function", "url": "operators/utility/observeOn", "deprecated": false },
+        "subscribeOn": { "name": "subscribeOn", "type":"Function", "url": "operators/utility/subscribeOn", "deprecated": false },
+        "timeInterval": { "name": "timeInterval", "type":"Function", "url": "operators/utility/timeInterval", "deprecated": false },
+        "timestamp": { "name": "timestamp", "type":"Function", "url": "operators/utility/timestamp", "deprecated": false },
+        "timeout": { "name": "timeout", "type":"Function", "url": "operators/utility/timeout", "deprecated": false },
+        "timeoutWith": { "name": "timeoutWith", "type":"Function", "url": "operators/utility/timeoutWith", "deprecated": false },
+        "toArray": { "name": "toArray", "type":"Function", "url": "operators/utility/toArray", "deprecated": false }
+      },
+      "Matemáticos y Agregación": {
+     
+        "count": { "name": "count", "type":"Function", "url": "operators/mathematical-aggregate/count", "deprecated": false },
+        "max": { "name": "max", "type":"Function", "url": "operators/mathematical-aggregate/max", "deprecated": false },
+        "min": { "name": "min", "type":"Function", "url": "operators/mathematical-aggregate/min", "deprecated": false },
+        "reduce": { "name": "reduce", "type":"Function", "url": "operators/mathematical-aggregate/reduce", "deprecated": false }
+    }
+},
+"Sujetos": {
+  "AsyncSubject": { "type": "Class", "url": "/api/subjects/AsyncSubject", "deprecated": "false" },
+  "BehaviorSubject": { "type": "Class", "url": "/api/subjects/BehaviorSubject", "deprecated": "false" },
+  "ReplaySubject": { "type": "Class", "url": "/api/subjects/ReplaySubject", "deprecated": "false" },
+  "Subject": { "type": "Class", "url": "/api/subjects/Subject", "deprecated": "false" }
+},
+"Planificadores": {
+  "animationFrame": { "type": "Const", "url": "/api/schedulers/animationFrame", "deprecated": "false" },
+  "asap": { "type": "Const", "url": "/api/schedulers/asap", "deprecated": "false" },
+  "async": { "type": "Const", "url": "/api/schedulers/async", "deprecated": "false" }
+},
+"Ajax": {
+  "ajax": { "type": "Const", "url": "/operators/creation/ajax", "deprecated": "false" },
+  "AjaxError": { "type": "Interface", "url": "/api/ajax/AjaxError", "deprecated": "false" },
+  "AjaxRequest": { "type": "Interface", "url": "/api/ajax/AjaxRequest", "deprecated": "false" },
+  "AjaxResponse": { "type": "Class", "url": "/api/ajax/AjaxResponse", "deprecated": "false" },
+  "AjaxTimeoutError": { "type": "Interface", "url": "/api/ajaxAjaxTimeoutError/", "deprecated": "false" }
+},
+"Fetch": {
+  "fromFetch": { "type": "Function", "url": "/operators/creation/fromFetch", "deprecated": "false" }
+},
+"WebSocket": {
+  "webSocket": { "type": "Function", "url": "/api/webSocket/webSocket", "deprecated": "false" },
+  "WebSocketSubject": { "type": "Class", "url": "/api/webSocket/WebSocketSubject", "deprecated": "false" },
+  "WebSocketSubjectConfig": { "type": "Interface", "url": "/api/webSocket/WebSocketSubjectConfig", "deprecated": "false" }
+},
+"Testing": {
+  "TestScheduler": { "type": "Class", "url": "/api/testing/TestScheduler", "deprecated": "false" }
+}
+}
