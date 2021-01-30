@@ -130,11 +130,9 @@ evens$.subscribe((x) => console.log("pares", x));
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/partition.ts">
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/index/function/partition">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/index/function/partition">Documentación oficial en inglés</a>
