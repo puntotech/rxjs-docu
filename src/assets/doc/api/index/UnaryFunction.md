@@ -37,9 +37,7 @@ interface UnaryFunction<T, R> {
 ## Recursos adicionales
 
 <a target="_blank" href="https://rxjs.dev/api/index/interface/UnaryFunction">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 

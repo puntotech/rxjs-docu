@@ -1,12 +1,5 @@
 # publishReplay
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishReplay.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
 <h2 class="subtitle">Comparte el Observable fuente, permitiendo que los observadores que se suscriban tarde puedan recibir los valores que se hayan emitido anteriormente</h2>
 
 💡 publishReplay es equivalente a `multicast(() => new ReplaySubject())`
@@ -102,9 +95,7 @@ timer(3000)
 ## Recursos adicionales
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishReplay.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 

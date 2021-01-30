@@ -137,9 +137,7 @@ seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
 ## Recursos adicionales
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 

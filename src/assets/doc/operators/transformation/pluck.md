@@ -235,9 +235,7 @@ tagNames.subscribe((x) => console.log(x));
 ## Recursos adicionales
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/pluck.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 

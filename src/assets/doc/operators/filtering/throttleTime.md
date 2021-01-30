@@ -112,9 +112,7 @@ Si se habilita el parámetro `leading` en este ejemplo, la salida sería el prim
 ## Recursos adicionales
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttleTime.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
