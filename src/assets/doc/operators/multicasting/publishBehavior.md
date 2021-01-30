@@ -83,6 +83,8 @@ Observador 2: 1,
 */
 ```
 
+<div class="additional-section">
+
 ## Recursos adicionales
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishBehavior.ts">

@@ -99,6 +99,8 @@ timer(3000)
 */
 ```
 
+<div class="additional-section">
+
 ## Recursos adicionales
 
 <a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishReplay.ts">
