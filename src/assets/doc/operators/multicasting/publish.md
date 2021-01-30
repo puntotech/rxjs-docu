@@ -1,12 +1,5 @@
 # publish
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publish.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
 <h2 class="subtitle"> Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores</h2>
 
 💡 publish es equivalente a `multicast(() => new Subject())`
@@ -178,11 +171,10 @@ No recibe ningún parámetro.
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publish.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publish.ts">
+<img src="assets/icons/source-code.png" alt="Source code">
+<!-- <img src="assets/icons/source-code.png" alt="Source code"> -->
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>

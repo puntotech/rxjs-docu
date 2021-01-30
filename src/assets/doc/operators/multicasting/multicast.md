@@ -259,11 +259,9 @@ Observador tardío: 1
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/multicast.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/multicast.ts">
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/multicast">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/multicast">Documentación oficial en inglés</a>

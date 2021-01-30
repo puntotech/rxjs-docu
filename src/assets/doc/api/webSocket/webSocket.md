@@ -113,11 +113,9 @@ subA.unsubscribe();
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/observable/dom/webSocket.ts#L2-L156">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/observable/dom/webSocket.ts#L2-L156">
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/webSocket/webSocket">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/webSocket/webSocket">Documentación oficial en inglés</a>

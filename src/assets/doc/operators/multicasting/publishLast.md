@@ -1,12 +1,5 @@
 # publishLast
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts">
-<svg>
-  <use xlink:href="/assets/icons/github.svg#github"></use>
-</svg>
-</a>
-</div>
-
 <h2 class="subtitle">Comparte el Observable fuente, emitiendo únicamente el último valor emitido a los observadores</h2>
 
 💡 publishLast es equivalente a `multicast(() => new AsyncSubject())`
@@ -129,11 +122,9 @@ connectable.connect();
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts">
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/publishLast">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/publishLast">Documentación oficial en inglés</a>

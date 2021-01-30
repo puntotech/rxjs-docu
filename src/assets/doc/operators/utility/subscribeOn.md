@@ -90,11 +90,9 @@ La salida será 5, 6, 7, 8, 9, 1, 2, 3, 4. Esto es debido a que el Observable b 
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/subscribeOn.ts">
-<svg>
-  <use xlink:href="/assets/icons/source.svg#source-code"></use>
-</svg>
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/subscribeOn.ts">
+<img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/subscribeOn">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/subscribeOn">Documentación oficial en inglés</a>
