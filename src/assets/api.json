@@ -205,7 +205,11 @@
 
         "publishReplay": { "name": "publishReplay", "type":"Function", "url": "operators/multicasting/publishReplay", "deprecated": false },
 
-        "share": { "name": "share", "type":"Function", "url": "operators/multicasting/share", "deprecated": false }
+        "refCount": { "name": "refCount", "type":"Function", "url": "operators/multicasting/refCount", "deprecated": false },
+
+        "share": { "name": "share", "type":"Function", "url": "operators/multicasting/share", "deprecated": false },
+
+        "shareReplay": { "name": "shareReplay", "type":"Function", "url": "operators/multicasting/shareReplay", "deprecated": false }
       },
       "Transformación": {
         "buffer": { "name": "buffer", "type":"Function", "url": "operators/transformation/buffer", "deprecated": false },
