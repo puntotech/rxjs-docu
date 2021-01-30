@@ -30,8 +30,6 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 ## Descripción
 
-    shareReplay(n) — no matter if there are active subscribers or not ReplaySubject will keep emitting values and keep connection with Source until Source will complete or error. Any new Subscriber will get last N values (if not on error). If Source hasn’t completed yet, new subscribers will continue getting values from Source
-
 <!-- ## Ejemplos
 
 [StackBlitz]()
