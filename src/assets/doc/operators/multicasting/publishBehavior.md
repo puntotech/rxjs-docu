@@ -78,9 +78,9 @@ Observador 2: 1,
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishBehavior.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishBehavior.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/publishBehavior">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/publishBehavior">Documentación oficial en inglés</a>

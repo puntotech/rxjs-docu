@@ -41,9 +41,9 @@ interface AjaxRequest {
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/observable/dom/AjaxObservable.ts#L6-L22">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/observable/dom/AjaxObservable.ts#L6-L22">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/ajax/AjaxRequest">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/ajax/AjaxRequest">Documentación oficial en inglés</a>

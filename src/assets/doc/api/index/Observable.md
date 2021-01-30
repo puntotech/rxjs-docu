@@ -446,9 +446,9 @@ Una función constructora utilizada para instanciar la Promesa.
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Observable.ts#L12-L363">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Observable.ts#L12-L363">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/index/class/Observable">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/index/class/Observable">Documentación oficial en inglés</a>

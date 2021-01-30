@@ -91,9 +91,9 @@ numbers.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/timer.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/timer.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/index/function/timer">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/index/function/timer">Documentación oficial en inglés</a>

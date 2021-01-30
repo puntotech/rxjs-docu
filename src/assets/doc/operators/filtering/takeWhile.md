@@ -194,9 +194,9 @@ Tipo: <code>boolean</code>.</td></tr>
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeWhile.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeWhile.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/takeWhile">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/takeWhile">Documentación oficial en inglés</a>

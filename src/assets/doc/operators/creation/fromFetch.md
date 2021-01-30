@@ -116,9 +116,9 @@ data$.subscribe({
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/fetch/fromFetch">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/fetch/fromFetch">Documentación oficial en inglés</a>

@@ -177,4 +177,4 @@ No recibe ningún parámetro.
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>

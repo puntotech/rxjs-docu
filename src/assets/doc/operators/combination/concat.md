@@ -497,9 +497,9 @@ concat(timer, timer) // ¡Concatenando el mismo Observable!
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/concat.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/concat.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/index/function/concat">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/index/function/concat">Documentación oficial en inglés</a>

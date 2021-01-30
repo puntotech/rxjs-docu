@@ -392,7 +392,7 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>

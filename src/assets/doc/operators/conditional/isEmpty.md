@@ -88,9 +88,9 @@ anotherEmpty$.pipe(isEmpty()).subscribe(console.log);
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/isEmpty.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/isEmpty">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/isEmpty">Documentación oficial en inglés</a>

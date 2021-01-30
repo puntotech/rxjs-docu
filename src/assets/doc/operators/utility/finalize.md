@@ -80,9 +80,9 @@ ghibliFilm$
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/finalize">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/finalize">Documentación oficial en inglés</a>

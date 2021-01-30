@@ -126,9 +126,9 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilChanged">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilChanged">Documentación oficial en inglés</a>

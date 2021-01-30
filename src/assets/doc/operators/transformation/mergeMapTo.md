@@ -90,9 +90,9 @@ result.subscribe((x) => console.log(x));
 
 ## Recursos adicionales
 
-<a target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMapTo.ts">
+<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMapTo.ts">
 <img src="assets/icons/source-code.png" alt="Source code">
 </a>
 </div>
 
-- <a target="_blank" href="https://rxjs.dev/api/operators/mergeMapTo">Documentación oficial en inglés</a>
+<a target="_blank" href="https://rxjs.dev/api/operators/mergeMapTo">Documentación oficial en inglés</a>
