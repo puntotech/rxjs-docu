@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Scully 1.0.3">
+    <meta charset="utf-8">
+    <title>RxJS - Documentación</title>
+    <base href="/rxjs-docu/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.ddfee696461039503c16.css"><style>mat-sidenav[_ngcontent-tmk-c51]{background-color:#fafafa;width:70%}mat-sidenav-container[_ngcontent-tmk-c51]{bottom:0;left:0;position:absolute;right:0;top:64px}mat-sidenav-content[_ngcontent-tmk-c51]{background-color:#fff}rxjs-docs-sidenav[_ngcontent-tmk-c51]{box-sizing:border-box;display:block;padding:10px 30px}.github-icon[_ngcontent-tmk-c51]{height:32px;position:absolute;right:20px;top:20px;width:33px;z-index:2}.github-icon[_ngcontent-tmk-c51]   svg[_ngcontent-tmk-c51]{height:100%;transition:fill .5s;width:100%}.github-icon[_ngcontent-tmk-c51]:hover   svg[_ngcontent-tmk-c51]{fill:#d81b60}@media screen and (min-width:450px) and (max-width:16000px){mat-sidenav[_ngcontent-tmk-c51]{width:300px}}@media screen and (min-width:1000px){mat-sidenav-container[_ngcontent-tmk-c51]{top:0}rxjs-docs-header[_ngcontent-tmk-c51]{display:none}}@media only screen and (min-width:1600px){mat-sidenav[_ngcontent-tmk-c51]{width:400px}}</style><style>img[_ngcontent-tmk-c34]{height:40px;width:40px;margin:5px}mat-icon[_ngcontent-tmk-c34]:hover{cursor:pointer}mat-toolbar[_ngcontent-tmk-c34]{box-shadow:0 3px 8px 0 rgba(116,129,141,.1);border-bottom:1px solid #d4dadf;color:#d81b60;background-color:#fff}</style><style>.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}.cdk-high-contrast-active .mat-drawer-backdrop{opacity:.5}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}.cdk-high-contrast-active .mat-drawer,.cdk-high-contrast-active [dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}.cdk-high-contrast-active [dir=rtl] .mat-drawer,.cdk-high-contrast-active .mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer{transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}
+</style><style>a[_ngcontent-tmk-c50]{margin-left:15px;width:100%}mat-sidenav-container[_ngcontent-tmk-c50]{box-shadow:10px 0 5px -2px hsla(0,0%,87.8%,.83)}mat-tree[_ngcontent-tmk-c50]{background-color:inherit;display:block;height:100%}mat-tree[_ngcontent-tmk-c50]   a[_ngcontent-tmk-c50]{color:#c27390;font-weight:500}mat-tree-node[_ngcontent-tmk-c50]   button[_ngcontent-tmk-c50]{color:#d81b60}mat-nested-tree-node[_ngcontent-tmk-c50]   li[_ngcontent-tmk-c50]{list-style:none}h1[_ngcontent-tmk-c50]   a[_ngcontent-tmk-c50]{color:#000;margin:0}.logo-link[_ngcontent-tmk-c50]{height:50px;width:50px}.section-tree-invisible[_ngcontent-tmk-c50]{display:none}.sidenav-header[_ngcontent-tmk-c50]{margin-bottom:15px}.logo-link[_ngcontent-tmk-c50]   img[_ngcontent-tmk-c50]{height:50px;width:50px}.sidenav-header[_ngcontent-tmk-c50]   h1[_ngcontent-tmk-c50]{font-size:25px;margin:0 0 0 10px}.section-tree[_ngcontent-tmk-c50]   li[_ngcontent-tmk-c50], .section-tree[_ngcontent-tmk-c50]   ul[_ngcontent-tmk-c50]{margin-top:0;margin-bottom:0;list-style-type:none}mat-tree[_ngcontent-tmk-c50] > mat-nested-tree-node[_ngcontent-tmk-c50] > li[_ngcontent-tmk-c50] > div[_ngcontent-tmk-c50] > a[_ngcontent-tmk-c50], mat-tree[_ngcontent-tmk-c50] > mat-tree-node[_ngcontent-tmk-c50] > a[_ngcontent-tmk-c50]{color:#d81b60;margin-left:0}a[_ngcontent-tmk-c50]:hover{cursor:pointer}</style><style>.cdk-high-contrast-active .mat-toolbar{outline:solid 1px}.mat-toolbar-row,.mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap}.mat-toolbar-multiple-rows{display:flex;box-sizing:border-box;flex-direction:column;width:100%}.mat-toolbar-multiple-rows{min-height:64px}.mat-toolbar-row,.mat-toolbar-single-row{height:64px}@media(max-width: 599px){.mat-toolbar-multiple-rows{min-height:56px}.mat-toolbar-row,.mat-toolbar-single-row{height:56px}}
+</style><style type="text/css">
+/*
+  @angular/flex-layout - workaround for possible browser quirk with mediaQuery listeners
+  see http://bit.ly/2sd4HMP
+*/
+@media screen and (min-width: 600px), screen and (min-width: 960px), screen and (min-width: 1280px), screen and (min-width: 1920px), screen and (min-width: 1920px) and (max-width: 4999.9px), screen and (max-width: 1919.9px), screen and (min-width: 1280px) and (max-width: 1919.9px), screen and (max-width: 1279.9px), screen and (min-width: 960px) and (max-width: 1279.9px), screen and (max-width: 959.9px), screen and (min-width: 600px) and (max-width: 959.9px), screen and (max-width: 599.9px), screen and (min-width: 0px) and (max-width: 599.9px), print {.fx-query-test{ }}
+</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style><style>.mat-divider{display:block;margin:0;border-top-width:1px;border-top-style:solid}.mat-divider.mat-divider-vertical{border-top:0;border-right-width:1px;border-right-style:solid}.mat-divider.mat-divider-inset{margin-left:80px}[dir=rtl] .mat-divider.mat-divider-inset{margin-left:auto;margin-right:80px}
+</style><style>.mat-tree{display:block}.mat-tree-node{display:flex;align-items:center;min-height:48px;flex:1;word-wrap:break-word}.mat-nested-tree-node{border-bottom-width:0}
+</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button[disabled],.mat-icon-button[disabled],.mat-stroked-button[disabled],.mat-flat-button[disabled]{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button[disabled]{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab[disabled]{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab[disabled]{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.cdk-high-contrast-active .mat-button-focus-overlay{background-color:#fff}.cdk-high-contrast-black-on-white .mat-button-focus-overlay{background-color:#000}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}
+</style><script charset="utf-8" src="5-es2015.47ee81091161141f5b96.js"></script><style>details[_ngcontent-tmk-c56]{border-top:2px solid #e3e7e7;margin:50px 0 0;padding:30px 0 0}h1[_ngcontent-tmk-c56]{border-bottom:2px solid #e3e7e7;margin-bottom:30px;padding-bottom:35px;width:100%}h2[_ngcontent-tmk-c56]{border-top:2px solid #e3e7e7;padding-top:35px;margin:34px 0 24px}h3[_ngcontent-tmk-c56]{margin:30px 0 20px}img[_ngcontent-tmk-c56]{margin:30px 0;width:100%}li[_ngcontent-tmk-c56]{line-height:2em;list-style:none}pre[_ngcontent-tmk-c56]{margin:30px 0}summary[_ngcontent-tmk-c56]{font-size:20px;font-weight:500;margin:15px 0;padding:20px 10px;transition:background-color .5s}th[_ngcontent-tmk-c56]{background-color:#f4f4f4;font-weight:400}.overload-container[_ngcontent-tmk-c56]{border:1px solid #dbdbdb;border-radius:5px}.overload-section[_ngcontent-tmk-c56]{border-bottom:1px solid #dbdbdb;padding:0 20px 15px}.collection-table[_ngcontent-tmk-c56]{width:400px}.protocol-table[_ngcontent-tmk-c56]{width:800px}.md-container[_ngcontent-tmk-c56]{padding:25px}.no-subtitle[_ngcontent-tmk-c56]{border:none;margin:0;padding:0}.additional-section[_ngcontent-tmk-c56]{border-top:2px solid #e3e7e7;display:flex;justify-content:space-between;margin:34px 0 24px;padding-top:35px}.source-icon[_ngcontent-tmk-c56]{transition:box-shadow .5s}.subtitle[_ngcontent-tmk-c56]{border:none;margin:0 0 20px;padding-top:0}div.code-toolbar[_ngcontent-tmk-c56]{margin:30px 0}.additional-section[_ngcontent-tmk-c56]   a[_ngcontent-tmk-c56]{height:35px;width:40px}.additional-section[_ngcontent-tmk-c56]   h2[_ngcontent-tmk-c56]{border:none;margin:0 0 16px;padding:0}.source-icon[_ngcontent-tmk-c56]   img[_ngcontent-tmk-c56]{height:100%;margin:0}summary[_ngcontent-tmk-c56]:hover{background-color:#fafafa;cursor:pointer}.source-icon[_ngcontent-tmk-c56]:hover{box-shadow:inset 0 0 10px 2px rgba(216,27,96,.5),0 0 15px 5px rgba(216,27,96,.5)}.overload-container[_ngcontent-tmk-c56]   .overload-section[_ngcontent-tmk-c56]:last-child{border:none}@media only screen and (min-width:450px){.md-container[_ngcontent-tmk-c56]{padding:40px}}</style><style>
+      :host {
+        display: none;
+      }
+      scully-content {
+        display: none;
+      }
+    </style><script>window['ScullyIO']='generated';</script></head>
+  <body class="mat-typography line-numbers" scully-version="1.0.3">
+    <app-root _nghost-tmk-c51="" ng-version="9.1.12"><div _ngcontent-tmk-c51="" class="root"><rxjs-docs-header _ngcontent-tmk-c51="" _nghost-tmk-c34=""><mat-toolbar _ngcontent-tmk-c34="" class="mat-toolbar mat-toolbar-multiple-rows"><mat-toolbar-row _ngcontent-tmk-c34="" fxlayout="" fxlayoutalign="space-between center" class="mat-toolbar-row main-header-container" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center;"><mat-icon _ngcontent-tmk-c34="" role="img" svgicon="menu" aria-hidden="false" aria-label="Navigation menu icon" class="mat-icon notranslate mat-icon-no-color"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+</svg></mat-icon><div _ngcontent-tmk-c34="" fxlayout="" fxlayoutalign="center center" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;"><img _ngcontent-tmk-c34="" src="assets/icons/rxjs-logo.svg"><span _ngcontent-tmk-c34="">Documentación RxJS</span></div></mat-toolbar-row></mat-toolbar></rxjs-docs-header><mat-sidenav-container _ngcontent-tmk-c51="" class="mat-drawer-container mat-sidenav-container example-container"><div class="mat-drawer-backdrop ng-star-inserted"></div><!----><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav _ngcontent-tmk-c51="" tabindex="-1" class="mat-drawer mat-sidenav ng-tns-c24-0 ng-trigger ng-trigger-transform mat-drawer-over ng-star-inserted" style="box-shadow: none; visibility: hidden;"><div class="mat-drawer-inner-container ng-tns-c24-0"><rxjs-docs-sidenav _ngcontent-tmk-c51="" _nghost-tmk-c50="" class="ng-tns-c24-0"><div _ngcontent-tmk-c50="" fxlayout="" fxlayoutalign="center center" class="sidenav-header" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;"><a _ngcontent-tmk-c50="" href="/" class="logo-link"><img _ngcontent-tmk-c50="" src="assets/icons/rxjs-logo.svg"></a><h1 _ngcontent-tmk-c50=""><a _ngcontent-tmk-c50="" href="/">Documentación RxJS</a></h1></div><mat-divider _ngcontent-tmk-c50="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider><mat-tree _ngcontent-tmk-c50="" role="tree" class="mat-tree cdk-tree"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem" style=""><a _ngcontent-tmk-c50="" href="/introduction"> Introducción </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem" style=""><a _ngcontent-tmk-c50="" href="/installation"> Instalación </a></mat-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group" style=""><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Conceptos"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Conceptos</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/observables"> Observables </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/observer"> Observador </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/operators"> Operadores </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/schedulers"> Planificadores </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/subjects"> Sujetos </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/subscription"> Suscripción </a></mat-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Testing"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Testing</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/testing/marble-testing"> Tests de Canicas </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/concepts/testing/contribute-tests-to-rxjs"> Contribuir tests a RxJS </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group" style=""><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Operadores"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Operadores</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Combinación"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Combinación</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/combineAll"> combineAll </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/combineLatest"> combineLatest </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/concat"> concat </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/concatAll"> concatAll </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/exhaust"> exhaust </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/forkJoin"> forkJoin </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/merge"> merge </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/mergeAll"> mergeAll </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/race"> race </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/startWith"> startWith </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/withLatestFrom"> withLatestFrom </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/combination/zip"> zip </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Condicionales"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Condicionales</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/conditional/defaultIfEmpty"> defaultIfEmpty </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/conditional/every"> every </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/conditional/find"> find </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/conditional/findIndex"> findIndex </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/conditional/isEmpty"> isEmpty </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Creación"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Creación</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/ajax"> ajax </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/defer"> defer </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/empty"> empty </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/from"> from </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/fromEvent"> fromEvent </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/fromEventPattern"> fromEventPattern </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/fromFetch"> fromFetch </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/generate"> generate </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/interval"> interval </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/of"> of </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/range"> range </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/throwError"> throwError </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/timer"> timer </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/creation/iif"> iif </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Filtración"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Filtración</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/audit"> audit </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/auditTime"> auditTime </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/debounce"> debounce </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/debounceTime"> debounceTime </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/distinct"> distinct </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/distinctUntilChanged"> distinctUntilChanged </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/distinctUntilKeyChanged"> distinctUntilKeyChanged </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/elementAt"> elementAt </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/filter"> filter </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/first"> first </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/ignoreElements"> ignoreElements </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/last"> last </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/sample"> sample </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/sampleTime"> sampleTime </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/single"> single </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/skip"> skip </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/skipLast"> skipLast </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/skipUntil"> skipUntil </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/skipWhile"> skipWhile </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/take"> take </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/takeLast"> takeLast </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/takeUntil"> takeUntil </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/takeWhile"> takeWhile </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/throttle"> throttle </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/filtering/throttleTime"> throttleTime </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Gestión de Errores"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Gestión de Errores</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/error-handling/catchError"> catchError </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/error-handling/retry"> retry </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/error-handling/retryWhen"> retryWhen </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Multidifusión"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Multidifusión</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/multicast"> multicast </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/publish"> publish </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/publishBehavior"> publishBehavior </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/publishLast"> publishLast </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/publishReplay"> publishReplay </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/refCount"> refCount </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/share"> share </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/multicasting/shareReplay"> shareReplay </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Transformación"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Transformación</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/buffer"> buffer </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/bufferCount"> bufferCount </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/bufferTime"> bufferTime </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/bufferToggle"> bufferToggle </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/bufferWhen"> bufferWhen </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/concatMap"> concatMap </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/concatMapTo"> concatMapTo </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/exhaust"> exhaust </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/exhaustMap"> exhaustMap </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/expand"> expand </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/groupBy"> groupBy </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/map"> map </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/mapTo"> mapTo </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/mergeMap"> mergeMap </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/mergeMapTo"> mergeMapTo </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/mergeScan"> mergeScan </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/pairwise"> pairwise </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/partition"> partition </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/pluck"> pluck </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/scan"> scan </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/switchMap"> switchMap </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/switchMapTo"> switchMapTo </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/window"> window </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/windowCount"> windowCount </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/windowTime"> windowTime </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/windowToggle"> windowToggle </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/transformation/windowWhen"> windowWhen </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Utilidad"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Utilidad</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/tap"> tap </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/delay"> delay </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/delayWhen"> delayWhen </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/dematerialize"> dematerialize </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/materialize"> materialize </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/observeOn"> observeOn </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/subscribeOn"> subscribeOn </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/timeInterval"> timeInterval </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/timestamp"> timestamp </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/timeout"> timeout </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/timeoutWith"> timeoutWith </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/utility/toArray"> toArray </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group"><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Matemáticos y Agregación"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Matemáticos y Agregación</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/mathematical-aggregate/count"> count </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/mathematical-aggregate/max"> max </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/mathematical-aggregate/min"> min </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/operators/mathematical-aggregate/reduce"> reduce </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><!----></ul></li></mat-nested-tree-node><mat-nested-tree-node _ngcontent-tmk-c50="" class="mat-nested-tree-node cdk-tree-node cdk-nested-tree-node ng-star-inserted" aria-expanded="false" role="group" style=""><li _ngcontent-tmk-c50=""><div _ngcontent-tmk-c50="" mattreenodetoggle="" class="section-node"><button _ngcontent-tmk-c50="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base" aria-label="toggle Versión 6"><span class="mat-button-wrapper"><mat-icon _ngcontent-tmk-c50="" role="img" class="mat-icon notranslate mat-icon-rtl-mirror material-icons mat-icon-no-color" aria-hidden="true"> chevron_right </mat-icon></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><a _ngcontent-tmk-c50="" class="nested">Versión 6</a></div><ul _ngcontent-tmk-c50="" class="section-tree-invisible"><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/version-6/deprecations"> Funcionalidades obsoletas </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/version-6/migration"> Migración </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem"><a _ngcontent-tmk-c50="" href="/version-6/pipeable-operators"> Operadores de tubería </a></mat-tree-node><!----></ul></li></mat-nested-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem" style=""><a _ngcontent-tmk-c50="" href="/api"> API </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem" style=""><a _ngcontent-tmk-c50="" href="/code-of-conduct"> Código de Conducta </a></mat-tree-node><mat-tree-node _ngcontent-tmk-c50="" mattreenodetoggle="" class="mat-tree-node cdk-tree-node ng-star-inserted" aria-expanded="false" aria-level="0" role="treeitem" style=""><a _ngcontent-tmk-c50="" href="/team"> Equipo </a></mat-tree-node><!----></mat-tree></rxjs-docs-sidenav></div></mat-sidenav><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav-content _ngcontent-tmk-c51="" class="mat-drawer-content mat-sidenav-content"><a _ngcontent-tmk-c51="" target="_blank" href="https://github.com/puntotech/rxjs-docu" class="github-icon"><svg _ngcontent-tmk-c51=""><use _ngcontent-tmk-c51="" xlink:href="/assets/icons/github.svg#github"></use></svg></a><router-outlet _ngcontent-tmk-c51=""></router-outlet><rxjs-docs-content _nghost-tmk-c56="" class="ng-star-inserted"><div _ngcontent-tmk-c56="" class="md-container"><!--scullyContent-begin--><h1 id="guía-de-actualización-de-rxjs-v5x-a-v6" _ngcontent-tmk-c56="">Guía de Actualización de RxJS v5.x a v6</h1>
+<p _ngcontent-tmk-c56="">¡RxJS v6 ha llegado! Aunque este sea un cambio de versión mayor, hemos tratado de mantener los <em _ngcontent-tmk-c56="">breaking changes</em> al mínimo. En la mayoría de los casos, esto permite que los desarrolladores de aplicaciones y bibliotecas actualicen de forma incremental y utilicen RxJS v6 sin ninguna modificación a su actual.</p>
+<p _ngcontent-tmk-c56="">La capa de compatibilidad regresiva facilita el proceso de actualización, permitiendo que las aplicaciones se mantengan funcionando mientras se van aplicando los cambios en el código al ritmo que necesite cada desarrollador. El proceso completo puede llevarse a cabo en etapas:</p>
+<ol _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">Actualizar hasta la última versión de RxJS 5.5 y asegurarse de que se haya solucionado cualquier problema causado por las correcciones de errores.</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">Instalar RxJS v6 además del paquete de <a href="https://rxjs-dev.firebaseapp.com/guide/v6/migration#backwards-compatibility" _ngcontent-tmk-c56="">compatibilidad regresiva</a>, <code _ngcontent-tmk-c56="">rxjs-compat</code>.</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">Si la aplicación resulta afectada por alguno de los pocos <em _ngcontent-tmk-c56="">breaking changes</em> que no se cubren en <code _ngcontent-tmk-c56="">rxjs-compat</code>, se debe actualizar el código afectado acorde a las instrucciones proporcionadas a continuación.</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">Eventualmente, se querrá <a href="" _ngcontent-tmk-c56="">prescindir de la capa de compatibilidad</a> para completar la actualización a RxJS v6. Al hacerlo, el tamaño de la aplicación disminuirá significativamente. Se puede refactorizar el código TypeScript para que no dependa en <code _ngcontent-tmk-c56="">rxjs-compat</code> con <code _ngcontent-tmk-c56="">rxjs-tslint</code>:</p>
+</li>
+</ol>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">npm i -g rxjs-tslint
+rxjs-5-to-6-migrate -p [ruta/hacia/tsconfig.json]</code></pre>
+<ol start="5" _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Antes del lanzamiento de RxJS v7, será necesario eliminar o reemplazar toda funcionalidad obsoleta.</li>
+</ol>
+<h2 id="compatibilidad-regresiva" _ngcontent-tmk-c56="">Compatibilidad regresiva</h2>
+<p _ngcontent-tmk-c56="">Para minimizar el impacto de la actualización, el lanzamiento de RxJS v6 se hizo en conjunto con el paquete <code _ngcontent-tmk-c56="">rxjs-compat</code>, que proporciona una capa de compatibilidad entre las APIs de v5 y v6. La mayoría de los desarrolladores con aplicaciones en producción deberían llevar a cabo el proceso de actualización instalando tanto <code _ngcontent-tmk-c56="">rxjs</code> como <code _ngcontent-tmk-c56="">rxjs-compat</code> en ^6.0.0:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">npm i rxjs@6 rxjs-compat@6</code></pre>
+<p _ngcontent-tmk-c56="">Para obtener más información sobre este paquete, <a href="https://www.npmjs.com/package/rxjs-compat" _ngcontent-tmk-c56="">ver aquí</a>.</p>
+<p _ngcontent-tmk-c56="">El paquete de compatibilidad aumenta el tamaño del <em _ngcontent-tmk-c56="">bundle</em> de la aplicación, por lo que se recomienda prescindir de él en cuanto la aplicación y las dependencias hayan sido actualizadas. El aumento del tamaño se exacerba si se utiliza una versión de Webpack previa a la 4.0.0.</p>
+<p _ngcontent-tmk-c56="">Para una explicación completa acerca de lo que se debe actualizar para poder prescindir de <code _ngcontent-tmk-c56="">rxjs-compat</code>, ver la sección <a href="" _ngcontent-tmk-c56="">Prescindir de la capa de compatibilidad</a>. Se debe tener en cuenta que al actualizar una aplicación a v6 de forma completa puede descubrir errores de tipado que no fuesen mostrados anteriormente.</p>
+<h2 id="breaking-changes-no-cubiertos-por-rxjs-compat" _ngcontent-tmk-c56=""><em _ngcontent-tmk-c56="">Breaking Changes</em> no cubiertos por rxjs-compat</h2>
+<p _ngcontent-tmk-c56="">Si se ha instalado <code _ngcontent-tmk-c56="">rxjs-compat</code>, únicamente hay dos <em _ngcontent-tmk-c56="">breaking changes</em> que haya que arreglar de forma inmediata:</p>
+<h3 id="gestión-de-errores-síncrona" _ngcontent-tmk-c56="">Gestión de errores síncrona</h3>
+<p _ngcontent-tmk-c56="">La gestión de errores síncrona (hacer una llamada al método <code _ngcontent-tmk-c56="">Observable.subscribe()</code> desde un bloque <code _ngcontent-tmk-c56="">try/catch</code>) ya no recibe soporte. Si se utiliza, debe ser reemplazada con gestión de errores asíncrona, mediante el uso de la <em _ngcontent-tmk-c56="">callback</em> de <code _ngcontent-tmk-c56="">error</code> en el método <code _ngcontent-tmk-c56="">Observable.subscribe()</code>. <a href="https://rxjs-dev.firebaseapp.com/guide/v6/migration#ex-1" _ngcontent-tmk-c56="">Ver ejemplos.</a></p>
+<h3 id="operadores-prototipo-de-typescript" _ngcontent-tmk-c56="">Operadores prototipo de TypeScript</h3>
+<p _ngcontent-tmk-c56="">Si se definen operadores prototipo propios en TypeScript y se modifica el <em _ngcontent-tmk-c56="">namespace</em> del <code _ngcontent-tmk-c56="">Observable</code>, será necesario cambiar el código del operador para conseguir que TypeScript compile. <a href="https://rxjs-dev.firebaseapp.com/guide/v6/migration#ex-2" _ngcontent-tmk-c56="">Ver ejemplos.</a> Este es un caso relativamente raro, que probablemente afecte solo a desarrolladores de TypeScript de nivel avanzado.</p>
+<h2 id="ejemplos" _ngcontent-tmk-c56="">Ejemplos</h2>
+<h3 id="reemplazando-la-gestión-de-errores-síncrona" _ngcontent-tmk-c56="">Reemplazando la gestión de errores síncrona</h3>
+<p _ngcontent-tmk-c56="">El siguiente ejemplo muestra un código que realiza una suscripción a un observable desde un bloque <code _ngcontent-tmk-c56="">try/catch</code>, para llevar a cabo la gestión de errores de forma síncrona:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">try {
+  source$.subscribe(nextFn, undefined, completeFn);
+} catch (err) {
+  handleError(err);
+}</code></pre>
+<p _ngcontent-tmk-c56="">El siguiente código muestra la actualización de una gestión de errores síncrona a una asíncrona, mediante la definición de una callback de error para <code _ngcontent-tmk-c56="">Observable.subscribe()</code>:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source$.subscribe(nextFn, handleError, completeFn);</code></pre>
+<p _ngcontent-tmk-c56="">El siguiente ejemplo muestra un test que depende de una gestión de errores síncrona:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">it("should emit an error on subscription", () =&gt; {
+  expect(source$.subscribe()).toThrow(Error, "algún mensaje");
+});</code></pre>
+<p _ngcontent-tmk-c56="">El siguiente código nos muestra cómo corregir el test para que gestione los errores de forma asíncrona:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">it("should emit an error on subscription", (done) =&gt; {
+  source$.subscribe({
+    error(err) {
+      expect(err.message).toEqual("some message");
+    },
+  });
+});</code></pre>
+<h3 id="operadores-prototipo-de-typescript-definidos-por-el-usuario" _ngcontent-tmk-c56="">Operadores prototipo de TypeScript definidos por el usuario</h3>
+<p _ngcontent-tmk-c56="">El siguiente ejemplo nos muestra el tipo de cambios que deberán llevarse a cambio en los operadores prototipo definidos por el usuario para que TypeScript pueda compilar de forma correcta.</p>
+<p _ngcontent-tmk-c56="">A continuación, un ejemplo de un operador prototipo definido por el usuario:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">Observable.prototype.userDefined = function () {
+  return new Observable((subscriber) =&gt; {
+    this.subscribe({
+      next(value) {
+        subscriber.next(value);
+      },
+      error(err) {
+        subscriber.error(err);
+      },
+      complete() {
+        subscriber.complete();
+      },
+    });
+  });
+};
+
+source$.userDefined().subscribe();</code></pre>
+<p _ngcontent-tmk-c56="">Para que este código compile correctamente en v6, se deben llevar a cambio los siguientes cambios:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">    const userDefined = &lt;T&gt;() =&gt; (source: Observable&lt;T&gt;) =&gt; new Observable&lt;T&gt;((subscriber) =&gt; {
+        source.subscribe({
+          next(value) { subscriber.next(value); },
+          error(err) { subscriber.error(err); },
+          complete() { subscriber.complete(); },
+       });
+      });
+    });
+
+    source$.pipe(
+      userDefined(),
+    )
+    .subscribe();</code></pre>
+<h2 id="prescindir-de-la-capa-de-compatibilidad" _ngcontent-tmk-c56="">Prescindir de la capa de compatibilidad</h2>
+<p _ngcontent-tmk-c56="">Si se utilizan funcionalidades que se han eliminado de v6, pero a las que se les da soporte en el paquete <code _ngcontent-tmk-c56="">rxjs-compat</code>, se debe refactorizar/reescribir el código para completar la actualización a v6. Las siguientes áreas de funcionalidad dependen de la capa de compatibilidad:</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Las rutas de importación han cambiado.</li>
+<li _ngcontent-tmk-c56="">La sintaxis de los operadores ha cambiado de usar encadenamiento a usar tuberías.</li>
+<li _ngcontent-tmk-c56="">Las clases que operan en los Observables se han sustituido por funciones.</li>
+<li _ngcontent-tmk-c56="">En las funciones que contengan el parámetro <code _ngcontent-tmk-c56="">resultSelector</code>, los parámetros se han vuelto obsoletos (en la mayoría de los casos) y se han reemplazado por dos funciones. Aquellos que hayan sido reemplazados deben actualizarse antes de poder prescindir de la capa de compatibilidad.</li>
+</ul>
+<h2 id="rutas-de-importación" _ngcontent-tmk-c56="">Rutas de importación</h2>
+<p _ngcontent-tmk-c56="">A aquellos que sean desarrolladores de TypeScript se les recomienda utilizar <code _ngcontent-tmk-c56="">rxjs-tslint</code> para refactorizar las rutas de importación.</p>
+<p _ngcontent-tmk-c56="">Para los desarrolladores de JavaScript, la regla general es la siguiente:</p>
+<ol _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">rxjs: Métodos de creación, tipos, schedulers y utilidades</li>
+</ol>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import {
+  Observable,
+  Subject,
+  asapScheduler,
+  pipe,
+  of,
+  from,
+  interval,
+  merge,
+  fromEvent,
+  SubscriptionLike,
+  PartialObserver,
+} from "rxjs";</code></pre>
+<ol start="2" _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">rxjs/operators: Todos los operadores de tubería:</li>
+</ol>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { map, filter, scan } from "rxjs/operators";</code></pre>
+<ol start="3" _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">rxjs/webSocket: La implementación del sujeto de web socket</li>
+</ol>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { webSocket } from "rxjs/webSocket";</code></pre>
+<ol start="4" _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">rxjs/ajax: La implementación de Rx ajax</li>
+</ol>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { ajax } from "rxjs/ajax";</code></pre>
+<ol start="5" _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">rxjs/testing: Las utilidades de testing</li>
+</ol>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { TestScheduler } from "rxjs/testing";</code></pre>
+<h2 id="sintaxis-de-operadores-tubería" _ngcontent-tmk-c56="">Sintaxis de operadores tubería</h2>
+<p _ngcontent-tmk-c56="">El estilo de código de encadenamiento de operadores que había anteriormente ha sido reemplazado por las tuberías, de tal manera que el resultado de cada operador es la entrada del siguiente. Los operadores tubería fueron añadidos en la versión 5.5. Para el debate completo acerca de estos operadores y de los cambios requeridos, <a href="https://github.com/ReactiveX/rxjs/blob/91088dae1df097be2370c73300ffa11b27fd0100/doc/pipeable-operators.md" _ngcontent-tmk-c56="">ver aquí</a>.</p>
+<p _ngcontent-tmk-c56="">Antes de poder prescindir de la capa de compatibilidad, se debe refactorizar el código para usar únicamente los operadores tubería. En TypeScript, la herramienta <code _ngcontent-tmk-c56="">tslint</code> automatiza este proceso hasta cierto punto, aplicando la transformación al código que esté correctamente tipado.</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Ver <a href="" _ngcontent-tmk-c56="">Conversión a sintaxis de tubería</a> para obtener más detalles sobre cómo refactorizar utilizando <a href="https://github.com/reactivex/rxjs-tslint" _ngcontent-tmk-c56="">rxjs-tslint</a>.</li>
+</ul>
+<h2 id="clases-observables" _ngcontent-tmk-c56="">Clases Observables</h2>
+<p _ngcontent-tmk-c56="">Todas las <a href="https://github.com/ReactiveX/rxjs/tree/5.5.8/src/observable" _ngcontent-tmk-c56="">clases observables</a> han sido eliminadas de v6, para ser sutituidas por operadores nuevos, o ya existentes, que llevan a cabo las mismas operaciones que los métodos de clase. Por ejemplo, <code _ngcontent-tmk-c56="">ArrayObservable.create(myArray)</code> se puede sustituir por <code _ngcontent-tmk-c56="">from(myArray)</code>, o por el operador nuevo <code _ngcontent-tmk-c56="">fromArray()</code>.</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">ConnectableObservable</code> carece de acceso directo en v6, y es accesible únicamente a través de los operadores <code _ngcontent-tmk-c56="">multicast</code>, <code _ngcontent-tmk-c56="">publish</code>, <code _ngcontent-tmk-c56="">publishReplay</code> y <code _ngcontent-tmk-c56="">publishLast</code>.</li>
+<li _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">SubscribeOnObservable</code> carece de acceso directo en v6, y es accesible únicamente a través del operador <code _ngcontent-tmk-c56="">subscribeOn</code>.</li>
+</ul>
+<table _ngcontent-tmk-c56="">
+<tbody _ngcontent-tmk-c56=""><tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">v6 creation function</td><td _ngcontent-tmk-c56="">v5 class</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">from </td>     <td _ngcontent-tmk-c56="">ArrayLikeObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">of </td>     <td _ngcontent-tmk-c56="">ArrayObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">bindCallback </td>     <td _ngcontent-tmk-c56="">BoundCallbackObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">bindNodeCallback </td>     <td _ngcontent-tmk-c56="">BoundNodeCallbackObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">defer </td>     <td _ngcontent-tmk-c56="">DeferObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">empty o EMPTY (constante)</td>     <td _ngcontent-tmk-c56="">EmptyObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">throwError </td>     <td _ngcontent-tmk-c56="">ErrorObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">forkJoin </td>     <td _ngcontent-tmk-c56="">ForkJoinObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">fromEvent </td>     <td _ngcontent-tmk-c56="">FromEventObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">fromEventPattern </td>     <td _ngcontent-tmk-c56="">FromEventPatternObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">from </td>     <td _ngcontent-tmk-c56="">FromObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">generate </td>     <td _ngcontent-tmk-c56="">GenerateObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">iif </td>     <td _ngcontent-tmk-c56="">IfObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">interval </td>     <td _ngcontent-tmk-c56="">IntervalObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">from </td>     <td _ngcontent-tmk-c56="">IteratorObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">NEVER (constante)</td>     <td _ngcontent-tmk-c56="">NeverObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">pairs </td>     <td _ngcontent-tmk-c56="">PairsObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">from </td>     <td _ngcontent-tmk-c56="">PromiseObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">range </td>     <td _ngcontent-tmk-c56="">RangeObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">of </td>     <td _ngcontent-tmk-c56="">ScalarObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">timer </td>     <td _ngcontent-tmk-c56="">TimerObservable</td></tr>
+<tr _ngcontent-tmk-c56=""><td _ngcontent-tmk-c56="">using </td>     <td _ngcontent-tmk-c56="">UsingObservable</td></tr>
+</tbody></table>
+
+<h2 id="selectores-de-resultado-eliminados-u-obsoletos" _ngcontent-tmk-c56="">Selectores de resultado eliminados u obsoletos</h2>
+<p _ngcontent-tmk-c56="">Los selectores de resultado son una funcionalidad que no se utiliza frecuentemente (en muchas casos no estaban documentados), pero incrementaban el tamaño del código de forma significativa. En el caso de utilizarse, se debe reemplazar el parámetro <code _ngcontent-tmk-c56="">resultSelector</code> obsoleto por código de selección de resultado externo.</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">El parámetro <code _ngcontent-tmk-c56="">resultSelector</code> de <code _ngcontent-tmk-c56="">first()</code> y <code _ngcontent-tmk-c56="">last()</code> ha sido eliminado en v6. En el caso de que estas funciones fuesen utilizadas con este parámetro, el código se debe actualizar sin la ayuda del paquete <code _ngcontent-tmk-c56="">rxjs-compat</code>.</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">El parámetro <code _ngcontent-tmk-c56="">resultSelector</code> que estaba disponible en muchos de los operadores de mapeo se ha vuelto obsoleto en v6, y su implementación ha sido reescrita para ser mucho más pequeña. Seguirán funcionando sin el paquete de compatibilidad, pero deben ser reemplazados antes del lanzamiento de v7. Ver <a href="" _ngcontent-tmk-c56="">Funcionalidades obsoletas.</a></p>
+</li>
+</ul>
+<p _ngcontent-tmk-c56="">Ver <a href="" _ngcontent-tmk-c56="">Migración de Selector de Resultado</a> para más detalles sobre qué operadores se ven afectados y cómo quitar las funciones de selección de resultado de la llamada al operador.</p>
+<h2 id="funcionalidades-obsoletas" _ngcontent-tmk-c56="">Funcionalidades obsoletas</h2>
+<p _ngcontent-tmk-c56="">Antes del lanzamiento de RxJS v7, se debe eliminar/reemplazar cualquier uso de funcionalidades obsoletas. Las siguientes áreas contienen funcionalidad obsoleta:</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">Observable.if</code> y <code _ngcontent-tmk-c56="">Observable.throw</code>. Estos métodos han sido reemplazados por las funciones estáticas <code _ngcontent-tmk-c56="">iif()</code> y <code _ngcontent-tmk-c56="">throwError()</code>. Se puede utilizar <a href="https://github.com/reactivex/rxjs-tslint" _ngcontent-tmk-c56="">rxjs-tslint</a> para convertir las llamadas a métodos a llamadas a funciones.
+Ver <a href="https://rxjs-dev.firebaseapp.com/guide/v6/migration#dep-methods" _ngcontent-tmk-c56="">Cómo convertir métodos obsoletos</a> para obtener más detalles.</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">Operadores de creación. Los siguientes operadores se han movido de <code _ngcontent-tmk-c56="">rxjs/operators</code> a <code _ngcontent-tmk-c56="">rxjs</code>, y su uso ha cambiado:</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">merge</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">concat</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">combineLatest</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">race</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">zip</code></p>
+</li>
+</ul>
+<p _ngcontent-tmk-c56="">Ver <a href="https://rxjs-dev.firebaseapp.com/guide/v6/migration#dep-methods" _ngcontent-tmk-c56="">Cómo convertir métodos obsoletos</a> para obtener más detalles.</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Selectores de resultado.
+Ver <a href="" _ngcontent-tmk-c56="">Migración de Selectores de Resultado</a> para obtener más detalles sobre qué operadores se ven afectados y cómo quitar las funciones de selección de resultado de la llamada al operador.</li>
+</ul>
+<h2 id="cómo-convertir-a-sintaxis-de-tubería" _ngcontent-tmk-c56="">Cómo: Convertir a sintaxis de tubería</h2>
+<p _ngcontent-tmk-c56="">Antes de convertir los operadores de encadenamiento a operadores de tubería, hay que asegurarse de importar los operadores que se vayan a utilizar de <code _ngcontent-tmk-c56="">rxjs/operators</code>. Por ejemplo:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { map, filter, catchError, mergeMap } from "rxjs/operators";</code></pre>
+<p _ngcontent-tmk-c56="">Se ha cambiado el nombre de los siguientes operadores, ya que sus nombres anteriores coincidían con palabras reservadas del lenguaje JavaScript:</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">do</code> -&gt; <code _ngcontent-tmk-c56="">tap</code></li>
+<li _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">catch</code> -&gt; <code _ngcontent-tmk-c56="">catchError</code></li>
+<li _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">switch</code> -&gt; <code _ngcontent-tmk-c56="">switchAll</code></li>
+<li _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">finally</code> -&gt; <code _ngcontent-tmk-c56="">finalize</code></li>
+</ul>
+<p _ngcontent-tmk-c56="">Para convertir los operadores de encadenamiento a operadores de tubería, se deben envolver en el método <code _ngcontent-tmk-c56="">pipe()</code> del Observable origen, eliminar los puntos y añadir comas para pasar cada operador al método <code _ngcontent-tmk-c56="">pipe()</code> como argumento.</p>
+<p _ngcontent-tmk-c56="">Por ejemplo, el siguiente código utiliza encadenamiento:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source
+  .map((x) =&gt; x + x)
+  .mergeMap((n) =&gt;
+    of(n + 1, n + 2)
+      .filter((x) =&gt; x % 1 == 0)
+      .scan((acc, x) =&gt; acc + x, 0)
+  )
+  .catch((err) =&gt; of("error found"))
+  .subscribe(printResult);</code></pre>
+<p _ngcontent-tmk-c56="">Para convertirlo a una tubería:</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source
+  .pipe(
+    map((x) =&gt; x + x),
+    mergeMap((n) =&gt;
+      of(n + 1, n + 2).pipe(
+        filter((x) =&gt; x % 1 == 0),
+        scan((acc, x) =&gt; acc + x, 0)
+      )
+    ),
+    catchError((err) =&gt; of("error found"))
+  )
+  .subscribe(printResult);</code></pre>
+<h1 id="cómo-convertir-métodos-obsoletos" _ngcontent-tmk-c56="">Cómo: Convertir métodos obsoletos</h1>
+<p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">Observable.if</code> -&gt; <code _ngcontent-tmk-c56="">iif()</code></p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">Observable.if(test, a$, b$);
+
+// Se convierte en
+
+iif(test, a$, b$);</code></pre>
+<p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">Observable.error</code> -&gt; <code _ngcontent-tmk-c56="">throwError()</code></p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">Observable.throw(new Error());
+
+// Se convierte en
+
+throwError(new Error());</code></pre>
+<p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">merge</code></p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { merge } from "rxjs/operators";
+a$.pipe(merge(b$, c$));
+
+// Se convierte en
+
+import { merge } from "rxjs";
+merge(a$, b$, c$);</code></pre>
+<p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">concat</code></p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { concat } from "rxjs/operators";
+a$.pipe(concat(b$, c$));
+
+// Se convierte en
+
+import { concat } from "rxjs";
+concat(a$, b$, c$);</code></pre>
+<p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">combineLatest</code></p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { combineLatest } from "rxjs/operators";
+a$.pipe(combineLatest(b$, c$));
+
+// Se convierte en
+
+import { combineLatest } from "rxjs";
+combineLatest(a$, b$, c$);</code></pre>
+<p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">race</code></p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { race } from "rxjs/operators";
+a$.pipe(race(b$, c$));
+
+// Se convierte en
+
+import { race } from "rxjs";
+race(a$, b$, c$);</code></pre>
+<p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">zip</code></p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">import { zip } from "rxjs/operators";
+a$.pipe(zip(b$, c$));
+
+// Se convierte en
+
+import { zip } from "rxjs";
+zip(a$, b$, c$);</code></pre>
+<h1 id="cómo-migración-del-selector-de-resultado" _ngcontent-tmk-c56="">Cómo: Migración del selector de resultado</h1>
+<p _ngcontent-tmk-c56="">En RxJS v5.x, un gran número de operadores tenían un argumento <code _ngcontent-tmk-c56="">resultSelector</code> opcional, al que se le podía pasar una función para manejar el resultado de las operaciones.</p>
+<p _ngcontent-tmk-c56="">Si se está utilizando dicho parámetro, se debe actualizar el código moviendo la función de selección de resultado fuera de la llamada al operador, y aplicarla a los resultados de la llamada.</p>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">El parámetro se ha <em _ngcontent-tmk-c56="">eliminado</em> de los operadores <code _ngcontent-tmk-c56="">first()</code> y <code _ngcontent-tmk-c56="">last()</code> en v6, pero se le sigue dando soporte en el paquete <code _ngcontent-tmk-c56="">rxjs-compat</code>. Para poder prescindir del paquete de compatibilidad, es necesario actualizar el código.</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56="">El parámetro está <em _ngcontent-tmk-c56="">obsoleto</em> en los siguientes operadores, y será eliminado en v7. Es necesario actualizar el código antes de actualizar a v7.</p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">mergeMap()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">mergeMapTo()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">concatMap()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">concatMapTo()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">switchMap</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">switchMapTo()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">exhaustMap()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">forkJoin()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">zip()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">combineLatest()</code></p>
+</li>
+<li _ngcontent-tmk-c56=""><p _ngcontent-tmk-c56=""><code _ngcontent-tmk-c56="">fromEvent()</code></p>
+</li>
+</ul>
+<h2 id="ejemplos-1" _ngcontent-tmk-c56="">Ejemplos</h2>
+<h3 id="first" _ngcontent-tmk-c56="">first()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(first(predicate, resultSelector, defaultValue));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">sin <code _ngcontent-tmk-c56="">resultSelector</code> (si no se utiliza el índice)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(first(predicate, defaultValue), map(resultSelector));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">sin <code _ngcontent-tmk-c56="">resultSelector</code> (si se utiliza el índice)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+  map((v, i) =&gt; [v, i]),
+  first(([v, i]) =&gt; predicate(v, i)),
+  map(([v, i]) =&gt; resultSelector(v, i))
+);</code></pre>
+<h3 id="last" _ngcontent-tmk-c56="">last()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(last(predicate, resultSelector, defaultValue));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">sin <code _ngcontent-tmk-c56="">resultSelector</code> (si no se utiliza el índice)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(last(predicate, defaultValue), map(resultSelector));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">sin <code _ngcontent-tmk-c56="">resultSelector</code> (si se utiliza el índice)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+  map((v, i) =&gt; [v, i]),
+  last(([v, i]) =&gt; predicate(v, i)),
+  map(([v, i]) =&gt; resultSelector(v, i))
+);</code></pre>
+<h3 id="mergemap" _ngcontent-tmk-c56="">mergeMap()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)
+<em _ngcontent-tmk-c56="">NOTA: El argumento de límite de concurrencia es opcional, se muestra aquí por mostrar un ejemplo completo</em></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(mergeMap(fn1, fn2, concurrency));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">La misma funcionalidad sin <code _ngcontent-tmk-c56="">resultSelector</code>, conseguida con un <code _ngcontent-tmk-c56="">map</code> interno</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+  mergeMap((a, i) =&gt; fn1(a, i).pipe(map((b, ii) =&gt; fn2(a, b, i, ii)))),
+  concurrency
+);</code></pre>
+<h3 id="mergemapto" _ngcontent-tmk-c56="">mergeMapTo()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(mergeMapTo(a$, resultSelector));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Sin <code _ngcontent-tmk-c56="">resultSelector</code></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+ mergeMapTo((x, i) =&gt; a$.pipe(
+   map((y, ii) =&gt; resultSelector(x, y, i, ii))
+ )
+)</code></pre>
+<h3 id="concatmap" _ngcontent-tmk-c56="">concatMap()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(concatMap(fn1, fn2));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">La misma funcionalidad sin <code _ngcontent-tmk-c56="">resultSelector</code>, conseguida con un <code _ngcontent-tmk-c56="">map</code> interno</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+ concatMap((a, i) =&gt; fn1(a, i).pipe(
+   map((b, ii) =&gt; fn2(a, b, i, ii))
+ )
+)</code></pre>
+<h3 id="concatmapto" _ngcontent-tmk-c56="">concatMapTo()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(concatMapTo(a$, resultSelector));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Sin <code _ngcontent-tmk-c56="">resultSelector</code></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+ concatMap((x, i) =&gt; a$.pipe(
+   map((y, ii) =&gt; resultSelector(x, y, i, ii))
+ )
+)</code></pre>
+<h3 id="switchmap" _ngcontent-tmk-c56="">switchMap()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(switchMap(fn1, fn2));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">La misma funcionalidad sin <code _ngcontent-tmk-c56="">resultSelector</code>, conseguida con un <code _ngcontent-tmk-c56="">map</code> interno</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+ switchMap((a, i) =&gt; fn1(a, i).pipe(
+   map((b, ii) =&gt; fn2(a, b, i, ii))
+ )
+)</code></pre>
+<h3 id="switchmapto" _ngcontent-tmk-c56="">switchMapTo()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(switchMapTo(a$, resultSelector));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Sin <code _ngcontent-tmk-c56="">resultSelector</code></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+ switchMap((x, i) =&gt; a$.pipe(
+   map((y, ii) =&gt; resultSelector(x, y, i, ii))
+ )
+)</code></pre>
+<h3 id="exhaustmap" _ngcontent-tmk-c56="">exhaustMap()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(exhaustMap(fn1, fn2));</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">La misma funcionalidad sin <code _ngcontent-tmk-c56="">resultSelector</code>, conseguida con un <code _ngcontent-tmk-c56="">map</code> interno</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">source.pipe(
+ exhaustMap((a, i) =&gt; fn1(a, i).pipe(
+   map((b, ii) =&gt; fn2(a, b, i, ii))
+ )
+)</code></pre>
+<h3 id="forkjoin" _ngcontent-tmk-c56="">forkjoin()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">forkJoin(a$, b$, c$, resultSelector);
+// O
+forkJoin([a$, b$, c$], resultSelector);</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Sin <code _ngcontent-tmk-c56="">resultSelector</code></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">forkJoin(a$, b$, c$).pipe(map((x) =&gt; resultSelector(...x)));
+// O
+forkJoin([a$, b$, c$]).pipe(map((x) =&gt; resultSelector(...x)));</code></pre>
+<h3 id="zip" _ngcontent-tmk-c56="">zip()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">zip(a$, b$, c$, resultSelector);
+// O
+zip([a$, b$, c$], resultSelector);</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Sin <code _ngcontent-tmk-c56="">resultSelector</code></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">zip(a$, b$, c$).pipe(map((x) =&gt; resultSelector(...x)));
+// O
+zip([a$, b$, c$]).pipe(map((x) =&gt; resultSelector(...x)));</code></pre>
+<h3 id="combinelatest" _ngcontent-tmk-c56="">combineLatest()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">combineLatest(a$, b$, c$, resultSelector);
+// O
+combineLatest([a$, b$, c$], resultSelector);</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Sin <code _ngcontent-tmk-c56="">resultSelector</code></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">combineLatest(a$, b$, c$).pipe(map((x) =&gt; resultSelector(...x)));
+// O
+combineLatest([a$, b$, c$]).pipe(map((x) =&gt; resultSelector(...x)));</code></pre>
+<h3 id="fromevent" _ngcontent-tmk-c56="">fromEvent()</h3>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Con <code _ngcontent-tmk-c56="">resultSelector</code> (v5.x)</li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">fromEvent(button, "click", resultSelector);</code></pre>
+<ul _ngcontent-tmk-c56="">
+<li _ngcontent-tmk-c56="">Sin <code _ngcontent-tmk-c56="">resultSelector</code></li>
+</ul>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">fromEvent(button, "click").pipe(map(resultSelector));</code></pre>
+<h2 id="renombramiento-del-módulo-umd" _ngcontent-tmk-c56="">Renombramiento del módulo UMD</h2>
+<p _ngcontent-tmk-c56="">En RxJS v6.x, el nombre de módulo UMD se ha cambiado de Rx a rxjs para que concuerde con los nombres de los demás módulos.</p>
+<pre _ngcontent-tmk-c56=""><code class="language-javascript" _ngcontent-tmk-c56="">const rx = Rx;
+
+rx.Observable.of(1, 2, 3).map((x) =&gt; x + "!!!");
+
+// Se convierte en
+
+const { of } = rxjs;
+const { map } = rxjs.operators;
+
+of(1, 2, 3).pipe(map((x) =&gt; x + "!!!")); // etc</code></pre>
+<!--scullyContent-end--><script>try {window['scullyContent'] = {cssId:"_ngcontent-tmk-c56",html:document.body.innerHTML.split('<!--scullyContent-begin-->')[1].split('<!--scullyContent-end-->')[0]};} catch(e) {console.error('scully could not parse content');}</script><scully-content _ngcontent-tmk-c56=""></scully-content></div></rxjs-docs-content><!----></mat-sidenav-content><!----></mat-sidenav-container></div></app-root>
+  <script id="ScullyIO-transfer-state"></script><script src="runtime-es2015.29a9e628466c79e3922c.js" type="module"></script><script src="runtime-es5.29a9e628466c79e3922c.js" nomodule="" defer=""></script><script src="polyfills-es5.63a91503e06f5ef3b0b1.js" nomodule="" defer=""></script><script src="polyfills-es2015.da1e0d49ec1affacc8de.js" type="module"></script><script src="scripts.18ac3cd5bfc9be6ff988.js" defer=""></script><script src="main-es2015.fd7e5c0b6e08086aa985.js" type="module"></script><script src="main-es5.fd7e5c0b6e08086aa985.js" nomodule="" defer=""></script>
+
+</body></html>

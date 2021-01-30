@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="marble-diagram-anatomy.svg"
+   id="svg174"
+   version="1.1"
+   viewBox="0 0 640 396"
+   height="396px"
+   width="640px">
+  <metadata
+     id="metadata178">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="legend-next"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="198"
+     inkscape:cx="322.11062"
+     inkscape:zoom="1.4469697"
+     showgrid="false"
+     id="namedview176"
+     inkscape:window-height="1051"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <title
+     id="title2">marble-diagram-anatomy</title>
+  <defs
+     id="defs4" />
+  <g
+     transform="translate(7.1297132,-6.4426135)"
+     fill-rule="evenodd"
+     fill="none"
+     stroke-width="1"
+     stroke="none"
+     id="Page-1">
+    <g
+       id="marble-diagram-anatomy">
+      <g
+         transform="translate(21.907724,168.85483)"
+         id="operator-multiplyByTen">
+        <rect
+           height="54.854088"
+           width="468.75735"
+           y="0"
+           x="0"
+           stroke-width="2"
+           stroke="#000000"
+           id="Rectangle-1" />
+        <text
+           fill="#000000"
+           font-weight="normal"
+           font-size="21.6477px"
+           font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+           id="multiplyByTen"><tspan
+             id="tspan7"
+             y="35.221432"
+             x="169.18665">multiplyByTen</tspan></text>
+      </g>
+      <g
+         transform="translate(21.907724,249.10109)"
+         id="observable-output">
+        <g
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#000000"
+           transform="translate(0,6.77211)"
+           id="arrow">
+          <path
+             id="Line"
+             d="M 0.34215866,8 H 468.57226" />
+          <path
+             id="path12"
+             d="M 451.9916,0.33860548 468.41521,8.465137" />
+          <path
+             transform="matrix(1,0,0,-1,0,25.056806)"
+             id="path14"
+             d="m 451.9916,8.465137 16.42361,8.126531" />
+        </g>
+        <g
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#000000"
+           transform="translate(273.72693,4.740477)"
+           id="error">
+          <path
+             transform="matrix(1,0,0,-1,0,21.67075)"
+             id="path17"
+             d="M 0.61443726,0.60805657 21.591065,21.36685" />
+          <path
+             transform="rotate(180,10.949077,10.835375)"
+             id="path19"
+             d="M 0.61443726,0.60805657 21.591065,21.36685" />
+        </g>
+        <g
+           transform="translate(55.429704)"
+           id="marble-40">
+          <ellipse
+             ry="15.237247"
+             rx="15.39714"
+             cy="15.237247"
+             cx="15.39714"
+             fill="#ff6946"
+             stroke-width="2"
+             stroke="#000000"
+             id="Oval-1" />
+          <text
+             fill="#000000"
+             font-weight="normal"
+             font-size="16.2358px"
+             font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+             id="40"><tspan
+               id="tspan23"
+               y="20.740477"
+               x="6.9858022">40</tspan></text>
+        </g>
+        <g
+           transform="translate(128.65166)"
+           id="marble-60">
+          <ellipse
+             ry="15.237247"
+             rx="15.39714"
+             cy="15.237247"
+             cx="15.39714"
+             fill="#ffcb46"
+             stroke-width="2"
+             stroke="#000000"
+             id="ellipse27" />
+          <text
+             fill="#000000"
+             font-weight="normal"
+             font-size="16.2358px"
+             font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+             id="60"><tspan
+               id="tspan29"
+               y="20.740477"
+               x="6.9858022">60</tspan></text>
+        </g>
+      </g>
+      <g
+         transform="translate(21.907724,112.35492)"
+         id="observable-input">
+        <g
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#000000"
+           transform="translate(0,6.77211)"
+           id="g40">
+          <path
+             id="path34"
+             d="M 0.34215866,8 H 468.57226" />
+          <path
+             id="path36"
+             d="M 451.9916,0.33860548 468.41521,8.465137" />
+          <path
+             transform="matrix(1,0,0,-1,0,25.056806)"
+             id="path38"
+             d="m 451.9916,8.465137 16.42361,8.126531" />
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,30.474494)"
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#000000"
+           id="path42"
+           d="M 427,0.33860548 V 30.135888" />
+        <g
+           transform="translate(55.429704)"
+           id="marble-4">
+          <ellipse
+             ry="15.237247"
+             rx="15.39714"
+             cy="15.237247"
+             cx="15.39714"
+             fill="#ff6946"
+             stroke-width="2"
+             stroke="#000000"
+             id="ellipse44" />
+          <text
+             fill="#000000"
+             font-weight="normal"
+             font-size="16.2358px"
+             font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+             id="4"><tspan
+               id="tspan46"
+               y="20.063265"
+               x="11.020391">4</tspan></text>
+        </g>
+        <g
+           transform="translate(128.65166)"
+           id="marble-6">
+          <ellipse
+             ry="15.237247"
+             rx="15.39714"
+             cy="15.237247"
+             cx="15.39714"
+             fill="#ffcb46"
+             stroke-width="2"
+             stroke="#000000"
+             id="ellipse50" />
+          <text
+             fill="#000000"
+             font-weight="normal"
+             font-size="16.2358px"
+             font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+             id="6"><tspan
+               id="tspan52"
+               y="20.063265"
+               x="11.020391">6</tspan></text>
+        </g>
+        <g
+           transform="translate(269.62103)"
+           id="marble-a">
+          <ellipse
+             ry="15.237247"
+             rx="15.39714"
+             cy="15.237247"
+             cx="15.39714"
+             fill="#3ea1cb"
+             stroke-width="2"
+             stroke="#000000"
+             id="ellipse56" />
+          <text
+             fill="#000000"
+             font-weight="normal"
+             font-size="16.2358px"
+             font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+             id="a"><tspan
+               id="tspan58"
+               y="20.063265"
+               x="10.898623">a</tspan></text>
+        </g>
+        <g
+           transform="translate(342.84298)"
+           id="marble-8">
+          <ellipse
+             ry="15.237247"
+             rx="15.39714"
+             cy="15.237247"
+             cx="15.39714"
+             fill="#82d736"
+             stroke-width="2"
+             stroke="#000000"
+             id="ellipse62" />
+          <text
+             fill="#000000"
+             font-weight="normal"
+             font-size="16.2358px"
+             font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+             id="8"><tspan
+               id="tspan64"
+               y="20.740477"
+               x="11.362551">8</tspan></text>
+        </g>
+      </g>
+      <g
+         transform="translate(0,10)"
+         id="legend-input-observable">
+        <path
+           sodipodi:nodetypes="cc"
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path69"
+           d="M 24.002554,18.014466 C 0.6010486,34.148552 -14.463563,60.073632 7.402726,102.13239" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="M 11.402726,108.13239 8.730553,97.24664 3.4989603,100.1844 Z"
+           id="Line-decoration-1" />
+        <text
+           transform="translate(32,-2)"
+           style="white-space:pre;inline-size:170.76"
+           fill="#b7178c"
+           font-weight="normal"
+           font-size="13.0875px"
+           font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+           id="This-is-time-flowing"
+           xml:space="preserve"><tspan
+             x="0"
+             y="13"><tspan>Este es el tiempo </tspan></tspan><tspan
+             x="0"
+             y="29.359374"><tspan>fluyendo de izquierda a </tspan></tspan><tspan
+             x="0"
+             y="45.718751"><tspan>derecha para representar </tspan></tspan><tspan
+             x="0"
+             y="62.078126"><tspan>la ejecución del </tspan></tspan><tspan
+             x="0"
+             y="78.437501"><tspan>Observable de
+</tspan></tspan><tspan
+             x="0"
+             y="94.796876"><tspan>entrada.</tspan></tspan></text>
+      </g>
+      <g
+         transform="translate(112.71698,10)"
+         id="legend-next">
+        <text
+           y="0"
+           transform="translate(-8,14)"
+           style="white-space:pre;inline-size:202.858"
+           x="103.4238"
+           fill="#b7178c"
+           font-weight="normal"
+           font-size="13.0875px"
+           font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+           id="These-are-values-emi"
+           xml:space="preserve"><tspan
+             x="103.4238"
+             y="0"><tspan
+               style="text-align:center;text-anchor:middle">Estos son los valores emitidos </tspan></tspan><tspan
+             x="103.4238"
+             y="16.359375"><tspan
+               style="text-align:center;text-anchor:middle">por el Observable.</tspan></tspan></text>
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path87"
+           d="M 128.85097,41.351387 0.40905069,98.670142" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="M 0.40905069,98.670142 11.494123,97.008466 9.0489789,91.529299 Z"
+           id="path89" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path91"
+           d="M 147.6673,41.351387 67.493364,97.032463" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="M 67.493364,97.032463 78.0752,93.335877 74.652629,88.407794 Z"
+           id="path93" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path95"
+           d="m 186.93617,38.07603 6.54481,58.137594" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="m 193.48098,96.213624 1.77299,-11.067813 -5.96233,0.671207 z"
+           id="path97" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path99"
+           d="m 204.9344,36.438351 54.81279,60.594112" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="m 259.74719,97.032463 -5.02031,-10.021802 -4.44959,4.025058 z"
+           id="path101" />
+      </g>
+      <g
+         transform="translate(445.68424,10)"
+         id="legend-complete">
+        <text
+           transform="translate(22)"
+           style="white-space:pre;inline-size:164.914"
+           fill="#b7178c"
+           font-weight="normal"
+           font-size="13.0875px"
+           font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+           id="This-vertical-line-r"
+           xml:space="preserve"><tspan
+             x="0"
+             y="13"><tspan>Esta línea vertical </tspan></tspan><tspan
+             x="0"
+             y="29.359374"><tspan>representa la </tspan></tspan><tspan
+             x="0"
+             y="45.718751"><tspan>notificación &quot;complete&quot; </tspan></tspan><tspan
+             x="0"
+             y="62.078126"><tspan>e indica que el </tspan></tspan><tspan
+             x="0"
+             y="78.437501"><tspan>Observable se ha </tspan></tspan><tspan
+             x="0"
+             y="94.796876"><tspan>completado con éxito.</tspan></tspan></text>
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path115"
+           d="M 13.937921,15.327927 C -0.04070502,25.019385 -2.5001165,51.864725 2.8633548,88.025231" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="M 2.8633548,88.025231 4.2463256,76.901949 -1.6887438,77.782262 Z"
+           id="path117" />
+      </g>
+      <g
+         transform="translate(495.58842,135.28242)"
+         id="legend-operator">
+        <text
+           style="white-space:pre;inline-size:175.484"
+           fill="#b7178c"
+           font-weight="normal"
+           font-size="13.0875px"
+           font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+           id="This-box-indicates-t"
+           xml:space="preserve"><tspan
+             x="0"
+             y="44.115894"><tspan>Esta caja indica el </tspan></tspan><tspan
+             x="0"
+             y="60.475271"><tspan>operador que recibe el </tspan></tspan><tspan
+             x="0"
+             y="76.834649"><tspan>Observable de entrada </tspan></tspan><tspan
+             x="0"
+             y="93.194024"><tspan>(encima) y produce el </tspan></tspan><tspan
+             x="0"
+             y="109.5534"><tspan>Observable de salida </tspan></tspan><tspan
+             x="0"
+             y="125.91277"><tspan>(debajo). El texto dentro </tspan></tspan><tspan
+             x="0"
+             y="142.27215"><tspan>de la caja muestra la </tspan></tspan><tspan
+             x="0"
+             y="158.63152"><tspan>naturaleza de la </tspan></tspan><tspan
+             x="0"
+             y="174.9909"><tspan>transformación.</tspan></tspan></text>
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path139"
+           d="m 73.496935,23.293902 c 0,-19.0049499 -45.949636,-41.046558 -73.4518003,1e-6" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="M 0.0451347,23.293903 8.5490153,15.991574 3.56445,12.651797 Z"
+           id="path141" />
+      </g>
+      <g
+         transform="translate(16.181014,281.03583)"
+         id="legend-output-observable">
+        <text
+           transform="translate(27.365097,-1.0909788)"
+           style="white-space:pre;inline-size:169.573"
+           fill="#b7178c"
+           font-weight="normal"
+           font-size="13.0875px"
+           font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+           id="This-Observable-is-t"
+           xml:space="preserve"><tspan
+             x="0"
+             y="50.666611"><tspan>Este Observable es el </tspan></tspan><tspan
+             x="0"
+             y="67.025987"><tspan>resultado de la llamada </tspan></tspan><tspan
+             x="0"
+             y="83.385362"><tspan>al operador.</tspan></tspan></text>
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path151"
+           d="M 17.523188,54.801588 C 5.8134102,50.236961 -11.475841,28.170471 11.86247,0.40941968" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="M 11.86247,0.40941968 2.6163348,6.7457421 7.2090133,10.60674 Z"
+           id="path153" />
+      </g>
+      <g
+         transform="translate(250.97611,280.21699)"
+         id="legend-error">
+        <text
+           transform="translate(22)"
+           style="white-space:pre;inline-size:214.685"
+           fill="#b7178c"
+           font-weight="normal"
+           font-size="13.0875px"
+           font-family="SourceSansPro-Regular, 'Source Sans Pro'"
+           id="This-X-represents-an"
+           xml:space="preserve"><tspan
+             x="0"
+             y="35.927502"><tspan>Esta X representa un error </tspan></tspan><tspan
+             x="0"
+             y="52.286874"><tspan>emitido por el Observable de </tspan></tspan><tspan
+             x="0"
+             y="68.646249"><tspan>salida, indicando una </tspan></tspan><tspan
+             x="0"
+             y="85.005624"><tspan>terminación anormal. A partir de </tspan></tspan><tspan
+             x="0"
+             y="101.365"><tspan>este momento no se emitirán ni </tspan></tspan><tspan
+             x="0"
+             y="117.72437"><tspan>valores ni la línea vertical que </tspan></tspan><tspan
+             x="0"
+             y="134.08375"><tspan>señala la compleción del </tspan></tspan><tspan
+             x="0"
+             y="150.44312"><tspan>Observable.</tspan></tspan></text>
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           id="path167"
+           d="M 11.48114,57.394821 C -6.7063172,51.504022 -3.3249294,12.118484 25.770194,0.40941968" />
+        <path
+           stroke-linecap="square"
+           stroke-width="2"
+           stroke="#b7178c"
+           d="M 25.770194,0.40941968 14.631075,1.6584302 16.871126,7.2245932 Z"
+           id="path169" />
+      </g>
+    </g>
+  </g>
+</svg>
