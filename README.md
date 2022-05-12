@@ -1,3 +1,31 @@
+# Index
+
+- What is RxJS Docu?
+- Introduction
+- ¿Qué es RxJS Docu?
+- Introducción
+
+# What is RxJS Docu?
+
+This project is based on the official [RxJS documentation](https://rxjs.dev/), and constitutes the Spanish documentation. As well as the examples which can be found in the official documentation, other examples have been added that allow the reader to broaden her/his knowledge on RxJS.
+
+> Think of RxJS as [Lodash](https://lodash.com/) for events.
+
+ReactiveX combines the Observer pattern with the Iterator pattern and functional programming with collections to fill the need for an ideal way of managing sequences of events.
+
+The essential concepts in RxJS which solve async event management are:
+
+- Observable: represents the idea of an invokable collection of future values or events.
+- Observer: is a collection of callbacks that knows how to listen to values delivered by the Observable.
+- Subscription: represents the execution of an Observable, is primarily useful for cancelling the execution.
+- Operators: are pure functions that enable a functional programming style of dealing with collections with operations like map, filter, concat, reduce, etc.
+- Subject: is equivalent to an EventEmitter, and the only way of multicasting a value or event to multiple Observers.
+- Schedulers: are centralized dispatchers to control concurrency, allowing us to coordinate when computation happens on e.g. setTimeout or requestAnimationFrame or others.
+
+# Introduction
+
+RxJS is a library for composing asynchronous and event-based programs by using observable sequences. It provides one core type, the Observable, satellite types (Observer, Schedulers, Subjects) and operators inspired by Array#extras (map, filter, reduce, every, etc) to allow handling asynchronous events as collections.
+
 # ¿Qué es RxJS Docu?
 
 Este proyecto está basado en la documentación oficial de RxJS y es una versión de la documentación en Castellano. Además de los ejemplos que encuentras en la documentación oficial se han incorporado otros que permiten ampliar los conocimientos a los lectores.
@@ -18,4 +46,3 @@ Los conceptos esenciales de RxJS que resuelven el manejo asíncrono de eventos s
 - Operadores: son funciones puras que permiten enfocar el manejo de las colecciones desde un estilo de programación funcional, con operaciones como `map`, `filter`, `concat`, `reduce` etc.
 - Sujeto: es el equivalente a un EventEmitter, y la única manera de multidifundir un valor o un evento a múltiples Observadores.
 - Planificadores: son despachadores centralizados para controlar la concurrencia, permitiendo coordinar cuándo ocurrirá la computación en `setTimeout`, `requestAnimationFrame` u otros.
-
