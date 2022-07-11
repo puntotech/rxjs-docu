@@ -1,13 +1,8 @@
 # RxJS Docu
 
-- [introduction](doc/introduction.md)
+- [Introducción](doc/introduction.md)
 
 ## Conceptos
-
-- testing
-
-  - [tests-to-rxjs](doc/concepts/testing/contribute-tests-to-rxjs.md)
-  - [testing](doc/concepts/testing/marble-testing.md)
 
 - [Observables](doc/concepts/observables.md)
 - [Observadores](doc/concepts/observer.md)
@@ -141,98 +136,102 @@
 - [Schedulers](doc/concepts/schedulers.md)
 - [Sujetos](doc/concepts/subjects.md)
 - [Suscripción](doc/concepts/subscription.md)
-
-## API
-
-- [ajax]()
-
-  - [AjaxError](doc/api/ajax/AjaxError.md)
-  - [AjaxRequest](doc/api/ajax/AjaxRequest.md)
-  - [AjaxResponse](doc/api/ajax/AjaxResponse.md)
-  - [AjaxTimeoutError](doc/api/ajax/AjaxTimeoutError.md)
-
-- [Índice]()
-
-  - [ArgumentOutOfRangeError](doc/api/index/ArgumentOutOfRangeError.md)
-  - [bindCallback](doc/api/index/bindCallback.md)
-  - [bindNodeCallback](doc/api/index/bindNodeCallback.md)
-  - [CompletionObserver](doc/api/index/CompletionObserver.md)
-  - [config](doc/api/index/config.md)
-  - [ConnectableObservable](doc/api/index/ConnectableObservable.md)
-  - [EmptyError](doc/api/index/EmptyError.md)
-  - [ErrorObserver](doc/api/index/ErrorObserver.md)
-  - [FactoryOrValue](doc/api/index/FactoryOrValue.md)
-  - [GroupedObservable](doc/api/index/GroupedObservable.md)
-  - [identity](doc/api/index/identity.md)
-  - [InteropObservable](doc/api/index/InteropObservable.md)
-  - [isObservable](doc/api/index/isObservable.md)
-  - [MonoTypeOperatorFunction](doc/api/index/MonoTypeOperatorFunction.md)
-  - [NextObserver](doc/api/index/NextObserver.md)
-  - [noop](doc/api/index/noop.md)
-  - [Notification](doc/api/index/Notification.md)
-  - [ObjectUnsubscribedError](doc/api/index/ObjectUnsubscribedError.md)
-  - [observable](doc/api/index/observable.md)
-  - [Observable](doc/api/index/Observable.md)
-  - [ObservableInput](doc/api/index/ObservableInput.md)
-  - [ObservedValueOf](doc/api/index/ObservedValueOf.md)
-  - [ObservedValuesFromArray](doc/api/index/ObservedValuesFromArray.md)
-  - [Observer](doc/api/index/Observer.md)
-  - [Operator](doc/api/index/Operator.md)
-  - [OperatorFunction](doc/api/index/OperatorFunction.md)
-  - [PartialObserver](doc/api/index/PartialObserver.md)
-  - [pipe](doc/api/index/pipe.md)
-  - [scheduled](doc/api/index/scheduled.md)
-  - [SchedulerAction](doc/api/index/SchedulerAction.md)
-  - [SchedulerLike](doc/api/index/SchedulerLike.md)
-  - [Subscribable](doc/api/index/Subscribable.md)
-  - [SubscribableOrPromise](doc/api/index/SubscribableOrPromise.md)
-  - [Subscriber](doc/api/index/Subscriber.md)
-  - [Subscription](doc/api/index/Subscription.md)
-  - [SubscriptionLike](doc/api/index/SubscriptionLike.md)
-  - [TeardownLogic](doc/api/index/TeardownLogic.md)
-  - [TimeInterval](doc/api/index/TimeInterval.md)
-  - [TimeoutError](doc/api/index/TimeoutError.md)
-  - [Timestamp](doc/api/index/Timestamp.md)
-  - [UnaryFunction](doc/api/index/UnaryFunction.md)
-  - [Unsubscribable](doc/api/index/Unsubscribable.md)
-  - [UnsubscriptionError](doc/api/index/UnsubscriptionError.md)
-  - [VirtualTimeScheduler](doc/api/index/VirtualTimeScheduler.md)
-
-- Schedulers
-
-  - [animationFrame](doc/api/schedulers/animationFrame.md)
-  - [asap](doc/api/schedulers/asap.md)
-  - [async](doc/api/schedulers/async.md)
-  - [queue](doc/api/schedulers/queue.md)
-
-- Sujetos
-
-  - [AsyncSubject](doc/api/subjects/AsyncSubject.md)
-  - [BehaviorSubject](doc/api/subjects/BehaviorSubject.md)
-  - [ReplaySubject](doc/api/subjects/ReplaySubject.md)
-  - [Subject](doc/api/subjects/Subject.md)
-  - [WebSocketSubject](doc/api/subjects/WebSocketSubject.md)
-
 - Testing
-  - [TestScheduler](doc/api/testing/TestScheduler.md)
-- [webSocket](doc/api/webSocket/webSocket.md)
 
-  - [WebSocketSubjectConfig](doc/api/webSocket/WebSocketSubjectConfig.md)
+  - [tests-to-rxjs](doc/concepts/testing/contribute-tests-to-rxjs.md)
+  - [testing](doc/concepts/testing/marble-testing.md)
 
-- [Breaking Changes](doc/breaking-changes/breaking-changes.md)
+- API
 
-  - [Argumentos Array](doc/breaking-changes/array-arguments.md)
-  - [Argumentos resultSelector](doc/breaking-changes/resultselector-arguments.md)
-  - [Argumentos scheduler](doc/breaking-changes/scheduler-argument.md)
-  - [Argumentos subscribe](doc/breaking-changes/subscribe-argument.md)
-  - [Conversión a Promesas](doc/breaking-changes/conversion-to-promises.md)
-  - [Multicasting](doc/breaking-changes/multicasting.md)
+  - [ajax]()
+
+    - [AjaxError](doc/api/ajax/AjaxError.md)
+    - [AjaxRequest](doc/api/ajax/AjaxRequest.md)
+    - [AjaxResponse](doc/api/ajax/AjaxResponse.md)
+    - [AjaxTimeoutError](doc/api/ajax/AjaxTimeoutError.md)
+
+    - [Índice]()
+
+      - [ArgumentOutOfRangeError](doc/api/index/ArgumentOutOfRangeError.md)
+      - [bindCallback](doc/api/index/bindCallback.md)
+      - [bindNodeCallback](doc/api/index/bindNodeCallback.md)
+      - [CompletionObserver](doc/api/index/CompletionObserver.md)
+      - [config](doc/api/index/config.md)
+      - [ConnectableObservable](doc/api/index/ConnectableObservable.md)
+      - [EmptyError](doc/api/index/EmptyError.md)
+      - [ErrorObserver](doc/api/index/ErrorObserver.md)
+      - [FactoryOrValue](doc/api/index/FactoryOrValue.md)
+      - [GroupedObservable](doc/api/index/GroupedObservable.md)
+      - [identity](doc/api/index/identity.md)
+      - [InteropObservable](doc/api/index/InteropObservable.md)
+      - [isObservable](doc/api/index/isObservable.md)
+      - [MonoTypeOperatorFunction](doc/api/index/MonoTypeOperatorFunction.md)
+      - [NextObserver](doc/api/index/NextObserver.md)
+      - [noop](doc/api/index/noop.md)
+      - [Notification](doc/api/index/Notification.md)
+      - [ObjectUnsubscribedError](doc/api/index/ObjectUnsubscribedError.md)
+      - [observable](doc/api/index/observable.md)
+      - [Observable](doc/api/index/Observable.md)
+      - [ObservableInput](doc/api/index/ObservableInput.md)
+      - [ObservedValueOf](doc/api/index/ObservedValueOf.md)
+      - [ObservedValuesFromArray](doc/api/index/ObservedValuesFromArray.md)
+      - [Observer](doc/api/index/Observer.md)
+      - [Operator](doc/api/index/Operator.md)
+      - [OperatorFunction](doc/api/index/OperatorFunction.md)
+      - [PartialObserver](doc/api/index/PartialObserver.md)
+      - [pipe](doc/api/index/pipe.md)
+      - [scheduled](doc/api/index/scheduled.md)
+      - [SchedulerAction](doc/api/index/SchedulerAction.md)
+      - [SchedulerLike](doc/api/index/SchedulerLike.md)
+      - [Subscribable](doc/api/index/Subscribable.md)
+      - [SubscribableOrPromise](doc/api/index/SubscribableOrPromise.md)
+      - [Subscriber](doc/api/index/Subscriber.md)
+      - [Subscription](doc/api/index/Subscription.md)
+      - [SubscriptionLike](doc/api/index/SubscriptionLike.md)
+      - [TeardownLogic](doc/api/index/TeardownLogic.md)
+      - [TimeInterval](doc/api/index/TimeInterval.md)
+      - [TimeoutError](doc/api/index/TimeoutError.md)
+      - [Timestamp](doc/api/index/Timestamp.md)
+      - [UnaryFunction](doc/api/index/UnaryFunction.md)
+      - [Unsubscribable](doc/api/index/Unsubscribable.md)
+      - [UnsubscriptionError](doc/api/index/UnsubscriptionError.md)
+      - [VirtualTimeScheduler](doc/api/index/VirtualTimeScheduler.md)
+
+    - Schedulers
+
+      - [animationFrame](doc/api/schedulers/animationFrame.md)
+      - [asap](doc/api/schedulers/asap.md)
+      - [async](doc/api/schedulers/async.md)
+      - [queue](doc/api/schedulers/queue.md)
+
+    - Sujetos
+
+      - [AsyncSubject](doc/api/subjects/AsyncSubject.md)
+      - [BehaviorSubject](doc/api/subjects/BehaviorSubject.md)
+      - [ReplaySubject](doc/api/subjects/ReplaySubject.md)
+      - [Subject](doc/api/subjects/Subject.md)
+      - [WebSocketSubject](doc/api/subjects/WebSocketSubject.md)
+
+    - [webSocket](doc/api/webSocket/webSocket.md)
+
+      - [WebSocketSubjectConfig](doc/api/webSocket/WebSocketSubjectConfig.md)
+
+    - Testing
+
+      - [TestScheduler](doc/api/testing/TestScheduler.md)
 
 ## Guías
 
 - [Glosario](doc/guides/glossary.md)
 - [Importación](doc/guides/importing.md)
 - [Instalación](doc/guides/installation.md)
+- [Breaking Changes](doc/breaking-changes/breaking-changes.md)
+  - [Argumentos Array](doc/breaking-changes/array-arguments.md)
+  - [Argumentos resultSelector](doc/breaking-changes/resultselector-arguments.md)
+  - [Argumentos scheduler](doc/breaking-changes/scheduler-argument.md)
+  - [Argumentos subscribe](doc/breaking-changes/subscribe-argument.md)
+  - [Conversión a Promesas](doc/breaking-changes/conversion-to-promises.md)
+  - [Multicasting](doc/breaking-changes/multicasting.md)
 
 ## Sobre Nosotros
 
