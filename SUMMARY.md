@@ -22,9 +22,9 @@
 
 ## Guías
 
-- [Instalación](./doc/Guías/installation.md)
-- [Importación](./doc/Guías/importing.md)
-- [Glosario](./doc/Guías/glossary.md)
+- [Instalación](./doc/guides/installation.md)
+- [Importación](./doc/guides/importing.md)
+- [Glosario](./doc/guides/glossary.md)
 
 ## Sobre Nosotros
 
