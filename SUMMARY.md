@@ -3,7 +3,7 @@
 ## Conceptos
 
 - [Observables](./doc/Conceptos/observables.md)
-- [Observadores](./doc/Conceptos/observadores.md)
+- [Observadores](./doc/Conceptos/observer.md)
 - [Operadores](./doc/Operadores)
 
   - [Combinación](./doc/Operadores/combination)
@@ -28,4 +28,4 @@
 
 ## Sobre Nosotros
 
-- [Código de Conducta](./doc/code-of-conduct.md)
+- [Código de Conducta](./doc/Sobre Nosotros/code-of-conduct.md)
