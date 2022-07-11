@@ -1,7 +1,9 @@
 ‌# Summary​
 
-## Use headings to create page groups like this one​
+## Conceptos
 
+- [Observables](Conceptos/observables.md)
+- [Observadores](Conceptos/observadores.md)
 - [Operadores](Operadores)
 
   - [Combinación](Operadores/combination)
@@ -14,10 +16,15 @@
   - [Transformación](Operadores/transformation)
   - [Utilidad](Operadores/utility)
 
+- [Schedulers](Conceptos/schedulers.md)
+- [Sujetos](Conceptos/subjects.md)
+- [Suscripción](Conceptos/subscription.md)
+
 ## Guías
 
-- [Breaking Changes](Breaking Changes)
-  - [Argumentos Array](Breaking Changes/array-arguments.md)
+- [Instalación](Guías/installation.md)
+- [Importación](Guías/importing.md)
+- [Glosario](Guías/glossary.md)
 
 ## Sobre Nosotros
 
