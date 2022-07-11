@@ -14,6 +14,11 @@
   - [Transformación](Operadores/transformation)
   - [Utilidad](Operadores/utility)
 
+## Guías
+
+- [Breaking Changes]("Breaking Changes")
+  - [Argumentos Array]("Breaking Changes"/array-arguments.md)
+
 ## Sobre Nosotros
 
-- [Yet another page](code-of-conduct.md)
+- [Código de Conducta](code-of-conduct.md)
