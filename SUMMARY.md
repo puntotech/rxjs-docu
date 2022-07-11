@@ -143,14 +143,7 @@
 
 - API
 
-  - [ajax]()
-
-    - [AjaxError](doc/api/ajax/AjaxError.md)
-    - [AjaxRequest](doc/api/ajax/AjaxRequest.md)
-    - [AjaxResponse](doc/api/ajax/AjaxResponse.md)
-    - [AjaxTimeoutError](doc/api/ajax/AjaxTimeoutError.md)
-
-  - [Índice]()
+  - Índice
 
     - [ArgumentOutOfRangeError](doc/api/index/ArgumentOutOfRangeError.md)
     - [bindCallback](doc/api/index/bindCallback.md)
@@ -196,6 +189,13 @@
     - [Unsubscribable](doc/api/index/Unsubscribable.md)
     - [UnsubscriptionError](doc/api/index/UnsubscriptionError.md)
     - [VirtualTimeScheduler](doc/api/index/VirtualTimeScheduler.md)
+
+  - ajax
+
+    - [AjaxError](doc/api/ajax/AjaxError.md)
+    - [AjaxRequest](doc/api/ajax/AjaxRequest.md)
+    - [AjaxResponse](doc/api/ajax/AjaxResponse.md)
+    - [AjaxTimeoutError](doc/api/ajax/AjaxTimeoutError.md)
 
   - Schedulers
 
