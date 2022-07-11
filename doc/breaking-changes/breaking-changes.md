@@ -6,119 +6,124 @@
 
 - **rxjs-compat**: `rxjs-compat` no está publicado para v7
 
-- **toPromise**: El return type de toPromise ahora es `T | undefined` en TypeScript, lo cual es correcto, pero puede que rompa algunos builds.
+- **toPromise**: El _return type_ de `toPromise` ahora es `T | undefined` en TypeScript, lo cual es correcto, pero puede que rompa algunos _builds_.
 
-- **Subscription**: `add` no longer returns an unnecessary Subscription reference. This was done to prevent confusion caused by a legacy behavior. You can now add and remove functions and Subscriptions as teardowns to and from a `Subscription` using `add` and `remove` directly. Before this, `remove` only accepted subscriptions.
+- **Subscription**: `add` ya no retorna una referencia `Subscription` innecesaria. Esto se ha hecho para evitar la confusión provocada por un comportamiento obsoleto. Ahora se pueden añadir (y quitar) funciones y `Subscriptions` como _teardowns_ a una `Subscription` utilizando `add` y `remove` directamente. Anteriormente a este cambio, `remove` solo aceptaba subscriptions.
 
-- **Observable**: lift no longer exposed. It was NEVER documented that end users of the library should be creating operators using lift. Lift has a variety of issues and was always an internal implementation detail of rxjs that might have been used by a few power users in the early days when it had the most value. The value of lift, originally, was that subclassed Observables would compose through all operators that implemented lift. The reality is that feature is not widely known, used, or supported, and it was never documented as it was very experimental when it was first added. Until the end of v7, lift will remain on Observable. Standard JavaScript users will notice no difference. However, TypeScript users might see complaints about lift not being a member of observable. To workaround this issue there are two things you can do: 1. Rewrite your operators as outlined in the documentation, such that they return new Observable. or 2. cast your observable as any and access lift that way. Method 1 is recommended if you do not want things to break when we move to version 8.
+- **Observable**: `lift` ya no está expuesto. NUNCA estuvo documentado que los usuarios finales de la biblioteca debieran crear operadores utilizando `lift`. Lift tiene [una serie de problemas](https://github.com/ReactiveX/rxjs/issues/5431) y siempre fue una implementación interna de RxJS que fue utilizada por algunos usuarios en los primeros albores de la biblioteca, cuando tenía valor: originalmente, el valor de `lift` era que los Observables . La realidad es que esta funcionalidad no era muy conocida ni utilizada y nunca se documentó, ya que era experimental. Hasta al final de la v7, `lift` seguirá existiendo en Observable. Los usuarios de JavaScript Estándar no notarán ninguna diferencia. Sin embargo, los usuarios de TypeScript pueden llegar a tener problemas por el hecho de que `lift` ya no sea un miembro de observable. Para evitar esto, se pueden hacer dos cosas:
 
-- **Subscriber**: new Subscriber no longer takes 0-3 arguments. To create a Subscriber with 0-3 arguments, use Subscriber.create. However, please note that there is little to no reason that you should be creating Subscriber references directly, and Subscriber.create and new Subscriber are both deprecated.
+  1. Reescribir los operadores según viene establecido en la documentación, como por ejemplo, que retornen un `new Observable`.
+  2. Hacer un _cast_ de `any` al Observable y acceder a `lift` de esta manera.
 
-- **onUnhandledError**: Errors that occur during setup of an observable subscription after the subscription has emitted an error or completed will now throw in their own call stack. Before it would call console.warn. This is potentially breaking in edge cases for node applications, which may be configured to terminate for unhandled exceptions. In the unlikely event this affects you, you can configure the behavior to console.warn in the new configuration setting like so: import { config } from 'rxjs'; config.onUnhandledError = (err) => console.warn(err);
+  El primer método es el recomendado si se quieren evitar errores al migrar a la versión 8.
 
-- **RxJS Error types** Tests that are written with naive expectations against errors may fail now that errors have a proper stack property. In some testing frameworks, a deep equality check on two error instances will check the values in stack, which could be different.
+- **Subscriber**: `new Subscriber`ya no recibe 0-3 argumentos. Para crear un `Subscriber` con 0-3 argumentos, se puede utilizar `Subscriber.create`. Sin embargo, se debe tener en cuenta que no existen apenas razones para crear referencias `Subscriber` directamente, y que tanto `Subscriber.create` como `new Subscriber` están obsoletos.
 
-- `unsubscribe` no longer available via the this context of observer functions. To reenable, set config.useDeprecatedNextContext = true on the rxjs config found at import { config } from 'rxjs';. Note that enabling this will result in a performance penalty for all consumer subscriptions.
+- **onUnhandledError**: Los errores que ocurran durante el _setup_ de una suscripción observable después de que la suscripción haya emitido un error o se haya completado ahora se lanzan en su propio _call stack_. Antes, se hacía una llamada a `console.warn`. Esto puede llegar a ser _breaking_ en casos límite en aplicaciones node, que se hayan configurado para finalizar en casos de excepciones sin gestionar. Si este es tu caso, puedes configurar el comportamiento para que vuelva a ser el de `console.warn` en el nuevo ajuste de configuración, de la siguiente manera: `import { config } from 'rxjs'; config.onUnhandledError = (err) => console.warn(err);`
 
-- Leaked implementation detail `_unsubscribeAndRecycle` of `Subscriber` has been removed. Just use new `Subscription` objects
+- **Tipos de error de RxJS Error types** Los test que se hayan escrito con expectativas _naive_ acerca de los errores ahora pueden fallar, ya que los errores ahora tienen una propiedad de stack en condiciones. En algunos frameworks de testing, una comprobación de igualdad estricta entre dos instancias de error comprobará los valores en el stack, que ahora puede que sean distintos.
 
-- The static `sortActions` method on `VirtualTimeScheduler` is no longer publicly exposed by our TS types.
+- `unsubscribe` ya no está disponible vía el contexto `this` de las funciones observadores. Para habilitarlo, se debe especificar `config.useDeprecatedNextContext = true` en la configuración de RxJS encontrada en `import { config } from 'rxjs';`. Téngase en cuenta que habilitar esto puede resultar en una penalización de rendimiento para todas las suscripciones de consumidor.
 
-- Notification.createNext(undefined) will no longer return the exact same reference everytime.
+- La implementación interna `_unsubscribeAndRecycle` de `Subscriber` ha sido eliminada. En su lugar, utilizar objetos `Subscription`.
 
-  Type signatures tightened up around Notification and dematerialize, may uncover issues with invalid types passed to those operators.
+- El método estático `sortActions` de `VirtualTimeScheduler` ya no está expuesto públicamente por nuestros tipos TS.
 
-  Experimental support for for await as been removed. Use https://github.com/benlesh/rxjs-for-await instead.
+- `Notification.createNext(undefined)` ya no retornarán la misma referencia cada vez.
 
-  ReplaySubject no longer schedules emissions when a scheduler is provided. If you need that behavior, please compose in observeOn using pipe, for example: new ReplaySubject(2, 3000).pipe(observeOn(asap))
+- Las firmas de tipos de `Notification` y `dematerialize` ahora son más estrictas, por lo que pueden surgir errores por tipos inválidos pasados a estos operadores.
 
-  rxjs-compat: rxjs/Rx is no longer a valid import site.
+- El soporte experimental de `for await` se ha eliminado. En su lugar se debe utilizar https://github.com/benlesh/rxjs-for-await .
 
-## Operators
+- `ReplaySubject` ya no programa emisiones cuando se le proporciona un scheduler. Si se necesita ese comportamiento, se debe componer `observeOn` utilizando `pipe`. Por ejemplo: `new ReplaySubject(2, 3000).pipe(observeOn(asap))`
+
+- **rxjs-compat**: `rxjs/Rx` ya no es un sitio de importación válido.
+
+## Operadores
 
 ### concat
 
-    concat: Generic signature changed. Recommend not explicitly passing generics, just let inference do its job. If you must, cast with as.
-    of: Generic signature changed, do not specify generics, allow them to be inferred or use as
+`concat`: Ha cambiado su firma de genéricos. Se recomienda que no se le pasen genéricos explícitamente, sino dejar que la inferencia haga su trabajo. Si es necesario, hacer un _cast_ con `as`.
+`of`: Ha cambiado su firma de genéricos. No especificar genéricos, permitir que sean inferidos o utilizar `as`.
 
 ### count
 
-    count: No longer passes source observable as a third argument to the predicate. That feature was rarely used, and of limited value. The workaround is to simply close over the source inside of the function if you need to access it in there.
+`count`: Ya no se pasa el Observable fuente como tercer argumento. Esta funcionalidad raramente se utilizaba, y no proporcionaba demasiado valor.
 
 ### defer
 
-    defer no longer allows factories to return void or undefined. All factories passed to defer must return a proper ObservableInput, such as Observable, Promise, et al. To get the same behavior as you may have relied on previously, return EMPTY or return of() from the factory.
+`defer`: Ya no permite factorías que retornen `void` o `undefined`. Todas las factorías proporcionadas a `defer` deben retornar un `ObservableInput`, como por ejemplo `Observable`, `Promise`, et al. Para obtener el mismo comportamiento que anteriormente, se puede utilizar `return EMPTY ` o `return of()` en la factoría.
 
 ### map
 
-    map: thisArg will now default to undefined. The previous default of MapSubscriber never made any sense. This will only affect code that calls map with a function and references this like so: source.pipe(map(function () { console.log(this); })). There wasn't anything useful about doing this, so the breakage is expected to be very minimal. If anything we're no longer leaking an implementation detail.
+`map`: El valor por defecto de `thisArg` es ahora `undefined`. El anterior valor por defecto de `MapSubscriber` no tenía sentido. Este cambio afectará únicamente al código que haga una llamada a `map` con una función y referencie al `this` de la siguiente manera: `source.pipe(map(function () { console.log(this); }))`. Hacer esto nunca ha sido útil, por lo que se espera que el código afectado sea mínimo.
 
 ### mergeScan
 
-    mergeScan: mergeScan will no longer emit its inner state again upon completion.
+`mergeScan`: `mergeScan` dejará de emitir su estado interno otra vez tras la compleción.
 
 ### of
 
-    of: Use with more than 9 arguments, where the last argument is a SchedulerLike may result in the wrong type which includes the SchedulerLike, even though the run time implementation does not support that. Developers should be using scheduled instead
+`of`: El uso con más de 9 argumentos, donde el último argumento es un `SchedulerLike` puede resultar en el tipo erróneo que incluye el `SchedulerLike`, aunque la implementación en tiempo de ejecución no lo permita. Se debe utilizar `scheduled` en su lugar.
 
 ### pairs
 
-    pairs: pairs will no longer function in IE without a polyfill for Object.entries. pairs itself is also deprecated in favor of users just using from(Object.entries(obj)).
+`pairs`: `pairs` ya no funcionará en IE win un polyfill para `Object.entries`. Además, el propio operador `pairs` está obsoleto. Utilizar `from(Object.entries(obj))` en su lugar.
 
 ### race
 
-    race: race() will no longer subscribe to subsequent observables if a provided source synchronously errors or completes. This means side effects that might have occurred during subscription in those rare cases will no longer occur.
+`race`: `race()` ya no se suscribirá a observables subsecuentes si la fuente proporcionada se completa o produce un error de forma síncrona. Esto quiere decir que los efectos colaterales que puedieran ocurrir durante la suscripión en esos casos raros ya no ocurrirán.
 
 ### repeat
 
-    An undocumented behavior where passing a negative count argument to repeat would result in an observable that repeats forever.
+Se ha eliminado un comportamiento indocumentado donde al pasar un argunento `count` negativo resultaba en un Observable que se repetía indefinidamente.
 
 ### retry
 
-    Removed an undocumented behavior where passing a negative count argument to retry would result in an observable that repeats forever.
+Se ha eliminado un comportamiento indocumentado donde al pasar un argunento `count` negativo resultaba en un Observable que se repetía indefinidamente.
 
 ### single
 
-    single operator will now throw for scenarios where values coming in are either not present, or do not match the provided predicate. Error types have thrown have also been updated, please check documentation for changes.
+El operador `single` ahora lanza un error en aquellas situaciones en las que los valores entrantes no están presentes, o no coinciden con el predicado proporcionado. Los tipos de errores también se han actualizado, compruébese la documentación para ver los cambios.
 
 ### skipLast
 
-    skipLast: skipLast will no longer error when passed a negative number, rather it will simply return the source, as though 0 was passed.
+`skipLast`: `skipLast` ya no provocará un error cuando se le pase un número negativo. En su lugar, retornará el Observable fuente, al igual que hace si se le pasa el valor 0.
 
 ### startWith
 
-    startWith: startWith will return incorrect types when called with more than 7 arguments and a scheduler. Passing scheduler to startWith is deprecated
+`startWith`: `startWith` retornará tipos incorrectos al ser llamado con más de 7 argumentos y un scheduler. Pasarle un scheduler a `startWith` ahora está obsoleto.
 
 ### take
 
-    take and will now throw runtime error for arguments that are negative or NaN, this includes non-TS calls like take().
+`take` ahora lanzará un _runtime error_ para argumentos negativos o NaN. Esto incluye llamadas no-TS como `take()`.
 
 ### takeLast
 
-    takeLast now has runtime assertions that throw TypeErrors for invalid arguments. Calling takeLast without arguments or with an argument that is NaN will throw a TypeError
+`takeLast` ahora tiene _runtime assertions_ que lanzan `TypeErrors` para argumentos inválidos. Llamar a `takeLast` sin argumentos o con un argumento NaN lanzará un `TypeError`.
 
 ### throwError
 
-    throwError: In an extreme corner case for usage, throwError is no longer able to emit a function as an error directly. If you need to push a function as an error, you will have to use the factory function to return the function like so: throwError(() => functionToEmit), in other words throwError(() => () => console.log('called later')).
+`throwError`: `throwError` ya n o es capaz de emitir una función como error directamente. Si se necesita emitir una función como error, se podrá utilizar la función factoría para retornar la función de la siguiente manera: `throwError(() => functionToEmit)`, en otras palabras: `throwError(() => () => console.log('llamado después'))`
 
 ### timestamp
 
-    timestamp operator accepts a TimestampProvider, which is any object with a now method that returns a number. This means pulling in less code for the use of the timestamp operator. This may cause issues with TestScheduler run mode. (see Issue here)
+El operador `timestamp` acepta un `TimestampProvider`, que es cualquier objeto con un método `now` que retorne un número. Esto puede causar problemas con el modo run del `TestScheduler`. (ver Issue [aquí](https://github.com/ReactiveX/rxjs/issues/5553))
 
 ### zip
 
-    zip: Zipping a single array will now have a different result. This is an extreme corner-case, because it is very unlikely that anyone would want to zip an array with nothing at all. The workaround would be to wrap the array in another array zip([[1,2,3]]). But again, that's pretty weird.
+`zip`: Hacerle zip a un solo arrray ahora tendrá un resultado diferente. Esto es un caso límite raro, ya que es muy poco probable que alguien quiera hacerle zip a un array con nada. El _workaround_ sería encapsular el array en otro array: `zip([[1,2,3]])`. Aunque, como se ha dicho antes, es algo bastante raro.
 
-    zip: zip operators will no longer iterate provided iterables "as needed", instead the iterables will be treated as push-streams just like they would be everywhere else in RxJS. This means that passing an endless iterable will result in the thread locking up, as it will endlessly try to read from that iterable. This puts us in-line with all other Rx implementations. To work around this, it is probably best to use map or some combination of map and zip. For example, zip(source$, iterator) could be source$.pipe(map(value => [value, iterator.next().value])).
+`zip`: Los operadores `zip` ya no iterarán a través de los iterables proporcionados de manera "as needed". En su lugar, los iterables se tratarán como _push-streams_, tal y como se hace siempre en RxJS. Esto quiere decir que si se proporciona un iterable infinito, el hilo se bloqueará, ya que se intentará leer del iterable indefinidamente. Este cambio alinea RxJS con las demás implementaciones de Rx. Como workaround de este caso, se puede utilizar `map` o una combinación de `map` y `zip`. Por ejemplo `zip(source$, iterator)` podría pasar a ser `source$.pipe(map(value => [value, iterator.next().value]))`.
 
 ### ajax
 
-    ajax body serialization will now use default XHR behavior in all cases. If the body is a Blob, ArrayBuffer, any array buffer view (like a byte sequence, e.g. Uint8Array, etc), FormData, URLSearchParams, string, or ReadableStream, default handling is use. If the body is otherwise typeof "object", then it will be converted to JSON via JSON.stringify, and the Content-Type header will be set to application/json;charset=utf-8. All other types will emit an error.
+La serialización del cuerpo de `ajax` utilizará ahora el comportamiento por defecto de XHR en todos los casos. Si el cuerpo es un `Blob`, `ArrayBuffer` cualquier vista de array buffer (como una secuencia de bytes, ej: `Uint8Array`, etc.), `FormData`, `URLSearchParams`, `string`, o `ReadableStream`, se utilizará el manejo por defecto. Si el cuerpo es un `typeof "object"`, entonces se convertirá a JSON mediante `JSON.stringify` y la cabecera `Content-Type` será `application/json;charset=utf-8`. Cualquier otro tipo provocará un error.
 
-    The Content-Type header passed to ajax configuration no longer has any effect on the serialization behavior of the AJAX request.
+La cabecera `Content-Type` pasada a la configuración de `ajax` ya no tendrá ningún efecto sobre el comportamiento de serialización de la petición AJAX.
 
-    For TypeScript users, AjaxRequest is no longer the type that should be explicitly used to create an ajax. It is now AjaxConfig, although the two types are compatible, only AjaxConfig has progressSubscriber and createXHR.
+Para usuarios de TypeScript, `AjaxRequest` ya no corresponde al tipo que debe utilizarse explícitamente para crear un `ajax`, sino que ahora es `AjaxConfig`. Aunque los dos tipos son compatibles, solamente `AjaxConfig` tiene `progressSubscriber` y `createXHR`.
 
-    ajax: In an extreme corner-case... If an error occurs, the responseType is "json", we're in IE, and the responseType is not valid JSON, the ajax observable will no longer emit a syntax error, rather it will emit a full AjaxError with more details.
+`ajax`: En el siguiente caso límite extremo: Si ocurre un error, el responseType es `"json"`, estamos utilizando IE y el responseType no es un JSON válido, el observable `ajax` no emitirá un error de sintaxis, sino que emitirá un `AjaxError` completo con más detalles.
 
-    ajax: Ajax implementation drops support for IE10 and lower. This puts us in-line with other implementations and helps clean up code in this area
+`ajax`: La implementación ajax deja de dar soporte a IE10 y versiones anteriores. Esto alinea RxJS con otras implementaciones y ayuda a limpiar el código en ese ámbito.
