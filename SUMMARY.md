@@ -2,23 +2,23 @@
 
 ## Conceptos
 
-- [Observables](./doc/Conceptos/observables.md)
-- [Observadores](./doc/Conceptos/observer.md)
+- [Observables](./doc/concepts/observables.md)
+- [Observadores](./doc/concepts/observer.md)
 - [Operadores](./doc/Operadores)
 
-  - [Combinación](./doc/Operadores/combination)
-  - [Condicionales](./doc/Operadores/conditional)
-  - [Creación](./doc/Operadores/creation)
-  - [Filtración](./doc/Operadores/filtering)
-  - [Gestión de Errores](./doc/Operadores/error-handling)
-  - [Matemáticos y Agregación](./doc/Operadores/mathematical-aggregate)
-  - [Multidifusión](./doc/Operadores/multicasting)
-  - [Transformación](./doc/Operadores/transformation)
-  - [Utilidad](./doc/Operadores/utility)
+  - [Combinación](./doc/operators/combination)
+  - [Condicionales](./doc/operators/conditional)
+  - [Creación](./doc/operators/creation)
+  - [Filtración](./doc/operators/filtering)
+  - [Gestión de Errores](./doc/operators/error-handling)
+  - [Matemáticos y Agregación](./doc/operators/mathematical-aggregate)
+  - [Multidifusión](./doc/operators/multicasting)
+  - [Transformación](./doc/operators/transformation)
+  - [Utilidad](./doc/operators/utility)
 
-- [Schedulers](./doc/Conceptos/schedulers.md)
-- [Sujetos](./doc/Conceptos/subjects.md)
-- [Suscripción](./doc/Conceptos/subscription.md)
+- [Schedulers](./doc/concepts/schedulers.md)
+- [Sujetos](./doc/concepts/subjects.md)
+- [Suscripción](./doc/concepts/subscription.md)
 
 ## Guías
 
@@ -28,4 +28,4 @@
 
 ## Sobre Nosotros
 
-- [Código de Conducta](./doc/Sobre Nosotros/code-of-conduct.md)
+- [Código de Conducta](./doc/about-us/code-of-conduct.md)
