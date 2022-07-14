@@ -2,11 +2,7 @@
 
 - [Introducción](doc/introduction.md)
 
-## Conceptos
-
-- [Observables](doc/concepts/observables.md)
-- [Observadores](doc/concepts/observer.md)
-- [Operadores](doc/concepts/operators.md)
+- Operadores
 
   - combination
     - [combineAll](doc/operators/combination/combineAll.md)
@@ -133,13 +129,15 @@
     - [timestamp](doc/operators/utility/timestamp.md)
     - [toArray](doc/operators/utility/toArray.md)
 
-- [Schedulers](doc/concepts/schedulers.md)
-- [Sujetos](doc/concepts/subjects.md)
-- [Suscripción](doc/concepts/subscription.md)
-- Testing
+- Conceptos
 
-  - [tests-to-rxjs](doc/concepts/testing/contribute-tests-to-rxjs.md)
-  - [testing](doc/concepts/testing/marble-testing.md)
+  - [Observables](doc/concepts/observables.md)
+  - [Observadores](doc/concepts/observer.md)
+  - [Operadores](doc/concepts/operators.md)
+  - [Schedulers](doc/concepts/schedulers.md)
+  - [Sujetos](doc/concepts/subjects.md)
+  - [Suscripción](doc/concepts/subscription.md)
+  - [Testing de Canicas](doc/concepts/testing/marble-testing.md)
 
 - API
 
