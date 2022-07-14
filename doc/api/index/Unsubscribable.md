@@ -1,6 +1,6 @@
 # Unsubscribable
 
-<h2 class="subtitle">Interfaces de Suscripción</h2>
+## Interfaces de Suscripción
 
 ```typescript
 interface Unsubscribable {
@@ -10,28 +10,16 @@ interface Unsubscribable {
 
 ## Interfaces Hijas
 
-[SubscriptionLike](api/index/SubscriptionLike)
+[SubscriptionLike](api/index/SubscriptionLike/)
 
 ## Métodos
 
-<table>
-<tr><th>unsubscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>unsubscribe(): void</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>void</code>
-</td></tr>
-</table>
+| unsubscribe()                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>unsubscribe(): void</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>void</code></p> |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/types.ts#L23-L28">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/types.ts#L23-L28)
 
-<a target="_blank" href="https://rxjs.dev/api/index/interface/Unsubscribable">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/interface/Unsubscribable)

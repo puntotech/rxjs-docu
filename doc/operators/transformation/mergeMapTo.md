@@ -1,26 +1,20 @@
 # mergeMapTo
 
-<h2 class="subtitle"> Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona con el Observable resultante
-</h2>
+## Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona con el Observable resultante
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `mergeMapTo<T, R, O extends ObservableInput<any>>(innerObservable: O, resultSelector?: number | ((outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R), concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<T, ObservedValueOf<O> | R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>innerObservable</td><td>Un Observable que reemplaza cada valor del Observable fuente.</td></tr>
-<tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number | ((outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R)</code>.</td></tr>
-<tr><td>concurrent</td>Opcional. El valor por defecto es <code>Number.POSITIVE_INFINITY</code>.
-El máximo número de Observables internos a los que se suscribe de forma concurrente.<td></td></tr>
-</table>
+Opcional. El valor por defecto es `Number.POSITIVE_INFINITY`. El máximo número de Observables internos a los que se suscribe de forma concurrente.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite elementos del Observable `innerObservable` proporcionado.
 
@@ -30,7 +24,7 @@ El máximo número de Observables internos a los que se suscribe de forma concur
 
 Es como `mergeMap`, pero siempre proyecta los valores al mismo Observable interno.
 
-<img src="assets/images/marble-diagrams/transformation/mergeMapTo.png" alt="Diagrama de canicas del operador mergeMapTo">
+![Diagrama de canicas del operador mergeMapTo](assets/images/marble-diagrams/transformation/mergeMapTo.png)
 
 Proyecta cada emisión de la fuente al Observable `innerObservable` dado, independientemente del valor de dicha emisión, y fusiona los Observables internos resultantes en un solo Observable: el Observable resultante.
 
@@ -38,7 +32,7 @@ Proyecta cada emisión de la fuente al Observable `innerObservable` dado, indepe
 
 **Proyectar cada click al mismo Observable interno, que emite un mensaje**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergemapto-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-mergemapto-1?file=index.ts)
 
 ```typescript
 import { fromEvent, of } from "rxjs";
@@ -52,7 +46,7 @@ click$.pipe(mergeMapTo(of("Hola, has hecho click :D"))).subscribe(console.log);
 
 **Cada 3 segundos, obtener los títulos de las 3 primeras películas de Ghibli**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergemapto-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-mergemapto-2?file=index.ts)
 
 ```javascript
 import { mergeMapTo, map, mergeAll, take } from "rxjs/operators";
@@ -86,13 +80,8 @@ const result = clicks.pipe(mergeMapTo(interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMapTo.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMapTo.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/mergeMapTo">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/mergeMapTo)

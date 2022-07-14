@@ -1,19 +1,20 @@
 # toArray
 
-<h2 class="subtitle">Recoge todas las emisiones del Observable fuente y las emite en un array cuando este se complete</h2>
+## Recoge todas las emisiones del Observable fuente y las emite en un array cuando este se complete
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `toArray<T>(): OperatorFunction<T, T[]>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[]>`: Un array formado a partir de la secuencia observable.
 
@@ -23,7 +24,7 @@ No recibe ningún parámetro.
 
 Emite todos los valores del Observable fuente en un array cuando este se completa.
 
-<img src="assets/images/marble-diagrams/utility/toArray.png" alt="Diagrama de canicas del operador toArray">
+![Diagrama de canicas del operador toArray](assets/images/marble-diagrams/utility/toArray.png)
 
 toArray espera a que el Observable fuente se complete para emitir un array que contiene todas sus emisiones. Si el Observable fuente emite un error, no se emitirá ningún array.
 
@@ -31,7 +32,7 @@ toArray espera a que el Observable fuente se complete para emitir un array que c
 
 **Emitir un array que contenga los números del 1 al 5**
 
-<a target="_blank" src="">StackBlitz</a>
+StackBlitz
 
 ```javascript
 import { toArray } from "rxjs/operators";
@@ -45,7 +46,7 @@ number$.pipe(toArray()).subscribe(console.log);
 
 **Emitir un array que contenga las primeras 4 teclas pulsadas**
 
-<a target="_blank" src="https://stackblitz.com/edit/rxjs-toarray-2?file=index.ts">StackBlitz</a>
+StackBlitz
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -77,13 +78,8 @@ const subscribe = example.subscribe((val) => console.log(val));
 // Salida: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timestamp.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timestamp.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/toArray">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/toArray)

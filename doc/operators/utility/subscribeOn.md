@@ -1,24 +1,18 @@
 # subscribeOn
 
-<h2 class="subtitle"> Suscribe a los Observadores asíncronamente al Observable fuente en función del <code>SchedulerLike</code> especificado
-</h2>
+## Suscribe a los Observadores asíncronamente al Observable fuente en función del `SchedulerLike` especificado
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `subscribeOn<T>(scheduler: SchedulerLike, delay: number = 0): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>scheduler</td><td>El <code>SchedulerLike</code> sobre el que llevar a cabo las acciones de suscripción.</td></tr>
-<tr><td>delay</td><td>Opcional. El valor por defecto es 0.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado para que sus suscripciones ocurran en función del `SchedulerLike` especificado.
 
@@ -30,13 +24,13 @@ Con `subscribeOn` se puede decidir qué tipo de planificador utilizará un Obser
 
 Los planificadores controlan la velocidad y el orden en el que se emiten los valores a los observadores desde un flujo Observable.
 
-<img src="assets/images/marble-diagrams/utility/subscribeOn.png" alt="Diagrama de canicas del operador subscribeOn">
+![Diagrama de canicas del operador subscribeOn](assets/images/marble-diagrams/utility/subscribeOn.png)
 
 ### Ejemplos
 
 **Comparación entre los distintos planificadores**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-subscribeon-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-subscribeon-1?file=index.ts)
 
 ```javascript
 import { subscribeOn } from "rxjs/operators";
@@ -86,13 +80,8 @@ merge(a, b).subscribe(console.log);
 
 La salida será 5, 6, 7, 8, 9, 1, 2, 3, 4. Esto es debido a que el Observable b emite sus valores de forma síncrona y directa, pero las emisiones del Observable a se planifican en el bucle de eventos, dado que se está utilizando el asyncScheduler.
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/subscribeOn.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/subscribeOn.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/subscribeOn">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/subscribeOn)

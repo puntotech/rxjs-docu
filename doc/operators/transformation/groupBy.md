@@ -1,27 +1,18 @@
 # groupBy
 
-<h2 class="subtitle">Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo </h2>
+## Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `groupBy<T, K, R>(keySelector: (value: T) => K, elementSelector?: void | ((value: T) => R), durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>, subjectSelector?: () => Subject<R>): OperatorFunction<T, GroupedObservable<K, R>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>keySelector</td><td>Una función que extrae la clave de cada elemento.</td></tr>
-<tr><td>elementSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Una función que extrae el elemento a retornar de cada elemento emitido.</td></tr>
-<tr><td>durationSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Una función que retorna un Observable que determina durante cuánto tiempo debe existir cada grupo.</td></tr>
-<tr><td>subjectSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>() => Subject</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, R>>`: Un Observable que emite `GroupedObservables`, cada uno de los cuales pertenece a un único valor clave. Cada grupo emite los elementos del Observable que comparten el mismo valor clave.
 
@@ -29,7 +20,7 @@ Tipo: <code>() => Subject</code>.</td></tr>
 
 ## Descripción
 
-<img src="assets/images/marble-diagrams/transformation/groupBy.png" alt="Diagrama de canicas del operador groupBy">
+![Diagrama de canicas del operador groupBy](assets/images/marble-diagrams/transformation/groupBy.png)
 
 Cuando el Observable emite un elemento, se computa una clave para dicho elemento mediante la función `keySelector`.
 
@@ -43,7 +34,7 @@ Los elementos emitidos por GroupedObservables son, por defecto, los elementos em
 
 **Agrupar lenguajes de programación según su tipo, y emitir el GroupedObservable resultante en forma de array**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-groupby-1?file=index.ts)
 
 ```javascript
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
@@ -72,7 +63,7 @@ language$
 
 **Agrupar lenguajes de programación según su tipo, seleccionar únicamente el nombre y emitir el GroupedObservable resultante en forma de array**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-groupby-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-groupby-2?file=index.ts)
 
 ```javascript
 import { groupBy, mergeMap, toArray } from "rxjs/operators";
@@ -165,103 +156,53 @@ of(
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `groupBy(keySelector: (value: T) => K): OperatorFunction<T, GroupedObservable<K, T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>keySelector</td><td>Tipo: <code>(value: T) => K</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, T>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector: void, durationSelector: (grouped: GroupedObservable<K, T>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>keySelector</td><td>Tipo: <code>(value: T) => K</code>.</td></tr>
-<tr><td>elementSelector</td><td>Tipo: <code>void</code>.</td></tr>
-<tr><td>durationSelector</td><td>Tipo: <code>(grouped: GroupedObservable) => Observable</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, T>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector?: (value: T) => R, durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, R>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>keySelector</td><td>Tipo: <code>(value: T) => K</code>.</td></tr>
-<tr><td>elementSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(value: T) => R</code>.</td></tr>
-<tr><td>durationSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(grouped: GroupedObservable) => Observable</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, R>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `groupBy(keySelector: (value: T) => K, elementSelector?: (value: T) => R, durationSelector?: (grouped: GroupedObservable<K, R>) => Observable<any>, subjectSelector?: () => Subject<R>): OperatorFunction<T, GroupedObservable<K, R>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>keySelector</td><td>Tipo: <code>(value: T) => K</code>.</td></tr>
-<tr><td>elementSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(value: T) => R</code>.</td></tr>
-<tr><td>durationSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(grouped: GroupedObservable) => Observable</code>.</td></tr>
-<tr><td>subjectSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>() => Subject</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, GroupedObservable<K, R>>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/groupBy.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/groupBy">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/groupBy)

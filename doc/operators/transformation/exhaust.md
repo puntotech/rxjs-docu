@@ -1,20 +1,20 @@
 # exhaust
 
-<h2 class="subtitle"> Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
-</h2>
+## Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `exhaust<T>(): OperatorFunction<any, T>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<any, T>`: Un Observable que recibe una fuente de Observables y propaga el primer Observable hasta que este se completa, antes de suscribirse al siguiente Observable.
 
@@ -24,7 +24,7 @@ No recibe ningún parámetro.
 
 'Aplasta' un Observable de Observables ignorando los Observables internos posteriores mientras el Observable interno actual se esté ejecutando.
 
-<img src="assets/images/marble-diagrams/transformation/exhaust.png" alt="Diagrama de canicas del operador exhaust">
+![Diagrama de canicas del operador exhaust](assets/images/marble-diagrams/transformation/exhaust.png)
 
 `exhaust` se suscribe a un Observable que emite Observables, también conocido como un Observable de orden superior. Cada vez que observa uno de los Observables internos emitidos, el Observable resultante comienza a emitir los elementos emitidos por dicho Observable interno. Hasta aquí, se comporta igual que `mergeAll`. Sin embargo, `exhaust` ignora todos los Observables internos que se emitan mientras el Observable actual no se haya completado. Una vez que el Observable actual se haya completado, `exhaust` lo unirá al Observable resultante y se suscribirá al siguiente Observable interno y repetirá el proceso.
 
@@ -34,7 +34,7 @@ No recibe ningún parámetro.
 
 Si hay alguna petición en curso, los clicks serán ignorados (cada petición tiene un retraso de 5s para poder observar este efecto.)
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-exhaust-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-exhaust-2?file=index.ts)
 
 ```javascript
 import { delay, exhaust, map, mergeAll, take } from "rxjs/operators";
@@ -75,13 +75,8 @@ const result = higherOrder.pipe(exhaust());
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/exhaust">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/exhaust)

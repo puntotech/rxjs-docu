@@ -1,27 +1,22 @@
 # single
 
-<h2 class="subtitle"> Emite si solo existe un único valor que cumpla la condición
-</h2>
+## Emite si solo existe un único valor que cumpla la condición
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `single<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Una función para evaluar los elementos emitidos por el Observable fuente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que puede emitir un único valor del Observable fuente que cumpla la condición, o `undefined` si ninguno la cumple.
 
-### Lamza
+#### Lamza
 
 `EmptyError` Lanza un `EmptyError` si el Observable se completa sin emitir ninguna notificación `next`.
 
@@ -31,7 +26,7 @@ Una función para evaluar los elementos emitidos por el Observable fuente.</td><
 
 Es como `first`, pero emite un error si hay más de un valor.
 
-<img src="assets/images/marble-diagrams/filtering/single.png" alt="Diagrama de canicas del operador single">
+![Diagrama de canicas del operador single](assets/images/marble-diagrams/filtering/single.png)
 
 Retorna un Observable que emite el único valor emitido por el Observable fuente que cumpla la condición especificada, en el caso de que exista dicho valor. Si el Observable fuente emite más de un elemento que cumpla la condición, o no emite ningún elemento, se lanzarán un `IllegalArgumentException` o un `NoSuchElementException` respectivamente.
 
@@ -41,7 +36,7 @@ Si el Observable fuente emite elementos, pero ninguno cumple la condición espec
 
 **Emitir el único elemento que cumpla la condición**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-single-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-single-1?file=index.ts)
 
 ```javascript
 import { single } from "rxjs/operators";
@@ -61,7 +56,7 @@ language$
 
 **Si hay más de un elemento que cumpla la condición, se lanzará un error**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-single-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-single-2?file=index.ts)
 
 ```javascript
 import { range } from "rxjs";
@@ -75,7 +70,7 @@ number$.pipe(single((n) => n % 2 === 0)).subscribe(console.log, console.error);
 
 **Si no hay ningún elemento que cumpla la condición, se emitirá undefined**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-single-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-single-3?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -120,13 +115,8 @@ numbers.subscribe((x) => console.log(x));
 // 'undefined'
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/single.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/single.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/single">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/single)

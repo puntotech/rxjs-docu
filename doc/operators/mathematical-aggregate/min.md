@@ -1,24 +1,18 @@
 # min
 
-<h2 class="subtitle"> Emite el elemento de menor valor
-</h2>
+## Emite el elemento de menor valor
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `min<T>(comparer?: (x: T, y: T) => number): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>comparer</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Función de comparación opcional, para comparar el valor de dos elementos.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite el elemento de menor valor.
 
@@ -28,13 +22,13 @@ Función de comparación opcional, para comparar el valor de dos elementos.
 
 El operador `max` opera con Observables que emiten valores numéricos (o elementos que se puedan comparar mediante la función de comparación proporcionada), emitiendo un solo valor cuando el Observable fuente se completa: el elemento de menor valor.
 
-<img src="assets/images/marble-diagrams/mathematical-aggregate/min.png" alt="Diagrama de canicas del operador min">
+![Diagrama de canicas del operador min](assets/images/marble-diagrams/mathematical-aggregate/min.png)
 
 ## Ejemplos
 
 **Obtener el valor máximo de una serie de números**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-min-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-min-1?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -48,7 +42,7 @@ number$.pipe(min()).subscribe(console.log);
 
 **Utilizar una función de comparación para obtener la cadena más corta**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-min-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-min-2?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -63,7 +57,7 @@ fruit$.pipe(min((a, b) => a.length - b.length)).subscribe(console.log);
 
 **Utilizar una función de comparación para comparar objetos anidados y obtener el de menor valor**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-min-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-min-3?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -118,13 +112,8 @@ of(5, 4, 7, 2, 8)
     .subscribe((x: Person) => console.log(x.name)); // -> 'Bar'
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/min.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/min.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/min">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/min)

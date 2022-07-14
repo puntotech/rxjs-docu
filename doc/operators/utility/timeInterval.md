@@ -1,23 +1,18 @@
 # timeInterval
 
-<h2 class="subtitle"> Convierte un Observable que emite elementos en uno que emite indicaciones de la cantidad de tiempo transcurrida entre emisiones
-</h2>
+## Convierte un Observable que emite elementos en uno que emite indicaciones de la cantidad de tiempo transcurrida entre emisiones
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `timeInterval<T>(scheduler: SchedulerLike = async): OperatorFunction<T, TimeInterval<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
-El planificador utilizado para obtener el tiempo.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, TimeInterval<T>>`: Un Observable que emite información sobre el valor y el intervalo.
 
@@ -31,7 +26,7 @@ Emite un objeto que contiene el valor actual y el tiempo transcurrido entre la e
 
 **Emitir el valor de la tecla pulsada, además del tiempo transcurrido desde la última tecla presionada**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timeinterval?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-timeinterval?file=index.ts)
 
 ```typescript
 import { timeInterval } from "rxjs/operators";
@@ -78,13 +73,8 @@ seconds.pipe(timeout(900)).subscribe(
 // {value: 2, interval: 1000}
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeInterval.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeInterval.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/timeInterval">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/timeInterval)

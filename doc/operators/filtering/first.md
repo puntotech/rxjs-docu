@@ -1,29 +1,22 @@
 # first
 
-<h2 class="subtitle"> Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
-</h2>
+## Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `first<T, D>(predicate?: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Una función opcional que aplicar a cada elemento para comprobar si cumple o no una condición.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El valor por defecto que se emitirá en el caso de que no se encuentre ningún elemento válido.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | D>`: Un Observable del primer elemento que cumpla la condición especificada.
 
-### Lanza
+#### Lanza
 
 `EmptyError`: Lanza un `EmptyError` si el Observable se completa sin emitir ninguna notificación `next`.
 
@@ -33,16 +26,15 @@ El valor por defecto que se emitirá en el caso de que no se encuentre ningún e
 
 Emite únicamente el primer valor. O emite el primer valor que cumpla alguna condición.
 
-<img src="assets/images/marble-diagrams/filtering/first.png" alt="Diagrama de canicas del operador first">
+![Diagrama de canicas del operador first](assets/images/marble-diagrams/filtering/first.png)
 
-Si se llama sin ningún argumento, `first` emite el primer valor del Observable fuente y se completa. Si se llama con una función `predicate`, `first` emite el valor de la fuente que cumpla la condición especificada. También puede recibir un valor por defecto, que se emite en el caso de que la fuente se complete sin emitir ningún elemento válido.
-Lanza un error en el caso de que no se encuentre un elemento válido y no se haya proporcionado un `defaultValue` .
+Si se llama sin ningún argumento, `first` emite el primer valor del Observable fuente y se completa. Si se llama con una función `predicate`, `first` emite el valor de la fuente que cumpla la condición especificada. También puede recibir un valor por defecto, que se emite en el caso de que la fuente se complete sin emitir ningún elemento válido. Lanza un error en el caso de que no se encuentre un elemento válido y no se haya proporcionado un `defaultValue` .
 
 ## Ejemplos
 
 **Emitir la primera cadena de una secuencia**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-first-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-first-1?file=index.ts)
 
 ```javascript
 import { first } from "rxjs/operators";
@@ -56,7 +48,7 @@ fruit$.pipe(first()).subscribe(console.log);
 
 **Emitir la primera tecla pulsada**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-rxjs-first-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-rxjs-first-2?file=index.ts)
 
 ```typescript
 import { first, map } from "rxjs/operators";
@@ -75,7 +67,7 @@ keyPressed$
 
 **Emitir el primer elemento que cumpla una condición**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-first-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-first-3?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -93,7 +85,7 @@ user$.pipe(first(({ age }) => age === 21)).subscribe(console.log);
 
 **Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-first-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-first-4?file=index.ts)
 
 ```javascript
 import { first } from "rxjs/operators";
@@ -141,80 +133,43 @@ result.subscribe((x) => console.log(x));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `first(predicate?: null, defaultValue?: D): OperatorFunction<T, T | D>`
 
-### Parameters
+#### Parameters
 
-<table>
-<tr><td>predicate</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>null</code>.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>D</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | D>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `first(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue?: S): OperatorFunction<T, S>`
 
-### Parameters
+#### Parameters
 
-<table>
-<tr><td>predicate</td><td>Tipo: <code>(value: T, index: number, source: Observable) => value is S</code>.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>S</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, S>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `first(predicate: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
 
-### Parameters
+#### Parameters
 
-<table>
-<tr><td>predicate</td><td>Tipo: <code>(value: T, index: number, source: Observable) => boolean</code>.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>D</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | D>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/first.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/first.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/first">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/first)

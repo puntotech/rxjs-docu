@@ -1,6 +1,6 @@
 # SchedulerLike
 
-<h2 class="subtitle">Interfaces de Planificador</h2>
+## Interfaces de Planificador
 
 ```typescript
 interface SchedulerLike {
@@ -15,49 +15,23 @@ interface SchedulerLike {
 
 ## Implementaciones de Clase
 
-[Scheduler]()
+[Scheduler](SchedulerLike.md)
 
 ## Métodos
 
-<table>
-<tr><th>now()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>now(): number</code>
+| now()                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>now(): number</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>number</code></p> |
 
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>number</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>schedule()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>schedule<T>(work: (this: SchedulerAction<T>, state?: T) => void, delay?: number, state?: T): Subscription</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>work</td><td>Tipo: <code>(this: SchedulerAction, state?: T) => void</code>.</td></tr>
-<tr><td>delay</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-<tr><td>state</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>T</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>Subscription</code>
-</td></tr>
-</table>
+| schedule()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>schedule(work: (this: SchedulerAction, state?: T) => void, delay?: number, state?: T): Subscription</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>work</td><td>Tipo: <code>(this: SchedulerAction, state?: T) => void</code>.</td></tr><tr><td>delay</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>number</code>.</td></tr><tr><td>state</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>T</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscription</code></p> |                                                                |
+| work                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Tipo: `(this: SchedulerAction, state?: T) => void`.            |
+| delay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Opcional. El valor por defecto es `undefined`. Tipo: `number`. |
+| state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Opcional. El valor por defecto es `undefined`. Tipo: `T`.      |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/types.ts#L90-L96">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/types.ts#L90-L96)
 
-<a target="_blank" href="https://rxjs.dev/api/index/interface/SchedulerLike">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/interface/SchedulerLike)

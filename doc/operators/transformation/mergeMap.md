@@ -1,27 +1,20 @@
 # mergeMap
 
-<h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante</h2>
+## Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante
 
 💡 Se debe utilizar `mergeMap` si se quieren tener varios Observables internos suscritos de forma concurrente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `mergeMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector?: number | ((outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R), concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<T, ObservedValueOf<O> | R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Una función que, al aplicarse a un elemento emitido por el Observable fuente, retorna un Observable.</td></tr>
-<tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number | ((outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R)</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>Number.POSITIVE_INFINITY</code>.
-El máximo número de Observables de entrada suscritos de forma concurrente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección ( y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente y fusionando los resultados de los Observables obtenidos a partir de esta transformación.
 
@@ -31,7 +24,7 @@ El máximo número de Observables de entrada suscritos de forma concurrente.</td
 
 Proyecta cada valor a un Observable interno, y 'aplasta' cada uno de estos Observables internos mediante el operador `mergeAll`.
 
-<img src="assets/images/marble-diagrams/transformation/mergeMap.png" alt="Diagrama de canicas del operador mergeMap">
+![Diagrama de canicas del operador mergeMap](assets/images/marble-diagrams/transformation/mergeMap.png)
 
 Retorna un Observable que, después de aplicar una función a cada elemento emitido por el Observable fuente, donde dicha función retorna un Observable, fusiona los Observables internos resultantes y emite el resultado de la fusión.
 
@@ -39,7 +32,7 @@ Retorna un Observable que, después de aplicar una función a cada elemento emit
 
 Como mergeMap se suscribe a los Observables internos de forma concurrente, y se le ha añadido un retardo aleatorio a las peticiones AJAX, se puede observar que // TODO
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergemap-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-mergemap-1?file=index.ts)
 
 ```javascript
 import { mergeMap, map, tap, delayWhen } from "rxjs/operators";
@@ -101,82 +94,43 @@ result.subscribe((x) => console.log(x));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `mergeMap(project: (value: T, index: number) => O, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `mergeMap(project: (value: T, index: number) => O, resultSelector: undefined, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>undefined.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number.</td></tr>
-
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `mergeMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R, concurrent?: number): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMap.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeMap.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/mergeMap">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/mergeMap)

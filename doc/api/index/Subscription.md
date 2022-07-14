@@ -1,6 +1,8 @@
 # Subscription
 
-<h2 class="subtitle">Representa un recurso desechable, como es la ejecución de un Observable. La Suscripción posee un método importante, <code>unsubscribe</code>, que no recibe ningún argumento y se encarga de desechar el recurso que representa la Suscripción</h2>
+## Subscription
+
+### Representa un recurso desechable, como es la ejecución de un Observable. La Suscripción posee un método importante, `unsubscribe`, que no recibe ningún argumento y se encarga de desechar el recurso que representa la Suscripción
 
 ```typescript
 class Subscription implements SubscriptionLike {
@@ -13,108 +15,59 @@ remove(subscription: Subscription): void
 }
 ```
 
-# Subclases
+## Subclases
 
-[Subscriber](api/index/Subscriber)
+[Subscriber](api/index/Subscriber/)
 
-## Descripción
+### Descripción
 
 Adicionalmente, las suscripciones se pueden agrupar mediante el método `add()`, que adjunta una Suscripción hija a la Suscripción actual. Cuando se cancela una Suscripción, también se cancela la de todos sus hijos (y nietos.)
 
-## Propiedades Estáticas
+### Propiedades Estáticas
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>EMPTY</td><td><code>Subscription</code></td></tr>
-</table>
+| Propiedad | Tipo           | Descripción |
+| --------- | -------------- | ----------- |
+| EMPTY     | `Subscription` |             |
 
-## Constructor
+### Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(unsubscribe?: () => void)</code>
-</td></tr>
-</table>
+| constructor()                                                           |
+| ----------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>constructor(unsubscribe?: () => void)</code></p> |
 
-<h3>Parámetros</h3>
+#### Parámetros
 
-<table>
-<tr><td>unsubscribe</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Una función que describe cómo llevar a cabo el desecho de recursos cuando el método <code>unsubscribe</code> es llamado.</td></tr>
-</table>
+| unsubscribe | Opcional. El valor por defecto es `undefined`. Una función que describe cómo llevar a cabo el desecho de recursos cuando el método `unsubscribe` es llamado. |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-## Propiedades
+### Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>closed</td><td><code>[object Object]</code></td><td>Indica si la Suscripción ha sido cancelada o no.</td></tr>
-</table>
+| Propiedad | Tipo              | Descripción                                      |
+| --------- | ----------------- | ------------------------------------------------ |
+| closed    | `[object Object]` | Indica si la Suscripción ha sido cancelada o no. |
 
-## Métodos
+### Métodos
 
-<table>
-<tr><th>unsubscribe()</th></tr>
-<tr><td>Desecha los recursos representados por la Suscripción. Puede, por ejemplo, cancelar una ejecución Observable o cualquier otro tipo de trabajo que comenzase a partir de la creación de la Suscripción.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>unsubscribe(): void</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
+| unsubscribe()                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Desecha los recursos representados por la Suscripción. Puede, por ejemplo, cancelar una ejecución Observable o cualquier otro tipo de trabajo que comenzase a partir de la creación de la Suscripción. |
+| <h4>Firma</h4><p><code>unsubscribe(): void</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>void:</code></p>                                                    |
 
-<h3>Retorna</h3>
-<code>void:</code>
-</td></tr>
-</table>
+| add()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Añade un _teardown_ que será llamado durante el `unsubscribe()` de esta Suscripción. También se puede utilizar para añadir una Suscripción hija.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                            |
+| <h4>Firma</h4><p><code>add(teardown: TeardownLogic): Subscription</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>teardown</td><td>La lógica adicional a ejecutar durante el <em>teardown</em> (proceso de eliminación de recursos.)</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscription</code>: Retorna la Suscripción utilizada o creada para ser añadida a la lista de Suscripciones internas. Esta Suscripción puede utilizarse junto a <code>remove()</code> para eliminar la lógica de <em>teardown</em> proporcionada de la lista de Suscripciones internas.</p> |                                                                                            |
+| teardown                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | La lógica adicional a ejecutar durante el _teardown_ (proceso de eliminación de recursos.) |
+| <p>Si el <em>teardown</em> que se quiere añadir es una Suscripción que ya ha sido cancelada, es la misma referencia que la referencia desde la que se está llamando <code>add</code> o es <code>Subscription.EMPTY</code>, no será añadido.</p><p>Si esta Suscripción está en un estado cerrado, la lógica de <em>teardown</em> proporcionada será ejecutada inmediatamente.</p><p>Cuando se cancela una Suscripción padre, cualquier Suscripción hija que se le hubiese añadido también se cancela.</p>                                                                                                                                           |                                                                                            |
 
-<table>
-<tr><th>add()</th></tr>
-<tr><td>Añade un <em>teardown</em> que será llamado durante el <code>unsubscribe()</code> de esta Suscripción. También se puede utilizar para añadir una Suscripción hija.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>add(teardown: TeardownLogic): Subscription</code>
-<h3>Parámetros</h3>
+| remove()                                                                                                                                 |                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| Elimina una Suscripción de la lista interna de Suscripciones que serán canceladas durante el proceso de cancelación de esta Suscripción. |                                 |
+| <h4>Firma</h4><p><code>remove(subscription: Subscription): void</code></p><h4>Parámetros</h4><h4>Retorna</h4><p><code>void:</code></p>   |                                 |
+| subscription                                                                                                                             | La suscripción a ser eliminada. |
 
-<table>
-<tr><td>teardown</td><td>La lógica adicional a ejecutar durante el <em>teardown</em> (proceso de eliminación de recursos.)</td></tr>
-</table>
+### Recursos adicionales
 
-<h3>Retorna</h3>
-<code>Subscription</code>: Retorna la Suscripción utilizada o creada para ser añadida a la lista de Suscripciones internas. Esta Suscripción puede utilizarse junto a <code>remove()</code> para eliminar la lógica de <em>teardown</em> proporcionada de la lista de Suscripciones internas.
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Subscription.ts#L6-L207)
 
-<tr><td>Si el <em>teardown</em> que se quiere añadir es una Suscripción que ya ha sido cancelada, es la misma referencia que la referencia desde la que se está llamando <code>add</code> o es <code>Subscription.EMPTY</code>, no será añadido.
-
-Si esta Suscripción está en un estado cerrado, la lógica de <em>teardown</em> proporcionada será ejecutada inmediatamente.
-
-Cuando se cancela una Suscripción padre, cualquier Suscripción hija que se le hubiese añadido también se cancela.
-
-</td></tr>
-</td></tr>
-</table>
-
-<table>
-<tr><th>remove()</th></tr>
-<tr><td>Elimina una Suscripción de la lista interna de Suscripciones que serán canceladas durante el proceso de cancelación de esta Suscripción.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>remove(subscription: Subscription): void</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>subscription</td><td>La suscripción a ser eliminada.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>void:</code>
-</td></tr>
-</table>
-
-## Recursos adicionales
-
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Subscription.ts#L6-L207">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/class/Subscription">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/class/Subscription)

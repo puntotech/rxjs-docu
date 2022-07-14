@@ -1,29 +1,22 @@
 # last
 
-<h2 class="subtitle"> Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
-</h2>
+## Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `last<T, D>(predicate?: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La condición que el elemento emitido por la fuente debe cumplir.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El valor por defecto opcional que se emitirá en el caso de que ningún elemento cumpla la condición o si no se emite ningún valor.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | D>`: Un Observable que emite el último elemento del Observable que cumpla la condición, o un `NoSuchElementException` si no se emite ningún elemento.
 
-### Lanza
+#### Lanza
 
 `EmptyError` Propaga un `EmptyError` a la _callback_ de error del Observable si este se completa antes de emitir alguna notificación `next`.
 
@@ -35,13 +28,13 @@ El valor por defecto opcional que se emitirá en el caso de que ningún elemento
 
 Retorna un Observable que emite el último elemento emitido por el Observable fuente. Opcionalmente recibe una función `predicate` como parámetro, en cuyo caso, en lugar de emitir el último elemento del Observable fuente, el Observable resultante emitirá el último elemento del Observable fuente que cumpla la condición especificada.
 
-<img src="assets/images/marble-diagrams/filtering/last.png" alt="Diagrama de canicas del operador last">
+![Diagrama de canicas del operador last](assets/images/marble-diagrams/filtering/last.png)
 
 ## Ejemplos
 
 **Emitir la última cadena de una secuencia**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-last-1?file=index.ts)
 
 ```javascript
 import { last } from "rxjs/operators";
@@ -55,7 +48,7 @@ fruit$.pipe(last()).subscribe(console.log);
 
 **Emitir el último elemento que cumpla una condición**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-last-2?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -74,7 +67,7 @@ user$.pipe(last(({ age }) => age === 21)).subscribe(console.log);
 
 **Proporcionar un valor por defecto, que será emitido si ningún elemento cumple la condición**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-last-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-last-3?file=index.ts)
 
 ```javascript
 import { last } from "rxjs/operators";
@@ -98,80 +91,43 @@ language$
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `last(predicate?: null, defaultValue?: D): OperatorFunction<T, T | D>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>null</code>.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>D</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | D>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `last(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue?: S): OperatorFunction<T, S>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Tipo: <code>(value: T, index: number, source: Observable) => value is S</code>.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>S</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, S>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `last(predicate: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Tipo: <code>(value: T, index: number, source: Observable) => boolean</code>.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>D</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | D>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/last.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/last.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/last">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/last)

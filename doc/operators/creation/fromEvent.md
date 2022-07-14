@@ -1,27 +1,18 @@
 # fromEvent
 
-<h2 class="subtitle"> Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
-</h2>
+## Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `fromEvent<T>(target: FromEventTarget<T>, eventName: string, options?: EventListenerOptions | ((...args: any[]) => T), resultSelector?: (...args: any[]) => T): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>target</td><td>El <code>EventTarget</code> del DOM, el <code>EventEmitter</code> de Node.js, el <code>NodeList</code> o <code>HTMLCollection</code> al que adjuntar el manejador de eventos.</td></tr>
-<tr><td>eventName</td><td>El nombre del evento que se desea escuchar, emitido por el <code>target</code>.</td></tr>
-<tr><td>options</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Opciones que proporcionarle al <code>addEventListener</code>.</td></tr>
-<tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(...args: any[]) => T</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`:
 
@@ -31,7 +22,7 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 
 Crea un Observable a partir de eventos del DOM, de eventos EventEmitter de Node.js u otros.
 
-<img src="assets/images/marble-diagrams/creation/fromEvent.png" alt="Diagrama de canicas del operador fromEvent">
+![Diagrama de canicas del operador fromEvent](assets/images/marble-diagrams/creation/fromEvent.png)
 
 `fromEvent` acepta un _event target_ como primer argumento. Un _event target_ es un objeto con métodos para registrar las funciones de manejo de eventos. Como segundo argumento recibe una cadena que indica el tipo de evento al que se quiere escuchar. `fromEvent` es compatible con varios tipos de _event targets_, listados un poco más abajo. Si se desea utilizar _event target_ que no sea compatible con `fromEvent`, se debe utilizar `fromEventPattern`, que da soporte a APIs arbitrarias. En el caso de las APIs compatibles con `fromEvent`, los métodos para añadir y elminar funciones de manejo de eventos se llaman de diferente manera, pero todos aceptan una cadena que describe el tipo de evento y la función en sí, que puede llamarse cuando dicho evento se dispare.
 
@@ -39,7 +30,7 @@ Cada vez que se realiza una suscripción al Observable resultante, la función d
 
 Se debe tener en cuenta que si las llamadas a la función registrada al _event target_ se hacen con más de un argumento, ningún argumento a partir del segundo, este inclusive, aparecerá en el flujo resultante. Para poder acceder a dichos argumentos, se le puede proporcionar una función de proyección opcional a `fromEvent`, que se llamará con todos los argumentos proporcionados al manejador de eventos. El Observable resultante emitirá los valores retornados por la función de proyección, en lugar del valor habitual.
 
-También debe tenerse en cuenta que los _event targets_ listados más adelante se comprueban mediante [duck typing](https://es.wikipedia.org/wiki/Duck_typing), o tipifación dinámica. Esto implica que, independientemente del tipo de objeto y del entorno en el que se trabaje, se puede utilizar `fromEvent` en dicho objeto si se exponen los métodos descritos (siempre y cuando se tengan el comportamiento descrito anteriormente). Por ejemplo, si una biblioteca de Node.js expone un _event target_ cuyos métodos se llaman igual que los del `EventTarget` del DOM, el utilizar `fromEvent` es una buena elección.
+También debe tenerse en cuenta que los _event targets_ listados más adelante se comprueban mediante [duck typing](https://es.wikipedia.org/wiki/Duck\_typing), o tipifación dinámica. Esto implica que, independientemente del tipo de objeto y del entorno en el que se trabaje, se puede utilizar `fromEvent` en dicho objeto si se exponen los métodos descritos (siempre y cuando se tengan el comportamiento descrito anteriormente). Por ejemplo, si una biblioteca de Node.js expone un _event target_ cuyos métodos se llaman igual que los del `EventTarget` del DOM, el utilizar `fromEvent` es una buena elección.
 
 Si la API que se desea utilizar es más orientada a _callback_ que a _event handler_ (la función _callback_ suscrita se dispara únicamente una vez, por lo que no hay necesidad de desvincularla manualmente), se debe utilizar `bindCallback` o `bindNodeCallback` en lugar de `fromEvent`.
 
@@ -73,7 +64,7 @@ Al igual que en el caso de un `NodeList`, se trata de una colección de Nodos de
 
 **Crear un Observable que emite clicks**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent?file=index.ts)
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -86,7 +77,7 @@ click$.subscribe((click) => console.log(click));
 
 **Crear un Observable que emite teclas pulsadas**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent-2?file=index.ts)
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -99,7 +90,7 @@ keyPressed$.subscribe(console.log);
 
 **Crear un Observable que emita cambios en el scroll**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent-3?file=index.ts)
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -112,7 +103,7 @@ scroll$.subscribe((scroll) => console.log(scroll));
 
 **Crear un Observable que emite cuando se copie un texto**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromevent-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromevent-4?file=index.ts)
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -157,13 +148,8 @@ clicksInDiv.subscribe(() => console.log("div"));
 // que la consola mostrará "document" primero, y luego "div".
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEvent.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/fromEvent">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/fromEvent)

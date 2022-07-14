@@ -1,11 +1,12 @@
 # ajax
 
-<h2 class="subtitle"> Crea un Observable para una petición Ajax</h2>
+## Crea un Observable para una petición Ajax
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `ajax(urlOrRequest: string | AjaxRequest): Observable<AjaxResponse>`
 
@@ -19,7 +20,7 @@ Crea un Observable para una petición Ajax a partir de un objeto de petición co
 
 **Realizar una petición Ajax, y emitir el objeto AjaxResponse completo**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax?file=index.ts)
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -32,7 +33,7 @@ ghibliFilmsResponse$.subscribe(console.log);
 
 **Emitir únicamente los datos del objeto respuesta**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax-2?file=index.ts)
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -52,7 +53,7 @@ ghibliFilm$.subscribe(console.log);
 
 **Utilizar un objeto de configuración para los parámetros de la petición AJAX**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax-3?file=index.ts)
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -71,9 +72,9 @@ ghibliFilmWithHeaders$.subscribe(console.log);
 // Salida: AjaxResponse {xhr: {}, request: {}...}
 ```
 
-**Realizar varias peticiones Ajax mediante un operador de proyección de orden superior ([mergeMap](/operators/transformation/mergeMap), [switchMap](/operators/transformation/switchMap), [concatMap](/operators/transformation/concatMap), [exhaustMap](/operators/transformation/exhaustMap))**
+**Realizar varias peticiones Ajax mediante un operador de proyección de orden superior (**[**mergeMap**](../../../operators/transformation/mergeMap/)**,** [**switchMap**](../../../operators/transformation/switchMap/)**,** [**concatMap**](../../../operators/transformation/concatMap/)**,** [**exhaustMap**](../../../operators/transformation/exhaustMap/)**)**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ajax-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ajax-4?file=index.ts)
 
 ```javascript
 import { from, of } from "rxjs";
@@ -168,13 +169,8 @@ const obs$ = ajax(`https://api.github.com/404`).pipe(
 );
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/ajax/ajax.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/ajax/ajax.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/ajax/ajax">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/ajax/ajax)

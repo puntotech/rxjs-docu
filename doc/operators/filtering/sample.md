@@ -1,22 +1,18 @@
 # sample
 
-<h2 class="subtitle"> Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite un valor
-</h2>
+## Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite un valor
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `sample<T>(notifier: Observable<any>): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>notifier</td><td>El Observable que indica cuándo emitir el valor más reciente del Observable fuente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite el valor más reciente del Observable fuente cuando el Observable `notifier` emite un valor o se completa.
 
@@ -26,7 +22,7 @@
 
 Es como `sampleTime`, pero toma una muestra del Observable fuente cuando el Observable notificador emite un valor.
 
-<img src="assets/images/marble-diagrams/filtering/sample.png" alt="Diagrama de canicas del operador sample">
+![Diagrama de canicas del operador sample](assets/images/marble-diagrams/filtering/sample.png)
 
 Cuando el Observable `notifier` emite un valor o se completa, `sample` toma una muestra del Observable fuente y emite la emisión más reciente desde el último muestreo, a no ser que la fuente no haya emitido nada desde el último muestreo. En cuanto se lleve a cabo la suscripción al Observable resultante, también se realizará la del Observable `notifier`.
 
@@ -34,7 +30,7 @@ Cuando el Observable `notifier` emite un valor o se completa, `sample` toma una 
 
 **Emitir el valor más reciente desde el último muestreo, realizado cuando interval emite (cada 2s)**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-sample-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-sample-1?file=index.ts)
 
 ```javascript
 import { interval } from "rxjs";
@@ -48,7 +44,7 @@ number$.pipe(sample(interval(2000))).subscribe(console.log);
 
 **Emitir el valor más reciente desde el último muestreo, realizado cada vez que se pulsa una tecla**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-sample-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-sample-2?file=index.ts)
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -79,13 +75,8 @@ const result = seconds.pipe(sample(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sample.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/sample.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/sample">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/sample)

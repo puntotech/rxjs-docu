@@ -1,25 +1,22 @@
 # find
 
-<h2 class="subtitle"> Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición</h2>
+## Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición
 
-💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first](/operators/filtering/first)
+💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first](../../../operators/filtering/first/)
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `find<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): OperatorFunction<T, T | undefined>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Una función que se llama con cada elemento para comprobar si se cumple o no la condición.</td></tr>
-<tr><td>thisArg</td>Opcional. El valor por defecto es <code>undefined</code>.
-Un argumento opcional para determinar el valor del <code>this</code> en la función <code>predicate</code>.<td></td></tr>
-</table>
+Opcional. El valor por defecto es `undefined`. Un argumento opcional para determinar el valor del `this` en la función `predicate`.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | undefined>`: Un Observable del primer elemento que cumpla la condición.
 
@@ -29,7 +26,7 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 Encuentra el primer valor que cumple una condición y lo emite.
 
-<img src="assets/images/marble-diagrams/conditional-boolean/find.png" alt="Diagrama de canicas del operador find">
+![Diagrama de canicas del operador find](assets/images/marble-diagrams/conditional-boolean/find.png)
 
 `find` busca el primer elemento del Observable fuente que cumpla la condición especificada en la función `predicate` y retorna la primera ocurrencia que exista en la fuente. Al contrario que el operador `first`, la función `predicate` es obligatoria, y no se emite un error si no se encuentra un valor válido.
 
@@ -37,7 +34,7 @@ Encuentra el primer valor que cumple una condición y lo emite.
 
 **Emite la primera vez que se presiona la tecla X, y se completa el flujo**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-find?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-find?file=index.ts)
 
 ```typescript
 import { find } from "rxjs/operators";
@@ -53,7 +50,7 @@ key$.pipe(find(({ code }) => code === "KeyX")).subscribe(console.log);
 
 Aunque haya más de un lenguaje de tipo multiparadigma, find emite únicamente el primero que encuentra.
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-find-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-find-2?file=index.ts)
 
 ```javascript
 import { find } from "rxjs/operators";
@@ -74,7 +71,7 @@ language$
 
 **Si ningún elemento cumple la condición, se emite undefined**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-find-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-find-3?file=index.ts)
 
 ```javascript
 import { find } from "rxjs/operators";
@@ -107,13 +104,8 @@ const result = clicks.pipe(find((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/find.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/find">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/find)

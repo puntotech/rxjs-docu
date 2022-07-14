@@ -16,65 +16,43 @@ class VirtualTimeScheduler extends AsyncScheduler {
 
 ## Subclases
 
-[TestScheduler](api/testing/TestScheduler)
+[TestScheduler](api/testing/TestScheduler/)
 
 ## Propiedades Estáticas
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>frameTimeFactor</td><td><code>number</code></td></tr>
-</table>
+| Propiedad       | Tipo     | Descripción |
+| --------------- | -------- | ----------- |
+| frameTimeFactor | `number` |             |
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(SchedulerAction: typeof AsyncAction = VirtualAction as any, maxFrames: number = Number.POSITIVE_INFINITY)</code>
-</td></tr>
-</table>
+| constructor()                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>constructor(SchedulerAction: typeof AsyncAction = VirtualAction as any, maxFrames: number = Number.POSITIVE_INFINITY)</code></p> |
 
-<h3>Parámetros</h3>
+### Parámetros
 
-<table>
-<tr><td>SchedulerAction</td><td>Opcional. El valor por defecto es <code>VirtualAction as any</code>.
-Tipo: <code>typeof AsyncAction</code>.</td></tr>
-<tr><td>maxFrames</td><td>Opcional. El valor por defecto es <code>Number.POSITIVE_INFINITY</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
+| SchedulerAction | Opcional. El valor por defecto es `VirtualAction as any`. Tipo: `typeof AsyncAction`. |
+| --------------- | ------------------------------------------------------------------------------------- |
+| maxFrames       | Opcional. El valor por defecto es `Number.POSITIVE_INFINITY`. Tipo: `number`.         |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>frame</td><td><code>number</code></td></tr>
-<tr><td>index</td><td><code>number</code></td></tr>
-<tr><td>maxFrames</td><td><code>number</code></td><td>Declarado en el constructor.</td></tr>
-</table>
+| Propiedad | Tipo     | Descripción                  |
+| --------- | -------- | ---------------------------- |
+| frame     | `number` |                              |
+| index     | `number` |                              |
+| maxFrames | `number` | Declarado en el constructor. |
 
 ## Métodos
 
-<table>
-<tr><th>flush()</th></tr>
-<tr><td>Provoca que el Scheduler ejecute todas las acciones puestas en cola, limpiando dicha cola.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>flush(): void</code>
-
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>void:</code>
-</td></tr>
-</table>
+| flush()                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Provoca que el Scheduler ejecute todas las acciones puestas en cola, limpiando dicha cola.                                                    |
+| <h4>Firma</h4><p><code>flush(): void</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>void:</code></p> |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/scheduler/VirtualTimeScheduler.ts#L5-L44">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/scheduler/VirtualTimeScheduler.ts#L5-L44)
 
-<a target="_blank" href="https://rxjs.dev/api/index/class/VirtualTimeScheduler">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/class/VirtualTimeScheduler)

@@ -1,24 +1,20 @@
 # switchMap
 
-<h2 class="subtitle"> Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
-</h2>
+## Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `switchMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector?: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, ObservedValueOf<O> | R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Una función que, al aplicarse a un elemento emitido por el Observable fuente, retorna otro Observable.<td></tr>
-<tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-`Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R</code>.</td></tr>`
-</table>
+\`
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección (y el ya obsoleto `resultSelector` opcional) a cada elemento emitido por el Observable fuente, obteniendo únicamente los valores del Observable interno más reciente.
 
@@ -28,7 +24,7 @@
 
 Proyecta cada valor a un Observable interno, y 'aplasta' estos Observables internos.
 
-<img src="assets/images/marble-diagrams/transformation/switchMap.png" alt="Diagrama de canicas del operador switchMap">
+![Diagrama de canicas del operador switchMap](assets/images/marble-diagrams/transformation/switchMap.png)
 
 Retorna un Observable que emite elementos tras aplicar una función a cada elemento emitido por el Observable fuente. Dicha función retorna un Observable interno. Cada vez que `switchMap` observa uno de estos Observables internos, el Observable resultante comienza a emitir los elementos de ese Observable interno. Cuando se emite un Observable interno nuevo, `switchMap` inmediatamente deja de emitir los elementos del Observable interno anterior, y comienza a emitir los elementos del nuevo. Este comportamiento se mantiene para todos los Observables internos posteriores.
 
@@ -36,7 +32,7 @@ Retorna un Observable que emite elementos tras aplicar una función a cada eleme
 
 **Cada vez que se pulsa el botón, se hace una nueva petición, cancelando la petición anterior**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-switchmap-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-switchmap-1?file=index.ts)
 
 ```javascript
 import { fromEvent } from "rxjs";
@@ -56,7 +52,7 @@ click$.pipe(switchMap((_) => getGhibliFilms())).subscribe(console.log);
 // Salida: (Click) (Se hace nueva petición) (Click) (Se hace nueva petición)...
 ```
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-switchmap-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-switchmap-2?file=index.ts)
 
 ```typescript
 import {
@@ -146,75 +142,43 @@ result.subscribe((x) => console.log(x));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `switchMap(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `switchMap(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>undefined</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `switchMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchMap.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/switchMap">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/switchMap)

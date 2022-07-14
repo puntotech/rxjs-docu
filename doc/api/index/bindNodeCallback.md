@@ -1,25 +1,18 @@
 # bindNodeCallback
 
-<h2 class="subtitle"> Convierte una callback API del estilo de Node.js a una función que retorna un Observable
-</h2>
+## Convierte una callback API del estilo de Node.js a una función que retorna un Observable
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `bindNodeCallback<T>(callbackFunc: Function, resultSelector: Function | SchedulerLike, scheduler?: SchedulerLike): (...args: any[]) => Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>Function</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>Function | SchedulerLike</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El planificador con el que planificar las <i>callbacks</i>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<T>`: Una función que returna un Observable que emite los mismo valores que la _callback_ de Node.js devolvería.
 
@@ -35,11 +28,11 @@ De entrada recibe una función `func` que recibe algunos parámetros, pero el ú
 
 La salida de `bindNodeCallback` es una función que recibe los mismo parámetros que `func`, excepto el último (la callback.) Cuando se hace una llamada a la función de salida con argumentos, retornará un Observable. Si `func` hace una llamada a su callback con el parámetro de error presente, el Observable lanzará un error con ese valor. Si no se proporciona el parámetro de error, el Observable emitirá el segundo parámetro. Si hay más parámetros (tercero, cuarto etc.), el Observable emitirá un array con todos los argumentos, excepto el primer argumento de error.
 
-Nota: la llamada a `func` no se realizará en el mismo momento en el que se haga la llamada a la función de salida, sino en el momento en el que el Observable resultante sea suscrito. Por defecto, la llamada a `func` se hará de forma síncrona tras la suscripción, pero este comportamiento se puede cambiar proporcionando un planificador como tercer parámetro (opcional). `SchedulerLike` también puede controlar cuándo se emiten los valores de la _callback_ en el Observable resultante. Para saber más, leer la sección de [bindCallback](/operators/creation/bindCallback), ya que el comportamiento de `SchedulerLike` en ambos operadores es exactamente igual.
+Nota: la llamada a `func` no se realizará en el mismo momento en el que se haga la llamada a la función de salida, sino en el momento en el que el Observable resultante sea suscrito. Por defecto, la llamada a `func` se hará de forma síncrona tras la suscripción, pero este comportamiento se puede cambiar proporcionando un planificador como tercer parámetro (opcional). `SchedulerLike` también puede controlar cuándo se emiten los valores de la _callback_ en el Observable resultante. Para saber más, leer la sección de [bindCallback](../../../operators/creation/bindCallback/), ya que el comportamiento de `SchedulerLike` en ambos operadores es exactamente igual.
 
 Al igual que con `bindCallback`, el contexto (`this`) de la función de entrada será que tenga la función de salida en el momento en el que se llame.
 
-Una vez que el Observable resultante emita un valor, se completará inmediatamente. Esto implica que si la función `func` vuelve a llamar a la _callback_, los valores de la segunda y demás llamadas nunca aparecerán en el flujo. Si se necesita manejar funciones que llaman a la _callback_ varias veces, se debe utilizar [fromEvent](/operators/creation/fromEvent) o [fromEventPattern](/operators/creation/fromEventPattern).
+Una vez que el Observable resultante emita un valor, se completará inmediatamente. Esto implica que si la función `func` vuelve a llamar a la _callback_, los valores de la segunda y demás llamadas nunca aparecerán en el flujo. Si se necesita manejar funciones que llaman a la _callback_ varias veces, se debe utilizar [fromEvent](../../../operators/creation/fromEvent/) o [fromEventPattern](../../../operators/creation/fromEventPattern/).
 
 Nota: `bindNodeCallback` se puede utilizar en entornos distintos a Node.js. Las _callbacks_ del 'estilo de Node.js' son una convención, por lo que si la API que se quiera utilizar implementa este tipo de _callback_, ya sea en el navegador o cualquier otro entorno, `bindNodeCallback` se puede utilizar de forma segura con las funciones de dicha API.
 
@@ -89,660 +82,333 @@ err => console.log(err) // 5
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: Function, resultSelector: Function, scheduler?: SchedulerLike): (...args: any[]) => Observable<any>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>Function</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>Function</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): () => Observable<[R1, R2, R3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `() => Observable<[R1, R2, R3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): () => Observable<[R1, R2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(callback: (err: any, res1: R1, res2: R2) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `() => Observable<[R1, R2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): () => Observable<R1>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(callback: (err: any, res1: R1) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `() => Observable<R1>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (callback: (err: any) => any) => any, scheduler?: SchedulerLike): () => Observable<void>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(callback: (err: any) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `() => Observable<void>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<[R1, R2, R3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1) => Observable<[R1, R2, R3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<[R1, R2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, callback: (err: any, res1: R1, res2: R2) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1) => Observable<[R1, R2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<R1>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, callback: (err: any, res1: R1) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1) => Observable<R1>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1) => Observable<void>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, callback: (err: any) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1) => Observable<void>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<[R1, R2, R3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2) => Observable<[R1, R2, R3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<[R1, R2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, callback: (err: any, res1: R1, res2: R2) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2) => Observable<[R1, R2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<R1>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, callback: (err: any, res1: R1) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2) => Observable<R1>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2) => Observable<void>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, callback: (err: any) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2) => Observable<void>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) =></code> any) => any.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2, R3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2, R3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1, res2: R2) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<[R1, R2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<R1>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, callback: (err: any, res1: R1) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<R1>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3) => Observable<void>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, callback: (err: any) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3) => Observable<void>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: an</code>y[]) => any) => any.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2, R3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2, R3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1, res2: R2) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<[R1, R2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<R1>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any, res1: R1) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<R1>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<void>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (err: any) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4) => Observable<void>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ...args: any[]) => any) => any, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2, res3: R3, res4: R4, ..</code>.args: any[]) => any) => any.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2, R3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2, res3: R3) => any) =></code> any.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2, R3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1, res2: R2) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<[R1, R2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<R1>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any, res1: R1) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<R1>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any) => any) => any, scheduler?: SchedulerLike): (arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<void>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (err: any) => any) => any</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5) => Observable<void>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `bindNodeCallback(callbackFunc: Function, scheduler?: SchedulerLike): (...args: any[]) => Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>callbackFunc</td><td>Tipo: <code>Function</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `(...args: any[]) => Observable<any[]>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/bindNodeCallback.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/bindNodeCallback.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/bindNodeCallback">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/bindNodeCallback)

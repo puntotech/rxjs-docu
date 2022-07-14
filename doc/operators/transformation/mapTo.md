@@ -1,22 +1,18 @@
 # mapTo
 
-<h2 class="subtitle"> Emite el mismo valor cada vez que el Observable fuente emite un valor
-</h2>
+## Emite el mismo valor cada vez que el Observable fuente emite un valor
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `mapTo<T, R>(value: R): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>value</td><td>El valor al que proyectar cada emisión.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`: Un Observable que emite el mismo valor cada vez que el Observable fuente emite algo.
 
@@ -26,7 +22,7 @@
 
 Es como `map`, pero proyecta cada emisión siempre al mismo valor.
 
-<img src="assets/images/marble-diagrams/transformation/mapTo.png" alt="Diagrama de canicas del operador mapTo">
+![Diagrama de canicas del operador mapTo](assets/images/marble-diagrams/transformation/mapTo.png)
 
 Recibe un valor constante como argumento, que emite cuandoquiera que el Observable fuente emita un valor. En otras palabras, ignora el valor emitido, y simplemente utiliza el momento de emisión para saber cuándo emitir el valor constante proporcionado.
 
@@ -34,7 +30,7 @@ Recibe un valor constante como argumento, que emite cuandoquiera que el Observab
 
 **Emitir "La respuesta es 42" de forma indefinida**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-mapto-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-mapto-1?file=index.ts)
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -48,7 +44,7 @@ number$.pipe(mapTo("La respuesta es 42")).subscribe(console.log);
 
 **Emitir "¡Tecla pulsada!" cada vez que se pulse una tecla**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-mapto-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-mapto-2?file=index.ts)
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -73,13 +69,8 @@ const greetings = clicks.pipe(mapTo("Hi"));
 greetings.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mapTo.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mapTo.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/mapTo">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/mapTo)

@@ -1,22 +1,18 @@
 # timestamp
 
-<h2 class="subtitle">Adjunta un timestamp a cada elemento emitido por el Observable, indicando el momento en el que fue emitido</h2>
+## Adjunta un timestamp a cada elemento emitido por el Observable, indicando el momento en el que fue emitido
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `timestamp<T>(scheduler: SchedulerLike = async): OperatorFunction<T, Timestamp<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-## Retorna
+### Retorna
 
 `OperatorFunction<T, Timestamp<T>>:`
 
@@ -26,7 +22,7 @@ Tipo: <code>SchedulerLike</code>.</td></tr>
 
 Adjunta un timestamp a cada elemento emitido por el Observable, que indica el momento en el que dicho valor fue emitido.
 
-<img src="assets/images/marble-diagrams/utility/timestamp.png" alt="Diagrama de canicas del operador timestamp">
+![Diagrama de canicas del operador timestamp](assets/images/marble-diagrams/utility/timestamp.png)
 
 El operador timestamp proyecta cada valor emitido por el Observable fuente a un objeto de tipo `{ value: T, timestamp: R }`. Las propiedades están tipadas con genéricos. La propiedad value contiene el valor y el tipo del Observable fuete. El timestamp se genera con la función `now()` del Planificador.
 
@@ -50,13 +46,8 @@ clickWithTimestamp.subscribe((data) => {
 });
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timestamp.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timestamp.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/timestamp">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/timestamp)

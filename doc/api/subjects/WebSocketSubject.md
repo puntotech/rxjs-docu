@@ -20,96 +20,48 @@ class WebSocketSubject<T> extends AnonymousSubject {
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(urlConfigOrSource: string | WebSocketSubjectConfig<T> | Observable<T>, destination?: Observer<T>)</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>urlConfigOrSource</td><td>Tipo: <code>string | WebSocketSubjectConfig | Observable</code>.</td></tr>
-<tr><td>destination</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>Observer</code>.</td></tr>
-</table>
-</td></tr>
-</table>
+| constructor()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>constructor(urlConfigOrSource: string | WebSocketSubjectConfig | Observable, destination?: Observer)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>urlConfigOrSource</td><td>Tipo: <code>string | WebSocketSubjectConfig | Observable</code>.</td></tr><tr><td>destination</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>Observer</code>.</td></tr></tbody></table> |                                                                  |
+| urlConfigOrSource                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Tipo: `string \| WebSocketSubjectConfig \| Observable`.          |
+| destination                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Opcional. El valor por defecto es `undefined`. Tipo: `Observer`. |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>_output</td><td><code>Subject<T></code></td></tr>
-</table>
+| Propiedad | Tipo      | Descripción |
+| --------- | --------- | ----------- |
+| \_output  | `Subject` |             |
 
 ## Métodos
 
-<table>
-<tr><th>lift()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>lift<R>(operator: Operator<T, R>): WebSocketSubject<R></code>
-<h3>Parámetros</h3>
+| lift()                                                                                                                                                                                                                                                                                                        |                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| <h4>Firma</h4><p><code>lift(operator: Operator): WebSocketSubject</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>operator</td><td>Tipo: <code>Operator</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>WebSocketSubject</code></p> |                   |
+| operator                                                                                                                                                                                                                                                                                                      | Tipo: `Operator`. |
 
-<table>
-<tr><td>operator</td><td>Tipo: <code>Operator</code>.</td></tr>
-</table>
+| multiplex()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Crea un Observable que, al ser suscrito, envía el mensaje definido por la función `subMsg` al servidor a través del socket para dar comienzo a una suscripción a datos a través de dicho socket. Una vez recibidos los datos, el argumento `messageFilter` se utilizará para seleccionar los datos apropiados para el Observable resultante. Cuando se ejecute la lógica de _teardown_, bien debido a la cancelación de la suscripción, a la completación o a un error, un mensaje definido por el argumento `unsubMsg` será enviado al servidor a través del WebSocketSubject. |
+| <h4>Firma</h4><p><code>multiplex(subMsg: () => any, unsubMsg: () => any, messageFilter: (value: T) => boolean)</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-<h3>Retorna</h3>
-<code>WebSocketSubject<R></code>
-</td></tr>
-</table>
+### Parámetros
 
-<table>
-<tr><th>multiplex()</th></tr>
-<tr><td>Crea un Observable que, al ser suscrito, envía el mensaje definido por la función <code>subMsg</code> al servidor a través del socket para dar comienzo a una suscripción a datos a través de dicho socket. Una vez recibidos los datos, el argumento <code>messageFilter</code> se utilizará para seleccionar los datos apropiados para el Observable resultante. Cuando se ejecute la lógica de <em>teardown</em>, bien debido a la cancelación de la suscripción, a la completación o a un error, un mensaje definido por el argumento <code>unsubMsg</code> será enviado al servidor a través del WebSocketSubject.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>multiplex(subMsg: () => any, unsubMsg: () => any, messageFilter: (value: T) => boolean)</code>
-</td></tr>
-</table>
+| subMsg        | Una función para generar el mensaje de suscripción que será enviado al servidor. Esto seguirá siendo procesado por el serializador en la configuración del WebSocketSubject (por defecto se utiliza la serialización JSON.)           |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| unsubMsg      | Una función para generar el menasje de cancelación de suscripción que será enviado al servidor cuando se ejecute la lógica de _teardown_. Esto seguirá siendo procesado por el serializador en la configuración del WebSocketSubject. |
+| messageFilter | Un predicado para seleccionar los mensajes del servidor apropiados para el flujo resultante.                                                                                                                                          |
 
-<h3>Parámetros</h3>
+| \_subscribe()                                                                                                                                                                                                                                                                                                       |                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| <h4>Firma</h4><p><code>_subscribe(subscriber: Subscriber): Subscription</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscription</code></p> |                     |
+| subscriber                                                                                                                                                                                                                                                                                                          | Tipo: `Subscriber`. |
 
-<table>
-<tr><td>subMsg</td><td>Una función para generar el mensaje de suscripción que será enviado al servidor. Esto seguirá siendo procesado por el serializador en la configuración del WebSocketSubject (por defecto se utiliza la serialización JSON.)</td></tr>
-<tr><td>unsubMsg</td><td>Una función para generar el menasje de cancelación de suscripción que será enviado al servidor cuando se ejecute la lógica de <em>teardown</em>. Esto seguirá siendo procesado por el serializador en la configuración del WebSocketSubject.</td></tr>
-<tr><td>messageFilter</td><td>Un predicado para seleccionar los mensajes del servidor apropiados para el flujo resultante.</td></tr>
-</table>
-
-<table>
-<tr><th>_subscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>_subscribe(subscriber: Subscriber<T>): Subscription</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>Subscription</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>unsubscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>unsubscribe()</code>
-
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-</td></tr>
-</table>
+| unsubscribe()                                                                                        |
+| ---------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>unsubscribe()</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p> |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/observable/dom/WebSocketSubject.ts#L150-L387">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/observable/dom/WebSocketSubject.ts#L150-L387)
 
-<a target="_blank" href="https://rxjs.dev/api/webSocket/WebSocketSubject">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/webSocket/WebSocketSubject)

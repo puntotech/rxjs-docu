@@ -1,22 +1,18 @@
 # windowWhen
 
-<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
-</h2>
+## Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `windowWhen<T>(closingSelector: () => Observable<any>): OperatorFunction<T, Observable<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>closingSelector</td><td>Una función que no recibe ningún argumento y retorna un Observable que indica (con una notificación <code>next</code> o <code>complete</code>) cuándo cerrar la ventana actual y abrir una nueva.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
@@ -26,7 +22,7 @@
 
 Es como `bufferWhen`, pero emite un Observable anidado en lugar de un array.
 
-<img src="assets/images/marble-diagrams/transformation/windowWhen.png" alt="Diagrama de canicas del operador windowWhen">
+![Diagrama de canicas del operador windowWhen](assets/images/marble-diagrams/transformation/windowWhen.png)
 
 Retorna un Observable que emite ventanas de elementos que recoge del Observable fuente. El Observable resultante emite ventanas conectas, sin superposición. Emite la ventana actual y abre una ventana nueva cuando el Observable retornado por la función `closingSelector` emita un valor. La primera ventana se abre inmediatamente después de llevar a cabo la suscripción al Observable resultante.
 
@@ -34,7 +30,7 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 **Recoger una secuencia ascendente de números en una ventana. Cada vez que se haga click, abrir una nueva ventana**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowwhen-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-windowwhen-1?file=index.ts)
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -54,7 +50,7 @@ number$
 
 **Recoger teclas pulsadas en una ventana de duración aleatoria de entre 1 y 4 segundos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowwhen-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-windowwhen-2?file=index.ts)
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -91,13 +87,8 @@ mergeAll() // 'Aplastar' el Observable de Observables
 result.subscribe(x => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowWhen.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/windowWhen">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/windowWhen)

@@ -1,27 +1,18 @@
 # fromEventPattern
 
-<h2 class="subtitle"> Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
-</h2>
+## Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `fromEventPattern<T>(addHandler: (handler: NodeEventHandler) => any, removeHandler?: (handler: NodeEventHandler, signal?: any) => void, resultSelector?: (...args: any[]) => T): Observable<T | T[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>addHandler</td><td>Una función que recibe una función manejadora como argumento y la vincula a la fuente de eventos.</td></tr>
-<tr><td>removeHandler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Una función que recibe una función manejadora como argumento y la desvincula de la fuente del evento. Si <code>addHandler</code> retorna algún tipo de token, <code>removeHandler</code> lo recibirá como segundo parámetro.
-</td></tr>
-<tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(...args: any[]) => T</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T[]>`: Un Observable que, cuando se dispara un evento, emite o el primer parámetro que se le haya proporcionado al manejador de eventos registrado, o el resultado de la función de proyección.
 
@@ -31,7 +22,7 @@ Tipo: <code>(...args: any[]) => T</code>.</td></tr>
 
 Se utiliza cuando `fromEvent` no está preparado para manejar un determinado método para añadir manejadores de eventos.
 
-<img src="assets/images/marble-diagrams/creation/fromEventPattern.png" alt="Diagrama de canicas de fromEventPattern">
+![Diagrama de canicas de fromEventPattern](assets/images/marble-diagrams/creation/fromEventPattern.png)
 
 `fromEventPattern` permite convertir cualquier API de registro de funciones manejadores en eventos, en un Observable. Es similar a `fromEvent`, pero mucho más flexible. De hecho, todos los casos de uso de `fromEvent` podrían manejarse con `fromEventPattern` (aunque de forma más verbosa.)
 
@@ -106,13 +97,8 @@ Usar `fromEventPattern` con función de proyección
     // "EVENT_TYPE --- EVENT_MESSAGE"
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/fromEventPattern.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/fromEventPattern">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/fromEventPattern)

@@ -1,25 +1,20 @@
 # concatMap
 
-<h2 class="subtitle"> Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante  secuencialmente, esperando a que cada Observable interno esté completo antes de unir el siguiente</h2>
+## Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante secuencialmente, esperando a que cada Observable interno esté completo antes de unir el siguiente
 
 💡 Se debe utilizar `concatMap` si se quiere esperar a que cada Observable interno esté completo antes de suscribirse al siguiente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `concatMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector?: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, ObservedValueOf<O> | R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Una función que, al aplicarse a un elemento emitido por el Observable fuente, retorna un Observable.</td></tr>
-<tr><td>resultSelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O> | R>`: Un Observable que emite el resultado de aplicar la función de proyección (y el `resultSelector` opcional que está obsoleto) a cada elemento emitido por el Observable fuente y obtener los valores de cada Observable interno proyectado de forma secuencial.
 
@@ -29,7 +24,7 @@ Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, inn
 
 Proyecta cada valor a un Observable interno, que posteriormente 'aplasta' usando el operador `concatAll`.
 
-<img src="assets/images/marble-diagrams/transformation/concatMap.png" alt="Diagrama de canicas del operador concatMap">
+![Diagrama de canicas del operador concatMap](assets/images/marble-diagrams/transformation/concatMap.png)
 
 Retorna un Observable que emite elementos según el resultado de aplicar una función a cada elemento emitido por el Observable fuente, donde dicha función retorna un Observable interno. Cada nuevo Observable interno se concatena con el Observable interno previo.
 
@@ -41,7 +36,7 @@ Nota: `concatMap` es equivalente a utilizar `mergeMap`, teniendo el parámetro d
 
 **Realizar varias peticiones AJAX de forma secuencial. Hasta que cada petición no termine, no se realizará la siguiente**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmap-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-concatmap-1?file=index.ts)
 
 ```javascript
 import { concatMap, map } from "rxjs/operators";
@@ -66,7 +61,7 @@ concatMap esperará a que cada petición esté completa antes de realizar la sig
 
 mergeMap no esparará a que cada petición esté completa, sino que las realizará en paralelo. Esto implica que las peticiones NO se llevarán a cabo de forma consecutiva.
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatmap-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-concatmap-2?file=index.ts)
 
 ```javascript
 import { concatMap, mergeMap, map, delayWhen } from "rxjs/operators";
@@ -114,75 +109,43 @@ result.subscribe((x) => console.log(x));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concatMap(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concatMap(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>undefined</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concatMap(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Tipo: <code>(value: T, index: number) => O</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(outerValue: T, innerValue: ObservedValueOf, outerIndex: number, innerIndex: number) => R</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMap.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatMap.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/concatMap">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/concatMap)

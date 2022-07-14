@@ -1,6 +1,6 @@
 # AsyncSubject
 
-<h2 class="subtitle">Un tipo de Sujeto que únicamente emite un valor cuando se completa. Al completarse emitirá su último valor a todos sus observadores</h2>
+## Un tipo de Sujeto que únicamente emite un valor cuando se completa. Al completarse emitirá su último valor a todos sus observadores
 
 ```typescript
 class AsyncSubject<T> extends Subject {
@@ -61,72 +61,21 @@ class AsyncSubject<T> extends Subject {
 
 ## Métodos
 
-<table>
-<tr><th>_subscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>_subscribe(subscriber: Subscriber<any>): Subscription</code>
+| \_subscribe()                                                                                                                                                                                                                                                                                                       |                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| <h4>Firma</h4><p><code>_subscribe(subscriber: Subscriber): Subscription</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscription</code></p> |                     |
+| subscriber                                                                                                                                                                                                                                                                                                          | Tipo: `Subscriber`. |
 
-<h3>Parámetros</h3>
+| next()                                                                                                                                                                                                                                                            |            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| <h4>Firma</h4><p><code>next(value: T): void</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>value</td><td>Tipo: <code>T</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>void</code></p> |            |
+| value                                                                                                                                                                                                                                                             | Tipo: `T`. |
 
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-</table>
+| error()                                                                                                                                                                                                                                                        |              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| <h4>Firma</h4><p><code>error(error: any): void</code> Parámetros</p><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>error</td><td>Tipo: <code>any</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>void</code></p> |              |
+| error                                                                                                                                                                                                                                                          | Tipo: `any`. |
 
-<h3>Retorna</h3>
-
-<code>Subscription</code>
-
-</td></td>
-</table>
-
-<table>
-<tr><th>next()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>next(value: T): void</code>
-<h3>Parámetros</h3>
-<table>
-<tr><td>value</td><td>Tipo: <code>T</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-
-<code>void</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>error()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>error(error: any): void</code>
-Parámetros
-
-<table>
-<tr><td>error</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-
-<code>void</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>complete()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-complete(): void
-<h3>Parámetros</h3>
-
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-
-<code>void</code>
-
-</td></tr>
-</table>
+| complete()                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p>complete(): void</p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>void</code></p> |

@@ -1,28 +1,22 @@
 # elementAt
 
-<h2 class="subtitle"> Emite el valor que esté en la índice especificado en la secuencia de emisiones del Observable fuente
-</h2>
+## Emite el valor que esté en la índice especificado en la secuencia de emisiones del Observable fuente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `elementAt<T>(index: number, defaultValue?: T): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>index</td><td>Indica la posición de la emisión que se emitirá, en la secuencia de emisiones que hayan ocurrido desde la suscripción inicial, comenzando a partir del número 0.</td></tr>
-<tr><td>defaultValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El valor por defecto retornado para índices inexistentes.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite un solo elemento, si lo encuentra. Si no, emite el valor por defecto en el caso de que se haya proporcionado uno. En caso contrario, se emite une error.
 
-### Lanza
+#### Lanza
 
 `ArgumentOutOfRangeError` Al usar `elementAt(i)`, se lanza un `ArgumentOutOrRangeError` si `i < 0` o si el Observable se completa antes de emitir la i-ésima notificación.
 
@@ -32,16 +26,15 @@ El valor por defecto retornado para índices inexistentes.</td></tr>
 
 Emite únicamente el valor i-ésimo, y se completa.
 
-<img src="assets/images/marble-diagrams/filtering/elementAt.png" alt="Diagrama de canicas del operador elementAt">
+![Diagrama de canicas del operador elementAt](assets/images/marble-diagrams/filtering/elementAt.png)
 
-`elementAt` retorna un Observable que emite el elemento en la posición indicada por el índice, o un valor por defecto si el índice proporcionado está fuera de rango y se proporciona dicho valor por defecto. En el caso de que no se proporcione, el Observable resultante emitirá un error `ArgumentOutOfRangeError`.
-s
+`elementAt` retorna un Observable que emite el elemento en la posición indicada por el índice, o un valor por defecto si el índice proporcionado está fuera de rango y se proporciona dicho valor por defecto. En el caso de que no se proporcione, el Observable resultante emitirá un error `ArgumentOutOfRangeError`. s
 
 ## Ejemplos
 
 **Emitir la segunda emisión del Observable fuente**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-1?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -55,7 +48,7 @@ fruit$.pipe(elementAt(1)).subscribe(console.log);
 
 **Si no se encuentra el índice y no se proporciona un valor por defecto, se lanza un error**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-2?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -70,7 +63,7 @@ fruit$.pipe(elementAt(5)).subscribe(console.log, console.error);
 
 **Proporcionar un valor por defecto para que, si no se encuentra el índice especificado, no se lance un error**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-elementat-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-elementat-3?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -103,13 +96,8 @@ result.subscribe((x) => console.log(x));
 // click 3 = objeto MouseEvent
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/elementAt.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/elementAt">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/elementAt)

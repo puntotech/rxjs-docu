@@ -1,21 +1,22 @@
 # publishLast
 
-<h2 class="subtitle">Comparte el Observable fuente, emitiendo únicamente el último valor emitido a los observadores</h2>
+## Comparte el Observable fuente, emitiendo únicamente el último valor emitido a los observadores
 
 💡 publishLast es equivalente a `multicast(() => new AsyncSubject())`
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `publishLast<T>(): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-## Retorna
+### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`: Una secuencia observable que contiene los elementos de una secuencia producida al multidifundir la secuencia fuente.
 
@@ -23,17 +24,17 @@ No recibe ningún parámetro.
 
 ## Descripción
 
-Retorna una secuencia Observable conectable que comparte una sola suscripción a la secuencia subyacente, que contiene solo la última notificación. Para ello utiliza el operador <a href="/operators/multicasting/multicast">multicast</a> junto a un AsyncSubject internamente.
+Retorna una secuencia Observable conectable que comparte una sola suscripción a la secuencia subyacente, que contiene solo la última notificación. Para ello utiliza el operador [multicast](../../../operators/multicasting/multicast/) junto a un AsyncSubject internamente.
 
-<img src="assets/images/marble-diagrams/multicasting/publishLast.png" alt="Diagrama de canicas del operador publishLast">
+![Diagrama de canicas del operador publishLast](assets/images/marble-diagrams/multicasting/publishLast.png)
 
-Es similar a <a href="/operators/multicasting/publish">publish</a>, pero espera a que el Observable fuente se complete, para almacenar su último valor emitido. Al igual que <a href="/operators/multicasting/publishReplay">publishReplay</a> y <a href="/operators/multicasting/publishBehavior">publishBehavior</a>, almacena este último valor emitido aunque no tenga ningún suscriptor. Si llega un suscriptor nuevo, este recibirá el valor almacenado y se completará.
+Es similar a [publish](../../../operators/multicasting/publish/), pero espera a que el Observable fuente se complete, para almacenar su último valor emitido. Al igual que [publishReplay](../../../operators/multicasting/publishReplay/) y [publishBehavior](../../../operators/multicasting/publishBehavior/), almacena este último valor emitido aunque no tenga ningún suscriptor. Si llega un suscriptor nuevo, este recibirá el valor almacenado y se completará.
 
 ## Ejemplos
 
 **Compartir el Observable fuente, emitiendo únicamente su último valor**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publishlast?file=index.html">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-publishlast?file=index.html)
 
 ```typescript
 import { ConnectableObservable, interval, timer } from "rxjs";
@@ -61,7 +62,7 @@ Observador 2: 3
 
 **Si el Observable fuente no llega a completarse, nunca se emitirá ningún valor**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publishlast-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-publishlast-2?file=index.ts)
 
 ```javascript
 import { ConnectableObservable, interval } from "rxjs";
@@ -118,13 +119,8 @@ connectable.connect();
 //    "Sub. B Complete"
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishLast.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/publishLast">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/publishLast)

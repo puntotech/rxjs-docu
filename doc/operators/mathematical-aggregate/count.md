@@ -1,29 +1,18 @@
 # count
 
-<h2 class="subtitle"> Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
-</h2>
+## Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `count<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): OperatorFunction<T, number>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Una función booleana para seleccionar qué valores se cuenta. Consta de los siguiente argumentos:
-
-    value: el valor del Observable fuente.
-    index: el 'índice' (de base cero) del valor del Observable fuente.
-    source: la instancia del Observable fuente.
-
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, number>`: Un Observable de un solo valor que representa el número de elementos contados.
 
@@ -33,7 +22,7 @@ Una función booleana para seleccionar qué valores se cuenta. Consta de los sig
 
 Indica cuántos valores se han emitido cuando la fuente se completa.
 
-<img src="assets/images/marble-diagrams/mathematical-aggregate/count.png" alt="Diagrma de cancias del operador count">
+![Diagrma de cancias del operador count](assets/images/marble-diagrams/mathematical-aggregate/count.png)
 
 `count` transforma un Observable que emite valores en un Observable que emite un solo valor que representa el número de valores emitidos por el Observable fuente. Si el Observable fuente finaliza con un error, `count` enviará la notificación de error sin emitir un valor. Si el Observable fuente no llega a finalizar en ningún momento, `count` no emitirá ningún valor ni finalizará.
 
@@ -43,7 +32,7 @@ Este operador recibe una función opcional `predicate` como argumento, en cuyo c
 
 **Contar el número de emisiones**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-count-1?file=index.ts)
 
 ```javascript
 import { range } from "rxjs";
@@ -58,7 +47,7 @@ number$.pipe(count()).subscribe(console.log);
 
 **Contar el número de teclas pulsadas en 5 segundos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-count-2?file=index.ts)
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -74,7 +63,7 @@ key$.pipe(count()).subscribe(console.log);
 
 **Si la fuente no finaliza, count nunca emitirá ni se completará**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-count-3?file=index.ts)
 
 ```javascript
 const infiniteNumber$ = interval(1000);
@@ -85,7 +74,7 @@ infiniteNumber$.pipe(count()).subscribe(console.log);
 
 **Contar las peticiones realizadas con éxito**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-count-4?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -110,7 +99,7 @@ pokemonId$
 
 **Si ocurre un error, `count` no emitirá nada**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-5?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-count-5?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -135,7 +124,7 @@ pokemonId$
 
 **Gestionar el error para que count cuente el número de peticiones realizadas con éxito**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-count-6?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-count-6?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -188,13 +177,8 @@ result.subscribe((x) => console.log(x));
 // 4
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/count.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/count.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/count">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/count)

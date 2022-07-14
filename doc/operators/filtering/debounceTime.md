@@ -1,25 +1,18 @@
 # debounceTime
 
-<h2 class="subtitle"> Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado sin que este emita ningún valor
-</h2>
+## Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado sin que este emita ningún valor
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `debounceTime<T>(dueTime: number, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>dueTime</td><td>La duración, en milisegundos (o en la unidad de tiempo determinada por el planificador opcional), del periodo de tiempo que debe pasar sin que el Observable fuente emita ningún valor, para poder emitir el valor más reciente de dicho Observable.</td></tr>
-
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
-El `SchedulerLike` que utilizar para gestionar los temporizadores que manejan el <i>timeout</i> para cada valor.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa la emisiones del Observable fuente en un periodo de tiempo especificado por `dueTime`. Es posible que algunos valores sean eliminados si se emiten con demasiada frecuencia.
 
@@ -29,7 +22,7 @@ El `SchedulerLike` que utilizar para gestionar los temporizadores que manejan el
 
 Es como `delay`, pero emite únicamente el valor más reciente de una sucesión de emisiones.
 
-<img src="assets/images/marble-diagrams/filtering/debounce.png" alt="Diagrama de canicas del operador debounceTime">
+![Diagrama de canicas del operador debounceTime](assets/images/marble-diagrams/filtering/debounce.png)
 
 `debounceTime` retrasa los valores del Observable fuente, eliminando las emisiones almacenadas pendientes de ser emitidas si el Observable fuente emite algún valor. Este operador almacena el valor más reciente del Observable fuente, y lo emite solo si ha pasado un periodo de tiempo, indicado por `dueTime`, sin que el Observable fuente emita ningún valor. Si el Observable fuente emite un valor antes de que pase el periodo de tiempo `dueTime`, el valor almacenado será eliminado, y nunca se emitirá en el Observable resultante.
 
@@ -41,7 +34,7 @@ Recibe un `SchedulerLike` opcional para manejar los temporizadores.
 
 **Emitir la tecla pulsada más reciente, tras una sucesión rápida de teclas. Por ejemplo, si escribimos 'RxJS mola' muy rápidamente (con menos de 500ms entre pulsaciones), solo se emitirá la última letra (a)**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-debouncetime-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-debouncetime-1?file=index.ts)
 
 ```typescript
 import { debounceTime } from "rxjs/operators";
@@ -55,7 +48,7 @@ key$.pipe(debounceTime(500)).subscribe(({ code }) => console.log(code));
 
 **Emitir la posición del último click tras una sucesión rápida de clicks**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-debouncetime-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-debouncetime-2?file=index.ts)
 
 ```typescript
 import { debounceTime } from "rxjs/operators";
@@ -86,13 +79,8 @@ const result = clicks.pipe(debounceTime(1000));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounceTime.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/debounceTime.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/debounceTime">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/debounceTime)

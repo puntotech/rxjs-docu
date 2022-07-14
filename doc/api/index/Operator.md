@@ -8,28 +8,14 @@ interface Operator<T, R> {
 
 ## Métodos
 
-<table>
-<tr><th>call()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>call(subscriber: Subscriber<R>, source: any): TeardownLogic</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-<tr><td>source</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>TeardownLogic</code>
-</td></tr>
-</table>
+| call()                                                                                                                                                                                                                                                                                                                                                                               |                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------- |
+| <h4>Firma</h4><p><code>call(subscriber: Subscriber, source: any): TeardownLogic</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr><tr><td>source</td><td>Tipo: <code>any</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>TeardownLogic</code></p> |                     |
+| subscriber                                                                                                                                                                                                                                                                                                                                                                           | Tipo: `Subscriber`. |
+| source                                                                                                                                                                                                                                                                                                                                                                               | Tipo: `any`.        |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Operator.ts#L3-L6">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Operator.ts#L3-L6)
 
-<a target="_blank" href="https://rxjs.dev/api/index/interface/Operator">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/interface/Operator)

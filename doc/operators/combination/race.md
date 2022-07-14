@@ -1,22 +1,18 @@
 # race
 
-<h2 class="subtitle"> Retorna un Observable que refleja al primer Observable que emita un valor
-</h2>
+## Retorna un Observable que refleja al primer Observable que emita un valor
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `race<T>(...observables: any[]): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`: Un Observable que refleja las emisiones del primer Observable que emita un valor.
 
@@ -30,7 +26,7 @@ Refleja las emisiones del primer Observable que emita un valor.
 
 **Hacer una carrera con 3 Observables**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-race?file=index.html)">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-race?file=index.html\))
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -49,7 +45,7 @@ race(slow$, medium$, fast$).subscribe((winner) =>
 
 **Advertencia: Si alguno de los Observables lanza un error, la 'carrera' terminará con un error**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-race-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-race-2?file=index.ts)
 
 ```javascript
 import { mapTo } from "rxjs/operators";
@@ -84,317 +80,173 @@ race(obs3, obs1, obs2).subscribe((winner) => console.log(winner));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(arg: [any]): Observable<A>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>arg</td><td>Tipo: <code>[any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(arg: [any, any]): Observable<A | B>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>arg</td><td>Tipo: <code>[any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(arg: [any, any, any]): Observable<A | B | C>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>arg</td><td>Tipo: <code>[any, any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B | C>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(arg: [any, any, any, any]): Observable<A | B | C | D>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>arg</td><td>Tipo: <code>[any, any, any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B | C | D>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(arg: [any, any, any, any, any]): Observable<A | B | C | D | E>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>arg</td><td>Tipo: <code>[any, any, any, any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B | C | D | E>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(arg: any[]): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>arg</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(arg: any[]): Observable<{}>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>arg</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<{}>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(a: any): Observable<A>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>a</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(a: any, b: any): Observable<A | B>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>a</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>b</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(a: any, b: any, c: any): Observable<A | B | C>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>a</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>b</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>c</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B | C>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(a: any, b: any, c: any, d: any): Observable<A | B | C | D>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>a</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>b</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>c</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>d</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B | C | D>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(a: any, b: any, c: any, d: any, e: any): Observable<A | B | C | D | E>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>a</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>b</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>c</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>d</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>e</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<A | B | C | D | E>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(observables: any[]): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(observables: any[]): Observable<{}>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<{}>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(...observables: any[]): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `race(...observables: any[]): Observable<{}>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<{}>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/race.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-- <a href="https://rxjs.dev/api/index/function/race">Documentación oficial en inglés</a>
+* [Documentación oficial en inglés](https://rxjs.dev/api/index/function/race)

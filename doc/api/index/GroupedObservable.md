@@ -47,51 +47,28 @@ class GroupedObservable<K, T> extends Observable {
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(key: K, groupSubject: Subject<T>, refCountSubscription?: RefCountSubscription)</code>
-<h3>Parámetros</h3>
-<table>
-<tr><td>key</td><td>Tipo: <code>K</code>.</td></tr>
-<tr><td>groupSubject</td><td>Tipo: <code>Subject</code>.</td></tr>
-<tr><td>refCountSubscription</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-
-Tipo: <code>RefCountSubscription</code>.</td></tr>
-
-</table>
-
-</td></tr>
-</table>
+| constructor()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>constructor(key: K, groupSubject: Subject, refCountSubscription?: RefCountSubscription)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>key</td><td>Tipo: <code>K</code>.</td></tr><tr><td>groupSubject</td><td>Tipo: <code>Subject</code>.</td></tr><tr><td>refCountSubscription</td><td><p>Opcional. El valor por defecto es <code>undefined</code>.</p><p>Tipo: <code>RefCountSubscription</code>.</p></td></tr></tbody></table> |                                                                                                                 |
+| key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Tipo: `K`.                                                                                                      |
+| groupSubject                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Tipo: `Subject`.                                                                                                |
+| refCountSubscription                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | <p>Opcional. El valor por defecto es <code>undefined</code>.</p><p>Tipo: <code>RefCountSubscription</code>.</p> |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>key</td><td><code>K</code></td><td>Declarado en el constructor.</td></tr>
-</table>
+| Propiedad | Tipo | Descripción                  |
+| --------- | ---- | ---------------------------- |
+| key       | `K`  | Declarado en el constructor. |
 
 ## Métodos
 
-<table>
-<tr><th>_subscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>_subscribe(subscriber: Subscriber<T>)</code>
-
-<h3>Parámetros</h3>
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-</table>
-</td></tr>
-</table>
+| \_subscribe()                                                                                                                                                                                                                                         |                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| <h4>Firma</h4><p><code>_subscribe(subscriber: Subscriber)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr></tbody></table> |                     |
+| subscriber                                                                                                                                                                                                                                            | Tipo: `Subscriber`. |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/operators/groupBy.ts#L269-L296">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/operators/groupBy.ts#L269-L296)
 
-<a target="_blank" href="https://rxjs.dev/api/index/class/GroupedObservable">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/class/GroupedObservable)

@@ -1,26 +1,18 @@
 # throttleTime
 
-<h2 class="subtitle"> Emite un valor del Observable fuente e ignora las emisiones siguientes durante un periodo de tiempo determinado. Después, repite el proceso
-</h2>
+## Emite un valor del Observable fuente e ignora las emisiones siguientes durante un periodo de tiempo determinado. Después, repite el proceso
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `throttleTime<T>(duration: number, scheduler: SchedulerLike = async, config: ThrottleConfig = defaultThrottleConfig): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>duration</td><td>El periodo de tiempo que debe pasar antes de emitir el siguiente valor, a partir de la última emisión, en milisegundos o en la unidad de tiempo determinada por el planificador opcional.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
-El <code>SchedulerLike</code> que utilizar para gestionar los temporizadores que se encargan de regular las emisiones.</td></tr>
-<tr><td>config</td><td>Opcional. El valor por defecto es <code>defaultThrottleConfig</code>.
-Un objeto de configuración para definir el comportamiento de los parámetros <code>leading</code> y <code>trailing</code>. Por defecto es <code>{ leading: true, trailing: false}</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable that performs the throttle operation to limit the rate of emissions from the source.
 
@@ -30,7 +22,7 @@ Un objeto de configuración para definir el comportamiento de los parámetros <c
 
 Emite un valor, ignorando las siguientes emisiones durante `duration` milisegundos.
 
-<img src="assets/images/marble-diagrams/filtering/throttleTime.png" alt="Diagrama de canicas del operador throttleTime">
+![Diagrama de canicas del operador throttleTime](assets/images/marble-diagrams/filtering/throttleTime.png)
 
 throttleTime emite los valores del Observable fuente mientras su temporizador interno está deshabilitado, y los ignora mientras su temporizador está habilitado. Inicialmente, el temporizador está deshablitado. En cuanto se recibe el primer valor de la fuente, este se emite en el Observable resultante y se habilita e temporizador. Tras `duration` milisegundos (o la unidad temporal determinada internamente por el planificador opcional) se deshabilita el temporizador y se repite el proceso para el siguiente valor de la fuente. Opcionalmente, recibe un SchedulerLike para gestionar los temporizadores.
 
@@ -38,7 +30,7 @@ throttleTime emite los valores del Observable fuente mientras su temporizador in
 
 **Emitir la tecla pulsada, ignorar todos los valores siguientes durante 2 segundos, y repetir**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttletime-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-throttletime-1?file=index.ts)
 
 ```typescript
 import { throttleTime } from "rxjs/operators";
@@ -52,7 +44,7 @@ key$.pipe(throttleTime(2000)).subscribe(({ code }) => console.log(code));
 
 **Emitir un valor, ignorar todos los valores durante 2 segundos, y repetir**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttletime-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-throttletime-2?file=index.ts)
 
 ```javascript
 import { map, throttleTime } from "rxjs/operators";
@@ -107,13 +99,8 @@ doubleClick.subscribe((throttleValue: Event) => {
 
 Si se habilita el parámetro `leading` en este ejemplo, la salida sería el primer click y el doble click, pero se restringiría cualquier click adicional en un periodo de 400ms.
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttleTime.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttleTime.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/throttleTime">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/throttleTime)

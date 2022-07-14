@@ -1,8 +1,8 @@
 # concat
 
-<h2 class="subtitle"> Concatena varios Observables de entrada, uno tras otro, emitiendo secuencialmente todos los valores de cada uno de ellos</h2>
+## Concatena varios Observables de entrada, uno tras otro, emitiendo secuencialmente todos los valores de cada uno de ellos
 
-💡 Para emitir valores de varios Observables a la vez (concurrentemente), se puede utilizar <a href="/operators/combination/merge">merge</a>
+💡 Para emitir valores de varios Observables a la vez (concurrentemente), se puede utilizar [merge](../../../operators/combination/merge/)
 
 ### Firma
 
@@ -10,21 +10,18 @@
 
 ### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>(SchedulerLike | O)[]</code>.</td></tr>
-</table>
+| observables | Tipo: `(SchedulerLike \| O)[]`. |
+| ----------- | ------------------------------- |
 
 ### Retorna
 
 `Observable<ObservedValueOf<O> | R>`: Todos los valores de cada Observable de entrada fusionados en un solo Observable, por orden.
 
-</details>
-
 ## Descripción
 
 Concatena varios Observables, uno tras otro, emitiendo secuencialmente sus valores.
 
-<img src="assets/images/marble-diagrams/join-creation/concat.png" alt="Diagrama de canicas del operador concat">
+![Diagrama de canicas del operador concat](assets/images/marble-diagrams/join-creation/concat.png)
 
 `concat` une varios Observables, suscribiéndose a ellos de uno en uno y fusionando los valores que emitan en el Observable resultante. Los Observables de entrada se pueden proporcionar en un array, o directamente como argumentos. Proporcionarle un array vacío a `concat` resulta en un Observable que se completa inmediatamente.
 
@@ -36,13 +33,13 @@ Si alguno de los Observables de entrada nunca llega a completarse, `concat` tamp
 
 Si alguno de los Observables de entrada lanza un error, en lugar de suscribirse al siguiente Observable, `concat` también lanzará un error inmediatamente, y no llegará a suscribirse a los Observables de entrada siguientes al que haya lanzado el error.
 
-Si se le pasa el mismo Observable a `concat` varias veces, su flujo de emisiones se repetirá en cada suscripción. Se puede repetir un Observable tantas veces como se quiera. Sin embargo, si pasarle el mismo Observable a `concat` 1000 veces resulta demasiado tedioso, siempre se puede utilizar [repeat](/operators/utility/repeat).
+Si se le pasa el mismo Observable a `concat` varias veces, su flujo de emisiones se repetirá en cada suscripción. Se puede repetir un Observable tantas veces como se quiera. Sin embargo, si pasarle el mismo Observable a `concat` 1000 veces resulta demasiado tedioso, siempre se puede utilizar [repeat](../../../operators/utility/repeat/).
 
 ## Ejemplos
 
 **Concatenar varios Observables distintos**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat?file=index.ts)
 
 ```javascript
 import { range, from, concat } from "rxjs";
@@ -62,7 +59,7 @@ concat(number$, fruit$, totoroFilmData$).subscribe(console.log);
 
 **Concatenar el mismo Observable para repetirlo**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat-2?file=index.ts)
 
 ```javascript
 import { from, concat } from "rxjs";
@@ -75,7 +72,7 @@ concat(message$, message$, message$).subscribe(console.log);
 
 **Si uno de los Observables de entrada nunca llega a completarse, concat nunca se suscribirá a los siguientes Observables de entrada**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat-3?file=index.ts)
 
 ```javascript
 import { interval, from, concat } from "rxjs";
@@ -89,7 +86,7 @@ concat(infinite$, message$).subscribe(console.log);
 
 **Si alguno de los Observables de entrada lanza un error, el Observable resultante lanzará un error inmediatamente, y el flujo se terminará**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-concat-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-concat-4?file=index.ts)
 
 ```javascript
 import { throwError, from, concat } from "rxjs";
@@ -163,343 +160,173 @@ concat(timer, timer) // ¡Concatenando el mismo Observable!
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, scheduler: SchedulerLike): Observable<ObservedValueOf<O1>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler: SchedulerLike): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>O6</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1): Observable<ObservedValueOf<O1>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2): Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6): Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>O6</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O1> | ObservedValueOf<O2> | ObservedValueOf<O3> | ObservedValueOf<O4> | ObservedValueOf<O5> | ObservedValueOf<O6>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(...observables: O[]): Observable<ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>O[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(...observables: (SchedulerLike | O)[]): Observable<ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>(SchedulerLike | O)[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(...observables: any[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `concat(...observables: any[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/concat.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/concat.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/concat">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/concat)

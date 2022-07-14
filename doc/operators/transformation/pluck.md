@@ -1,22 +1,18 @@
 # pluck
 
-<h2 class="subtitle"> Extrae propiedadas de un objeto
-</h2>
+## Extrae propiedadas de un objeto
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `pluck<T, R>(...properties: string[]): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>properties</td><td>Las propiedades anidadas que obtener de cada elemento de la fuente (un objeto).</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`: Un nuevo Observable de propiedades de los valores de la fuente.
 
@@ -26,7 +22,7 @@
 
 Es como `map`, pero se utiliza para extraer una de las propiedades anidadas de los objetos emitidos.
 
-<img src="assets/images/marble-diagrams/transformation/pluck.png" alt="Diagrama de canicas del operador pluck">
+![Diagrama de canicas del operador pluck](assets/images/marble-diagrams/transformation/pluck.png)
 
 Dada una lista de cadenas que describan la ruta de una propiedad de un objeto, obtiene el valor de la propiedad anidada especificada de todos los valores del Observable fuente. Si la propiedad no existe, se devolverá `undefined` para ese valor en concreto.
 
@@ -34,7 +30,7 @@ Dada una lista de cadenas que describan la ruta de una propiedad de un objeto, o
 
 **Obtener una propiedad de un objeto**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-pluck-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-pluck-2?file=index.ts)
 
 ```javascript
 import { pluck } from "rxjs/operators";
@@ -52,7 +48,7 @@ language$.pipe(pluck("name")).subscribe(console.log);
 
 **Obtener una propiedad anidada de un objeto**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-pluck-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-pluck-3?file=index.ts)
 
 ```javascript
 import { pluck } from "rxjs/operators";
@@ -83,160 +79,83 @@ tagNames.subscribe((x) => console.log(x));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `pluck(k1: K1): OperatorFunction<T, T[K1]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>k1</td><td>Tipo: <code>K1</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[K1]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `pluck(k1: K1, k2: K2): OperatorFunction<T, T[K1][k2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>k1</td><td>Tipo: <code>K1</code>.</td></tr>
-<tr><td>k2</td><td>Tipo: <code>K2</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[K1][k2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3): OperatorFunction<T, T[K1][k2][K3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>k1</td><td>Tipo: <code>K1</code>.</td></tr>
-<tr><td>k2</td><td>Tipo: <code>K2</code>.</td></tr>
-<tr><td>k3</td><td>Tipo: <code>K3</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4): OperatorFunction<T, T[K1][k2][K3][k4]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>k1</td><td>Tipo: <code>K1</code>.</td></tr>
-<tr><td>k2</td><td>Tipo: <code>K2</code>.</td></tr>
-<tr><td>k3</td><td>Tipo: <code>K3</code>.</td></tr>
-<tr><td>k4</td><td>Tipo: <code>K4</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3][k4]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5): OperatorFunction<T, T[K1][k2][K3][k4][K5]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>k1</td><td>Tipo: <code>K1</code>.</td></tr>
-<tr><td>k2</td><td>Tipo: <code>K2</code>.</td></tr>
-<tr><td>k3</td><td>Tipo: <code>K3</code>.</td></tr>
-<tr><td>k4</td><td>Tipo: <code>K4</code>.</td></tr>
-<tr><td>k5</td><td>Tipo: <code>K5</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3][k4][K5]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `pluck(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5, k6: K6): OperatorFunction<T, T[K1][k2][K3][k4][K5][k6]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>k1</td><td>Tipo: <code>K1</code>.</td></tr>
-<tr><td>k2</td><td>Tipo: <code>K2</code>.</td></tr>
-<tr><td>k3</td><td>Tipo: <code>K3</code>.</td></tr>
-<tr><td>k4</td><td>Tipo: <code>K4</code>.</td></tr>
-<tr><td>k5</td><td>Tipo: <code>K5</code>.</td></tr>
-<tr><td>k6</td><td>Tipo: <code>K6</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[K1][k2][K3][k4][K5][k6]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `pluck(...properties: string[]): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>properties</td><td>Tipo: <code>string[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/pluck.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/pluck.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/pluck">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/pluck)

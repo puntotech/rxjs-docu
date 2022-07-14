@@ -1,22 +1,18 @@
 # from
 
-<h2 class="subtitle"> Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable</h2>
+## Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable
 
-<details> 
+<details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `from<T>(input: any, scheduler?: SchedulerLike): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>input</td><td>Tipo: <code>any</code></td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>Tipo:<code>SchedulerLike</code></td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`: Un Observable que emite los argumentos descritos anteriormente y se completa.
 
@@ -26,7 +22,7 @@
 
 Convierte prácticamente cualquier elemento en un Observable.
 
-<img class="marble-diagram" src="assets/images/marble-diagrams/creation/from.png" alt="Diagrama de canicas de from">
+![Diagrama de canicas de from](assets/images/marble-diagrams/creation/from.png)
 
 `from` convierte varios tipos de datos u objetos en Observables. También puede convertir una Promesa, un objeto similar a un Array o un objeto iterable en un Observable que emite los elementos de dicha Promesa, Array o iterable. Un String, en este contexto, se interpreta como un array de caracteres. Los objetos similares a Observables (contienen una función nombrada con el Símbolo ES2015 que corresponde a Observable) también se puede transformar mediante este operador.
 
@@ -34,7 +30,7 @@ Convierte prácticamente cualquier elemento en un Observable.
 
 **Crear un Observable a partir de una cadena**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-from?file=index.ts)
 
 ```javascript
 import { from } from "rxjs";
@@ -47,7 +43,7 @@ letter$.subscribe(console.log);
 
 **Crear un Observable a partir de un Array de cadenas**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-from-2?file=index.ts)
 
 ```javascript
 import { from } from "rxjs";
@@ -60,7 +56,7 @@ fruit$.subscribe((fruit) => console.log(fruit));
 
 **Crear un Observable a partir de un Map**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-from-3?file=index.ts)
 
 ```javascript
 import { from } from "rxjs";
@@ -79,7 +75,7 @@ language$.subscribe(console.log);
 
 **Crear un Observable a partir de una promesa**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-from-4?file=index.ts)
 
 ```javascript
 import { from } from "rxjs";
@@ -92,7 +88,7 @@ promise$.subscribe(console.log);
 
 **Crear un Observable a partir de un NodeList**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-from-5?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-from-5?file=index.ts)
 
 ```javascript
 import { from } from "rxjs";
@@ -175,13 +171,8 @@ console.log("Fin");
 // 30
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/from.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/from.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/from">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/from)

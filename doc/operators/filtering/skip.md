@@ -1,22 +1,18 @@
 # skip
 
-<h2 class="subtitle"> Retorna un Observable que se salta las primeras x emisiones del Observable fuente
-</h2>
+## Retorna un Observable que se salta las primeras x emisiones del Observable fuente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `skip<T>(count: number): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>count</td><td>El número de elementos del Observable fuente que serán saltados.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se salta valores emitidos por el Observable fuente.
 
@@ -26,13 +22,13 @@
 
 `skip` se salta un número determinado por el parámetro `count` de emisiones del Observable fuente, y después continúa emitiendo valores normalmente.
 
-<img src="assets/images/marble-diagrams/filtering/skip.png" alt="Diagrama de canicas del operador skip">
+![Diagrama de canicas del operador skip](assets/images/marble-diagrams/filtering/skip.png)
 
 ## Ejemplos
 
 **Ignorar los primeros 5 clicks**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-skip-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-skip-1?file=index.ts)
 
 ```javascript
 import { skip } from "rxjs/operators";
@@ -46,7 +42,7 @@ click$.pipe(skip(5)).subscribe(console.log);
 
 **Ignorar el primer elemento**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-skip-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-skip-2?file=index.ts)
 
 ```javascript
 import { skip } from "rxjs/operators";
@@ -62,13 +58,8 @@ language$.pipe(skip(1)).subscribe(console.log);
 // Salida: { name: "Ruby", type: "Multiparadigma" }, { name: "Haskell", type: "Funcional" }
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skip.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skip.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/skip">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/skip)

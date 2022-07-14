@@ -1,6 +1,6 @@
 # Subject
 
-<h2 class="subtitle">Un Sujeto es un tipo especial de Observable que permite que los valores sean multidifundidos a varios Observadores. Los Sujetos son como EventEmitters</h2>
+## Un Sujeto es un tipo especial de Observable que permite que los valores sean multidifundidos a varios Observadores. Los Sujetos son como EventEmitters
 
 ```typescript
 class Subject<T> extends Observable implements SubscriptionLike {
@@ -55,9 +55,9 @@ class Subject<T> extends Observable implements SubscriptionLike {
 
 ## Subclases
 
-- [BehaviorSubject](/api/subjects/BehaviorSubject)
-- [ReplaySubject](/api/subjects/ReplaySubject)
-- [AsyncSubject](/api/subjects/AsyncSubject)
+* [BehaviorSubject](../../../api/subjects/BehaviorSubject/)
+* [ReplaySubject](../../../api/subjects/ReplaySubject/)
+* [AsyncSubject](../../../api/subjects/AsyncSubject/)
 
 ## Descripción
 
@@ -65,150 +65,62 @@ Cada Sujeto es un Observable y un Observador. Se puede realizar una suscripción
 
 ## Propiedades Estáticas
 
-<table>
-<tr><th>Property</th><th>Type</th><th>Description</th></tr>
-<tr><td>create</td><td>Function</td></tr>
-</table>
+| Property | Type     | Description |
+| -------- | -------- | ----------- |
+| create   | Function |             |
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3><code>constructor()</code></h3>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-</td></tr>
-</table>
+| constructor()                                                                            |
+| ---------------------------------------------------------------------------------------- |
+| <h4><code>constructor()</code></h4><h4>Parámetros</h4><p>No recibe ningún parámetro.</p> |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>observers</td><td><code>Observer<T>[]</code></td></tr>
-<tr><td>closed</td><td><code>false</code></td></tr>
-<tr><td>isStopped</td><td><code>false</code></td></tr>
-<tr><td>hasError</td><td><code>false</code></td></tr>
-<tr><td>thrownError</td><td><code>any</code></td></tr>
-</table>
+| Propiedad   | Tipo         | Descripción |
+| ----------- | ------------ | ----------- |
+| observers   | `Observer[]` |             |
+| closed      | `false`      |             |
+| isStopped   | `false`      |             |
+| hasError    | `false`      |             |
+| thrownError | `any`        |             |
 
 ## Métodos
 
-<table>
-<tr><th>lift()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>lift<R>(operator: Operator<T, R>): Observable<R></code>
+| lift()                                                                                                                                                                                                                                                                                            |                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| <h4>Firma</h4><p><code>lift(operator: Operator): Observable</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>operator</td><td>Tipo: <code>Operator</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Observable</code></p> |                   |
+| operator                                                                                                                                                                                                                                                                                          | Tipo: `Operator`. |
 
-<h3>Parámetros</h3>
+| next()                                                                                                                                                                                                                                                                                      |                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>next(value?: T)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>value</td><td><p>Opcional. El valor por defecto es <code>undefined</code>.</p><p>Tipo: <code>T</code>.</p></td></tr></tbody></table> |                                                                                              |
+| value                                                                                                                                                                                                                                                                                       | <p>Opcional. El valor por defecto es <code>undefined</code>.</p><p>Tipo: <code>T</code>.</p> |
 
-<table>
-<tr><td>operator</td><td>Tipo: <code>Operator</code>.</td></tr>
-</table>
+| error()                                                                                                                                                                                                              |              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| <h4>Firma</h4><p><code>error(err: any)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>err</td><td>Tipo: <code>any</code>.</td></tr></tbody></table> |              |
+| err                                                                                                                                                                                                                  | Tipo: `any`. |
 
-<h3>Retorna</h3>
-<code>Observable<R></code>
+| complete()                                                                                        |
+| ------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>complete()</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p> |
 
-</td></tr>
-</table>
+| unsubscribe()                                                                                        |
+| ---------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>unsubscribe()</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p> |
 
-<table>
-<tr><th>next()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>next(value?: T)</code>
+| \_trySubscribe()                                                                                                                                                                                                                                                                                                         |                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------- |
+| <h4>Firma</h4><p><code>_trySubscribe(subscriber: Subscriber): TeardownLogic</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>TeardownLogic</code></p> |                     |
+| subscriber                                                                                                                                                                                                                                                                                                               | Tipo: `Subscriber`. |
 
-<h3>Parámetros</h3>
+| \_subscribe()                                                                                                                                                                                                                                                                                                       |                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| <h4>Firma</h4><p><code>_subscribe(subscriber: Subscriber): Subscription</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscription</code></p> |                     |
+| subscriber                                                                                                                                                                                                                                                                                                          | Tipo: `Subscriber`. |
 
-<table>
-<tr><td>value</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-
-Tipo: <code>T</code>.</td></tr>
-
-</table>
-</td></tr>
-</table>
-
-<table>
-<tr><th>error()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>error(err: any)</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>err</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-</td></tr>
-</table>
-
-<table>
-<tr><th>complete()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>complete()</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-</td></tr>
-</table>
-
-<table>
-<tr><th>unsubscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>unsubscribe()</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-</td></tr>
-</table>
-
-<table>
-<tr><th>_trySubscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>_trySubscribe(subscriber: Subscriber<T>): TeardownLogic</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>TeardownLogic</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>_subscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>_subscribe(subscriber: Subscriber<T>): Subscription</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>Subscription</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>asObservable()</th></tr>
-<tr><td>Crea un nuevo Observable con este Sujeto como fuente. Se puede hacer esto para crear lógica personalizada de la parte Observador del Sujeto y esconderla del código que utiliza el Observable</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>asObservable(): Observable<T></code>
-
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>Observable<T>: Observable that the Subject casts to</code>
-
-</td></tr>
-</table>
+| asObservable()                                                                                                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Crea un nuevo Observable con este Sujeto como fuente. Se puede hacer esto para crear lógica personalizada de la parte Observador del Sujeto y esconderla del código que utiliza el Observable         |
+| <h4>Firma</h4><p><code>asObservable(): Observable</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>Observable: Observable that the Subject casts to</code></p> |

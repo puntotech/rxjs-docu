@@ -1,25 +1,20 @@
 # publish
 
-<h2 class="subtitle"> Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores</h2>
+## Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método \`connect\` antes de empezar a emitir valores a sus Observadores
 
 💡 publish es equivalente a `multicast(() => new Subject())`
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `publish<T, R>(selector?: OperatorFunction<T, R>): MonoTypeOperatorFunction<T> | OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>selector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Función de selección opcional que puede utilizar la secuencia fuente multidifundida tantas veces como sean necesarias, sin provocar múltiples suscripciones a la secuencia fuente. Los suscriptores al flujo recibirán todas las notificaciones de la fuente a partir del momento de la suscripción.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T> | OperatorFunction<T, R>`: Un `ConnectableObservable` que, cuando se hace una llamada a su método `connect`, hace que el Observable fuente emita valores a sus Observadores.
 
@@ -27,19 +22,19 @@ Función de selección opcional que puede utilizar la secuencia fuente multidifu
 
 ## Descripción
 
-Convierte un Observable frío en un Observable caliente, utilizando el operador <a href="/operators/multicasting/multicast">multicast</a> junto a un Sujeto internamente.
+Convierte un Observable frío en un Observable caliente, utilizando el operador [multicast](../../../operators/multicasting/multicast/) junto a un Sujeto internamente.
 
-<img src="assets/images/marble-diagrams/multicasting/publish.png" alt="Diagrama de canicas del operador publish">
+![Diagrama de canicas del operador publish](assets/images/marble-diagrams/multicasting/publish.png)
 
 Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores. En el caso de que no se llame a `connect`, el Observable fuente no emitirá ningún valor.
 
-💡 Para evitar tener que llamar a connect manualmente, se puede utilizar el [operador refCount](/operators/multicasting/refCount).
+💡 Para evitar tener que llamar a connect manualmente, se puede utilizar el [operador refCount](../../../operators/multicasting/refCount/).
 
 ## Ejemplos
 
 **Compartir el Observable fuente con publish**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publish?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-publish?file=index.ts)
 
 ```typescript
 import { ConnectableObservable, interval, timer } from "rxjs";
@@ -110,71 +105,45 @@ source$
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `publish(): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `publish(selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>selector</td><td>Tipo: <code>(shared: Observable) => O</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `publish(selector: MonoTypeOperatorFunction<T>): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>selector</td><td>Tipo: <code>MonoTypeOperatorFunction</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`
 
-</div>
-
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publish.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publish.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-<!-- <img src="assets/icons/source-code.png" alt="Source code"> -->
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/publish">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/publish)

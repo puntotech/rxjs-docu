@@ -1,26 +1,22 @@
 # take
 
-<h2 class="subtitle"> Emite las primeras x emisiones del Observable fuente
-</h2>
+## Emite las primeras x emisiones del Observable fuente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `take<T>(count: number): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>count</td><td>El máximo número de valores que se emitirán.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite o las primeras `count` emisiones del Observable fuente, o todas las emisiones si el Observable fuente emite menos de `count` valores.
 
-### Lanza
+#### Lanza
 
 `ArgumentOutOfRangeError` Cuando se usa `take(i)`, se lanza un Error `ArgumentOutOrRangeError` si `i < 0`.
 
@@ -30,7 +26,7 @@
 
 Obtiene los primeros `count` valores de la fuente, y se completa.
 
-<img src="assets/images/marble-diagrams/filtering/take.png" alt="Diagrama de canicas del operador take">
+![Diagrama de canicas del operador take](assets/images/marble-diagrams/filtering/take.png)
 
 `take` retorna un Observable que emite únicamente los primeros `count` valores emitidos por el Observable fuente. Si la fuente emite menos de n valores, entonces se emiten todos los valores. Después, se completa el Observable, independientemente de si la fuente se completa o no.
 
@@ -38,7 +34,7 @@ Obtiene los primeros `count` valores de la fuente, y se completa.
 
 **Emitir las primeras 5 teclas pulsadas**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-take-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-take-1?file=index.ts)
 
 ```typescript
 import { map, take } from "rxjs/operators";
@@ -57,7 +53,7 @@ key$
 
 **Emitir los primeros 3 títulos de películas de Studio Ghibli**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-take-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-take-2?file=index.ts)
 
 ```javascript
 import { ajax } from "rxjs/ajax";
@@ -87,13 +83,8 @@ takeFive.subscribe((x) => console.log(x));
 // Salida: 0, 1, 2, 3, 4
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/take.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/take.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/take">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/take)

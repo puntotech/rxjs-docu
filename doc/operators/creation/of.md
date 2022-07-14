@@ -1,21 +1,18 @@
 # of
 
-<h2 class="subtitle"> Convierte los argumentos en una secuencia Observable.</h2>
+## Convierte los argumentos en una secuencia Observable.
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `of(...args: (SchedulerLike | T)[]): Observable`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>args</td><td>Tipo: <code>(SchedulerLike | T)[]</code></td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`: Un Observable que emite los argumentos descritos anteriormente y se completa.
 
@@ -25,15 +22,15 @@
 
 Cada argumento se convierte en una notificación next.
 
-<img class="marble-diagram" src="assets/images/marble-diagrams/creation/of.png" alt="Diagrama de canicas de of">
+![Diagrama de canicas de of](assets/images/marble-diagrams/creation/of.png)
 
-Al contrario que [from](/operators/creation/from), no se lleva a cabo ninguna aplanación y cada argumento al completo se emite como una notificación `next`.
+Al contrario que [from](../../../operators/creation/from/), no se lleva a cabo ninguna aplanación y cada argumento al completo se emite como una notificación `next`.
 
 ## Ejemplos
 
 **Emitir una secuencia de números**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -46,7 +43,7 @@ number$.subscribe((number) => console.log(number));
 
 **Emitir una secuencia de cadenas**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of-2?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -59,7 +56,7 @@ framework$.subscribe(console.log);
 
 **Emitir una secuencia de arrays**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of-3?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -72,7 +69,7 @@ fruit$.subscribe((fruit) => console.log(fruit));
 
 **Emitir una secuencia de objetos**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-of-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-of-4?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -105,7 +102,7 @@ of(10, 20, 30).subscribe(
 // 'Fin'
 ```
 
-**Emitir el array [1,2,3]**
+**Emitir el array \[1,2,3]**
 
 ```javascript
 import { of } from "rxjs";
@@ -120,13 +117,8 @@ of([1, 2, 3]).subscribe(
 // 'Fin'
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/of.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/of.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/of">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/of)

@@ -1,25 +1,18 @@
 # windowCount
 
-<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana), que contiene como mucho un número determinado de valores
-</h2>
+## Acumula valores del Observable fuente en un Observable anidado (ventana), que contiene como mucho un número determinado de valores
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `windowCount<T>(windowSize: number, startWindowEvery: number = 0): OperatorFunction<T, Observable<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>windowSize</td><td>El máximo número de valores de cada ventana.</td></tr>
-<tr><td>startWindowEvery</td><td>Opcional. El valor por defecto es <code>0</code>.
-El intervalo que señala cuándo abrir una ventana nueva. Por ejemplo, si `startWindowEvery` tiene un valor de 2, se abrirá una nueva ventana cada 2 valores emitidos por la fuente. Por defecto, al comienzo de la fuente se abre una nueva ventana.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
@@ -29,19 +22,17 @@ El intervalo que señala cuándo abrir una ventana nueva. Por ejemplo, si `start
 
 Es como `bufferCount`, pero emite un Observable anidado en lugar de un array.
 
-<img src="assets/images/marble-diagrams/transformation/windowCount.png" alt="Diagrama de canicas del operador windowCount">
+![Diagrama de canicas del operador windowCount](assets/images/marble-diagrams/transformation/windowCount.png)
 
 Retorna un Observable que emite ventanas de elementos que recoge del Observable fuente. El Observable resultante emite ventanas cada `startWindowEvery` número de elementos, que contengan no más de `windowSize` elementos. Cuando el Observable fuente se complete o lance un error, el Observable resultante emitirá la ventana actual y propagará la notificación del Observable fuente. Si no se proporciona el parámetro `startWindowEvery`, se abrirá una nueva inmediatamente después de emitir la ventana anterior.
 
 ## Ejemplos
 
-<!-- TODO add example with startWindowEvery param -->
-
 **Recoge un máximo de cuatro teclas pulsadas en una ventana**
 
 Cada ventana se emite cuando haya recogido cuatro valores.
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowcount-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-windowcount-1?file=index.ts)
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -92,13 +83,8 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowCount.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowCount.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/windowCount">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/windowCount)

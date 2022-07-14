@@ -1,20 +1,20 @@
 # exhaust
 
-<h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
-</h2>
+## Convierte un Observable de orden superior en uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `exhaust<T>(): OperatorFunction<any, T>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<any, T>`: Un Observable que recibe un Observable de orden superior y propaga el primer Observable hasta que se completa, antes de suscribirse al siguiente Observable.
 
@@ -24,7 +24,7 @@ No recibe ningún parámetro.
 
 Convierte un Observable de orden superior en uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado.
 
-<img src="assets/images/marble-diagrams/join-creation/exhaust.png" alt="Diagrama de canicas del operador exhaust">
+![Diagrama de canicas del operador exhaust](assets/images/marble-diagrams/join-creation/exhaust.png)
 
 `exhaust` se suscribe a un Observable que emite Observables, también conocido como Observable de orden superior. Cuando recibe un Observable interno, el Observable resultante comienza a emitir sus emisiones. Hasta este punto, se comporta igual que `mergeAll`. Sin embargo, `exhaust` ignora cada Observable interno nuevo hasta que el Observable actual no se haya completado. Una vez esté completo, aceptará el siguiente Observable interno y comenzará a emitir sus valores, repitiendo el proceso.
 
@@ -32,7 +32,7 @@ Convierte un Observable de orden superior en uno de primer orden ignorando los O
 
 **Ignorar todos los Observables internos hasta que el Observable interno actual esté completo**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-exhaust?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-exhaust?file=index.ts)
 
 ```javascript
 import { exhaust, map, delay } from "rxjs/operators";
@@ -71,13 +71,8 @@ const result = higherOrder.pipe(exhaust());
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/exhaust.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/exhaust">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/exhaust)

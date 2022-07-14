@@ -1,27 +1,18 @@
 # range
 
-<h2 class="subtitle"> Crea un Observable que emite una secuencia de números dentro de un rango
-</h2>
+## Crea un Observable que emite una secuencia de números dentro de un rango
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `range(start: number = 0, count?: number, scheduler?: SchedulerLike): Observable<number>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>start</td><td>Opcional. El valor por defecto es <code>0</code>.
-El valor del primer número de la secuencia.</td></tr>
-<tr><td>count</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La cantidad de números secuenciales que generar.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El <code>SchedulerLike</code> para gestionar las emisiones.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<number>`: Un Observable de números que emite una secuencia finita de números consecutivos dentro de un rango.
 
@@ -31,7 +22,7 @@ El <code>SchedulerLike</code> para gestionar las emisiones.</td></tr>
 
 Emite una secuencia de números dentro de un rango.
 
-<img src="assets/images/marble-diagrams/creation/range.png" alt="Diagrama de canicas de range">
+![Diagrama de canicas de range](assets/images/marble-diagrams/creation/range.png)
 
 `range` emite una secuencia de números en un rango, en orden, donde se permite seleccionar el comienzo del rango y su longitud. Por defecto, no se utiliza ningún `SchedulerLike`, por lo que las notificaciones se emiten de forma síncrona, pero se puede proporcionar un `SchedulerLike` opcional para regular dichas notificaciones.
 
@@ -39,7 +30,7 @@ Emite una secuencia de números dentro de un rango.
 
 **Emitir una secuencia de 5 números. Al no especificar el comienzo del rango, se utilizará el valor por defecto: 0**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-range?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-range?file=index.ts)
 
 ```javascript
 import { range } from "rxjs";
@@ -52,7 +43,7 @@ number$.subscribe((number) => console.log(number));
 
 **Emitir una secuencia de 5 números, especificando el valor inicial**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ramge-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ramge-2?file=index.ts)
 
 ```javascript
 import { range } from "rxjs";
@@ -74,13 +65,8 @@ const numbers = range(1, 10);
 numbers.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/range.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/range.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/range">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/range)

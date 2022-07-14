@@ -1,24 +1,18 @@
 # timeout
 
-<h2 class="subtitle"> Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
-</h2>
+## Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `timeout<T>(due: number | Date, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>due</td><td>Un número especificando el periodo en el que el Observable tiene que emitir un valor, o una fecha especificando antes de cuándo debe completarse el Observable.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
-El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que refleja el comportamiento de la fuente, a no ser que la comprobación del _timeout_ falle.
 
@@ -28,7 +22,7 @@ El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</t
 
 Lanza un error si el Observable no emite valores suficientemente rápido.
 
-<img src="assets/images/marble-diagrams/utility/timeout.png" alt="Diagrama de canicas del operador timeout">
+![Diagrama de canicas del operador timeout](assets/images/marble-diagrams/utility/timeout.png)
 
 El operador timeout puede recibir un número o una fecha como argumentos.
 
@@ -42,7 +36,7 @@ Si el argumento proporcionado es una fecha, el Observable retornado se comporta 
 
 **Lanzar un error si no se presiona ninguna tecla en 5 segundos**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timeout?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-timeout?file=index.ts)
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -61,7 +55,7 @@ key$
 
 **Lanzar un error si una petición tarda más de x tiempo**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-timeout-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-timeout-2?file=index.ts)
 
 ```typescript
 import { of } from "rxjs";
@@ -132,13 +126,8 @@ seconds.pipe(timeout(new Date("December 17, 2020 03:24:00"))).subscribe(
 );
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeout.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/timeout">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/timeout)

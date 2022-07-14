@@ -1,26 +1,18 @@
 # generate
 
-<h2 class="subtitle"> Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
-</h2>
+## Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `generate(initialState: S, condition: ConditionFunc<S>, iterate: IterateFunc<S>, scheduler?: SchedulerLike): Observable<S>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>initialState</td><td>Estado inicial.</td></tr>
-<tr><td>condition</td><td>Condición para finalizar la generación (al retornar falso).</td></tr>
-<tr><td>iterate</td><td>Función de los pasos de la iteración.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Un Scheduler para planificar el bucle de generación. Si no se proporciona, por defecto se emitirá inmediatamente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<S>`: La secuencia generada.
 
@@ -30,13 +22,13 @@ Un Scheduler para planificar el bucle de generación. Si no se proporciona, por 
 
 Se utiliza en lugar de hacer llamadas a `next` dentro de un bucle for.
 
-<img src="assets/images/marble-diagrams/creation/generate.png" alt="Diagrama de canicas de generate">
+![Diagrama de canicas de generate](assets/images/marble-diagrams/creation/generate.png)
 
 generate permite crear un flujo de valores generador con un bucle muy similar a un bucle for tradicional.
 
-- El primer argumento de generate es el valor inicial.
-- El segundo valor es una función que acepta este valor y comprueba si una condición se sigue o no cumpliendo. En caso afirmativo, el bucle continúa. Si no, el bucle se para.
-- El tercer valor es una función que recibe el valor definido anteriormente y lo modifica en cada iteración.
+* El primer argumento de generate es el valor inicial.
+* El segundo valor es una función que acepta este valor y comprueba si una condición se sigue o no cumpliendo. En caso afirmativo, el bucle continúa. Si no, el bucle se para.
+* El tercer valor es una función que recibe el valor definido anteriormente y lo modifica en cada iteración.
 
 Estos tres parámetros son equivalentes a las tres expresiones de un bucle for tradicional: la primera expresión inicializa un estado (como por ejemplo un índice numérico), la segunda comprueba si el bucle puede o no hacer la siguiente iteración (como por ejemplo si el índice es menor que 10) y la tercera indica cómo el valor definido se modifica en cada iteración (como por ejemplo, incrementar dicho valor en 1.)
 
@@ -46,10 +38,10 @@ Opcionalmente, se le puede proporcionar un cuarto parámetro a generate - una fu
 
 Si se encuentra que las tres funciones anónimas en la llamada a generate son difíciles de leer, se le puede proporcionar un solo objeto en su lugar. Dicho objeto tiene las siguientes propiedades:
 
-- initialState
-- condition
-- iterate
-- resultSelector
+* initialState
+* condition
+* iterate
+* resultSelector
 
 La propiedad condition es opcional en este objeto. Si se omite dicha propiedad, la condición siempre se cumplirá, por lo que el Observable de salida nunca llegará a completarse. El valor de la propiedad resultSelector sigue siendo opcional.
 
@@ -59,7 +51,7 @@ Ambas formas de generate reciben un planificador de forma opcional. En el caso d
 
 **Emitir los números del 1 al 10**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-generate?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-generate?file=index.ts)
 
 ```javascript
 import { generate } from "rxjs";
@@ -76,7 +68,7 @@ number$.subscribe(console.log);
 
 **Emitir los números pares del 2 al 10, utilizando un objeto como parámetro**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-generate-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-generate-2?file=index.ts)
 
 ```javascript
 import { generate } from "rxjs";
@@ -92,110 +84,59 @@ evenNumber$.subscribe((number) => console.log(number));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `generate<T, S>(initialStateOrOptions: S | GenerateOptions<T, S>, condition?: ConditionFunc<S>, iterate?: IterateFunc<S>, resultSelectorOrObservable?: SchedulerLike | ResultFunc<S, T>, scheduler?: SchedulerLike): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>initialStateOrOptions</td><td>Tipo: <code>S | GenerateOptions</code>.</td></tr>
-<tr><td>condition</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>ConditionFunc</code>.</td></tr>
-<tr><td>iterate</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>IterateFunc</code>.</td></tr>
-<tr><td>resultSelectorOrObservable</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike | ResultFunc</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `generate(initialState: S, condition: ConditionFunc<S>, iterate: IterateFunc<S>, resultSelector: ResultFunc<S, T>, scheduler?: SchedulerLike): Observable<T>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes.
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>initialState</td><td>Estado inicial.</td></tr>
-<tr><td>condition</td><td>Condición para finalizar la generación (al retornar falso).</td></tr>
-<tr><td>iterate</td><td>Función de los pasos de la iteración.</td></tr>
-<tr><td>resultSelector</td><td>Función de selección de los resultados producidos en la secuencia. (Obsoleta)</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Un Scheduler para planificar el bucle de generación. Si no se proporciona, por defecto se emitirá inmediatamente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`: La secuencia generada.
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `generate(options: GenerateBaseOptions<S>): Observable<S>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes. Esta sobrecarga acepta un objeto `options` que puede contener `initialState`, `iterate`, `condition` y `scheduler`.
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>options</td><td>Un objeto que debe contener <code>initialState</code> y <code>iterate</code>, y que puede contener <code>condition</code> y <code>scheduler</code> de manera opcional.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<S>`: La secuencia generada.
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `generate(options: GenerateOptions<T, S>): Observable<T>`
 
 Genera una secuencia observable ejecutando un bucle impulsado por el estado para producir los elementos de la secuencia, utilizando el planificador especificado para enviar los mensajes. Esta sobrecarga acepta un objeto `options` que puede contener `initialState`, `iterate`, `condition`, `resultSelector` y `scheduler`.
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>options</td><td>Un objeto que debe contener <code>initialState</code> y <code>iterate</code> y <code>resultSelector</code> y que puede contener <code>condition</code> y <code>scheduler</code> de manera opcional.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`: La secuencia generada.
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/generate.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/generate.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/generate">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/generate)

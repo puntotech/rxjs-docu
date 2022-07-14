@@ -1,31 +1,12 @@
 # merge
 
-<h2 class="subtitle"> Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
-
-<details>
-<summary>Signatura</summary>
-
-### Firma
-
-`merge<T, R>(...observables: any[]): Observable<R>`
-
-### Parámetros
-
-<table>
-<tr><td>observables</td><td>Los Observables de entrada que se fusionarán.</td></tr>
-</table>
-
-### Retorna
-
-`Observable<R>`: Un Observable que emite las emisiones de cada Observable de entrada.
-
-</details>
+## Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
 
 ## Descripción
 
 Une varios Observables en uno solo.
 
-<img src="assets/images/marble-diagrams/join-creation/merge.png" alt="Diagrama de canicas del operador merge">
+![Diagrama de canicas del operador merge](assets/images/marble-diagrams/join-creation/merge.png)
 
 `merge` se subscribe a cada Observable de entrada de forma concurrente, y emite sus valores, sin transformarlos, en el Observable resultante. El Observable resultante solo se completa cuando todos los Observables de entrada se hayan completado.
 
@@ -35,7 +16,7 @@ Cualquier error lanzado por un Observable de entrada será emitido inmediatament
 
 **Unir dos Observables ajax**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-merge?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-merge?file=index.ts)
 
 ```javascript
 import { concat } from "rxjs";
@@ -53,7 +34,7 @@ concat(totoroFilmData$, charmanderData$).subscribe(console.log);
 
 **`merge` se suscribe de forma concurrente (a la vez) a todos los Observables de entrada, mientras que `concat` se suscribe a ellos por orden, y hasta que el primero no se complete, no se suscribe al siguiente. Comparación entre `concat` y `merge`:**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-merge-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-merge-2?file=index.ts)
 
 ```javascript
 import { concat, merge, timer } from "rxjs";
@@ -113,613 +94,293 @@ merged.subscribe((x) => console.log(x));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, scheduler: SchedulerLike): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, concurrent: number, scheduler: SchedulerLike): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Tipo: <code>number</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, scheduler: SchedulerLike): Observable<T | T2>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Tipo: <code>number</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, scheduler: SchedulerLike): Observable<T | T2 | T3>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Tipo: <code>number</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Tipo: <code>number</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Tipo: <code>number</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, scheduler: SchedulerLike): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-</div>
+#### Firma
 
-<div class="overload-section">
+merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, scheduler: SchedulerLike): Observable\<T | T2 | `T3 | T4 | T5 | T6>`
 
-### Firma
+#### Parámetros
 
-merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent: number, scheduler: SchedulerLike): Observable<T | T2 | `T3 | T4 | T5 | T6>`
-
-### Parámetros
-
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Tipo: <code>number</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, concurrent?: number): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any): Observable<T | T2>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, concurrent?: number): Observable<T | T2>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any): Observable<T | T2 | T3>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, concurrent?: number): Observable<T | T2 | T3>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any): Observable<T | T2 | T3 | T4>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, concurrent?: number): Observable<T | T2 | T3 | T4>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any): Observable<T | T2 | T3 | T4 | T5>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, concurrent?: number): Observable<T | T2 | T3 | T4 | T5>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any, concurrent?: number): Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T | T2 | T3 | T4 | T5 | T6>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(...observables: any[]): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(...observables: any[]): Observable<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(...observables: any[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `merge(...observables: any[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/merge.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/merge.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/merge">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/merge)

@@ -1,26 +1,18 @@
 # distinctUntilChanged
 
-<h2 class="subtitle"> Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
-</h2>
+## Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `distinctUntilChanged<T, K>(compare?: (x: K, y: K) => boolean, keySelector?: (x: T) => K): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>compare</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Función de comparación opcional para comprobar si un elemento es distinto al elemento anterior.</td></tr>
-
-<tr><td>keySelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>(x: T) => K</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente que tengan valores distintos.
 
@@ -34,9 +26,9 @@ Si no se proporciona una función de comparación, se utiliza una verificación 
 
 ## Ejemplos
 
-**Usar distinctUntilChanged` sin una función de comparación**
+**Usar distinctUntilChanged\` sin una función de comparación**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilchanged-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilchanged-1?file=index.ts)
 
 ```javascript
 import { distinctUntilChanged } from "rxjs/operators";
@@ -50,7 +42,7 @@ fruit$.pipe(distinctUntilChanged()).subscribe(console.log);
 
 **Usar distinctUntilChanged con una función de comparación**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilchanged-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilchanged-2?file=index.ts)
 
 ```javascript
 import { distinctUntilChanged } from "rxjs/operators";
@@ -122,13 +114,8 @@ of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4)
     // { age: 5, name: 'Foo' }
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilChanged">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/distinctUntilChanged)

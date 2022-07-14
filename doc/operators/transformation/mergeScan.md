@@ -1,25 +1,18 @@
 # mergeScan
 
-<h2 class="subtitle"> Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
-</h2>
+## Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `mergeScan<T, R>(accumulator: (acc: R, value: T, index: number) => any, seed: R, concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>accumulator</td><td>La función de acumulación que se aplica a cada valor emitido.</td></tr>
-<tr><td>seed</td><td>El valor de acumulación inicial.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>Number.POSITIVE_INFINITY</code>.
-El máximo número de Observables internos a los que se suscribe de forma concurrente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`: Un Observable de los valores acumulados.
 
@@ -33,7 +26,7 @@ Es como `scan`, pero los Observables retornados por el acumulador se fusionan en
 
 **Contar el número de teclas pulsadas**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergescan-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-mergescan-1?file=index.ts)
 
 ```javascript
 import { fromEvent, of } from "rxjs";
@@ -47,7 +40,7 @@ key$.pipe(mergeScan((acc, one) => of(acc + one), 0)).subscribe(console.log);
 
 **Acumular el tiempo que esté pulsado el ratón**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-mergescan-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-mergescan-2?file=index.ts)
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -93,13 +86,8 @@ count$.subscribe((x) => console.log(x));
 // ...y así sucesivamente para cada click
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeScan.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/mergeScan">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/mergeScan)

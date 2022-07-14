@@ -1,24 +1,18 @@
 # fromFetch
 
-<h2 class="subtitle"> Utiliza la API Fetch para hacer una petición HTTP
-</h2>
+## Utiliza la API Fetch para hacer una petición HTTP
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `fromFetch<T>(input: string | Request, initWithSelector: RequestInit & { selector?: (response: Response) => any; } = {}): Observable<Response | T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>input</td><td>El recurso al que se quiere hacer el <code>fetch</code>. Puede ser una URL o un objeto petición.</td></tr>
-<tr><td>initWithSelector</td><td>Opcional. El valor por defecto es <code>{}</code>.
-Tipo: <code>RequestInit & { selector?: (response: Response) => any; }</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<Response | T>`: Un Observable que hace una petición HTTP usando la función `fetch` nativa, cuando un Observador se suscribe a él. La Suscripción está atada al `AbortController` para el `fetch`.
 
@@ -36,7 +30,7 @@ Si se proporciona una señal vía el argumento `init`, esta se comportará igual
 
 **Realizar una petición `fetch` y emitir el objeto `Response` al completo**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-fromfetch?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-fromfetch?file=index.ts)
 
 ```javascript
 import { fromFetch } from "rxjs/fetch";
@@ -46,19 +40,6 @@ const ghibliFilmResponse$ = fromFetch("https://ghibliapi.herokuapp.com/films");
 ghibliFilmResponse$.subscribe(console.log);
 // Salida: Response {...}
 ```
-
-<!--
-<a href="">
-
-```javascript
-
-```
-
-<a href="">
-
-```javascript
-
-``` -->
 
 ### Ejemplos de la documentación oficial
 
@@ -112,13 +93,8 @@ data$.subscribe({
 });
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/dom/fetch.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/fetch/fromFetch">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/fetch/fromFetch)

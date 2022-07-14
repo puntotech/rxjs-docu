@@ -1,22 +1,18 @@
 # bufferToggle
 
-<h2 class="subtitle"> Acumula valores del Observable fuente a partir de una emisión de <code>openings</code> en un búfer, que se cierra cuando el Observable retornado por la función <code>closingSelector</code> emite</h2>
+## Acumula valores del Observable fuente a partir de una emisión de `openings` en un búfer, que se cierra cuando el Observable retornado por la función `closingSelector` emite
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `bufferToggle<T, O>(openings: SubscribableOrPromise<O>, closingSelector: (value: O) => SubscribableOrPromise<any>): OperatorFunction<T, T[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>openings</td><td>Un <code>Subscribable</code> o <code>Promise</code> de notificaciones para abrir nuevos búferes.</td></tr>
-<tr><td>closingSelector</td><td>Una función que recibe el valor emitido por el Observable <code>openings</code> y retorna un <code>Subscribable</code> o <code>Promise</code>, que señala, mediante emisiones, que el búfer asociado debe ser emitido y cerrado.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
@@ -26,7 +22,7 @@
 
 Almacena valores en un array. Abre el búfer cuando `openings` emite, y llama a la función `closingSelector` para obtener el Observable que indica cuándo cerrar el búfer.
 
-<img src="assets/images/marble-diagrams/transformation/bufferToggle.png" alt="Diagrama de canicas del operador bufferToggle">
+![Diagrama de canicas del operador bufferToggle](assets/images/marble-diagrams/transformation/bufferToggle.png)
 
 Almacena valores del Observable fuente abriendo el búfer cuando el Observable `openings` lo indica, cerrando dicho búfer y emitiéndolo cuando el `Subscribable` o la `Promise` retornados por la función `closingSelector` emiten.
 
@@ -34,7 +30,7 @@ Almacena valores del Observable fuente abriendo el búfer cuando el Observable `
 
 **Abrir el búfer cada cuatro segundos, durante dos segundos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffertoggle-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-buffertoggle-1?file=index.ts)
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -50,7 +46,7 @@ number$
 
 **Emitir eventos MouseEvent mientras esté pulsado el botón del mouse, hasta que dejemos de pulsarlo**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffertoggle-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-buffertoggle-2?file=index.ts)
 
 ```typescript
 import { fromEvent } from "rxjs";
@@ -84,13 +80,8 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferToggle.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/bufferToggle">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/bufferToggle)

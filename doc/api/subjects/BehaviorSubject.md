@@ -1,6 +1,6 @@
 # BehaviorSubject
 
-<h2 class="subtitle">Un tipo de Sujeto que requiere un valor inicial y emmite su valor actual cuando es suscrito</h2>
+## Un tipo de Sujeto que requiere un valor inicial y emmite su valor actual cuando es suscrito
 
 ```typescript
     class BehaviorSubject<T> extends Subject {
@@ -46,78 +46,29 @@
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(_value: T)</code>
-
-<h3>Parámetros</h3>
-
-<tr><td>_value</td><td>Tipo: <code>T</code>.</td></tr>
-</td>
-</tr>
-</table>
+| constructor()                                                               |            |
+| --------------------------------------------------------------------------- | ---------- |
+| <h4>Firma</h4><p><code>constructor(_value: T)</code></p><h4>Parámetros</h4> |            |
+| \_value                                                                     | Tipo: `T`. |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>valor</td><td><code>T</code></td><td>Read-only.</td></tr>
-</table>
+| Propiedad | Tipo | Descripción |
+| --------- | ---- | ----------- |
+| valor     | `T`  | Read-only.  |
 
 ## Métodos
 
-<table>
-<tr><th>_subscribe()</th><td>
-<tr><td>
-<h3>Firma</h3>
-<code>_subscribe(subscriber: Subscriber<T>): Subscription</code>
+| \_subscribe()                                                                                                                                                                                                                                                                                                       |                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| <h4>Firma</h4><p><code>_subscribe(subscriber: Subscriber): Subscription</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscription</code></p> |                     |
+| subscriber                                                                                                                                                                                                                                                                                                          | Tipo: `Subscriber`. |
 
-<h3>Parámetros</h3>
+| getValue()                                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>getValue(): T</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>T</code></p> |
 
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>Subscription</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>getValue()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>getValue(): T</code>
-
-<h3>Parámetros</h3>
-
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-
-<code>T</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>next()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>next(value: T): void</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>value</td><td>Tipo: <code>T</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-
-<code>void</code>
-
-</td></tr>
-</table>
+| next()                                                                                                                                                                                                                                                            |            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| <h4>Firma</h4><p><code>next(value: T): void</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>value</td><td>Tipo: <code>T</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>void</code></p> |            |
+| value                                                                                                                                                                                                                                                             | Tipo: `T`. |

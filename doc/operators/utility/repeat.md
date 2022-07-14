@@ -1,25 +1,18 @@
 # repeat
 
-<h2 class="subtitle"> Retorna un Observable que se resuscribe <code>count</code> veces al flujo fuente cuando el Observable fuente se completa</h2>
+## Retorna un Observable que se resuscribe `count` veces al flujo fuente cuando el Observable fuente se completa
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `repeat<T>(count: number = -1): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>count</td><td>Opcional. El valor por defecto es -1.
-
-El número de veces que se repiten los valores del Observable fuente. Si se especifica el valor 0, se producirá un Observable vacío.
-
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se resuscribirá `count` veces al flujo fuente cuando el flujo fuente se complete.
 
@@ -29,7 +22,7 @@ El número de veces que se repiten los valores del Observable fuente. Si se espe
 
 Repite todos los valores emitidos por la fuente. Es como el operador `retry`, para casos que no sean de error.
 
-<img src="assets/images/marble-diagrams/utility/repeat.png" alt="Diagrama de canicas del operador repeat">
+![Diagrama de canicas del operador repeat](assets/images/marble-diagrams/utility/repeat.png)
 
 De forma similar a `retry`, este operador repite el flujo de elementos emitidos por la fuente, para casos que no sean de error. `repeat` puede ser útil para crear Observables que deban tener alguna clase de patrón repetido.
 
@@ -39,7 +32,7 @@ Nota: `repeat(0)` retorna un Observable vacío y `repeat()` se repetirá para si
 
 **Repetir una petición AJAX**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeat-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-repeat-1?file=index.ts)
 
 ```javascript
 import { repeat } from "rxjs/operators";
@@ -60,7 +53,7 @@ ghibliFilm$
 
 **Retornar un Observable vacío**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeat-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-repeat-2?file=index.ts)
 
 ```javascript
 import { repeat } from "rxjs/operators";
@@ -77,7 +70,7 @@ language$.pipe(repeat(0)).subscribe({
 
 **Repetir un flujo de mensajes de forma infinita**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeat-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-repeat-3?file=index.ts)
 
 ```javascript
 import { repeat } from "rxjs/operators";
@@ -126,13 +119,8 @@ example.subscribe((x) => console.log(x));
 // 2
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeat.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeat.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/repeat">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/repeat)

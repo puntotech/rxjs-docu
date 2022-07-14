@@ -1,25 +1,18 @@
 # throwError
 
-<h2 class="subtitle"> Crea un Observable que solo emite una notificación de error
-</h2>
+## Crea un Observable que solo emite una notificación de error
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `throwError(error: any, scheduler?: SchedulerLike): Observable<never>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>error</td><td>El Error que se le proporciona a la notificación error.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El <code>SchedulerLike</code> que utilizar para planificar la emisión de la notificación <code>error</code>.</td></tr>
-
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<never>`: Un Observable de error: emite solo la notificación `error` utilizando el argumento `error` proporcionado
 
@@ -29,7 +22,7 @@ El <code>SchedulerLike</code> que utilizar para planificar la emisión de la not
 
 Emite un Error y nada más.
 
-<img src="assets/images/marble-diagrams/creation/throwError.png" alt="Diagrama de canicas de throw">
+![Diagrama de canicas de throw](assets/images/marble-diagrams/creation/throwError.png)
 
 Este operador estático es útil para crear un Observable simple que solo emite la notificación de error. Se puede utilizar para la composición de Observables, como por ejemplo, usando `mergeMap`.
 
@@ -37,7 +30,7 @@ Este operador estático es útil para crear un Observable simple que solo emite 
 
 **Emitir un error simple**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-throwerror?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-throwerror?file=index.ts)
 
 ```javascript
 import { throwError } from "rxjs";
@@ -53,7 +46,7 @@ error$.subscribe(
 
 **Lanzar un error según se cumpla una condición**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-throwerror-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-throwerror-2?file=index.ts)
 
 ```javascript
 import { of, throwError } from "rxjs";
@@ -119,13 +112,8 @@ interval(1000)
 // (error) El número 2 no mola
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/throwError.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/throwError.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/throwError">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/throwError)

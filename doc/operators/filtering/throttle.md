@@ -1,24 +1,18 @@
 # throttle
 
-<h2 class="subtitle"> Emite un valor del Observable fuente e ignora las emisiones siguientes durante un tiempo determinado por un segundo Observable. Después, repite el proceso
-</h2>
+## Emite un valor del Observable fuente e ignora las emisiones siguientes durante un tiempo determinado por un segundo Observable. Después, repite el proceso
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `throttle<T>(durationSelector: (value: T) => SubscribableOrPromise<any>, config: ThrottleConfig = defaultThrottleConfig): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>durationSelector</td><td>Una función que recibe un valor del Observable fuente para calcular la duración del silenciamiento, que se retorna en forma de Observable o Promesa.</td></tr>
-<tr><td>config</td><td>Opcional. El valor por defecto es <code>defaultThrottleConfig</code>.
-Un objeto de configuración para definir el comportamiento de los parámetros <code>leading</code> y <code>trailing</code>. Por defecto es <code>{ leading: true, trailing: false}</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que lleva a cabo la acción reguladora para limitar la velocidad de emisión de la fuente.
 
@@ -28,7 +22,7 @@ Un objeto de configuración para definir el comportamiento de los parámetros <c
 
 Es como `throttleTime`, pero la duración del silenciamiento está determinada por un segundo Observable.
 
-<img src="assets/images/marble-diagrams/filtering/throttle.png" alt="Diagrama de canicas del operador throttle">
+![Diagrama de canicas del operador throttle](assets/images/marble-diagrams/filtering/throttle.png)
 
 `throttle` emite los valores del Observable fuente mientras su temporizador interno esté deshabilitado, e ignora dichos valores mientras el temporizador esté habilitado. Inicialmente, el temporizador está deshabilitado. En cuanto se reciba el primer valor de la fuente, esta se reenvía al Observable resultante y se habilita el temporizador mediante una llamada a la función `durationSelector` con el valor emitido por la fuente. Entonces, la función retorna el Observable de 'duración'. Cuando el Observable de duración emita un valor o se complete, el temporizador se deshabilita, y se repite el proceso para la siguiente emisión del Observable fuente.
 
@@ -36,7 +30,7 @@ Es como `throttleTime`, pero la duración del silenciamiento está determinada p
 
 **Emitir la tecla pulsada, ignorar todos los valores siguientes durante 2 segundos, y repetir**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttle-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-throttle-2?file=index.ts)
 
 ```typescript
 import { throttle } from "rxjs/operators";
@@ -52,7 +46,7 @@ key$
 
 **Emitir un valor, ignorar todos los valores durante 2 segundos, y repetir**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-throttle-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-throttle-3?file=index.ts)
 
 ```javascript
 import { map, throttle } from "rxjs/operators";
@@ -81,13 +75,8 @@ const result = clicks.pipe(throttle((ev) => interval(1000)));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttle.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/throttle.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/throttle">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/throttle)
