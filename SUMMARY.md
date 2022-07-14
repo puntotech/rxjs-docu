@@ -1,7 +1,5 @@
 # RxJS Docu
 
-## RxJS
-
 - Operadores
 
   - combination
