@@ -4,7 +4,7 @@
 
 - Operadores
 
-  - combination
+  - Combinación
     - [combineAll](doc/operators/combination/combineAll.md)
     - [combineLatest](doc/operators/combination/combineLatest.md)
     - [concat](doc/operators/combination/concat.md)
@@ -18,14 +18,14 @@
     - [switchAll](doc/operators/combination/switchAll.md)
     - [withLatestFrom](doc/operators/combination/withLatestFrom.md)
     - [zip](doc/operators/combination/zip.md)
-  - conditional
+  - Condicional
     - [defaultIfEmpty](doc/operators/conditional/defaultIfEmpty.md)
     - [every](doc/operators/conditional/every.md)
     - [find](doc/operators/conditional/find.md)
     - [findIndex](doc/operators/conditional/findIndex.md)
     - [isEmpty](doc/operators/conditional/isEmpty.md)
     - [sequenceEqual](doc/operators/conditional/sequenceEqual.md)
-  - creation
+  - Creación
     - [ajax](doc/operators/creation/ajax.md)
     - [defer](doc/operators/creation/defer.md)
     - [from](doc/operators/creation/from.md)
@@ -39,11 +39,11 @@
     - [range](doc/operators/creation/range.md)
     - [throwError](doc/operators/creation/throwError.md)
     - [timer](doc/operators/creation/timer.md)
-  - handling
+  - [Gestión de Errores]
     - [catchError](doc/operators/error-handling/catchError.md)
     - [retry](doc/operators/error-handling/retry.md)
     - [retryWhen](doc/operators/error-handling/retryWhen.md)
-  - filtering
+  - Filtración
     - [audit](doc/operators/filtering/audit.md)
     - [auditTime](doc/operators/filtering/auditTime.md)
     - [debounce](doc/operators/filtering/debounce.md)
@@ -69,12 +69,12 @@
     - [takeWhile](doc/operators/filtering/takeWhile.md)
     - [throttle](doc/operators/filtering/throttle.md)
     - [throttleTime](doc/operators/filtering/throttleTime.md)
-  - aggregate
+  - Agregación
     - [count](doc/operators/mathematical-aggregate/count.md)
     - [max](doc/operators/mathematical-aggregate/max.md)
     - [min](doc/operators/mathematical-aggregate/min.md)
     - [reduce](doc/operators/mathematical-aggregate/reduce.md)
-  - multicasting
+  - Multidifusión
     - [connect](doc/operators/multicasting/connect.md)
     - [multicast](doc/operators/multicasting/multicast.md)
     - [publish](doc/operators/multicasting/publish.md)
@@ -84,7 +84,7 @@
     - [refCount](doc/operators/multicasting/refCount.md)
     - [share](doc/operators/multicasting/share.md)
     - [shareReplay](doc/operators/multicasting/shareReplay.md)
-  - transformation
+  - Transformación
     - [buffer](doc/operators/transformation/buffer.md)
     - [bufferCount](doc/operators/transformation/bufferCount.md)
     - [bufferTime](doc/operators/transformation/bufferTime.md)
@@ -112,7 +112,7 @@
     - [windowTime](doc/operators/transformation/windowTime.md)
     - [windowToggle](doc/operators/transformation/windowToggle.md)
     - [windowWhen](doc/operators/transformation/windowWhen.md)
-  - utility
+  - Utilidad
     - [delay](doc/operators/utility/delay.md)
     - [delayWhen](doc/operators/utility/delayWhen.md)
     - [dematerialize](doc/operators/utility/dematerialize.md)
