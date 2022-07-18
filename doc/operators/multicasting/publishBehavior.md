@@ -1,27 +1,22 @@
 # publishBehavior
 
-<h2 class="subtitle">Comparte el Observable fuente, permitiendo proporcionar un valor por defecto</h2>
+## Comparte el Observable fuente, permitiendo proporcionar un valor por defecto
 
 💡 publishBehavior es equivalente a `multicast(() => new BehaviorSubject())`
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `publishBehavior<T>(value: T): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>value</td><td>Tipo: <code>T</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
-
-</div>
 
 </details>
 
@@ -31,13 +26,13 @@ Comparte el Observable fuente, permitiendo proporcionar un valor por defecto, ya
 
 Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores. En el caso de que no se llame a `connect`, el Observable fuente no emitirá ningún valor.
 
-💡 Para evitar tener que llamar a connect manualmente, se puede utilizar el [operador refCount](/operators/multicasting/refCount).
+💡 Para evitar tener que llamar a connect manualmente, se puede utilizar el [operador refCount](../../../operators/multicasting/refCount/).
 
 ## Ejemplos
 
 **Compartir el Observable fuente, proporcionando un valor inicial de -1**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publish?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-publish?file=index.ts)
 
 ```typescript
 import { ConnectableObservable, interval, timer } from "rxjs";
@@ -76,13 +71,8 @@ Observador 2: 1,
 */
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishBehavior.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishBehavior.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/publishBehavior">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/publishBehavior)

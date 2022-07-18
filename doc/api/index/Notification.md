@@ -1,6 +1,8 @@
-# Notificación
+# Notification
 
-<h2 class="subtitle">Representa un evento o valor <em>push</em> que puede emitir un Observable. Esta clase es especialmente útil para los operadores que gestionan notificaciones, como materialize, dematerialize, observeOn y demás. Además de crear una capa sobre el valor emitido, también lo anota con metadatos de, por ejemplo, qué tipo de mensaje push es (next, error o complete) </h2>
+## Notificación
+
+### Representa un evento o valor _push_ que puede emitir un Observable. Esta clase es especialmente útil para los operadores que gestionan notificaciones, como materialize, dematerialize, observeOn y demás. Además de crear una capa sobre el valor emitido, también lo anota con metadatos de, por ejemplo, qué tipo de mensaje push es (next, error o complete)
 
 ```typescript
 class Notification<T> {
@@ -31,177 +33,74 @@ class Notification<T> {
 }
 ```
 
-# Métodos Estáticos
+## Métodos Estáticos
 
-<table>
-<tr><th>createNext()</th></tr>
-<tr><td>Un atajo para crear una instancia de una Notificación de tipo <code>next</code> a partir de un valor dado.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>static createNext<T>(value: T): Notification<T></code>
+| createNext()                                                                                                                                                                                                                                                                                                                                              |                  |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| Un atajo para crear una instancia de una Notificación de tipo `next` a partir de un valor dado.                                                                                                                                                                                                                                                           |                  |
+| <h4>Firma</h4><p><code>static createNext(value: T): Notification</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>value</td><td>El valor <code>next</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Notification</code>: La Notificación "next" que representa al argumento.</p> |                  |
+| value                                                                                                                                                                                                                                                                                                                                                     | El valor `next`. |
 
-<h3>Parámetros</h3>
+| createError()                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| Un atajo para crear una instancia de una Notificación de tipo `error` a partir de un valor dado.                                                                                                                                                                                                                                                                                                                         |                                                                     |
+| <h4>Firma</h4><p><code>static createError(err?: any): Notification</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>err</td><td>Opcional. El valor por defecto es <code>undefined</code>. El error de <code>error</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Notification</code>: La Notificación "error" que representa al argumento.</p> |                                                                     |
+| err                                                                                                                                                                                                                                                                                                                                                                                                                      | Opcional. El valor por defecto es `undefined`. El error de `error`. |
 
-<table>
-<tr><td>value</td><td>El valor <code>next</code>.</td></tr>
-</table>
+| createComplete()                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Un atajo para crear una instancia de una Notificación de tipo `complete`.                                                                                                                                                      |
+| <h4>Firma</h4><p><code>static createComplete(): Notification</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>Notification</code>: La Notificación "complete", que carece de valor.</p> |
 
-<h3>Retorna</h3>
-<code>Notification<T></code>: La Notificación "next" que representa al argumento.
+### Constructor
 
-</td></tr>
-</table>
+| constructor()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| <h4>Firma</h4><p><code>constructor(kind: "N" | "E" | "C", value?: T, error?: any)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>kind</td><td>Tipo: <code>"N" | "E" | "C"</code>.</td></tr><tr><td>value</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>T</code>.</td></tr><tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>any</code>.</td></tr></tbody></table> |                                                             |
+| kind                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Tipo: `"N" \| "E" \| "C"`.                                  |
+| value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Opcional. El valor por defecto es `undefined`. Tipo: `T`.   |
+| error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Opcional. El valor por defecto es `undefined`. Tipo: `any`. |
 
-<table>
-<tr><th>createError()</th></tr>
-<tr><td>Un atajo para crear una instancia de una Notificación de tipo <code>error</code> a partir de un valor dado.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>static createError<T>(err?: any): Notification<T></code>
+### Propiedades
 
-<h3>Parámetros</h3>
+| Propiedad | Tipo              | Descripción                  |
+| --------- | ----------------- | ---------------------------- |
+| hasValue  | boolean           |                              |
+| kind      | 'N' \| 'E' \| 'C' | Declarado en el constructor. |
+| value     | T                 | Declarado en el constructor. |
+| error     | any               | Declarado en el constructor. |
 
-<table>
-<tr><td>err</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El error de <code>error</code>.</td></tr>
-</table>
+### Métodos
 
-<h3>Retorna</h3>
-<code>Notification<T></code>: La Notificación "error" que representa al argumento.
+| observe()                                                                                                                                                                                                                                                                                             |                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| Envía al observador proporcionado el valor englobado por esta Notificación.                                                                                                                                                                                                                           |                          |
+| <h4>Firma</h4><p><code>observe(observer: PartialObserver): any</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>observer</td><td>Tipo: <code>PartialObserver</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>any:</code></p> |                          |
+| observer                                                                                                                                                                                                                                                                                              | Tipo: `PartialObserver`. |
 
-</td></tr>
-</table>
+| do()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Dada una callback de un Observador, envía el valor representado por la Notificación actual a la callback correspondiente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                          |
+| <h4>Firma</h4><p><code>do(next: (value: T) => void, error?: (err: any) => void, complete?: () => void): any</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>next</td><td>Una callback <code>next</code> de un Observador.</td></tr><tr><td>error</td><td>Una callback <code>error</code> de un Observador. Opcional. El valor por defecto es <code>undefined</code>.</td></tr><tr><td>complete</td><td>Una callback <code>complete</code> de un Observador. Opcional. El valor por defecto es <code>undefined</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>any:</code></p> |                                                                                          |
+| next                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Una callback `next` de un Observador.                                                    |
+| error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Una callback `error` de un Observador. Opcional. El valor por defecto es `undefined`.    |
+| complete                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Una callback `complete` de un Observador. Opcional. El valor por defecto es `undefined`. |
 
-<table>
-<tr><th>createComplete()</th></tr>
-<tr><td>Un atajo para crear una instancia de una Notificación de tipo <code>complete</code>.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>static createComplete(): Notification<any></code>
+| accept()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Recibe un Observador o sus funciones callback individuales y llama al método observe u otro método correspondiente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                          |
+| <h4>Firma</h4><p><code>accept(nextOrObserver: NextObserver | ErrorObserver | CompletionObserver | ((value: T) => void), error?: (err: any) => void, complete?: () => void)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>nextOrObserver</td><td>Un Observador o una callback <code>next</code></td></tr><tr><td>error</td><td>Una callback <code>error</code> de un Observador. Opcional. El valor por defecto es <code>undefined</code>.</td></tr><tr><td>complete</td><td>Una callback <code>complete</code> de un Observador. Opcional. El valor por defecto es <code>undefined</code>.</td></tr></tbody></table> |                                                                                          |
+| nextOrObserver                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Un Observador o una callback `next`                                                      |
+| error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Una callback `error` de un Observador. Opcional. El valor por defecto es `undefined`.    |
+| complete                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Una callback `complete` de un Observador. Opcional. El valor por defecto es `undefined`. |
 
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
+| toObservable()                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Retorna un Observable simple que emite la notificación representada por esta instancia de Notificación.                                                          |
+| <h4>Firma</h4><p><code>toObservable(): Observable</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>Observable:</code></p> |
 
-<h3>Retorna</h3>
-<code>Notification<any></code>: La Notificación "complete", que carece de valor.
+### Recursos adicionales
 
-</td></tr>
-</table>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Notification.ts#L17-L148)
 
-## Constructor
-
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(kind: "N" | "E" | "C", value?: T, error?: any)</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>kind</td><td>Tipo: <code>"N" | "E" | "C"</code>.</td></tr>
-<tr><td>value</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>T</code>.</td></tr>
-<tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>any</code>.</td></tr>
-</table>
-</td></tr>
-</table>
-
-## Propiedades
-
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>hasValue</td><td>boolean</td></tr>
-<tr><td>kind</td><td>'N' | 'E' | 'C'</td><td>Declarado en el constructor.</td></tr>
-<tr><td>value</td><td>T</td><td>Declarado en el constructor.</td></tr>
-<tr><td>error</td><td>any</td><td>Declarado en el constructor.</td></tr>
-</table> 
-   
-## Métodos
-
-<table>
-<tr><th>observe()</th></tr>
-<tr><td>Envía al observador proporcionado el valor englobado por esta Notificación.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>observe(observer: PartialObserver<T>): any</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>observer</td><td>Tipo: <code>PartialObserver</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>any:</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>do()</th></tr>
-<tr><td>Dada una callback de un Observador, envía el valor representado por la Notificación actual a la callback correspondiente.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>do(next: (value: T) => void, error?: (err: any) => void, complete?: () => void): any</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>next</td><td>Una callback <code>next</code> de un Observador.</td></tr>
-<tr><td>error</td><td>Una callback <code>error</code> de un Observador.
-Opcional. El valor por defecto es <code>undefined</code>.</td></tr>
-<tr><td>complete</td><td>Una callback <code>complete</code> de un Observador.
-Opcional. El valor por defecto es <code>undefined</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>any:</code>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>accept()</th></tr>
-<tr><td>Recibe un Observador o sus funciones callback individuales y llama al método observe u otro método correspondiente.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>accept(nextOrObserver: NextObserver<T> | ErrorObserver<T> | CompletionObserver<T> | ((value: T) => void), error?: (err: any) => void, complete?: () => void)</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>nextOrObserver</td><td>Un Observador o una callback <code>next</code></td></tr>
-<tr><td>error</td><td>Una callback <code>error</code> de un Observador.
-Opcional. El valor por defecto es <code>undefined</code>.</td></tr>
-<tr><td>complete</td><td>Una callback <code>complete</code> de un Observador.
-Opcional. El valor por defecto es <code>undefined</code>.</td></tr>
-</table>
-
-</td></tr>
-</table>
-
-<table>
-<tr><th>toObservable()</th></tr>
-<tr><td>Retorna un Observable simple que emite la notificación representada por esta instancia de Notificación.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>toObservable(): Observable<T></code>
-
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>Observable<T>:</code>
-</td></tr>
-</table>
-
-## Recursos adicionales
-
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Notification.ts#L17-L148">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/class/Notification">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/class/Notification)

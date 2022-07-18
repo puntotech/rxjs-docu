@@ -28,201 +28,79 @@ class TestScheduler extends VirtualTimeScheduler {
 
 ## Métodos Estáticos
 
-<table>
-<tr><th>parseMarblesAsSubscriptions()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>static parseMarblesAsSubscriptions(marbles: string, runMode: boolean = false): SubscriptionLog</code>
-<h3>Parámetros</h3>
+| parseMarblesAsSubscriptions()                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| <h4>Firma</h4><p><code>static parseMarblesAsSubscriptions(marbles: string, runMode: boolean = false): SubscriptionLog</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>marbles</td><td>Tipo: <code>string</code>.</td></tr><tr><td>runMode</td><td>Opcional. El valor por defecto es <code>false</code>. Tipo: <code>boolean</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>SubscriptionLog</code></p> |                                                             |
+| marbles                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Tipo: `string`.                                             |
+| runMode                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Opcional. El valor por defecto es `false`. Tipo: `boolean`. |
 
-<table>
-<tr><td>marbles</td><td>Tipo: <code>string</code>.</td></tr>
-<tr><td>runMode</td><td>Opcional. El valor por defecto es <code>false</code>.
-Tipo: <code>boolean</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>SubscriptionLog</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>parseMarbles()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>static parseMarbles(marbles: string, values?: any, errorValue?: any, materializeInnerObservables: boolean = false, runMode: boolean = false): TestMessage[]</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>marbles</td><td>Tipo: <code>string</code>.</td></tr>
-<tr><td>values</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>any</code>.</td></tr>
-<tr><td>errorValue</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>any</code>.</td></tr>
-<tr><td>materializeInnerObservables</td><td>Opcional. El valor por defecto es <code>false</code>.
-Tipo: <code>boolean</code>.</td></tr>
-<tr><td>runMode</td><td>Opcional. El valor por defecto es <code>false</code>.
-Tipo: <code>boolean</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>TestMessage[]</code>
-</td></tr>
-</table>
+| parseMarbles()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| <h4>Firma</h4><p><code>static parseMarbles(marbles: string, values?: any, errorValue?: any, materializeInnerObservables: boolean = false, runMode: boolean = false): TestMessage[]</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>marbles</td><td>Tipo: <code>string</code>.</td></tr><tr><td>values</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>any</code>.</td></tr><tr><td>errorValue</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>any</code>.</td></tr><tr><td>materializeInnerObservables</td><td>Opcional. El valor por defecto es <code>false</code>. Tipo: <code>boolean</code>.</td></tr><tr><td>runMode</td><td>Opcional. El valor por defecto es <code>false</code>. Tipo: <code>boolean</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>TestMessage[]</code></p> |                                                             |
+| marbles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Tipo: `string`.                                             |
+| values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Opcional. El valor por defecto es `undefined`. Tipo: `any`. |
+| errorValue                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Opcional. El valor por defecto es `undefined`. Tipo: `any`. |
+| materializeInnerObservables                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Opcional. El valor por defecto es `false`. Tipo: `boolean`. |
+| runMode                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Opcional. El valor por defecto es `false`. Tipo: `boolean`. |
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(assertDeepEqual: (actual: any, expected: any) => boolean | void)</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>assertDeepEqual</td><td>Tipo: <code>(actual: any, expected: any) => boolean | void</code>.</td></tr>
-</table>
-
-</td></tr>
-</table>
+| constructor()                                                                                                                                                                                                                                                                                                                            |                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| <h4>Firma</h4><p><code>constructor(assertDeepEqual: (actual: any, expected: any) => boolean | void)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>assertDeepEqual</td><td>Tipo: <code>(actual: any, expected: any) => boolean | void</code>.</td></tr></tbody></table> |                                                          |
+| assertDeepEqual                                                                                                                                                                                                                                                                                                                          | Tipo: `(actual: any, expected: any) => boolean \| void`. |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>hotObservables</td><td><code>HotObservable<any>[]</code></td><td>Read-only.</td></tr>
-<tr><td>coldObservables</td><td><code>ColdObservable<any>[]</code></td><td>Read-only.</td></tr>
-<tr><td>assertDeepEqual</td><td><code>(actual: any, expected: any) => boolean | void</code></td><td>Declarado en el constructor.</td></tr>
-</table>
+| Propiedad       | Tipo                                              | Descripción                  |
+| --------------- | ------------------------------------------------- | ---------------------------- |
+| hotObservables  | `HotObservable[]`                                 | Read-only.                   |
+| coldObservables | `ColdObservable[]`                                | Read-only.                   |
+| assertDeepEqual | `(actual: any, expected: any) => boolean \| void` | Declarado en el constructor. |
 
 ## Métodos
 
-<table>
-<tr><th>createTime()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>createTime(marbles: string): number</code>
-<h3>Parámetros</h3>
+| createTime()                                                                                                                                                                                                                                                                              |                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| <h4>Firma</h4><p><code>createTime(marbles: string): number</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>marbles</td><td>Tipo: <code>string</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>number</code></p> |                 |
+| marbles                                                                                                                                                                                                                                                                                   | Tipo: `string`. |
 
-<table>
-<tr><td>marbles</td><td>Tipo: <code>string</code>.</td></tr>
-</table>
+| createColdObservable()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>createColdObservable(marbles: string, values?: { [marble: string]: T; }, error?: any): ColdObservable</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>marbles</td><td>Un diagrama en el DSL de canicas. Las letras se proyectan sobre las claves de <em>values</em>, en el caso de que este se proporcione.</td></tr><tr><td>values</td><td>Opcional. El valor por defecto es <code>undefined</code>. Los valores que utilizar para las letras en <em>marbles</em>. Si se omite, se utilizan las propias letras como valores.</td></tr><tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>. El error que utilizar para la canica <code>#</code> (si existe.)</td></tr></tbody></table><h4>Retorna</h4><p><code>ColdObservable</code></p> |                                                                                                                                                                 |
+| marbles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Un diagrama en el DSL de canicas. Las letras se proyectan sobre las claves de _values_, en el caso de que este se proporcione.                                  |
+| values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Opcional. El valor por defecto es `undefined`. Los valores que utilizar para las letras en _marbles_. Si se omite, se utilizan las propias letras como valores. |
+| error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Opcional. El valor por defecto es `undefined`. El error que utilizar para la canica `#` (si existe.)                                                            |
 
-<h3>Retorna</h3>
-<code>number</code>
-</td></tr>
-</table>
+| createHotObservable()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>createHotObservable(marbles: string, values?: { [marble: string]: T; }, error?: any): HotObservable</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>marbles</td><td>Un diagrama en el DSL de canicas. Las letras se proyectan sobre las claves de <em>values</em>, en el caso de que este se proporcione.</td></tr><tr><td>values</td><td>Opcional. El valor por defecto es <code>undefined</code>. Los valores que utilizar para las letras en <em>marbles</em>. Si se omite, se utilizan las propias letras como valores.</td></tr><tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>. El error que utilizar para la canica <code>#</code> (si existe.)</td></tr></tbody></table><h4>Retorna</h4><p><code>HotObservable</code></p> |                                                                                                                                                                 |
+| marbles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Un diagrama en el DSL de canicas. Las letras se proyectan sobre las claves de _values_, en el caso de que este se proporcione.                                  |
+| values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Opcional. El valor por defecto es `undefined`. Los valores que utilizar para las letras en _marbles_. Si se omite, se utilizan las propias letras como valores. |
+| error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Opcional. El valor por defecto es `undefined`. El error que utilizar para la canica `#` (si existe.)                                                            |
 
-<table>
-<tr><th>createColdObservable()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>createColdObservable<T = string>(marbles: string, values?: { [marble: string]: T; }, error?: any): ColdObservable<T></code>
-<h3>Parámetros</h3>
+| expectObservable()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| <h4>Firma</h4><p><code>expectObservable(observable: Observable, subscriptionMarbles: string = null): ({ toBe: observableToBeFn; })</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>observable</td><td>Tipo: <code>Observable</code>.</td></tr><tr><td>subscriptionMarbles</td><td>Opcional. El valor por defecto es <code>null</code>. Tipo: <code>string</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>({ toBe: observableToBeFn; })</code></p> |                                                           |
+| observable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Tipo: `Observable`.                                       |
+| subscriptionMarbles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Opcional. El valor por defecto es `null`. Tipo: `string`. |
 
-<table>
-<tr><td>marbles</td><td>Un diagrama en el DSL de canicas. Las letras se proyectan sobre las claves de <em>values</em>, en el caso de que este se proporcione.</td></tr>
-<tr><td>values</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Los valores que utilizar para las letras en <em>marbles</em>. Si se omite, se utilizan las propias letras como valores.</td></tr>
-<tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El error que utilizar para la canica <code>#</code> (si existe.)</td></tr>
-</table>
+| expectSubscriptions()                                                                                                                                                                                                                                                                                                                                                                                            |                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| <h4>Firma</h4><p><code>expectSubscriptions(actualSubscriptionLogs: SubscriptionLog[]): ({ toBe: subscriptionLogsToBeFn; })</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>actualSubscriptionLogs</td><td>Tipo: <code>SubscriptionLog[]</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>({ toBe: subscriptionLogsToBeFn; })</code></p> |                            |
+| actualSubscriptionLogs                                                                                                                                                                                                                                                                                                                                                                                           | Tipo: `SubscriptionLog[]`. |
 
-<h3>Retorna</h3>
-<code>ColdObservable<T></code>
-</td></tr>
-</table>
+| flush()                                                                                        |
+| ---------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>flush()</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p> |
 
-<table>
-<tr><th>createHotObservable()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>createHotObservable<T = string>(marbles: string, values?: { [marble: string]: T; }, error?: any): HotObservable<T></code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>marbles</td><td>Un diagrama en el DSL de canicas. Las letras se proyectan sobre las claves de <em>values</em>, en el caso de que este se proporcione.</td></tr>
-<tr><td>values</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Los valores que utilizar para las letras en <em>marbles</em>. Si se omite, se utilizan las propias letras como valores.</td></tr>
-<tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El error que utilizar para la canica <code>#</code> (si existe.)</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>HotObservable<T></code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>expectObservable()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>expectObservable(observable: Observable<any>, subscriptionMarbles: string = null): ({
-toBe: observableToBeFn;
-})</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>observable</td><td>Tipo: <code>Observable</code>.</td></tr>
-<tr><td>subscriptionMarbles</td><td>Opcional. El valor por defecto es <code>null</code>.
-Tipo: <code>string</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>({ toBe: observableToBeFn; })</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>expectSubscriptions()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>expectSubscriptions(actualSubscriptionLogs: SubscriptionLog[]): ({
-toBe: subscriptionLogsToBeFn;
-})</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>actualSubscriptionLogs</td><td>Tipo: <code>SubscriptionLog[]</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>({ toBe: subscriptionLogsToBeFn; })</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>flush()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>flush()</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-</td></tr>
-</table>
-
-<table>
-<tr><th>run()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>run<T>(callback: (helpers: RunHelpers) => T): T</code>
-
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>callback</td><td>Tipo: <code>(helpers: RunHelpers) => T</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>T</code>
-</td></tr>
-</table>
+| run()                                                                                                                                                                                                                                                                                                              |                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------- |
+| <h4>Firma</h4><p><code>run(callback: (helpers: RunHelpers) => T): T</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>callback</td><td>Tipo: <code>(helpers: RunHelpers) => T</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>T</code></p> |                                     |
+| callback                                                                                                                                                                                                                                                                                                           | Tipo: `(helpers: RunHelpers) => T`. |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/testing/TestScheduler.ts#L29-L401">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/testing/TestScheduler.ts#L29-L401)
 
-<a target="_blank" href="https://rxjs.dev/api/testing/TestScheduler">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/testing/TestScheduler)

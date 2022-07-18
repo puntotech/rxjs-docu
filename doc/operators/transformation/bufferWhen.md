@@ -1,22 +1,18 @@
 # bufferWhen
 
-<h2 class="subtitle"> Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
-</h2>
+## Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `bufferWhen<T>(closingSelector: () => Observable<any>): OperatorFunction<T, T[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>closingSelector</td><td>Una función que no recibe ningún argumento y retorna un Observable que señala el cierre del búfer.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
@@ -26,7 +22,7 @@
 
 Almacena valores en un array. Cuando comienza a almacenar valores, llama a una función que retorna un Observable que indica cuándo cerrar el búfer actual y abrir uno nuevo, para seguir almacenando valores.
 
-<img src="assets/images/marble-diagrams/transformation/bufferWhen.png" alt="Diagrama de canicas del operador bufferWhen">
+![Diagrama de canicas del operador bufferWhen](assets/images/marble-diagrams/transformation/bufferWhen.png)
 
 Abre un búfer de forma inmediata, que cierra cuando el Observable retornado por la función `closingSelector` emite un valor. En cuanto se cierra un búfer, se abre uno nuevo y se repite el proceso.
 
@@ -34,7 +30,7 @@ Abre un búfer de forma inmediata, que cierra cuando el Observable retornado por
 
 **Almacenar valores durante periodos de 4 segundos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-bufferwhen-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-bufferwhen-1?file=index.ts)
 
 ```javascript
 import { bufferWhen } from "rxjs/operators";
@@ -48,7 +44,7 @@ number$.pipe(bufferWhen(() => interval(4000))).subscribe(console.log);
 
 **Almacenar valores hasta que se haga click**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-bufferwhen-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-bufferwhen-2?file=index.ts)
 
 ```javascript
 import { bufferWhen } from "rxjs/operators";
@@ -63,7 +59,7 @@ number$.pipe(bufferWhen(() => click$)).subscribe(console.log);
 
 ### Ejemplos de la documentación oficial
 
-**Emite un array de clicks cada [1-5] segundos**
+**Emite un array de clicks cada \[1-5] segundos**
 
 ```javascript
 import { fromEvent, interval } from "rxjs";
@@ -76,13 +72,8 @@ const buffered = clicks.pipe(
 buffered.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferWhen.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/bufferWhen">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/bufferWhen)

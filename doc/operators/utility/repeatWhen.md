@@ -1,22 +1,18 @@
 # repeatWhen
 
-<h2 class="subtitle"> Repite o no una secuencia Observable en función de un Observable de notificaciones
-</h2>
+## Repite o no una secuencia Observable en función de un Observable de notificaciones
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `repeatWhen<T>(notifier: (notifications: Observable<any>) => Observable<any>): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>notifier</td><td>Recibe un Observable de notificaciones con las que el usuario puede completar el flujo o provocar un error, abortando la repetición.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con lógica de repetición.
 
@@ -24,19 +20,15 @@
 
 ## Descripción
 
-<img src="assets/images/marble-diagrams/utility/repeatWhen.png" alt="Diagrama de canicas del operador repeatWhen">
-
-<!-- TODO Revise translation -->
+![Diagrama de canicas del operador repeatWhen](assets/images/marble-diagrams/utility/repeatWhen.png)
 
 Retorna un Observable que refleja el Observable fuente con la excepción de un evento `complete`. Si el Observable fuente hace una llamada `complete`, `repeatWhen` emitirá al Observable retornado por el notificador. Si ese Observable hace una llamada `complete` o `error`, entonces este método hará una llamada `complete` o `error` en la suscripción hija. Si no, `repeatWhen` volverá a suscribirse al Observable fuente.
-
-<!-- Returns an Observable that mirrors the source Observable with the exception of a complete. If the source Observable calls complete, this method will emit to the Observable returned from notifier. If that Observable calls complete or error, then this method will call complete or error on the child subscription. Otherwise this method will resubscribe to the source Observable. -->
 
 ## Ejemplos
 
 **Repetir una secuencia de números con cada click**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-repeatwhen?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-repeatwhen?file=index.ts)
 
 ```javascript
 import { repeatWhen } from "rxjs/operators";
@@ -52,7 +44,7 @@ number$.pipe(repeatWhen(() => click$)).subscribe(console.log);
 
 **Suscribirse al Observable fuente con cada click, desencadenando una nueva petición AJAX con un id aleatorio**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-repeatwhen-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-repeatwhen-2?file=index.ts)
 
 ```typescript
 import { repeatWhen, map } from "rxjs/operators";
@@ -97,13 +89,8 @@ source
   .subscribe((data) => console.log(data));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeatWhen.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/repeatWhen.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/repeatWhen">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/repeatWhen)

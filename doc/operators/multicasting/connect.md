@@ -3,28 +3,16 @@
 #### Crea un Observable al multidifundir el Observable fuente dentro de una función que permite al desarrollador definir el uso del multicast tras la conexión
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `connect<T, O extends ObservableInput<unknown>>(selector: (shared: Observable<T>) => O, config: ConnectConfig<T> = DEFAULT_CONFIG): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr>
-<td>selector</td>
-<td> `(shared: Observable<T>) => O` </td>
-<td>La función utilizara para configurar el <i>multicast</i>. Proporciona un Observable multidifundido que todavía no ha sido conectado. Se espera que el desarrollador utilice esto para crear y retornar un Observable, que al ser suscrito, utilizará el Observable multidifundido. Tras ejecutar esta función - y una vez nos hayamos suscrito a su valor de retorno - el operador se suscribirá a la fuente, y la conexión se realizará.</td>
-</tr>
-<tr>
-<td>config</td>
-<td>`ConnectConfig<T>`</td>
-<td>Opcional. El valor por defecto es DEFAULT_CONFIG. El objeto de configuración para connect.</td>
-</tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 

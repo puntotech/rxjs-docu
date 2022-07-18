@@ -1,29 +1,26 @@
 # finalize
 
-<h2 class="subtitle"> Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en complete o en error></h2>
+## Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en complete o en error>
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `finalize<T>(callback: () => void): MonoTypeOperatorFunction<T>`
 
-### Parameters
+#### Parameters
 
-<table>
-<tr><td>callback</td><td>Función que se llamará cuando la fuente se termine.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que refleja la fuente, pero que hará una llamada a la función proporcionada tras la terminación de la fuente.
 
-## Ejemplos
+### Ejemplos
 
-**Ejecutar la función _callback_ tras la compleción del Observable**
+**Ejecutar la función **_**callback**_** tras la compleción del Observable**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-1?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -39,9 +36,9 @@ fruit$
 
 `finalize`
 
-**La función _callback_ se ejecuta aunque ocurra un error**
+**La función **_**callback**_** se ejecuta aunque ocurra un error**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-2?file=index.ts)
 
 ```javascript
 import { throwError } from "rxjs";
@@ -55,9 +52,9 @@ error$
 // Output: (error) '¡Oh no!', 'Ejecutando a pesar del error!'
 ```
 
-**Ejecutar la función _callback_ tras realizar todas las peticiones AJAX**
+**Ejecutar la función **_**callback**_** tras realizar todas las peticiones AJAX**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-finalize-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-finalize-3?file=index.ts)
 
 ```javascript
 import { finalize, take, map, mergeAll } from "rxjs/operators";
@@ -76,13 +73,10 @@ ghibliFilm$
 // Salida: Castle in the Sky, Grave of the Fireflies, My Neighbor Totoro, Flujo Completado, Peticiones Realizadas
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/finalize.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/finalize)
 
-<a target="_blank" href="https://rxjs.dev/api/operators/finalize">Documentación oficial en inglés</a>
+</details>

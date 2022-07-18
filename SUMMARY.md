@@ -1,10 +1,8 @@
-# RxJS Docu
+# Table of contents
 
-- [Introducción](doc/introduction.md)
-
-- Operadores
-
-  - Combinación
+- [Introducción](README.md)
+- [Operadores](operadores/README.md)
+  - [Combinación](operadores/combination/README.md)
     - [combineAll](doc/operators/combination/combineAll.md)
     - [combineLatest](doc/operators/combination/combineLatest.md)
     - [concat](doc/operators/combination/concat.md)
@@ -18,14 +16,14 @@
     - [switchAll](doc/operators/combination/switchAll.md)
     - [withLatestFrom](doc/operators/combination/withLatestFrom.md)
     - [zip](doc/operators/combination/zip.md)
-  - Condicional
+  - [Condicional](operadores/conditional/README.md)
     - [defaultIfEmpty](doc/operators/conditional/defaultIfEmpty.md)
     - [every](doc/operators/conditional/every.md)
     - [find](doc/operators/conditional/find.md)
     - [findIndex](doc/operators/conditional/findIndex.md)
     - [isEmpty](doc/operators/conditional/isEmpty.md)
     - [sequenceEqual](doc/operators/conditional/sequenceEqual.md)
-  - Creación
+  - [Creación](operadores/creation/README.md)
     - [ajax](doc/operators/creation/ajax.md)
     - [defer](doc/operators/creation/defer.md)
     - [from](doc/operators/creation/from.md)
@@ -39,11 +37,11 @@
     - [range](doc/operators/creation/range.md)
     - [throwError](doc/operators/creation/throwError.md)
     - [timer](doc/operators/creation/timer.md)
-  - [Gestión de Errores]
+  - [Gestión de Errores](operadores/handling/README.md)
     - [catchError](doc/operators/error-handling/catchError.md)
     - [retry](doc/operators/error-handling/retry.md)
     - [retryWhen](doc/operators/error-handling/retryWhen.md)
-  - Filtración
+  - [Filtración](operadores/filtering/README.md)
     - [audit](doc/operators/filtering/audit.md)
     - [auditTime](doc/operators/filtering/auditTime.md)
     - [debounce](doc/operators/filtering/debounce.md)
@@ -69,12 +67,12 @@
     - [takeWhile](doc/operators/filtering/takeWhile.md)
     - [throttle](doc/operators/filtering/throttle.md)
     - [throttleTime](doc/operators/filtering/throttleTime.md)
-  - Agregación
+  - [Matemáticos y Agregación](operadores/aggregate/README.md)
     - [count](doc/operators/mathematical-aggregate/count.md)
     - [max](doc/operators/mathematical-aggregate/max.md)
     - [min](doc/operators/mathematical-aggregate/min.md)
     - [reduce](doc/operators/mathematical-aggregate/reduce.md)
-  - Multidifusión
+  - [Multidifusión](operadores/multicasting/README.md)
     - [connect](doc/operators/multicasting/connect.md)
     - [multicast](doc/operators/multicasting/multicast.md)
     - [publish](doc/operators/multicasting/publish.md)
@@ -84,7 +82,7 @@
     - [refCount](doc/operators/multicasting/refCount.md)
     - [share](doc/operators/multicasting/share.md)
     - [shareReplay](doc/operators/multicasting/shareReplay.md)
-  - Transformación
+  - [Transformación](operadores/transformation/README.md)
     - [buffer](doc/operators/transformation/buffer.md)
     - [bufferCount](doc/operators/transformation/bufferCount.md)
     - [bufferTime](doc/operators/transformation/bufferTime.md)
@@ -112,7 +110,7 @@
     - [windowTime](doc/operators/transformation/windowTime.md)
     - [windowToggle](doc/operators/transformation/windowToggle.md)
     - [windowWhen](doc/operators/transformation/windowWhen.md)
-  - Utilidad
+  - [Utilidad](operadores/utility/README.md)
     - [delay](doc/operators/utility/delay.md)
     - [delayWhen](doc/operators/utility/delayWhen.md)
     - [dematerialize](doc/operators/utility/dematerialize.md)
@@ -128,21 +126,16 @@
     - [timeoutWith](doc/operators/utility/timeoutWith.md)
     - [timestamp](doc/operators/utility/timestamp.md)
     - [toArray](doc/operators/utility/toArray.md)
-
-- Conceptos
-
+- [Conceptos](conceptos/README.md)
   - [Observables](doc/concepts/observables.md)
   - [Observadores](doc/concepts/observer.md)
   - [Operadores](doc/concepts/operators.md)
   - [Schedulers](doc/concepts/schedulers.md)
   - [Sujetos](doc/concepts/subjects.md)
   - [Suscripción](doc/concepts/subscription.md)
-  - [Testing de Canicas](doc/concepts/testing/marble-testing.md)
-
-- API
-
-  - Índice
-
+  - [Testing de Canicas](conceptos/testing-de-canicas.md)
+- [API](api/README.md)
+  - [Índice](api/indice/README.md)
     - [ArgumentOutOfRangeError](doc/api/index/ArgumentOutOfRangeError.md)
     - [bindCallback](doc/api/index/bindCallback.md)
     - [bindNodeCallback](doc/api/index/bindNodeCallback.md)
@@ -187,36 +180,26 @@
     - [Unsubscribable](doc/api/index/Unsubscribable.md)
     - [UnsubscriptionError](doc/api/index/UnsubscriptionError.md)
     - [VirtualTimeScheduler](doc/api/index/VirtualTimeScheduler.md)
-
-  - ajax
-
+  - [ajax](api/ajax/README.md)
     - [AjaxError](doc/api/ajax/AjaxError.md)
     - [AjaxRequest](doc/api/ajax/AjaxRequest.md)
     - [AjaxResponse](doc/api/ajax/AjaxResponse.md)
     - [AjaxTimeoutError](doc/api/ajax/AjaxTimeoutError.md)
-
-  - Schedulers
-
+  - [Schedulers](api/schedulers/README.md)
     - [animationFrame](doc/api/schedulers/animationFrame.md)
     - [asap](doc/api/schedulers/asap.md)
     - [async](doc/api/schedulers/async.md)
     - [queue](doc/api/schedulers/queue.md)
-
-  - Sujetos
-
+  - [Sujetos](api/sujetos/README.md)
     - [AsyncSubject](doc/api/subjects/AsyncSubject.md)
     - [BehaviorSubject](doc/api/subjects/BehaviorSubject.md)
     - [ReplaySubject](doc/api/subjects/ReplaySubject.md)
     - [Subject](doc/api/subjects/Subject.md)
     - [WebSocketSubject](doc/api/subjects/WebSocketSubject.md)
-
   - [webSocket](doc/api/webSocket/webSocket.md)
-
     - [WebSocketSubjectConfig](doc/api/webSocket/WebSocketSubjectConfig.md)
-
-  - Testing
-
-    - [TestScheduler](doc/api/testing/TestScheduler.md)
+  - [Testing](api/testing/README.md) \* [TestScheduler](doc/api/testing/TestScheduler.md)
+    > > > > > > > 67c33f9ba68b0d41d070ed5c5ecb540f8bb8c8b3
 
 ## Guías
 

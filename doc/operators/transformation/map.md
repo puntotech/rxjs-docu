@@ -1,24 +1,18 @@
 # map
 
-<h2 class="subtitle"> Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
-</h2>
+## Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `map<T, R>(project: (value: T, index: number) => R, thisArg?: any): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>La función que se aplica a cada valor emitido por el Observable fuente. El parámetro `index` es el número `i` para la `i`ésima emisión que haya ocurrido desde la suscripción, comenzando por el número 0.</td></tr>
-<tr><td>thisArg</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Un argumento opcional para definir el valor del <code>this</code> en la función de proyección.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`: Un Observable que emite los valores del Observable fuente transformados por la función de proyección.
 
@@ -28,7 +22,7 @@ Un argumento opcional para definir el valor del <code>this</code> en la función
 
 Al igual que `Array.prototype.map()`, aplica una función de transformación a cada uno de los valores emitidos por la fuente, para obtener los valores de salida correspondientes.
 
-<img src="assets/images/marble-diagrams/transformation/map.png" alt="Diagrama de canicas del operador map">
+![Diagrama de canicas del operador map](assets/images/marble-diagrams/transformation/map.png)
 
 Al igual que la función `Array.prototype.map`, este operador aplica una función de proyección a cada valor y emite dicha proyección en el Observable resultante.
 
@@ -36,7 +30,7 @@ Al igual que la función `Array.prototype.map`, este operador aplica una funció
 
 **Multiplicar cada número por 2**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-map-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-map-1?file=index.ts)
 
 ```javascript
 import { map } from "rxjs/operators";
@@ -50,7 +44,7 @@ number$.pipe(map((number) => number * 2)).subscribe(console.log);
 
 **Emitir la propiedad code de cada objeto KeyboardEvent**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-map-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-map-2?file=index.ts)
 
 ```typescript
 import { map } from "rxjs/operators";
@@ -75,13 +69,8 @@ const positions = clicks.pipe(map((ev) => ev.clientX));
 positions.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/map.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/map">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/map)

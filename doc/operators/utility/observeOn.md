@@ -1,24 +1,20 @@
 # observeOn
 
-<h2 class="subtitle"> Reemite todas las notificaciones del Observable fuente con el planificador especificado
-</h2>
+## Reemite todas las notificaciones del Observable fuente con el planificador especificado
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `observeOn<T>(scheduler: SchedulerLike, delay: number = 0): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>scheduler</td>El planificador que se utilizará para replanificar las notificaciones del Observable fuente.<td></td></tr>
-<tr><td>delay</td><td>Opcional. El valor por defecto es 0.
-El número de milisegundos de retraso que se aplicará a la replanificación de cada notificación.</td></tr>
-</table>
+El planificador que se utilizará para replanificar las notificaciones del Observable fuente.
 
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite las mismas notificaciones que el Observable fuente, pero con el planificador especificado.
 
@@ -38,7 +34,7 @@ De hecho, el operador `observeOn` acepta un segundo parámetro, que especifica e
 
 **Utilizar el planificador animationFrameScheduler para que la animación sea más fluida**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-observeon-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-observeon-1?file=index.ts)
 
 ```javascript
 import { interval, animationFrameScheduler } from "rxjs";
@@ -73,13 +69,8 @@ intervals
   });
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/observeOn.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/observeOn">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/observeOn)

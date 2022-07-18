@@ -1,19 +1,20 @@
 # materialize
 
-<h2 class="subtitle">Representa todas las notificaciones next del Observable fuente como emisiones marcadas con sus tipos originales, dentro de objetos Notification</h2>
+## Representa todas las notificaciones next del Observable fuente como emisiones marcadas con sus tipos originales, dentro de objetos Notification
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `materialize<T>(): OperatorFunction<T, Notification<T>>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, Notification<T>>`: Un Observable que emite objetos Notification que contienen las emisiones originales del Observable fuente, además de sus metadatos correspondientes.
 
@@ -23,11 +24,11 @@ No recibe ningún parámetro.
 
 Envuelve emisiones next, error y complete en objetos Notification, emitidos como valores next en el Observable resultante.
 
-<img src="assets/images/marble-diagrams/utility/materialize.png" alt="Diagrama de canicas del operador materialize">
+![Diagrama de canicas del operador materialize](assets/images/marble-diagrams/utility/materialize.png)
 
 materialize retorna un Observable que emite una notificación next por cada emisión next, error o complete del Observable fuente. Cuando el Observable fuente emite complete, el Observable resultante emitirá una Notificación de tipo complete, como valor next, y se completará también. Cuando el Observable fuente emite un error, el Observable resultante emitirá una Notificación de tipo error como valor next, y se completará.
 
-Este operador es útil para producir metadatos de las emisiones del Observable fuente, que se consumen en forma de notificaciones next. Se suele utilizar en conjunto con [dematerialize](/operators/utility/dematerialize).
+Este operador es útil para producir metadatos de las emisiones del Observable fuente, que se consumen en forma de notificaciones next. Se suele utilizar en conjunto con [dematerialize](../../../operators/utility/dematerialize/).
 
 ## Ejemplos
 
@@ -52,13 +53,8 @@ materialized.subscribe((x) => console.log(x));
 //   [as project] (http://1…, hasValue: false}
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/materialize.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/materialize.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/materialize">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/materialize)

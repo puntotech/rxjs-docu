@@ -1,26 +1,22 @@
 # skipLast
 
-<h2 class="subtitle"> Saltar las últimas x emisiones del Observable fuente
-</h2>
+## Saltar las últimas x emisiones del Observable fuente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `skipLast<T>(count: number): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>count</td><td>El número de elementos que saltarse del final del Observable fuente.</td></tr>
-</table>
-
-### Retornar
+#### Retornar
 
 `MonoTypeOperatorFunction<T>`: Un Observable que se salta los últimos `count` valores emitidos por el Observable fuente.
 
-### Lanza
+#### Lanza
 
 `ArgumentOutOfRangeError` Al usar `skipLast(i)`, se lanza un error `ArgumentOutOrRangeError` si `i < 0`.
 
@@ -30,7 +26,7 @@
 
 Se salta las últimas `count` emisiones del Observable fuente.
 
-<img src="assets/images/marble-diagrams/filtering/skipLast.png" alt="Diagrama de canicas del operador skipLast">
+![Diagrama de canicas del operador skipLast](assets/images/marble-diagrams/filtering/skipLast.png)
 
 `skipLast` retorna un Observable que acumula una cola de tamaño suficiente para almacenar los primeros `count` valores. Al recibirse más emisiones, se obtienen los valores del principio de la cola y se emiten en el Observable resultante. Esto hace que las emisiones se retrasen.
 
@@ -38,7 +34,7 @@ Se salta las últimas `count` emisiones del Observable fuente.
 
 **Saltar los últimos 5 números**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-skiplast-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-skiplast-1?file=index.ts)
 
 ```javascript
 import { skipLast } from "rxjs/operators";
@@ -52,7 +48,7 @@ number$.pipe(skipLast(5)).subscribe(console.log);
 
 **Saltar el último valor**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-skiplast-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-skiplast-2?file=index.ts)
 
 ```javascript
 import { skipLast } from "rxjs/operators";
@@ -84,13 +80,8 @@ skipLastTwo.subscribe((x) => console.log(x));
 // 1 2 3
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipLast.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/skipLast.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/skipLast">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/skipLast)

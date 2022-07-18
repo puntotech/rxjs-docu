@@ -1,22 +1,18 @@
 # retryWhen
 
-<h2 class="subtitle"> Reintenta una secuencia Observable cuando ocurre un error
-</h2>
+## Reintenta una secuencia Observable cuando ocurre un error
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `retryWhen<T>(notifier: (errors: Observable<any>) => Observable<any>): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>notifier</td><td>Recibe un Observable de notificaciones con las que el usuario puede hacer una llamada a <code>complete</code> o a <code>error</code>, abortando el reintento.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: El Observable fuente modificado con la lógica de reintento.
 
@@ -26,13 +22,13 @@
 
 Retorna un Observable que refleja el Observable fuente con la excepción de un error. Si el Observable fuente lanza un error, `retryWhen` emitirá el `Throwable` que provocó el error al Observable retornado por `notifier`. Si ese Observable hace una llamada a `complete` o a `error`, entonces este operador llamará a `complete` o a `error` en la suscripción hija. En caso contrario, `retryWhen` se resuscribirá al Observable fuente.
 
-<img src="assets/images/marble-diagrams/error-handling/retryWhen.png" alt="Diagrama de canicas del operador retryWhen">
+![Diagrama de canicas del operador retryWhen](assets/images/marble-diagrams/error-handling/retryWhen.png)
 
 ## Ejemplos
 
 **Reintentar una secuencia Observable tras esperar un tiempo determinado, sin un número limitado de intentos**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retrywhen?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retrywhen?file=index.ts)
 
 ```javascript
 import { interval, timer, throwError } from "rxjs";
@@ -63,7 +59,7 @@ number$
 
 **Reintentar una secuencia Observable tras esperar un tiempo determinado, con un número limitado de intentos**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-retrywhen-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-retrywhen-2?file=index.ts)
 
 ```javascript
 import {
@@ -107,13 +103,8 @@ pokemonId$
 // Salida: 'Reintentado 2 veces, con un retraso de 3000ms, pero ha ocurrido un error: ajax error 404', 'charmeleon', 'charizard', '¡Completado!'
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retryWhen.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/retryWhen.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/retryWhen">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/retryWhen)

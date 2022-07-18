@@ -1,22 +1,18 @@
 # combineLatest
 
-<h2 class="subtitle"> Combina varios Observables para crear otro Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
-</h2>
+## Combina varios Observables para crear otro Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `combineLatest<O extends ObservableInput<any>, R>(...observables: (SchedulerLike | O | ((...values: ObservedValueOf<O>[]) => R))[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>(SchedulerLike | O | ((...values: ObservedValueOf[]) => R))[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`: Un Observable de valores proyectados a partir de las emisiones más recientes de cada Observable de entrada, o un array de los de las emisiones más recientes de cada Observable de entrada.
 
@@ -26,7 +22,7 @@
 
 Cuando uno de los Observables de entrada emite un valor, utiliza las últimas emisiones de todos los Observables de entrada para computar el valor que se emite en el Observable resultante.
 
-<img src="assets/images/marble-diagrams/join-creation/combineLatest.png" alt="Diagrama de canicas del operador combineLatest">
+![Diagrama de canicas del operador combineLatest](assets/images/marble-diagrams/join-creation/combineLatest.png)
 
 `combineLatest` combina los valores de todos los Observables de entrada. Para ello, se suscribe a cada uno de los Observables en orden, y cuando alguno de los Observables emite, recoge las emisiones más recientes de cada uno en un array. Por tanto, si se le proporcionan _n_ Observables al operador, el Observable retornado siempre emitirá un array de _n_ valores, en el orden en el que los Observables se hayan pasado como parámetros (el valor del primer Observable estará en la primera posición del array etc.)
 
@@ -97,820 +93,391 @@ bmi.subscribe((x) => console.log("BMI es " + x));
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1], resultSelector: (v1: ObservedValueOf<O1>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1]</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2]</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3]</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4]</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf, v4: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4, O5], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4, O5]</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf, v4: ObservedValueOf, v5: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4, O5, O6], resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>, v6: ObservedValueOf<O6>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4, O5, O6]</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf, v4: ObservedValueOf, v5: ObservedValueOf, v6:</code> ObservedValueOf) => R.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: O[], resultSelector: (...args: ObservedValueOf<O>[]) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>O[]</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(...args: ObservedValueOf[]) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, resultSelector: (v1: ObservedValueOf<O1>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
+#### Firma
 
-<div class="overload-section">
+combineLatest(v1: O1, v2: O2, resultSelector: (v1: ObservedValueOf, v2: ObservedValueOf) => R, scheduler?: `SchedulerLike): Observable<R>`
 
-### Firma
+#### Parámetros
 
-combineLatest(v1: O1, v2: O2, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>) => R, scheduler?: `SchedulerLike): Observable<R>`
-
-### Parámetros
-
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf, v4: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf, v4: ObservedValueOf, v5: ObservedValueOf) => R</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, resultSelector: (v1: ObservedValueOf<O1>, v2: ObservedValueOf<O2>, v3: ObservedValueOf<O3>, v4: ObservedValueOf<O4>, v5: ObservedValueOf<O5>, v6: ObservedValueOf<O6>) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>O6</code>.</td></tr>
-<tr><td>resultSelector</td><td>Tipo: <code>(v1: ObservedValueOf, v2: ObservedValueOf, v3: ObservedValueOf, v4: ObservedValueOf, v5: ObservedValueOf, v6:</code> ObservedValueOf) => R.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1]</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2]</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3]</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4]</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4, O5], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4, O5]</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1, O2, O3, O4, O5, O6], scheduler: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4, O5, O6]</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: O[], scheduler: SchedulerLike): Observable<ObservedValueOf<O>[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>O[]</code>.</td></tr>
-<tr><td>scheduler</td><td>Tipo: <code>SchedulerLike</code>.
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValueOf<O>[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(sources: [O1]): Observable<[ObservedValueOf<O1>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1]</code>.</td></tr>
-<tr><td></td><td>`Observable<[ObservedValueOf<O1>]>`
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `combineLatest(sources: [O1, O2]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
-</div>
+#### Firma
 
-<div class="overload-section">
+#### Parámetros
 
-### Firma
-
-### Parámetros
-
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2]</code>.</td></tr>
-<tr><td></td><td>`Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
-</td></tr>
-
-</table>
-
-### Retorna
+#### Retorna
 
 `combineLatest(sources: [O1, O2, O3]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
-</div>
+#### Firma
 
-<div class="overload-section">
+#### Parámetros
 
-### Firma
-
-### Parámetros
-
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3]</code>.</td></tr>
-<tr><td></td><td>`Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `combineLatest(sources: [O1, O2, O3, O4]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
-</div>
+#### Firma
 
-<div class="overload-section">
+#### Parámetros
 
-### Firma
+#### Retorna
 
-### Parámetros
+\`combineLatest(sources: \[O1, O2, O3, O4, O5]): Observable<\[ObservedValueOf, ObservedValueOf, ObservedValueOf, ObservedValueOf,
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4]</code>.</td></tr>
-<tr><td></td><td>`Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
-</td></tr>
-</table>
+#### FirmaObservedValueOf]>\`
 
-### Retorna
+#### Parámetros
 
-`combineLatest(sources: [O1, O2, O3, O4, O5]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>,
+#### Retorna
 
-</div>
+\`combineLatest(sources: \[O1, O2, O3, O4, O5, O6]): Observable<\[ObservedValueOf, ObservedValueOf, ObservedValueOf, ObservedValueOf,
 
-<div class="overload-section">
+#### FirmaObservedValueOf, ObservedValueOf]>\`
 
-### FirmaObservedValueOf<O5>]>`
+#### Parámetros
 
-### Parámetros
-
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4, O5]</code>.</td></tr>
-<tr><td></td><td>`Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
-</td></tr>
-</table>
-
-### Retorna
-
-`combineLatest(sources: [O1, O2, O3, O4, O5, O6]): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>,
-
-</div>
-
-<div class="overload-section">
-
-### FirmaObservedValueOf<O5>, ObservedValueOf<O6>]>`
-
-### Parámetros
-
-<table>
-<tr><td>sources</td><td>Tipo: <code>[O1, O2, O3, O4, O5, O6]</code>.</td></tr>
-<tr><td></td><td>`Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, `ObservedValueOf<O6>]></td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `combineLatest(sources: O[]): Observable<ObservedValueOf<O>[]>`
 
-</div>
+#### Firma
 
-<div class="overload-section">
+#### Parámetros
 
-### Firma
-
-### Parámetros
-
-<table>
-<tr><td>sources</td><td>Tipo: <code>O[]</code>.</td></tr>
-<tr><td></td><td>`Observable<ObservedValueOf<O>[]>`
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `combineLatest(v1: O1, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>]>`
 
-</div>
+#### Firma
 
-<div class="overload-section">
+#### Parámetros
 
-### Firma
-
-### Parámetros
-
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td></td><td></td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(v1: O1, v2: O2, v3: O3, v4: O4, v5: O5, v6: O6, scheduler?: SchedulerLike): Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>O1</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>O2</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>O3</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>O4</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>O5</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>O6</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[ObservedValueOf<O1>, ObservedValueOf<O2>, ObservedValueOf<O3>, ObservedValueOf<O4>, ObservedValueOf<O5>, ObservedValueOf<O6>]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(...observables: O[]): Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>O[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(...observables: any[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(array: O[], resultSelector: (...values: ObservedValueOf<O>[]) => R, scheduler?: SchedulerLike): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>array</td><td>Tipo: <code>O[]</code>.</td></tr>
-<tr><td>resultSelector</td>Tipo: <code>(...values: ObservedValueOf[]) => R</code>.<td></td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
+Tipo: `(...values: ObservedValueOf[]) => R`.
 
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(...observables: (SchedulerLike | O)[]): Observable<any[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>(SchedulerLike | O)[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<any[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(...observables: (SchedulerLike | O | ((...values: ObservedValueOf<O>[]) => R))[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>(SchedulerLike | O | ((...values: ObservedValueOf[]) => R))[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `combineLatest(...observables: any[]): Observable<R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>observables</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<R>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineLatest.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/combineLatest.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/combineLatest">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/combineLatest)

@@ -1,20 +1,20 @@
 # dematerialize
 
-<h2 class="subtitle"> Convierte un Observable de objetos Notification en las emisiones que representan
-</h2>
+## Convierte un Observable de objetos Notification en las emisiones que representan
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `dematerialize<T>(): OperatorFunction<Notification<T>, T>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<Notification<T>, T>`: Un Observable que emite elementos y notificaciones embebidos en objetos `Notification` emitidos por el Observable fuente.
 
@@ -24,7 +24,7 @@ No recibe ningún parámetro.
 
 Transforma los objetos `Notification` en emisiones `next`, `error` y `complete`. Es el operador opuesto a `materialize`.
 
-<img src="assets/images/marble-diagrams/utility/dematerialize.png" alt="Diagrama de canicas del operador dematerialize">
+![Diagrama de canicas del operador dematerialize](assets/images/marble-diagrams/utility/dematerialize.png)
 
 `dematerialize` opera un Observable que únicamente emite objetos `Notification` como emisiones `next`, y no emite ningún error. Tal Observable es el resultado de una operación con `materialize`. Esas notificaciones se transforman mediante los metadatos que contienen, y se emiten como notificaciones `next`, `error` y `complete` en el Observable salida.
 
@@ -34,7 +34,7 @@ Se utiliza junto al operador `materialize`.
 
 **Convierte las Notificaciones en emisiones con el mismo valor y tipo (error, next o complete)**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-dematerialize-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-dematerialize-1?file=index.ts)
 
 ```javascript
 import { dematerialize } from "rxjs/operators";
@@ -85,13 +85,8 @@ upperCase.subscribe(
 // TypeError: x.toUpperCase is not a function
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/dematerialize.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/dematerialize">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/dematerialize)

@@ -1,26 +1,20 @@
 # iif
 
-<h2 class="subtitle"> Decide qué Observable será suscrito en tiempo de suscripción
-</h2>
+## Decide qué Observable será suscrito en tiempo de suscripción
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `iif<T = never, F = never>(condition: () => boolean, trueResult: SubscribableOrPromise<T> = EMPTY, falseResult: SubscribableOrPromise<F> = EMPTY): Observable<T | F>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>condition</td>Condition which Observable should be chosen.<td></td></tr>
-<tr><td>trueResult</td><td>Opcional. El valor por defecto es <code>EMPTY</code>.
-Tipo: <code>SubscribableOrPromise</code>.</td></tr>
-<tr><td>falseResult</td><td>Opcional. El valor por defecto es <code>EMPTY</code>.
-Tipo: <code>SubscribableOrPromise</code>.</td></tr>
-</table>
+Condition which Observable should be chosen.
 
-### Retorna
+#### Retorna
 
 `Observable<T | F>`: Según la condición, devuelve el primer o el segundo Observable.
 
@@ -37,39 +31,6 @@ Los Observables para ambos casos (_true_ y _false_) son opcionales. Si la condic
 En el caso de tener lógica más compleja que requiera decidir entre más de dos Observables, el operador `defer` probablemente sea una opción mejor. De hecho, el comportamiento del operador `iif` se puede implementar fácilmente con el operador `defer`, y existe únicamente por razones de conveniencia y legibilidad.
 
 ## Ejemplos
-
-<!-- TODO change example -->
-
-<!-- Realizar una u otra petición en función de si el número emitido por el Observable fuente es par o impar
-
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-iif-1?file=index.ts">StackBlitz</a>
-
-```javascript
-import { iif, range } from "rxjs";
-import { mergeMap, map } from "rxjs/operators";
-import { ajax } from "rxjs/ajax";
-
-function getPokemonName(id: number) {
-  return ajax
-    .getJSON(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    .pipe(map(({ name }) => name));
-}
-
-function getRickMortyCharacterName(id: number) {
-  return ajax
-    .getJSON(`https://rickandmortyapi.com/api/character/${id}`)
-    .pipe(map(({ name }) => name));
-}
-
-range(1, 4)
-  .pipe(
-    mergeMap((n) =>
-      iif(() => n % 2 === 0, getPokemonName(n), getRickMortyCharacterName(n))
-    )
-  )
-  .subscribe(console.log, console.error);
-// Salida: Rick Sanchez, ivysaur, Summer Smith, charmander
-``` -->
 
 ## Ejemplos de la documentación oficial
 
@@ -125,13 +86,8 @@ observableIfYouHaveAccess.subscribe(
 // "The end"
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/iif.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/iif">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/iif)

@@ -1,19 +1,20 @@
 # ignoreElements
 
-<h2 class="subtitle">Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a <code>complete</code> o a <code>error</code></h2>
+## Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a `complete` o a `error`
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `ignoreElements(): OperatorFunction<any, never>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<any, never>`: Un Observable vacío que solo propaga las llamadas `complete` o `error` que haga el Observable fuente.
 
@@ -21,13 +22,13 @@ No recibe ningún parámetro
 
 ## Descripción
 
-<img src="assets/images/marble-diagrams/filtering/ignoreElements.png" alt="Diagrama de canicas del operador ignoreElements">
+![Diagrama de canicas del operador ignoreElements](assets/images/marble-diagrams/filtering/ignoreElements.png)
 
 ## Ejemplos
 
 **Ignorar todos los valores del Observable fuente hasta que se complete**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ignoreelements?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ignoreelements?file=index.ts)
 
 ```javascript
 import { ignoreElements } from "rxjs/operators";
@@ -50,7 +51,7 @@ hater$
 
 **Si ocurre un error, será emitido**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-ignoreelements-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-ignoreelements-2?file=index.ts)
 
 ```javascript
 import { ignoreElements } from "rxjs/operators";
@@ -83,13 +84,8 @@ of("you", "talking", "to", "me")
 // 'the end'
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/ignoreElements.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/ignoreElements.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/ignoreElements">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/ignoreElements)

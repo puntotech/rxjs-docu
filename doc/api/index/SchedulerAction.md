@@ -16,32 +16,14 @@ remove(subscription: Subscription): void
 
 ## Métodos
 
-<table>
-<tr><th>schedule()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>schedule(state?: T, delay?: number): Subscription</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>state</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>T</code>.</td></tr>
-<tr><td>delay</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-
-<code>Subscription</code>
-
-</td></tr>
-</table>
+| schedule()                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>schedule(state?: T, delay?: number): Subscription</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>state</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>T</code>.</td></tr><tr><td>delay</td><td>Opcional. El valor por defecto es <code>undefined</code>. Tipo: <code>number</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscription</code></p> |                                                                |
+| state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Opcional. El valor por defecto es `undefined`. Tipo: `T`.      |
+| delay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Opcional. El valor por defecto es `undefined`. Tipo: `number`. |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/types.ts#L97-L99">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/types.ts#L97-L99)
 
-<a target="_blank" href="https://rxjs.dev/api/index/interface/SchedulerAction">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/interface/SchedulerAction)

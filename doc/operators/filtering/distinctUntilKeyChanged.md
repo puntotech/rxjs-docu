@@ -1,25 +1,18 @@
 # distinctUntilKeyChanged
 
-<h2 class="subtitle"> Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
-</h2>
+## Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `distinctUntilKeyChanged<T, K extends keyof T>(key: K, compare?: (x: T[K], y: T[K]) => boolean): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>key</td><td>Clave de la propiedad del objeto que se desea comparar.</td></tr>
-<tr><td>compare</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Función de comparación opcional que se utiliza para comprobar si un elemento es distinto al elemento anterior.</td></tr>
-
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente si la propiedad especificada es distinta a la del elemento anterior.
 
@@ -35,7 +28,7 @@ Si no se proporciona una función de comparación, se utiliza una verificación 
 
 **Emitir solo cuando la tecla pulsada sea distinta a la tecla pulsada anterior**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-1?file=index.ts)
 
 ```typescript
 import { distinctUntilKeyChanged, map } from "rxjs/operators";
@@ -52,7 +45,7 @@ key$.subscribe(console.log);
 
 **Emitir el objeto lenguaje si su propiedad name es distinta a la del objeto anterior**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-2?file=index.ts)
 
 ```javascript
 import { distinctUntilKeyChanged } from "rxjs/operators";
@@ -80,7 +73,7 @@ language$.pipe(distinctUntilKeyChanged("name")).subscribe(console.log);
 
 **Utilizar una función de comparación para ignorar las diferencias de mayúsculas/minúsculas**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-distinctuntilkeychanged-3?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -168,13 +161,8 @@ of<Person>(
 // { age: 5, name: 'Foo2' }
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilKeyChanged.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/distinctUntilKeyChanged">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/distinctUntilKeyChanged)

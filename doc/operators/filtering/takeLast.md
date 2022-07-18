@@ -1,26 +1,22 @@
 # takeLast
 
-<h2 class="subtitle"> Emite las últimas x emisiones del Observable fuente
-</h2>
+## Emite las últimas x emisiones del Observable fuente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `takeLast<T>(count: number): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>count</td><td>El máximo número de valores que se emitirán del final de la secuencia de emisiones del Observable fuente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite las últimas `count` emisiones del Observable fuente.
 
-### Lanza
+#### Lanza
 
 `ArgumentOutOfRangeError` Al usar `takeLast(i)`, se lanza un Error `ArgumentOutOrRangeError` si `i < 0`.
 
@@ -30,7 +26,7 @@
 
 Almacena los últimos `count` valores, y los emite cuando el Observable fuente se completa.
 
-<img src="assets/images/marble-diagrams/filtering/takeLast.png" alt="Diagrama de canicas del operador takeLast">
+![Diagrama de canicas del operador takeLast](assets/images/marble-diagrams/filtering/takeLast.png)
 
 `takeLast` retorna un Observable que emite los últimos `count` valores emitidos por el Observable fuente. Si la fuente emite menos de `count` valores, se emitirán todos. Este operador debe esperar a que el Observable fuente se complete para poder emitir los últimos `count` valores en el Observable resultante, ya que, de lo contrario, es imposible saber si el Observable fuente emitirá o no más valores. Por esta razón, todos los valores se emiten de forma síncrona, seguidos de la notificación `complete`.
 
@@ -38,7 +34,7 @@ Almacena los últimos `count` valores, y los emite cuando el Observable fuente s
 
 **Emitir el último valor de un Observable**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-takelast-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-takelast-1?file=index.ts)
 
 ```javascript
 import { takeLast } from "rxjs/operators";
@@ -56,7 +52,7 @@ language$.pipe(takeLast(1)).subscribe(console.log);
 
 **Si el Observable fuente emite más de count valores, se emitirán todos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-takelast-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-takelast-2?file=index.ts)
 
 ```javascript
 import { takeLast } from "rxjs/operators";
@@ -72,7 +68,7 @@ range$
 
 **Si el Observable fuente no se completa, no se emitirá ningún valor**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-takelast-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-takelast-3?file=index.ts)
 
 ```javascript
 import { takeLast } from "rxjs/operators";
@@ -99,13 +95,8 @@ const lastThree = many.pipe(takeLast(3));
 lastThree.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeLast.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeLast.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/takeLast">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/takeLast)

@@ -1,19 +1,20 @@
 # switchAll
 
-<h2 class="subtitle">Convierte un Observable de orden superior en uno de primer orden, produciendo valores únicamente de la secuencia Observable más reciente</h2>
+## Convierte un Observable de orden superior en uno de primer orden, produciendo valores únicamente de la secuencia Observable más reciente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `switchAll<T>(): OperatorFunction<ObservableInput<T>, T>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<ObservableInput<T>, T>`
 
@@ -23,7 +24,7 @@ No recibe ningún parámetro.
 
 Convierte un Observable de orden superior en uno de primer orden.
 
-<img src="assets/images/marble-diagrams/join-creation/switchAll.png" alt="Diagrama de canicas del operador switchAll">
+![Diagrama de canicas del operador switchAll](assets/images/marble-diagrams/join-creation/switchAll.png)
 
 switchAll se suscribe a un Observable de Observables, también conocido como un "Observable de orden superior" (o `Observable<Observable<T>>`.) Se suscribe al 'Observable interno' emitido por la fuente más reciente, cancelando la suscripción al Observable interno anterior, de manera que únicamente puede haber una suscripción a un Observable interno: al más reciente. El Observable resultante retornado por switchAll solo se completa si el Observable fuente se completa, y si el Observable interno suscrito también se completa.
 
@@ -49,13 +50,8 @@ source.pipe(switchAll()).subscribe((x) => console.log(x));
 // Salida: (click) 1, 2, 3, 4... (click) 1, 2, 3... (click) ...
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchAll.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/switchAll.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/switchAll">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/switchAll)

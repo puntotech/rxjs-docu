@@ -1,24 +1,18 @@
 # interval
 
-<h2 class="subtitle"> Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique</h2>
+## Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `interval(period: number = 0, scheduler: SchedulerLike = async): Observable<number>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>period</td><td>Opcional. El valor por defecto es 0.
-El tamaño del intervalo en milisegundos (por defecto) o en la unidad de tiempo determinada por el reloj del planificador.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto is async.
-El <code>SchedulerLike</code> que se utiliza para planificar la emisión de valores y para proporcionar la noción del "tiempo".</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<number>`: Un Observable que emite una secuencia incremental de números, emitiendo un valor en cada intervalo de tiempo.
 
@@ -28,7 +22,7 @@ El <code>SchedulerLike</code> que se utiliza para planificar la emisión de valo
 
 Emite una secuencia incremental de números periódicamente.
 
-<img src="assets/images/marble-diagrams/creation/interval.png" alt="Diagrama de canicas de interval">
+![Diagrama de canicas de interval](assets/images/marble-diagrams/creation/interval.png)
 
 `interval` retorna un Observable que emite una secuencia incremental infinita de números, con un intervalo de tiempo constante entre cada emisión. La primera emisión no se envía inmediatamente, sino al terminar el primer periodo de tiempo. Por defecto, este operador utiliza el `SchedulerLike` async para proporcionar una noción del tiempo, pero se le puede pasar cualquier otro `SchedulerLike` por parámetros.
 
@@ -36,7 +30,7 @@ Emite una secuencia incremental de números periódicamente.
 
 **Emitir una secuencia de números ascendente con un intervalo de 2 segundos entre cada emisión**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-interval?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-interval?file=index.ts)
 
 ```javascript
 import { interval } from "rxjs";
@@ -49,7 +43,7 @@ number$.subscribe(console.log);
 
 **Si no se le proporciona ningún valor a interval, emitirá valores cada 0ms**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-interval-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-interval-2?file=index.ts)
 
 ```javascript
 import { interval } from "rxjs";
@@ -76,13 +70,8 @@ takeFourNumbers.subscribe((x) => console.log("Next: ", x));
 // Salida: "Next: 0", "Next: 1", "Next: 2", "Next: 3"
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/interval.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/interval">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/interval)

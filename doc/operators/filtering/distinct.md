@@ -1,25 +1,18 @@
 # distinct
 
-<h2 class="subtitle"> Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
-</h2>
+## Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `distinct<T, K>(keySelector?: (value: T) => K, flushes?: Observable<any>): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>keySelector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Función opcional para seleccionar qué valor se quiere comprobar si es o no distinto.</td></tr>
-<tr><td>flushes</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Observable opcional para reiniciar el HashSet interno del operador.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite elementos del Observable fuente de distinto valor.
 
@@ -37,7 +30,7 @@ En otros entornos de ejecución, `distinct` utilizará una implementación míni
 
 **Usar distinct sin un selector**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinct-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-distinct-1?file=index.ts)
 
 ```javascript
 import { distinct } from "rxjs/operators";
@@ -59,7 +52,7 @@ fruit$.pipe(distinct()).subscribe(console.log);
 
 **Usar distinct con un selector de clave**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-distinct-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-distinct-2?file=index.ts)
 
 ```javascript
 import { distinct } from "rxjs/operators";
@@ -120,13 +113,8 @@ of<Person>(
 // { age: 7, name: 'Bar' }
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinct.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinct.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/distinct">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/distinct)

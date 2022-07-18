@@ -1,6 +1,6 @@
 # Subscriber
 
-<h2 class="subtitle">Implementa el interfaz Observador y extiende la clase Suscripción. Mientras el Observador es la API pública para consumir los valores de un Observable, todos los Observadores se convierten en Suscriptores, para poder proporcionar capacidades propias de la Suscripción, tal y como <code>unsubscribe</code>. <code>Subscriber</code> es un tipo común en RxJS y es crucial para implementar operadores, pero raramente se utiliza como API pública</h2>
+## Implementa el interfaz Observador y extiende la clase Suscripción. Mientras el Observador es la API pública para consumir los valores de un Observable, todos los Observadores se convierten en Suscriptores, para poder proporcionar capacidades propias de la Suscripción, tal y como `unsubscribe`. `Subscriber` es un tipo común en RxJS y es crucial para implementar operadores, pero raramente se utiliza como API pública
 
 ```typescript
 class Subscriber<T> extends Subscription implements Observer {
@@ -29,184 +29,73 @@ remove(subscription: Subscription): void
 
 ## Métodos Estáticos
 
-<table>
-<tr><th>create()</th></tr>
-<tr><td>Una factoría estática para un Suscriptor, dada una (posiblemente parcial) definición de un Observador.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>static create<T>(next?: (x?: T) => void, error?: (e?: any) => void, complete?: () => void): Subscriber<T></code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>next</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La <em>callback</em> next de un Observador.</td></tr>
-<tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La <em>callback</em> error de un Observador.</td></tr>
-<tr><td>complete</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La <em>callback</em> de un Observador.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>Subscriber<T></code>: Un Suscriptor que envuelve el Observador (parcialmente definido) representado por los argumentos dados.
-</td></tr>
-</table>
+| create()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Una factoría estática para un Suscriptor, dada una (posiblemente parcial) definición de un Observador.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                      |
+| <h4>Firma</h4><p><code>static create(next?: (x?: T) => void, error?: (e?: any) => void, complete?: () => void): Subscriber</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>next</td><td>Opcional. El valor por defecto es <code>undefined</code>. La <em>callback</em> next de un Observador.</td></tr><tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>. La <em>callback</em> error de un Observador.</td></tr><tr><td>complete</td><td>Opcional. El valor por defecto es <code>undefined</code>. La <em>callback</em> de un Observador.</td></tr></tbody></table><h4>Retorna</h4><p><code>Subscriber</code>: Un Suscriptor que envuelve el Observador (parcialmente definido) representado por los argumentos dados.</p> |                                                                                      |
+| next                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Opcional. El valor por defecto es `undefined`. La _callback_ next de un Observador.  |
+| error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Opcional. El valor por defecto es `undefined`. La _callback_ error de un Observador. |
+| complete                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Opcional. El valor por defecto es `undefined`. La _callback_ de un Observador.       |
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(destinationOrNext?: NextObserver<any> | ErrorObserver<any> | CompletionObserver<any> | ((value: T) => void), error?: (e?: any) => void, complete?: () => void)</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>destinationOrNext</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Un Observador parcialmente definido o una función <em>callback</em> next.</td></tr>
-<tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La <em>callback</em> error de un Observador.</td></tr>
-<tr><td>complete</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La <em>callback</em> complete de un Observador.</td></tr>
-</table>
-</td></tr>
-</table>
+| constructor()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>constructor(destinationOrNext?: NextObserver | ErrorObserver | CompletionObserver | ((value: T) => void), error?: (e?: any) => void, complete?: () => void)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>destinationOrNext</td><td>Opcional. El valor por defecto es <code>undefined</code>. Un Observador parcialmente definido o una función <em>callback</em> next.</td></tr><tr><td>error</td><td>Opcional. El valor por defecto es <code>undefined</code>. La <em>callback</em> error de un Observador.</td></tr><tr><td>complete</td><td>Opcional. El valor por defecto es <code>undefined</code>. La <em>callback</em> complete de un Observador.</td></tr></tbody></table> |                                                                                                                   |
+| destinationOrNext                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Opcional. El valor por defecto es `undefined`. Un Observador parcialmente definido o una función _callback_ next. |
+| error                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Opcional. El valor por defecto es `undefined`. La _callback_ error de un Observador.                              |
+| complete                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Opcional. El valor por defecto es `undefined`. La _callback_ complete de un Observador.                           |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>isStopped</td><td><code>boolean</code></td></tr>
-<tr><td>destination</td><td><code>PartialObserver<any> | Subscriber<any></code></td></tr>
-</table>
+| Propiedad   | Tipo                            | Descripción |
+| ----------- | ------------------------------- | ----------- |
+| isStopped   | `boolean`                       |             |
+| destination | `PartialObserver \| Subscriber` |             |
 
 ## Métodos
 
-<table>
-<tr><th>next()</th></tr>
-<tr><td>La <em>callback</em> Observador para recibir notificaciones de tipo next del Observable, con un valor. El Observable puede llamar a este método 0 o más veces.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>next(value?: T): void</code>
-<h3>Parámetros</h3>
+| next()                                                                                                                                                                                                                                                                                                                 |                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| La _callback_ Observador para recibir notificaciones de tipo next del Observable, con un valor. El Observable puede llamar a este método 0 o más veces.                                                                                                                                                                |                                                               |
+| <h4>Firma</h4><p><code>next(value?: T): void</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>value</td><td>Opcional. El valor por defecto es <code>undefined</code>. El valor next.</td></tr></tbody></table><h4>Retorna</h4><p><code>void</code>:</p> |                                                               |
+| value                                                                                                                                                                                                                                                                                                                  | Opcional. El valor por defecto es `undefined`. El valor next. |
 
-<table>
-<tr><td>value</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El valor next.</td></tr>
-</table>
+| error()                                                                                                                                                                                                                                                                                                                    |                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| La _callback_ Observador para recibir notificaciones de tipo error del Observable, con un error adjunto. Notifica al Observador que el Observable ha experimentado una condición de error.                                                                                                                                 |                                                                    |
+| <h4>Firma</h4><p><code>error(err?: any): void</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>err</td><td>Opcional. El valor por defecto es <code>undefined</code>. La excepción error.</td></tr></tbody></table><h4>Retorna</h4><p><code>void</code>:</p> |                                                                    |
+| err                                                                                                                                                                                                                                                                                                                        | Opcional. El valor por defecto es `undefined`. La excepción error. |
 
-<h3>Retorna</h3>
-<code>void</code>:
-</td></tr>
-</table>
+| complete()                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| La _callback_ Observador para recibir una notificación sin valor de tipo complete del Observable. Notifica al Observador que el Observable ha terminado de emitir notificaciones _push_ |
+| <h4>Firma</h4><p><code>complete(): void</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>void</code>:</p>                                        |
 
-<table>
-<tr><th>error()</th></tr>
-<tr><td>La <em>callback</em> Observador para recibir notificaciones de tipo error del Observable, con un error adjunto. Notifica al Observador que el Observable ha experimentado una condición de error.</td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>error(err?: any): void</code>
-<h3>Parámetros</h3>
+| unsubscribe()                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>unsubscribe(): void</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>void</code></p> |
 
-<table>
-<tr><td>err</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-La excepción error.</td></tr>
-</table>
+| \_next()                                                                                                                                                                                                                                                                     |            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| <h4>Firma</h4><p><code>protected _next(value: T): void</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>value</td><td>Tipo: <code>T</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>void</code></p> |            |
+| value                                                                                                                                                                                                                                                                        | Tipo: `T`. |
 
-<h3>Retorna</h3>
-<code>void</code>:
-</td></tr>
-</table>
+| \_error()                                                                                                                                                                                                                                                                     |              |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| <h4>Firma</h4><p><code>protected _error(err: any): void</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>err</td><td>Tipo: <code>any</code>.</td></tr></tbody></table><h4>Retorna</h4><p><code>void</code></p> |              |
+| err                                                                                                                                                                                                                                                                           | Tipo: `any`. |
 
-<table>
-<tr><th>complete()</th></tr>
-<tr><td>La <em>callback</em> Observador para recibir una notificación sin valor de tipo complete del Observable. Notifica al Observador que el Observable ha terminado de emitir notificaciones <em>push</em></td></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>complete(): void</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
+| \_complete()                                                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>protected _complete(): void</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>void</code></p> |
 
-<h3>Retorna</h3>
-<code>void</code>:
-</td></tr>
-</table>
-
-<table>
-<tr><th>unsubscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>unsubscribe(): void</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>void</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>_next()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>protected _next(value: T): void</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>value</td><td>Tipo: <code>T</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>void</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>_error()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>protected _error(err: any): void</code>
-<h3>Parámetros</h3>
-
-<table>
-<tr><td>err</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-<h3>Retorna</h3>
-<code>void</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>_complete()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>protected _complete(): void</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>void</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>_unsubscribeAndRecycle()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>_unsubscribeAndRecycle(): Subscriber<T></code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>Subscriber<T></code>
-</td></tr>
-</table>
+| \_unsubscribeAndRecycle()                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>_unsubscribeAndRecycle(): Subscriber</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>Subscriber</code></p> |
 
 ## Recursos adicionales
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Subscriber.ts#L8-L162">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/6.5.5/src/internal/Subscriber.ts#L8-L162)
 
-<a target="_blank" href="https://rxjs.dev/api/index/class/Subscriber">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/class/Subscriber)

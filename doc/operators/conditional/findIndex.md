@@ -1,24 +1,18 @@
 # findIndex
 
-<h2 class="subtitle"> Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
-</h2>
+## Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `findIndex<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): OperatorFunction<T, number>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Una función llamada con cada elemento para comprobar si se cumple o no la condición.</td></tr>
-<tr><td>thisArg</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Un argumento opcional para determinar el valor del <code>this</code> en la función <code>predicate</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, number>`: Un Observable del índice del primer elemento que cumpla la condición.
 
@@ -26,17 +20,17 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 ## Descripción
 
-Es como [find](/operators/conditional/find), pero emite el índice del valor encontrado, en lugar del propio valor.
+Es como [find](../../../operators/conditional/find/), pero emite el índice del valor encontrado, en lugar del propio valor.
 
-<img src="assets/images/marble-diagrams/conditional-boolean/findIndex.png" alt="Diagrama de canicas del operador findIndex">
+![Diagrama de canicas del operador findIndex](assets/images/marble-diagrams/conditional-boolean/findIndex.png)
 
-findIndex busca el primer elemento del Observable fuente que cumpla la condición especificada en el predicado y retorna su índice (de base cero.) Al contrario que [first](/operators/filtering/first), el predicado es obligatorio en findIndex, y tampoco emite un error si no encuentra un valor válido.
+findIndex busca el primer elemento del Observable fuente que cumpla la condición especificada en el predicado y retorna su índice (de base cero.) Al contrario que [first](../../../operators/filtering/first/), el predicado es obligatorio en findIndex, y tampoco emite un error si no encuentra un valor válido.
 
 ## Ejemplos
 
 **Emitir el índice del primer lenguaje de tipo Multiparadigma**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-findindex-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-findindex-1?file=index.ts)
 
 ```javascript
 import { findIndex } from "rxjs/operators";
@@ -57,7 +51,7 @@ language$
 
 **Emite el índice de la primera vez que se pulse la tecla x**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-findindex-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-findindex-2?file=index.ts)
 
 ```typescript
 import { findIndex, map } from "rxjs/operators";
@@ -87,13 +81,8 @@ const result = clicks.pipe(findIndex((ev) => ev.target.tagName === "DIV"));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/findIndex.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/findIndex">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/findIndex)

@@ -1,26 +1,18 @@
 # filter
 
-<h2 class="subtitle"> Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
-</h2>
+## Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `filter<T>(predicate: (value: T, index: number) => boolean, thisArg?: any): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>predicate</td><td>Una función que evalúa cada valor emitido por el Observable fuente. Si retorna <code>true</code>, el valor se emite. Si retorna <code>false</code>, el valor no se emite.</td></tr>
-
-<tr><td>thisArg</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Un argumento opcional para determinar el valor del <code>this</code> en la función <code>predicate</code>
-</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable de valores del Observable fuente que han cumpliado la condición especificada por la función `predicate`.
 
@@ -30,7 +22,7 @@ Un argumento opcional para determinar el valor del <code>this</code> en la funci
 
 Al igual que `Array.prototype.filter()`, solo emite un valor si cumple una condición determinada.
 
-<img src="assets/images/marble-diagrams/filtering/filter.png" alt="Diagrama de canicas del operador filter">
+![Diagrama de canicas del operador filter](assets/images/marble-diagrams/filtering/filter.png)
 
 Es similar al método `Array.prototype.filter()`. Este operador emite únicamente aquellos valores del Observable fuente que cumplan la condición especificada en la función `predicate`, es decir, aquellos valores que, al proporcionárselos a la función, hagan que esta devuelva `true`.
 
@@ -38,7 +30,7 @@ Es similar al método `Array.prototype.filter()`. Este operador emite únicament
 
 **Emitir los números mayores que 5**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-filter-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-filter-1?file=index.ts)
 
 ```javascript
 import { filter } from "rxjs/operators";
@@ -52,7 +44,7 @@ number$.pipe(filter((n) => n > 5)).subscribe(console.log);
 
 **Emitir todas las teclas, excepto la barra espaciadora**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-filter-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-filter-2?file=index.ts)
 
 ```typescript
 import { filter, map } from "rxjs/operators";
@@ -71,7 +63,7 @@ key$
 
 **Filtrar los lenguages de tipo Multiparadigma**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-filter-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-filter-3?file=index.ts)
 
 ```javascript
 import { filter } from "rxjs/operators";
@@ -106,13 +98,8 @@ const clicksOnDivs = clicks.pipe(filter((ev) => ev.target.tagName === "DIV"));
 clicksOnDivs.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/filter.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/filter.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/filter">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/filter)

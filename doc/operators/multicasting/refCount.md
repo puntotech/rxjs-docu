@@ -1,21 +1,22 @@
 # refCount
 
-<h2 class="subtitle"> Hace que un ConnectableObservable se comporte como un Obesrvable normal, y automatiza la forma de conectarse a él</h2>
+## Hace que un ConnectableObservable se comporte como un Obesrvable normal, y automatiza la forma de conectarse a él
 
-💡 Utilizar el operador <a href="/operators/multicasting/share">share</a> es equivalente a utilizar el operador <a href="/operators/multicasting/publish">publish</a> (convirtiendo el Observable en uno caliente) junto al operador refCount.
+💡 Utilizar el operador [share](../../../operators/multicasting/share/) es equivalente a utilizar el operador [publish](../../../operators/multicasting/publish/) (convirtiendo el Observable en uno caliente) junto al operador refCount.
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `refCount<T>(): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-## Retorna
+### Retorna
 
 `MonoTypeOperatorFunction<T>`
 
@@ -23,11 +24,11 @@ No recibe ningún parámetro.
 
 ## Descripción
 
-Al utilizar alguna de las variantes del operador <a href="/operators/multicasting/publish">publish</a>, o el operador <a href="/operators/multicasting/multicast">multicast</a>, era necesario llamar manualmente al método connect() para suscribirse a la fuente y, posteriormente, gestionar la cancelación de la suscripción para evitar posibles pérdidas de memoria.
+Al utilizar alguna de las variantes del operador [publish](../../../operators/multicasting/publish/), o el operador [multicast](../../../operators/multicasting/multicast/), era necesario llamar manualmente al método connect() para suscribirse a la fuente y, posteriormente, gestionar la cancelación de la suscripción para evitar posibles pérdidas de memoria.
 
 Para que automatizar el proceso y evitar errores, se creó el operador refCount, que hace ambas cosas automáticamente.
 
-<img src="/assets/images/marble-diagrams/multicasting/refCount.png" alt="Diagrama de canicas del operador refCount">
+![Diagrama de canicas del operador refCount](../../../assets/images/marble-diagrams/multicasting/refCount.png)
 
 Internamente, cuenta las suscripciones al Observable y se suscribe (una sola vez) a la fuente si el número de suscripciones es mayor que 0. Si el número de suscripciones es menor que 1, se cancela la suscripción a la fuente. De esta manera se puede garantizar que cualquier operador anterior a `refCount` se ejecuta una única vez por cada evento, independientemente del número de suscripciones al Observable objetivo.
 
@@ -35,7 +36,7 @@ Internamente, cuenta las suscripciones al Observable y se suscribe (una sola vez
 
 **Compartir el Observable fuente de forma automática con multicast + refCount**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-refcount-multicast?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-refcount-multicast?file=index.ts)
 
 ```javascript
 import { interval, Subject, timer } from "rxjs";
@@ -86,7 +87,7 @@ timer(2000)
 
 💡 El operador publish es equivalente a `multicast(() => new Subject())`
 
-<a target="_blank" href="">StackBlitz</a>
+[StackBlitz](refCount.md)
 
 ```javascript
 import { interval, Subject, timer } from "rxjs";
@@ -139,7 +140,7 @@ timer(2000)
 
 Para que los observadores que se suscriban tarde puedan recibir los valores que se hayan emitido anterioremente, se puede utilizar publishReplay:
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-refcount-publishreplay?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-refcount-publishreplay?file=index.ts)
 
 ```javascript
 import { interval, Subject, timer } from "rxjs";
@@ -200,8 +201,7 @@ timer(4000)
 
 ### Ejemplo de la documentación oficial
 
-En el siguiente ejemplo hay dos Observables intervalo transformados en Observables conectables mediante el operador `publish`. El primero utiliza el operador `refCount`, mientras que el segundo no.
-Se debe tener en cuenta que un Observable conectable no hace nada hasta que no se haga una llamada a su función `connect`.
+En el siguiente ejemplo hay dos Observables intervalo transformados en Observables conectables mediante el operador `publish`. El primero utiliza el operador `refCount`, mientras que el segundo no. Se debe tener en cuenta que un Observable conectable no hace nada hasta que no se haga una llamada a su función `connect`.
 
 ```javascript
 import { interval } from "rxjs";
@@ -230,13 +230,8 @@ publishedInterval.subscribe();
 // No ocurre nada hasta que no se llame a la función connect() del Observable
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/refCount.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/refCount.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/refCount">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/refCount)

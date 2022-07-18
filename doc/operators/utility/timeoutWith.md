@@ -1,25 +1,18 @@
 # timeoutWith
 
-<h2 class="subtitle"> Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
-</h2>
+## Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `timeoutWith<T, R>(due: number | Date, withObservable: any, scheduler: SchedulerLike = async): OperatorFunction<T, T | R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>due</td><td>Un número especificando el periodo en el que el Observable tiene que emitir un valor, o una fecha especificando antes de cuándo debe completarse el Observable</td></tr>
-<tr><td>withObservable</td><td>Un Observable que será suscrito si el Observable fuente no pasa la comprobación del *timeout*.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
-El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T | R>`: Un Observable que refleja el comportamiento de la fuente o, cuando no supera la comprobación del _timeout_, de un segundo Observable proporcionado por parámetros.
 
@@ -29,7 +22,7 @@ El planificador que controla cuándo ocurren las comprobaciones de *timeout*.</t
 
 Es una versión del operador `timeout` que permite especificar un Observable comodín.
 
-<img src="assets/images/marble-diagrams/utility/timeoutWith.png" alt="Diagrama de canicas del operador timeoutWith">
+![Diagrama de canicas del operador timeoutWith](assets/images/marble-diagrams/utility/timeoutWith.png)
 
 `timeoutWith` es una variante del operador `timeout`. Se comporta exactamente igual, recibe como primer argumento un número o una fecha, que controlan cuándo se deben emitir los valores del Observable fuente o cuando debe completarse, respectivamente.
 
@@ -41,7 +34,7 @@ También se puede proporcionar un Planificador como tercer argumento opcional, q
 
 **Emitir una secuencia de números si no se presiona ninguna tecla en 5s**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-tpkuum?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-tpkuum?file=index.ts)
 
 ```typescript
 import { interval, fromEvent } from "rxjs";
@@ -60,9 +53,9 @@ key$
 // Salida: (Presionar tecla) KeyX (5s) 0, 1, 2, 3, 4...
 ```
 
-**Emitir un mensaje en caso de que ocurra el _timeout_ de una petición**
+**Emitir un mensaje en caso de que ocurra el **_**timeout**_** de una petición**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-timeoutwith-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-timeoutwith-2?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -109,13 +102,8 @@ seconds.pipe(timeoutWith(900, minutes)).subscribe(
 );
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/timeoutWith.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/timeoutWith">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/timeoutWith)

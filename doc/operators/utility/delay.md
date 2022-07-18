@@ -1,24 +1,18 @@
 # delay
 
-<h2 class="subtitle"> Retrasa la emisión de los elementos del Observable fuente en un tiempo determinado o hasta una fecha determinada
-</h2>
+## Retrasa la emisión de los elementos del Observable fuente en un tiempo determinado o hasta una fecha determinada
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `delay<T>(delay: number | Date, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>delay</td><td>La duración del retraso en milisegundos (un número) o la fecha hasta la que se retrasa la emisión de los elementos.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>async</code>.
-El <code>SchedulerLike</code> que se utiliza para gestionar los temporizadores que se encargan de retrasar cada elemento.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que retrasa las emisiones del Observable fuente por el `timeout` o `Date` especificado.
 
@@ -28,7 +22,7 @@ El <code>SchedulerLike</code> que se utiliza para gestionar los temporizadores q
 
 Retrasa las emisiones del Observable durante un tiempo o hasta una fecha determinados.
 
-<img src="assets/images/marble-diagrams/utility/delay.png" alt="Diagrama de canicas del operador delay">
+![Diagrama de canicas del operador delay](assets/images/marble-diagrams/utility/delay.png)
 
 Si el argumento `delay` es de tipo `Number`, el operador retrasa el Observable fuente durante esa cantidad de tiempo, expresada en milisegundos. Los intervalos de tiempo relativos entre valores se mantienen.
 
@@ -38,7 +32,7 @@ Si el argumento `delay` es de tipo `Date`, el oeprador retrasa el comienzo de la
 
 **Retrasa la emisión de cada tecla pulsada durante dos segundos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-delay-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-delay-1?file=index.ts)
 
 ```typescript
 import { delay, map } from "rxjs/operators";
@@ -54,7 +48,7 @@ key$.pipe(delay(2000)).subscribe(console.log);
 
 **Retrasa la emisión de cada tecla pulsada hasta una fecha determinada**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-delay-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-delay-2?file=index.ts)
 
 ```typescript
 import { delay, map } from "rxjs/operators";
@@ -93,13 +87,8 @@ const delayedClicks = clicks.pipe(delay(date)); // click emitted only after that
 delayedClicks.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/delay.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/delay">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/delay)

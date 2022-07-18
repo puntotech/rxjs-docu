@@ -1,34 +1,22 @@
 # publishReplay
 
-<h2 class="subtitle">Comparte el Observable fuente, permitiendo que los observadores que se suscriban tarde puedan recibir los valores que se hayan emitido anteriormente</h2>
+## Comparte el Observable fuente, permitiendo que los observadores que se suscriban tarde puedan recibir los valores que se hayan emitido anteriormente
 
 💡 publishReplay es equivalente a `multicast(() => new ReplaySubject())`
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `publishReplay<T, R>(bufferSize?: number, windowTime?: number, selectorOrScheduler?: SchedulerLike | OperatorFunction<T, R>, scheduler?: SchedulerLike): UnaryFunction<Observable<T>, ConnectableObservable<R>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>bufferSize</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-<tr><td>windowTime</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>number</code>.</td></tr>
-<tr><td>selectorOrScheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike | OperatorFunction</code>.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Tipo: <code>SchedulerLike</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<R>>`
-
-</div>
 
 </details>
 
@@ -38,7 +26,7 @@ Comparte el Observable fuente, permitiendo que los observadores que se suscriban
 
 Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método `connect` antes de empezar a emitir valores a sus Observadores. En el caso de que no se llame a `connect`, el Observable fuente no emitirá ningún valor.
 
-💡 Para evitar tener que llamar a connect manualmente, se puede utilizar el [operador refCount](/operators/multicasting/refCount).
+💡 Para evitar tener que llamar a connect manualmente, se puede utilizar el [operador refCount](../../../operators/multicasting/refCount/).
 
 ## Ejemplos
 
@@ -46,7 +34,7 @@ Retorna un ConnectableObservable, que es un Observable que espera a que se haga 
 
 Los observadores que se suscriban más tarde recibirán los valores emitidos anteriormente en el momento en el que se suscriban.
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-publishreplay?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-publishreplay?file=index.ts)
 
 ```javascript
 import { ConnectableObservable, interval, Subject, timer } from "rxjs";
@@ -92,13 +80,8 @@ timer(3000)
 */
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishReplay.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/publishReplay.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/publishReplay">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/publishReplay)

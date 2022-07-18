@@ -1,23 +1,18 @@
 # windowToggle
 
-<h2 class="subtitle"> Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un 2º Observable emite, y se cierra cuando un 3er Observable retornado por una función emite
-</h2>
+## Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un 2º Observable emite, y se cierra cuando un 3er Observable retornado por una función emite
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `windowToggle<T, O>(openings: Observable<O>, closingSelector: (openValue: O) => Observable<any>): OperatorFunction<T, Observable<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>openings</td><td>Un observable de notificaciones para abrir nuevas ventanas.</td></tr>
-<tr><td>closingSelector</td><td>Una función que recibe el valor emitido por el Observable <code>openings</code> y retorna un Observable que, cuando emite (ya sea una notificación <code>next</code> o <code>complete</code>), señala que la ventana asociado debe cerrarse.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, Observable<T>>`: Un Observable de ventanas, que son Observables de valores.
 
@@ -27,7 +22,7 @@
 
 Es como `bufferToggle`, pero emite un Observable anidado en lugar de un array.
 
-<img src="assets/images/marble-diagrams/transformation/windowToggle.png" alt="Diagrama de canicas del operador windowToggle">
+![Diagrama de canicas del operador windowToggle](assets/images/marble-diagrams/transformation/windowToggle.png)
 
 Retorna un Observable que emite ventanas de elementos que recoge del Observable fuente. El Observable resultante emite ventanas que contienen estos elementos emitidos por el Observable fuente durante el periodo entre la emisión del Observable `openings` y la emisión del Observable retornado por la función `closingSelector`.
 
@@ -37,7 +32,7 @@ Retorna un Observable que emite ventanas de elementos que recoge del Observable 
 
 Ejemplo: Si se pulsa la tecla 6, la duración de la ventana será de 6 segundos.
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-windowtoggle-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-windowtoggle-1?file=index.ts)
 
 ```typescript
 import { fromEvent, interval } from "rxjs";
@@ -78,13 +73,8 @@ const result = clicks.pipe(
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/windowToggle.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/windowToggle">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/windowToggle)

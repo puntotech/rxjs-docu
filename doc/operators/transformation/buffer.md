@@ -1,22 +1,18 @@
 # buffer
 
-<h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que otro Observable emita
-</h2>
+## Almacena los valores del Observable en un búfer hasta que otro Observable emita
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `buffer<T>(closingNotifier: Observable<any>): OperatorFunction<T, T[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>closingNotifier</td><td>Un Observable que señala cuándo se debe emitir el búfer en el Observable resultante.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de búferes, que son arrays de valores.
 
@@ -26,7 +22,7 @@
 
 Acumula valores en un array, y emite dicho array cuando un segundo Observable emita.
 
-<img src="assets/images/marble-diagrams/transformation/buffer.png" alt="Diagrama de canicas del operador buffer">
+![Diagrama de canicas del operador buffer](assets/images/marble-diagrams/transformation/buffer.png)
 
 Almacena los valores del Observable fuente en un búfer hasta que el Observable `closingNotifier` emita un valor, en cuyo momento se emite el búfer en el Observable resultante, y se abre un búfer nuevo internamente, esperando a la próxima emisión de `closingNotifier`.
 
@@ -34,7 +30,7 @@ Almacena los valores del Observable fuente en un búfer hasta que el Observable 
 
 **Con cada tecla pulsada, emitir el array de los números emitidos desde la última tecla pulsada**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffer-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-buffer-1?file=index.ts)
 
 ```typescript
 import { buffer } from "rxjs/operators";
@@ -51,7 +47,7 @@ number$.pipe(buffer(key$)).subscribe(console.log);
 
 Si no se hace ningún click en el intervalo, no se emitirá nada.
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffer-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-buffer-2?file=index.ts)
 
 ```javascript
 import { buffer, filter } from "rxjs/operators";
@@ -83,13 +79,8 @@ const buffered = intervalEvents.pipe(buffer(clicks));
 buffered.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/buffer.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/buffer">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/buffer)

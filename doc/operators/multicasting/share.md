@@ -1,23 +1,24 @@
 # share
 
-<h2 class="subtitle"> Comparte el Observable fuente entre varios suscriptores</h2>
+## Comparte el Observable fuente entre varios suscriptores
 
 💡 Se puede utilizar share para convertir un Observable frío en uno caliente
 
-💡 share es como utilizar <a href="/operators/multicasting/multicast">multicast</a> con un Sujeto y <a href="/operators/multicasting/refCount">refCount</a>
+💡 share es como utilizar [multicast](../../../operators/multicasting/multicast/) con un Sujeto y [refCount](../../../operators/multicasting/refCount/)
 
 <details>
+
 <summary>Signatura</summary>
 
-## Firma
+### Firma
 
 `share<T>(): MonoTypeOperatorFunction<T>`
 
-## Parámetros
+### Parámetros
 
 No recibe ningún parámetro.
 
-## Retorna
+### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que, al ser conectado, hace que el Observable fuente emita valores a sus Observadores.
 
@@ -27,7 +28,7 @@ No recibe ningún parámetro.
 
 Comparte las emisiones del Observable fuente entre todos sus suscriptores.
 
-<img src="/assets/images/marble-diagrams/multicasting/share.png" alt="Diagrama de canicas del operador share">
+![Diagrama de canicas del operador share](../../../assets/images/marble-diagrams/multicasting/share.png)
 
 Retorna un Observable nuevo que multidifunde (comparte) el Observable original. Mientras haya al menos un suscriptor, el Observable emitirá valores. Cuando todos los Suscriptores hayan cancelado la suscripción al Observable compartido, `share` cancelará la suscripción al Observable fuente. Dado que el Observable está multidifundido, el flujo es caliente.
 
@@ -97,13 +98,8 @@ ghibliFilmDescription$.subscribe(console.log);
 */
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/share">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/share)

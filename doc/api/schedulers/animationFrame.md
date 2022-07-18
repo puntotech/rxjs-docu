@@ -1,31 +1,26 @@
-<table>
-<tr><th></th></tr>
-<tr><td>
-<h3></h3>
-</td></tr>
-</table>
-
-<table>
-<tr><td></td><td></td></tr>
-</table>
-
 # animationFrame
 
-<h2 class="subtitle">Planificador Animation Frame</h2>
+|           |
+| --------- |
+| <h4></h4> |
 
-### Firma
+## animationFrame
+
+### Planificador Animation Frame
+
+#### Firma
 
 `const animationFrame: any;`
 
-## Descripción
+### Descripción
 
 Lleva a cabo una acción en el momento en el que se dispararía `window.requestAnimationFrame`.
 
-Cuando el planificador animationFrame se utiliza con delay, se comporta como el planificador [async]().
+Cuando el planificador animationFrame se utiliza con delay, se comporta como el planificador [async](animationFrame.md).
 
 Sin delay, el planificador animationFrame se puede utilizar para crear animaciones del navegador fluidas. Se asegura de que la tarea planificada ocurra justo antes del siguiente repintado del navegador, llevando así a cabo las animaciones de la forma más eficiente posible.
 
-## Ejemplo
+### Ejemplo
 
 Planificar animación de la altura de un div
 

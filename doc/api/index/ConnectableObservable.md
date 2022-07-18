@@ -48,80 +48,37 @@ class ConnectableObservable<T> extends Observable {
 
 ## Constructor
 
-<table>
-<tr><th>constructor()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>constructor(source: Observable<T>, subjectFactory: () => Subject<T>)</code>
-<h3>Parámetros</h3>
-<table>
-<tr><td>source</td><td>Tipo: <code>Observable</code>.</td></tr>
-<tr><td>subjectFactory</td><td>Tipo: <code>() => Subject</code>.</td></tr>
-</table>
-</td></tr>
-</table>
+| constructor()                                                                                                                                                                                                                                                                                                                                           |                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| <h4>Firma</h4><p><code>constructor(source: Observable, subjectFactory: () => Subject)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>source</td><td>Tipo: <code>Observable</code>.</td></tr><tr><td>subjectFactory</td><td>Tipo: <code>() => Subject</code>.</td></tr></tbody></table> |                        |
+| source                                                                                                                                                                                                                                                                                                                                                  | Tipo: `Observable`.    |
+| subjectFactory                                                                                                                                                                                                                                                                                                                                          | Tipo: `() => Subject`. |
 
 ## Propiedades
 
-<table>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>_subject</td><td><code>Subject<T></code></td></tr>
-<tr><td>_refCount</td><td><code>number</code></td></tr>
-<tr><td>_connection</td><td><code>Subscription</code></td></tr>
-<tr><td>source</td><td><code>Observable<T></code></td><td>Declarado en el constructor.</td></tr>
-<tr><td>subjectFactory</td><td><code>() => Subject<T></code></td><td>Declarado en el constructor.</td></tr>
-</table>
+| Propiedad      | Tipo            | Descripción                  |
+| -------------- | --------------- | ---------------------------- |
+| \_subject      | `Subject`       |                              |
+| \_refCount     | `number`        |                              |
+| \_connection   | `Subscription`  |                              |
+| source         | `Observable`    | Declarado en el constructor. |
+| subjectFactory | `() => Subject` | Declarado en el constructor. |
 
 ## Métodos
 
-<table>
-<tr><th>_subscribe()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>_subscribe(subscriber: Subscriber<T>)</code>
-<h3>Parámetros</h3>
+| \_subscribe()                                                                                                                                                                                                                                         |                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| <h4>Firma</h4><p><code>_subscribe(subscriber: Subscriber)</code></p><h4>Parámetros</h4><table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr></tbody></table> |                     |
+| subscriber                                                                                                                                                                                                                                            | Tipo: `Subscriber`. |
 
-<table>
-<tr><td>subscriber</td><td>Tipo: <code>Subscriber</code>.</td></tr>
-</table>
-</td></tr>
-</table>
+| getSubject()                                                                                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>protected getSubject(): Subject</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>Subject</code></p> |
 
-<table>
-<tr><th>getSubject()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>protected getSubject(): Subject<T></code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-<h3>Retorna</h3>
-<code>Subject<T></code>
-</td></tr>
-</table>
+| connect()                                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>connect(): Subscription</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>Subscription</code></p> |
 
-<table>
-<tr><th>connect()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>connect(): Subscription</code>
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>Subscription</code>
-</td></tr>
-</table>
-
-<table>
-<tr><th>refCount()</th></tr>
-<tr><td>
-<h3>Firma</h3>
-<code>refCount(): Observable<T></code>
-
-<h3>Parámetros</h3>
-No recibe ningún parámetro.
-
-<h3>Retorna</h3>
-<code>Observable<T></code>
-</td></tr>
-</table>
+| refCount()                                                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h4>Firma</h4><p><code>refCount(): Observable</code></p><h4>Parámetros</h4><p>No recibe ningún parámetro.</p><h4>Retorna</h4><p><code>Observable</code></p> |

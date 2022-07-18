@@ -1,23 +1,18 @@
 # mergeAll
 
-<h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
-</h2>
+## Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `mergeAll<T>(concurrent: number = Number.POSITIVE_INFINITY): OperatorFunction<ObservableInput<T>, T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>Number.POSITIVE_INFINITY</code>.
-El máximo número de Observables internos suscritos concurrentemente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<ObservableInput<T>, T>`: Un Observable que emite los valores de todos los Observables internos que emita el Observable fuente.
 
@@ -27,7 +22,7 @@ El máximo número de Observables internos suscritos concurrentemente.</td></tr>
 
 Convierte un Observable de orden superior en uno de primer orden.
 
-<img src="assets/images/marble-diagrams/join-creation/mergeAll.png" alt="Diagrama de canicas del operador mergeAll">
+![Diagrama de canicas del operador mergeAll](assets/images/marble-diagrams/join-creation/mergeAll.png)
 
 `mergeAll` se suscribe a un Observable que emite Observables, también conocido como Observable de orden superior. Cada vez que observa la emisión de uno de los Observables internos, se suscribe a él y emite todos los valores del Observable interno en el Observable resultante. El Observable resultante se completa cuando todos los Observables internos se hayan completado.
 
@@ -37,7 +32,7 @@ Cualquier error que se produzca en uno de los Observables internos se emite de f
 
 **Realizar todas las peticiones AJAX de forma concurrente (en paralelo)**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-mergeall?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-mergeall?file=index.ts)
 
 ```javascript
 import { mergeAll, map, delay } from "rxjs/operators";
@@ -64,7 +59,7 @@ pokemonId$
 
 **Realizar como mucho dos peticiones AJAX de forma concurrente**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-mergeall-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-mergeall-2?file=index.ts)
 
 ```javascript
 import { mergeAll, map, delay } from "rxjs/operators";
@@ -117,13 +112,8 @@ const firstOrder = higherOrder.pipe(mergeAll(2));
 firstOrder.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeAll.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/mergeAll.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/mergeAll">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/mergeAll)

@@ -1,22 +1,18 @@
 # takeUntil
 
-<h2 class="subtitle"> Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor
-</h2>
+## Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `takeUntil<T>(notifier: Observable<any>): MonoTypeOperatorFunction<T>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>notifier</td><td>El Observable cuya primera emisión hará que el Observable resultante deje de emitir los valores del Observable fuente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `MonoTypeOperatorFunction<T>`: Un Observable que emite los valores del Observable fuente hasta que el Observable notificador emita un valor.
 
@@ -26,7 +22,7 @@
 
 Emite valores hasta que un segundo Observable, el notificador, emita un valor. Entonces, se completa.
 
-<img src="assets/images/marble-diagrams/filtering/takeUntil.png" alt="Diagrama de canicas del operador takeUntil">
+![Diagrama de canicas del operador takeUntil](assets/images/marble-diagrams/filtering/takeUntil.png)
 
 `takeUntil` se suscribe y comienza a reflejar el Observable fuente. También se encarga de monitorizar un segundo Observable, el notificador que se haya proporcionado. Si el notificador emite un valor, el Observable resultante deja de emitir los valores del Observable fuente y se completa.
 
@@ -34,9 +30,9 @@ Si el notificador no emite ningún valor y se completa, `takeUntil` emitirá tod
 
 ## Ejemplos
 
-**Emitir valores hasta que timer\$ emita a los 4 segundos**
+**Emitir valores hasta que timer$ emita a los 4 segundos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-takeuntil-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-takeuntil-1?file=index.ts)
 
 ```javascript
 import { takeUntil } from "rxjs/operators";
@@ -51,7 +47,7 @@ number$.pipe(takeUntil(timer$)).subscribe(console.log);
 
 **Emitir valores hasta que se pulse una tecla**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-takeuntil-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-takeuntil-2?file=index.ts)
 
 ```javascript
 import { takeUntil } from "rxjs/operators";
@@ -70,7 +66,7 @@ Una técnica muy útil para poder cancelar la ejecución de uno o varios Observa
 
 Para cancelar la suscripción a un Observable, se debe almacenar la suscripción a dicho Observable, y llamar al método `unsubscribe`. Esto implica que por cada Observable que se cree, se debe almacenar una Suscripción. Esta forma de cancelar suscripciones es tediosa e imposible de mantener a medida que una aplicación escala.
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-unsubscribe-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-unsubscribe-1?file=index.ts)
 
 ```javascript
 import { interval, timer } from "rxjs";
@@ -85,7 +81,7 @@ number$Subscription.unsubscribe();
 
 Sin embargo, al utilizar el operador `takeUntil`, ya no es necesario almacenar ninguna suscripción. Lo único que hay que hacer es crear un Sujeto, y utilizar `takeUntil` con dicho Sujeto, de tal forma que cuando `stop$` emita un valor, todo Observable que utilice el operador se cancelará.
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-takeuntil-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-takeuntil-3?file=index.ts)
 
 ```javascript
 import { takeUntil, tap } from "rxjs/operators";
@@ -122,13 +118,8 @@ const result = source.pipe(takeUntil(clicks));
 result.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeUntil.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/takeUntil.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/takeUntil">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/takeUntil)

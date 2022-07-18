@@ -1,23 +1,18 @@
 # multicast
 
-<h2 class="subtitle">Comparte el Observable fuente utilizando un Sujeto</h2>
+## Comparte el Observable fuente utilizando un Sujeto
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `multicast<T, R>(subjectOrSubjectFactory: Subject<T> | (() => Subject<T>), selector?: (source: Observable<T>) => Observable<R>): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>subjectOrSubjectFactory</td><td>Función factoría para crear un Sujeto intermedio a partir del cual se multidifunden (comparten) las emisiones del Observable fuente a la función de selección, o un Sujeto al que proporcionarle las emisiones del Observable fuente.</td></tr>
-<tr><td>selector</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-Función de selección opcional que puede utilizar el flujo fuente multidifundido tantas veces como sean necesarias, sin provocar múltiples suscripciones al flujo fuente. Los suscriptores al flujo recibirán todas las notificaciones de la fuente a partir del momento de la suscripción.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`: Un Observable que emite el resultado de invocar el selector sobre las emisiones de un ConnectableObservable, que comparte una sola suscripción al flujo subyacente.
 
@@ -27,7 +22,7 @@ Función de selección opcional que puede utilizar el flujo fuente multidifundid
 
 Retorna un Observable que emite el resultado de invocar el selector especificado sobre los elementos emitidos por un ConnectableObservable, que comparte una sola suscripción al flujo subyacente
 
-<img src="assets/images/marble-diagrams/multicasting/multicast.png" alt="Diagrama de canicas del operador multicast">
+![Diagrama de canicas del operador multicast](assets/images/marble-diagrams/multicasting/multicast.png)
 
 ## Ejemplos
 
@@ -35,7 +30,7 @@ Retorna un Observable que emite el resultado de invocar el selector especificado
 
 Dado que la fuente es compartida, aunque haya varios observadores (suscriptores), el efecto colateral se ejecuta una sola vez.
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-multicast?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-multicast?file=index.ts)
 
 ```javascript
 import { ConnectableObservable, interval, Subject, timer } from "rxjs";
@@ -79,7 +74,7 @@ Observador 2: 1,
 
 Si se utiliza un Sujeto normal, los observadores que se suscriban más tarde no recibirán los valores que ya se hayan emitido.
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-multicast-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-multicast-2?file=index.ts)
 
 ```javascript
 import { ConnectableObservable, interval, Subject, timer } from 'rxjs';
@@ -128,7 +123,7 @@ Observador tardío: 1,
 
 Al utilizar un ReplaySubject en lugar de un Sujeto normal, los observadores que se suscriban más tarde sí que recibirán los valores que se hayan emitido anteriormente.
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-multicast-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-multicast-3?file=index.ts)
 
 ```javascript
 import { ConnectableObservable, interval, ReplaySubject, timer } from "rxjs";
@@ -176,92 +171,53 @@ Observador tardío: 1
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `multicast(subject: Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>subject</td><td>Tipo: <code>Subject</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `multicast(subject: Subject<T>, selector: (shared: Observable<T>) => O): UnaryFunction<Observable<T>, ConnectableObservable<ObservedValueOf<O>>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>subject</td><td>Tipo: <code>Subject</code>.</td></tr>
-<tr><td>selector</td><td>Tipo: <code>(shared: Observable) => O</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<ObservedValueOf<O>>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `multicast(subjectFactory: (this: Observable<T>) => Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>subjectFactory</td><td>Tipo: <code>(this: Observable) => Subject</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `UnaryFunction<Observable<T>, ConnectableObservable<T>>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `multicast(SubjectFactory: (this: Observable<T>) => Subject<T>, selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>SubjectFactory</td><td>Tipo: <code>(this: Observable) => Subject</code>.</td></tr>
-<tr><td>selector</td><td>Tipo: <code>(shared: Observable) => O</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, ObservedValueOf<O>>`
 
-</div>
-
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/multicast.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/multicast.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/multicast">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/multicast)

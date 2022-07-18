@@ -1,20 +1,20 @@
 # concatAll
 
-<h2 class="subtitle"> Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos en orden
-</h2>
+## Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos en orden
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `concatAll<T>(): OperatorFunction<ObservableInput<T>, T>`
 
-### Parámetros
+#### Parámetros
 
 No recibe ningún parámetro.
 
-### Retorna
+#### Retorna
 
 `OperatorFunction<ObservableInput<T>, T>`: Un Observable que emite los valores emitidos por los Observables internos concatenados.
 
@@ -24,7 +24,7 @@ No recibe ningún parámetro.
 
 Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos uno detrás de otro.
 
-<img src="assets/images/marble-diagrams/join-creation/concatAll.png" alt="Diagrama de canicas del operador concatAll">
+![Diagrama de canicas del operador concatAll](assets/images/marble-diagrams/join-creation/concatAll.png)
 
 Concatena cada Observable emitido por la fuente (un Observable de orden superior), de forma secuencial. Se suscribe a cada Observable interno si, y solo si, el Observable interno anterior se ha completado, y emite todos sus valores en el Observable resultante.
 
@@ -36,7 +36,7 @@ Advertencia: Si el Observable fuente emite Observables de forma rápida e indefi
 
 **concatAll se suscribe a cada Observable interno si, y solo si, el Observable interno anterior se ha completado. Esto implica que espera a que cada petición esté terminada antes de hacer una nueva**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-concatall-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-concatall-1?file=index.ts)
 
 ```javascript
 import { concatAll, map, delay } from "rxjs/operators";
@@ -80,13 +80,8 @@ firstOrder.subscribe((x) => console.log(x));
 // Un click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatAll.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/concatAll.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/concatAll">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/concatAll)

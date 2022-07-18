@@ -1,24 +1,18 @@
 # bufferCount
 
-<h2 class="subtitle"> Almacena los valores del Observable en un búfer hasta que este alcanza el tamaño máximo indicado
-</h2>
+## Almacena los valores del Observable en un búfer hasta que este alcanza el tamaño máximo indicado
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `bufferCount<T>(bufferSize: number, startBufferEvery: number = null): OperatorFunction<T, T[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>bufferSize</td><td>El tamaño máximo del búfer.</td></tr>
-<tr><td>startBufferEvery</td><td>Opcional. El valor por defecto es <code>null</code>.
-El intervalo a partir del cual abrir un nuevo búfer. Por ejemplo, si el valor de <code>startBufferEvery</code> es 2, entonces se abrirá un nuevo búfer cada dos emisiones de la fuente. Por defecto, se abre un búfer al comienzo de la fuente.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, T[]>`: Un Observable de arrays de valores almacenados.
 
@@ -28,7 +22,7 @@ El intervalo a partir del cual abrir un nuevo búfer. Por ejemplo, si el valor d
 
 Almacena valores en un array, y emite dicho array cuando su tamaño sea el especificado por `bufferSize`.
 
-<img src="assets/images/marble-diagrams/transformation/bufferCount.png" alt="Diagrama de canicas del operador bufferCount">
+![Diagrama de canicas del operador bufferCount](assets/images/marble-diagrams/transformation/bufferCount.png)
 
 Almacena valores del Observable fuente y emite el búfer cuando este llega al tamaño de `bufferSize`, y abre un nuevo búfer cada `startBufferEvery` emisiones. Si no se proporciona `startBufferEvery` o su valor es `null`, entonces se abre un nuevo búfer inmediatamente después de que se cierre y se emita el búfer anterior.
 
@@ -36,7 +30,7 @@ Almacena valores del Observable fuente y emite el búfer cuando este llega al ta
 
 **Almacenar cada 5 valores en un array y emitirlo**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-buffercount-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-buffercount-1?file=index.ts)
 
 ```javascript
 import { bufferCount } from "rxjs/operators";
@@ -72,13 +66,8 @@ const buffered = clicks.pipe(bufferCount(2, 1));
 buffered.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferCount.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/bufferCount.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/bufferCount">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/bufferCount)

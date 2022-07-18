@@ -1,21 +1,18 @@
 # forkJoin
 
-<h2 class="subtitle"> Acepta un Array de Observables o un diccionario de Observables, y retorna otro Observable que emite o bien un array de valores en el mismo orden que el array proporcionado, o un diccionario de valores con la misma forma que el diccionario proporcionado</h2>
+## Acepta un Array de Observables o un diccionario de Observables, y retorna otro Observable que emite o bien un array de valores en el mismo orden que el array proporcionado, o un diccionario de valores con la misma forma que el diccionario proporcionado
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `forkJoin(...sources: any[]): Observable<any>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Una serie de Observables proporcionados en forma de array o como argumentos directos.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<any>`: Un Observable que emite o un array de las últimas emisiones de los Observables de entrada o el valor de la función de proyección.
 
@@ -25,7 +22,7 @@
 
 Espera a que todos los Observables se completen, y combina sus últimas emisiones.
 
-<img src="assets/images/marble-diagrams/join-creation/forkJoin.png" alt="Diagrama de canicas del operador forkJoin">
+![Diagrama de canicas del operador forkJoin](assets/images/marble-diagrams/join-creation/forkJoin.png)
 
 `forkJoin` es un operador que recibe un array de Observables o un diccionario de Observables como parámetro de entrada. Si no se proporciona ningún Observable de entrada, el Observable resultante se completa inmediatamente.
 
@@ -35,7 +32,7 @@ Si se le proporciona un array de _n_ Observables a `forkJoin`, el array resultan
 
 Si se le proporciona un diccionario de Observables a `forkJoin` el objeto resultante tendrá las mismas claves que el diccionario. Los últimos valores que se hayan emitido por cada Observable de entrada estarán situados bajo la clave correspondiente.
 
-`forkJoin` emite una única vez, y se completará justo después. Si se necesita emitir valores combinados durante el ciclo de vida de los Observables de entrada, se recomienza utilizar [combineLatest](/operators/combination/combineLatest) o [zip](/operators/combination/zip).
+`forkJoin` emite una única vez, y se completará justo después. Si se necesita emitir valores combinados durante el ciclo de vida de los Observables de entrada, se recomienza utilizar [combineLatest](../../../operators/combination/combineLatest/) o [zip](../../../operators/combination/zip/).
 
 Para que el array resultante tenga la misma longitud que el número de Observables de entrada, cuando alguno de dichos Observables se complete sin emitir ningún valor, `forkJoin` también se completará y no emitirá ningún valor, aunque ya tenga recogidos algunos valores de los demás Observables. Además, si hay algún Observable que nunca llegue a completarse, `forkJoin` tampoco se completará, a no ser que, en cualquier momento, alguno de los demás Observables de entrada se complete sin emitir ningún valor, lo que nos trae de vuelta al caso anterior. Como norma general, para que `forkJoin` pueda emitir un valor, todos los Observables de entrada tienen que emitir como mínimo un valor, y completarse.
 
@@ -47,7 +44,7 @@ Opcionalmente, `forkJoin` recibe una función de proyección, que se llamará co
 
 **Combinar la última emisión de dos Observables distintos**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin?file=index.ts)
 
 ```javascript
 import { forkJoin, from, of } from "rxjs";
@@ -64,7 +61,7 @@ language$.subscribe(console.log);
 
 **Combinar la última emisión de dos Observables distintos, contenidos en un diccionario de datos**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin-2?file=index.ts)
 
 ```javascript
 import { forkJoin, from, of } from "rxjs";
@@ -80,7 +77,7 @@ languageDictionary$.subscribe(console.log);
 
 **Si alguno de los Observables de entrada lanza un error, el Observable resultante lanzará un error inmediatamente, y el flujo se terminará**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin-3?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin-3?file=index.ts)
 
 ```javascript
 import { throwError, from, forkJoin } from "rxjs";
@@ -95,7 +92,7 @@ forkJoin([message$, error$, sadMessage$]).subscribe(console.log, console.error);
 
 **Si se utiliza el operador `catchError` en el Observable de entrada que lanza el error, el Observable resultante se completará sin problemas**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-forkjoin-4?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-forkjoin-4?file=index.ts)
 
 ```javascript
 import { from, forkJoin, of, throwError } from "rxjs";
@@ -151,340 +148,183 @@ observable.subscribe({
 ```
 
 <details>
+
 <summary>Sobrecargas</summary>
-<div class="overload-container">
 
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(v1: SubscribableOrPromise<T>): Observable<[T]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>SubscribableOrPromise</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[T]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(v1: any, v2: any): Observable<[T, T2]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[T, T2]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(v1: any, v2: any, v3: any): Observable<[T, T2, T3]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[T, T2, T3]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(v1: any, v2: any, v3: any, v4: any): Observable<[T, T2, T3, T4]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[T, T2, T3, T4]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(v1: any, v2: any, v3: any, v4: any, v5: any): Observable<[T, T2, T3, T4, T5]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[T, T2, T3, T4, T5]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(v1: any, v2: any, v3: any, v4: any, v5: any, v6: any): Observable<[T, T2, T3, T4, T5, T6]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>v1</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v2</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v3</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v4</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v5</td><td>Tipo: <code>any</code>.</td></tr>
-<tr><td>v6</td><td>Tipo: <code>any</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[T, T2, T3, T4, T5, T6]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sources: [any]): Observable<[A]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[A]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sources: [any, any]): Observable<[A, B]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[A, B]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sources: [any, any, any]): Observable<[A, B, C]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[any, any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[A, B, C]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sources: [any, any, any, any]): Observable<[A, B, C, D]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[any, any, any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[A, B, C, D]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sources: [any, any, any, any, any]): Observable<[A, B, C, D, E]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[any, any, any, any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[A, B, C, D, E]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sources: [any, any, any, any, any, any]): Observable<[A, B, C, D, E, F]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>[any, any, any, any, any, any]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<[A, B, C, D, E, F]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sources: A): Observable<ObservedValuesFromArray<A>[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>A</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<ObservedValuesFromArray<A>[]>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sourcesObject: {}): Observable<never>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sourcesObject</td><td>Tipo: <code>{}</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<never>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(sourcesObject: T): Observable<{[K in keyof T]: ObservedValueOf<T[K]>;}>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sourcesObject</td><td>Tipo: <code>T</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<{ [K in keyof T]: ObservedValueOf<T[K]>; }>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(...args: any[]): Observable<any>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>args</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<any>`
 
-</div>
-
-<div class="overload-section">
-
-### Firma
+#### Firma
 
 `forkJoin(...sources: any[]): Observable<T[]>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>sources</td><td>Tipo: <code>any[]</code>.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `Observable<T[]>`
 
-</div>
-
-</div>
 </details>
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/forkJoin.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/forkJoin.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/forkJoin">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/forkJoin)

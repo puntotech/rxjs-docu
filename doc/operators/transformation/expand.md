@@ -1,26 +1,18 @@
 # expand
 
-<h2 class="subtitle"> Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
-</h2>
+## Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
 
 <details>
+
 <summary>Signatura</summary>
 
-### Firma
+#### Firma
 
 `expand<T, R>(project: (value: T, index: number) => any, concurrent: number = Number.POSITIVE_INFINITY, scheduler: SchedulerLike = undefined): OperatorFunction<T, R>`
 
-### Parámetros
+#### Parámetros
 
-<table>
-<tr><td>project</td><td>Una función que, al aplicarse a un elemento emitido por la fuente, retorna un Observable.</td></tr>
-<tr><td>concurrent</td><td>Opcional. El valor por defecto es <code>Number.POSITIVE_INFINITY</code>.
-El máximo número de Observables de entrada a los que se suscribe de forma concurrente.</td></tr>
-<tr><td>scheduler</td><td>Opcional. El valor por defecto es <code>undefined</code>.
-El <code>SchedulerLike</code> que se utiliza para suscribirse a cada Observable interno proyectado.</td></tr>
-</table>
-
-### Retorna
+#### Retorna
 
 `OperatorFunction<T, R>`: Un Observable que emite los valores de la fuente. También emite el resultado de aplicar la función de proyeccón a cada valor emitido en el Observable de salida, fusionando los Observables obtenidos de esta transformación.
 
@@ -30,7 +22,7 @@ El <code>SchedulerLike</code> que se utiliza para suscribirse a cada Observable 
 
 Es similar a `mergeMap`, pero aplica la función de proyección a cada valor de la fuente además de a cada valor de salida. Es recursivo.
 
-<img src="assets/images/marble-diagrams/transformation/expand.png" alt="Diagrama de canicas del operador expand">
+![Diagrama de canicas del operador expand](assets/images/marble-diagrams/transformation/expand.png)
 
 Retorna un Observable que aplica una función a cada elemento emitido por el Observable fuente, donde dicha función retorna otro Observable, y fusiona los Observables resultantes, emitiendo el resultado de esta fusión. expand reemitirá cada valor de la fuente en el Observable resultante.
 
@@ -40,7 +32,7 @@ Entonces, cada valor de salida se le proporciona a la función de proyección, q
 
 **Obtener los 3 números consecutivos a un número**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-expand-1?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-expand-1?file=index.ts)
 
 ```javascript
 import { of } from "rxjs";
@@ -59,7 +51,7 @@ number$
 
 **Obtener una secuencia geométrica multiplicando el número introducido por dos**
 
-<a target="_blank" href="https://stackblitz.com/edit/rxjs-expand-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/rxjs-expand-2?file=index.ts)
 
 ```typescript
 import { fromEvent, of } from "rxjs";
@@ -99,13 +91,8 @@ const powersOfTwo = clicks.pipe(
 powersOfTwo.subscribe((x) => console.log(x));
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/expand.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/expand.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/operators/expand">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/operators/expand)
