@@ -1,6 +1,11 @@
-# zip
+---
+description: >-
+  Combina varios Observables para crear otro Observable cuyos valores se
+  calculen a partir de las emisiones, en orden, de cada uno de sus Observables
+  de entrada
+---
 
-## Combina varios Observables para crear otro Observable cuyos valores se calculen a partir de las emisiones, en orden, de cada uno de sus Observables de entrada
+# zip
 
 <details>
 

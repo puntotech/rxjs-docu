@@ -1,6 +1,10 @@
-# throttle
+---
+description: >-
+  Emite un valor del Observable fuente e ignora las emisiones siguientes durante
+  un tiempo determinado por un segundo Observable. Después, repite el proceso
+---
 
-## Emite un valor del Observable fuente e ignora las emisiones siguientes durante un tiempo determinado por un segundo Observable. Después, repite el proceso
+# throttle
 
 <details>
 

@@ -1,6 +1,10 @@
-# retry
+---
+description: >-
+  Reintenta una secuencia Observable un número determinado de veces en el caso
+  de que ocurra un error
+---
 
-## Reintenta una secuencia Observable un número determinado de veces en el caso de que ocurra un error
+# retry
 
 💡 retry es muy útil para reintentar peticiones HTTP
 

@@ -1,6 +1,11 @@
-# forkJoin
+---
+description: >-
+  Acepta un Array de Observables o un diccionario de Observables, y retorna otro
+  Observable que emite o bien un array de valores en el mismo orden que el array
+  proporcionado, o un diccionario de valores
+---
 
-## Acepta un Array de Observables o un diccionario de Observables, y retorna otro Observable que emite o bien un array de valores en el mismo orden que el array proporcionado, o un diccionario de valores con la misma forma que el diccionario proporcionado
+# forkJoin
 
 <details>
 

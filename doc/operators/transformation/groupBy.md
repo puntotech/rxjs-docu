@@ -1,6 +1,11 @@
-# groupBy
+---
+description: >-
+  Agrupa los elementos emitidos por un Observable según un criterio
+  especificado, y emite estas agrupaciones como GroupedObservables, con un
+  GroupedObservable por cada grupo
+---
 
-## Agrupa los elementos emitidos por un Observable según un criterio especificado, y emite estas agrupaciones como GroupedObservables, con un GroupedObservable por cada grupo
+# groupBy
 
 <details>
 

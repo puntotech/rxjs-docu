@@ -1,6 +1,8 @@
-# pairwise
+---
+description: Agrupa las emisiones consecutivas en pares y las emite en forma de array
+---
 
-## Agrupa las emisiones consecutivas en pares y las emite en forma de array
+# pairwise
 
 <details>
 

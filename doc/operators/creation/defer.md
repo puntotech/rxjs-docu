@@ -1,32 +1,16 @@
+---
+description: >-
+  Crea un Observable que, al ser suscrito, llama a una factoría Observable para
+  crear otro Observable nuevo por cada suscriptor
+---
+
 # defer
-
-<h2 class="subtitle"> Crea un Observable que, al ser suscrito, llama a una factoría Observable para crear otro Observable nuevo por cada suscriptor
-
-<details> 
-<summary>Signatura</summary>
-
-### Firma
-
-`defer<R extends ObservableInput<any> | void>(observableFactory: () => R): Observable<ObservedValueOf<R>>`
-
-### Parámetros
-
-<table>
-<tr><td>observableFactory</td><td>La función de factoría Observable que se invoca cada vez que un Observador se suscribe al Observable fuente.
-Puede retornar una Promesa, que se convertirá en Observable sobre la marcha.</td></tr>
-</table>
-
-### Retorna
-
-`Observable<ObservedValueOf<R>>`: Un Observable cuyos Observadores disparan la invocación de la función factoría Observable proporcionada al suscribirse.
-
-</details>
 
 ## Descripción
 
 El Observable se crea de forma diferida, es decir, solamente se crea cuando un Observador se suscribe a él.
 
-<img class="marble-diagram" src="assets/images/marble-diagrams/creation/defer.png" alt="Diagrama de canicas de defer">
+![Diagrama de canicas de defer](assets/images/marble-diagrams/creation/defer.png)
 
 `defer` nos permite crear Observables únicamente cuando un Observador se suscribe, y crear un Observable nuevo para cada Observador.
 
@@ -38,7 +22,7 @@ Este proceso se lleva a cabo para cada suscriptor, por lo que, aunque cada suscr
 
 **Emitir la fecha/hora en el momento de la suscripción**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-defer?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-defer?file=index.ts)
 
 ```javascript
 import { defer, of } from "rxjs";
@@ -51,7 +35,7 @@ deferredTime$.subscribe(console.log);
 
 **Crear un Observable que emita una fruta distinta cada vez que un observador se suscribe a él**
 
-<a target="_blank" href="https://stackblitz.com/edit/docu-rxjs-defer-2?file=index.ts">StackBlitz</a>
+[StackBlitz](https://stackblitz.com/edit/docu-rxjs-defer-2?file=index.ts)
 
 ```javascript
 import { defer, of } from "rxjs";
@@ -95,13 +79,8 @@ clicksOrInterval.subscribe((x) => console.log(x));
 // Si el resultado de Math.random() es mayor que 0.5 se suscribirá al Observable de clicks. Si el resultado es menor que 0.5 se suscribirá al Observable intervalo
 ```
 
-<div class="additional-section">
+### Recursos adicionales
 
-## Recursos adicionales
+[![Source code](assets/icons/source-code.png)](https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/defer.ts)
 
-<a class="source-icon" target="_blank" href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/observable/defer.ts">
-<img src="assets/icons/source-code.png" alt="Source code">
-</a>
-</div>
-
-<a target="_blank" href="https://rxjs.dev/api/index/function/defer">Documentación oficial en inglés</a>
+[Documentación oficial en inglés](https://rxjs.dev/api/index/function/defer)

@@ -1,6 +1,11 @@
-# publish
+---
+description: >-
+  Retorna un ConnectableObservable, que es un Observable que espera a que se
+  haga una llamada a su método `connect` antes de empezar a emitir valores a sus
+  Observadores
+---
 
-## Retorna un ConnectableObservable, que es un Observable que espera a que se haga una llamada a su método \`connect\` antes de empezar a emitir valores a sus Observadores
+# publish
 
 💡 publish es equivalente a `multicast(() => new Subject())`
 

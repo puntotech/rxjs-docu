@@ -1,6 +1,10 @@
-# delayWhen
+---
+description: >-
+  Retrasa la emisión de los elementos del Observable fuente en función de las
+  emisiones de un segundo Observable
+---
 
-## Retrasa la emisión de los elementos del Observable fuente en función de las emisiones de un segundo Observable
+# delayWhen
 
 <details>
 

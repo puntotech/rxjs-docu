@@ -1,6 +1,10 @@
-# toArray
+---
+description: >-
+  Recoge todas las emisiones del Observable fuente y las emite en un array
+  cuando este se complete
+---
 
-## Recoge todas las emisiones del Observable fuente y las emite en un array cuando este se complete
+# toArray
 
 <details>
 

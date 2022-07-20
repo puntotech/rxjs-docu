@@ -1,6 +1,8 @@
-# bufferTime
+---
+description: Acumula valores del Observable fuente durante un periodo de tiempo
+---
 
-## Acumula valores del Observable fuente durante un periodo de tiempo
+# bufferTime
 
 <details>
 

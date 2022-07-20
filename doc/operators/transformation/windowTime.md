@@ -1,6 +1,10 @@
-# windowTime
+---
+description: >-
+  Acumula valores del Observable fuente en un Observable anidado (ventana)
+  periódicamente
+---
 
-## Acumula valores del Observable fuente en un Observable anidado (ventana) periódicamente
+# windowTime
 
 <details>
 

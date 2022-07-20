@@ -1,6 +1,8 @@
-# retryWhen
+---
+description: Reintenta una secuencia Observable cuando ocurre un error
+---
 
-## Reintenta una secuencia Observable cuando ocurre un error
+# retryWhen
 
 <details>
 

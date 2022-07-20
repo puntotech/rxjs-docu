@@ -1,6 +1,11 @@
-# audit
+---
+description: >-
+  Ignora los valores emitidos por la fuente durante un periodo de tiempo cuya
+  duración está determinada por un segundo Observable. Pasado este tiempo, emite
+  el valor más reciente y repite el proceso
+---
 
-## Ignora los valores emitidos por el Observable fuente durante un periodo de tiempo cuya duración está determinada por un segundo Observable. Una vez terminado el periodo, emite el valor más reciente y repite el proceso
+# audit
 
 <details>
 

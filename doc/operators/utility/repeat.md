@@ -1,6 +1,10 @@
-# repeat
+---
+description: >-
+  Retorna un Observable que se resuscribe count veces al flujo fuente cuando el
+  Observable fuente se completa
+---
 
-## Retorna un Observable que se resuscribe `count` veces al flujo fuente cuando el Observable fuente se completa
+# repeat
 
 <details>
 

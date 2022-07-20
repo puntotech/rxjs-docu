@@ -1,6 +1,10 @@
-# shareReplay
+---
+description: >-
+  Comparte el Observable fuente entre varios suscriptores, repitiendo las
+  últimas n emisiones con cada suscripción
+---
 
-## Comparte el Observable fuente entre varios suscriptores, repitiendo las últimas n emisiones con cada suscripción
+# shareReplay
 
 💡 La capacidad de repetir emisiones es lo que diferencia a shareReplay de [share](../../../operators/multicasting/share/)
 

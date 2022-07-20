@@ -1,6 +1,10 @@
-# filter
+---
+description: >-
+  Filtra elementos emitidos por el Observable fuente, emitiendo únicamente
+  aquellos que cumplan una condición
+---
 
-## Filtra elementos emitidos por el Observable fuente, emitiendo únicamente aquellos que cumplan una condición
+# filter
 
 <details>
 

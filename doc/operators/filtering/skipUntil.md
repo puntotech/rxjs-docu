@@ -1,6 +1,10 @@
-# skipUntil
+---
+description: >-
+  Retorna un Observable que se salta los valores emitidos por el Observable
+  fuente hasta que un segundo Observable emite un valor
+---
 
-## Retorna un Observable que se salta los valores emitidos por el Observable fuente hasta que un segundo Observable emite un valor
+# skipUntil
 
 <details>
 

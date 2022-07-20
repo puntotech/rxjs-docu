@@ -1,6 +1,10 @@
-# every
+---
+description: >-
+  Retorna un Observable que emite un valor booleano que determina si todas las
+  emisiones de la fuente cumplen o no una condición
+---
 
-## Retorna un Observable que emite un valor booleano que determina si todas las emisiones de la fuente cumplen o no una condición
+# every
 
 <details>
 

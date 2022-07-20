@@ -1,6 +1,10 @@
-# publishReplay
+---
+description: >-
+  Comparte el Observable fuente, permitiendo que los observadores que se
+  suscriban tarde puedan recibir los valores que se hayan emitido anteriormente
+---
 
-## Comparte el Observable fuente, permitiendo que los observadores que se suscriban tarde puedan recibir los valores que se hayan emitido anteriormente
+# publishReplay
 
 💡 publishReplay es equivalente a `multicast(() => new ReplaySubject())`
 

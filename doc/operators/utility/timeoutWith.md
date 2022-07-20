@@ -1,6 +1,10 @@
-# timeoutWith
+---
+description: >-
+  Ocurre un error si el Observable no emite ningún valor antes de que transcurra
+  un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable
+---
 
-## Ocurre un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo, en cuyo caso se suscribe al segundo Observable.
+# timeoutWith
 
 <details>
 

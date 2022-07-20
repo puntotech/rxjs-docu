@@ -1,6 +1,11 @@
-# concatMap
+---
+description: >-
+  Proyecta cada valor emitido por la fuente a un Observable interno que se une
+  al Observable resultante secuencialmente, esperando a que cada Observable
+  interno esté completo antes de unir el siguiente
+---
 
-## Proyecta cada valor emitido por la fuente a un Observable interno que se une al Observable resultante secuencialmente, esperando a que cada Observable interno esté completo antes de unir el siguiente
+# concatMap
 
 💡 Se debe utilizar `concatMap` si se quiere esperar a que cada Observable interno esté completo antes de suscribirse al siguiente
 

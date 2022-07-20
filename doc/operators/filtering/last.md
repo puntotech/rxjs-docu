@@ -1,6 +1,10 @@
-# last
+---
+description: >-
+  Emite el último valor (o el último valor que cumpla una condición) del el
+  Observable fuente
+---
 
-## Emite el último valor (o el último valor que cumpla una condición) del el Observable fuente
+# last
 
 <details>
 

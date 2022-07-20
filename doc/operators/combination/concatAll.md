@@ -1,6 +1,10 @@
-# concatAll
+---
+description: >-
+  Convierte un Observable de orden superior en uno de primer orden concatenando
+  los Observables internos en orden
+---
 
-## Convierte un Observable de orden superior en uno de primer orden concatenando los Observables internos en orden
+# concatAll
 
 <details>
 

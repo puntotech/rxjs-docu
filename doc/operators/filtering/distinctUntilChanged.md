@@ -1,6 +1,10 @@
-# distinctUntilChanged
+---
+description: >-
+  Retorna un Observable que emite todos los elementos emitidos por el Observable
+  fuente que sean distintos al valor anterior
+---
 
-## Retorna un Observable que emite todos los elementos emitidos por el Observable fuente que sean distintos al valor anterior
+# distinctUntilChanged
 
 <details>
 

@@ -1,6 +1,10 @@
-# elementAt
+---
+description: >-
+  Emite el valor que esté en la índice especificado en la secuencia de emisiones
+  del Observable fuente
+---
 
-## Emite el valor que esté en la índice especificado en la secuencia de emisiones del Observable fuente
+# elementAt
 
 <details>
 

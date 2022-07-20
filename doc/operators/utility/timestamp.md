@@ -1,6 +1,10 @@
-# timestamp
+---
+description: >-
+  Adjunta un timestamp a cada elemento emitido por el Observable, indicando el
+  momento en el que fue emitido
+---
 
-## Adjunta un timestamp a cada elemento emitido por el Observable, indicando el momento en el que fue emitido
+# timestamp
 
 <details>
 

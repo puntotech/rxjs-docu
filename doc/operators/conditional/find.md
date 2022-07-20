@@ -1,6 +1,10 @@
-# find
+---
+description: >-
+  Emite únicamente el primer elemento emitido por el Observable fuente que
+  cumpla una condición
+---
 
-## Emite únicamente el primer elemento emitido por el Observable fuente que cumpla una condición
+# find
 
 💡 Si se quiere obtener el primer elemento emitido, sin que cumpla ninguna operación, se puede usar el operador [first](../../../operators/filtering/first/)
 

@@ -1,6 +1,10 @@
-# window
+---
+description: >-
+  Acumula valores del Observable fuente en un Observable anidado (ventana),
+  abriendo una ventana nueva cada vez que un segundo Observable emita
+---
 
-## Acumula valores del Observable fuente en un Observable anidado (ventana), abriendo una ventana nueva cada vez que un segundo Observable emita
+# window
 
 <details>
 

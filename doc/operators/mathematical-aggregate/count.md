@@ -1,6 +1,10 @@
-# count
+---
+description: >-
+  Cuenta el número de emisiones de la fuente y emite el resultado cuando la
+  fuente se completa
+---
 
-## Cuenta el número de emisiones de la fuente y emite el resultado cuando la fuente se completa
+# count
 
 <details>
 

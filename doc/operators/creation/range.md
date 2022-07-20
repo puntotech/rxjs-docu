@@ -1,6 +1,8 @@
-# range
+---
+description: Crea un Observable que emite una secuencia de números dentro de un rango
+---
 
-## Crea un Observable que emite una secuencia de números dentro de un rango
+# range
 
 <details>
 

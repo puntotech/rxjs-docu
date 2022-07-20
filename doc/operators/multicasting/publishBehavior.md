@@ -1,6 +1,8 @@
-# publishBehavior
+---
+description: Comparte el Observable fuente, permitiendo proporcionar un valor por defecto
+---
 
-## Comparte el Observable fuente, permitiendo proporcionar un valor por defecto
+# publishBehavior
 
 💡 publishBehavior es equivalente a `multicast(() => new BehaviorSubject())`
 

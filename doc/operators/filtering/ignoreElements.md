@@ -1,6 +1,10 @@
-# ignoreElements
+---
+description: >-
+  Ignora todos los elementos emitidos por el Observable fuente, propagando
+  únicamente las llamadas a complete o a error
+---
 
-## Ignora todos los elementos emitidos por el Observable fuente, propagando únicamente las llamadas a `complete` o a `error`
+# ignoreElements
 
 <details>
 

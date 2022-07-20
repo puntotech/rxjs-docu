@@ -1,6 +1,11 @@
-# takeWhile
+---
+description: >-
+  Emite las emisiones del Observable fuente siempre y hasta cuando cumplan la
+  condición especificada. Se completa en cuanto haya un valor que no cumpla la
+  condición
+---
 
-## Emite las emisiones del Observable fuente siempre y hasta cuando cumplan la condición especificada. Se completa en cuanto haya un valor que no cumpla la condición
+# takeWhile
 
 <details>
 

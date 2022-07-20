@@ -1,6 +1,10 @@
-# interval
+---
+description: >-
+  Crea un Observable que emite una secuencia de números, con el intervalo de
+  tiempo entre emisiones que se especifique
+---
 
-## Crea un Observable que emite una secuencia de números, con el intervalo de tiempo entre emisiones que se especifique
+# interval
 
 <details>
 

@@ -1,6 +1,10 @@
-# delay
+---
+description: >-
+  Retrasa la emisión de los elementos del Observable fuente en un tiempo
+  determinado o hasta una fecha determinada
+---
 
-## Retrasa la emisión de los elementos del Observable fuente en un tiempo determinado o hasta una fecha determinada
+# delay
 
 <details>
 

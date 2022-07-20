@@ -1,6 +1,8 @@
-# share
+---
+description: Comparte el Observable fuente entre varios suscriptores
+---
 
-## Comparte el Observable fuente entre varios suscriptores
+# share
 
 💡 Se puede utilizar share para convertir un Observable frío en uno caliente
 

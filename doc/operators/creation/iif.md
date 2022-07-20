@@ -1,6 +1,8 @@
-# iif
+---
+description: Decide qué Observable será suscrito en tiempo de suscripción
+---
 
-## Decide qué Observable será suscrito en tiempo de suscripción
+# iif
 
 <details>
 

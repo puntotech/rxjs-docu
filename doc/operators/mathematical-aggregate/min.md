@@ -1,6 +1,8 @@
-# min
+---
+description: Emite el elemento de menor valor
+---
 
-## Emite el elemento de menor valor
+# min
 
 <details>
 

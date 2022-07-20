@@ -1,6 +1,8 @@
-# mapTo
+---
+description: Emite el mismo valor cada vez que el Observable fuente emite un valor
+---
 
-## Emite el mismo valor cada vez que el Observable fuente emite un valor
+# mapTo
 
 <details>
 

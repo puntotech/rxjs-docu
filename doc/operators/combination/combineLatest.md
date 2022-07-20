@@ -1,6 +1,11 @@
-# combineLatest
+---
+description: >-
+  Combina varios Observables para crear otro Observable cuyos valores se
+  calculan a partir de las emisiones más recientes de cada uno de sus
+  Observables de entrada
+---
 
-## Combina varios Observables para crear otro Observable cuyos valores se calculan a partir de las emisiones más recientes de cada uno de sus Observables de entrada
+# combineLatest
 
 <details>
 

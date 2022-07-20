@@ -1,6 +1,11 @@
-# switchMap
+---
+description: >-
+  Proyecta cada emisión de la fuente a un Observable que se une al Observable
+  resultante, emitiendo únicamente los valores de Observable proyectado más
+  reciente
+---
 
-## Proyecta cada emisión de la fuente a un Observable que se une al Observable resultante, emitiendo únicamente los valores de Observable proyectado más reciente
+# switchMap
 
 <details>
 

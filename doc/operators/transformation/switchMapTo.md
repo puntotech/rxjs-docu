@@ -1,6 +1,10 @@
-# switchMapTo
+---
+description: >-
+  Proyecta cada valor de la fuente al mismo Observable interno, posteriormente
+  usando switchMap para unirlos al Observable resultante
+---
 
-## Proyecta cada valor de la fuente al mismo Observable interno, posteriormente usando switchMap para unirlos al Observable resultante
+# switchMapTo
 
 <details>
 

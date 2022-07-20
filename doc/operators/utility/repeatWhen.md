@@ -1,6 +1,10 @@
-# repeatWhen
+---
+description: >-
+  Repite o no una secuencia Observable en función de un Observable de
+  notificaciones
+---
 
-## Repite o no una secuencia Observable en función de un Observable de notificaciones
+# repeatWhen
 
 <details>
 

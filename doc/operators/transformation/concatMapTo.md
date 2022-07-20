@@ -1,6 +1,10 @@
-# concatMapTo
+---
+description: >-
+  Proyecta cada valor emitido por la fuente al mismo Observable interno, que se
+  une al Observable resultante de forma secuencial
+---
 
-## Proyecta cada valor emitido por la fuente al mismo Observable interno, que se une al Observable resultante de forma secuencial
+# concatMapTo
 
 💡 `concatMapTo` siempre utiliza el mismo Observable interno, sin tener en cuenta el valor emitido por la fuente. Si se quiere tener en cuenta el valor emitido, se debe utilizar `concatMap`
 

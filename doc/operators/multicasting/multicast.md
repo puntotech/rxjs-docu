@@ -1,6 +1,8 @@
-# multicast
+---
+description: Comparte el Observable fuente utilizando un Sujeto
+---
 
-## Comparte el Observable fuente utilizando un Sujeto
+# multicast
 
 <details>
 

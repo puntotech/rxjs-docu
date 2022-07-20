@@ -1,6 +1,10 @@
-# mergeAll
+---
+description: >-
+  Convierte un Observable de orden superior en uno de primer orden que emite las
+  emisiones de los Observables internos de forma concurrente
+---
 
-## Convierte un Observable de orden superior en uno de primer orden que emite las emisiones de los Observables internos de forma concurrente
+# mergeAll
 
 <details>
 

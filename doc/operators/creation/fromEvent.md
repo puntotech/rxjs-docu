@@ -1,6 +1,10 @@
-# fromEvent
+---
+description: >-
+  Crea un Observable que emite eventos de un tipo específico, originados en el
+  event target proporcionado
+---
 
-## Crea un Observable que emite eventos de un tipo específico, originados en el event target proporcionado
+# fromEvent
 
 <details>
 

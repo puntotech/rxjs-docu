@@ -1,6 +1,10 @@
-# connect
+---
+description: >-
+  Crea un Observable al multidifundir el Observable fuente dentro de una función
+  que permite al desarrollador definir el uso del multicast tras la conexión
+---
 
-#### Crea un Observable al multidifundir el Observable fuente dentro de una función que permite al desarrollador definir el uso del multicast tras la conexión
+# connect
 
 <details>
 

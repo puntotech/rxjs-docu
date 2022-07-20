@@ -1,6 +1,10 @@
-# distinct
+---
+description: >-
+  Retorna un Observable que emite todos los elementos del Observable fuente que
+  sean distintos a los elementos anteriores
+---
 
-## Retorna un Observable que emite todos los elementos del Observable fuente que sean distintos a los elementos anteriores
+# distinct
 
 <details>
 

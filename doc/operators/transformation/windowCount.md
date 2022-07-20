@@ -1,6 +1,10 @@
-# windowCount
+---
+description: >-
+  Acumula valores del Observable fuente en un Observable anidado (ventana), que
+  contiene como mucho un número determinado de valores
+---
 
-## Acumula valores del Observable fuente en un Observable anidado (ventana), que contiene como mucho un número determinado de valores
+# windowCount
 
 <details>
 

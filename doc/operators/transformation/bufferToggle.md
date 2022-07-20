@@ -1,6 +1,11 @@
-# bufferToggle
+---
+description: >-
+  Acumula valores del Observable fuente a partir de una emisión de openings en
+  un búfer, que se cierra cuando el Observable retornado por la función
+  closingSelector emite
+---
 
-## Acumula valores del Observable fuente a partir de una emisión de `openings` en un búfer, que se cierra cuando el Observable retornado por la función `closingSelector` emite
+# bufferToggle
 
 <details>
 

@@ -1,6 +1,10 @@
-# buffer
+---
+description: >-
+  Almacena los valores del Observable en un búfer hasta que otro Observable
+  emita
+---
 
-## Almacena los valores del Observable en un búfer hasta que otro Observable emita
+# buffer
 
 <details>
 

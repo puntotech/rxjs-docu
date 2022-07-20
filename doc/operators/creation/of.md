@@ -1,6 +1,8 @@
-# of
+---
+description: Convierte los argumentos en una secuencia Observable
+---
 
-## Convierte los argumentos en una secuencia Observable.
+# of
 
 <details>
 

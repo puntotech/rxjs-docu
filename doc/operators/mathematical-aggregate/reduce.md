@@ -1,6 +1,10 @@
-# reduce
+---
+description: >-
+  Aplica una función acumuladora al Observable fuente y retorna el resultado
+  acumulado una vez se completa la fuente
+---
 
-## Aplica una función acumuladora al Observable fuente y retorna el resultado acumulado una vez se completa la fuente
+# reduce
 
 💡 Si se necesita el valor acumulado en cada emisión, se puede utilizar [scan](../../../operators/transformation/scan/)
 

@@ -1,6 +1,10 @@
-# startWith
+---
+description: >-
+  Emite los elementos que se especifiquen como argumentos antes de empezar a
+  emitir las emisiones del Observable fuente
+---
 
-## Emite los elementos que se especifiquen como argumentos antes de empezar a emitir las emisiones del Observable fuente
+# startWith
 
 <details>
 

@@ -1,6 +1,10 @@
-# partition
+---
+description: >-
+  Divide el Observable fuente en dos, uno con los valores que cumplen una
+  condición, y otro con los valores que no la cumplan
+---
 
-## Divide el Observable fuente en dos, uno con los valores que cumplen una condición, y otro con los valores que no la cumplan
+# partition
 
 <details>
 

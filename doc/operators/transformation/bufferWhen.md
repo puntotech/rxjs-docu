@@ -1,6 +1,10 @@
-# bufferWhen
+---
+description: >-
+  Almacena valores y utiliza una función factoría de Observables para determinar
+  cuándo cerrar, emitir y reiniciar el búfer
+---
 
-## Almacena valores y utiliza una función factoría de Observables para determinar cuándo cerrar, emitir y reiniciar el búfer
+# bufferWhen
 
 <details>
 

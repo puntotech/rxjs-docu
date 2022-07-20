@@ -1,6 +1,11 @@
-# sequenceEqual
+---
+description: >-
+  Compara secuencialmente las emisiones de 2 Observables utilizando una función
+  de comparación y retorna un Observable que emite un solo valor booleano
+  indicando si las dos secuencias son o no iguales
+---
 
-## Compara secuencialmente todos los valores emitidos por dos Observables utilizando una función de comparación (opcional) y retorna un Observable que emite un solo valor booleano en función de si las dos secuencias son o no iguales.
+# sequenceEqual
 
 <details>
 

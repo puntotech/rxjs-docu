@@ -1,6 +1,8 @@
-# ajax
+---
+description: Crea un Observable para una petición Ajax
+---
 
-## Crea un Observable para una petición Ajax
+# ajax
 
 <details>
 
