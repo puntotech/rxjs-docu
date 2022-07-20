@@ -1,2 +1,0 @@
-# Matemáticos y Agregación
-
