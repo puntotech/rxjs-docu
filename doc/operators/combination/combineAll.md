@@ -1,6 +1,10 @@
-# combineAll
+---
+description: >-
+  Convierte un Observable de orden superior en uno de primer orden aplicando
+  combineLatest cuando el Observable de orden superior se completa
+---
 
-## Convierte un Observable de orden superior en uno de primer orden aplicando [combineLatest](../../../operators/combination/combineLatest/) cuando el Observable de orden superior se completa
+# combineAll
 
 <details>
 
