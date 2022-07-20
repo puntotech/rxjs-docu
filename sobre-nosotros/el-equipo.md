@@ -18,6 +18,8 @@ Redes sociales:
 
 **Lucy Gallardo Villena**
 
+Sure Contable. Especialista en analizar las necesidades reales de los diferentes departamentos para generar informes de análisis. Amante de la buena redacción. Encantada de ayudar a las nuevas generaciones para conseguir estos fines**.**
+
 Redes sociales:
 
 * [Github](https://github.com/lucy6767)
