@@ -1,6 +1,11 @@
-# exhaustMap
+---
+description: >-
+  Proyecta cada emisión de la fuente a un Observable interno que se fusiona con
+  el Observable resultante únicamente si el Observable interno anterior se ha
+  completado
+---
 
-## Proyecta cada emisión de la fuente a un Observable interno que se fusiona con el Observable resultante únicamente si el Observable interno anterior se ha completado
+# exhaustMap
 
 💡 Se debe utilizar `exhaustMap` si se quiere ignorar los Observables internos mientras no se haya completado el Observable interno anterior
 

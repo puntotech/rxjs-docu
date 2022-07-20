@@ -1,6 +1,10 @@
-# auditTime
+---
+description: >-
+  Ignora los valores de la fuente durante un periodo de tiempo, tras el cual
+  emite el valor más reciente del Observable fuente
+---
 
-## Ignora los valores de la fuente durante un periodo de tiempo, tras el cual emite el valor más reciente del Observable fuente.
+# auditTime
 
 <details>
 

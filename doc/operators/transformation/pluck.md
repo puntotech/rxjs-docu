@@ -1,6 +1,8 @@
-# pluck
+---
+description: Extrae propiedadas de un objeto
+---
 
-## Extrae propiedadas de un objeto
+# pluck
 
 <details>
 

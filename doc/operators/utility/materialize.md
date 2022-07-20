@@ -1,6 +1,10 @@
-# materialize
+---
+description: >-
+  Representa todas las notificaciones next del Observable fuente como emisiones
+  marcadas con sus tipos originales, dentro de objetos Notification
+---
 
-## Representa todas las notificaciones next del Observable fuente como emisiones marcadas con sus tipos originales, dentro de objetos Notification
+# materialize
 
 <details>
 

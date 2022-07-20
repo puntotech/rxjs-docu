@@ -1,6 +1,10 @@
-# finalize
+---
+description: >-
+  Retorna un Observable que refleja el Observable fuente, pero que llamará a una
+  función determinada tras la terminación de la fuente, en complete o en error
+---
 
-## Retorna un Observable que refleja el Observable fuente, pero que llamará a una función determinada tras la terminación de la fuente, en complete o en error>
+# finalize
 
 <details>
 

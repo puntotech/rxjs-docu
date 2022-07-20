@@ -1,6 +1,10 @@
-# generate
+---
+description: >-
+  Genera un Observable ejecutando un bucle impulsado por el estado que emite un
+  elemento en cada iteración
+---
 
-## Genera un Observable ejecutando un bucle impulsado por el estado que emite un elemento en cada iteración
+# generate
 
 <details>
 

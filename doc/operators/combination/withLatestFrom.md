@@ -1,6 +1,11 @@
-# withLatestFrom
+---
+description: >-
+  Combina el Observable fuente con otros Observables para crear un Observable
+  cuyas emisiones se calculan a partir de los valores más recientes de cada uno,
+  cada vez que la fuente emite
+---
 
-## Combina el Observable fuente con otros Observables para crear un Observable cuyas emisiones se calculan a partir de los valores más recientes de cada uno, cada vez que la fuente emite
+# withLatestFrom
 
 <details>
 

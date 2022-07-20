@@ -1,6 +1,8 @@
-# skipLast
+---
+description: Saltar las últimas x emisiones del Observable fuente
+---
 
-## Saltar las últimas x emisiones del Observable fuente
+# skipLast
 
 <details>
 

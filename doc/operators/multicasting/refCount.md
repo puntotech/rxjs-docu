@@ -1,6 +1,10 @@
-# refCount
+---
+description: >-
+  Hace que un ConnectableObservable se comporte como un Obesrvable normal, y
+  automatiza la forma de conectarse a él
+---
 
-## Hace que un ConnectableObservable se comporte como un Obesrvable normal, y automatiza la forma de conectarse a él
+# refCount
 
 💡 Utilizar el operador [share](../../../operators/multicasting/share/) es equivalente a utilizar el operador [publish](../../../operators/multicasting/publish/) (convirtiendo el Observable en uno caliente) junto al operador refCount.
 

@@ -1,6 +1,10 @@
-# skip
+---
+description: >-
+  Retorna un Observable que se salta las primeras x emisiones del Observable
+  fuente
+---
 
-## Retorna un Observable que se salta las primeras x emisiones del Observable fuente
+# skip
 
 <details>
 

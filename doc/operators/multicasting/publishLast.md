@@ -1,6 +1,10 @@
-# publishLast
+---
+description: >-
+  Comparte el Observable fuente, emitiendo únicamente el último valor emitido a
+  los observadores
+---
 
-## Comparte el Observable fuente, emitiendo únicamente el último valor emitido a los observadores
+# publishLast
 
 💡 publishLast es equivalente a `multicast(() => new AsyncSubject())`
 

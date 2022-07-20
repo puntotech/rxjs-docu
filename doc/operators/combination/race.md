@@ -1,6 +1,8 @@
-# race
+---
+description: Retorna un Observable que refleja al primer Observable que emita un valor
+---
 
-## Retorna un Observable que refleja al primer Observable que emita un valor
+# race
 
 <details>
 

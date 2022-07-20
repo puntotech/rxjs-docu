@@ -1,6 +1,10 @@
-# timeout
+---
+description: >-
+  Lanza un error si el Observable no emite ningún valor antes de que transcurra
+  un intervalo de tiempo
+---
 
-## Lanza un error si el Observable no emite ningún valor antes de que transcurra un intervalo de tiempo
+# timeout
 
 <details>
 

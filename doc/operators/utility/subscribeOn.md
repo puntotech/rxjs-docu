@@ -1,6 +1,10 @@
-# subscribeOn
+---
+description: >-
+  Suscribe a los Observadores asíncronamente al Observable fuente en función del
+  SchedulerLike especificado
+---
 
-## Suscribe a los Observadores asíncronamente al Observable fuente en función del `SchedulerLike` especificado
+# subscribeOn
 
 <details>
 

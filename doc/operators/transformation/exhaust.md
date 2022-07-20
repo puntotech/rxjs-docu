@@ -1,6 +1,11 @@
-# exhaust
+---
+description: >-
+  Convierte un Observable de orden superior a uno de primer orden ignorando los
+  Observables internos mientras el Observable interno actual no se haya
+  completado
+---
 
-## Convierte un Observable de orden superior a uno de primer orden ignorando los Observables internos mientras el Observable interno actual no se haya completado
+# exhaust
 
 <details>
 

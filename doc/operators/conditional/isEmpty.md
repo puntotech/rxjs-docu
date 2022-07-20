@@ -1,6 +1,10 @@
-# isEmpty
+---
+description: >-
+  Emite false si el Observable emite cualquier valor, o emite true si el
+  Observable se completa sin emitir ningún valor
+---
 
-## Emite false si el Observable emite cualquier valor, o emite true si el Observable se completa sin emitir ningún valor
+# isEmpty
 
 <details>
 

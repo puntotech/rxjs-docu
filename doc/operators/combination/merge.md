@@ -1,6 +1,10 @@
-# merge
+---
+description: >-
+  Crea un Observable de salida que emite concurrentemente los valores de todos
+  los Observables de entrada
+---
 
-## Crea un Observable de salida que emite concurrentemente los valores de todos los Observables de entrada
+# merge
 
 ## Descripción
 

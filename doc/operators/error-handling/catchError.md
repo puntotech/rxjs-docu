@@ -1,6 +1,10 @@
-# catchError
+---
+description: >-
+  Captura errores en el Observable que se manejan devolviendo un Observable
+  nuevo o lanzando un error
+---
 
-## Captura errores en el Observable que se manejan devolviendo un Observable nuevo o lanzando un error
+# catchError
 
 <details>
 

@@ -1,6 +1,10 @@
-# scan
+---
+description: >-
+  Aplica una función acumuladora a los valores del Observable fuente y retorna
+  cada resultado inmediato
+---
 
-## Aplica una función acumuladora a los valores del Observable fuente y retorna cada resultado inmediato
+# scan
 
 💡 Si solo se necesita emitir el valor acumulado una vez que el Observable se haya completado, se puede utilizar [reduce](../../../operators/mathematical-aggregate/reduce/)
 

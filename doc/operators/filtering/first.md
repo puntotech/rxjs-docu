@@ -1,6 +1,10 @@
-# first
+---
+description: >-
+  Emite el primer valor (o el primer valor que cumpla una condición) emitido por
+  el Observable fuente
+---
 
-## Emite el primer valor (o el primer valor que cumpla una condición) emitido por el Observable fuente
+# first
 
 <details>
 

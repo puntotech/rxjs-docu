@@ -1,6 +1,10 @@
-# mergeMapTo
+---
+description: >-
+  Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona
+  con el Observable resultante
+---
 
-## Proyecta cada valor emitido por la fuente al mismo Observable, que se fusiona con el Observable resultante
+# mergeMapTo
 
 <details>
 

@@ -1,6 +1,11 @@
-# windowToggle
+---
+description: >-
+  Acumula valores del Observable fuente en un Observable anidado (ventana). Cada
+  ventana se abre cuando un 2º Observable emite, y se cierra cuando un 3er
+  Observable retornado por una función emite
+---
 
-## Acumula valores del Observable fuente en un Observable anidado (ventana). Cada ventana se abre cuando un 2º Observable emite, y se cierra cuando un 3er Observable retornado por una función emite
+# windowToggle
 
 <details>
 

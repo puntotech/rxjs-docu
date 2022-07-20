@@ -1,6 +1,10 @@
-# bufferCount
+---
+description: >-
+  Almacena los valores del Observable en un búfer hasta que este alcanza el
+  tamaño máximo indicado
+---
 
-## Almacena los valores del Observable en un búfer hasta que este alcanza el tamaño máximo indicado
+# bufferCount
 
 <details>
 

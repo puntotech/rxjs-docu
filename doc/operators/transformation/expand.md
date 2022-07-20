@@ -1,6 +1,10 @@
-# expand
+---
+description: >-
+  Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona
+  con el Observable resultante
+---
 
-## Proyecta recursivamente cada valor de la fuente a un Observable que se fusiona con el Observable resultante
+# expand
 
 <details>
 

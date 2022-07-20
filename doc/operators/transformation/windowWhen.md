@@ -1,6 +1,11 @@
-# windowWhen
+---
+description: >-
+  Acumula valores del Observable fuente en un Observable anidado (ventana),
+  utilizando una función factoría de Observables para determinar cuándo abrir
+  una nueva ventana
+---
 
-## Acumula valores del Observable fuente en un Observable anidado (ventana), utilizando una función factoría de Observables para determinar cuándo abrir una nueva ventana
+# windowWhen
 
 <details>
 

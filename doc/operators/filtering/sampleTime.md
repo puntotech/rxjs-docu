@@ -1,6 +1,10 @@
-# sampleTime
+---
+description: >-
+  Emite la emisión más reciente del Observable fuente en cada periodo de tiempo
+  determinado
+---
 
-## Emite la emisión más reciente del Observable fuente en cada periodo de tiempo determinado
+# sampleTime
 
 <details>
 

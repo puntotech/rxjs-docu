@@ -1,6 +1,10 @@
-# timeInterval
+---
+description: >-
+  Convierte un Observable que emite elementos en uno que emite indicaciones de
+  la cantidad de tiempo transcurrida entre emisiones
+---
 
-## Convierte un Observable que emite elementos en uno que emite indicaciones de la cantidad de tiempo transcurrida entre emisiones
+# timeInterval
 
 <details>
 

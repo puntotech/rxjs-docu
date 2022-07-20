@@ -1,6 +1,10 @@
-# observeOn
+---
+description: >-
+  Reemite todas las notificaciones del Observable fuente con el planificador
+  especificado
+---
 
-## Reemite todas las notificaciones del Observable fuente con el planificador especificado
+# observeOn
 
 <details>
 

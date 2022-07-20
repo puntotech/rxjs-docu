@@ -1,6 +1,10 @@
-# from
+---
+description: >-
+  Crea un Observable a partir de un Array, un objeto similar a un Array, una
+  Promesa, un objeto iterable o un objeto similar a un Observable
+---
 
-## Crea un Observable a partir de un Array, un objeto similar a un Array, una Promesa, un objeto iterable o un objeto similar a un Observable
+# from
 
 <details>
 

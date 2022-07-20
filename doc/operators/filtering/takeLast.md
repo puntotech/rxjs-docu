@@ -1,6 +1,8 @@
-# takeLast
+---
+description: Emite las últimas x emisiones del Observable fuente
+---
 
-## Emite las últimas x emisiones del Observable fuente
+# takeLast
 
 <details>
 

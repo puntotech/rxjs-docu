@@ -1,6 +1,10 @@
-# sample
+---
+description: >-
+  Emite la emisión más reciente del Observable fuente cuando un segundo
+  Observable, el notificador, emite un valor
+---
 
-## Emite la emisión más reciente del Observable fuente cuando un segundo Observable, el notificador, emite un valor
+# sample
 
 <details>
 

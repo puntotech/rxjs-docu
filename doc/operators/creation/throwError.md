@@ -1,6 +1,8 @@
-# throwError
+---
+description: Crea un Observable que solo emite una notificación de error
+---
 
-## Crea un Observable que solo emite una notificación de error
+# throwError
 
 <details>
 

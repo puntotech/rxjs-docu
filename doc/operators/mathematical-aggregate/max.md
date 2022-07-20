@@ -1,6 +1,8 @@
-# max
+---
+description: Emite el elemento de mayor valor
+---
 
-## Emite el elemento de mayor valor
+# max
 
 <details>
 

@@ -1,6 +1,10 @@
-# switchAll
+---
+description: >-
+  Convierte un Observable de orden superior en uno de primer orden, produciendo
+  valores únicamente de la secuencia Observable más reciente
+---
 
-## Convierte un Observable de orden superior en uno de primer orden, produciendo valores únicamente de la secuencia Observable más reciente
+# switchAll
 
 <details>
 

@@ -1,6 +1,10 @@
-# dematerialize
+---
+description: >-
+  Convierte un Observable de objetos Notification en las emisiones que
+  representan
+---
 
-## Convierte un Observable de objetos Notification en las emisiones que representan
+# dematerialize
 
 <details>
 

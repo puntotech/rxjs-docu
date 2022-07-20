@@ -1,6 +1,10 @@
-# skipWhile
+---
+description: >-
+  Se salta las emisiones del Observable fuente hasta que una condición deje de
+  cumplirse
+---
 
-## Se salta las emisiones del Observable fuente hasta que una condición deje de cumplirse
+# skipWhile
 
 <details>
 

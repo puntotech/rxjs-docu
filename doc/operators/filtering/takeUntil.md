@@ -1,6 +1,10 @@
-# takeUntil
+---
+description: >-
+  Emite los valores emitidos por el Observable fuente hasta que un segundo
+  Observable emita un valor
+---
 
-## Emite los valores emitidos por el Observable fuente hasta que un segundo Observable emita un valor
+# takeUntil
 
 <details>
 

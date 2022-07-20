@@ -1,6 +1,11 @@
-# debounce
+---
+description: >-
+  Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo
+  determinado por otro Observable sin que el Observable fuente emita ningún
+  valor
+---
 
-## Emite un valor del Observable fuente si, y solo si, pasa un periodo de tiempo determinado por otro Observable sin que el Observable fuente emita ningún valor
+# debounce
 
 <details>
 

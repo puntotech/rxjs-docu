@@ -1,6 +1,10 @@
-# fromEventPattern
+---
+description: >-
+  Crea un Observable a partir de una API arbitraria de registro de manejadores
+  de eventos
+---
 
-## Crea un Observable a partir de una API arbitraria de registro de manejadores de eventos
+# fromEventPattern
 
 <details>
 

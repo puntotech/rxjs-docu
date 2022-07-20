@@ -1,6 +1,10 @@
-# defaultIfEmpty
+---
+description: >-
+  Emite el valor proporcionado si el Observable fuente se completa sin emitir
+  ningún valor. Si no, refleja al Observable fuente
+---
 
-## Emite el valor proporcionado si el Observable fuente se completa sin emitir ningún valor. Si no, refleja al Observable fuente
+# defaultIfEmpty
 
 <details>
 

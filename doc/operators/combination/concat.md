@@ -1,6 +1,10 @@
-# concat
+---
+description: >-
+  Concatena varios Observables de entrada, uno tras otro, emitiendo
+  secuencialmente todos los valores de cada uno de ellos
+---
 
-## Concatena varios Observables de entrada, uno tras otro, emitiendo secuencialmente todos los valores de cada uno de ellos
+# concat
 
 💡 Para emitir valores de varios Observables a la vez (concurrentemente), se puede utilizar [merge](../../../operators/combination/merge/)
 

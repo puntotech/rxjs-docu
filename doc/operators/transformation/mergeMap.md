@@ -1,6 +1,10 @@
-# mergeMap
+---
+description: >-
+  Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el
+  Observable resultante
+---
 
-## Proyecta cada valor emitido por la fuente a un Observable que se fusiona en el Observable resultante
+# mergeMap
 
 💡 Se debe utilizar `mergeMap` si se quieren tener varios Observables internos suscritos de forma concurrente
 

@@ -1,6 +1,10 @@
-# timer
+---
+description: >-
+  Crea un Observable que comienza a emitir una secuencia ascendente de números
+  consecutivos a intervalos, tras un periodo inicial de tiempo
+---
 
-## Crea un Observable que comienza a emitir una secuencia ascendente de números consecutivos a intervalos, tras un periodo inicial de tiempo
+# timer
 
 <details>
 

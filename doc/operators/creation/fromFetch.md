@@ -1,6 +1,8 @@
-# fromFetch
+---
+description: Utiliza la API Fetch para hacer una petición HTTP
+---
 
-## Utiliza la API Fetch para hacer una petición HTTP
+# fromFetch
 
 <details>
 

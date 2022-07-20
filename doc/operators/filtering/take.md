@@ -1,6 +1,8 @@
-# take
+---
+description: Emite las primeras x emisiones del Observable fuente
+---
 
-## Emite las primeras x emisiones del Observable fuente
+# take
 
 <details>
 

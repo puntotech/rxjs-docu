@@ -1,6 +1,10 @@
-# tap
+---
+description: >-
+  Lleva a cabo un efecto colateral en cada emisión del Observable fuente, pero
+  retorna un Observable que es idéntico a la fuente
+---
 
-## Lleva a cabo un efecto colateral en cada emisión del Observable fuente, pero retorna un Observable que es idéntico a la fuente
+# tap
 
 <details>
 

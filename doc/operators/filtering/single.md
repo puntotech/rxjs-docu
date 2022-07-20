@@ -1,6 +1,8 @@
-# single
+---
+description: Emite si solo existe un único valor que cumpla la condición
+---
 
-## Emite si solo existe un único valor que cumpla la condición
+# single
 
 <details>
 

@@ -1,6 +1,10 @@
-# map
+---
+description: >-
+  Aplica una función de proyección a cada valor emitido por el Observable
+  fuente, y emite los valores resultantes como un Observable
+---
 
-## Aplica una función de proyección a cada valor emitido por el Observable fuente, y emite los valores resultantes como un Observable
+# map
 
 <details>
 

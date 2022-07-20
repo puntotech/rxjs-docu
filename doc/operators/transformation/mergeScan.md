@@ -1,6 +1,11 @@
-# mergeScan
+---
+description: >-
+  Aplica una función de acumulación al Observable fuente donde la propia función
+  de acumulación retorna un Observable. Cada Observable interno retornado se
+  fusiona con el Observable resultante
+---
 
-## Aplica una función de acumulación al Observable fuente donde la propia función de acumulación retorna un Observable. Cada Observable interno retornado se fusiona con el Observable resultante
+# mergeScan
 
 <details>
 

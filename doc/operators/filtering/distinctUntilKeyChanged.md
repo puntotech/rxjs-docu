@@ -1,6 +1,10 @@
-# distinctUntilKeyChanged
+---
+description: >-
+  Retorna un Observable que emite los elementos del Observable fuente cuya
+  propiedad especificada sea distinta a la del elemento anterior
+---
 
-## Retorna un Observable que emite los elementos del Observable fuente cuya propiedad especificada sea distinta a la del elemento anterior
+# distinctUntilKeyChanged
 
 <details>
 

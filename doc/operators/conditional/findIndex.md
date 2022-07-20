@@ -1,6 +1,10 @@
-# findIndex
+---
+description: >-
+  Emite el índice del primer valor emitido por el Observable fuente que cumple
+  una determinada condición
+---
 
-## Emite el índice del primer valor emitido por el Observable fuente que cumple una determinada condición
+# findIndex
 
 <details>
 
