@@ -1,6 +1,6 @@
 # Operadores Matemáticos y de Agregación
 
-- count
-- max
-- min
-- reduce
+- [count](count.md)
+- [max](max.md)
+- [min](min.md)
+- [reduce](reduce.md)
