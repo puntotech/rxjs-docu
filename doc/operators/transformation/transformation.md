@@ -1,32 +1,32 @@
 # Operadores de Transformación
 
-- buffer
-- bufferCount
-- bufferTime
-- bufferToggle
-- bufferWhen
-- concatMap
-- exhaustMap
-- expand
-- groupBy
-- map
-- mergeMap
-- mergeScan
-- pairwise
-- scan
-- switchMap
-- window
-- windowCount
-- windowTime
-- windowToggle
-- windowWhen
+- [buffer](buffer.md)
+- [bufferCount](bufferCount.md)
+- [bufferTime](bufferTime.md)
+- [bufferToggle](bufferToggle.md)
+- [bufferWhen](bufferWhen.md)
+- [concatMap](concatMap.md)
+- [exhaustMap](exhaustMap.md)
+- [expand](expand.md)
+- [groupBy](groupBy.md)
+- [map](map.md)
+- [mergeMap](mergeMap.md)
+- [mergeScan](mergeScan.md)
+- [pairwise](pairwise.md)
+- [scan](scan.md)
+- [switchMap](switchMap.md)
+- [window](window.md)
+- [windowCount](windowCount.md)
+- [windowTime](windowTime.md)
+- [windowToggle](windowToggle.md)
+- [windowWhen](windowWhen.md)
 
 ## Operadores obsoletos
 
-- concatMapTo (obsoleto)
-- exhaust (obsoleto)
-- mapTo
-- mergeMapTo (obsoleto)
-- partition
-- pluck (obsoleto)
-- switchMapTo (obsoleto)
+- [concatMapTo](concatMapTo.md) (obsoleto)
+- [exhaust](exhaust.md) (obsoleto)
+- [mapTo](mapTo.md)
+- [mergeMapTo](mergeMapTo.md) (obsoleto)
+- [partition](partition.md)
+- [pluck](pluck.md) (obsoleto)
+- [switchMapTo](switchMapTo.md) (obsoleto)
