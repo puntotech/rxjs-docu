@@ -1,8 +1,8 @@
 # Operadores de Gestión de Errores
 
-- catchError
-- retry
+- [catchError](catchError.md)
+- [retry](retry.md)
 
 ## Operadores Obsoletos
 
-- retryWhen (obsoleto)
+- [retryWhen](retryWhen.md) (obsoleto)
